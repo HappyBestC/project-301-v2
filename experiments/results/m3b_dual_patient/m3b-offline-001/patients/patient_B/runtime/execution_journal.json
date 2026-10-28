@@ -1,9 +1,0 @@
-{
-  "version": "301.v2.execution.phase1.1",
-  "run_id": "m3b-offline-001",
-  "patient_id": "m3b-offline-001-B",
-  "session_epoch": "4df798b02b5945fcb5cf6386c08c3fcd",
-  "production_enabled": false,
-  "plans": {},
-  "events": []
-}

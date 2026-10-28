@@ -1,9 +1,0 @@
-{
-  "version": "301.v2.execution.phase1.1",
-  "run_id": "m3c1-fixed-b-offline-001",
-  "patient_id": "m3c1-fixed-b-offline-001-A",
-  "session_epoch": "b8db767659db46349e01b8167af4cc11",
-  "production_enabled": false,
-  "plans": {},
-  "events": []
-}

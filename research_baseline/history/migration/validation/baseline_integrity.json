@@ -1,8 +1,0 @@
-{
-  "copied_files_checked": 870,
-  "errors": [],
-  "locked_rule_count": 14,
-  "rules_sha256": "6a0fd1080f952deea6199dfdbe4772790a59507964a0d186334a86f0c63fb52f",
-  "evaluator": "research_artifacts/treatment_effect_rules_v2_candidate_v0.1/male_independent_validation_final_preparation_v1/adapter.py",
-  "project_root": "/home/private/project-301-v2"
-}

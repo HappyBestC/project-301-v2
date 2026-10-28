@@ -1,9 +1,0 @@
-{
-  "version": "301.v2.execution.phase1.1",
-  "run_id": "m3c1-fixed-a-native-001",
-  "patient_id": "m3c1-fixed-a-native-001-B",
-  "session_epoch": "d9b0dc7111aa4a4aa4ecdcc76dfaa4b7",
-  "production_enabled": false,
-  "plans": {},
-  "events": []
-}
