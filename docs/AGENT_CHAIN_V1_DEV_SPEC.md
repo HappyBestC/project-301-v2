@@ -239,11 +239,24 @@ class SchedulingProvider(Protocol):
 - 每名伤员一个独立的 Pulse 引擎，各自在独立进程中运行；全部伤员并行，进程数取 min(伤员数, CPU 核数)。
 - 初始化：StandardMale 冻结患者和初始状态，按现有协议稳定 60 秒，然后施加伤情。施加伤情的时刻记为该伤员的受伤时刻，对应全局时间 `arrival_time_min`。换算：`pulse_injury_time_s = (全局分钟 − arrival_time_min) × 60`。
 - 伤情参数取 `dataset_v1/run_001/patient_specs.json`，转换成 Pulse 动作时复用现有适配器：`pulse/v2/injury_adapter.py`、`pulse/v2/protocol_book.py`；暴露类伤情参照 `pulse/v2/exposure_session.py`，血胸参照 `pulse/v2/hemothorax_session.py`。**不得自行编写伤情参数。**
-- 救助动作转换成 Pulse 动作时，复用 `pulse/v2/treatment_adapter.py` 和 `protocol_book.protocol_id(...)` 给出的固定协议（phase1.1），参数一律不改。补液、输血按固定协议的速率和总量输注，由 Pulse 自行输完。
+- 救助动作转换成 Pulse 动作时，按伤情类型选择参数来源，参数一律不改：
+
+  | 伤情类型 | 参数来源 |
+  |---|---|
+  | `protocol_book.OPEN_INJURIES` 中的 7 类 | `pulse/v2/treatment_adapter.py` 和 `protocol_book.protocol_id(...)` 给出的固定协议（phase1.1） |
+  | `hemothorax`（`control_hemothorax_bleeding`、`chest_tube`） | `runtime/v2_1/adapters.action_payload(kind, None)`，即 V2.1 复合伤运行时使用的固定参数 |
+  | `carbon_monoxide_exposure`、`environmental_hypoxia`（`remove_from_exposure`） | 同上，`action_payload("remove_from_exposure", None)`，即 `exposure_session.environment_action(0, 0.21)` |
+
+  暴露类伤情的"施加伤情"，就是按 `patient_specs.json` 中的 `environment_gases` 调用 `exposure_session.environment_action(...)` 改变环境。
+  补液、输血按固定协议的速率和总量输注，由 Pulse 自行输完。
+- 增加一项测试：对两种来源都能生成的动作（7 类开放伤情中的动作），两者给出的 Pulse 动作必须完全相同。若不相同，停下来报告。
+- 在 `manifest.json` 的 `known_simplifications` 中注明：血胸的单伤研究档案状态为 `BLOCKED`（`protocol_book.SPECIALTY_DECISIONS`，原因是负残余和引流终点未解决），本版借用复合伤运行时的固定参数执行，P07、P16 的结果标记为 `exploratory`。
 - 推进：用原生整段推进。先推进到下一个事件时刻并注入动作，在两个事件之间按 60 秒一段推进并采样。注入动作前后各采样一次。推进到全局第 120 分钟。
 - 动作是否生效，以引擎**实际接受**为准（参照 `research_runtime/bridge.py` 中原生回执的判断方式），不能以动作构造成功为准。
 - 伤员出现 IrreversibleState 或 CardiacArrest 后，记录时刻并停止推进；此后的推进失败不另算引擎失败。没有终末事件的推进失败，记为引擎失败。
-- 若某名伤员的伤情类型或某个动作，用现有适配器无法执行，标记为 `EXECUTION_UNSUPPORTED` 并写明原因，**不要为此修改适配器，也不要静默跳过**。
+- 若用上表的来源仍无法执行，**不要为此修改适配器，也不要静默跳过**，按下面两种情况处理并写明原因：
+  - **伤情本身无法施加**：该伤员不进入仿真，标记 `INJURY_UNSUPPORTED`；
+  - **伤情能施加，但某个动作无法执行**：该动作标记 `ACTION_UNSUPPORTED`、不注入，**伤员继续推进到窗口结束**（相当于这个动作没有发生），伤员整体标记 `treatment_incomplete`。
 
 现有 `research_runtime/` 中的时序协议（180/181 秒候选时刻、480 秒终点）**不适用于本桥**。本桥只复用伤情和动作的参数转换，不经过那些时间准入。
 
@@ -252,7 +265,7 @@ class SchedulingProvider(Protocol):
 - 每 60 秒的采样：HR、MAP、SBP、SpO2、RR、CardiacOutput、BloodVolume（单位与 A 线探测一致）；
 - 每个 `apply_action`：计划时刻、实际注入的 Pulse 时刻、是否被引擎接受；
 - Pulse 事件及发生时刻；
-- 终末事件、引擎失败、`EXECUTION_UNSUPPORTED` 各自的记录；
+- 终末事件、引擎失败、`INJURY_UNSUPPORTED`、`ACTION_UNSUPPORTED` 各自的记录；
 - 现实耗时和速度比。
 
 ---
@@ -261,13 +274,27 @@ class SchedulingProvider(Protocol):
 
 每名伤员，在其窗口 [受伤时刻, 全局第 120 分钟] 内：
 
-- `integral_CO_L`：CardiacOutput 的梯形积分；出现终末事件后按 0 计入，积分到窗口结束；
-- `terminal_event` 及时刻、首次 HypovolemicShock 时刻；
-- 窗口结束时的 MAP、BloodVolume（若已终止则为空）；
-- 注入的动作数、被接受的动作数；
-- `engine_failure`、`execution_unsupported` 标志。
+- `observed_integral_CO_L`：从受伤到最后一个有效采样的梯形积分；
+- `integral_CO_L`：完整窗口的积分，按下表确定：
 
-全体汇总：死亡人数、引擎失败人数、不支持人数、∫CO 总和与均值（分别只计正常完成的伤员和计入全部伤员两种口径）。
+  | 情况 | `integral_CO_L` | `window_status` |
+  |---|---|---|
+  | 推进到窗口结束 | 等于 `observed_integral_CO_L` | `complete` |
+  | 出现终末事件（IrreversibleState / CardiacArrest） | 积分到终末时刻，之后按 0 计入到窗口结束 | `complete_terminal` |
+  | 引擎推进失败，且没有终末事件 | `null`（之后的状态未知，**不补零、不外推**） | `incomplete_engine_failure` |
+  | `INJURY_UNSUPPORTED` | `null`，`observed_integral_CO_L` 也为 `null` | `not_simulated` |
+
+  `ACTION_UNSUPPORTED` 的伤员仍按前三行计算，另带 `treatment_incomplete: true`；
+- `terminal_event` 及时刻、首次 HypovolemicShock 时刻；
+- 窗口结束时的 MAP、BloodVolume（若已终止或失败则为空）；
+- 注入的动作数、被接受的动作数、不支持的动作数；
+- `engine_failure`、`injury_unsupported`、`treatment_incomplete`、`exploratory` 标志。
+
+全体汇总：
+
+- 计数：伤员总数，以及各 `window_status` 的人数、死亡人数、`treatment_incomplete` 人数、`exploratory` 人数；
+- ∫CO 只在 `integral_CO_L` 不为 `null` 的伤员上计算：给出总和、均值、**参与计算的人数（即分母）**、被排除伤员的 ID 及原因。不对缺失值做任何填补；
+- 另给一组只计"`complete` 或 `complete_terminal`、且不是 `treatment_incomplete`、不是 `exploratory`"伤员的同样统计，作为干净口径。
 
 现有十四条锁定评价规则本版**不调用**。
 
@@ -317,7 +344,7 @@ sha256_manifest.json
 4. 用 Template + Replay 构造的 `dispatch_input`，与 `runs/medical_resources_deepseek_001/dispatch_input.json` 中的伤员和候选方案一致，回放排程通过校验、0 冲突；
 5. 时间线：动作在 `end_min` 注入；`continue`、转运、照护不产生 Pulse 动作；时间换算正确（包括第 10、20 分钟出现的伤员）；
 6. 调度重试：有冲突时回到 `schedule` 且带上反馈；达到上限后以 `schedule_failed` 结束；
-7. 结局：∫CO 梯形积分、终末事件后补零、引擎失败与终末事件分开；
+7. 结局：∫CO 梯形积分；§7 表中四种 `window_status` 各自的积分规则；汇总的分母与被排除伤员列表；引擎失败与终末事件分开；
 8. 代码中不存在按现实时间等待的逻辑（静态检查 `agent_chain/` 中无 `time.sleep`、无墙钟节拍）。
 
 需要原生 Pulse 的测试加 `integration` 标记。
@@ -331,7 +358,7 @@ sha256_manifest.json
 1. 全量非 integration 测试通过，原有 1252 个不受影响；integration 测试通过；
 2. `bash scripts/validate.sh` 退出码为 0；`python scripts/verify_offline.py` 结果不变；
 3. `offline` 模式跑通，`status == completed`；
-4. `native_replay` 模式跑通：16 名伤员进入执行；报告每名伤员的结局表（受伤时刻、注入动作数／被接受数、终末事件及时刻、∫CO、窗口结束时的 MAP 和 BloodVolume、是否不支持）；所有 `EXECUTION_UNSUPPORTED` 都写明原因；
+4. `native_replay` 模式跑通：16 名伤员进入执行；报告每名伤员的结局表（受伤时刻、注入动作数／被接受数／不支持数、终末事件及时刻、`window_status`、∫CO、窗口结束时的 MAP 和 BloodVolume、各项标志）；所有 `INJURY_UNSUPPORTED`、`ACTION_UNSUPPORTED` 都写明原因；
 5. 未修改 §2 列出的禁止修改的文件。
 
 ---
