@@ -16,7 +16,7 @@ from core301.dispatch.minimal import api
 from core301.pulse.injury_adapter import scalar
 from core301.pulse.observation_projector import BASIC
 from core301.pulse.v2.exposure_session import environment_action
-from core301.pulse.v2.injury_adapter import InjuryAdapter
+from core301.pulse.v2.injury_adapter import InjuryAdapter, PatientInitializer
 from core301.pulse.v2.protocol_book import OPEN_INJURIES, protocol_id
 from core301.pulse.v2.treatment_adapter import TreatmentAdapter
 from core301.runtime.v2.injury_registry import InjuryRegistry
@@ -35,8 +35,7 @@ def injury_payload(spec: dict) -> dict:
     if injury['injury_type'] in ('carbon_monoxide_exposure', 'environmental_hypoxia'):
         gases = injury['environment_gases']
         return environment_action(gases['CarbonMonoxide'], gases['Oxygen'])
-    # Dehydration is a condition, not a dynamic action: the existing adapter
-    # rejects it. Do not replace the specified frozen-state/60s/onset sequence.
+    # Dehydration is handled at initialization by execute_patient, never here.
     return InjuryAdapter().convert_dynamic(TypeAdapter(InjuryInput).validate_python(injury))
 
 
@@ -62,8 +61,8 @@ class NativePulse:
         from core301.pulse.v2.session import ResearchPulseSession
         self.session = ResearchPulseSession(patient_id, BASIC + ('circulation.cardiac_output',))
 
-    def initialize(self, directory: Path):
-        self.session.initialize(directory / 'pulse.log')
+    def initialize(self, directory: Path, configuration=None):
+        self.session.initialize(directory / 'pulse.log', configuration=configuration)
         self.engine = self.session._native._engine
         self.fmt = self.session._native._format
         self.engine.keep_event_changes(True)
@@ -123,7 +122,7 @@ class FakePulse:
     def __init__(self, patient_id: str):
         self.time = 0.0
 
-    def initialize(self, directory: Path):
+    def initialize(self, directory: Path, configuration=None):
         pass
 
     def now(self):
@@ -199,24 +198,35 @@ def execute_patient(spec: dict, timeline: list, directory: Path, *, horizon_min:
 
     try:
         try:
-            onset = injury_payload(spec) if native else {'fake_injury': spec['injury']['injury_type']}
+            configuration = None
+            if spec['injury']['injury_type'] == 'dehydration':
+                configuration = PatientInitializer().configuration({'patient_id': pid, 'injuries': [spec['injury']]})
+                onset = None
+            else:
+                onset = injury_payload(spec) if native else {'fake_injury': spec['injury']['injury_type']}
         except (ValueError, KeyError, TypeError, RuntimeError) as exc:
             record['injury_unsupported'] = {'status': 'INJURY_UNSUPPORTED', **_adapter_reason(exc)}
             return record
-        engine.initialize(directory)
+        if configuration is None:
+            engine.initialize(directory)
+        else:
+            engine.initialize(directory, configuration=configuration)
         if not engine.advance(STABILIZATION_S):
             collect_events()
             if not record['terminal_event']:
                 record['engine_failure'] = {'code': 'STABILIZATION_FAILED'}
             return record
-        engine.events()  # The healthy prelude is outside the outcome window.
-        capture('before_injury')
-        if not engine.submit(onset):
-            record['injury_unsupported'] = {'status': 'INJURY_UNSUPPORTED', 'code': 'NATIVE_INJURY_REJECTED',
-                                            'detail': 'Native process_actions rejected the injury payload'}
-            record['samples'].clear()
-            return record
+        engine.events()  # Stabilization is outside the window, including dehydration's condition period.
+        if configuration is None:
+            capture('before_injury')
+            if not engine.submit(onset):
+                record['injury_unsupported'] = {'status': 'INJURY_UNSUPPORTED', 'code': 'NATIVE_INJURY_REJECTED',
+                                                'detail': 'Native process_actions rejected the injury payload'}
+                record['samples'].clear()
+                return record
         record['injury_receipt'] = {'accepted': True, 'pulse_time_s': engine.now()}
+        if configuration is not None:
+            record['injury_receipt']['initialization_condition'] = True
         capture('after_injury')
         collect_events()
         # A fixed one-minute sampling grid plus exact action times; no interval

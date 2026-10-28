@@ -26,8 +26,9 @@ class ObservedFake(bridge.FakePulse):
         self.advances, self.submitted = [], []
         self.initialized = False
 
-    def initialize(self, directory):
+    def initialize(self, directory, configuration=None):
         self.initialized = True
+        self.configuration = configuration
 
     def advance(self, target_s):
         self.advances.append((self.time, target_s))
@@ -59,15 +60,48 @@ def test_action_injection_clock_and_sampling(pid, arrival, tmp_path):
     assert result['injected_actions'] == result['accepted_actions'] == 1
 
 
-def test_unadaptable_injury_does_not_initialize_engine(tmp_path):
-    engine = ObservedFake('P08')
-    record = bridge.execute_patient(spec('P08'), [], tmp_path, native=True, engine=engine)
+def test_unadaptable_injury_does_not_initialize_engine(tmp_path, monkeypatch):
+    def unavailable(*args):
+        raise ValueError('Test injury adapter unavailable')
+    monkeypatch.setattr(bridge, 'injury_payload', unavailable)
+    engine = ObservedFake('P01')
+    record = bridge.execute_patient(spec(), [], tmp_path, native=True, engine=engine)
     assert not engine.initialized and engine.advances == []
     assert record['injury_unsupported']['status'] == 'INJURY_UNSUPPORTED'
-    assert 'Dehydration' in record['injury_unsupported']['detail']
+    assert record['injury_unsupported']['detail'] == 'Test injury adapter unavailable'
     result = outcomes.patient_outcome(record)
     assert result['window_status'] == 'not_simulated'
     assert result['integral_CO_L'] is result['observed_integral_CO_L'] is None
+
+
+def test_dehydration_initializes_configuration_without_dynamic_injury(tmp_path, monkeypatch):
+    def forbidden(*args):
+        raise AssertionError('Dehydration must not become a dynamic injury')
+    monkeypatch.setattr(bridge, 'injury_payload', forbidden)
+    engine = ObservedFake('P08')
+    patient = spec('P08')
+    record = bridge.execute_patient(patient, [], tmp_path, native=True, engine=engine, horizon_min=5.0)
+    expected = bridge.PatientInitializer().configuration({'patient_id': 'P08', 'injuries': [patient['injury']]})
+    assert engine.initialized and engine.configuration == expected
+    assert engine.submitted == []
+    assert engine.advances[0] == (0.0, 60.0)
+    assert record['samples'][0]['pulse_time_s'] == 60.0
+    assert record['samples'][0]['time_min'] == 0.0
+    assert record['injury_receipt'] == {'accepted': True, 'pulse_time_s': 60.0, 'initialization_condition': True}
+    assert record['injury_unsupported'] is None and record['engine_failure'] is None
+    assert record['reached_horizon'] and record['samples'][-1]['time_min'] == 5.0
+
+
+def test_native_initialize_forwards_configuration_to_existing_session(tmp_path):
+    calls = []
+    engine = bridge.NativePulse.__new__(bridge.NativePulse)
+    native = SimpleNamespace(_engine=SimpleNamespace(keep_event_changes=lambda value: calls.append(value)),
+                             _format='test-format')
+    engine.session = SimpleNamespace(_native=native,
+        initialize=lambda path, **kwargs: calls.append((path, kwargs)))
+    configuration = bridge.PatientInitializer().configuration({'patient_id': 'P08', 'injuries': [spec('P08')['injury']]})
+    engine.initialize(tmp_path, configuration=configuration)
+    assert calls == [(tmp_path / 'pulse.log', {'configuration': configuration}), True]
 
 
 def test_unadaptable_action_is_recorded_and_patient_continues(tmp_path, monkeypatch):
@@ -176,6 +210,19 @@ def test_fake_workers_are_in_independent_processes(chain_data, tmp_path):
     pids = {record['worker_pid'] for record in execution.values()}
     assert len(pids) == 2 and os.getpid() not in pids
     assert all(record['reached_horizon'] and record['backend'] == 'fake' for record in execution.values())
+
+
+@pytest.mark.integration
+def test_native_dehydration_initializes_and_advances_five_minutes(tmp_path):
+    record = bridge.execute_patient(spec('P08'), [], tmp_path, native=True, horizon_min=5.0)
+    assert record['injury_unsupported'] is None and record['engine_failure'] is None
+    assert record['terminal_event'] is None and record['reached_horizon']
+    assert record['injury_receipt']['initialization_condition'] is True
+    assert record['samples'][0]['pulse_time_s'] == pytest.approx(60.0, abs=1e-6)
+    assert record['samples'][0]['time_min'] == pytest.approx(0.0, abs=1e-6)
+    assert record['samples'][-1]['time_min'] == pytest.approx(5.0, abs=1e-6)
+    assert record['samples'][-1]['CardiacOutput_L_min'] > 0
+    assert record['samples'][-1]['BloodVolume_mL'] > 0
 
 
 @pytest.mark.integration

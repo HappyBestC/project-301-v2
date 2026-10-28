@@ -17,6 +17,9 @@ KNOWN_SIMPLIFICATIONS = [
     'Hemothorax single-injury research is BLOCKED in protocol_book.SPECIALTY_DECISIONS '
     'because negative residual blood volume and the drainage endpoint are unresolved. '
     'V1 borrows the fixed V2.1 composite-runtime payloads; P07 and P16 are exploratory.',
+    'Dehydration is an initialization condition present from engine startup, including '
+    'the 60-second stabilization period. Its injury clock starts after stabilization; '
+    'other injuries are applied dynamically only after stabilization.',
 ]
 
 
