@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "core301"
 version = "0.1.0"
 requires-python = ">=3.11"
-dependencies = ["pydantic==2.12.3", "ruamel.yaml==0.19.1", "openai==2.54.0", "python-dotenv>=1.0,<2"]
+dependencies = ["pydantic==2.12.3", "ruamel.yaml==0.19.1", "openai==2.54.0", "python-dotenv>=1.0,<2", "langgraph==1.2.18"]
 
 [project.optional-dependencies]
 test = ["pytest==8.4.2"]
@@ -19,7 +19,7 @@ core301 = "core301.cli:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-core301 = ["fixtures/*.json", "agent/prompts/*.md", "dispatch/prompts/*.md"]
+core301 = ["fixtures/*.json", "agent/prompts/*.md", "dispatch/prompts/*.md", "agent_chain/prompts/*.md"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src", "tests"]

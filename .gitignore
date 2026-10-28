@@ -19,6 +19,7 @@ __pycache__/
 /build/
 /dist/
 /pulse
+/experiments/results/agent_chain/
 
 # Local editor and operating-system files
 .idea/
