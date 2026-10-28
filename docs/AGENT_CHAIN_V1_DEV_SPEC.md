@@ -185,7 +185,7 @@ validate --(有冲突 且 已用轮数 = max_schedule_attempts)----------→ END
 - `action_id` = `{plan_id}-a{序号}`；
 - `depends_on`：方案中前一个动作的 `action_id`（第一个为空）；
 - `target` 与 `injury_association`：与 `api.load_cases` 中的处理完全一致（`target` 只含 `patient_id`，再按 `actions.json` 中的 `target_kind` 补 `side` 或 `compartment`；`injury_association` 为 `known_injury_context`）。由于不能修改 `api.py`，在 `treatment.py` 中实现同样的转换，由 §10 第 3、4 条测试保证一致；
-- `fixed_protocol_ref`：`{"protocol_id": "{action_type}.phase1.1", "source": "src/core301/pulse/v2/protocol_book.py"}`；`resource_mapping_ref`：按模板中同类动作的取值；
+- `fixed_protocol_ref`：按 (`injury_type`, `action_type`) 从 `action_plan_templates.json` 中**原样复制**。每个组合在模板中恰好对应一条，16 种允许组合全部覆盖；查不到即准入失败。该字段只是协议来源的引用，Pulse 实际使用的参数以 §6.2 的表为准；`resource_mapping_ref`：同样按模板中同类动作原样复制；
 - `eligibility_status`：固定为 `eligibility_pending`（与现有数据一致，因此排程必须为 `demonstration_only: true`）；
 - `no_treatment_needed`：生成一个动作为空的候选方案。
 
