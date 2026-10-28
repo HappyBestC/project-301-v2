@@ -149,3 +149,30 @@ def test_scheduling_request_failure_is_audited_without_retry(chain_data, tmp_pat
     assert api.read(tmp_path / 'llm_error.json')['retry_attempted'] is False
     assert api.read(tmp_path / 'llm_request_metadata.json')['prompt_sha256']
     assert 'private-test-key' not in ''.join(p.read_text() for p in tmp_path.iterdir())
+
+
+@pytest.mark.parametrize('raw', ['', '{broken', '{"number":NaN}'])
+def test_malformed_model_content_is_a_conflict_not_request_failure_or_mismatch(
+        chain_data, tmp_path, monkeypatch, raw):
+    from tests.agent_chain.test_graph import run
+    _, _, context, schedule = chain_data
+    client_mock(monkeypatch, raw)
+    audit_dir = tmp_path / 'provider'
+    result = asyncio.run(scheduling_provider().propose(
+        context, feedback=None, previous_response=None, audit_dir=audit_dir))
+    summary, provider, directory = run(tmp_path, [result, schedule])
+    assert summary['status'] == 'completed' and summary['schedule_stage'] == 'full'
+    assert len(provider.calls) == 2 and 'schedule_error' not in summary
+    assert provider.calls[1]['feedback']['conflicts'][0]['code'] == 'MODEL_JSON_INVALID'
+    assert not (directory / 'schedule/attempt_01/error.json').exists()
+
+
+def test_treatment_request_error_preserves_original_status_code(chain_data, tmp_path, monkeypatch):
+    class ServiceFailure(RuntimeError):
+        status_code = 503
+    cases, mapping, _, _ = chain_data
+    calls, _ = client_mock(monkeypatch, '', error=ServiceFailure('private-test-key'))
+    with pytest.raises(TreatmentFailure) as error:
+        asyncio.run(treatment_provider().propose(build_treatment_input(cases[0], mapping), audit_dir=tmp_path))
+    assert error.value.reason == {'reason_code': 'CALL_FAILED', 'error_type': 'ServiceFailure', 'status_code': 503}
+    assert len(calls) == 1

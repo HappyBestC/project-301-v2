@@ -1,5 +1,6 @@
 """Graph node work; the graph module contains only wiring and routing."""
 import copy
+import json
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable
@@ -21,7 +22,17 @@ class Providers:
     execute: Callable = execute_all
 
 
-def independently_validate(context: dict, candidate) -> dict:
+def independently_validate(context: dict, candidate, raw_response: str | None = None) -> dict:
+    if raw_response is not None:
+        try:
+            json.loads(raw_response, parse_constant=lambda value: (_ for _ in ()).throw(ValueError(value)))
+        except (ValueError, TypeError):
+            # Reproduce the existing API's JSON rejection independently, so a
+            # malformed response is a retryable conflict, not a validation mismatch.
+            return {'known_constraints_passed': False, 'fully_verified': False,
+                    'conflicts': [{'code': 'MODEL_JSON_INVALID',
+                                  'detail': 'Expected a nonempty strict JSON schedule; see response.txt'}],
+                    'unchecked': [], 'projected_occupancy': [], 'projected_inventory_changes': []}
     result = validation.validate_schedule(context, candidate)
     if not result['conflicts'] and not Schedule.model_validate(candidate).demonstration_only:
         result.update(known_constraints_passed=False, fully_verified=False, status='conflicts',
@@ -37,8 +48,9 @@ def acceptable(result: dict) -> bool:
 
 
 class Nodes:
-    def __init__(self, providers: Providers, config: dict):
+    def __init__(self, providers: Providers, config: dict, progress: dict | None = None):
         self.providers, self.config = providers, config
+        self.progress = progress if progress is not None else {}
 
     def load_scenario(self, state):
         paths = scenario_paths(state['scenario'])
@@ -51,6 +63,7 @@ class Nodes:
         return snapshot(state, 'load_scenario', {'cases': cases, 'resources': resources, 'mapping': mapping})
 
     async def treatment(self, state):
+        self.progress['active_stage'] = 'treatment'
         decisions, excluded = {}, {}
         for case in state['cases']:
             pid = case['patient_id']
@@ -85,8 +98,16 @@ class Nodes:
                     excluded[pid] = failure
             write_json(directory / 'admission.json', result)
             decisions[pid] = {'raw_response': raw, **result}
-        return snapshot(state, 'treatment', {'treatment_decisions': decisions, 'excluded_patients': excluded,
-                                             'status': 'treatment_failed' if len(excluded) == len(state['cases']) else 'running'})
+        stage = 'failed' if len(excluded) == len(state['cases']) else 'partial' if excluded else 'ok'
+        changes = {'treatment_decisions': decisions, 'excluded_patients': excluded,
+                   'treatment_stage': stage, 'status': 'running'}
+        if stage == 'failed':
+            changes['schedule_stage'] = 'skipped'
+        result = snapshot(state, 'treatment', changes)
+        self.progress.update(active_stage=None, treatment_stage=stage)
+        if stage == 'failed':
+            self.progress['schedule_stage'] = 'skipped'
+        return result
 
     def build_dispatch_input(self, state):
         cases = [{**copy.deepcopy(case), 'candidate_plans': copy.deepcopy(
@@ -98,6 +119,7 @@ class Nodes:
         return snapshot(state, 'build_dispatch_input', {'dispatch_input': context})
 
     async def schedule(self, state):
+        self.progress['active_stage'] = 'schedule'
         attempts = copy.deepcopy(state['schedule_attempts'])
         n = len(attempts) + 1
         directory = Path(state['run_dir']) / 'schedule' / f'attempt_{n:02}'
@@ -124,16 +146,17 @@ class Nodes:
         attempts = copy.deepcopy(state['schedule_attempts'])
         current = attempts[-1]
         context = state['dispatch_input']
-        result = independently_validate(context, current['candidate'])
+        result = independently_validate(context, current['candidate'], current['raw_response'])
         directory = Path(state['run_dir']) / 'schedule' / f"attempt_{current['attempt']:02}"
         current.update(validation=result, conflicts=len(result['conflicts']),
                        selected_patients=result.get('scheduled_patients', 0))
-        stop_error = None
+        mismatch = None
         if current['provider_validation'] is not None and current['provider_validation'] != result:
-            stop_error = {'code': 'PROVIDER_VALIDATION_MISMATCH',
-                          'detail': 'Independent validation differs from the provider result'}
-        if 'request_error' in current['metadata']:
-            stop_error = {'code': 'SCHEDULE_REQUEST_FAILED', **current['metadata']['request_error']}
+            mismatch = {'code': 'PROVIDER_VALIDATION_MISMATCH', 'attempt': current['attempt'],
+                        'detail': 'Independent validation differs from the provider result'}
+        request_error = ({'code': 'SCHEDULE_REQUEST_FAILED', 'attempt': current['attempt'],
+                          **current['metadata']['request_error']}
+                         if 'request_error' in current['metadata'] else None)
         # Reconstruct the exact existing feedback bookkeeping from JSON history.
         history, previous_selected, latest_feedback = {}, set(), None
         for attempt in attempts:
@@ -149,29 +172,45 @@ class Nodes:
         current['feedback'] = latest_feedback
         write_json(directory / 'validation.json', result)
         write_json(directory / 'feedback.json', latest_feedback)
-        # Keep the largest conflict-free candidate, including coverage retries,
-        # but only the explicitly allowed all/missing_parameters results execute.
-        passed = [a for a in attempts if not a['validation']['conflicts']]
+        # A failed request cannot itself contribute a candidate. max() keeps the
+        # first attempt on equal coverage because attempts are chronological.
+        completed = attempts[:-1] if request_error else attempts
+        passed = [a for a in completed if not a['validation']['conflicts']]
         best = max(passed, key=lambda a: a['validation']['scheduled_patients']) if passed else None
         eligible = [a for a in passed if acceptable(a['validation'])]
         accepted = max(eligible, key=lambda a: a['validation']['scheduled_patients']) if eligible else None
         current['best_passed_attempt'] = best['attempt'] if best else None
-        status = 'running'
-        if stop_error:
-            current['error'] = stop_error
-            write_json(directory / 'error.json', stop_error)
-            status, accepted = 'schedule_failed', None
-        elif accepted is None and len(attempts) >= self.config['max_schedule_attempts']:
-            status = 'schedule_failed'
+        changes = {'status': 'running'}
+        if mismatch:
+            accepted = None
+            current['error'] = mismatch
+            write_json(directory / 'error.json', mismatch)
+            changes.update(status='aborted', schedule_stage='aborted', error=mismatch)
+        else:
+            exhausted = len(attempts) >= self.config['max_schedule_attempts']
+            if request_error:
+                current['error'] = request_error
+                write_json(directory / 'error.json', request_error)
+                changes['schedule_error'] = request_error
+            if request_error or exhausted:
+                accepted = accepted or best
+            if accepted:
+                changes['schedule_stage'] = 'partial' if accepted['validation']['unscheduled_reasons'] else 'full'
+            elif request_error or exhausted:
+                changes['schedule_stage'] = 'failed'
         if accepted:
             write_json(Path(state['run_dir']) / 'schedule.json', accepted['candidate'])
-        return snapshot(state, 'validate', {
+        result = snapshot(state, 'validate', {
             'schedule_attempts': attempts, 'feedback': latest_feedback, 'validation': result,
-            'accepted_schedule': accepted['candidate'] if accepted else None, 'status': status,
+            'accepted_schedule': accepted['candidate'] if accepted else None, **changes,
         })
+        if 'schedule_stage' in changes:
+            self.progress.update(active_stage=None, schedule_stage=changes['schedule_stage'])
+        return result
 
     def build_timeline(self, state):
-        events = timeline.build_timeline(state['cases'], state['dispatch_input'], state['accepted_schedule'])
+        events = timeline.build_timeline(state['cases'], state.get('dispatch_input'), state['accepted_schedule'],
+                                         excluded_patients=state['excluded_patients'])
         write_json(Path(state['run_dir']) / 'timeline.json', events)
         return snapshot(state, 'build_timeline', {'timeline': events})
 

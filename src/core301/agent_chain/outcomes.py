@@ -1,6 +1,9 @@
 """Window integrals and explicit missingness; no locked fourteen-rule evaluator."""
 from collections import Counter
+import copy
 import math
+
+from .timeline import TREATMENT_FIELDS, TREATMENT_STATUSES
 
 
 def trapezoid(samples: list, start_min: float, end_min: float) -> float | None:
@@ -46,6 +49,8 @@ def patient_outcome(record: dict, horizon_min: float = 120.0) -> dict:
     shock = [e['time_min'] for e in record['events'] if e['event'] == 'HypovolemicShock' and e['active']]
     return {
         'patient_id': record['patient_id'], 'arrival_time_min': record['arrival_time_min'],
+        'treatment_status': record.get('treatment_status', 'scheduled'),
+        **{key: copy.deepcopy(record[key]) for key in TREATMENT_FIELDS if key in record},
         'window_status': window, 'observed_integral_CO_L': observed,
         'integral_CO_L': integral,
         'terminal_event': terminal, 'first_hypovolemic_shock_min': min(shock) if shock else None,
@@ -85,6 +90,8 @@ def _aggregate(patients: dict, *, clean: bool) -> dict:
 def evaluate(execution: dict, horizon_min: float = 120.0) -> dict:
     patients = {pid: patient_outcome(record, horizon_min) for pid, record in execution.items()}
     counts = Counter(p['window_status'] for p in patients.values())
+    groups = {status: {pid: patient for pid, patient in patients.items() if patient['treatment_status'] == status}
+              for status in TREATMENT_STATUSES}
     return {'patients': patients, 'summary': {
         'patients': len(patients),
         'window_status_counts': {s: counts[s] for s in ('complete', 'complete_terminal',
@@ -96,4 +103,11 @@ def evaluate(execution: dict, horizon_min: float = 120.0) -> dict:
         'exploratory': sum(p['exploratory'] for p in patients.values()),
         'all_available': _aggregate(patients, clean=False),
         'clean': _aggregate(patients, clean=True),
+        'treatment_status_counts': {status: len(group) for status, group in groups.items()},
+        'by_treatment_status': {
+            status: {**_aggregate(group, clean=False),
+                     'deaths': sum(p['terminal_event'] is not None for p in group.values()),
+                     'hypovolemic_shock_patients': sum(p['first_hypovolemic_shock_min'] is not None
+                                                      for p in group.values())}
+            for status, group in groups.items()},
     }}

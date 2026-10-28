@@ -54,19 +54,27 @@ async def run_chain(mode: str, run_id: str, *, max_schedule_attempts: int = 3,
                            scenario=scenario)
     initial = {'run_id': run_id, 'run_dir': str(directory), 'mode': mode, 'horizon_min': 120.0,
                'scenario': scenario, 'status': 'running', 'schedule_attempts': [], 'feedback': None,
-               'previous_response': None, 'accepted_schedule': None}
+               'previous_response': None, 'accepted_schedule': None,
+               'treatment_stage': 'not_reached', 'schedule_stage': 'not_reached'}
+    state = initial.copy()
+    progress = {'active_stage': None, 'treatment_stage': 'not_reached', 'schedule_stage': 'not_reached'}
     started = perf_counter()
     try:
-        state = await build_graph(providers, config).ainvoke(initial, {'recursion_limit': 30})
+        async for update in build_graph(providers, config, progress).astream(
+                initial, {'recursion_limit': 30}, stream_mode='updates'):
+            for changes in update.values():
+                state.update(changes)
     except Exception as exc:
         error = safe_error(exc)
         write_json(directory / 'runner_error.json', error)
-        finish_run(directory, {'run_id': run_id, 'mode': mode, 'status': 'running',
-                               'aborted': True, 'error': error, 'wall_elapsed_s': perf_counter() - started})
-        raise
+        state.update(status='aborted', error=error)
+        for stage in ('treatment', 'schedule'):
+            state[stage + '_stage'] = ('aborted' if progress['active_stage'] == stage
+                                       else progress[stage + '_stage'])
     summary = {
         'run_id': run_id, 'mode': mode, 'status': state['status'], 'horizon_min': 120.0,
-        'loaded_patients': len(state['cases']), 'excluded_patients': state.get('excluded_patients', {}),
+        'treatment_stage': state['treatment_stage'], 'schedule_stage': state['schedule_stage'],
+        'loaded_patients': len(state.get('cases', [])), 'excluded_patients': state.get('excluded_patients', {}),
         'schedule_attempts': len(state['schedule_attempts']),
         'accepted_patients': len(state['accepted_schedule']['selections']) if state['accepted_schedule'] else 0,
         'last_conflicts': len(state.get('validation', {}).get('conflicts', [])),
@@ -74,6 +82,9 @@ async def run_chain(mode: str, run_id: str, *, max_schedule_attempts: int = 3,
         'model_calls_enabled': mode == 'live', 'synthetic_physiology': mode == 'offline',
         'outcomes': state.get('outcomes', {}).get('summary'), 'wall_elapsed_s': perf_counter() - started,
     }
+    for key in ('schedule_error', 'error'):
+        if key in state:
+            summary[key] = state[key]
     finish_run(directory, summary)
     return summary
 

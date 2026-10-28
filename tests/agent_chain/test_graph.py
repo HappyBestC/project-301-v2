@@ -57,6 +57,7 @@ def test_success_snapshots_and_audit_digests(chain_data, tmp_path):
     _, _, context, schedule = chain_data
     summary, provider, directory = run(tmp_path, [schedule])
     assert summary['status'] == 'completed' and summary['execution_patients'] == 16
+    assert summary['treatment_stage'] == 'ok' and summary['schedule_stage'] == 'full'
     assert summary['schedule_attempts'] == 1 and summary['accepted_patients'] == 16
     assert provider.calls[0]['feedback'] is None and provider.calls[0]['previous_response'] is None
     loaded = api.read(directory / 'state/load_scenario.json')
@@ -93,21 +94,24 @@ def test_conflict_retry_carries_raw_response_history_and_withdrawal(chain_data, 
     assert state['accepted_schedule'] == good
 
 
-def test_conflicts_at_attempt_limit_never_execute(chain_data, tmp_path):
+@pytest.mark.parametrize('attempts', [2, 3])
+def test_conflicts_at_attempt_limit_execute_everyone_without_treatment(chain_data, tmp_path, attempts):
     _, _, _, bad = chain_data
     bad['operations'][0]['end_min'] = 1.0
-    summary, provider, directory = run(tmp_path, [bad], attempts=2)
-    assert summary['status'] == 'schedule_failed' and len(provider.calls) == 2
-    assert summary['execution_patients'] == 0
-    assert not (directory / 'timeline.json').exists()
+    summary, provider, directory = run(tmp_path, [bad], attempts=attempts)
+    assert summary['status'] == 'completed' and len(provider.calls) == attempts
+    assert summary['schedule_stage'] == 'failed' and summary['execution_patients'] == 16
+    events = api.read(directory / 'timeline.json')
+    assert len(events) == 16 and all(e['event'] == 'injury_onset' for e in events)
+    assert {e['treatment_status'] for e in events} == {'no_schedule'}
 
 
-@pytest.mark.parametrize('reason,expected,calls', [
-    ('missing_parameters', 'completed', 1), ('no_feasible_schedule_found', 'schedule_failed', 2)])
-def test_only_missing_parameter_omissions_can_execute(chain_data, tmp_path, reason, expected, calls):
+@pytest.mark.parametrize('reason,calls', [('missing_parameters', 1), ('no_feasible_schedule_found', 2)])
+def test_missing_parameters_accept_immediately_other_omissions_wait_for_limit(chain_data, tmp_path, reason, calls):
     _, _, _, good = chain_data
     summary, provider, directory = run(tmp_path, [withdraw(good, 'P01', reason)], attempts=2)
-    assert summary['status'] == expected and len(provider.calls) == calls
+    assert summary['status'] == 'completed' and summary['schedule_stage'] == 'partial'
+    assert len(provider.calls) == calls and summary['execution_patients'] == 16
     state = api.read(directory / 'state/validate.json')
     assert not state['validation']['conflicts']
     assert state['schedule_attempts'][-1]['best_passed_attempt'] == 1  # preserve first on ties
@@ -118,7 +122,9 @@ def test_provider_validation_disagreement_stops_immediately(chain_data, tmp_path
     proposal = {'schedule': good, 'raw_response': json.dumps(good), 'metadata': {},
                 'validation': {'conflicts': [], 'fabricated': True}}
     summary, provider, directory = run(tmp_path, [proposal])
-    assert summary['status'] == 'schedule_failed' and len(provider.calls) == 1
+    assert summary['status'] == 'aborted' and len(provider.calls) == 1
+    assert summary['schedule_stage'] == 'aborted' and summary['treatment_stage'] == 'ok'
+    assert summary['outcomes'] is None and not (directory / 'outcomes.json').exists()
     assert api.read(directory / 'schedule/attempt_01/error.json')['code'] == 'PROVIDER_VALIDATION_MISMATCH'
     assert not api.read(directory / 'schedule/attempt_01/validation.json')['conflicts']
     assert not (directory / 'timeline.json').exists()
@@ -132,22 +138,26 @@ def test_demonstration_flag_is_required(chain_data, tmp_path):
         bad = withdraw(bad, pid, 'missing_parameters')
     bad['demonstration_only'] = False
     summary, _, directory = run(tmp_path, [bad], attempts=1)
-    assert summary['status'] == 'schedule_failed'
+    assert summary['status'] == 'completed' and summary['schedule_stage'] == 'failed'
     conflicts = api.read(directory / 'schedule/attempt_01/validation.json')['conflicts']
     assert any(c['code'] == 'DEMONSTRATION_FLAG_REQUIRED' for c in conflicts)
 
 
 def test_request_exception_is_not_retried_or_leaked(tmp_path):
     summary, provider, directory = run(tmp_path, [RuntimeError('secret-credential')])
-    assert summary['status'] == 'schedule_failed' and len(provider.calls) == 1
+    assert summary['status'] == 'completed' and summary['schedule_stage'] == 'failed'
+    assert len(provider.calls) == 1 and summary['execution_patients'] == 16
+    assert summary['schedule_error'] == {'code': 'SCHEDULE_REQUEST_FAILED', 'attempt': 1,
+                                         'error_type': 'RuntimeError', 'status_code': None}
     assert 'secret-credential' not in ''.join(p.read_text() for p in directory.rglob('*.json'))
 
 
 @pytest.mark.parametrize('candidate', [None, {'selections': None}, {'selections': [['invalid']]}, {}])
 def test_invalid_schedule_shape_still_produces_bounded_feedback(tmp_path, candidate):
-    response = {'schedule': candidate, 'raw_response': 'invalid', 'metadata': {}}
+    response = {'schedule': candidate, 'raw_response': json.dumps(candidate), 'metadata': {}}
     summary, provider, _ = run(tmp_path, [response], attempts=2)
-    assert summary['status'] == 'schedule_failed' and len(provider.calls) == 2
+    assert summary['status'] == 'completed' and summary['schedule_stage'] == 'failed'
+    assert len(provider.calls) == 2
     assert provider.calls[1]['feedback']['conflicts'][0]['code'] == 'SCHEMA_INVALID'
 
 
@@ -163,10 +173,13 @@ def test_treatment_failure_excludes_patient_without_template_fallback(chain_data
     assert 'secret-credential' not in (directory / 'treatment/P01/admission.json').read_text()
 
 
-def test_all_treatment_failures_end_before_schedule(tmp_path):
+def test_all_treatment_failures_skip_schedule_but_execute_everyone(tmp_path):
     treatment = FakeTreatmentProvider({pid: '{invalid' for pid in template_decisions()})
     summary, provider, directory = run(tmp_path, [{}], treatment=treatment)
-    assert summary['status'] == 'treatment_failed' and provider.calls == []
+    assert summary['status'] == 'completed' and provider.calls == []
+    assert summary['treatment_stage'] == 'failed' and summary['schedule_stage'] == 'skipped'
+    assert summary['execution_patients'] == 16
+    assert summary['outcomes']['treatment_status_counts']['treatment_excluded'] == 16
     assert len(summary['excluded_patients']) == 16
     assert not (directory / 'dispatch_input.json').exists()
 

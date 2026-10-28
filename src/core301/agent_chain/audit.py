@@ -11,6 +11,8 @@ from .scenarios import SCENARIOS, scenario_paths
 
 RESULTS_ROOT = PROJECT_ROOT / 'experiments/results/agent_chain'
 KNOWN_SIMPLIFICATIONS = [
+    'Patients excluded by the treatment agent are absent from dispatch input and consume no scheduling '
+    'resources. They still enter physiology simulation without treatment and are included in outcomes.',
     'Decisions use dataset Pulse observations sampled about two minutes after injury, '
     'not the execution engines. Patients arriving at minutes 10 and 20 use those same '
     'dataset observations. V2 event-driven decisions will read running engines.',

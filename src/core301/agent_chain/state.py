@@ -23,3 +23,7 @@ class ChainState(TypedDict, total=False):
     execution: dict[str, dict]
     outcomes: dict
     status: str
+    treatment_stage: str
+    schedule_stage: str
+    schedule_error: dict
+    error: dict

@@ -119,6 +119,41 @@ def test_empty_available_population_has_no_mean():
     assert result['denominator'] == 0 and result['mean_CO_L'] is None
 
 
+def test_grouped_outcomes_include_untreated_patients_without_changing_integral_rules():
+    records = {f'P{i:02}': record(f'P{i:02}') for i in range(1, 7)}
+    statuses = ['scheduled', 'unscheduled', 'treatment_excluded', 'no_schedule', 'no_schedule', 'scheduled']
+    for patient, status in zip(records.values(), statuses):
+        patient['treatment_status'] = status
+    records['P02'].update(unscheduled_reason_code='resource_shortage', unscheduled_reason='Original explanation')
+    reason = {'reason_code': 'CALL_FAILED', 'error_type': 'ServiceError', 'status_code': 503}
+    records['P03']['treatment_exclusion_reason'] = reason
+    records['P04'].update(terminal_event={'event': 'CardiacArrest', 'time_min': 1.5}, reached_horizon=False,
+                         events=[{'event': 'HypovolemicShock', 'active': True, 'time_min': 1.0}])
+    records['P05'].update(engine_failure={'code': 'failed'}, reached_horizon=False)
+    records['P06']['exploratory'] = True
+    result = outcomes.evaluate(records, 2.0)
+    assert result['patients']['P02']['unscheduled_reason'] == 'Original explanation'
+    assert result['patients']['P02']['unscheduled_reason_code'] == 'resource_shortage'
+    assert result['patients']['P03']['treatment_exclusion_reason'] == reason
+    assert 'treatment_exclusion_reason' not in result['patients']['P01']
+    assert result['summary']['treatment_status_counts'] == {
+        'scheduled': 2, 'unscheduled': 1, 'treatment_excluded': 1, 'no_schedule': 2}
+    grouped = result['summary']['by_treatment_status']
+    assert grouped['scheduled']['total_CO_L'] == 16 and grouped['scheduled']['denominator'] == 2
+    for status in ('unscheduled', 'treatment_excluded'):
+        assert grouped[status]['total_CO_L'] == grouped[status]['mean_CO_L'] == 8
+        assert grouped[status]['denominator'] == 1
+    assert grouped['no_schedule']['total_CO_L'] == grouped['no_schedule']['mean_CO_L'] == 5.25
+    assert grouped['no_schedule']['denominator'] == 1
+    assert grouped['no_schedule']['deaths'] == grouped['no_schedule']['hypovolemic_shock_patients'] == 1
+    assert grouped['no_schedule']['excluded_patients'] == [
+        {'patient_id': 'P05', 'reasons': ['incomplete_engine_failure']}]
+    assert result['summary']['all_available']['total_CO_L'] == 37.25
+    assert result['summary']['all_available']['denominator'] == 5
+    assert result['summary']['clean']['total_CO_L'] == 29.25
+    assert result['summary']['clean']['denominator'] == 4
+
+
 def test_no_realtime_pacing_or_tick_loop():
     directory = Path(timeline.__file__).parent
     for path in directory.rglob('*.py'):

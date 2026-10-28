@@ -1,6 +1,7 @@
 """Independent patient processes and native bulk AdvanceTime actions, without pacing."""
 from concurrent.futures import ProcessPoolExecutor
 import csv
+import copy
 import json
 import math
 import multiprocessing
@@ -22,7 +23,7 @@ from core301.pulse.v2.treatment_adapter import TreatmentAdapter
 from core301.runtime.v2.injury_registry import InjuryRegistry
 from core301.runtime.v2_1.adapters import action_payload
 from .audit import safe_error, write_json
-from .timeline import STABILIZATION_S, global_time_min, native_time_s
+from .timeline import STABILIZATION_S, TREATMENT_FIELDS, global_time_min, native_time_s
 
 TERMINAL_EVENTS = frozenset(('IrreversibleState', 'CardiacArrest'))
 SAMPLE_FIELDS = ('time_min', 'pulse_time_s', 'pulse_injury_time_s', 'phase',
@@ -167,6 +168,7 @@ def execute_patient(spec: dict, timeline: list, directory: Path, *, horizon_min:
     start = perf_counter()
     pid, arrival = spec['patient_id'], spec['arrival_time_min']
     planned = [e for e in timeline if e['patient_id'] == pid and e['event'] == 'apply_action']
+    onset_event = next((e for e in timeline if e['patient_id'] == pid and e['event'] == 'injury_onset'), {})
     record = {
         'patient_id': pid, 'arrival_time_min': arrival, 'worker_pid': os.getpid(),
         'backend': 'native' if native else 'fake', 'samples': [], 'events': [],
@@ -175,6 +177,8 @@ def execute_patient(spec: dict, timeline: list, directory: Path, *, horizon_min:
         'terminal_event': None, 'engine_failure': None, 'injury_unsupported': None,
         'treatment_incomplete': False, 'exploratory': spec['injury']['injury_type'] == 'hemothorax',
         'reached_horizon': False, 'last_pulse_time_s': None,
+        'treatment_status': onset_event.get('treatment_status', 'scheduled'),
+        **{key: copy.deepcopy(onset_event[key]) for key in TREATMENT_FIELDS if key in onset_event},
     }
     engine = engine or (NativePulse(pid) if native else FakePulse(pid))
 
