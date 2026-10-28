@@ -38,14 +38,16 @@ def patient_outcome(record: dict, horizon_min: float = 120.0) -> dict:
     else:
         window = 'complete'
     end = min(horizon_min, terminal['time_min']) if terminal else horizon_min
-    observed = None if injury_unsupported else trapezoid(record['samples'], record['arrival_time_min'], end)
+    observed = None if injury_unsupported else trapezoid(record['samples'], record['arrival_time_min'], horizon_min)
     complete = window in ('complete', 'complete_terminal')
+    integral = (trapezoid(record['samples'], record['arrival_time_min'], end)
+                if terminal else observed) if complete else None
     last = record['samples'][-1] if window == 'complete' and record['samples'] else {}
     shock = [e['time_min'] for e in record['events'] if e['event'] == 'HypovolemicShock' and e['active']]
     return {
         'patient_id': record['patient_id'], 'arrival_time_min': record['arrival_time_min'],
         'window_status': window, 'observed_integral_CO_L': observed,
-        'integral_CO_L': observed if complete else None,
+        'integral_CO_L': integral,
         'terminal_event': terminal, 'first_hypovolemic_shock_min': min(shock) if shock else None,
         'final_MAP_mmHg': last.get('MAP_mmHg'), 'final_BloodVolume_mL': last.get('BloodVolume_mL'),
         'injected_actions': sum(a.get('injected', False) for a in record['actions']),

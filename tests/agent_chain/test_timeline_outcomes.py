@@ -69,6 +69,14 @@ def test_integral_clips_terminal_trapezoid_and_handles_duplicate_action_samples(
     assert outcomes.trapezoid(rows, 0, 120) == 8.0  # no extrapolation beyond samples
 
 
+def test_observed_integral_and_terminal_window_integral_remain_distinct():
+    value = record()
+    value.update(terminal_event={'event': 'CardiacArrest', 'time_min': 1.5}, reached_horizon=False)
+    result = outcomes.patient_outcome(value)
+    assert result['observed_integral_CO_L'] == 8.0  # all valid samples up to last observed time
+    assert result['integral_CO_L'] == 5.25  # full window cuts off at the event; zero thereafter
+
+
 def test_terminal_event_is_not_counted_as_engine_failure():
     value = record()
     value.update(terminal_event={'event': 'CardiacArrest', 'time_min': 2.0}, engine_failure={'code': 'same_step_failed'})
