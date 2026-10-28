@@ -1,4 +1,5 @@
 import copy
+import json
 import os
 from types import SimpleNamespace
 
@@ -141,6 +142,30 @@ def test_bulk_advance_uses_native_action_once(monkeypatch):
     monkeypatch.setattr(engine, 'submit', lambda payload: sent.append(payload) or True)
     assert engine.advance(120.0)
     assert sent == [{'AdvanceTime': {'Time': {'ScalarTime': {'Value': 60.0, 'Unit': 's'}}}}]
+
+
+def test_native_event_decoder_obeys_omitted_protobuf_defaults():
+    engine = bridge.NativePulse.__new__(bridge.NativePulse)
+    # This shape caused the long native run to fail at the first Antidiuresis.
+    payload = {'Change': [
+        {'SimTime': {'ScalarTime': {'Value': 1551.14, 'Unit': 's'}}, 'Active': True},
+        {'Event': 'HypovolemicShock', 'SimTime': {'ScalarTime': {'Unit': 's'}}},
+        {'Event': 'IrreversibleState', 'SimTime': {'ScalarTime': {'Value': 1800.0, 'Unit': 's'}}, 'Active': True},
+    ]}
+    engine.engine = SimpleNamespace(pull_events=lambda fmt: json.dumps(payload))
+    engine.fmt = None
+    assert engine.events() == [
+        {'event': 'Antidiuresis', 'active': True, 'pulse_time_s': 1551.14},
+        {'event': 'HypovolemicShock', 'active': False, 'pulse_time_s': 0.0},
+        {'event': 'IrreversibleState', 'active': True, 'pulse_time_s': 1800.0},
+    ]
+
+
+def test_empty_native_event_buffer_is_valid():
+    engine = bridge.NativePulse.__new__(bridge.NativePulse)
+    engine.engine = SimpleNamespace(pull_events=lambda fmt: '')
+    engine.fmt = None
+    assert engine.events() == []
 
 
 def test_fake_workers_are_in_independent_processes(chain_data, tmp_path):

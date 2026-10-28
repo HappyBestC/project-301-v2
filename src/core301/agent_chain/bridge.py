@@ -99,14 +99,19 @@ class NativePulse:
         return metrics
 
     def events(self) -> list:
+        from google.protobuf.json_format import Parse
+        from pulse.cdm.bind.Events_pb2 import EventChangeListData, eEvent
         payload = self.engine.pull_events(self.fmt)
+        message = Parse(payload, EventChangeListData()) if payload else EventChangeListData()
         result = []
-        for event in json.loads(payload or '{}').get('Change', []):
-            clock = event['SimTime']['ScalarTime']
-            if clock['Unit'] != 's':
+        for event in message.Change:
+            # Protobuf JSON omits enum zero (Antidiuresis), false Active and
+            # zero time values. Decode their schema defaults, not dict keys.
+            clock = event.SimTime.ScalarTime
+            if clock.Unit != 's':
                 raise ValueError('Unexpected native event time unit')
-            result.append({'event': event['Event'], 'active': event.get('Active', False),
-                           'pulse_time_s': clock.get('Value', 0.0)})
+            result.append({'event': eEvent.Name(event.Event), 'active': event.Active,
+                           'pulse_time_s': float(clock.Value)})
         return result
 
     def close(self):
