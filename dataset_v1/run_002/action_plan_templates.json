@@ -1,0 +1,1050 @@
+[
+  {
+    "plan_id": "P01-plan-1",
+    "injury_type": "external_hemorrhage",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P01-plan-1-a1",
+        "action_type": "control_external_bleeding",
+        "target": {
+          "patient_id": "P01",
+          "compartment": "RightLeg"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "control_external_bleeding.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "control_external_bleeding"
+        }
+      },
+      {
+        "action_id": "P01-plan-1-a2",
+        "action_type": "fluid_resuscitation",
+        "target": {
+          "patient_id": "P01",
+          "compartment": "RightLeg"
+        },
+        "depends_on": [
+          "P01-plan-1-a1"
+        ],
+        "fixed_protocol_ref": {
+          "protocol_id": "fluid_resuscitation.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "fluid_resuscitation"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P01-plan-2",
+    "injury_type": "external_hemorrhage",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P01-plan-2-a1",
+        "action_type": "control_external_bleeding",
+        "target": {
+          "patient_id": "P01",
+          "compartment": "RightLeg"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "control_external_bleeding.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "control_external_bleeding"
+        }
+      },
+      {
+        "action_id": "P01-plan-2-a2",
+        "action_type": "transfusion",
+        "target": {
+          "patient_id": "P01",
+          "compartment": "RightLeg"
+        },
+        "depends_on": [
+          "P01-plan-2-a1"
+        ],
+        "fixed_protocol_ref": {
+          "protocol_id": "transfusion.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "transfusion"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P02-plan-1",
+    "injury_type": "abdominal_internal_hemorrhage",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P02-plan-1-a1",
+        "action_type": "control_internal_bleeding",
+        "target": {
+          "patient_id": "P02",
+          "compartment": "Spleen"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "control_internal_bleeding.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "control_internal_bleeding"
+        }
+      },
+      {
+        "action_id": "P02-plan-1-a2",
+        "action_type": "fluid_resuscitation",
+        "target": {
+          "patient_id": "P02",
+          "compartment": "Spleen"
+        },
+        "depends_on": [
+          "P02-plan-1-a1"
+        ],
+        "fixed_protocol_ref": {
+          "protocol_id": "fluid_resuscitation.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "fluid_resuscitation"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P02-plan-2",
+    "injury_type": "abdominal_internal_hemorrhage",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P02-plan-2-a1",
+        "action_type": "control_internal_bleeding",
+        "target": {
+          "patient_id": "P02",
+          "compartment": "Spleen"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "control_internal_bleeding.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "control_internal_bleeding"
+        }
+      },
+      {
+        "action_id": "P02-plan-2-a2",
+        "action_type": "transfusion",
+        "target": {
+          "patient_id": "P02",
+          "compartment": "Spleen"
+        },
+        "depends_on": [
+          "P02-plan-2-a1"
+        ],
+        "fixed_protocol_ref": {
+          "protocol_id": "transfusion.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "transfusion"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P03-plan-1",
+    "injury_type": "respiratory_muscle_impairment",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P03-plan-1-a1",
+        "action_type": "intubation",
+        "target": {
+          "patient_id": "P03"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "intubation.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "intubation"
+        }
+      },
+      {
+        "action_id": "P03-plan-1-a2",
+        "action_type": "mechanical_ventilation",
+        "target": {
+          "patient_id": "P03"
+        },
+        "depends_on": [
+          "P03-plan-1-a1"
+        ],
+        "fixed_protocol_ref": {
+          "protocol_id": "mechanical_ventilation.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "mechanical_ventilation"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P04-plan-1",
+    "injury_type": "carbon_monoxide_exposure",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P04-plan-1-a1",
+        "action_type": "remove_from_exposure",
+        "target": {
+          "patient_id": "P04"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "301.v2.co.removal.restricted.1",
+          "source": "src/core301/runtime/v2/exposure_validation.py",
+          "action_selector": "remove_from_exposure"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "remove_from_exposure"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P05-plan-1",
+    "injury_type": "closed_tension_pneumothorax",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P05-plan-1-a1",
+        "action_type": "needle_decompression",
+        "target": {
+          "patient_id": "P05",
+          "side": "Left"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "needle_decompression.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "needle_decompression"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P06-plan-1",
+    "injury_type": "abdominal_internal_hemorrhage",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P06-plan-1-a1",
+        "action_type": "control_internal_bleeding",
+        "target": {
+          "patient_id": "P06",
+          "compartment": "Spleen"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "control_internal_bleeding.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "control_internal_bleeding"
+        }
+      },
+      {
+        "action_id": "P06-plan-1-a2",
+        "action_type": "fluid_resuscitation",
+        "target": {
+          "patient_id": "P06",
+          "compartment": "Spleen"
+        },
+        "depends_on": [
+          "P06-plan-1-a1"
+        ],
+        "fixed_protocol_ref": {
+          "protocol_id": "fluid_resuscitation.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "fluid_resuscitation"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P06-plan-2",
+    "injury_type": "abdominal_internal_hemorrhage",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P06-plan-2-a1",
+        "action_type": "control_internal_bleeding",
+        "target": {
+          "patient_id": "P06",
+          "compartment": "Spleen"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "control_internal_bleeding.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "control_internal_bleeding"
+        }
+      },
+      {
+        "action_id": "P06-plan-2-a2",
+        "action_type": "transfusion",
+        "target": {
+          "patient_id": "P06",
+          "compartment": "Spleen"
+        },
+        "depends_on": [
+          "P06-plan-2-a1"
+        ],
+        "fixed_protocol_ref": {
+          "protocol_id": "transfusion.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "transfusion"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P07-plan-1",
+    "injury_type": "hemothorax",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P07-plan-1-a1",
+        "action_type": "control_hemothorax_bleeding",
+        "target": {
+          "patient_id": "P07",
+          "side": "Left"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "301.v2.hemothorax.restricted.1",
+          "source": "src/core301/runtime/v2/hemothorax_validation.py",
+          "action_selector": "control_hemothorax_bleeding"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "control_hemothorax_bleeding"
+        }
+      },
+      {
+        "action_id": "P07-plan-1-a2",
+        "action_type": "chest_tube",
+        "target": {
+          "patient_id": "P07",
+          "side": "Left"
+        },
+        "depends_on": [
+          "P07-plan-1-a1"
+        ],
+        "fixed_protocol_ref": {
+          "protocol_id": "301.v2.hemothorax.restricted.1",
+          "source": "src/core301/runtime/v2/hemothorax_validation.py",
+          "action_selector": "chest_tube"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "chest_tube"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P08-plan-1",
+    "injury_type": "dehydration",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P08-plan-1-a1",
+        "action_type": "fluid_resuscitation",
+        "target": {
+          "patient_id": "P08"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "fluid_resuscitation.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "fluid_resuscitation"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P09-plan-1",
+    "injury_type": "external_hemorrhage",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P09-plan-1-a1",
+        "action_type": "control_external_bleeding",
+        "target": {
+          "patient_id": "P09",
+          "compartment": "RightLeg"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "control_external_bleeding.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "control_external_bleeding"
+        }
+      },
+      {
+        "action_id": "P09-plan-1-a2",
+        "action_type": "fluid_resuscitation",
+        "target": {
+          "patient_id": "P09",
+          "compartment": "RightLeg"
+        },
+        "depends_on": [
+          "P09-plan-1-a1"
+        ],
+        "fixed_protocol_ref": {
+          "protocol_id": "fluid_resuscitation.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "fluid_resuscitation"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P09-plan-2",
+    "injury_type": "external_hemorrhage",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P09-plan-2-a1",
+        "action_type": "control_external_bleeding",
+        "target": {
+          "patient_id": "P09",
+          "compartment": "RightLeg"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "control_external_bleeding.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "control_external_bleeding"
+        }
+      },
+      {
+        "action_id": "P09-plan-2-a2",
+        "action_type": "transfusion",
+        "target": {
+          "patient_id": "P09",
+          "compartment": "RightLeg"
+        },
+        "depends_on": [
+          "P09-plan-2-a1"
+        ],
+        "fixed_protocol_ref": {
+          "protocol_id": "transfusion.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "transfusion"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P10-plan-1",
+    "injury_type": "open_pneumothorax",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P10-plan-1-a1",
+        "action_type": "occlusive_dressing",
+        "target": {
+          "patient_id": "P10",
+          "side": "Left"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "occlusive_dressing.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "occlusive_dressing"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P11-plan-1",
+    "injury_type": "closed_tension_pneumothorax",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P11-plan-1-a1",
+        "action_type": "needle_decompression",
+        "target": {
+          "patient_id": "P11",
+          "side": "Left"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "needle_decompression.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "needle_decompression"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P12-plan-1",
+    "injury_type": "impaired_alveolar_exchange",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P12-plan-1-a1",
+        "action_type": "supplemental_oxygen",
+        "target": {
+          "patient_id": "P12"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "oxygen.alveolar.nc05.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "supplemental_oxygen"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P13-plan-1",
+    "injury_type": "respiratory_muscle_impairment",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P13-plan-1-a1",
+        "action_type": "intubation",
+        "target": {
+          "patient_id": "P13"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "intubation.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "intubation"
+        }
+      },
+      {
+        "action_id": "P13-plan-1-a2",
+        "action_type": "mechanical_ventilation",
+        "target": {
+          "patient_id": "P13"
+        },
+        "depends_on": [
+          "P13-plan-1-a1"
+        ],
+        "fixed_protocol_ref": {
+          "protocol_id": "mechanical_ventilation.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "mechanical_ventilation"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P14-plan-1",
+    "injury_type": "environmental_hypoxia",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P14-plan-1-a1",
+        "action_type": "remove_from_exposure",
+        "target": {
+          "patient_id": "P14"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "301.v2.hypoxia.removal.restricted.1",
+          "source": "src/core301/runtime/v2/exposure_validation.py",
+          "action_selector": "remove_from_exposure"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "remove_from_exposure"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P15-plan-1",
+    "injury_type": "external_hemorrhage",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P15-plan-1-a1",
+        "action_type": "control_external_bleeding",
+        "target": {
+          "patient_id": "P15",
+          "compartment": "RightLeg"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "control_external_bleeding.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "control_external_bleeding"
+        }
+      },
+      {
+        "action_id": "P15-plan-1-a2",
+        "action_type": "fluid_resuscitation",
+        "target": {
+          "patient_id": "P15",
+          "compartment": "RightLeg"
+        },
+        "depends_on": [
+          "P15-plan-1-a1"
+        ],
+        "fixed_protocol_ref": {
+          "protocol_id": "fluid_resuscitation.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "fluid_resuscitation"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P15-plan-2",
+    "injury_type": "external_hemorrhage",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P15-plan-2-a1",
+        "action_type": "control_external_bleeding",
+        "target": {
+          "patient_id": "P15",
+          "compartment": "RightLeg"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "control_external_bleeding.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "control_external_bleeding"
+        }
+      },
+      {
+        "action_id": "P15-plan-2-a2",
+        "action_type": "transfusion",
+        "target": {
+          "patient_id": "P15",
+          "compartment": "RightLeg"
+        },
+        "depends_on": [
+          "P15-plan-2-a1"
+        ],
+        "fixed_protocol_ref": {
+          "protocol_id": "transfusion.phase1.1",
+          "source": "src/core301/pulse/v2/protocol_book.py"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "transfusion"
+        }
+      }
+    ]
+  },
+  {
+    "plan_id": "P16-plan-1",
+    "injury_type": "hemothorax",
+    "status": "template_only_not_executed",
+    "actions": [
+      {
+        "action_id": "P16-plan-1-a1",
+        "action_type": "control_hemothorax_bleeding",
+        "target": {
+          "patient_id": "P16",
+          "side": "Left"
+        },
+        "depends_on": [],
+        "fixed_protocol_ref": {
+          "protocol_id": "301.v2.hemothorax.restricted.1",
+          "source": "src/core301/runtime/v2/hemothorax_validation.py",
+          "action_selector": "control_hemothorax_bleeding"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "control_hemothorax_bleeding"
+        }
+      },
+      {
+        "action_id": "P16-plan-1-a2",
+        "action_type": "chest_tube",
+        "target": {
+          "patient_id": "P16",
+          "side": "Left"
+        },
+        "depends_on": [
+          "P16-plan-1-a1"
+        ],
+        "fixed_protocol_ref": {
+          "protocol_id": "301.v2.hemothorax.restricted.1",
+          "source": "src/core301/runtime/v2/hemothorax_validation.py",
+          "action_selector": "chest_tube"
+        },
+        "eligibility_status": "eligibility_pending",
+        "resource_mapping_ref": {
+          "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+          "sections": [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "action_type": "chest_tube"
+        }
+      }
+    ]
+  }
+]

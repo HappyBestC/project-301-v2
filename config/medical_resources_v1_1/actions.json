@@ -1,0 +1,601 @@
+{
+  "version": "301.action_resources.v1",
+  "source_sha256": {
+    "my-docs/第一版医疗资源配置方案_V1.0.md": "c8f82d409cd996144f38f76bc9a9b1fc3447e10666332b3f348cd1a0015ab460",
+    "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md": "a46690936d3b50b84dbaa2f77ec617ec8dbd40514c4496d1e084e391e68fd6fa",
+    "config/medical_resources_v1/experiment_parameters_v1.json": "e18849649d9874695fba2430984f7292e279495077a2472b0f1c952b4447b248"
+  },
+  "actions": {
+    "control_external_bleeding": {
+      "allowed_start": [
+        "aid_station",
+        "hospital",
+        "basic_ambulance",
+        "ventilation_ambulance"
+      ],
+      "allowed_continue": [],
+      "duration_min": 3,
+      "staff_roles": [
+        "external_control"
+      ],
+      "consumables": {
+        "external_bleeding_kit": 1
+      },
+      "equipment": [],
+      "space_types": {
+        "aid_station": [
+          "treatment"
+        ],
+        "hospital": [
+          "treatment"
+        ],
+        "vehicle": [
+          "stretcher"
+        ]
+      },
+      "target_kind": "compartment",
+      "continuous": false,
+      "support_space_types": {},
+      "care": null,
+      "predecessor_actions": [],
+      "bulk_resources": [],
+      "equipment_turnaround_min": 0,
+      "stop_condition": "operation_complete",
+      "source": "动作配置 §3–5、§7、§9；资源方案 §9"
+    },
+    "control_internal_bleeding": {
+      "allowed_start": [
+        "hospital"
+      ],
+      "allowed_continue": [],
+      "duration_min": 15,
+      "staff_roles": [
+        "advanced",
+        "assist"
+      ],
+      "consumables": {},
+      "equipment": [],
+      "space_types": {
+        "aid_station": [
+          "treatment"
+        ],
+        "hospital": [
+          "treatment"
+        ],
+        "vehicle": [
+          "stretcher"
+        ]
+      },
+      "target_kind": "compartment",
+      "continuous": false,
+      "support_space_types": {},
+      "care": null,
+      "predecessor_actions": [],
+      "bulk_resources": [],
+      "equipment_turnaround_min": 0,
+      "stop_condition": "operation_complete",
+      "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+      "space_capability": "research_hemostasis"
+    },
+    "control_hemothorax_bleeding": {
+      "allowed_start": [
+        "hospital"
+      ],
+      "allowed_continue": [],
+      "duration_min": 15,
+      "staff_roles": [
+        "advanced",
+        "assist"
+      ],
+      "consumables": {},
+      "equipment": [],
+      "space_types": {
+        "aid_station": [
+          "treatment"
+        ],
+        "hospital": [
+          "treatment"
+        ],
+        "vehicle": [
+          "stretcher"
+        ]
+      },
+      "target_kind": "side",
+      "continuous": false,
+      "support_space_types": {},
+      "care": null,
+      "predecessor_actions": [],
+      "bulk_resources": [],
+      "equipment_turnaround_min": 0,
+      "stop_condition": "operation_complete",
+      "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+      "space_capability": "research_hemostasis"
+    },
+    "fluid_resuscitation": {
+      "allowed_start": [
+        "aid_station",
+        "hospital"
+      ],
+      "allowed_continue": [
+        "basic_ambulance",
+        "ventilation_ambulance"
+      ],
+      "duration_min": 5,
+      "staff_roles": [
+        "fluid"
+      ],
+      "consumables": {
+        "infusion_set": 1
+      },
+      "equipment": [],
+      "space_types": {
+        "aid_station": [
+          "observation"
+        ],
+        "hospital": [
+          "bed",
+          "ventilation_bed"
+        ],
+        "vehicle": [
+          "stretcher"
+        ]
+      },
+      "target_kind": "patient",
+      "continuous": true,
+      "support_space_types": {
+        "aid_station": [
+          "observation"
+        ],
+        "hospital": [
+          "bed",
+          "ventilation_bed"
+        ],
+        "vehicle": [
+          "stretcher"
+        ]
+      },
+      "care": {
+        "period_min": 10,
+        "duration_min": 1,
+        "role": "infusion_care"
+      },
+      "predecessor_actions": [],
+      "bulk_resources": [
+        "saline"
+      ],
+      "equipment_turnaround_min": 0,
+      "stop_condition": null,
+      "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+      "access": {
+        "new_duration_min": 5,
+        "existing_duration_min": 2,
+        "new_consumables": {
+          "iv_access_kit": 1
+        },
+        "separate_phase": false
+      },
+      "continuation_duration_min": null,
+      "injury_predecessors": {
+        "external_hemorrhage": "control_external_bleeding",
+        "abdominal_internal_hemorrhage": "control_internal_bleeding"
+      },
+      "continuation_staff_roles": [
+        "infusion_care"
+      ]
+    },
+    "transfusion": {
+      "allowed_start": [
+        "hospital"
+      ],
+      "allowed_continue": [],
+      "duration_min": 8,
+      "staff_roles": [
+        "transfusion",
+        "transfusion"
+      ],
+      "consumables": {
+        "transfusion_set": 1
+      },
+      "equipment": [],
+      "space_types": {
+        "aid_station": [
+          "bed"
+        ],
+        "hospital": [
+          "bed",
+          "ventilation_bed"
+        ],
+        "vehicle": [
+          "stretcher"
+        ]
+      },
+      "target_kind": "patient",
+      "continuous": true,
+      "support_space_types": {
+        "aid_station": [
+          "observation"
+        ],
+        "hospital": [
+          "bed",
+          "ventilation_bed"
+        ],
+        "vehicle": [
+          "stretcher"
+        ]
+      },
+      "care": {
+        "period_min": 5,
+        "duration_min": 1,
+        "role": "transfusion_care"
+      },
+      "predecessor_actions": [],
+      "bulk_resources": [
+        "blood"
+      ],
+      "equipment_turnaround_min": 0,
+      "stop_condition": null,
+      "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+      "access": {
+        "new_duration_min": 3,
+        "existing_duration_min": 0,
+        "new_consumables": {
+          "iv_access_kit": 1
+        },
+        "separate_phase": true,
+        "role": "access"
+      },
+      "injury_predecessors": {
+        "external_hemorrhage": "control_external_bleeding",
+        "abdominal_internal_hemorrhage": "control_internal_bleeding"
+      }
+    },
+    "occlusive_dressing": {
+      "allowed_start": [
+        "aid_station",
+        "hospital",
+        "basic_ambulance",
+        "ventilation_ambulance"
+      ],
+      "allowed_continue": [],
+      "duration_min": 2,
+      "staff_roles": [
+        "dressing"
+      ],
+      "consumables": {
+        "occlusive_dressing": 1
+      },
+      "equipment": [],
+      "space_types": {
+        "aid_station": [
+          "treatment"
+        ],
+        "hospital": [
+          "treatment"
+        ],
+        "vehicle": [
+          "stretcher"
+        ]
+      },
+      "target_kind": "side",
+      "continuous": false,
+      "support_space_types": {},
+      "care": null,
+      "predecessor_actions": [],
+      "bulk_resources": [],
+      "equipment_turnaround_min": 0,
+      "stop_condition": "operation_complete",
+      "source": "动作配置 §3–5、§7、§9；资源方案 §9"
+    },
+    "needle_decompression": {
+      "allowed_start": [
+        "aid_station",
+        "hospital"
+      ],
+      "allowed_continue": [],
+      "duration_min": 3,
+      "staff_roles": [
+        "decompression"
+      ],
+      "consumables": {
+        "decompression_kit": 1
+      },
+      "equipment": [],
+      "space_types": {
+        "aid_station": [
+          "treatment"
+        ],
+        "hospital": [
+          "treatment"
+        ],
+        "vehicle": [
+          "stretcher"
+        ]
+      },
+      "target_kind": "side",
+      "continuous": false,
+      "support_space_types": {},
+      "care": null,
+      "predecessor_actions": [],
+      "bulk_resources": [],
+      "equipment_turnaround_min": 0,
+      "stop_condition": "operation_complete",
+      "source": "动作配置 §3–5、§7、§9；资源方案 §9"
+    },
+    "chest_tube": {
+      "allowed_start": [
+        "hospital"
+      ],
+      "allowed_continue": [],
+      "duration_min": 12,
+      "staff_roles": [
+        "advanced",
+        "assist"
+      ],
+      "consumables": {
+        "chest_drain_kit": 1
+      },
+      "equipment": [],
+      "space_types": {
+        "aid_station": [
+          "treatment"
+        ],
+        "hospital": [
+          "treatment"
+        ],
+        "vehicle": [
+          "stretcher"
+        ]
+      },
+      "target_kind": "side",
+      "continuous": true,
+      "support_space_types": {
+        "aid_station": [
+          "observation"
+        ],
+        "hospital": [
+          "bed",
+          "ventilation_bed"
+        ],
+        "vehicle": [
+          "stretcher"
+        ]
+      },
+      "care": {
+        "period_min": 10,
+        "duration_min": 1,
+        "role": "drain_care"
+      },
+      "predecessor_actions": [
+        "control_hemothorax_bleeding"
+      ],
+      "bulk_resources": [],
+      "equipment_turnaround_min": 0,
+      "stop_condition": null,
+      "source": "动作配置 §3–5、§7、§9；资源方案 §9"
+    },
+    "intubation": {
+      "allowed_start": [
+        "hospital"
+      ],
+      "allowed_continue": [],
+      "duration_min": 8,
+      "staff_roles": [
+        "advanced",
+        "assist"
+      ],
+      "consumables": {
+        "intubation_kit": 1
+      },
+      "equipment": [
+        "intubation_set"
+      ],
+      "space_types": {
+        "aid_station": [
+          "treatment"
+        ],
+        "hospital": [
+          "treatment"
+        ],
+        "vehicle": [
+          "stretcher"
+        ]
+      },
+      "target_kind": "patient",
+      "continuous": false,
+      "support_space_types": {},
+      "care": null,
+      "predecessor_actions": [],
+      "bulk_resources": [],
+      "equipment_turnaround_min": 5,
+      "stop_condition": "operation_complete",
+      "source": "动作配置 §3–5、§7、§9；资源方案 §9"
+    },
+    "mechanical_ventilation": {
+      "allowed_start": [
+        "hospital"
+      ],
+      "allowed_continue": [
+        "ventilation_ambulance"
+      ],
+      "duration_min": 5,
+      "staff_roles": [
+        "ventilation_start"
+      ],
+      "consumables": {
+        "breathing_circuit": 1
+      },
+      "equipment": [
+        "ventilator"
+      ],
+      "space_types": {
+        "aid_station": [
+          "ventilation_bed"
+        ],
+        "hospital": [
+          "ventilation_bed"
+        ],
+        "vehicle": [
+          "stretcher"
+        ]
+      },
+      "target_kind": "patient",
+      "continuous": true,
+      "support_space_types": {
+        "aid_station": [
+          "observation"
+        ],
+        "hospital": [
+          "ventilation_bed"
+        ],
+        "vehicle": [
+          "stretcher"
+        ]
+      },
+      "care": {
+        "period_min": 5,
+        "duration_min": 2,
+        "role": "ventilation_care"
+      },
+      "predecessor_actions": [
+        "intubation"
+      ],
+      "bulk_resources": [
+        "oxygen"
+      ],
+      "equipment_turnaround_min": 0,
+      "stop_condition": null,
+      "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+      "continuation_duration_min": null,
+      "continuation_staff_roles": [
+        "ventilation_care"
+      ],
+      "bulk_resource_scope": {
+        "oxygen": "out_of_scope_not_modeled_not_zero"
+      },
+      "bulk_scope_source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+    },
+    "supplemental_oxygen": {
+      "allowed_start": [
+        "aid_station",
+        "hospital",
+        "basic_ambulance",
+        "ventilation_ambulance"
+      ],
+      "allowed_continue": [],
+      "duration_min": 2,
+      "staff_roles": [
+        "oxygen"
+      ],
+      "consumables": {
+        "oxygen_interface": 1
+      },
+      "equipment": [
+        "oxygen_device"
+      ],
+      "space_types": {
+        "aid_station": [
+          "observation"
+        ],
+        "hospital": [
+          "bed",
+          "ventilation_bed"
+        ],
+        "vehicle": [
+          "stretcher"
+        ]
+      },
+      "target_kind": "patient",
+      "continuous": true,
+      "support_space_types": {
+        "aid_station": [
+          "observation"
+        ],
+        "hospital": [
+          "bed",
+          "ventilation_bed"
+        ],
+        "vehicle": [
+          "stretcher"
+        ]
+      },
+      "care": {
+        "period_min": 10,
+        "duration_min": 1,
+        "role": "oxygen_care"
+      },
+      "predecessor_actions": [],
+      "bulk_resources": [
+        "oxygen"
+      ],
+      "equipment_turnaround_min": 0,
+      "stop_condition": null,
+      "source": "动作配置 §3–5、§7、§9；资源方案 §9"
+    },
+    "remove_from_exposure": {
+      "allowed_start": [
+        "aid_station",
+        "hospital"
+      ],
+      "allowed_continue": [],
+      "duration_min": 1,
+      "staff_roles": [
+        "environment"
+      ],
+      "consumables": {},
+      "equipment": [],
+      "space_types": {
+        "aid_station": [],
+        "hospital": [],
+        "vehicle": []
+      },
+      "target_kind": "patient",
+      "continuous": false,
+      "support_space_types": {},
+      "care": null,
+      "predecessor_actions": [],
+      "bulk_resources": [],
+      "equipment_turnaround_min": 0,
+      "stop_condition": "operation_complete",
+      "source": "动作配置 §3–5、§7、§9；资源方案 §9"
+    }
+  },
+  "bulk_protocols": {
+    "saline": {
+      "quantity": 500,
+      "rate": 100,
+      "unit": "mL",
+      "rate_unit": "mL/min",
+      "source_ref": "src/core301/pulse/treatment_adapter.py",
+      "source_sha256": "0446ae504306a3e0a56e26f9ebe8582034c70fbb93fc74f5671d711430a8914c",
+      "inventory": null,
+      "scope": "phase1.1 fixed infusion; delivery estimated from operation end, never changes protocol",
+      "reservation_quantity": 500,
+      "infusion_duration_min": 5,
+      "accounting": "full_course_commitment_with_patient_bound_remainder"
+    },
+    "blood": {
+      "quantity": 500,
+      "rate": 100,
+      "unit": "mL",
+      "rate_unit": "mL/min",
+      "source_ref": "src/core301/pulse/treatment_adapter.py",
+      "source_sha256": "0446ae504306a3e0a56e26f9ebe8582034c70fbb93fc74f5671d711430a8914c",
+      "inventory": null,
+      "scope": "phase1.1 fixed infusion; delivery estimated from operation end, never changes protocol",
+      "reservation_quantity": 500,
+      "infusion_duration_min": 5,
+      "accounting": "full_course_commitment_with_patient_bound_remainder"
+    },
+    "oxygen": {
+      "quantity": null,
+      "rate": 0.5,
+      "source_ref": "runs/resource_parameter_audit_001/findings.json",
+      "inventory": null,
+      "verified_setting_ref": "src/core301/pulse/v2/treatment_adapter.py: NasalCannula 0.5 L/min, 425 L; device setting is not a verified total supply consumption model",
+      "unit": "L",
+      "rate_unit": "L/min",
+      "source_sha256": "cb0d66dcccaad33b2e8f52e854ec93384de43452f13ebfaa3545857937b789bc",
+      "scope": "Verified fixed NasalCannula model only; start at setup completion; single-device 425 L is not shared stock"
+    }
+  }
+}

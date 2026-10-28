@@ -1,0 +1,1720 @@
+{
+  "version": "301.medical_resources.v1.1",
+  "time_unit": "min",
+  "source_sha256": {
+    "my-docs/第一版医疗资源配置方案_V1.0.md": "c8f82d409cd996144f38f76bc9a9b1fc3447e10666332b3f348cd1a0015ab460",
+    "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md": "a46690936d3b50b84dbaa2f77ec617ec8dbd40514c4496d1e084e391e68fd6fa",
+    "config/medical_resources_v1/experiment_parameters_v1.json": "e18849649d9874695fba2430984f7292e279495077a2472b0f1c952b4447b248"
+  },
+  "rule_sources": {
+    "personnel": "资源方案 §4、§8；动作配置 §2、§9",
+    "equipment_spaces": "资源方案 §5、§8",
+    "inventory": "资源方案 §6–8",
+    "travel": "资源方案 §11"
+  },
+  "nodes": {
+    "A": {
+      "type": "aid_station"
+    },
+    "B": {
+      "type": "aid_station"
+    },
+    "H1": {
+      "type": "hospital"
+    },
+    "H2": {
+      "type": "hospital"
+    },
+    "F1": {
+      "type": "field"
+    },
+    "F2": {
+      "type": "field"
+    }
+  },
+  "vehicles": {
+    "V1": {
+      "type": "basic_ambulance",
+      "location": "A",
+      "home": "A",
+      "stretcher_capacity": 1,
+      "status": "available",
+      "available_from_min": 0,
+      "crew": [
+        "V1-driver-1",
+        "V1-medic-1"
+      ]
+    },
+    "V2": {
+      "type": "basic_ambulance",
+      "location": "B",
+      "home": "B",
+      "stretcher_capacity": 1,
+      "status": "available",
+      "available_from_min": 0,
+      "crew": [
+        "V2-driver-1",
+        "V2-medic-1"
+      ]
+    },
+    "V3": {
+      "type": "ventilation_ambulance",
+      "location": "H1",
+      "home": "H1",
+      "stretcher_capacity": 1,
+      "status": "available",
+      "available_from_min": 0,
+      "crew": [
+        "V3-driver-1",
+        "V3-medic-1"
+      ]
+    }
+  },
+  "personnel": [
+    {
+      "id": "A-triage-1",
+      "role": "triage",
+      "owner": "A",
+      "location": "A",
+      "capabilities": [
+        "triage"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "A-basic-1",
+      "role": "basic",
+      "owner": "A",
+      "location": "A",
+      "capabilities": [
+        "external_control",
+        "dressing",
+        "decompression",
+        "access",
+        "fluid",
+        "oxygen",
+        "environment",
+        "infusion_care",
+        "oxygen_care",
+        "assist"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "A-basic-2",
+      "role": "basic",
+      "owner": "A",
+      "location": "A",
+      "capabilities": [
+        "external_control",
+        "dressing",
+        "decompression",
+        "access",
+        "fluid",
+        "oxygen",
+        "environment",
+        "infusion_care",
+        "oxygen_care",
+        "assist"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "A-care-1",
+      "role": "care",
+      "owner": "A",
+      "location": "A",
+      "capabilities": [
+        "assist",
+        "infusion_care",
+        "oxygen_care"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "B-triage-1",
+      "role": "triage",
+      "owner": "B",
+      "location": "B",
+      "capabilities": [
+        "triage"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "B-basic-1",
+      "role": "basic",
+      "owner": "B",
+      "location": "B",
+      "capabilities": [
+        "external_control",
+        "dressing",
+        "decompression",
+        "access",
+        "fluid",
+        "oxygen",
+        "environment",
+        "infusion_care",
+        "oxygen_care",
+        "assist"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "B-basic-2",
+      "role": "basic",
+      "owner": "B",
+      "location": "B",
+      "capabilities": [
+        "external_control",
+        "dressing",
+        "decompression",
+        "access",
+        "fluid",
+        "oxygen",
+        "environment",
+        "infusion_care",
+        "oxygen_care",
+        "assist"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "B-care-1",
+      "role": "care",
+      "owner": "B",
+      "location": "B",
+      "capabilities": [
+        "assist",
+        "infusion_care",
+        "oxygen_care"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-triage-1",
+      "role": "triage",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [
+        "triage"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-basic-1",
+      "role": "basic",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [
+        "external_control",
+        "dressing",
+        "decompression",
+        "access",
+        "fluid",
+        "oxygen",
+        "environment",
+        "infusion_care",
+        "oxygen_care",
+        "assist",
+        "transfusion",
+        "transfusion_care"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-advanced-1",
+      "role": "advanced",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [
+        "external_control",
+        "dressing",
+        "decompression",
+        "access",
+        "fluid",
+        "oxygen",
+        "environment",
+        "infusion_care",
+        "oxygen_care",
+        "assist",
+        "advanced",
+        "ventilation_start",
+        "ventilation_care",
+        "drain_care"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-advanced-2",
+      "role": "advanced",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [
+        "external_control",
+        "dressing",
+        "decompression",
+        "access",
+        "fluid",
+        "oxygen",
+        "environment",
+        "infusion_care",
+        "oxygen_care",
+        "assist",
+        "advanced",
+        "ventilation_start",
+        "ventilation_care",
+        "drain_care"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-care-1",
+      "role": "care",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [
+        "assist",
+        "infusion_care",
+        "oxygen_care",
+        "transfusion",
+        "transfusion_care",
+        "ventilation_care",
+        "drain_care"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-care-2",
+      "role": "care",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [
+        "assist",
+        "infusion_care",
+        "oxygen_care",
+        "transfusion",
+        "transfusion_care",
+        "ventilation_care",
+        "drain_care"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-care-3",
+      "role": "care",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [
+        "assist",
+        "infusion_care",
+        "oxygen_care",
+        "transfusion",
+        "transfusion_care",
+        "ventilation_care",
+        "drain_care"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "H2-triage-1",
+      "role": "triage",
+      "owner": "H2",
+      "location": "H2",
+      "capabilities": [
+        "triage"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "H2-basic-1",
+      "role": "basic",
+      "owner": "H2",
+      "location": "H2",
+      "capabilities": [
+        "external_control",
+        "dressing",
+        "decompression",
+        "access",
+        "fluid",
+        "oxygen",
+        "environment",
+        "infusion_care",
+        "oxygen_care",
+        "assist",
+        "transfusion",
+        "transfusion_care"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "H2-advanced-1",
+      "role": "advanced",
+      "owner": "H2",
+      "location": "H2",
+      "capabilities": [
+        "external_control",
+        "dressing",
+        "decompression",
+        "access",
+        "fluid",
+        "oxygen",
+        "environment",
+        "infusion_care",
+        "oxygen_care",
+        "assist",
+        "advanced",
+        "ventilation_start",
+        "ventilation_care",
+        "drain_care"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "H2-care-1",
+      "role": "care",
+      "owner": "H2",
+      "location": "H2",
+      "capabilities": [
+        "assist",
+        "infusion_care",
+        "oxygen_care",
+        "transfusion",
+        "transfusion_care",
+        "ventilation_care",
+        "drain_care"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "H2-care-2",
+      "role": "care",
+      "owner": "H2",
+      "location": "H2",
+      "capabilities": [
+        "assist",
+        "infusion_care",
+        "oxygen_care",
+        "transfusion",
+        "transfusion_care",
+        "ventilation_care",
+        "drain_care"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "V1-driver-1",
+      "role": "driver",
+      "owner": "V1",
+      "location": "V1",
+      "capabilities": [
+        "drive"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "V1-medic-1",
+      "role": "medic",
+      "owner": "V1",
+      "location": "V1",
+      "capabilities": [
+        "external_control",
+        "dressing",
+        "oxygen",
+        "oxygen_care",
+        "infusion_care"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "V2-driver-1",
+      "role": "driver",
+      "owner": "V2",
+      "location": "V2",
+      "capabilities": [
+        "drive"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "V2-medic-1",
+      "role": "medic",
+      "owner": "V2",
+      "location": "V2",
+      "capabilities": [
+        "external_control",
+        "dressing",
+        "oxygen",
+        "oxygen_care",
+        "infusion_care"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "V3-driver-1",
+      "role": "driver",
+      "owner": "V3",
+      "location": "V3",
+      "capabilities": [
+        "drive"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    },
+    {
+      "id": "V3-medic-1",
+      "role": "medic",
+      "owner": "V3",
+      "location": "V3",
+      "capabilities": [
+        "external_control",
+        "dressing",
+        "oxygen",
+        "oxygen_care",
+        "infusion_care",
+        "ventilation_care"
+      ],
+      "status": "available",
+      "available_from_min": 0
+    }
+  ],
+  "equipment": [
+    {
+      "id": "H1-ventilator-1",
+      "type": "ventilator",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-ventilator-2",
+      "type": "ventilator",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H2-ventilator-1",
+      "type": "ventilator",
+      "owner": "H2",
+      "location": "H2",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "A-oxygen_device-1",
+      "type": "oxygen_device",
+      "owner": "A",
+      "location": "A",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "A-oxygen_device-2",
+      "type": "oxygen_device",
+      "owner": "A",
+      "location": "A",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "B-oxygen_device-1",
+      "type": "oxygen_device",
+      "owner": "B",
+      "location": "B",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-oxygen_device-1",
+      "type": "oxygen_device",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-oxygen_device-2",
+      "type": "oxygen_device",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-oxygen_device-3",
+      "type": "oxygen_device",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H2-oxygen_device-1",
+      "type": "oxygen_device",
+      "owner": "H2",
+      "location": "H2",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H2-oxygen_device-2",
+      "type": "oxygen_device",
+      "owner": "H2",
+      "location": "H2",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "A-monitor-1",
+      "type": "monitor",
+      "owner": "A",
+      "location": "A",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "A-monitor-2",
+      "type": "monitor",
+      "owner": "A",
+      "location": "A",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "B-monitor-1",
+      "type": "monitor",
+      "owner": "B",
+      "location": "B",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-monitor-1",
+      "type": "monitor",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-monitor-2",
+      "type": "monitor",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-monitor-3",
+      "type": "monitor",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H2-monitor-1",
+      "type": "monitor",
+      "owner": "H2",
+      "location": "H2",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H2-monitor-2",
+      "type": "monitor",
+      "owner": "H2",
+      "location": "H2",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-intubation_set-1",
+      "type": "intubation_set",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H2-intubation_set-1",
+      "type": "intubation_set",
+      "owner": "H2",
+      "location": "H2",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "V1-oxygen_device-1",
+      "type": "oxygen_device",
+      "owner": "V1",
+      "location": "V1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "V1-monitor-1",
+      "type": "monitor",
+      "owner": "V1",
+      "location": "V1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "V2-oxygen_device-1",
+      "type": "oxygen_device",
+      "owner": "V2",
+      "location": "V2",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "V2-monitor-1",
+      "type": "monitor",
+      "owner": "V2",
+      "location": "V2",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "V3-oxygen_device-1",
+      "type": "oxygen_device",
+      "owner": "V3",
+      "location": "V3",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "V3-monitor-1",
+      "type": "monitor",
+      "owner": "V3",
+      "location": "V3",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "V3-ventilator-1",
+      "type": "ventilator",
+      "owner": "V3",
+      "location": "V3",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    }
+  ],
+  "spaces": [
+    {
+      "id": "A-treatment-1",
+      "type": "treatment",
+      "owner": "A",
+      "location": "A",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "A-treatment-2",
+      "type": "treatment",
+      "owner": "A",
+      "location": "A",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "B-treatment-1",
+      "type": "treatment",
+      "owner": "B",
+      "location": "B",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "B-treatment-2",
+      "type": "treatment",
+      "owner": "B",
+      "location": "B",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-treatment-1",
+      "type": "treatment",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-treatment-2",
+      "type": "treatment",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H2-treatment-1",
+      "type": "treatment",
+      "owner": "H2",
+      "location": "H2",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "A-observation-1",
+      "type": "observation",
+      "owner": "A",
+      "location": "A",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "A-observation-2",
+      "type": "observation",
+      "owner": "A",
+      "location": "A",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "A-observation-3",
+      "type": "observation",
+      "owner": "A",
+      "location": "A",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "A-observation-4",
+      "type": "observation",
+      "owner": "A",
+      "location": "A",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "A-observation-5",
+      "type": "observation",
+      "owner": "A",
+      "location": "A",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "A-observation-6",
+      "type": "observation",
+      "owner": "A",
+      "location": "A",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "B-observation-1",
+      "type": "observation",
+      "owner": "B",
+      "location": "B",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "B-observation-2",
+      "type": "observation",
+      "owner": "B",
+      "location": "B",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "B-observation-3",
+      "type": "observation",
+      "owner": "B",
+      "location": "B",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "B-observation-4",
+      "type": "observation",
+      "owner": "B",
+      "location": "B",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "B-observation-5",
+      "type": "observation",
+      "owner": "B",
+      "location": "B",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "B-observation-6",
+      "type": "observation",
+      "owner": "B",
+      "location": "B",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-bed-1",
+      "type": "bed",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-bed-2",
+      "type": "bed",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-bed-3",
+      "type": "bed",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-bed-4",
+      "type": "bed",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H2-bed-1",
+      "type": "bed",
+      "owner": "H2",
+      "location": "H2",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H2-bed-2",
+      "type": "bed",
+      "owner": "H2",
+      "location": "H2",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H2-bed-3",
+      "type": "bed",
+      "owner": "H2",
+      "location": "H2",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-ventilation_bed-1",
+      "type": "ventilation_bed",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H1-ventilation_bed-2",
+      "type": "ventilation_bed",
+      "owner": "H1",
+      "location": "H1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "H2-ventilation_bed-1",
+      "type": "ventilation_bed",
+      "owner": "H2",
+      "location": "H2",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "V1-stretcher-1",
+      "type": "stretcher",
+      "owner": "V1",
+      "location": "V1",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "V2-stretcher-1",
+      "type": "stretcher",
+      "owner": "V2",
+      "location": "V2",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    },
+    {
+      "id": "V3-stretcher-1",
+      "type": "stretcher",
+      "owner": "V3",
+      "location": "V3",
+      "capabilities": [],
+      "status": "available",
+      "bound_patient_id": null,
+      "available_from_min": 0
+    }
+  ],
+  "inventory": {
+    "A": {
+      "external_bleeding_kit": {
+        "quantity": 3,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "occlusive_dressing": {
+        "quantity": 2,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "decompression_kit": {
+        "quantity": 2,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "iv_access_kit": {
+        "quantity": 4,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "infusion_set": {
+        "quantity": 4,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "transfusion_set": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "chest_drain_kit": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "intubation_kit": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "breathing_circuit": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "oxygen_interface": {
+        "quantity": 3,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "saline": {
+        "quantity": 1000,
+        "reserved": 0,
+        "unit": "mL",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      },
+      "blood": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "mL",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      },
+      "oxygen": {
+        "quantity": 60,
+        "reserved": 0,
+        "unit": "L",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      }
+    },
+    "B": {
+      "external_bleeding_kit": {
+        "quantity": 2,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "occlusive_dressing": {
+        "quantity": 2,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "decompression_kit": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "iv_access_kit": {
+        "quantity": 3,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "infusion_set": {
+        "quantity": 3,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "transfusion_set": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "chest_drain_kit": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "intubation_kit": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "breathing_circuit": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "oxygen_interface": {
+        "quantity": 2,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "saline": {
+        "quantity": 500,
+        "reserved": 0,
+        "unit": "mL",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      },
+      "blood": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "mL",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      },
+      "oxygen": {
+        "quantity": 60,
+        "reserved": 0,
+        "unit": "L",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      }
+    },
+    "H1": {
+      "external_bleeding_kit": {
+        "quantity": 2,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "occlusive_dressing": {
+        "quantity": 2,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "decompression_kit": {
+        "quantity": 2,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "iv_access_kit": {
+        "quantity": 6,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "infusion_set": {
+        "quantity": 6,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "transfusion_set": {
+        "quantity": 3,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "chest_drain_kit": {
+        "quantity": 2,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "intubation_kit": {
+        "quantity": 3,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "breathing_circuit": {
+        "quantity": 2,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "oxygen_interface": {
+        "quantity": 4,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "saline": {
+        "quantity": 1500,
+        "reserved": 0,
+        "unit": "mL",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      },
+      "blood": {
+        "quantity": 1000,
+        "reserved": 0,
+        "unit": "mL",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      },
+      "oxygen": {
+        "quantity": 120,
+        "reserved": 0,
+        "unit": "L",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      }
+    },
+    "H2": {
+      "external_bleeding_kit": {
+        "quantity": 2,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "occlusive_dressing": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "decompression_kit": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "iv_access_kit": {
+        "quantity": 4,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "infusion_set": {
+        "quantity": 4,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "transfusion_set": {
+        "quantity": 2,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "chest_drain_kit": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "intubation_kit": {
+        "quantity": 2,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "breathing_circuit": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "oxygen_interface": {
+        "quantity": 3,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "saline": {
+        "quantity": 500,
+        "reserved": 0,
+        "unit": "mL",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      },
+      "blood": {
+        "quantity": 500,
+        "reserved": 0,
+        "unit": "mL",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      },
+      "oxygen": {
+        "quantity": 60,
+        "reserved": 0,
+        "unit": "L",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      }
+    },
+    "V1": {
+      "external_bleeding_kit": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "occlusive_dressing": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "decompression_kit": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "iv_access_kit": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "infusion_set": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "transfusion_set": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "chest_drain_kit": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "intubation_kit": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "breathing_circuit": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "oxygen_interface": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "saline": {
+        "quantity": 500,
+        "reserved": 0,
+        "unit": "mL",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      },
+      "blood": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "mL",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      },
+      "oxygen": {
+        "quantity": 30,
+        "reserved": 0,
+        "unit": "L",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      }
+    },
+    "V2": {
+      "external_bleeding_kit": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "occlusive_dressing": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "decompression_kit": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "iv_access_kit": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "infusion_set": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "transfusion_set": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "chest_drain_kit": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "intubation_kit": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "breathing_circuit": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "oxygen_interface": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "saline": {
+        "quantity": 500,
+        "reserved": 0,
+        "unit": "mL",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      },
+      "blood": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "mL",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      },
+      "oxygen": {
+        "quantity": 30,
+        "reserved": 0,
+        "unit": "L",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      }
+    },
+    "V3": {
+      "external_bleeding_kit": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "occlusive_dressing": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "decompression_kit": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "iv_access_kit": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "infusion_set": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "transfusion_set": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "chest_drain_kit": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "intubation_kit": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "breathing_circuit": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "oxygen_interface": {
+        "quantity": 1,
+        "reserved": 0,
+        "unit": "kit_or_item"
+      },
+      "saline": {
+        "quantity": 500,
+        "reserved": 0,
+        "unit": "mL",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      },
+      "blood": {
+        "quantity": 0,
+        "reserved": 0,
+        "unit": "mL",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      },
+      "oxygen": {
+        "quantity": 30,
+        "reserved": 0,
+        "unit": "L",
+        "status": "user_fixed_experiment_inventory",
+        "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      }
+    }
+  },
+  "travel_min": {
+    "A": {
+      "H1": 12,
+      "H2": 22,
+      "B": 15,
+      "A": 0,
+      "F1": 8,
+      "F2": 16
+    },
+    "B": {
+      "H1": 20,
+      "H2": 10,
+      "A": 15,
+      "B": 0,
+      "F1": 18,
+      "F2": 8
+    },
+    "H1": {
+      "A": 12,
+      "B": 20,
+      "H2": 15,
+      "H1": 0,
+      "F1": 18,
+      "F2": 26
+    },
+    "H2": {
+      "A": 22,
+      "B": 10,
+      "H1": 15,
+      "H2": 0,
+      "F1": 28,
+      "F2": 16
+    },
+    "F1": {
+      "A": 8,
+      "B": 18,
+      "H1": 18,
+      "H2": 28,
+      "F1": 0,
+      "F2": 20
+    },
+    "F2": {
+      "A": 16,
+      "B": 8,
+      "H1": 26,
+      "H2": 16,
+      "F1": 20,
+      "F2": 0
+    }
+  },
+  "transport_min": {
+    "loading": 3,
+    "handoff": 5,
+    "turnaround": 5
+  },
+  "initial_reservations": [],
+  "inventory_reference_rules": {
+    "policy": "fixed_user_approved_inventory_not_recomputed",
+    "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json",
+    "automatic_replenishment": false,
+    "implicit_cross_location_sharing": false
+  },
+  "unknowns": [
+    "treatment_stop_and_release",
+    "transfer_eligibility",
+    "support_handoff_duration_and_continuity",
+    "kit_contents",
+    "monitoring_occupancy_policy"
+  ],
+  "patient_facts": {},
+  "notes": [
+    "Research hemostasis capacity is one shared service limit per hospital, used together with any treatment space; it is not an extra bed.",
+    "Hospital basic/care staff have transfusion capabilities; auxiliary capability explicitly assigned to basic/care staff and advanced staff.",
+    "Vehicle personnel/equipment location is the vehicle ID; physical vehicle position is tracked by journeys.",
+    "Field nodes F1/F2 (V1.1): casualty locations only; no personnel, equipment, spaces or inventory; no treatment can start there."
+  ],
+  "service_capacities": [
+    {
+      "id": "H1-research_hemostasis-1",
+      "type": "research_hemostasis",
+      "location": "H1",
+      "owner": "H1",
+      "requires_space_type": "treatment",
+      "status": "available",
+      "available_from_min": 0,
+      "bound_patient_id": null
+    },
+    {
+      "id": "H2-research_hemostasis-1",
+      "type": "research_hemostasis",
+      "location": "H2",
+      "owner": "H2",
+      "requires_space_type": "treatment",
+      "status": "available",
+      "available_from_min": 0,
+      "bound_patient_id": null
+    }
+  ]
+}
