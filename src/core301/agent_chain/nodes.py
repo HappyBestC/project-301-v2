@@ -128,6 +128,11 @@ class Nodes:
         history, previous_selected, latest_feedback = {}, set(), None
         for attempt in attempts:
             candidate = attempt['candidate'] if isinstance(attempt['candidate'], dict) else {}
+            # A schema-invalid selections value cannot be interpreted as a set
+            # of patients. Keep its raw candidate above and feed the existing
+            # feedback builder an uninterpretable empty object instead.
+            if not isinstance(candidate.get('selections'), dict):
+                candidate = {}
             latest_feedback = feedback.build_feedback(context, candidate, attempt['validation'],
                                 attempt['attempt'], history, previous_selected)
             previous_selected = set(candidate.get('selections', {}))
