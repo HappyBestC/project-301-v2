@@ -247,7 +247,7 @@
   },
   "src/core301/dispatch/providers.py": {
     "source_sha256": "f407c124dc40a990216cb3de6fc85d275a99d23e4bdf23cf3ecf52f3f2e74a00",
-    "target_sha256": "f407c124dc40a990216cb3de6fc85d275a99d23e4bdf23cf3ecf52f3f2e74a00",
+    "target_sha256": "93a832e68e033b281e3d4e379b1ef74092c4b8d93c1077e25b17ed9aaa27d938",
     "origin_path": "src/core301/dispatch/providers.py",
     "role": "current_research_dependency"
   },
