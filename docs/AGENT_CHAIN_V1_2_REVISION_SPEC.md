@@ -44,6 +44,15 @@
 
 不得修改校验器，不得放宽冲突判定。只改变"0 冲突但有人未排入"时是否执行。
 
+### 2.1 调度过程中出错
+
+| 情况 | 处理 |
+|---|---|
+| 某一轮调度**请求异常**（网络、超时、API 错误等，即原实现中的 `SCHEDULE_REQUEST_FAILED`） | 属于基础设施故障。**不再发起后续轮次**（不自动重试）。在此前已完成的轮次中按上面第 3、4 条选择：有 0 冲突的轮次就接受其中排入最多的一轮；没有就视为没有可接受的排程。然后照常进入 §3 的执行和评价。`summary.json` 中记录 `schedule_error`（错误类型、状态码、出错的轮次） |
+| Provider 自带的校验结果与独立复验**不一致**（原实现中的 `PROVIDER_VALIDATION_MISMATCH`） | 说明校验本身不可信。**整次运行中止**：`status = "aborted"`，不执行、不出结局，记录错误详情 |
+
+模型返回的内容不合法（空、JSON 无效、Schema 不符）不属于"请求异常"，仍按原规则作为一轮有冲突的候选（`MODEL_JSON_INVALID`、`SCHEMA_INVALID` 等），继续下一轮。
+
 ---
 
 ## 3. 修改三：场景中的所有伤员都进入仿真
@@ -107,8 +116,12 @@ validate  --(达到轮数上限，且没有任何 0 冲突的轮次)------------
 
 | 字段 | 取值 |
 |---|---|
-| `treatment_stage` | `ok`（全部通过准入）/ `partial` / `failed`（全部失败） |
-| `schedule_stage` | `full`（全员排入）/ `partial`（有人未排入）/ `failed`（没有可接受的排程）/ `skipped`（处置全部失败，未调用调度） |
+| `treatment_stage` | `ok`（全部通过准入）/ `partial` / `failed`（全部失败）/ `aborted` / `not_reached` |
+| `schedule_stage` | `full`（全员排入）/ `partial`（有人未排入）/ `failed`（没有可接受的排程）/ `skipped`（处置全部失败，未调用调度）/ `aborted` / `not_reached` |
+
+- `not_reached`：运行中止时，该阶段还没有开始；
+- `aborted`：运行在该阶段进行中中止（例如 §2.1 的校验不一致，`schedule_stage = "aborted"`）；
+- 两个字段**始终存在**，不省略、不填 `null`。
 
 `runner` 的退出码：走到 `evaluate` 为 0，`aborted` 为 1。
 
@@ -122,6 +135,8 @@ validate  --(达到轮数上限，且没有任何 0 冲突的轮次)------------
 2. §1 的五种处置失败原因码，各有一个假 provider 用例；
 3. 接受规则：(a) 第 1 轮全员排入即接受；(b) 三轮都 0 冲突但都有人未排入，接受排入最多的一轮；人数相同时取最早一轮；(c) 三轮都有冲突，`schedule_stage == "failed"`；
 4. 图的走向：处置全部失败 → 不调用调度、进入执行，`schedule_stage == "skipped"`；调度失败 → 进入执行；
+   调度出错（§2.1）：(a) 第 2 轮请求异常、第 1 轮 0 冲突部分排入 → 不发起第 3 轮，接受第 1 轮并进入执行，记录 `schedule_error`；(b) 第 1 轮请求异常 → 不发起后续轮次，`schedule_stage == "failed"`，所有伤员不治疗进入执行；(c) Provider 校验不一致 → `status == "aborted"`、`schedule_stage == "aborted"`、没有结局；
+   处置阶段中途异常中止 → `treatment_stage == "aborted"`、`schedule_stage == "not_reached"`；
 5. 时间线和执行：四种 `treatment_status` 的伤员都进入执行；不治疗的伤员没有 `apply_action`；
 6. 结局：`treatment_status` 及原因字段正确；按状态分组的汇总正确；未治疗的伤员计入两种原有口径的分母；
 7. `run_001` 的 `native_replay`、`offline` 行为与 V1.1 完全一致（全员排入，`treatment_status` 全部为 `scheduled`）。
