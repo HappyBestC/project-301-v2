@@ -1,0 +1,72 @@
+version: 301.battle_injury.frozen.v1
+patterns:
+- pattern_id: limb_gunshot_injury
+  name: 四肢弹伤
+  description: 只表达外出血，不模拟弹道、骨折、空腔或神经断裂。
+  injuries:
+  - &id002
+    injury_type: external_hemorrhage
+    severity: 0.4
+    compartment: RightLeg
+  observation_window_s: 1200
+  limitations: 只表达外出血，不模拟弹道、骨折、空腔或神经断裂。
+- pattern_id: penetrating_thoracic_injury
+  name: 胸部穿透性战伤
+  description: 表达漏气与积血，不模拟胸壁创道和肋骨骨折。
+  injuries:
+  - injury_type: open_pneumothorax
+    severity: 0.6
+    side: Left
+  - &id001
+    injury_type: hemothorax
+    severity: 0.8
+    side: Left
+  observation_window_s: 3600
+  limitations: 表达漏气与积血，不模拟胸壁创道和肋骨骨折。
+- pattern_id: blast_composite_injury
+  name: 爆炸性复合伤
+  description: 爆炸事件后果组合；无冲击波模型，ARDS 是肺实质功能代理。
+  injuries:
+  - &id003
+    injury_type: traumatic_brain_injury
+    severity: 0.4
+  - &id004
+    injury_type: acute_lung_impairment_ards
+    severity: 0.4
+  - *id001
+  - *id002
+  observation_window_s: 1200
+  limitations: 爆炸事件后果组合；无冲击波模型，ARDS 是肺实质功能代理。
+- pattern_id: blunt_thoracoabdominal_injury
+  name: 钝性胸腹复合伤
+  description: 不模拟器官裂伤形态、骨折或完整组织力学。
+  injuries:
+  - injury_type: abdominal_internal_hemorrhage
+    severity: 0.4
+    compartment: Spleen
+  - injury_type: closed_tension_pneumothorax
+    severity: 0.6
+    side: Left
+  - *id003
+  observation_window_s: 1200
+  limitations: 不模拟器官裂伤形态、骨折或完整组织力学。
+- pattern_id: cranio_respiratory_composite_injury
+  name: 颅脑-呼吸功能复合伤
+  description: 人为同时施加，不表示 TBI 自动导致呼吸肌疲劳。
+  injuries:
+  - *id003
+  - injury_type: respiratory_muscle_impairment
+    severity: 0.4
+  observation_window_s: 1800
+  limitations: 人为同时施加，不表示 TBI 自动导致呼吸肌疲劳。
+- pattern_id: inhalation_respiratory_injury
+  name: 吸入性呼吸道战伤
+  description: 呼吸功能代理，不包含热灼伤、黏膜坏死、CO 中毒或烟雾毒理。
+  injuries:
+  - injury_type: airway_obstruction
+    severity: 0.4
+  - injury_type: bronchoconstriction
+    severity: 0.4
+  - *id004
+  observation_window_s: 1200
+  limitations: 呼吸功能代理，不包含热灼伤、黏膜坏死、CO 中毒或烟雾毒理。

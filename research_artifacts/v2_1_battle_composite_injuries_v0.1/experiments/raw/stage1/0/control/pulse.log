@@ -1,0 +1,450 @@
+[INFO] [0(s)] [SerializingFromFile] /home/private/project-301/pulse/bin/states/StandardMale@0s.json
+[INFO] [0(s)] Human Adult Whole Body
+[INFO] [0(s)] Version : 4.3.2
+[INFO] [0(s)] GitHash : 
+[INFO] [0(s)] Build Time : Tue Oct 13 23:05:34 2026
+[INFO] [0(s)] Loading state generated from Pulse-4.3.2-
+[INFO] [0(s)] [SimTime(s)] 0(s)
+[INFO] [0(s)] [Patient]
+{
+ "Name": "StandardMale",
+ "Age": {
+  "ScalarTime": {
+   "Value": 44,
+   "Unit": "yr"
+  }
+ },
+ "Weight": {
+  "ScalarMass": {
+   "Value": 169.99845003300004,
+   "Unit": "lb"
+  }
+ },
+ "Height": {
+  "ScalarLength": {
+   "Value": 71,
+   "Unit": "in"
+  }
+ },
+ "BodyDensity": {
+  "ScalarMassPerVolume": {
+   "Value": 1.0505236628887222,
+   "Unit": "g/cm^3"
+  }
+ },
+ "BodyFatFraction": {
+  "Scalar0To1": {
+   "Value": 0.21
+  }
+ },
+ "BodyMassIndex": {
+  "Value": 23.70994416557371
+ },
+ "LeanBodyMass": {
+  "ScalarMass": {
+   "Value": 60.91745529100001,
+   "Unit": "kg"
+  }
+ },
+ "IdealBodyWeight": {
+  "ScalarMass": {
+   "Value": 75.3,
+   "Unit": "kg"
+  }
+ },
+ "AlveoliSurfaceArea": {
+  "ScalarArea": {
+   "Value": 683435.9805510533,
+   "Unit": "cm^2"
+  }
+ },
+ "RightLungRatio": {
+  "Scalar0To1": {
+   "Value": 0.525
+  }
+ },
+ "SkinSurfaceArea": {
+  "ScalarArea": {
+   "Value": 1.968118127917069,
+   "Unit": "m^2"
+  }
+ },
+ "BasalMetabolicRate": {
+  "ScalarPower": {
+   "Value": 1737.3477467513003,
+   "Unit": "kcal/day"
+  }
+ },
+ "BloodVolumeBaseline": {
+  "ScalarVolume": {
+   "Value": 5517.734437810328,
+   "Unit": "mL"
+  }
+ },
+ "DiastolicArterialPressureBaseline": {
+  "ScalarPressure": {
+   "Value": 73.583062890353972,
+   "Unit": "mmHg"
+  }
+ },
+ "HeartRateBaseline": {
+  "ScalarFrequency": {
+   "Value": 71.9999999989269,
+   "Unit": "1/min"
+  }
+ },
+ "MeanArterialPressureBaseline": {
+  "ScalarPressure": {
+   "Value": 95.3234178279229,
+   "Unit": "mmHg"
+  }
+ },
+ "PulsePressureBaseline": {
+  "ScalarPressure": {
+   "Value": 40.5,
+   "Unit": "mmHg"
+  }
+ },
+ "RespirationRateBaseline": {
+  "ScalarFrequency": {
+   "Value": 12,
+   "Unit": "1/min"
+  }
+ },
+ "SystolicArterialPressureBaseline": {
+  "ScalarPressure": {
+   "Value": 114.25582075441214,
+   "Unit": "mmHg"
+  }
+ },
+ "TidalVolumeBaseline": {
+  "ScalarVolume": {
+   "Value": 0.53526009067523139,
+   "Unit": "L"
+  }
+ },
+ "HeartRateMaximum": {
+  "ScalarFrequency": {
+   "Value": 177.2,
+   "Unit": "1/min"
+  }
+ },
+ "HeartRateMinimum": {
+  "ScalarFrequency": {
+   "Value": 0.001,
+   "Unit": "1/min"
+  }
+ },
+ "ExpiratoryReserveVolume": {
+  "ScalarVolume": {
+   "Value": 1.0542,
+   "Unit": "L"
+  }
+ },
+ "FunctionalResidualCapacity": {
+  "ScalarVolume": {
+   "Value": 2.259,
+   "Unit": "L"
+  }
+ },
+ "InspiratoryCapacity": {
+  "ScalarVolume": {
+   "Value": 3.765,
+   "Unit": "L"
+  }
+ },
+ "InspiratoryReserveVolume": {
+  "ScalarVolume": {
+   "Value": 3.2297399093247687,
+   "Unit": "L"
+  }
+ },
+ "ResidualVolume": {
+  "ScalarVolume": {
+   "Value": 1.2047999999999999,
+   "Unit": "L"
+  }
+ },
+ "TotalLungCapacity": {
+  "ScalarVolume": {
+   "Value": 6.024,
+   "Unit": "L"
+  }
+ },
+ "VitalCapacity": {
+  "ScalarVolume": {
+   "Value": 4.8192,
+   "Unit": "L"
+  }
+ }
+}
+
+[INFO] [0(s)] [SerializingToString]
+[INFO] [60(s)] [SerializingToString]
+[INFO] [60(s)] [Action]
+{
+ "PatientAction": {
+  "TensionPneumothorax": {
+   "PatientAction": {
+    "Action": {
+     "Comment": ""
+    }
+   },
+   "Type": "Open",
+   "Side": "Left",
+   "Severity": {
+    "Scalar0To1": {
+     "Value": 0.6,
+     "Unit": "",
+     "ReadOnly": false
+    }
+   }
+  }
+ }
+}
+
+[INFO] [60(s)] [Action]
+{
+ "PatientAction": {
+  "Hemothorax": {
+   "PatientAction": {
+    "Action": {
+     "Comment": ""
+    }
+   },
+   "Side": "Left",
+   "Severity": {
+    "Scalar0To1": {
+     "Value": 0.8,
+     "Unit": "",
+     "ReadOnly": false
+    }
+   }
+  }
+ }
+}
+
+[INFO] [81.62(s)] [Event MinimalHemothorax 1]  Patient has Minimal Hemothorax
+[INFO] [134.48(s)] Baroreceptors Saturated 
+[INFO] [142.56(s)] Baroreceptors Saturated 
+[INFO] [146.76(s)] [Event Tachycardia 1]  Patient has Tachycardia
+[INFO] [147.96(s)] Baroreceptors Saturated 
+[INFO] [156.16(s)] Baroreceptors Saturated 
+[INFO] [164.62(s)] Baroreceptors Saturated 
+[INFO] [170.58(s)] Baroreceptors Saturated 
+[INFO] [172.72(s)] [Event Hypoxia 1]  Patient has Hypoxia
+[INFO] [177.92(s)] Baroreceptors Saturated 
+[INFO] [182.98(s)] Baroreceptors Saturated 
+[INFO] [185.48(s)] Baroreceptors Saturated 
+[INFO] [190.82(s)] Baroreceptors Saturated 
+[INFO] [193.22(s)] Baroreceptors Saturated 
+[INFO] [197.42(s)] Baroreceptors Saturated 
+[INFO] [205.62(s)] Baroreceptors Saturated 
+[INFO] [218.2(s)] Starting Baroreceptor timer 
+[INFO] [218.62(s)] Stopping Baroreceptor timer 
+[INFO] [220.72(s)] Starting Baroreceptor timer 
+[INFO] [230.26(s)] Stopping Baroreceptor timer 
+[INFO] [231.46(s)] Starting Baroreceptor timer 
+[INFO] [320.5(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [321.22(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [323.38(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [324.82(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [326.62(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [328.42(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [329.86(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [344.98(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [346.06(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [348.22(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [349.3(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [351.46(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [352.54(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [354.7(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [355.78(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [493.08(s)] [Event Tachypnea 1]  Patient has Tachypnea
+[INFO] [651.48(s)] Baroreceptor MAP Baseline updated to 89.627 mmHg
+[INFO] [660(s)] [SerializingToString]
+[INFO] [704.98(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [706.06(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [707.86(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [708.58(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [710.74(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [711.46(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [712.18(s)] [Event ModerateHypocapnia 1]  The patient is in a state of moderate hypocapnia
+[INFO] [716.14(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [717.22(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [719.02(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [720.1(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [721.9(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [722.98(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [724.78(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [725.5(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [727.66(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [728.38(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [730.18(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [731.26(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [733.06(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [734.14(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [735.94(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [737.02(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [738.82(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [739.54(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [741.34(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [742.42(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [744.22(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [745.3(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [747.1(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [748.18(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [749.98(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [751.06(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [752.86(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [753.58(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [755.38(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [756.46(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [758.26(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [759.34(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [761.14(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [762.22(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [764.02(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [765.1(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [766.54(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [767.62(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [769.42(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [770.5(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [772.3(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [773.38(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [775.18(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [776.26(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [777.7(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [778.78(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [780.58(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [781.66(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [783.46(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [784.54(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [786.34(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [787.42(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [789.22(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [789.94(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [791.74(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [792.82(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [794.62(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [795.7(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [797.5(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [798.58(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [798.58(s)] [Event Hypernatremia 1]  Patient has Hypernatremia
+[INFO] [800.38(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [801.46(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [803.26(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [803.98(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [805.78(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [806.86(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [808.66(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [809.74(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [811.54(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [812.62(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [814.42(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [815.14(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [816.94(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [818.02(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [819.82(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [820.9(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [822.7(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [823.78(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [825.58(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [826.66(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [828.46(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [829.18(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [830.98(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [832.06(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [833.86(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [834.94(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [836.74(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [837.82(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [839.62(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [840.34(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [842.5(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [843.22(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [845.02(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [846.1(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [847.9(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [848.98(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [850.78(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [851.86(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [853.66(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [854.38(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [856.18(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [857.26(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [859.06(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [860.14(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [861.94(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [863.02(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [864.82(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [865.9(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [867.7(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [868.42(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [870.58(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [871.3(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [873.1(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [874.18(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [875.98(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [877.06(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [878.86(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [879.94(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [881.74(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [882.54(s)] [Event BrainOxygenDeficit 1]  Oxygen tension in the brain is dangerously low
+[INFO] [882.82(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [884.62(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [885.34(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [887.5(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [888.22(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [890.02(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [891.1(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [892.9(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [893.98(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [895.78(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [896.86(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [898.66(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [899.74(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [901.54(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [902.26(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [904.42(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [905.14(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [906.94(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [908.02(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [909.82(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [910.9(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [912.7(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [913.78(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [915.58(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [916.3(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [918.46(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [919.18(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [921.34(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [922.06(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [924.58(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [924.94(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [926.74(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [927.82(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [929.62(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [930.7(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [932.5(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [933.22(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [935.38(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [936.1(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [938.62(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [938.98(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [941.5(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [941.86(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [944.02(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [944.74(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [946.9(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [947.62(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [949.78(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [950.14(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [952.66(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [953.02(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [955.54(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [955.9(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [958.42(s)] [Event Antidiuresis 0]  Patient no longer is in Antidiuresis
+[INFO] [958.78(s)] [Event Antidiuresis 1]  Patient has Antidiuresis
+[INFO] [960(s)] [SerializingToString]
+[INFO] [0(s)] Clearing engine

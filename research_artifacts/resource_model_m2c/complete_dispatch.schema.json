@@ -1,0 +1,706 @@
+{
+  "$defs": {
+    "Ambulance": {
+      "additionalProperties": false,
+      "properties": {
+        "run_id": {
+          "title": "Run Id",
+          "type": "string"
+        },
+        "ambulance_id": {
+          "title": "Ambulance Id",
+          "type": "string"
+        },
+        "display_name": {
+          "title": "Display Name",
+          "type": "string"
+        },
+        "position": {
+          "$ref": "#/$defs/Position"
+        },
+        "active_task_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Active Task Id"
+        }
+      },
+      "required": [
+        "run_id",
+        "ambulance_id",
+        "display_name",
+        "position",
+        "active_task_id"
+      ],
+      "title": "Ambulance",
+      "type": "object"
+    },
+    "Circulation": {
+      "additionalProperties": false,
+      "properties": {
+        "cardiac_output": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "title": "Circulation",
+      "type": "object"
+    },
+    "CompleteAction": {
+      "additionalProperties": false,
+      "properties": {
+        "action_instance_id": {
+          "title": "Action Instance Id",
+          "type": "string"
+        },
+        "action_type": {
+          "enum": [
+            "control_external_bleeding",
+            "fluid_resuscitation",
+            "transfusion",
+            "control_internal_bleeding",
+            "occlusive_dressing",
+            "needle_decompression",
+            "control_hemothorax_bleeding",
+            "chest_tube",
+            "intubation",
+            "mechanical_ventilation",
+            "supplemental_oxygen",
+            "remove_from_exposure"
+          ],
+          "title": "Action Type",
+          "type": "string"
+        },
+        "side": {
+          "anyOf": [
+            {
+              "enum": [
+                "Left",
+                "Right"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Side"
+        },
+        "compartment": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Compartment"
+        },
+        "depends_on": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Depends On",
+          "type": "array"
+        }
+      },
+      "required": [
+        "action_instance_id",
+        "action_type",
+        "depends_on"
+      ],
+      "title": "CompleteAction",
+      "type": "object"
+    },
+    "CompleteFacility": {
+      "additionalProperties": false,
+      "properties": {
+        "run_id": {
+          "title": "Run Id",
+          "type": "string"
+        },
+        "facility_id": {
+          "title": "Facility Id",
+          "type": "string"
+        },
+        "display_name": {
+          "title": "Display Name",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "hospital",
+            "aid_station"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "position": {
+          "$ref": "#/$defs/Position"
+        },
+        "capacity": {
+          "minimum": 0,
+          "title": "Capacity",
+          "type": "integer"
+        },
+        "supported_action_types": {
+          "items": {
+            "enum": [
+              "control_external_bleeding",
+              "fluid_resuscitation",
+              "transfusion",
+              "control_internal_bleeding",
+              "occlusive_dressing",
+              "needle_decompression",
+              "control_hemothorax_bleeding",
+              "chest_tube",
+              "intubation",
+              "mechanical_ventilation",
+              "supplemental_oxygen",
+              "remove_from_exposure"
+            ],
+            "type": "string"
+          },
+          "title": "Supported Action Types",
+          "type": "array"
+        },
+        "reserved_patient_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reserved Patient Ids",
+          "type": "array"
+        },
+        "admitted_patient_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Admitted Patient Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "run_id",
+        "facility_id",
+        "display_name",
+        "kind",
+        "position",
+        "capacity",
+        "supported_action_types",
+        "reserved_patient_ids",
+        "admitted_patient_ids"
+      ],
+      "title": "CompleteFacility",
+      "type": "object"
+    },
+    "CompleteMedicalTeam": {
+      "additionalProperties": false,
+      "properties": {
+        "run_id": {
+          "title": "Run Id",
+          "type": "string"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        },
+        "display_name": {
+          "title": "Display Name",
+          "type": "string"
+        },
+        "position": {
+          "$ref": "#/$defs/Position"
+        },
+        "supported_action_types": {
+          "items": {
+            "enum": [
+              "control_external_bleeding",
+              "fluid_resuscitation",
+              "transfusion",
+              "control_internal_bleeding",
+              "occlusive_dressing",
+              "needle_decompression",
+              "control_hemothorax_bleeding",
+              "chest_tube",
+              "intubation",
+              "mechanical_ventilation",
+              "supplemental_oxygen",
+              "remove_from_exposure"
+            ],
+            "type": "string"
+          },
+          "title": "Supported Action Types",
+          "type": "array"
+        },
+        "active_task_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Active Task Id"
+        }
+      },
+      "required": [
+        "run_id",
+        "team_id",
+        "display_name",
+        "position",
+        "supported_action_types",
+        "active_task_id"
+      ],
+      "title": "CompleteMedicalTeam",
+      "type": "object"
+    },
+    "CompletePlan": {
+      "additionalProperties": false,
+      "properties": {
+        "patient_id": {
+          "title": "Patient Id",
+          "type": "string"
+        },
+        "plan_id": {
+          "title": "Plan Id",
+          "type": "string"
+        },
+        "scope_kind": {
+          "enum": [
+            "research_fixture",
+            "clinical_design"
+          ],
+          "title": "Scope Kind",
+          "type": "string"
+        },
+        "scope_id": {
+          "title": "Scope Id",
+          "type": "string"
+        },
+        "severity": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Severity"
+        },
+        "location_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Location Id"
+        },
+        "actions": {
+          "items": {
+            "$ref": "#/$defs/CompleteAction"
+          },
+          "title": "Actions",
+          "type": "array"
+        },
+        "schema_version": {
+          "const": "301.treatment.complete.1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "run_id": {
+          "title": "Run Id",
+          "type": "string"
+        },
+        "execution_policy": {
+          "const": "m2a_serial_execution",
+          "title": "Execution Policy",
+          "type": "string"
+        },
+        "parameter_policy": {
+          "const": "fixed_profile_no_overrides",
+          "title": "Parameter Policy",
+          "type": "string"
+        }
+      },
+      "required": [
+        "patient_id",
+        "plan_id",
+        "scope_kind",
+        "scope_id",
+        "location_id",
+        "actions",
+        "schema_version",
+        "run_id",
+        "execution_policy",
+        "parameter_policy"
+      ],
+      "title": "CompletePlan",
+      "type": "object"
+    },
+    "Laboratory": {
+      "additionalProperties": false,
+      "properties": {
+        "hemoglobin_concentration": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "lactate_concentration": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "arterial_oxygen_pressure": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "arterial_carbon_dioxide_pressure": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "blood_ph": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "title": "Laboratory",
+      "type": "object"
+    },
+    "Measurement": {
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        },
+        "status": {
+          "enum": [
+            "available",
+            "unavailable"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "observed_at_s": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Observed At S"
+        }
+      },
+      "required": [
+        "value",
+        "status",
+        "observed_at_s"
+      ],
+      "title": "Measurement",
+      "type": "object"
+    },
+    "Neurologic": {
+      "additionalProperties": false,
+      "properties": {
+        "intracranial_pressure": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "title": "Neurologic",
+      "type": "object"
+    },
+    "PatientObservation": {
+      "additionalProperties": false,
+      "properties": {
+        "patient_id": {
+          "title": "Patient Id",
+          "type": "string"
+        },
+        "simulation_time_s": {
+          "minimum": 0,
+          "title": "Simulation Time S",
+          "type": "number"
+        },
+        "vitals": {
+          "$ref": "#/$defs/Vitals"
+        },
+        "circulation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Circulation"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "respiratory": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Respiratory"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "laboratory": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Laboratory"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "neurologic": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Neurologic"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "patient_id",
+        "simulation_time_s",
+        "vitals"
+      ],
+      "title": "PatientObservation",
+      "type": "object"
+    },
+    "Position": {
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        },
+        "z": {
+          "title": "Z",
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "z"
+      ],
+      "title": "Position",
+      "type": "object"
+    },
+    "Respiratory": {
+      "additionalProperties": false,
+      "properties": {
+        "tidal_volume": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "inspired_oxygen_fraction": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "title": "Respiratory",
+      "type": "object"
+    },
+    "Vitals": {
+      "additionalProperties": false,
+      "properties": {
+        "heart_rate": {
+          "$ref": "#/$defs/Measurement"
+        },
+        "respiration_rate": {
+          "$ref": "#/$defs/Measurement"
+        },
+        "pulse_oximetry": {
+          "$ref": "#/$defs/Measurement"
+        },
+        "systolic_arterial_pressure": {
+          "$ref": "#/$defs/Measurement"
+        },
+        "mean_arterial_pressure": {
+          "$ref": "#/$defs/Measurement"
+        }
+      },
+      "required": [
+        "heart_rate",
+        "respiration_rate",
+        "pulse_oximetry",
+        "systolic_arterial_pressure",
+        "mean_arterial_pressure"
+      ],
+      "title": "Vitals",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "patient_id": {
+      "title": "Patient Id",
+      "type": "string"
+    },
+    "position": {
+      "$ref": "#/$defs/Position"
+    },
+    "current_facility_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Current Facility Id"
+    },
+    "patient_observation": {
+      "$ref": "#/$defs/PatientObservation"
+    },
+    "treatment_plan": {
+      "$ref": "#/$defs/CompletePlan"
+    },
+    "facilities": {
+      "items": {
+        "$ref": "#/$defs/CompleteFacility"
+      },
+      "title": "Facilities",
+      "type": "array"
+    },
+    "ambulances": {
+      "items": {
+        "$ref": "#/$defs/Ambulance"
+      },
+      "title": "Ambulances",
+      "type": "array"
+    },
+    "medical_teams": {
+      "items": {
+        "$ref": "#/$defs/CompleteMedicalTeam"
+      },
+      "title": "Medical Teams",
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "301.dispatch.complete.1",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "run_id",
+    "patient_id",
+    "position",
+    "current_facility_id",
+    "patient_observation",
+    "treatment_plan",
+    "facilities",
+    "ambulances",
+    "medical_teams",
+    "schema_version"
+  ],
+  "title": "CompleteDispatchInput",
+  "type": "object"
+}

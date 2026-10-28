@@ -1,0 +1,113 @@
+{
+  "plan_id": "c5bfc5b023214bb682f17f379999810d",
+  "request_id": "external-source-control-native-002-execute",
+  "patient_id": "external-source-control-native-002-patient",
+  "run_id": "external-source-control-native-002",
+  "session_epoch": "066a70e53b8c476d954d722262bc0252",
+  "context_ref": "e5fe8f31f30240149400ad462bc75cb1",
+  "plan_sha256": "30ad646eef70ec0fc7f809c4ba6013e4124b4573bda73e53c77fe476aa2ebfb1",
+  "plan": {
+    "patient_id": "external-source-control-native-002-patient",
+    "actions": [
+      {
+        "action_type": "control_external_bleeding",
+        "compartment": "RightLeg"
+      }
+    ]
+  },
+  "protocol_version": "301.v2.phase1.research.1",
+  "production_enabled": false,
+  "status": "COMPLETED",
+  "actions": [
+    {
+      "action_id": "55ab6fdcbcce464aa797a6a9be4ec0b8",
+      "action_index": 0,
+      "action_type": "control_external_bleeding",
+      "business_action": {
+        "action_type": "control_external_bleeding",
+        "compartment": "RightLeg"
+      },
+      "target": {
+        "patient_id": "external-source-control-native-002-patient",
+        "injury_id": "1c75c679df7d49358b81baba1c0efc6e",
+        "injury_type": "external_hemorrhage",
+        "native_identity": [
+          "Hemorrhage",
+          "RightLeg"
+        ],
+        "source_version": 1,
+        "compartment": "RightLeg"
+      },
+      "protocol_id": "control_external_bleeding.phase1.1",
+      "native_payload": {
+        "PatientAction": {
+          "Hemorrhage": {
+            "Type": "External",
+            "Compartment": "RightLeg",
+            "Severity": {
+              "Scalar0To1": {
+                "Value": 0
+              }
+            }
+          }
+        }
+      },
+      "proposed_time_s": 180.00000000001828,
+      "submitted_time_s": 180.00000000001828,
+      "accepted": true,
+      "state": "COMPLETED",
+      "lifecycle": "COMPLETED",
+      "native_result": {
+        "phase": "treatment",
+        "index": 0,
+        "simulation_time_s": 180.00000000001828,
+        "accepted": true
+      },
+      "error": null,
+      "validation": {
+        "schema": "passed",
+        "source": "passed",
+        "scope": "passed",
+        "resource": "passed"
+      },
+      "resource": {
+        "allocated_units": {},
+        "allocation_ids": [
+          "3dc8e0677c2f4d619b45960582ec94ce"
+        ],
+        "action_instance_id": "external-source-control-native-002-control",
+        "consumption": "no stock requirement for this research proxy",
+        "submission_status": "accepted",
+        "delivery_status": "completed",
+        "native_delivery_evidence": {
+          "source_control_confirmed": true,
+          "cumulative_loss_mL": 173.0659699721137,
+          "capacity_restoration_claimed": false
+        }
+      },
+      "device_state": {
+        "observed_at_s": 181.0000000000188,
+        "airway_mode": "Free",
+        "intubation": "Off"
+      },
+      "physiological_response": "NOT_EVALUATED",
+      "evaluation": "NOT_RUN",
+      "already_applied_noop": false,
+      "delivery": {
+        "source_control_confirmed": true,
+        "cumulative_loss_mL": 173.0659699721137,
+        "capacity_restoration_claimed": false
+      },
+      "last_verified_time_s": 181.0000000000188
+    }
+  ],
+  "error": null,
+  "resource_reservation": {
+    "authority_kind": "explicit_research_fixture",
+    "shared_plan_id": "external-source-control-native-002-plan",
+    "allocation_ids": [
+      "3dc8e0677c2f4d619b45960582ec94ce"
+    ],
+    "production_inventory": false
+  }
+}

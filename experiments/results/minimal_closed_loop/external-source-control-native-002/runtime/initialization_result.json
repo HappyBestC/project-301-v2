@@ -1,0 +1,13 @@
+{
+  "accepted": true,
+  "simulation_time_s": 180.00000000001828,
+  "injury_records": [
+    {
+      "phase": "injury",
+      "index": 0,
+      "simulation_time_s": 60.00000000000378,
+      "accepted": true
+    }
+  ],
+  "condition_accepted_at_initialization": false
+}

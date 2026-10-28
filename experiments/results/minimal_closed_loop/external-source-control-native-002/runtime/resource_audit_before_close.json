@@ -1,0 +1,92 @@
+{
+  "schema_version": "301.resource.m2a.1",
+  "run_id": "external-source-control-native-002",
+  "state_version": 5,
+  "at_s": 479.9999999998534,
+  "resources": {
+    "medic": {
+      "resource_id": "medic",
+      "resource_type_id": "medic",
+      "unit": "person",
+      "use_mode": "reusable",
+      "location_id": "scene",
+      "state_version": 5,
+      "updated_at_s": 479.9999999998534,
+      "initial_total": 1,
+      "received_qty": 0,
+      "consumed_qty": 0,
+      "lost_qty": 0,
+      "total_qty": 1,
+      "available_qty": 1,
+      "reserved_qty": 0,
+      "in_use_qty": 0,
+      "unavailable_qty": 0,
+      "operational_state": "AVAILABLE"
+    }
+  },
+  "views": {},
+  "allocations": {
+    "3dc8e0677c2f4d619b45960582ec94ce": {
+      "allocation_id": "3dc8e0677c2f4d619b45960582ec94ce",
+      "patient_id": "external-source-control-native-002-patient",
+      "plan_id": "external-source-control-native-002-plan",
+      "resource_id": "medic",
+      "quantity": 1,
+      "unit": "person",
+      "use_mode": "reusable",
+      "action_instance_ids": [
+        "external-source-control-native-002-control"
+      ],
+      "requirement_ids": [
+        "301.resource.m2a.1:control_external_bleeding"
+      ],
+      "status": "RELEASED",
+      "consumed_qty": 0,
+      "active_action_id": null,
+      "start_at_s": 180.00000000001828,
+      "actual_end_at_s": 479.9999999998534
+    }
+  },
+  "locations": {
+    "scene": {
+      "location_id": "scene",
+      "capabilities": [
+        "intubation",
+        "chest_tube",
+        "control_external_bleeding",
+        "mechanical_ventilation",
+        "remove_from_exposure",
+        "fluid_resuscitation",
+        "control_hemothorax_bleeding",
+        "control_internal_bleeding",
+        "transfusion",
+        "supplemental_oxygen",
+        "needle_decompression",
+        "occlusive_dressing"
+      ],
+      "permissions": [
+        "simulated_external_source_control",
+        "research_chest_tube",
+        "research_environment_removal",
+        "simulated_hemothorax_source_control",
+        "simulated_internal_source_control",
+        "iv_access"
+      ],
+      "protected_route_available": true,
+      "receiving_environment_verified": true
+    }
+  },
+  "plans": {
+    "external-source-control-native-002-plan": {
+      "patient_id": "external-source-control-native-002-patient",
+      "actions": {
+        "external-source-control-native-002-control": {
+          "status": "FINISHED",
+          "execution": "accepted",
+          "receipt_ref": "/home/private/project-301-v2/experiments/results/minimal_closed_loop/external-source-control-native-002/execution_events.jsonl#event=3"
+        }
+      },
+      "cancelled": true
+    }
+  }
+}

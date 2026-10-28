@@ -1,0 +1,262 @@
+{
+  "fields": [
+    {
+      "field": "vitals.heart_rate",
+      "type": "Measurement",
+      "measurement_value_type": "finite number | null",
+      "name_zh": "心率 HR",
+      "unit": "1/min",
+      "pulse_source": {
+        "Category": "Physiology",
+        "PropertyName": "HeartRate",
+        "Unit": "1/min",
+        "CompartmentName": null,
+        "SubstanceName": null
+      },
+      "visibility": "basic",
+      "gate": "always present; unavailable is not zero"
+    },
+    {
+      "field": "vitals.respiration_rate",
+      "type": "Measurement",
+      "measurement_value_type": "finite number | null",
+      "name_zh": "呼吸频率 RR",
+      "unit": "1/min",
+      "pulse_source": {
+        "Category": "Physiology",
+        "PropertyName": "RespirationRate",
+        "Unit": "1/min",
+        "CompartmentName": null,
+        "SubstanceName": null
+      },
+      "visibility": "basic",
+      "gate": "always present; unavailable is not zero"
+    },
+    {
+      "field": "vitals.pulse_oximetry",
+      "type": "Measurement",
+      "measurement_value_type": "finite number | null",
+      "name_zh": "脉氧 SpO₂",
+      "unit": "1",
+      "pulse_source": {
+        "Category": "Physiology",
+        "PropertyName": "PulseOximetry",
+        "Unit": null,
+        "CompartmentName": null,
+        "SubstanceName": null
+      },
+      "visibility": "basic",
+      "gate": "always present; unavailable is not zero"
+    },
+    {
+      "field": "vitals.systolic_arterial_pressure",
+      "type": "Measurement",
+      "measurement_value_type": "finite number | null",
+      "name_zh": "收缩压 SBP",
+      "unit": "mmHg",
+      "pulse_source": {
+        "Category": "Physiology",
+        "PropertyName": "SystolicArterialPressure",
+        "Unit": "mmHg",
+        "CompartmentName": null,
+        "SubstanceName": null
+      },
+      "visibility": "basic",
+      "gate": "always present; unavailable is not zero"
+    },
+    {
+      "field": "vitals.mean_arterial_pressure",
+      "type": "Measurement",
+      "measurement_value_type": "finite number | null",
+      "name_zh": "平均动脉压 MAP",
+      "unit": "mmHg",
+      "pulse_source": {
+        "Category": "Physiology",
+        "PropertyName": "MeanArterialPressure",
+        "Unit": "mmHg",
+        "CompartmentName": null,
+        "SubstanceName": null
+      },
+      "visibility": "basic",
+      "gate": "always present; unavailable is not zero"
+    },
+    {
+      "field": "circulation.cardiac_output",
+      "type": "Measurement",
+      "measurement_value_type": "finite number | null",
+      "name_zh": "心输出量",
+      "unit": "L/min",
+      "pulse_source": {
+        "Category": "Physiology",
+        "PropertyName": "CardiacOutput",
+        "Unit": "L/min",
+        "CompartmentName": null,
+        "SubstanceName": null
+      },
+      "visibility": "conditional",
+      "gate": "relevant AND trusted host authorized AND result obtained; optional authorized unavailable disclosure"
+    },
+    {
+      "field": "respiratory.tidal_volume",
+      "type": "Measurement",
+      "measurement_value_type": "finite number | null",
+      "name_zh": "潮气量",
+      "unit": "mL",
+      "pulse_source": {
+        "Category": "Physiology",
+        "PropertyName": "TidalVolume",
+        "Unit": "mL",
+        "CompartmentName": null,
+        "SubstanceName": null
+      },
+      "visibility": "conditional",
+      "gate": "relevant AND trusted host authorized AND result obtained; optional authorized unavailable disclosure"
+    },
+    {
+      "field": "respiratory.inspired_oxygen_fraction",
+      "type": "Measurement",
+      "measurement_value_type": "finite number | null",
+      "name_zh": "患者吸入氧浓度 FiO₂",
+      "unit": "1",
+      "pulse_source": {
+        "Category": "Physiology",
+        "PropertyName": "FractionOfInspiredOxygen",
+        "Unit": null,
+        "CompartmentName": null,
+        "SubstanceName": null
+      },
+      "visibility": "conditional",
+      "gate": "relevant AND trusted host authorized AND result obtained; optional authorized unavailable disclosure"
+    },
+    {
+      "field": "laboratory.hemoglobin_concentration",
+      "type": "Measurement",
+      "measurement_value_type": "finite number | null",
+      "name_zh": "血红蛋白浓度",
+      "unit": "g/dL",
+      "pulse_source": {
+        "Category": "Substance",
+        "PropertyName": "BloodConcentration",
+        "Unit": "g/dL",
+        "CompartmentName": null,
+        "SubstanceName": "Hemoglobin"
+      },
+      "visibility": "conditional",
+      "gate": "relevant AND trusted host authorized AND result obtained; optional authorized unavailable disclosure"
+    },
+    {
+      "field": "laboratory.lactate_concentration",
+      "type": "Measurement",
+      "measurement_value_type": "finite number | null",
+      "name_zh": "乳酸浓度",
+      "unit": "mg/dL",
+      "pulse_source": {
+        "Category": "Substance",
+        "PropertyName": "BloodConcentration",
+        "Unit": "mg/dL",
+        "CompartmentName": null,
+        "SubstanceName": "Lactate"
+      },
+      "visibility": "conditional",
+      "gate": "relevant AND trusted host authorized AND result obtained; optional authorized unavailable disclosure"
+    },
+    {
+      "field": "laboratory.arterial_oxygen_pressure",
+      "type": "Measurement",
+      "measurement_value_type": "finite number | null",
+      "name_zh": "动脉氧分压 PaO₂",
+      "unit": "mmHg",
+      "pulse_source": {
+        "Category": "LiquidCompartment",
+        "PropertyName": "PartialPressure",
+        "Unit": "mmHg",
+        "CompartmentName": "Aorta",
+        "SubstanceName": "Oxygen"
+      },
+      "visibility": "conditional",
+      "gate": "relevant AND trusted host authorized AND result obtained; optional authorized unavailable disclosure"
+    },
+    {
+      "field": "laboratory.arterial_carbon_dioxide_pressure",
+      "type": "Measurement",
+      "measurement_value_type": "finite number | null",
+      "name_zh": "动脉二氧化碳分压 PaCO₂",
+      "unit": "mmHg",
+      "pulse_source": {
+        "Category": "LiquidCompartment",
+        "PropertyName": "PartialPressure",
+        "Unit": "mmHg",
+        "CompartmentName": "Aorta",
+        "SubstanceName": "CarbonDioxide"
+      },
+      "visibility": "conditional",
+      "gate": "relevant AND trusted host authorized AND result obtained; optional authorized unavailable disclosure"
+    },
+    {
+      "field": "laboratory.blood_ph",
+      "type": "Measurement",
+      "measurement_value_type": "finite number | null",
+      "name_zh": "血液 pH",
+      "unit": "1",
+      "pulse_source": {
+        "Category": "Physiology",
+        "PropertyName": "BloodPH",
+        "Unit": null,
+        "CompartmentName": null,
+        "SubstanceName": null
+      },
+      "visibility": "conditional",
+      "gate": "relevant AND trusted host authorized AND result obtained; optional authorized unavailable disclosure"
+    },
+    {
+      "field": "laboratory.aorta_carboxyhemoglobin_concentration",
+      "type": "Measurement",
+      "measurement_value_type": "finite number | null",
+      "name_zh": "主动脉碳氧血红蛋白浓度",
+      "unit": "g/dL",
+      "pulse_source": {
+        "Category": "LiquidCompartment",
+        "CompartmentName": "Aorta",
+        "SubstanceName": "Carboxyhemoglobin",
+        "PropertyName": "Concentration",
+        "Unit": "g/dL"
+      },
+      "visibility": "conditional",
+      "gate": "relevant AND trusted host authorized AND result obtained; optional authorized unavailable disclosure"
+    },
+    {
+      "field": "laboratory.aorta_sodium_concentration",
+      "type": "Measurement",
+      "measurement_value_type": "finite number | null",
+      "name_zh": "主动脉血钠浓度",
+      "unit": "mEq/L",
+      "pulse_source": {
+        "Category": "LiquidCompartment",
+        "CompartmentName": "Aorta",
+        "SubstanceName": "Sodium",
+        "PropertyName": "Molarity",
+        "Unit": "mEq/L"
+      },
+      "visibility": "conditional",
+      "gate": "relevant AND trusted host authorized AND result obtained; optional authorized unavailable disclosure"
+    }
+  ],
+  "measurement": {
+    "value": "finite number or null",
+    "status": [
+      "available",
+      "unavailable"
+    ],
+    "observed_at_s": "nonnegative finite simulation seconds or null",
+    "available_requires": [
+      "value",
+      "observed_at_s"
+    ],
+    "unavailable_requires_value_null": true
+  },
+  "units_are_fixed_metadata": true,
+  "conditional_absence": "omit unauthorized/absent fields and groups, never synthesize normal values",
+  "simulation_time": "Pulse simulation seconds; retained sample time <= observation time",
+  "shared_observation": "one patient/time observation; shared metrics do not establish injury-specific causality",
+  "ICP": "excluded from V2 core; V1 unchanged"
+}

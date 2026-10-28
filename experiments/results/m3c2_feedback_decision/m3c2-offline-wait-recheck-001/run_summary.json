@@ -1,0 +1,22 @@
+{
+  "run_id": "m3c2-offline-wait-recheck-001",
+  "mode": "offline_test",
+  "real_llm": false,
+  "real_pulse": false,
+  "overall_status": "M3C2_PENDING_INDEPENDENT_VERIFICATION",
+  "waiting_status": "OFFLINE_ONLY",
+  "failure": null,
+  "priority_mode": "fixed_A_first",
+  "selected_patient": "A",
+  "waiting_patient": "B",
+  "feedback_decisions": [
+    "KEEP_PLAN_AND_WAIT",
+    "RECHECK_RESOURCES"
+  ],
+  "feedback_calls": 2,
+  "endpoint_reached": true,
+  "exploratory": false,
+  "experiment_mode": "offline_test",
+  "global_simulation_time_s": 480.0,
+  "unresolved_allocations": []
+}

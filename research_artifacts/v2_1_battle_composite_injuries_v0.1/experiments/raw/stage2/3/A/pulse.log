@@ -1,0 +1,329 @@
+[INFO] [0(s)] [SerializingFromFile] /home/private/project-301/pulse/bin/states/StandardMale@0s.json
+[INFO] [0(s)] Human Adult Whole Body
+[INFO] [0(s)] Version : 4.3.2
+[INFO] [0(s)] GitHash : 
+[INFO] [0(s)] Build Time : Tue Oct 13 23:17:07 2026
+[INFO] [0(s)] Loading state generated from Pulse-4.3.2-
+[INFO] [0(s)] [SimTime(s)] 0(s)
+[INFO] [0(s)] [Patient]
+{
+ "Name": "StandardMale",
+ "Age": {
+  "ScalarTime": {
+   "Value": 44,
+   "Unit": "yr"
+  }
+ },
+ "Weight": {
+  "ScalarMass": {
+   "Value": 169.99845003300004,
+   "Unit": "lb"
+  }
+ },
+ "Height": {
+  "ScalarLength": {
+   "Value": 71,
+   "Unit": "in"
+  }
+ },
+ "BodyDensity": {
+  "ScalarMassPerVolume": {
+   "Value": 1.0505236628887222,
+   "Unit": "g/cm^3"
+  }
+ },
+ "BodyFatFraction": {
+  "Scalar0To1": {
+   "Value": 0.21
+  }
+ },
+ "BodyMassIndex": {
+  "Value": 23.70994416557371
+ },
+ "LeanBodyMass": {
+  "ScalarMass": {
+   "Value": 60.91745529100001,
+   "Unit": "kg"
+  }
+ },
+ "IdealBodyWeight": {
+  "ScalarMass": {
+   "Value": 75.3,
+   "Unit": "kg"
+  }
+ },
+ "AlveoliSurfaceArea": {
+  "ScalarArea": {
+   "Value": 683435.9805510533,
+   "Unit": "cm^2"
+  }
+ },
+ "RightLungRatio": {
+  "Scalar0To1": {
+   "Value": 0.525
+  }
+ },
+ "SkinSurfaceArea": {
+  "ScalarArea": {
+   "Value": 1.968118127917069,
+   "Unit": "m^2"
+  }
+ },
+ "BasalMetabolicRate": {
+  "ScalarPower": {
+   "Value": 1737.3477467513003,
+   "Unit": "kcal/day"
+  }
+ },
+ "BloodVolumeBaseline": {
+  "ScalarVolume": {
+   "Value": 5517.734437810328,
+   "Unit": "mL"
+  }
+ },
+ "DiastolicArterialPressureBaseline": {
+  "ScalarPressure": {
+   "Value": 73.583062890353972,
+   "Unit": "mmHg"
+  }
+ },
+ "HeartRateBaseline": {
+  "ScalarFrequency": {
+   "Value": 71.9999999989269,
+   "Unit": "1/min"
+  }
+ },
+ "MeanArterialPressureBaseline": {
+  "ScalarPressure": {
+   "Value": 95.3234178279229,
+   "Unit": "mmHg"
+  }
+ },
+ "PulsePressureBaseline": {
+  "ScalarPressure": {
+   "Value": 40.5,
+   "Unit": "mmHg"
+  }
+ },
+ "RespirationRateBaseline": {
+  "ScalarFrequency": {
+   "Value": 12,
+   "Unit": "1/min"
+  }
+ },
+ "SystolicArterialPressureBaseline": {
+  "ScalarPressure": {
+   "Value": 114.25582075441214,
+   "Unit": "mmHg"
+  }
+ },
+ "TidalVolumeBaseline": {
+  "ScalarVolume": {
+   "Value": 0.53526009067523139,
+   "Unit": "L"
+  }
+ },
+ "HeartRateMaximum": {
+  "ScalarFrequency": {
+   "Value": 177.2,
+   "Unit": "1/min"
+  }
+ },
+ "HeartRateMinimum": {
+  "ScalarFrequency": {
+   "Value": 0.001,
+   "Unit": "1/min"
+  }
+ },
+ "ExpiratoryReserveVolume": {
+  "ScalarVolume": {
+   "Value": 1.0542,
+   "Unit": "L"
+  }
+ },
+ "FunctionalResidualCapacity": {
+  "ScalarVolume": {
+   "Value": 2.259,
+   "Unit": "L"
+  }
+ },
+ "InspiratoryCapacity": {
+  "ScalarVolume": {
+   "Value": 3.765,
+   "Unit": "L"
+  }
+ },
+ "InspiratoryReserveVolume": {
+  "ScalarVolume": {
+   "Value": 3.2297399093247687,
+   "Unit": "L"
+  }
+ },
+ "ResidualVolume": {
+  "ScalarVolume": {
+   "Value": 1.2047999999999999,
+   "Unit": "L"
+  }
+ },
+ "TotalLungCapacity": {
+  "ScalarVolume": {
+   "Value": 6.024,
+   "Unit": "L"
+  }
+ },
+ "VitalCapacity": {
+  "ScalarVolume": {
+   "Value": 4.8192,
+   "Unit": "L"
+  }
+ }
+}
+
+[INFO] [0(s)] [SerializingToString]
+[INFO] [60(s)] [SerializingToString]
+[INFO] [60(s)] [Action]
+{
+ "PatientAction": {
+  "ImpairedAlveolarExchangeExacerbation": {
+   "PatientAction": {
+    "Action": {
+     "Comment": ""
+    }
+   },
+   "Severity": {
+    "Scalar0To1": {
+     "Value": 0.4,
+     "Unit": "",
+     "ReadOnly": false
+    }
+   }
+  }
+ }
+}
+
+[INFO] [60(s)] [Action]
+{
+ "EnvironmentAction": {
+  "ChangeEnvironmentalConditions": {
+   "EnvironmentAction": {
+    "Action": {
+     "Comment": ""
+    }
+   },
+   "EnvironmentalConditions": {
+    "SurroundingType": "NullSurrounding",
+    "AmbientGas": [
+     {
+      "Name": "Nitrogen",
+      "Amount": {
+       "Scalar0To1": {
+        "Value": 0.78460000000000008,
+        "Unit": "",
+        "ReadOnly": false
+       }
+      }
+     },
+     {
+      "Name": "Oxygen",
+      "Amount": {
+       "Scalar0To1": {
+        "Value": 0.21,
+        "Unit": "",
+        "ReadOnly": false
+       }
+      }
+     },
+     {
+      "Name": "CarbonDioxide",
+      "Amount": {
+       "Scalar0To1": {
+        "Value": 0.0004,
+        "Unit": "",
+        "ReadOnly": false
+       }
+      }
+     },
+     {
+      "Name": "CarbonMonoxide",
+      "Amount": {
+       "Scalar0To1": {
+        "Value": 0.005,
+        "Unit": "",
+        "ReadOnly": false
+       }
+      }
+     }
+    ],
+    "AmbientAerosol": []
+   },
+   "MergeType": "Append"
+  }
+ }
+}
+
+[INFO] [866.42(s)] [Event Hypernatremia 1]  Patient has Hypernatremia
+[INFO] [960(s)] [SerializingToString]
+[INFO] [960(s)] [Action]
+{
+ "EnvironmentAction": {
+  "ChangeEnvironmentalConditions": {
+   "EnvironmentAction": {
+    "Action": {
+     "Comment": ""
+    }
+   },
+   "EnvironmentalConditions": {
+    "SurroundingType": "NullSurrounding",
+    "AmbientGas": [
+     {
+      "Name": "Nitrogen",
+      "Amount": {
+       "Scalar0To1": {
+        "Value": 0.78960000000000008,
+        "Unit": "",
+        "ReadOnly": false
+       }
+      }
+     },
+     {
+      "Name": "Oxygen",
+      "Amount": {
+       "Scalar0To1": {
+        "Value": 0.21,
+        "Unit": "",
+        "ReadOnly": false
+       }
+      }
+     },
+     {
+      "Name": "CarbonDioxide",
+      "Amount": {
+       "Scalar0To1": {
+        "Value": 0.0004,
+        "Unit": "",
+        "ReadOnly": false
+       }
+      }
+     },
+     {
+      "Name": "CarbonMonoxide",
+      "Amount": {
+       "Scalar0To1": {
+        "Value": 0,
+        "Unit": "",
+        "ReadOnly": false
+       }
+      }
+     }
+    ],
+    "AmbientAerosol": []
+   },
+   "MergeType": "Append"
+  }
+ }
+}
+
+[INFO] [960.02(s)] [SerializingToString]
+[INFO] [1199.04(s)] Stomach is out of Sodium
+[INFO] [1860(s)] [SerializingToString]
+[INFO] [0(s)] Clearing engine

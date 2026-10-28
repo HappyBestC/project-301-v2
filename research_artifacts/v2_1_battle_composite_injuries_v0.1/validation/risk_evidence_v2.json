@@ -1,0 +1,52 @@
+{
+  "version": "301.v2_1.risk_gate.2",
+  "approval_path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/USER_COMPOSITE_RISK_ACCEPTANCE.2026-10-13.1.json",
+  "approval_sha256": "4ab31f4e5b6bef54c63264be91b8a30a44a6d76702a1d8688d29e36770a632e7",
+  "profile_config_sha256": "cd339d0748b8016d7aad52580562d462807ea56504dd85c1f0ce4703b1d34bf1",
+  "profiles": {
+    "0": {
+      "pattern_id": "penetrating_thoracic_composite_v2",
+      "profile_version": "301.v2_1.thoracic.aligned_onsets.2",
+      "events_path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/thoracic_timing_v2/AB/native_events.jsonl",
+      "events_sha256": "8b4b8693642fd7ad9ff39445b12f1a4b524ce01e2b46f4ecdde4d07f0b50fe64",
+      "pulse.log": {
+        "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/thoracic_timing_v2/AB/pulse.log",
+        "sha256": "925458d2a14f8cf2ed02189a4037901972e40893dc1e142300cb7372175d27ce"
+      },
+      "final_state.json": {
+        "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/thoracic_timing_v2/AB/final_state.json",
+        "sha256": "7cc454c68c9827ada8ab2366defa92eaf20ee521878daedec29bbfccbcaf727f"
+      },
+      "actions.json": {
+        "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/thoracic_timing_v2/AB/actions.json",
+        "sha256": "4e2576c3bfb0e8daf9bfaebe6da9e3cb02b83b75fcb9459de346e4a1f0764349"
+      }
+    },
+    "1": {
+      "pattern_id": "blunt_thoracoabdominal_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "events_path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/1/AB/native_events.jsonl",
+      "events_sha256": "cf356590940a70408f2cb2a7825ef2e9d94e42e0183957020cf9422272b06fa4"
+    },
+    "2": {
+      "pattern_id": "blast_hemorrhage_respiratory_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "events_path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/2/AB/native_events.jsonl",
+      "events_sha256": "9a3945e88e97bd4f8fd561b470faebdbd371b46a870ef2838f47e8317f3148de"
+    },
+    "3": {
+      "pattern_id": "fire_co_alveolar_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "events_path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/3/AB/native_events.jsonl",
+      "events_sha256": "becdb72d6a32eef0bf12d5c2e70a0a4d7b9183c626087631b8b48f48d86b9d19"
+    },
+    "4": {
+      "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "events_path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/4/AB/native_events.jsonl",
+      "events_sha256": "520c9bf672ab1191fa871e60f082924dae95ec583ed3b798345da9a4b4bab699"
+    }
+  },
+  "production_enabled": false,
+  "automatic_admission": false
+}

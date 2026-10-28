@@ -1,0 +1,29 @@
+{
+  "baseline_id": "301.v2.restricted.engineering.baseline.1",
+  "record_date": "2026-10-13",
+  "timezone": "Asia/Shanghai",
+  "authority": "用户在当前会话中明确确认",
+  "acceptance": "ACCEPTED",
+  "stage": "CLOSED",
+  "engineering_evidence_count": 10,
+  "restricted_runtime_admission_count": 10,
+  "production_enabled": false,
+  "scope": [
+    "V2 基础伤情模型",
+    "固定救助协议",
+    "Pulse 执行",
+    "合法观测",
+    "受限 Runtime 工程能力"
+  ],
+  "exclusions": [
+    "临床安全认证",
+    "真实 LLM Agent 规划效果",
+    "复杂多伤情组合",
+    "整个 301 项目的最终验收"
+  ],
+  "user_statement": "USER_ACCEPTANCE.md",
+  "risk_acceptance_id": "301.v2.limited_research_risk_acceptance.2026-10-13.1",
+  "historical_final_audit": "research_artifacts/v2_final_ten_injury_restricted_acceptance_v0.1/validation/final_audit.json",
+  "historical_status_policy": "旧证据中的 NOT_RECORDED/PENDING 保留其生成时语义；本新增记录登记后续用户工程验收，不回写原始证据。",
+  "future_work": "另建版本与证据目录；不得覆盖本基线或更改已验收固定协议。"
+}

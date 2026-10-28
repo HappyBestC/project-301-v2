@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/home/private/project-301-v2/.venv/bin/python",
+    "-B",
+    "/home/private/project-301-v2/research_artifacts/treatment_effect_rules_v2_candidate_v0.1/male_independent_validation_final_preparation_v1/adapter.py",
+    "/home/private/project-301-v2/experiments/results/m3b_dual_patient/m3b-dual-native-001/patients/patient_A/evaluation_manifest.json"
+  ],
+  "returncode": 0,
+  "adapter_sha256": "90c0e307f20d8951863e075289d9a8b98cde4b364e6ab6ac84e50002913938de",
+  "manifest_sha256": "64cc367e1bbe63ea48056f52b9840b4df2d7bf8a37d3bdb7790f553d200a7fa0",
+  "simulation_time_s": 480.0
+}

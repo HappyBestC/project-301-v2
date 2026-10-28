@@ -1,0 +1,32 @@
+{
+  "SimulationTime": {
+    "ScalarTime": {
+      "Unit": "s"
+    }
+  },
+  "ActiveActions": {
+    "AnyAction": [
+      {
+        "PatientAction": {
+          "MechanicalVentilation": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "State": "On",
+            "Flow": {
+              "ScalarVolumePerTime": {
+                "Unit": "L/min"
+              }
+            },
+            "Pressure": {
+              "ScalarPressure": {
+                "Value": 5,
+                "Unit": "cmH2O"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

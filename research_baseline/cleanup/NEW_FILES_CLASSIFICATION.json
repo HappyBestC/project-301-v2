@@ -1,0 +1,82 @@
+{
+  "docs/RESEARCH_SCOPE.md": {
+    "category": "RESEARCH_CORE",
+    "reason": "Research organization, documentation or runtime support; no new algorithm"
+  },
+  "docs/LEGACY_DEPENDENCY_AUDIT.md": {
+    "category": "RESEARCH_CORE",
+    "reason": "Research organization, documentation or runtime support; no new algorithm"
+  },
+  "experiments/README.md": {
+    "category": "RESEARCH_CORE",
+    "reason": "Research organization, documentation or runtime support; no new algorithm"
+  },
+  "experiments/ablations/.gitkeep": {
+    "category": "RESEARCH_CORE",
+    "reason": "Research organization, documentation or runtime support; no new algorithm"
+  },
+  "experiments/baselines/.gitkeep": {
+    "category": "RESEARCH_CORE",
+    "reason": "Research organization, documentation or runtime support; no new algorithm"
+  },
+  "experiments/scenarios/.gitkeep": {
+    "category": "RESEARCH_CORE",
+    "reason": "Research organization, documentation or runtime support; no new algorithm"
+  },
+  "experiments/results/.gitkeep": {
+    "category": "RESEARCH_CORE",
+    "reason": "Research organization, documentation or runtime support; no new algorithm"
+  },
+  "validation/test_reconciliation.json": {
+    "category": "RESEARCH_EVIDENCE",
+    "reason": "New cleanup audit/actual validation"
+  },
+  "scripts/pulse_smoke.py": {
+    "category": "RESEARCH_CORE",
+    "reason": "Research organization, documentation or runtime support; no new algorithm"
+  },
+  "config/compatibility/v1/README.md": {
+    "category": "RESEARCH_CORE",
+    "reason": "Research organization, documentation or runtime support; no new algorithm"
+  },
+  "research_baseline/CURRENT_RESEARCH_FILES.json": {
+    "category": "RESEARCH_EVIDENCE",
+    "reason": "New cleanup audit/actual validation"
+  },
+  "research_baseline/cleanup/DEPENDENCY_GRAPH.json": {
+    "category": "RESEARCH_EVIDENCE",
+    "reason": "New cleanup audit/actual validation"
+  },
+  "research_baseline/cleanup/ADAPTATIONS.json": {
+    "category": "RESEARCH_EVIDENCE",
+    "reason": "Current cleanup audit/measurement or research report; no new research algorithm"
+  },
+  "research_baseline/cleanup/BEFORE_SUMMARY.json": {
+    "category": "RESEARCH_EVIDENCE",
+    "reason": "New cleanup audit/actual validation"
+  },
+  "research_baseline/cleanup/FILE_CLASSIFICATION.json": {
+    "category": "RESEARCH_EVIDENCE",
+    "reason": "New cleanup audit/actual validation"
+  },
+  "research_baseline/cleanup/CLEANUP_PLAN.json": {
+    "category": "RESEARCH_EVIDENCE",
+    "reason": "New cleanup audit/actual validation"
+  },
+  "research_baseline/cleanup/NEW_FILES_CLASSIFICATION.json": {
+    "category": "RESEARCH_EVIDENCE",
+    "reason": "Current cleanup audit/measurement or research report; no new research algorithm"
+  },
+  "research_baseline/cleanup/AFTER_SUMMARY.json": {
+    "category": "RESEARCH_EVIDENCE",
+    "reason": "Current cleanup audit/measurement or research report; no new research algorithm"
+  },
+  "research_baseline/cleanup/FINAL_FILES.json": {
+    "category": "RESEARCH_EVIDENCE",
+    "reason": "Current cleanup audit/measurement or research report; no new research algorithm"
+  },
+  "docs/RESEARCH_CLEANUP_REPORT.md": {
+    "category": "RESEARCH_CORE",
+    "reason": "Current cleanup audit/measurement or research report; no new research algorithm"
+  }
+}

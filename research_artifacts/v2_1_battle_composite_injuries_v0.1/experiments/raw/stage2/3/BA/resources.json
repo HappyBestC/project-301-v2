@@ -1,0 +1,30 @@
+{
+  "authority": "explicit_study_host",
+  "reserved": {},
+  "held": {
+    "medic": 1,
+    "nasal_cannula": 1,
+    "oxygen_425l_source": 1,
+    "evacuation_team": 1
+  },
+  "permissions": [
+    "research_environment_removal"
+  ],
+  "allocation": [
+    {
+      "action": "supplemental_oxygen",
+      "allocated_units": {},
+      "at_s": 959.9999999994169,
+      "delivery": "not_assumed"
+    },
+    {
+      "action": "remove_from_exposure",
+      "allocated_units": {},
+      "at_s": 960.0199999994169,
+      "delivery": "not_assumed"
+    }
+  ],
+  "production_inventory": false,
+  "protected_route_available": true,
+  "receiving_environment_verified": true
+}

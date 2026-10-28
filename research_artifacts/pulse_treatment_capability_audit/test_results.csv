@@ -1,0 +1,33 @@
+case,accepted,advance_status,final_time_s,failure,evidence
+airway_AB,"[True, True]",失败,0.0,"[{""advance_failed_at_step"": 0}]",tests/raw/airway_AB
+airway_BA,"[True, True]",失败,0.0,"[{""advance_failed_at_step"": 0}]",tests/raw/airway_BA
+baseline,[],成功,60.00000000000378,[],tests/raw/baseline
+bolus_overwrite,"[True, True]",成功,60.00000000000378,[],tests/raw/bolus_overwrite
+chest_control,[True],成功,60.00000000000378,[],tests/raw/chest_control
+chest_dressing,"[True, True]",成功,60.00000000000378,[],tests/raw/chest_dressing
+combo_AB,"[True, True]",成功,60.00000000000378,[],tests/raw/combo_AB
+combo_BA,"[True, True]",成功,60.00000000000378,[],tests/raw/combo_BA
+combo_high_AB,"[True, True]",成功,60.00000000000378,[],tests/raw/combo_high_AB
+combo_high_BA,"[True, True]",成功,60.00000000000378,[],tests/raw/combo_high_BA
+dressing_without_injury,[True],成功,60.00000000000378,[],tests/raw/dressing_without_injury
+epi_high,[True],成功,60.00000000000378,[],tests/raw/epi_high
+epi_low,[True],成功,60.00000000000378,[],tests/raw/epi_low
+hemorrhage_control,[True],成功,60.00000000000378,[],tests/raw/hemorrhage_control
+hemorrhage_stop,"[True, True]",成功,60.00000000000378,[],tests/raw/hemorrhage_stop
+infusion_update_stop,"[True, True, True, True]",成功,60.00000000000378,[],tests/raw/infusion_update_stop
+invalid_missing_dose,[False],成功,60.00000000000378,[],tests/raw/invalid_missing_dose
+morphine,[True],成功,60.00000000000378,[],tests/raw/morphine
+multidrug,"[True, True]",成功,60.00000000000378,[],tests/raw/multidrug
+multidrug_high,"[True, True]",成功,60.00000000000378,[],tests/raw/multidrug_high
+overlap,"[True, True, True]",成功,60.00000000000378,[],tests/raw/overlap
+probe_IA,[True],成功,1.0000000000000004,[],tests/raw/probe_IA
+probe_IM,[True],成功,1.0000000000000004,[],tests/raw/probe_IM
+probe_blood,[True],成功,1.0000000000000004,[],tests/raw/probe_blood
+probe_bvm,"[True, True]",成功,1.0000000000000004,[],tests/raw/probe_bvm
+probe_intubation,"[True, True, True]",成功,1.0000000000000004,[],tests/raw/probe_intubation
+probe_mv,"[True, True]",成功,1.0000000000000004,[],tests/raw/probe_mv
+probe_needle,"[True, True, True]",成功,1.0000000000000004,[],tests/raw/probe_needle
+probe_tube,"[True, True, True]",成功,1.0000000000000004,[],tests/raw/probe_tube
+repeat_completed,"[True, True]",成功,60.00000000000378,[],tests/raw/repeat_completed
+saline,[True],成功,60.00000000000378,[],tests/raw/saline
+unsupported_route,[True],成功,60.00000000000378,[],tests/raw/unsupported_route

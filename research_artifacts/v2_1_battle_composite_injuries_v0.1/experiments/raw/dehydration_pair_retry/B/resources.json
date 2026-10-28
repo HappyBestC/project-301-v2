@@ -1,0 +1,25 @@
+{
+  "authority": "explicit_study_host",
+  "reserved": {
+    "saline_500ml_bag": 1
+  },
+  "held": {
+    "medic": 1
+  },
+  "permissions": [
+    "iv_access"
+  ],
+  "allocation": [
+    {
+      "action": "fluid_resuscitation",
+      "allocated_units": {
+        "saline_500ml_bag": 1
+      },
+      "at_s": 359.99999999996254,
+      "delivery": "not_assumed"
+    }
+  ],
+  "production_inventory": false,
+  "protected_route_available": true,
+  "receiving_environment_verified": true
+}

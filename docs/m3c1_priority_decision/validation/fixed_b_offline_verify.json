@@ -1,0 +1,24 @@
+{
+  "status": "PASS_OFFLINE_ONLY",
+  "run_id": "m3c1-fixed-b-offline-001",
+  "verifier_sha256": "124ba1bca03b8eeea34f99062fc775c2dd6b4ae46f00caa4fea48e30cc3ec340",
+  "sha_files_checked": 48,
+  "worker_pids": [
+    null,
+    null
+  ],
+  "frames_per_patient": 301,
+  "treatment_counts": {
+    "A": 0,
+    "B": 1
+  },
+  "conflict_code": "RESOURCE_IN_USE",
+  "waiting_duration_s": 1.0,
+  "waiting_status": "WAITING_NOT_VERIFIED",
+  "overall_status": "M3C1_IMPLEMENTED_NATIVE_UNVERIFIED",
+  "waiting_patient": "A",
+  "selected_patient": "B",
+  "later_treatment": "UNVALIDATED_TIMING",
+  "resimulation": false,
+  "llm_calls": 0
+}

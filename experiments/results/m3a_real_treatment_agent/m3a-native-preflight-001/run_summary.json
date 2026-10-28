@@ -1,0 +1,33 @@
+{
+  "run_id": "m3a-native-preflight-001",
+  "patient_id": "m3a-native-preflight-001-patient",
+  "plan_id": "m3a-native-preflight-001-plan",
+  "scenario_id": "external_rightleg04_source_control_v1",
+  "overall_status": "M3A_PARTIAL",
+  "real_pulse": false,
+  "native_execution_requested": true,
+  "execution_pass": false,
+  "evaluator_called": false,
+  "stage": "preflight",
+  "failure": {
+    "type": "LLMConfigurationError",
+    "message": "Missing API configuration: OPENAI_BASE_URL, OPENAI_API_KEY, OPENAI_MODEL",
+    "stage": "preflight"
+  },
+  "mode": "real_agent_native",
+  "real_llm": false,
+  "decision_id": "m3a-native-preflight-001-decision",
+  "stages": {
+    "LLM_CALL": "NOT_RUN",
+    "DECISION_PARSE": "NOT_RUN",
+    "COMPLETE_PLAN_VALIDATION": "NOT_RUN",
+    "DISPATCH": "NOT_RUN",
+    "RESOURCE_RESERVATION": "NOT_RUN",
+    "PULSE_EXECUTION": "NOT_RUN",
+    "OBSERVATION": "NOT_RUN",
+    "EVALUATION": "NOT_RUN"
+  },
+  "llm_request_attempted": false,
+  "pulse_treatment_submitted": false,
+  "blocked": true
+}

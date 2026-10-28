@@ -1,0 +1,50 @@
+{
+  "acceptance_count": 944,
+  "count_basis": "853 旧测试 + 86 V2.1 单元/反例 + 5 最终真实 E2E，不重复累计旧版本同类 E2E 或重跑",
+  "final_round_count": 898,
+  "final_round_basis": "807 旧非原生 + 86 V2.1 单元 + 5 最终原生；46 项旧原生测试沿用本阶段此前通过证据",
+  "reports": {
+    "legacy_all": {
+      "tests": 853,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "path": "validation/regression/legacy_all.xml",
+      "project_path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/validation/regression/legacy_all.xml",
+      "sha256": "545d7d60df012c3a4bd06df8585dc8b251fa9a4787e9a7c9adab89feea620da8"
+    },
+    "legacy_repeated": {
+      "tests": 807,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "path": "validation/regression/final_unit.xml",
+      "project_path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/validation/regression/final_unit.xml",
+      "sha256": "3c03a9817db7b56e2cbdc7284cdd04fc3fdc7231e8eb1ccdbc0692730e927376"
+    },
+    "v21_unit": {
+      "tests": 86,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "path": "validation/tests/unit_postactivation_v2.xml",
+      "project_path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/validation/tests/unit_postactivation_v2.xml",
+      "sha256": "dac9e157addd2978f8219d8da03fb0d42eb930914986f0d757e3efeefe06ad17"
+    },
+    "v21_final_native": {
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "path": "validation/tests/native_risk_v2.xml",
+      "project_path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/validation/tests/native_risk_v2.xml",
+      "sha256": "675bfd91db327c76e7be849ab0a5a97b80e26493ec8d4ef4b936025a98fb8f4f"
+    }
+  },
+  "native_tests_rerun_for_archive": false,
+  "any_tests_rerun_for_archive": false,
+  "archive_checks_only": true,
+  "legacy_python_warnings": 6,
+  "native_e2e_mode": "validation_only=True，五条通过后激活正式清单，再做正式入口/篡改拒绝单元核验",
+  "production_enabled": false
+}

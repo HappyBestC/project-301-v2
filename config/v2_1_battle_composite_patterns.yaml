@@ -1,0 +1,406 @@
+{
+  "version": "301.v2_1.composite.runtime.1",
+  "patterns": [
+    {
+      "pattern_id": "penetrating_thoracic_composite_v2",
+      "name_cn": "胸部穿透性复合伤",
+      "scene_description": "穿透伤后同侧漏气和积血，不模拟胸壁创道。",
+      "baseline_reference": "301.v2.restricted.engineering.baseline.1",
+      "profile_version": "301.v2_1.thoracic.aligned_onsets.2",
+      "component_injuries": [
+        {
+          "injury_type": "open_pneumothorax",
+          "severity": 0.6,
+          "side": "Left"
+        },
+        {
+          "injury_type": "hemothorax",
+          "severity": 0.8,
+          "side": "Left"
+        }
+      ],
+      "severity_or_condition_parameters": [
+        {
+          "injury_type": "open_pneumothorax",
+          "severity": 0.6,
+          "side": "Left"
+        },
+        {
+          "injury_type": "hemothorax",
+          "severity": 0.8,
+          "side": "Left"
+        }
+      ],
+      "side_or_compartment": [
+        {
+          "side": "Left"
+        },
+        {
+          "side": "Left"
+        }
+      ],
+      "environment_profile": null,
+      "initialization_order": [
+        "StandardMale0",
+        "hemothorax60",
+        "open_pneumothorax540",
+        "decision660",
+        "end960"
+      ],
+      "treatment_bundles": {
+        "A": [
+          "occlusive_dressing"
+        ],
+        "B": [
+          "control_hemothorax_bleeding",
+          "chest_tube"
+        ]
+      },
+      "treatment_dependencies": [
+        "source control precedes fluid",
+        "hemothorax control precedes tube",
+        "intubation precedes ventilation",
+        "native actions separated by one .02 s tick"
+      ],
+      "resource_requirements": "V2 COSTS plus audited hemothorax/exposure resources; explicit host grant required",
+      "observation_requirements": [
+        "13 V2 public fields",
+        "native events",
+        "Aorta sodium",
+        "component native diagnostics"
+      ],
+      "simulation_timeline": {
+        "initialization_s": 0,
+        "dynamic_onset_s": 60,
+        "decision_s": 660,
+        "end_s": 960,
+        "action_step_s": 0.02,
+        "component_onsets_s": {
+          "hemothorax": 60,
+          "open_pneumothorax": 540
+        }
+      },
+      "known_limitations": [
+        "穿透伤后同侧漏气和积血，不模拟胸壁创道。",
+        "No V2 single-injury safety exemptions inherited",
+        "All branches independently initialize, no state restoration",
+        "Combination-level timing is new, no claim of preserving both single-injury timelines"
+      ],
+      "validation_status": "CONFIGURED",
+      "production_enabled": false
+    },
+    {
+      "pattern_id": "blunt_thoracoabdominal_composite_v2",
+      "name_cn": "钝性胸腹复合伤",
+      "scene_description": "冲击或钝伤后腹腔出血及张力性气胸，不模拟器官裂伤形态。",
+      "baseline_reference": "301.v2.restricted.engineering.baseline.1",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "component_injuries": [
+        {
+          "injury_type": "abdominal_internal_hemorrhage",
+          "severity": 0.4,
+          "compartment": "Spleen"
+        },
+        {
+          "injury_type": "closed_tension_pneumothorax",
+          "severity": 0.6,
+          "side": "Left"
+        }
+      ],
+      "severity_or_condition_parameters": [
+        {
+          "injury_type": "abdominal_internal_hemorrhage",
+          "severity": 0.4,
+          "compartment": "Spleen"
+        },
+        {
+          "injury_type": "closed_tension_pneumothorax",
+          "severity": 0.6,
+          "side": "Left"
+        }
+      ],
+      "side_or_compartment": [
+        {
+          "compartment": "Spleen"
+        },
+        {
+          "side": "Left"
+        }
+      ],
+      "environment_profile": null,
+      "initialization_order": [
+        "StandardMale with Dehydration Condition if present",
+        "advance 60 s",
+        "apply dynamic injuries in component order and environment once",
+        "advance to common decision time"
+      ],
+      "treatment_bundles": {
+        "A": [
+          "control_internal_bleeding",
+          "fluid_resuscitation"
+        ],
+        "B": [
+          "needle_decompression"
+        ]
+      },
+      "treatment_dependencies": [
+        "source control precedes fluid",
+        "hemothorax control precedes tube",
+        "intubation precedes ventilation",
+        "native actions separated by one .02 s tick"
+      ],
+      "resource_requirements": "V2 COSTS plus audited hemothorax/exposure resources; explicit host grant required",
+      "observation_requirements": [
+        "13 V2 public fields",
+        "native events",
+        "Aorta sodium",
+        "component native diagnostics"
+      ],
+      "simulation_timeline": {
+        "initialization_s": 0,
+        "dynamic_onset_s": 60,
+        "decision_s": 180,
+        "end_s": 480,
+        "action_step_s": 0.02
+      },
+      "known_limitations": [
+        "冲击或钝伤后腹腔出血及张力性气胸，不模拟器官裂伤形态。",
+        "No V2 single-injury safety exemptions inherited",
+        "All branches independently initialize, no state restoration",
+        "Combination-level timing is new, no claim of preserving both single-injury timelines"
+      ],
+      "validation_status": "CONFIGURED",
+      "production_enabled": false
+    },
+    {
+      "pattern_id": "blast_hemorrhage_respiratory_composite_v2",
+      "name_cn": "爆炸致出血与呼吸功能障碍",
+      "scene_description": "人为组合爆炸后果代理，不模拟冲击波，也不声称必然产生呼吸肌受损。",
+      "baseline_reference": "301.v2.restricted.engineering.baseline.1",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "component_injuries": [
+        {
+          "injury_type": "external_hemorrhage",
+          "severity": 0.4,
+          "compartment": "RightLeg"
+        },
+        {
+          "injury_type": "respiratory_muscle_impairment",
+          "severity": 0.4
+        }
+      ],
+      "severity_or_condition_parameters": [
+        {
+          "injury_type": "external_hemorrhage",
+          "severity": 0.4,
+          "compartment": "RightLeg"
+        },
+        {
+          "injury_type": "respiratory_muscle_impairment",
+          "severity": 0.4
+        }
+      ],
+      "side_or_compartment": [
+        {
+          "compartment": "RightLeg"
+        },
+        {}
+      ],
+      "environment_profile": null,
+      "initialization_order": [
+        "StandardMale with Dehydration Condition if present",
+        "advance 60 s",
+        "apply dynamic injuries in component order and environment once",
+        "advance to common decision time"
+      ],
+      "treatment_bundles": {
+        "A": [
+          "control_external_bleeding",
+          "fluid_resuscitation"
+        ],
+        "B": [
+          "intubation",
+          "mechanical_ventilation"
+        ]
+      },
+      "treatment_dependencies": [
+        "source control precedes fluid",
+        "hemothorax control precedes tube",
+        "intubation precedes ventilation",
+        "native actions separated by one .02 s tick"
+      ],
+      "resource_requirements": "V2 COSTS plus audited hemothorax/exposure resources; explicit host grant required",
+      "observation_requirements": [
+        "13 V2 public fields",
+        "native events",
+        "Aorta sodium",
+        "component native diagnostics"
+      ],
+      "simulation_timeline": {
+        "initialization_s": 0,
+        "dynamic_onset_s": 60,
+        "decision_s": 180,
+        "end_s": 480,
+        "action_step_s": 0.02
+      },
+      "known_limitations": [
+        "人为组合爆炸后果代理，不模拟冲击波，也不声称必然产生呼吸肌受损。",
+        "No V2 single-injury safety exemptions inherited",
+        "All branches independently initialize, no state restoration",
+        "Combination-level timing is new, no claim of preserving both single-injury timelines"
+      ],
+      "validation_status": "CONFIGURED",
+      "production_enabled": false
+    },
+    {
+      "pattern_id": "fire_co_alveolar_composite_v2",
+      "name_cn": "战场火灾与吸入性功能障碍",
+      "scene_description": "烟气环境中 CO 暴露与既有肺泡交换障碍；不是完整烟雾毒理或烧伤。",
+      "baseline_reference": "301.v2.restricted.engineering.baseline.1",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "component_injuries": [
+        {
+          "injury_type": "carbon_monoxide_exposure"
+        },
+        {
+          "injury_type": "impaired_alveolar_exchange",
+          "severity": 0.4
+        }
+      ],
+      "severity_or_condition_parameters": [
+        {
+          "injury_type": "carbon_monoxide_exposure"
+        },
+        {
+          "injury_type": "impaired_alveolar_exchange",
+          "severity": 0.4
+        }
+      ],
+      "side_or_compartment": [
+        {},
+        {}
+      ],
+      "environment_profile": {
+        "co": 0.005,
+        "oxygen": 0.21
+      },
+      "initialization_order": [
+        "StandardMale with Dehydration Condition if present",
+        "advance 60 s",
+        "apply dynamic injuries in component order and environment once",
+        "advance to common decision time"
+      ],
+      "treatment_bundles": {
+        "A": [
+          "remove_from_exposure"
+        ],
+        "B": [
+          "supplemental_oxygen"
+        ]
+      },
+      "treatment_dependencies": [
+        "source control precedes fluid",
+        "hemothorax control precedes tube",
+        "intubation precedes ventilation",
+        "native actions separated by one .02 s tick"
+      ],
+      "resource_requirements": "V2 COSTS plus audited hemothorax/exposure resources; explicit host grant required",
+      "observation_requirements": [
+        "13 V2 public fields",
+        "native events",
+        "Aorta sodium",
+        "component native diagnostics"
+      ],
+      "simulation_timeline": {
+        "initialization_s": 0,
+        "dynamic_onset_s": 60,
+        "decision_s": 960,
+        "end_s": 1860,
+        "action_step_s": 0.02
+      },
+      "known_limitations": [
+        "烟气环境中 CO 暴露与既有肺泡交换障碍；不是完整烟雾毒理或烧伤。",
+        "No V2 single-injury safety exemptions inherited",
+        "All branches independently initialize, no state restoration",
+        "Combination-level timing is new, no claim of preserving both single-injury timelines"
+      ],
+      "validation_status": "CONFIGURED",
+      "production_enabled": false
+    },
+    {
+      "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+      "name_cn": "密闭空间受困复合伤",
+      "scene_description": "受困前或期间已存在脱水，另有低氧暴露；不声称短时低氧自动造成脱水。",
+      "baseline_reference": "301.v2.restricted.engineering.baseline.1",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "component_injuries": [
+        {
+          "injury_type": "environmental_hypoxia"
+        },
+        {
+          "injury_type": "dehydration",
+          "severity": 0.4
+        }
+      ],
+      "severity_or_condition_parameters": [
+        {
+          "injury_type": "environmental_hypoxia"
+        },
+        {
+          "injury_type": "dehydration",
+          "severity": 0.4
+        }
+      ],
+      "side_or_compartment": [
+        {},
+        {}
+      ],
+      "environment_profile": {
+        "co": 0,
+        "oxygen": 0.12
+      },
+      "initialization_order": [
+        "StandardMale with Dehydration Condition if present",
+        "advance 60 s",
+        "apply dynamic injuries in component order and environment once",
+        "advance to common decision time"
+      ],
+      "treatment_bundles": {
+        "A": [
+          "remove_from_exposure"
+        ],
+        "B": [
+          "fluid_resuscitation"
+        ]
+      },
+      "treatment_dependencies": [
+        "source control precedes fluid",
+        "hemothorax control precedes tube",
+        "intubation precedes ventilation",
+        "native actions separated by one .02 s tick"
+      ],
+      "resource_requirements": "V2 COSTS plus audited hemothorax/exposure resources; explicit host grant required",
+      "observation_requirements": [
+        "13 V2 public fields",
+        "native events",
+        "Aorta sodium",
+        "component native diagnostics"
+      ],
+      "simulation_timeline": {
+        "initialization_s": 0,
+        "dynamic_onset_s": 60,
+        "decision_s": 360,
+        "end_s": 660,
+        "action_step_s": 0.02
+      },
+      "known_limitations": [
+        "受困前或期间已存在脱水，另有低氧暴露；不声称短时低氧自动造成脱水。",
+        "No V2 single-injury safety exemptions inherited",
+        "All branches independently initialize, no state restoration",
+        "Combination-level timing is new, no claim of preserving both single-injury timelines"
+      ],
+      "validation_status": "CONFIGURED",
+      "production_enabled": false
+    }
+  ]
+}

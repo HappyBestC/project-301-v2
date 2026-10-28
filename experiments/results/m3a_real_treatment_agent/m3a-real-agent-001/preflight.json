@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "configuration_present": true,
+  "model": "gpt-6-sol",
+  "native_binding_available": true,
+  "remote_model_availability": "checked by the sole decision request; no discovery call"
+}

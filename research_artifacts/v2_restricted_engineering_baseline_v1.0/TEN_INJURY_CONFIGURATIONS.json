@@ -1,0 +1,190 @@
+{
+  "baseline_id": "301.v2.restricted.engineering.baseline.1",
+  "single_injury_only": true,
+  "profiles": [
+    {
+      "injury_type": "external_hemorrhage",
+      "name": "体表出血",
+      "profile": "301.v2.phase1.research.1",
+      "severity_levels": [
+        0.4
+      ],
+      "location": {
+        "compartment": "RightLeg"
+      },
+      "decision_s": 180,
+      "end_s": 480,
+      "actions": [
+        "control_external_bleeding",
+        "fluid_resuscitation",
+        "transfusion"
+      ],
+      "admission": "ADMITTED_LEGACY",
+      "production_enabled": false
+    },
+    {
+      "injury_type": "abdominal_internal_hemorrhage",
+      "name": "腹腔内出血",
+      "profile": "301.v2.phase1.research.1",
+      "severity_levels": [
+        0.4
+      ],
+      "location": {
+        "compartment": "Spleen"
+      },
+      "decision_s": 180,
+      "end_s": 480,
+      "actions": [
+        "control_internal_bleeding",
+        "fluid_resuscitation",
+        "transfusion"
+      ],
+      "admission": "ADMITTED_LEGACY",
+      "production_enabled": false
+    },
+    {
+      "injury_type": "open_pneumothorax",
+      "name": "开放性气胸",
+      "profile": "301.v2.phase1.research.1",
+      "severity_levels": [
+        0.6
+      ],
+      "location": {
+        "side": "Left"
+      },
+      "decision_s": 180,
+      "end_s": 480,
+      "actions": [
+        "occlusive_dressing"
+      ],
+      "admission": "ADMITTED_LEGACY",
+      "production_enabled": false
+    },
+    {
+      "injury_type": "closed_tension_pneumothorax",
+      "name": "闭合性张力性气胸",
+      "profile": "301.v2.phase1.research.1",
+      "severity_levels": [
+        0.6
+      ],
+      "location": {
+        "side": "Left"
+      },
+      "decision_s": 180,
+      "end_s": 480,
+      "actions": [
+        "needle_decompression"
+      ],
+      "admission": "ADMITTED_LEGACY",
+      "production_enabled": false
+    },
+    {
+      "injury_type": "respiratory_muscle_impairment",
+      "name": "呼吸肌功能受损",
+      "profile": "301.v2.phase1.research.1",
+      "severity_levels": [
+        0.4
+      ],
+      "location": {},
+      "decision_s": 180,
+      "end_s": 480,
+      "actions": [
+        "intubation",
+        "mechanical_ventilation"
+      ],
+      "admission": "ADMITTED_LEGACY",
+      "production_enabled": false
+    },
+    {
+      "injury_type": "impaired_alveolar_exchange",
+      "name": "肺泡气体交换受损",
+      "profile": "301.v2.phase1.research.1",
+      "severity_levels": [
+        0.2,
+        0.4,
+        0.6
+      ],
+      "location": {},
+      "decision_s": 180,
+      "end_s": 480,
+      "actions": [
+        "supplemental_oxygen"
+      ],
+      "admission": "ADMITTED_LEGACY",
+      "production_enabled": false
+    },
+    {
+      "injury_type": "dehydration",
+      "name": "脱水",
+      "profile": "301.v2.phase1.research.1",
+      "severity_levels": [
+        0.2,
+        0.4,
+        0.6
+      ],
+      "location": {},
+      "decision_s": 180,
+      "end_s": 480,
+      "actions": [
+        "fluid_resuscitation"
+      ],
+      "admission": "ADMITTED_LEGACY",
+      "production_enabled": false
+    },
+    {
+      "injury_type": "hemothorax",
+      "name": "血胸",
+      "profile": "301.v2.hemothorax.restricted.1",
+      "severity_levels": [
+        0.8
+      ],
+      "location": {
+        "side": "Left"
+      },
+      "decision_s": 660,
+      "end_s": 960,
+      "actions": [
+        "control_hemothorax_bleeding",
+        "chest_tube"
+      ],
+      "admission": "ADMITTED_RESTRICTED",
+      "production_enabled": false
+    },
+    {
+      "injury_type": "carbon_monoxide_exposure",
+      "name": "CO 暴露",
+      "profile": "301.v2.co.removal.restricted.1",
+      "ambient_CO": 0.005,
+      "ambient_O2": 0.21,
+      "decision_s": 960,
+      "end_s": 1860,
+      "actions": [
+        "remove_from_exposure"
+      ],
+      "admission": "ADMITTED_RESTRICTED",
+      "production_enabled": false
+    },
+    {
+      "injury_type": "environmental_hypoxia",
+      "name": "环境低氧",
+      "profile": "301.v2.hypoxia.removal.restricted.1",
+      "ambient_CO": 0,
+      "ambient_O2": 0.12,
+      "decision_s": 360,
+      "end_s": 660,
+      "actions": [
+        "remove_from_exposure"
+      ],
+      "admission": "ADMITTED_RESTRICTED",
+      "production_enabled": false
+    }
+  ],
+  "protocol_authority": "snapshot/src/core301/ 内固定协议、合同校验器及 Runtime 源码共同定义；动作集合不授权任意组合或参数。",
+  "canonical_sources": [
+    "src/core301/pulse/v2/protocol_book.py",
+    "src/core301/pulse/v2/treatment_adapter.py",
+    "src/core301/pulse/treatment_adapter.py",
+    "src/core301/runtime/v2/research_router.py",
+    "src/core301/pulse/v2/exposure_session.py"
+  ]
+}

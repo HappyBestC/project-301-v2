@@ -1,0 +1,360 @@
+[INFO] [0(s)] [SerializingFromFile] /home/private/project-301/pulse/bin/states/StandardMale@0s.json
+[INFO] [0(s)] Human Adult Whole Body
+[INFO] [0(s)] Version : 4.3.2
+[INFO] [0(s)] GitHash : 
+[INFO] [0(s)] Build Time : Tue Oct 13 23:16:29 2026
+[INFO] [0(s)] Loading state generated from Pulse-4.3.2-
+[INFO] [0(s)] [SimTime(s)] 0(s)
+[INFO] [0(s)] [Patient]
+{
+ "Name": "StandardMale",
+ "Age": {
+  "ScalarTime": {
+   "Value": 44,
+   "Unit": "yr"
+  }
+ },
+ "Weight": {
+  "ScalarMass": {
+   "Value": 169.99845003300004,
+   "Unit": "lb"
+  }
+ },
+ "Height": {
+  "ScalarLength": {
+   "Value": 71,
+   "Unit": "in"
+  }
+ },
+ "BodyDensity": {
+  "ScalarMassPerVolume": {
+   "Value": 1.0505236628887222,
+   "Unit": "g/cm^3"
+  }
+ },
+ "BodyFatFraction": {
+  "Scalar0To1": {
+   "Value": 0.21
+  }
+ },
+ "BodyMassIndex": {
+  "Value": 23.70994416557371
+ },
+ "LeanBodyMass": {
+  "ScalarMass": {
+   "Value": 60.91745529100001,
+   "Unit": "kg"
+  }
+ },
+ "IdealBodyWeight": {
+  "ScalarMass": {
+   "Value": 75.3,
+   "Unit": "kg"
+  }
+ },
+ "AlveoliSurfaceArea": {
+  "ScalarArea": {
+   "Value": 683435.9805510533,
+   "Unit": "cm^2"
+  }
+ },
+ "RightLungRatio": {
+  "Scalar0To1": {
+   "Value": 0.525
+  }
+ },
+ "SkinSurfaceArea": {
+  "ScalarArea": {
+   "Value": 1.968118127917069,
+   "Unit": "m^2"
+  }
+ },
+ "BasalMetabolicRate": {
+  "ScalarPower": {
+   "Value": 1737.3477467513003,
+   "Unit": "kcal/day"
+  }
+ },
+ "BloodVolumeBaseline": {
+  "ScalarVolume": {
+   "Value": 5517.734437810328,
+   "Unit": "mL"
+  }
+ },
+ "DiastolicArterialPressureBaseline": {
+  "ScalarPressure": {
+   "Value": 73.583062890353972,
+   "Unit": "mmHg"
+  }
+ },
+ "HeartRateBaseline": {
+  "ScalarFrequency": {
+   "Value": 71.9999999989269,
+   "Unit": "1/min"
+  }
+ },
+ "MeanArterialPressureBaseline": {
+  "ScalarPressure": {
+   "Value": 95.3234178279229,
+   "Unit": "mmHg"
+  }
+ },
+ "PulsePressureBaseline": {
+  "ScalarPressure": {
+   "Value": 40.5,
+   "Unit": "mmHg"
+  }
+ },
+ "RespirationRateBaseline": {
+  "ScalarFrequency": {
+   "Value": 12,
+   "Unit": "1/min"
+  }
+ },
+ "SystolicArterialPressureBaseline": {
+  "ScalarPressure": {
+   "Value": 114.25582075441214,
+   "Unit": "mmHg"
+  }
+ },
+ "TidalVolumeBaseline": {
+  "ScalarVolume": {
+   "Value": 0.53526009067523139,
+   "Unit": "L"
+  }
+ },
+ "HeartRateMaximum": {
+  "ScalarFrequency": {
+   "Value": 177.2,
+   "Unit": "1/min"
+  }
+ },
+ "HeartRateMinimum": {
+  "ScalarFrequency": {
+   "Value": 0.001,
+   "Unit": "1/min"
+  }
+ },
+ "ExpiratoryReserveVolume": {
+  "ScalarVolume": {
+   "Value": 1.0542,
+   "Unit": "L"
+  }
+ },
+ "FunctionalResidualCapacity": {
+  "ScalarVolume": {
+   "Value": 2.259,
+   "Unit": "L"
+  }
+ },
+ "InspiratoryCapacity": {
+  "ScalarVolume": {
+   "Value": 3.765,
+   "Unit": "L"
+  }
+ },
+ "InspiratoryReserveVolume": {
+  "ScalarVolume": {
+   "Value": 3.2297399093247687,
+   "Unit": "L"
+  }
+ },
+ "ResidualVolume": {
+  "ScalarVolume": {
+   "Value": 1.2047999999999999,
+   "Unit": "L"
+  }
+ },
+ "TotalLungCapacity": {
+  "ScalarVolume": {
+   "Value": 6.024,
+   "Unit": "L"
+  }
+ },
+ "VitalCapacity": {
+  "ScalarVolume": {
+   "Value": 4.8192,
+   "Unit": "L"
+  }
+ }
+}
+
+[INFO] [0(s)] [SerializingToString]
+[INFO] [60(s)] [SerializingToString]
+[INFO] [60(s)] [Action]
+{
+ "PatientAction": {
+  "Hemorrhage": {
+   "PatientAction": {
+    "Action": {
+     "Comment": ""
+    }
+   },
+   "Compartment": "RightLeg",
+   "Type": "External",
+   "Severity": {
+    "Scalar0To1": {
+     "Value": 0.4,
+     "Unit": "",
+     "ReadOnly": false
+    }
+   }
+  }
+ }
+}
+
+[INFO] [60(s)] [Action]
+{
+ "PatientAction": {
+  "RespiratoryFatigue": {
+   "PatientAction": {
+    "Action": {
+     "Comment": ""
+    }
+   },
+   "Severity": {
+    "Scalar0To1": {
+     "Value": 0.4,
+     "Unit": "",
+     "ReadOnly": false
+    }
+   }
+  }
+ }
+}
+
+[INFO] [180(s)] [SerializingToString]
+[INFO] [180(s)] [Action]
+{
+ "PatientAction": {
+  "Intubation": {
+   "PatientAction": {
+    "Action": {
+     "Comment": ""
+    }
+   },
+   "Type": "Tracheal"
+  }
+ }
+}
+
+[INFO] [180(s)] Intubating Patient
+[INFO] [180.02(s)] [Action]
+{
+ "EquipmentAction": {
+  "MechanicalVentilatorPressureControl": {
+   "MechanicalVentilatorMode": {
+    "MechanicalVentilatorAction": {
+     "EquipmentAction": {
+      "Action": {
+       "Comment": ""
+      }
+     }
+    },
+    "Connection": "On"
+   },
+   "Mode": "AssistedControl",
+   "FractionInspiredOxygen": {
+    "Scalar0To1": {
+     "Value": 0.21,
+     "Unit": "",
+     "ReadOnly": false
+    }
+   },
+   "InspirationWaveform": "NullDriverWaveform",
+   "InspiratoryPeriod": {
+    "ScalarTime": {
+     "Value": 1,
+     "Unit": "s",
+     "ReadOnly": false
+    }
+   },
+   "InspiratoryPressure": {
+    "ScalarPressure": {
+     "Value": 13,
+     "Unit": "cmH2O",
+     "ReadOnly": false
+    }
+   },
+   "PositiveEndExpiratoryPressure": {
+    "ScalarPressure": {
+     "Value": 5,
+     "Unit": "cmH2O",
+     "ReadOnly": false
+    }
+   },
+   "RespirationRate": {
+    "ScalarFrequency": {
+     "Value": 12,
+     "Unit": "1/min",
+     "ReadOnly": false
+    }
+   },
+   "Slope": {
+    "ScalarTime": {
+     "Value": 0.1,
+     "Unit": "s",
+     "ReadOnly": false
+    }
+   }
+  }
+ }
+}
+
+[INFO] [180.02(s)] Airway Mode : MechanicalVentilator
+[INFO] [180.02(s)] Adding 0.7896% of N2 to the system
+[INFO] [180.04(s)] [Action]
+{
+ "PatientAction": {
+  "Hemorrhage": {
+   "PatientAction": {
+    "Action": {
+     "Comment": ""
+    }
+   },
+   "Compartment": "RightLeg",
+   "Type": "External",
+   "Severity": {
+    "Scalar0To1": {
+     "Value": 0,
+     "Unit": "",
+     "ReadOnly": false
+    }
+   }
+  }
+ }
+}
+
+[INFO] [180.06(s)] [Action]
+{
+ "PatientAction": {
+  "SubstanceCompoundInfusion": {
+   "PatientAction": {
+    "Action": {
+     "Comment": ""
+    }
+   },
+   "SubstanceCompound": "Saline",
+   "BagVolume": {
+    "ScalarVolume": {
+     "Value": 500,
+     "Unit": "mL",
+     "ReadOnly": false
+    }
+   },
+   "Rate": {
+    "ScalarVolumePerTime": {
+     "Value": 100,
+     "Unit": "mL/min",
+     "ReadOnly": false
+    }
+   }
+  }
+ }
+}
+
+[INFO] [180.08(s)] [SerializingToString]
+[INFO] [184.42(s)] [Event Tachypnea 1]  Patient has Tachypnea
+[INFO] [308.96(s)] [Event Tachypnea 0]  Patient no longer has Tachypnea
+[INFO] [480(s)] [SerializingToString]
+[INFO] [0(s)] Clearing engine

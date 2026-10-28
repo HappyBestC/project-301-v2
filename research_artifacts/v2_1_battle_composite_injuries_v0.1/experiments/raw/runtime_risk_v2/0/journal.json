@@ -1,0 +1,181 @@
+{
+  "version": "301.v2_1.composite.runtime.1",
+  "patient_id": "composite-patient",
+  "run_id": "v21-runtime_risk_v2-0",
+  "pattern_id": "penetrating_thoracic_composite_v2",
+  "epoch": "a55305e5aef943058ac055cf6b73a31d",
+  "validation_only": true,
+  "production_enabled": false,
+  "requests": {
+    "noresource": {
+      "digest": "b19bf8870c01724adbf2f8542dbb265db7f5f922a06f9fdf7f8145545ba65e13",
+      "plan": {
+        "patient_id": "composite-patient",
+        "pattern_id": "penetrating_thoracic_composite_v2",
+        "bundle": "AB"
+      },
+      "state": "REJECTED",
+      "actions": [],
+      "error": "Insufficient stock/equipment/team"
+    },
+    "joint": {
+      "digest": "b19bf8870c01724adbf2f8542dbb265db7f5f922a06f9fdf7f8145545ba65e13",
+      "plan": {
+        "patient_id": "composite-patient",
+        "pattern_id": "penetrating_thoracic_composite_v2",
+        "bundle": "AB"
+      },
+      "state": "COMPLETED",
+      "actions": [
+        {
+          "kind": "occlusive_dressing",
+          "state": "NATIVE_ACCEPTED",
+          "time_s": 659.9999999996897,
+          "payload": {
+            "PatientAction": {
+              "ChestOcclusiveDressing": {
+                "Side": "Left",
+                "State": "On"
+              }
+            }
+          },
+          "allocation": {
+            "kind": "occlusive_dressing",
+            "units": {
+              "occlusive_dressing_kit": 1
+            },
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          "confirmed_time_s": 660.0199999996897
+        },
+        {
+          "kind": "control_hemothorax_bleeding",
+          "state": "NATIVE_ACCEPTED",
+          "time_s": 660.0199999996897,
+          "payload": {
+            "PatientAction": {
+              "Hemothorax": {
+                "Side": "Left",
+                "Severity": {
+                  "Scalar0To1": {
+                    "Value": 0
+                  }
+                }
+              }
+            }
+          },
+          "allocation": {
+            "kind": "control_hemothorax_bleeding",
+            "units": {},
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          "confirmed_time_s": 660.0399999996897
+        },
+        {
+          "kind": "chest_tube",
+          "state": "NATIVE_ACCEPTED",
+          "time_s": 660.0399999996897,
+          "payload": {
+            "PatientAction": {
+              "TubeThoracostomy": {
+                "Side": "Left",
+                "FlowRate": {
+                  "ScalarVolumePerTime": {
+                    "Value": 30,
+                    "Unit": "mL/min"
+                  }
+                }
+              }
+            }
+          },
+          "allocation": {
+            "kind": "chest_tube",
+            "units": {
+              "chest_tube_kit": 1
+            },
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          "confirmed_time_s": 660.0599999996897
+        }
+      ],
+      "resources": {
+        "reserved": {
+          "occlusive_dressing_kit": 1,
+          "chest_tube_kit": 1
+        },
+        "held": {
+          "medic": 1
+        },
+        "allocated": [
+          {
+            "kind": "occlusive_dressing",
+            "units": {
+              "occlusive_dressing_kit": 1
+            },
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          {
+            "kind": "control_hemothorax_bleeding",
+            "units": {},
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          {
+            "kind": "chest_tube",
+            "units": {
+              "chest_tube_kit": 1
+            },
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          }
+        ],
+        "production_inventory": false
+      }
+    }
+  },
+  "events": [
+    {
+      "state": "PREPARED",
+      "time_s": 659.9999999996897
+    },
+    {
+      "state": "REJECTED",
+      "code": "INITIALIZATION_FORBIDDEN",
+      "message": "No repeated initialization or restoration"
+    },
+    {
+      "state": "REJECTED",
+      "code": "UNSUPPORTED_RECOVERY",
+      "message": "No composite state restoration"
+    },
+    {
+      "state": "REJECTED",
+      "code": "PATIENT_OR_PATTERN_MISMATCH",
+      "message": "Wrong target"
+    },
+    {
+      "state": "REJECTED",
+      "code": "STALE_CONTEXT",
+      "message": "Context is foreign or stale"
+    },
+    {
+      "state": "REJECTED",
+      "code": "IDEMPOTENCY_CONFLICT",
+      "message": "Request ID reused with different payload"
+    },
+    {
+      "state": "REJECTED",
+      "code": "OUTSIDE_WINDOW",
+      "message": "Fixed decision tick required"
+    },
+    {
+      "state": "REJECTED",
+      "code": "UNREGISTERED_NATIVE_SOURCE",
+      "message": "Native injury identities/parameters differ from composite registry"
+    },
+    {
+      "state": "REJECTED",
+      "code": "INITIALIZATION_FORBIDDEN",
+      "message": "No repeated initialization or restoration"
+    }
+  ],
+  "case_closed": true
+}

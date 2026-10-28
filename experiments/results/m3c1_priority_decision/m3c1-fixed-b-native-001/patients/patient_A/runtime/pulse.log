@@ -1,0 +1,508 @@
+[INFO] [0(s)] [SerializingFromFile] /home/private/pulse-4.3.2-301-runtime/bin/states/StandardMale@0s.json
+[INFO] [0(s)] Human Adult Whole Body
+[INFO] [0(s)] Version : 4.3.2
+[INFO] [0(s)] GitHash : 
+[INFO] [0(s)] Build Time : Mon Oct 19 19:33:22 2026
+[INFO] [0(s)] Loading state generated from Pulse-4.3.2-
+[INFO] [0(s)] [SimTime(s)] 0(s)
+[INFO] [0(s)] [Patient]
+{
+ "Name": "StandardMale",
+ "Age": {
+  "ScalarTime": {
+   "Value": 44,
+   "Unit": "yr"
+  }
+ },
+ "Weight": {
+  "ScalarMass": {
+   "Value": 169.99845003300004,
+   "Unit": "lb"
+  }
+ },
+ "Height": {
+  "ScalarLength": {
+   "Value": 71,
+   "Unit": "in"
+  }
+ },
+ "BodyDensity": {
+  "ScalarMassPerVolume": {
+   "Value": 1.0505236628887222,
+   "Unit": "g/cm^3"
+  }
+ },
+ "BodyFatFraction": {
+  "Scalar0To1": {
+   "Value": 0.21
+  }
+ },
+ "BodyMassIndex": {
+  "Value": 23.70994416557371
+ },
+ "LeanBodyMass": {
+  "ScalarMass": {
+   "Value": 60.91745529100001,
+   "Unit": "kg"
+  }
+ },
+ "IdealBodyWeight": {
+  "ScalarMass": {
+   "Value": 75.3,
+   "Unit": "kg"
+  }
+ },
+ "AlveoliSurfaceArea": {
+  "ScalarArea": {
+   "Value": 683435.9805510533,
+   "Unit": "cm^2"
+  }
+ },
+ "RightLungRatio": {
+  "Scalar0To1": {
+   "Value": 0.525
+  }
+ },
+ "SkinSurfaceArea": {
+  "ScalarArea": {
+   "Value": 1.968118127917069,
+   "Unit": "m^2"
+  }
+ },
+ "BasalMetabolicRate": {
+  "ScalarPower": {
+   "Value": 1737.3477467513003,
+   "Unit": "kcal/day"
+  }
+ },
+ "BloodVolumeBaseline": {
+  "ScalarVolume": {
+   "Value": 5517.734437810328,
+   "Unit": "mL"
+  }
+ },
+ "DiastolicArterialPressureBaseline": {
+  "ScalarPressure": {
+   "Value": 73.583062890353972,
+   "Unit": "mmHg"
+  }
+ },
+ "HeartRateBaseline": {
+  "ScalarFrequency": {
+   "Value": 71.9999999989269,
+   "Unit": "1/min"
+  }
+ },
+ "MeanArterialPressureBaseline": {
+  "ScalarPressure": {
+   "Value": 95.3234178279229,
+   "Unit": "mmHg"
+  }
+ },
+ "PulsePressureBaseline": {
+  "ScalarPressure": {
+   "Value": 40.5,
+   "Unit": "mmHg"
+  }
+ },
+ "RespirationRateBaseline": {
+  "ScalarFrequency": {
+   "Value": 12,
+   "Unit": "1/min"
+  }
+ },
+ "SystolicArterialPressureBaseline": {
+  "ScalarPressure": {
+   "Value": 114.25582075441214,
+   "Unit": "mmHg"
+  }
+ },
+ "TidalVolumeBaseline": {
+  "ScalarVolume": {
+   "Value": 0.53526009067523139,
+   "Unit": "L"
+  }
+ },
+ "HeartRateMaximum": {
+  "ScalarFrequency": {
+   "Value": 177.2,
+   "Unit": "1/min"
+  }
+ },
+ "HeartRateMinimum": {
+  "ScalarFrequency": {
+   "Value": 0.001,
+   "Unit": "1/min"
+  }
+ },
+ "ExpiratoryReserveVolume": {
+  "ScalarVolume": {
+   "Value": 1.0542,
+   "Unit": "L"
+  }
+ },
+ "FunctionalResidualCapacity": {
+  "ScalarVolume": {
+   "Value": 2.259,
+   "Unit": "L"
+  }
+ },
+ "InspiratoryCapacity": {
+  "ScalarVolume": {
+   "Value": 3.765,
+   "Unit": "L"
+  }
+ },
+ "InspiratoryReserveVolume": {
+  "ScalarVolume": {
+   "Value": 3.2297399093247687,
+   "Unit": "L"
+  }
+ },
+ "ResidualVolume": {
+  "ScalarVolume": {
+   "Value": 1.2047999999999999,
+   "Unit": "L"
+  }
+ },
+ "TotalLungCapacity": {
+  "ScalarVolume": {
+   "Value": 6.024,
+   "Unit": "L"
+  }
+ },
+ "VitalCapacity": {
+  "ScalarVolume": {
+   "Value": 4.8192,
+   "Unit": "L"
+  }
+ }
+}
+
+[INFO] [0(s)] [SerializingToString]
+[INFO] [60(s)] [Action]
+{
+ "PatientAction": {
+  "Hemorrhage": {
+   "PatientAction": {
+    "Action": {
+     "Comment": ""
+    }
+   },
+   "Compartment": "RightLeg",
+   "Type": "External",
+   "Severity": {
+    "Scalar0To1": {
+     "Value": 0.4,
+     "Unit": "",
+     "ReadOnly": false
+    }
+   }
+  }
+ }
+}
+
+[INFO] [180(s)] [SerializingToString]
+[INFO] [181(s)] [SerializingToString]
+[INFO] [182(s)] [SerializingToString]
+[INFO] [183(s)] [SerializingToString]
+[INFO] [184(s)] [SerializingToString]
+[INFO] [185(s)] [SerializingToString]
+[INFO] [186(s)] [SerializingToString]
+[INFO] [187(s)] [SerializingToString]
+[INFO] [188(s)] [SerializingToString]
+[INFO] [189(s)] [SerializingToString]
+[INFO] [190(s)] [SerializingToString]
+[INFO] [191(s)] [SerializingToString]
+[INFO] [192(s)] [SerializingToString]
+[INFO] [193(s)] [SerializingToString]
+[INFO] [194(s)] [SerializingToString]
+[INFO] [195(s)] [SerializingToString]
+[INFO] [196(s)] [SerializingToString]
+[INFO] [197(s)] [SerializingToString]
+[INFO] [198(s)] [SerializingToString]
+[INFO] [199(s)] [SerializingToString]
+[INFO] [200(s)] [SerializingToString]
+[INFO] [201(s)] [SerializingToString]
+[INFO] [202(s)] [SerializingToString]
+[INFO] [203(s)] [SerializingToString]
+[INFO] [204(s)] [SerializingToString]
+[INFO] [205(s)] [SerializingToString]
+[INFO] [206(s)] [SerializingToString]
+[INFO] [207(s)] [SerializingToString]
+[INFO] [208(s)] [SerializingToString]
+[INFO] [209(s)] [SerializingToString]
+[INFO] [210(s)] [SerializingToString]
+[INFO] [211(s)] [SerializingToString]
+[INFO] [212(s)] [SerializingToString]
+[INFO] [213(s)] [SerializingToString]
+[INFO] [214(s)] [SerializingToString]
+[INFO] [215(s)] [SerializingToString]
+[INFO] [216(s)] [SerializingToString]
+[INFO] [217(s)] [SerializingToString]
+[INFO] [218(s)] [SerializingToString]
+[INFO] [219(s)] [SerializingToString]
+[INFO] [220(s)] [SerializingToString]
+[INFO] [221(s)] [SerializingToString]
+[INFO] [222(s)] [SerializingToString]
+[INFO] [223(s)] [SerializingToString]
+[INFO] [224(s)] [SerializingToString]
+[INFO] [225(s)] [SerializingToString]
+[INFO] [226(s)] [SerializingToString]
+[INFO] [227(s)] [SerializingToString]
+[INFO] [228(s)] [SerializingToString]
+[INFO] [229(s)] [SerializingToString]
+[INFO] [230(s)] [SerializingToString]
+[INFO] [231(s)] [SerializingToString]
+[INFO] [232(s)] [SerializingToString]
+[INFO] [233(s)] [SerializingToString]
+[INFO] [234(s)] [SerializingToString]
+[INFO] [235(s)] [SerializingToString]
+[INFO] [236(s)] [SerializingToString]
+[INFO] [237(s)] [SerializingToString]
+[INFO] [238(s)] [SerializingToString]
+[INFO] [239(s)] [SerializingToString]
+[INFO] [240(s)] [SerializingToString]
+[INFO] [241(s)] [SerializingToString]
+[INFO] [242(s)] [SerializingToString]
+[INFO] [243(s)] [SerializingToString]
+[INFO] [244(s)] [SerializingToString]
+[INFO] [245(s)] [SerializingToString]
+[INFO] [246(s)] [SerializingToString]
+[INFO] [247(s)] [SerializingToString]
+[INFO] [248(s)] [SerializingToString]
+[INFO] [249(s)] [SerializingToString]
+[INFO] [250(s)] [SerializingToString]
+[INFO] [251(s)] [SerializingToString]
+[INFO] [252(s)] [SerializingToString]
+[INFO] [253(s)] [SerializingToString]
+[INFO] [254(s)] [SerializingToString]
+[INFO] [255(s)] [SerializingToString]
+[INFO] [256(s)] [SerializingToString]
+[INFO] [257(s)] [SerializingToString]
+[INFO] [258(s)] [SerializingToString]
+[INFO] [259(s)] [SerializingToString]
+[INFO] [260(s)] [SerializingToString]
+[INFO] [261(s)] [SerializingToString]
+[INFO] [262(s)] [SerializingToString]
+[INFO] [263(s)] [SerializingToString]
+[INFO] [264(s)] [SerializingToString]
+[INFO] [265(s)] [SerializingToString]
+[INFO] [266(s)] [SerializingToString]
+[INFO] [267(s)] [SerializingToString]
+[INFO] [268(s)] [SerializingToString]
+[INFO] [269(s)] [SerializingToString]
+[INFO] [270(s)] [SerializingToString]
+[INFO] [271(s)] [SerializingToString]
+[INFO] [272(s)] [SerializingToString]
+[INFO] [273(s)] [SerializingToString]
+[INFO] [274(s)] [SerializingToString]
+[INFO] [275(s)] [SerializingToString]
+[INFO] [276(s)] [SerializingToString]
+[INFO] [277(s)] [SerializingToString]
+[INFO] [278(s)] [SerializingToString]
+[INFO] [279(s)] [SerializingToString]
+[INFO] [280(s)] [SerializingToString]
+[INFO] [281(s)] [SerializingToString]
+[INFO] [282(s)] [SerializingToString]
+[INFO] [283(s)] [SerializingToString]
+[INFO] [284(s)] [SerializingToString]
+[INFO] [285(s)] [SerializingToString]
+[INFO] [286(s)] [SerializingToString]
+[INFO] [287(s)] [SerializingToString]
+[INFO] [288(s)] [SerializingToString]
+[INFO] [289(s)] [SerializingToString]
+[INFO] [290(s)] [SerializingToString]
+[INFO] [291(s)] [SerializingToString]
+[INFO] [292(s)] [SerializingToString]
+[INFO] [293(s)] [SerializingToString]
+[INFO] [294(s)] [SerializingToString]
+[INFO] [295(s)] [SerializingToString]
+[INFO] [296(s)] [SerializingToString]
+[INFO] [297(s)] [SerializingToString]
+[INFO] [298(s)] [SerializingToString]
+[INFO] [299(s)] [SerializingToString]
+[INFO] [300(s)] [SerializingToString]
+[INFO] [301(s)] [SerializingToString]
+[INFO] [302(s)] [SerializingToString]
+[INFO] [303(s)] [SerializingToString]
+[INFO] [304(s)] [SerializingToString]
+[INFO] [305(s)] [SerializingToString]
+[INFO] [306(s)] [SerializingToString]
+[INFO] [307(s)] [SerializingToString]
+[INFO] [308(s)] [SerializingToString]
+[INFO] [309(s)] [SerializingToString]
+[INFO] [310(s)] [SerializingToString]
+[INFO] [311(s)] [SerializingToString]
+[INFO] [312(s)] [SerializingToString]
+[INFO] [313(s)] [SerializingToString]
+[INFO] [314(s)] [SerializingToString]
+[INFO] [315(s)] [SerializingToString]
+[INFO] [316(s)] [SerializingToString]
+[INFO] [317(s)] [SerializingToString]
+[INFO] [318(s)] [SerializingToString]
+[INFO] [319(s)] [SerializingToString]
+[INFO] [320(s)] [SerializingToString]
+[INFO] [321(s)] [SerializingToString]
+[INFO] [322(s)] [SerializingToString]
+[INFO] [323(s)] [SerializingToString]
+[INFO] [324(s)] [SerializingToString]
+[INFO] [325(s)] [SerializingToString]
+[INFO] [326(s)] [SerializingToString]
+[INFO] [327(s)] [SerializingToString]
+[INFO] [328(s)] [SerializingToString]
+[INFO] [329(s)] [SerializingToString]
+[INFO] [330(s)] [SerializingToString]
+[INFO] [331(s)] [SerializingToString]
+[INFO] [332(s)] [SerializingToString]
+[INFO] [333(s)] [SerializingToString]
+[INFO] [334(s)] [SerializingToString]
+[INFO] [335(s)] [SerializingToString]
+[INFO] [336(s)] [SerializingToString]
+[INFO] [337(s)] [SerializingToString]
+[INFO] [338(s)] [SerializingToString]
+[INFO] [339(s)] [SerializingToString]
+[INFO] [340(s)] [SerializingToString]
+[INFO] [341(s)] [SerializingToString]
+[INFO] [342(s)] [SerializingToString]
+[INFO] [343(s)] [SerializingToString]
+[INFO] [344(s)] [SerializingToString]
+[INFO] [345(s)] [SerializingToString]
+[INFO] [346(s)] [SerializingToString]
+[INFO] [347(s)] [SerializingToString]
+[INFO] [348(s)] [SerializingToString]
+[INFO] [349(s)] [SerializingToString]
+[INFO] [350(s)] [SerializingToString]
+[INFO] [351(s)] [SerializingToString]
+[INFO] [352(s)] [SerializingToString]
+[INFO] [353(s)] [SerializingToString]
+[INFO] [354(s)] [SerializingToString]
+[INFO] [355(s)] [SerializingToString]
+[INFO] [356(s)] [SerializingToString]
+[INFO] [357(s)] [SerializingToString]
+[INFO] [358(s)] [SerializingToString]
+[INFO] [359(s)] [SerializingToString]
+[INFO] [360(s)] [SerializingToString]
+[INFO] [361(s)] [SerializingToString]
+[INFO] [362(s)] [SerializingToString]
+[INFO] [363(s)] [SerializingToString]
+[INFO] [364(s)] [SerializingToString]
+[INFO] [365(s)] [SerializingToString]
+[INFO] [366(s)] [SerializingToString]
+[INFO] [367(s)] [SerializingToString]
+[INFO] [368(s)] [SerializingToString]
+[INFO] [369(s)] [SerializingToString]
+[INFO] [370(s)] [SerializingToString]
+[INFO] [371(s)] [SerializingToString]
+[INFO] [372(s)] [SerializingToString]
+[INFO] [373(s)] [SerializingToString]
+[INFO] [374(s)] [SerializingToString]
+[INFO] [375(s)] [SerializingToString]
+[INFO] [376(s)] [SerializingToString]
+[INFO] [377(s)] [SerializingToString]
+[INFO] [378(s)] [SerializingToString]
+[INFO] [379(s)] [SerializingToString]
+[INFO] [380(s)] [SerializingToString]
+[INFO] [381(s)] [SerializingToString]
+[INFO] [382(s)] [SerializingToString]
+[INFO] [383(s)] [SerializingToString]
+[INFO] [384(s)] [SerializingToString]
+[INFO] [385(s)] [SerializingToString]
+[INFO] [386(s)] [SerializingToString]
+[INFO] [387(s)] [SerializingToString]
+[INFO] [388(s)] [SerializingToString]
+[INFO] [389(s)] [SerializingToString]
+[INFO] [390(s)] [SerializingToString]
+[INFO] [391(s)] [SerializingToString]
+[INFO] [392(s)] [SerializingToString]
+[INFO] [393(s)] [SerializingToString]
+[INFO] [394(s)] [SerializingToString]
+[INFO] [395(s)] [SerializingToString]
+[INFO] [396(s)] [SerializingToString]
+[INFO] [397(s)] [SerializingToString]
+[INFO] [398(s)] [SerializingToString]
+[INFO] [399(s)] [SerializingToString]
+[INFO] [400(s)] [SerializingToString]
+[INFO] [401(s)] [SerializingToString]
+[INFO] [402(s)] [SerializingToString]
+[INFO] [403(s)] [SerializingToString]
+[INFO] [404(s)] [SerializingToString]
+[INFO] [405(s)] [SerializingToString]
+[INFO] [406(s)] [SerializingToString]
+[INFO] [407(s)] [SerializingToString]
+[INFO] [408(s)] [SerializingToString]
+[INFO] [409(s)] [SerializingToString]
+[INFO] [410(s)] [SerializingToString]
+[INFO] [411(s)] [SerializingToString]
+[INFO] [412(s)] [SerializingToString]
+[INFO] [413(s)] [SerializingToString]
+[INFO] [414(s)] [SerializingToString]
+[INFO] [415(s)] [SerializingToString]
+[INFO] [416(s)] [SerializingToString]
+[INFO] [417(s)] [SerializingToString]
+[INFO] [418(s)] [SerializingToString]
+[INFO] [419(s)] [SerializingToString]
+[INFO] [420(s)] [SerializingToString]
+[INFO] [421(s)] [SerializingToString]
+[INFO] [422(s)] [SerializingToString]
+[INFO] [423(s)] [SerializingToString]
+[INFO] [424(s)] [SerializingToString]
+[INFO] [425(s)] [SerializingToString]
+[INFO] [426(s)] [SerializingToString]
+[INFO] [427(s)] [SerializingToString]
+[INFO] [428(s)] [SerializingToString]
+[INFO] [429(s)] [SerializingToString]
+[INFO] [430(s)] [SerializingToString]
+[INFO] [431(s)] [SerializingToString]
+[INFO] [432(s)] [SerializingToString]
+[INFO] [433(s)] [SerializingToString]
+[INFO] [434(s)] [SerializingToString]
+[INFO] [435(s)] [SerializingToString]
+[INFO] [436(s)] [SerializingToString]
+[INFO] [437(s)] [SerializingToString]
+[INFO] [438(s)] [SerializingToString]
+[INFO] [439(s)] [SerializingToString]
+[INFO] [440(s)] [SerializingToString]
+[INFO] [441(s)] [SerializingToString]
+[INFO] [442(s)] [SerializingToString]
+[INFO] [443(s)] [SerializingToString]
+[INFO] [444(s)] [SerializingToString]
+[INFO] [445(s)] [SerializingToString]
+[INFO] [446(s)] [SerializingToString]
+[INFO] [447(s)] [SerializingToString]
+[INFO] [448(s)] [SerializingToString]
+[INFO] [449(s)] [SerializingToString]
+[INFO] [450(s)] [SerializingToString]
+[INFO] [451(s)] [SerializingToString]
+[INFO] [452(s)] [SerializingToString]
+[INFO] [453(s)] [SerializingToString]
+[INFO] [454(s)] [SerializingToString]
+[INFO] [455(s)] [SerializingToString]
+[INFO] [456(s)] [SerializingToString]
+[INFO] [457(s)] [SerializingToString]
+[INFO] [458(s)] [SerializingToString]
+[INFO] [459(s)] [SerializingToString]
+[INFO] [460(s)] [SerializingToString]
+[INFO] [461(s)] [SerializingToString]
+[INFO] [462(s)] [SerializingToString]
+[INFO] [463(s)] [SerializingToString]
+[INFO] [464(s)] [SerializingToString]
+[INFO] [465(s)] [SerializingToString]
+[INFO] [466(s)] [SerializingToString]
+[INFO] [467(s)] [SerializingToString]
+[INFO] [468(s)] [SerializingToString]
+[INFO] [469(s)] [SerializingToString]
+[INFO] [470(s)] [SerializingToString]
+[INFO] [471(s)] [SerializingToString]
+[INFO] [472(s)] [SerializingToString]
+[INFO] [473(s)] [SerializingToString]
+[INFO] [474(s)] [SerializingToString]
+[INFO] [475(s)] [SerializingToString]
+[INFO] [476(s)] [SerializingToString]
+[INFO] [477(s)] [SerializingToString]
+[INFO] [478(s)] [SerializingToString]
+[INFO] [479(s)] [SerializingToString]
+[INFO] [480(s)] [SerializingToString]
+[INFO] [480(s)] [SerializingToString]
+[INFO] [0(s)] Clearing engine
+[INFO] [0(s)] Clearing engine

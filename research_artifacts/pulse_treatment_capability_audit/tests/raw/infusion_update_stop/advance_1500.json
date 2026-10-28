@@ -1,0 +1,40 @@
+{
+  "SimulationTime": {
+    "ScalarTime": {
+      "Value": 29.99999999999945,
+      "Unit": "s"
+    }
+  },
+  "ActiveActions": {
+    "AnyAction": [
+      {
+        "PatientAction": {
+          "SubstanceInfusion": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "Substance": "Epinephrine",
+            "Concentration": {
+              "ScalarMassPerVolume": {
+                "Value": 1,
+                "Unit": "ug/mL"
+              }
+            },
+            "Rate": {
+              "ScalarVolumePerTime": {
+                "Value": 2,
+                "Unit": "mL/min"
+              }
+            },
+            "Volume": {
+              "ScalarVolume": {
+                "Value": 9.66666666666626,
+                "Unit": "mL"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

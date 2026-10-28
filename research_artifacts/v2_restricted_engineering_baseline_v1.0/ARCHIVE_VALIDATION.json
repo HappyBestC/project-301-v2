@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "date": "2026-10-13",
+  "preexisting_files_verified_unchanged": 66580,
+  "snapshot_files_verified": 133,
+  "prior_final_artifact_hashes_verified": 1676,
+  "registry_profiles_verified": 10,
+  "production_enabled": false,
+  "test_report_total_verified": 853,
+  "native_tests_rerun_for_archive": false,
+  "source_or_protocol_modifications": 0,
+  "manifest_policy": "ARCHIVE_SHA256.json covers every baseline file except itself; no claim of external digital signature."
+}

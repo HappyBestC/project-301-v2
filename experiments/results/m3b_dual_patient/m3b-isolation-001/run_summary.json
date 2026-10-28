@@ -1,0 +1,9 @@
+{
+  "run_id": "m3b-isolation-001",
+  "mode": "native_isolation_smoke",
+  "status": "BLOCKED",
+  "failure": {
+    "type": "AssertionError",
+    "message": ""
+  }
+}

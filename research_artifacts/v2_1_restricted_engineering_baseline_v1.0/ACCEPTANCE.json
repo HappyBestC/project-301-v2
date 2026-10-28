@@ -1,0 +1,34 @@
+{
+  "baseline_id": "301.v2_1.restricted.engineering.baseline.1",
+  "record_date": "2026-10-14",
+  "timezone": "Asia/Shanghai",
+  "authority": "用户在当前会话明确确认，原文见 USER_ACCEPTANCE.md",
+  "acceptance": "ACCEPTED",
+  "stage": "CLOSED",
+  "engineering_evidence_count": 5,
+  "restricted_runtime_admission_count": 5,
+  "admitted_bundle": "AB",
+  "production_enabled": false,
+  "tests_covered": 944,
+  "complete_branches": 45,
+  "partial_failed_attempts": 2,
+  "scope": [
+    "五类固定战场复合伤的机制共存",
+    "固定 AB 联合救助协议",
+    "Pulse 4.3.2 连续执行",
+    "合法 Observation、Journal、资源和时序门控",
+    "统一受限 Runtime 工程能力及四项固定研究风险处理"
+  ],
+  "exclusions": [
+    "临床安全认证或完全治愈",
+    "真实 LLM Agent 规划质量",
+    "其他参数、患者、时间窗或伤情组合",
+    "生产运行",
+    "整个 301 项目的最终验收"
+  ],
+  "admission_manifest": "research_artifacts/v2_1_battle_composite_injuries_v0.1/validation/admission_v2.json",
+  "branch_ledger": "research_artifacts/v2_1_battle_composite_injuries_v0.1/validation/branch_ledger_v2.json",
+  "historical_status_policy": "既有报告与准入证据中的 NOT_RECORDED/PENDING 或 stage_closed=false 保留生成时语义；本新基线登记之后的用户验收与阶段关闭，不修改旧证据。",
+  "closure_condition": "本次归档完成且只读完整性核验通过；结果见 ARCHIVE_VALIDATION.json 并可运行 verify.py 复核。",
+  "future_work": "LLM Agent 救助规划为独立新阶段，不扩大本次工程验收范围。"
+}

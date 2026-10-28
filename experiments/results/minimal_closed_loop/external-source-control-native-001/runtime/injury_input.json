@@ -1,0 +1,10 @@
+{
+  "patient_id": "external-source-control-native-001-patient",
+  "injuries": [
+    {
+      "injury_type": "external_hemorrhage",
+      "severity": 0.4,
+      "compartment": "RightLeg"
+    }
+  ]
+}

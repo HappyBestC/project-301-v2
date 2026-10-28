@@ -1,0 +1,165 @@
+# 冻结业务契约；不是全部区室/档位/时间窗的稳定性认证。
+version: 301.injury.frozen.v1
+pulse_version: 4.3.2
+allowed_severities:
+- 0.0
+- 0.2
+- 0.4
+- 0.6
+- 0.8
+- 1.0
+templates:
+  external_hemorrhage:
+    name_zh: 外出血
+    pulse_action: Hemorrhage
+    fixed:
+      Type: External
+    required_inputs:
+    - injury_type
+    - severity
+    - compartment
+    optional_inputs: []
+    input_enums:
+      compartment:
+      - Aorta
+      - Brain
+      - Muscle
+      - LargeIntestine
+      - LeftArm
+      - LeftKidney
+      - LeftLeg
+      - Liver
+      - RightArm
+      - RightKidney
+      - RightLeg
+      - Skin
+      - SmallIntestine
+      - Splanchnic
+      - Spleen
+      - VenaCava
+    identity_fields:
+    - compartment
+  abdominal_internal_hemorrhage:
+    name_zh: 腹腔内出血
+    pulse_action: Hemorrhage
+    fixed:
+      Type: Internal
+    required_inputs:
+    - injury_type
+    - severity
+    - compartment
+    optional_inputs: []
+    input_enums:
+      compartment:
+      - LeftKidney
+      - RightKidney
+      - Liver
+      - Spleen
+      - Splanchnic
+      - SmallIntestine
+      - LargeIntestine
+    identity_fields:
+    - compartment
+  open_pneumothorax:
+    name_zh: 开放型气胸
+    pulse_action: TensionPneumothorax
+    fixed:
+      Type: Open
+    required_inputs:
+    - injury_type
+    - severity
+    - side
+    optional_inputs: []
+    input_enums:
+      side:
+      - Left
+      - Right
+    identity_fields:
+    - side
+    - Type
+  closed_tension_pneumothorax:
+    name_zh: 闭合型张力性气胸
+    pulse_action: TensionPneumothorax
+    fixed:
+      Type: Closed
+    required_inputs:
+    - injury_type
+    - severity
+    - side
+    optional_inputs: []
+    input_enums:
+      side:
+      - Left
+      - Right
+    identity_fields:
+    - side
+    - Type
+  hemothorax:
+    name_zh: 血胸
+    pulse_action: Hemothorax
+    fixed: {}
+    required_inputs:
+    - injury_type
+    - severity
+    - side
+    optional_inputs: []
+    input_enums:
+      side:
+      - Left
+      - Right
+    identity_fields:
+    - side
+  traumatic_brain_injury:
+    name_zh: 创伤性脑损伤
+    pulse_action: BrainInjury
+    fixed:
+      Type: Diffuse
+    required_inputs:
+    - injury_type
+    - severity
+    optional_inputs: []
+    input_enums: {}
+    identity_fields: []
+  airway_obstruction:
+    name_zh: 气道阻塞
+    pulse_action: AirwayObstruction
+    fixed: {}
+    required_inputs:
+    - injury_type
+    - severity
+    optional_inputs: []
+    input_enums: {}
+    identity_fields: []
+  bronchoconstriction:
+    name_zh: 支气管收缩
+    pulse_action: Bronchoconstriction
+    fixed: {}
+    required_inputs:
+    - injury_type
+    - severity
+    optional_inputs: []
+    input_enums: {}
+    identity_fields: []
+  acute_lung_impairment_ards:
+    name_zh: ARDS 型急性肺功能损伤
+    pulse_action: AcuteRespiratoryDistressSyndromeExacerbation
+    fixed: {}
+    required_inputs:
+    - injury_type
+    - severity
+    optional_inputs: []
+    input_enums: {}
+    identity_fields: []
+    lung_compartments:
+    - LeftLung
+    - RightLung
+  respiratory_muscle_impairment:
+    name_zh: 呼吸肌功能减弱 / 疲劳
+    pulse_action: RespiratoryFatigue
+    fixed: {}
+    required_inputs:
+    - injury_type
+    - severity
+    optional_inputs: []
+    input_enums: {}
+    identity_fields: []

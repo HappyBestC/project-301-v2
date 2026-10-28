@@ -1,0 +1,98 @@
+{
+  "plan_id": "c0da951744ec428bbd1f5e03492048ac",
+  "request_id": "m3c1-fixed-b-offline-001-B-execute",
+  "patient_id": "m3c1-fixed-b-offline-001-B",
+  "run_id": "m3c1-fixed-b-offline-001",
+  "session_epoch": "c4e3656ce2df4ca999396d157815f4d3",
+  "context_ref": "28bd7a1d227e4adb86db9edfa91b8fbe",
+  "plan_sha256": "4dafa756d8007f54b0e3acd85a4470c680fef8a59de6d0f4468432fd5bc10a1d",
+  "plan": {
+    "patient_id": "m3c1-fixed-b-offline-001-B",
+    "actions": [
+      {
+        "action_type": "control_external_bleeding",
+        "compartment": "RightLeg"
+      }
+    ]
+  },
+  "protocol_version": "301.v2.phase1.research.1",
+  "production_enabled": false,
+  "status": "ACCEPTED_PENDING_ADVANCE",
+  "actions": [
+    {
+      "action_id": "09f22f65bc064a5a8541d5a3a6754604",
+      "action_index": 0,
+      "action_type": "control_external_bleeding",
+      "business_action": {
+        "action_type": "control_external_bleeding",
+        "compartment": "RightLeg"
+      },
+      "target": {
+        "patient_id": "m3c1-fixed-b-offline-001-B",
+        "injury_id": "d3873499721c4fe6b2ad0343d840db40",
+        "injury_type": "external_hemorrhage",
+        "native_identity": [
+          "Hemorrhage",
+          "RightLeg"
+        ],
+        "source_version": 1,
+        "compartment": "RightLeg"
+      },
+      "protocol_id": "control_external_bleeding.phase1.1",
+      "native_payload": {
+        "PatientAction": {
+          "Hemorrhage": {
+            "Type": "External",
+            "Compartment": "RightLeg",
+            "Severity": {
+              "Scalar0To1": {
+                "Value": 0
+              }
+            }
+          }
+        }
+      },
+      "proposed_time_s": 180.0,
+      "submitted_time_s": 180.0,
+      "accepted": true,
+      "state": "ACCEPTED",
+      "lifecycle": "PENDING_ADVANCE",
+      "native_result": {
+        "phase": "treatment",
+        "simulation_time_s": 180.0,
+        "accepted": true,
+        "FAKE": true
+      },
+      "error": null,
+      "validation": {
+        "schema": "passed",
+        "source": "passed",
+        "scope": "passed",
+        "resource": "passed"
+      },
+      "resource": {
+        "allocated_units": {},
+        "allocation_ids": [
+          "b67f77ea673f4e81b8de24aac10a9caf"
+        ],
+        "action_instance_id": "m3c1-fixed-b-offline-001-B-control",
+        "consumption": "no stock requirement for this research proxy",
+        "submission_status": "accepted",
+        "delivery_status": "pending_advance"
+      },
+      "device_state": null,
+      "physiological_response": "NOT_EVALUATED",
+      "evaluation": "NOT_RUN",
+      "already_applied_noop": false
+    }
+  ],
+  "error": null,
+  "resource_reservation": {
+    "authority_kind": "explicit_research_fixture",
+    "shared_plan_id": "m3c1-fixed-b-offline-001-B-plan",
+    "allocation_ids": [
+      "b67f77ea673f4e81b8de24aac10a9caf"
+    ],
+    "production_inventory": false
+  }
+}

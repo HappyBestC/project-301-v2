@@ -1,0 +1,12 @@
+{
+  "patient_id": "m3c2-timing-exploratory-001-B",
+  "plan_id": "m3c2-timing-exploratory-001-B-plan",
+  "state": "TREATMENT_COMPLETED",
+  "worker_pid": 597452,
+  "last_acknowledged_time_s": 479.9999999998534,
+  "observations": 301,
+  "treatment_count": 1,
+  "wait_start_s": 180.0,
+  "wait_end_s": 181.0,
+  "mode": "dual_native"
+}

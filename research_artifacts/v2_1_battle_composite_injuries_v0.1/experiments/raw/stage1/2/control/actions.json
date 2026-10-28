@@ -1,0 +1,48 @@
+[
+  {
+    "time_s": 60.00000000000378,
+    "phase": "injury",
+    "payload": {
+      "PatientAction": {
+        "Hemorrhage": {
+          "Type": "External",
+          "Compartment": "RightLeg",
+          "Severity": {
+            "Scalar0To1": {
+              "Value": 0.4
+            }
+          }
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "injury",
+      "index": 0,
+      "simulation_time_s": 60.00000000000378,
+      "accepted": true
+    }
+  },
+  {
+    "time_s": 60.00000000000378,
+    "phase": "injury",
+    "payload": {
+      "PatientAction": {
+        "RespiratoryFatigue": {
+          "Severity": {
+            "Scalar0To1": {
+              "Value": 0.4
+            }
+          }
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "injury",
+      "index": 0,
+      "simulation_time_s": 60.00000000000378,
+      "accepted": true
+    }
+  }
+]

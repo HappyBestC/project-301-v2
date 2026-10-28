@@ -1,0 +1,5 @@
+{
+  "script_sha256": "afbe40eb62dd8dd4848fa5288f570657c67a53eb4ce9c96190bf54d2f4671618",
+  "reason": "Preserve each accepted component pretreatment duration; no severity/dose changes",
+  "not_admitted": true
+}

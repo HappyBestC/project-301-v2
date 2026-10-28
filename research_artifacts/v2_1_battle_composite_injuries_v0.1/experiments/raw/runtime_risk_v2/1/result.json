@@ -1,0 +1,79 @@
+{
+  "pattern_id": "blunt_thoracoabdominal_composite_v2",
+  "status": "PASS",
+  "refusals": [
+    "INITIALIZATION_FORBIDDEN",
+    "UNSUPPORTED_RECOVERY",
+    "INCOMPLETE_WINDOW",
+    "PATIENT_OR_PATTERN_MISMATCH",
+    "STALE_CONTEXT",
+    "RESOURCE_UNAVAILABLE",
+    "IDEMPOTENCY_CONFLICT",
+    "OUTSIDE_WINDOW",
+    "UNREGISTERED_NATIVE_SOURCE",
+    "INITIALIZATION_FORBIDDEN"
+  ],
+  "real_llm_calls": 0,
+  "production_enabled": false,
+  "acceptance": {
+    "pattern_id": "blunt_thoracoabdominal_composite_v2",
+    "version": "301.v2_1.acceptance.2",
+    "mechanisms": {
+      "A": true,
+      "B": true
+    },
+    "safety": {
+      "passed": true,
+      "version": "301.v2_1.risk_gate.2",
+      "risk_acceptance_id": null,
+      "accepted_risk_exemptions": [],
+      "unreviewed_events": [],
+      "final_events": [],
+      "critical_veto": false,
+      "full_transition_match": true,
+      "approved_trajectory_match": {
+        "passed": true,
+        "precision": 1e-07,
+        "max_absolute_difference": 0,
+        "missing_seconds": [],
+        "problems": []
+      },
+      "numeric_review": {
+        "applicable": false,
+        "passed": true
+      },
+      "clinical_safety": "NOT_CERTIFIED",
+      "production_enabled": false,
+      "automatic_admission": false
+    },
+    "repeat": {
+      "passed": true,
+      "precision": 1e-07,
+      "max_absolute_difference": 0,
+      "missing_seconds": [],
+      "problems": []
+    },
+    "execution_confirmed": true,
+    "engineering_case_passed": true,
+    "formal_admission": "NOT_GRANTED_BY_CASE_RESULT",
+    "validation_only": true,
+    "production_enabled": false,
+    "clinical_safety": "NOT_EVALUATED"
+  },
+  "wall_seconds": 46.89489936828613,
+  "source_sha256": {
+    "src/core301/runtime/v2_1/__init__.py": "d7d662df13de76f7a29930e05c64cbc407e169ea5870a97e33ac50552a47950e",
+    "src/core301/runtime/v2_1/acceptance.py": "f5c8c693bd85a83ee0cbb98c65a414e9490851c77990190f27f8ad0932546c1a",
+    "src/core301/runtime/v2_1/acceptance_v2.py": "41c653647e27fc563fab60bfa391069aafcc26e6f7344d4e2613cebdc468583b",
+    "src/core301/runtime/v2_1/adapters.py": "dd7faf33d852ce17e81d813a2462385a3d2abe1450e91a489d35250896f11d4e",
+    "src/core301/runtime/v2_1/admission.py": "f59c1dc276c1ff02b3b72aae0fa2b7c9a653471d77aa82ca9d32b5aca3dee8ce",
+    "src/core301/runtime/v2_1/contracts.py": "cdbc673b0f0de8d9afc9d1cf40dbfd7dfbb01bdda42e064b77a6e24f4e48c46e",
+    "src/core301/runtime/v2_1/device_guard.py": "d632af6cf7f9d7a54dd133653b123d9a0628b1169bfbaed546cab8c5bf75159a",
+    "src/core301/runtime/v2_1/evidence.py": "ca444f6da5609ff7c7f4d1b4cbf8234548b4af6a41d1f2143ae39e316aad4f0b",
+    "src/core301/runtime/v2_1/native_backend.py": "9903bfb0d97839931b17c2a7b4744665932f1dde1fc1757a5c6680925f774b7b",
+    "src/core301/runtime/v2_1/registry.py": "bcedf38938b976122fcfa209d3a7749530ea83e3cc20a5b1457c0735a48da57a",
+    "src/core301/runtime/v2_1/resources.py": "e25c2937ecb06575d7c7f290234e7d0dd6e8590f23c16dc5279872d7da6825fb",
+    "src/core301/runtime/v2_1/risk_gate_v2.py": "291520c60fd2d7d6b54acf1e4600b3c7b972d5b0f987611b6cf58c644273b99b",
+    "src/core301/runtime/v2_1/runtime.py": "49b7ab29548d2e4cec74d801541a5ff50db839903ac96ef8aeb9c5c829fee7ff"
+  }
+}

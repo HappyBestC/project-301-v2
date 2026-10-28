@@ -1,0 +1,169 @@
+{
+  "DataRequest": [
+    {
+      "Category": "Physiology",
+      "PropertyName": "HeartRate",
+      "Unit": "1/min"
+    },
+    {
+      "Category": "Physiology",
+      "PropertyName": "RespirationRate",
+      "Unit": "1/min"
+    },
+    {
+      "Category": "Physiology",
+      "PropertyName": "PulseOximetry"
+    },
+    {
+      "Category": "Physiology",
+      "PropertyName": "SystolicArterialPressure",
+      "Unit": "mmHg"
+    },
+    {
+      "Category": "Physiology",
+      "PropertyName": "MeanArterialPressure",
+      "Unit": "mmHg"
+    },
+    {
+      "Category": "Physiology",
+      "PropertyName": "CardiacOutput",
+      "Unit": "L/min"
+    },
+    {
+      "Category": "Physiology",
+      "PropertyName": "TidalVolume",
+      "Unit": "mL"
+    },
+    {
+      "Category": "Physiology",
+      "PropertyName": "FractionOfInspiredOxygen"
+    },
+    {
+      "Category": "Substance",
+      "PropertyName": "BloodConcentration",
+      "Unit": "g/dL",
+      "SubstanceName": "Hemoglobin"
+    },
+    {
+      "Category": "Substance",
+      "PropertyName": "BloodConcentration",
+      "Unit": "mg/dL",
+      "SubstanceName": "Lactate"
+    },
+    {
+      "Category": "LiquidCompartment",
+      "PropertyName": "PartialPressure",
+      "Unit": "mmHg",
+      "CompartmentName": "Aorta",
+      "SubstanceName": "Oxygen"
+    },
+    {
+      "Category": "LiquidCompartment",
+      "PropertyName": "PartialPressure",
+      "Unit": "mmHg",
+      "CompartmentName": "Aorta",
+      "SubstanceName": "CarbonDioxide"
+    },
+    {
+      "Category": "Physiology",
+      "PropertyName": "BloodPH"
+    },
+    {
+      "Category": "Physiology",
+      "PropertyName": "BloodVolume",
+      "Unit": "mL"
+    },
+    {
+      "Category": "Physiology",
+      "PropertyName": "TotalHemorrhageRate",
+      "Unit": "mL/s"
+    },
+    {
+      "Category": "Physiology",
+      "PropertyName": "TotalHemorrhagedVolume",
+      "Unit": "mL"
+    },
+    {
+      "Category": "LiquidCompartment",
+      "CompartmentName": "AbdominalCavity",
+      "PropertyName": "Volume",
+      "Unit": "mL"
+    },
+    {
+      "Category": "LiquidCompartment",
+      "CompartmentName": "Aorta",
+      "SubstanceName": "CarbonMonoxide",
+      "PropertyName": "Saturation"
+    },
+    {
+      "Category": "LiquidCompartment",
+      "CompartmentName": "Aorta",
+      "SubstanceName": "Carboxyhemoglobin",
+      "PropertyName": "Concentration",
+      "Unit": "g/dL"
+    },
+    {
+      "Category": "Physiology",
+      "PropertyName": "OxygenSaturation"
+    },
+    {
+      "Category": "LiquidCompartment",
+      "CompartmentName": "Aorta",
+      "SubstanceName": "Sodium",
+      "PropertyName": "Molarity",
+      "Unit": "mEq/L"
+    },
+    {
+      "Category": "GasCompartment",
+      "CompartmentName": "Ambient",
+      "SubstanceName": "CarbonMonoxide",
+      "PropertyName": "VolumeFraction"
+    },
+    {
+      "Category": "GasCompartment",
+      "CompartmentName": "Ambient",
+      "SubstanceName": "Oxygen",
+      "PropertyName": "VolumeFraction"
+    },
+    {
+      "Category": "Physiology",
+      "PropertyName": "TotalFluidVolume",
+      "Unit": "mL"
+    },
+    {
+      "Category": "Physiology",
+      "PropertyName": "TotalAlveolarVentilation",
+      "Unit": "L/min"
+    },
+    {
+      "Category": "GasCompartment",
+      "CompartmentName": "LeftPleuralCavity",
+      "PropertyName": "Pressure",
+      "Unit": "cmH2O"
+    },
+    {
+      "Category": "GasCompartment",
+      "CompartmentName": "LeftPleuralCavity",
+      "PropertyName": "Volume",
+      "Unit": "mL"
+    },
+    {
+      "Category": "Action",
+      "ActionName": "LeftHemothorax",
+      "PropertyName": "TotalBloodVolume",
+      "Unit": "mL"
+    },
+    {
+      "Category": "Action",
+      "ActionName": "LeftTubeThoracostomy",
+      "PropertyName": "FlowRate",
+      "Unit": "mL/min"
+    },
+    {
+      "Category": "Action",
+      "ActionName": "LeftHemothorax",
+      "PropertyName": "FlowRate",
+      "Unit": "mL/s"
+    }
+  ]
+}

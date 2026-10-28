@@ -1,0 +1,281 @@
+{
+  "$defs": {
+    "Circulation": {
+      "additionalProperties": false,
+      "properties": {
+        "cardiac_output": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "title": "Circulation",
+      "type": "object"
+    },
+    "LaboratoryV2": {
+      "additionalProperties": false,
+      "properties": {
+        "hemoglobin_concentration": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "lactate_concentration": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "arterial_oxygen_pressure": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "arterial_carbon_dioxide_pressure": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "blood_ph": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "aorta_carboxyhemoglobin_concentration": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "aorta_sodium_concentration": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "title": "LaboratoryV2",
+      "type": "object"
+    },
+    "Measurement": {
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        },
+        "status": {
+          "enum": [
+            "available",
+            "unavailable"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "observed_at_s": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Observed At S"
+        }
+      },
+      "required": [
+        "value",
+        "status",
+        "observed_at_s"
+      ],
+      "title": "Measurement",
+      "type": "object"
+    },
+    "Respiratory": {
+      "additionalProperties": false,
+      "properties": {
+        "tidal_volume": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "inspired_oxygen_fraction": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "title": "Respiratory",
+      "type": "object"
+    },
+    "Vitals": {
+      "additionalProperties": false,
+      "properties": {
+        "heart_rate": {
+          "$ref": "#/$defs/Measurement"
+        },
+        "respiration_rate": {
+          "$ref": "#/$defs/Measurement"
+        },
+        "pulse_oximetry": {
+          "$ref": "#/$defs/Measurement"
+        },
+        "systolic_arterial_pressure": {
+          "$ref": "#/$defs/Measurement"
+        },
+        "mean_arterial_pressure": {
+          "$ref": "#/$defs/Measurement"
+        }
+      },
+      "required": [
+        "heart_rate",
+        "respiration_rate",
+        "pulse_oximetry",
+        "systolic_arterial_pressure",
+        "mean_arterial_pressure"
+      ],
+      "title": "Vitals",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "patient_id": {
+      "title": "Patient Id",
+      "type": "string"
+    },
+    "simulation_time_s": {
+      "minimum": 0,
+      "title": "Simulation Time S",
+      "type": "number"
+    },
+    "vitals": {
+      "$ref": "#/$defs/Vitals"
+    },
+    "circulation": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Circulation"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "respiratory": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Respiratory"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "laboratory": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/LaboratoryV2"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "patient_id",
+    "simulation_time_s",
+    "vitals"
+  ],
+  "title": "PatientObservationV2",
+  "type": "object",
+  "x-version": "301.patient_observation.candidate.v2.1",
+  "x-lifecycle": "CANDIDATE / REVIEW_REQUIRED / NOT_ACTIVATED",
+  "x-metric-units": {
+    "vitals.heart_rate": "1/min",
+    "vitals.respiration_rate": "1/min",
+    "vitals.pulse_oximetry": "1",
+    "vitals.systolic_arterial_pressure": "mmHg",
+    "vitals.mean_arterial_pressure": "mmHg",
+    "circulation.cardiac_output": "L/min",
+    "respiratory.tidal_volume": "mL",
+    "respiratory.inspired_oxygen_fraction": "1",
+    "laboratory.hemoglobin_concentration": "g/dL",
+    "laboratory.lactate_concentration": "mg/dL",
+    "laboratory.arterial_oxygen_pressure": "mmHg",
+    "laboratory.arterial_carbon_dioxide_pressure": "mmHg",
+    "laboratory.blood_ph": "1",
+    "laboratory.aorta_carboxyhemoglobin_concentration": "g/dL",
+    "laboratory.aorta_sodium_concentration": "mEq/L"
+  }
+}

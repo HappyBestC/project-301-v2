@@ -1,0 +1,136 @@
+{
+  "branch": "A",
+  "status": "COMPLETED",
+  "profile_version": "301.v2_1.thoracic.aligned_onsets.2",
+  "wall_seconds": 87.00628709793091,
+  "events": [
+    "Hypernatremia",
+    "Hypoxia",
+    "MinimalHemothorax",
+    "StartOfCardiacCycle",
+    "StartOfExhale",
+    "StartOfInhale",
+    "Tachycardia"
+  ],
+  "last": {
+    "time_s": 959.9999999994169,
+    "patient_id": "composite-patient",
+    "values": {
+      "vitals.heart_rate": 147.05478160837103,
+      "vitals.respiration_rate": 15.789473684210535,
+      "vitals.pulse_oximetry": 0.9212072267877082,
+      "vitals.systolic_arterial_pressure": 102.11235727762211,
+      "vitals.mean_arterial_pressure": 93.72654095487135,
+      "circulation.cardiac_output": 4.421025443338172,
+      "respiratory.tidal_volume": 498.76707597757223,
+      "respiratory.inspired_oxygen_fraction": 0.20999505711804944,
+      "laboratory.hemoglobin_concentration": 14.883724026581286,
+      "laboratory.lactate_concentration": 14.592284148724952,
+      "laboratory.arterial_oxygen_pressure": 57.31239984011583,
+      "laboratory.arterial_carbon_dioxide_pressure": 39.850002223203624,
+      "laboratory.blood_ph": 7.415163339415922
+    },
+    "diagnostics": {
+      "diagnostic.BloodVolume": 5477.427669678246,
+      "diagnostic.TotalHemorrhageRate": 0.0,
+      "diagnostic.TotalHemorrhagedVolume": 0.0,
+      "diagnostic.AbdominalCavityVolume": 10.0,
+      "aorta_co_saturation": 0.0,
+      "aorta_cohb_g_dL": 0.0,
+      "oxygen_saturation": 0.917212835107397,
+      "aorta_sodium_mEq_L": 145.25037766752854,
+      "ambient_co_fraction": 0.0,
+      "ambient_oxygen_fraction": 0.21,
+      "total_fluid_mL": 39604.50979688381,
+      "alveolar_ventilation_L_min": 7.875269620698511,
+      "left_pleural_pressure_cmH2O": 1030.6496271849867,
+      "left_pleural_volume_mL": 1742.027841553267,
+      "residual_blood_volume_mL": 41.665740740723415,
+      "tube_flow_mL_min": null,
+      "source_flow_mL_s": 0.0462962962962963
+    },
+    "events": {
+      "Hypernatremia": 116.09999999999404,
+      "Hypoxia": 305.9200000000117,
+      "MinimalHemothorax": 878.3799999994911,
+      "Tachycardia": 334.13999999998606
+    },
+    "observation": {
+      "patient_id": "composite-patient",
+      "simulation_time_s": 959.9999999994169,
+      "vitals": {
+        "heart_rate": {
+          "value": 147.05478160837103,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "respiration_rate": {
+          "value": 15.789473684210535,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "pulse_oximetry": {
+          "value": 0.9212072267877082,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "systolic_arterial_pressure": {
+          "value": 102.11235727762211,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "mean_arterial_pressure": {
+          "value": 93.72654095487135,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        }
+      },
+      "circulation": {
+        "cardiac_output": {
+          "value": 4.421025443338172,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        }
+      },
+      "respiratory": {
+        "tidal_volume": {
+          "value": 498.76707597757223,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "inspired_oxygen_fraction": {
+          "value": 0.20999505711804944,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        }
+      },
+      "laboratory": {
+        "hemoglobin_concentration": {
+          "value": 14.883724026581286,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "lactate_concentration": {
+          "value": 14.592284148724952,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "arterial_oxygen_pressure": {
+          "value": 57.31239984011583,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "arterial_carbon_dioxide_pressure": {
+          "value": 39.850002223203624,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "blood_ph": {
+          "value": 7.415163339415922,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "run_id": "m3a-real-agent-001",
+  "sha_files_checked": 38,
+  "frames": 301,
+  "tail_frames": 61,
+  "native_treatment_count": 1,
+  "evaluation_state": "NOT_EVALUABLE",
+  "evaluation_errors": [
+    "MANIFEST_PATIENT_INPUT"
+  ],
+  "resimulation": false,
+  "efficacy_rescoring": false,
+  "decision_provenance": "PASS",
+  "model_requested": "gpt-6-sol",
+  "model_reported": "gpt-6-sol",
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 612,
+    "total_tokens": 678,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "input_measurements": [
+    "vitals.heart_rate",
+    "vitals.respiration_rate",
+    "vitals.pulse_oximetry",
+    "vitals.systolic_arterial_pressure",
+    "vitals.mean_arterial_pressure"
+  ],
+  "decision_id": "m3a-real-agent-001-decision",
+  "action": {
+    "action_type": "control_external_bleeding",
+    "compartment": "RightLeg"
+  },
+  "scope_limitation": "Single candidate wiring validation; not complex planning or two real LLM agents"
+}

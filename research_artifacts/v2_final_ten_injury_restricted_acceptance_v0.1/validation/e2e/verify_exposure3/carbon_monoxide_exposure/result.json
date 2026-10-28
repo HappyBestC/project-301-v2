@@ -1,0 +1,473 @@
+{
+  "status": "PASS",
+  "refusals": [
+    "INCOMPLETE_FIXED_WINDOW",
+    "PATIENT_MISMATCH",
+    "CONTEXT_NOT_FOUND",
+    "UNSUPPORTED_RECOVERY",
+    "RESOURCE_UNAVAILABLE",
+    "IDEMPOTENCY_CONFLICT",
+    "UNVALIDATED_WINDOW",
+    "ACTION_REPLAY_BLOCKED",
+    "UNREGISTERED_NATIVE_SOURCE",
+    "RESTART_REQUIRES_RECOVERY"
+  ],
+  "kind": "carbon_monoxide_exposure",
+  "initial": {
+    "version": "301.v2.restricted.observation.1",
+    "injury_type": "carbon_monoxide_exposure",
+    "patient_id": "P",
+    "session_epoch": "b721c46da6b0416ea0e495de31fc4921",
+    "patient_observation": {
+      "patient_id": "P",
+      "simulation_time_s": 959.9999999994169,
+      "vitals": {
+        "heart_rate": {
+          "value": 70.58063864826099,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "respiration_rate": {
+          "value": 12.345679012345645,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "pulse_oximetry": {
+          "value": 0.9612378430064081,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "systolic_arterial_pressure": {
+          "value": 113.93106999514283,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "mean_arterial_pressure": {
+          "value": 94.67341059389014,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        }
+      },
+      "circulation": {
+        "cardiac_output": {
+          "value": 5.778530568622703,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        }
+      },
+      "respiratory": {
+        "tidal_volume": {
+          "value": 549.9117009941755,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "inspired_oxygen_fraction": {
+          "value": 0.20999808151962154,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        }
+      },
+      "laboratory": {
+        "hemoglobin_concentration": {
+          "value": 14.86030193768572,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "lactate_concentration": {
+          "value": 14.439620816648924,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "arterial_oxygen_pressure": {
+          "value": 97.13720348384102,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "arterial_carbon_dioxide_pressure": {
+          "value": 40.141663224739766,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "blood_ph": {
+          "value": 7.412280773116066,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        }
+      }
+    },
+    "specialty": {
+      "version": "301.v2.environment.observation.1",
+      "patient_id": "P",
+      "exposure_id": "E",
+      "session_epoch": "b721c46da6b0416ea0e495de31fc4921",
+      "simulation_time_s": 959.9999999994169,
+      "aorta_co_saturation": {
+        "value": 0.25562625422057533,
+        "status": "available",
+        "observed_at_s": 959.9999999994169
+      },
+      "aorta_cohb_g_dL": {
+        "value": 3.8079100140747215,
+        "status": "available",
+        "observed_at_s": 959.9999999994169
+      },
+      "oxygen_saturation": {
+        "value": 0.7038744425347357,
+        "status": "available",
+        "observed_at_s": 959.9999999994169
+      },
+      "aorta_sodium_mEq_L": {
+        "value": 145.18755232664566,
+        "status": "available",
+        "observed_at_s": 959.9999999994169
+      },
+      "ambient_co_fraction": {
+        "value": 0.005,
+        "status": "available",
+        "observed_at_s": 959.9999999994169
+      },
+      "ambient_oxygen_fraction": {
+        "value": 0.21,
+        "status": "available",
+        "observed_at_s": 959.9999999994169
+      },
+      "native_events": {
+        "Hypernatremia": 93.53999999999853
+      },
+      "provenance": "Pulse4.3.2.DataRequest+ActiveEvents",
+      "admission": "PENDING_RESEARCH_RULE_APPROVAL",
+      "clinical_efficacy": "NOT_EVALUATED"
+    },
+    "aorta_sodium_mEq_L": {
+      "value": 145.18755232664566,
+      "status": "available",
+      "observed_at_s": 959.9999999994169
+    },
+    "native_events": {
+      "Hypernatremia": 93.53999999999853
+    },
+    "production_enabled": false,
+    "clinical_efficacy": "NOT_EVALUATED"
+  },
+  "control": {
+    "version": "301.v2.restricted.observation.1",
+    "injury_type": "carbon_monoxide_exposure",
+    "patient_id": "P",
+    "session_epoch": "243c882a1d774f2887862ae23a886ad1",
+    "patient_observation": {
+      "patient_id": "P",
+      "simulation_time_s": 1859.9999999985985,
+      "vitals": {
+        "heart_rate": {
+          "value": 69.46981863944556,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "respiration_rate": {
+          "value": 12.345679012345645,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "pulse_oximetry": {
+          "value": 0.9498997101169192,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "systolic_arterial_pressure": {
+          "value": 114.99498629833397,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "mean_arterial_pressure": {
+          "value": 95.47124214387185,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        }
+      },
+      "circulation": {
+        "cardiac_output": {
+          "value": 5.760835016403084,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        }
+      },
+      "respiratory": {
+        "tidal_volume": {
+          "value": 551.0233989428568,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "inspired_oxygen_fraction": {
+          "value": 0.20999803663666608,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        }
+      },
+      "laboratory": {
+        "hemoglobin_concentration": {
+          "value": 14.75893045175471,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "lactate_concentration": {
+          "value": 14.236089169182799,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "arterial_oxygen_pressure": {
+          "value": 96.2860349239099,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "arterial_carbon_dioxide_pressure": {
+          "value": 40.034596001984106,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "blood_ph": {
+          "value": 7.413336526652228,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        }
+      }
+    },
+    "specialty": {
+      "version": "301.v2.environment.observation.1",
+      "patient_id": "P",
+      "exposure_id": "E",
+      "session_epoch": "243c882a1d774f2887862ae23a886ad1",
+      "simulation_time_s": 1859.9999999985985,
+      "aorta_co_saturation": {
+        "value": 0.35187763266144945,
+        "status": "available",
+        "observed_at_s": 1859.9999999985985
+      },
+      "aorta_cohb_g_dL": {
+        "value": 5.205833749417401,
+        "status": "available",
+        "observed_at_s": 1859.9999999985985
+      },
+      "oxygen_saturation": {
+        "value": 0.5971355479155558,
+        "status": "available",
+        "observed_at_s": 1859.9999999985985
+      },
+      "aorta_sodium_mEq_L": {
+        "value": 145.03220450007228,
+        "status": "available",
+        "observed_at_s": 1859.9999999985985
+      },
+      "ambient_co_fraction": {
+        "value": 0.005,
+        "status": "available",
+        "observed_at_s": 1859.9999999985985
+      },
+      "ambient_oxygen_fraction": {
+        "value": 0.21,
+        "status": "available",
+        "observed_at_s": 1859.9999999985985
+      },
+      "native_events": {
+        "Hypernatremia": 993.5399999993864
+      },
+      "provenance": "Pulse4.3.2.DataRequest+ActiveEvents",
+      "admission": "PENDING_RESEARCH_RULE_APPROVAL",
+      "clinical_efficacy": "NOT_EVALUATED"
+    },
+    "aorta_sodium_mEq_L": {
+      "value": 145.03220450007228,
+      "status": "available",
+      "observed_at_s": 1859.9999999985985
+    },
+    "native_events": {
+      "Hypernatremia": 993.5399999993864
+    },
+    "production_enabled": false,
+    "clinical_efficacy": "NOT_EVALUATED"
+  },
+  "treated": {
+    "version": "301.v2.restricted.observation.1",
+    "injury_type": "carbon_monoxide_exposure",
+    "patient_id": "P",
+    "session_epoch": "b721c46da6b0416ea0e495de31fc4921",
+    "patient_observation": {
+      "patient_id": "P",
+      "simulation_time_s": 1859.9999999985985,
+      "vitals": {
+        "heart_rate": {
+          "value": 69.48307720211224,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "respiration_rate": {
+          "value": 12.345679012345645,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "pulse_oximetry": {
+          "value": 0.9582044212833217,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "systolic_arterial_pressure": {
+          "value": 114.99292944418012,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "mean_arterial_pressure": {
+          "value": 95.4693131134963,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        }
+      },
+      "circulation": {
+        "cardiac_output": {
+          "value": 5.761922110244229,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        }
+      },
+      "respiratory": {
+        "tidal_volume": {
+          "value": 551.185878666273,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "inspired_oxygen_fraction": {
+          "value": 0.20999797609787202,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        }
+      },
+      "laboratory": {
+        "hemoglobin_concentration": {
+          "value": 14.758921845868928,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "lactate_concentration": {
+          "value": 14.25077155840975,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "arterial_oxygen_pressure": {
+          "value": 93.62490832435492,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "arterial_carbon_dioxide_pressure": {
+          "value": 39.87765472903732,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "blood_ph": {
+          "value": 7.4148891445528715,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        }
+      }
+    },
+    "specialty": {
+      "version": "301.v2.environment.observation.1",
+      "patient_id": "P",
+      "exposure_id": "E",
+      "session_epoch": "b721c46da6b0416ea0e495de31fc4921",
+      "simulation_time_s": 1859.9999999985985,
+      "aorta_co_saturation": {
+        "value": 0.22915084534887525,
+        "status": "available",
+        "observed_at_s": 1859.9999999985985
+      },
+      "aorta_cohb_g_dL": {
+        "value": 3.390159501332947,
+        "status": "available",
+        "observed_at_s": 1859.9999999985985
+      },
+      "oxygen_saturation": {
+        "value": 0.7290712222268124,
+        "status": "available",
+        "observed_at_s": 1859.9999999985985
+      },
+      "aorta_sodium_mEq_L": {
+        "value": 145.03224925650125,
+        "status": "available",
+        "observed_at_s": 1859.9999999985985
+      },
+      "ambient_co_fraction": {
+        "value": 0.0,
+        "status": "available",
+        "observed_at_s": 1859.9999999985985
+      },
+      "ambient_oxygen_fraction": {
+        "value": 0.21,
+        "status": "available",
+        "observed_at_s": 1859.9999999985985
+      },
+      "native_events": {
+        "Hypernatremia": 993.5399999993864
+      },
+      "provenance": "Pulse4.3.2.DataRequest+ActiveEvents",
+      "admission": "PENDING_RESEARCH_RULE_APPROVAL",
+      "clinical_efficacy": "NOT_EVALUATED"
+    },
+    "aorta_sodium_mEq_L": {
+      "value": 145.03224925650125,
+      "status": "available",
+      "observed_at_s": 1859.9999999985985
+    },
+    "native_events": {
+      "Hypernatremia": 993.5399999993864
+    },
+    "production_enabled": false,
+    "clinical_efficacy": "NOT_EVALUATED"
+  },
+  "acceptance": {
+    "version": "301.v2.restricted.acceptance.1",
+    "injury_type": "carbon_monoxide_exposure",
+    "profile": "301.v2.co.removal.restricted.1",
+    "route_admission": "PENDING",
+    "mechanism": {
+      "passed": true,
+      "version": "301.v2.restricted.acceptance.1",
+      "clinical_cure": false
+    },
+    "safety": {
+      "passed": true,
+      "reasons": [],
+      "all_event_names": [
+        "Hypernatremia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale"
+      ],
+      "final_events": [
+        "Hypernatremia"
+      ],
+      "accepted_risk_events": [
+        "Hypernatremia"
+      ],
+      "risk_conformance": {
+        "passed": true,
+        "risk_acceptance_id": "301.v2.limited_research_risk_acceptance.2026-10-13.1",
+        "precision": 1e-07,
+        "meaning": "deterministic evidence conformance, not clinical threshold",
+        "max_absolute_difference": 0.0,
+        "missing_seconds": [],
+        "failures": [],
+        "samples": 1861,
+        "accepted_event": "Hypernatremia",
+        "clinical_safety_certification": false
+      },
+      "scope": "fixed engineering window only; no clinical certification"
+    },
+    "execution_confirmed": true,
+    "engineering_case_passed": true,
+    "restricted_case_passed": false,
+    "validation_only": true,
+    "production_enabled": false,
+    "clinical_efficacy": "NOT_EVALUATED",
+    "user_final_acceptance": "NOT_RECORDED",
+    "control_run": "control"
+  },
+  "post_endpoint_source_fault_refused": true
+}

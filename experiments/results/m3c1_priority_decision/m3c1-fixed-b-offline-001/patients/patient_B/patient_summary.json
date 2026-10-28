@@ -1,0 +1,12 @@
+{
+  "patient_id": "m3c1-fixed-b-offline-001-B",
+  "plan_id": "m3c1-fixed-b-offline-001-B-plan",
+  "state": "TREATMENT_COMPLETED",
+  "worker_pid": null,
+  "last_acknowledged_time_s": 480.0,
+  "observations": 301,
+  "treatment_count": 1,
+  "wait_start_s": null,
+  "wait_end_s": null,
+  "mode": "offline_test"
+}

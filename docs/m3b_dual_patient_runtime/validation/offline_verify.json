@@ -1,0 +1,21 @@
+{
+  "status": "PASS_OFFLINE_ONLY",
+  "run_id": "m3b-offline-001",
+  "sha_files_checked": 44,
+  "worker_pids": [
+    null,
+    null
+  ],
+  "frames_per_patient": 301,
+  "treatment_counts": {
+    "A": 1,
+    "B": 0
+  },
+  "conflict_code": "RESOURCE_IN_USE",
+  "waiting_duration_s": 1.0,
+  "waiting_status": "WAITING_NOT_VERIFIED",
+  "overall_status": "M3B_IMPLEMENTED_NATIVE_UNVERIFIED",
+  "B_later_treatment": "UNVALIDATED_TIMING",
+  "resimulation": false,
+  "llm_calls": 0
+}

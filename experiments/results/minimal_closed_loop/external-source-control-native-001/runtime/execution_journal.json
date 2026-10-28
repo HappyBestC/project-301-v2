@@ -1,0 +1,9 @@
+{
+  "version": "301.v2.execution.phase1.1",
+  "run_id": "external-source-control-native-001",
+  "patient_id": "external-source-control-native-001-patient",
+  "session_epoch": "5a0f52d18c8f4c93806df92123240c73",
+  "production_enabled": false,
+  "plans": {},
+  "events": []
+}

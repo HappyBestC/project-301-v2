@@ -1,0 +1,80 @@
+{
+  "pattern_id": "blast_hemorrhage_respiratory_composite_v2",
+  "name_cn": "爆炸致出血与呼吸功能障碍",
+  "scene_description": "人为组合爆炸后果代理，不模拟冲击波，也不声称必然产生呼吸肌受损。",
+  "baseline_reference": "301.v2.restricted.engineering.baseline.1",
+  "profile_version": "301.v2_1.composite.candidate.1",
+  "component_injuries": [
+    {
+      "injury_type": "external_hemorrhage",
+      "severity": 0.4,
+      "compartment": "RightLeg"
+    },
+    {
+      "injury_type": "respiratory_muscle_impairment",
+      "severity": 0.4
+    }
+  ],
+  "severity_or_condition_parameters": [
+    {
+      "injury_type": "external_hemorrhage",
+      "severity": 0.4,
+      "compartment": "RightLeg"
+    },
+    {
+      "injury_type": "respiratory_muscle_impairment",
+      "severity": 0.4
+    }
+  ],
+  "side_or_compartment": [
+    {
+      "compartment": "RightLeg"
+    },
+    {}
+  ],
+  "environment_profile": null,
+  "initialization_order": [
+    "StandardMale with Dehydration Condition if present",
+    "advance 60 s",
+    "apply dynamic injuries in component order and environment once",
+    "advance to common decision time"
+  ],
+  "treatment_bundles": {
+    "A": [
+      "control_external_bleeding",
+      "fluid_resuscitation"
+    ],
+    "B": [
+      "intubation",
+      "mechanical_ventilation"
+    ]
+  },
+  "treatment_dependencies": [
+    "source control precedes fluid",
+    "hemothorax control precedes tube",
+    "intubation precedes ventilation",
+    "native actions separated by one .02 s tick"
+  ],
+  "resource_requirements": "V2 COSTS plus audited hemothorax/exposure resources; explicit host grant required",
+  "observation_requirements": [
+    "13 V2 public fields",
+    "native events",
+    "Aorta sodium",
+    "component native diagnostics"
+  ],
+  "simulation_timeline": {
+    "initialization_s": 0,
+    "dynamic_onset_s": 60,
+    "decision_s": 180,
+    "end_s": 480,
+    "action_step_s": 0.02
+  },
+  "known_limitations": [
+    "人为组合爆炸后果代理，不模拟冲击波，也不声称必然产生呼吸肌受损。",
+    "No V2 single-injury safety exemptions inherited",
+    "All branches independently initialize, no state restoration",
+    "Combination-level timing is new, no claim of preserving both single-injury timelines"
+  ],
+  "validation_status": "CONFIGURED",
+  "production_enabled": false
+}

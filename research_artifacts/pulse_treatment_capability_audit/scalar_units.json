@@ -1,0 +1,310 @@
+{
+  "ScalarHeatConductancePerArea": [
+    "W/m^2 K",
+    "W/m^2 degC",
+    "BTU/hr ft^2 degC"
+  ],
+  "ScalarPressureTimePerVolume": [
+    "cmH2O s/L",
+    "cmH2O s/mL",
+    "mmHg s/mL",
+    "mmHg min/mL",
+    "mmHg min/L",
+    "Pa s/m^3"
+  ],
+  "ScalarElectricCapacitance": [
+    "F"
+  ],
+  "ScalarLengthPerTime": [
+    "m/s",
+    "cm/s",
+    "m/min",
+    "cm/min",
+    "ft/s",
+    "ft/min",
+    "km/hr"
+  ],
+  "ScalarVolumePerTimePressureArea": [
+    "mL/min mmHg m^2",
+    "mL/s mmHg m^2"
+  ],
+  "ScalarHeatCapacitancePerAmount": [
+    "J/K mol"
+  ],
+  "ScalarVolumePerTimeMass": [
+    "L/s g",
+    "mL / s g",
+    "mL/min kg",
+    "mL/s kg",
+    "uL/min kg"
+  ],
+  "ScalarPressureTimeSquaredPerVolume": [
+    "mmHg s^2/mL",
+    "mmHg s^2/L",
+    "cmH2O s^2/mL",
+    "cmH2O s^2/L",
+    "Pa s^2/m^3"
+  ],
+  "ScalarInverseVolume": [
+    "1/L",
+    "1/mL"
+  ],
+  "ScalarTemperature": [
+    "degF",
+    "degC",
+    "K",
+    "degR"
+  ],
+  "ScalarMass": [
+    "g",
+    "ug",
+    "mg",
+    "kg",
+    "lb"
+  ],
+  "ScalarOsmolarity": [
+    "Osm/L",
+    "mOsm/L"
+  ],
+  "ScalarArea": [
+    "cm^2",
+    "m^2"
+  ],
+  "ScalarPressureTimePerArea": [
+    "mmHg/mL m^2",
+    "cmH2O/mL m^2"
+  ],
+  "ScalarElectricPotential": [
+    "V",
+    "mV"
+  ],
+  "ScalarHeatCapacitance": [
+    "J/K",
+    "kJ/K",
+    "kcal/K",
+    "kcal/degC"
+  ],
+  "ScalarHeatCapacitancePerMass": [
+    "J/K kg",
+    "kJ/K kg",
+    "kcal/K kg",
+    "kcal/degC kg"
+  ],
+  "ScalarLength": [
+    "m",
+    "cm",
+    "mm",
+    "um",
+    "in",
+    "ft"
+  ],
+  "ScalarPowerPerAreaTemperatureToTheFourth": [
+    "W/ m^2 K^4"
+  ],
+  "ScalarFrequency": [
+    "1/min",
+    "1/s",
+    "Hz"
+  ],
+  "ScalarHeatResistanceArea": [
+    "rsi",
+    "clo",
+    "rValue",
+    "tog"
+  ],
+  "ScalarHeatInductance": [
+    "K s/W"
+  ],
+  "ScalarMassPerTime": [
+    "g/s",
+    "g/min",
+    "g/day",
+    "mg/s",
+    "mg/min",
+    "ug/s",
+    "kg/s",
+    "ug/min"
+  ],
+  "ScalarVolumePerTimeArea": [
+    "mL/min m^2",
+    "mL/s m^2",
+    "L/min m^2"
+  ],
+  "ScalarPower": [
+    "W",
+    "kcal/s",
+    "kcal/hr",
+    "kcal/day",
+    "J/s",
+    "BTU/hr"
+  ],
+  "ScalarPressure": [
+    "Pa",
+    "mmHg",
+    "cmH2O",
+    "psi",
+    "atm",
+    "mbar"
+  ],
+  "ScalarVolumePerPressure": [
+    "L/Pa",
+    "L/cmH2O",
+    "mL/cmH2O",
+    "m^3/Pa",
+    "mL/mmHg"
+  ],
+  "ScalarEnergyPerAmount": [
+    "kcal/mol",
+    "kJ/mol"
+  ],
+  "ScalarAreaPerTimePressure": [
+    "m^2/s mmHg",
+    "cm^2/s mmHg",
+    "m^2/min mmHg",
+    "cm^2/min mmHg"
+  ],
+  "ScalarHeatResistance": [
+    "K/W",
+    "degC/W",
+    "K s/kcal",
+    "degC s/kcal"
+  ],
+  "ScalarElectricCharge": [
+    "C"
+  ],
+  "ScalarEquivalentWeightPerVolume": [
+    "Eq/L",
+    "Eq/mL",
+    "mEq/L",
+    "mEq/mL"
+  ],
+  "ScalarEnergy": [
+    "J",
+    "mJ",
+    "kJ",
+    "kcal"
+  ],
+  "ScalarOsmolality": [
+    "Osm/kg",
+    "mOsm/kg"
+  ],
+  "ScalarElectricInductance": [
+    "H"
+  ],
+  "ScalarTime": [
+    "s",
+    "min",
+    "hr",
+    "day",
+    "yr"
+  ],
+  "ScalarForce": [
+    "N",
+    "lbf",
+    "dyn"
+  ],
+  "ScalarElectricResistance": [
+    "ohm"
+  ],
+  "ScalarPressureTimePerVolumeArea": [
+    "mmHg min/mL m^2",
+    "mmHg s/mL m^2",
+    "dyn s/cm^5 m^2"
+  ],
+  "ScalarMassPerMass": [
+    "ug/kg",
+    "mg/g"
+  ],
+  "ScalarVolume": [
+    "L",
+    "dL",
+    "mL",
+    "uL",
+    "m^3"
+  ],
+  "ScalarMassPerVolume": [
+    "g/dL",
+    "g/cm^3",
+    "g/m^3",
+    "ug/mL",
+    "mg/m^3",
+    "kg/m^3",
+    "ug/L",
+    "g/L",
+    "g/mL",
+    "mg/mL",
+    "mg/L",
+    "mg/dL",
+    "kg/mL",
+    "kg/L"
+  ],
+  "ScalarHeatConductance": [
+    "W/K",
+    "W/degC",
+    "kcal/K s",
+    "kcal/degC s"
+  ],
+  "ScalarElectricCurrent": [
+    "A"
+  ],
+  "ScalarVolumePerTimePressure": [
+    "L/s mmHg",
+    "mL/s mmHg",
+    "L/min mmHg",
+    "mL/min mmHg"
+  ],
+  "ScalarPressurePerVolume": [
+    "mmHg/mL",
+    "cmH2O/mL",
+    "cmH2O/L"
+  ],
+  "ScalarMassPerAmount": [
+    "g/ct",
+    "g/mol",
+    "g/mmol",
+    "g/umol",
+    "mg/mol",
+    "mg/mmol",
+    "kg/mol",
+    "ug/mmol",
+    "ug/mol",
+    "ug/ct",
+    "pg/ct"
+  ],
+  "ScalarAmount": [
+    "mol",
+    "pmol"
+  ],
+  "ScalarLengthPerTimePressure": [
+    "m/s mmHg",
+    "cm/s mmHg",
+    "m/min mmHg",
+    "cm/min mmHg"
+  ],
+  "ScalarInversePressure": [
+    "1/Pa",
+    "1/mmHg",
+    "1/cmH2O",
+    "1/atm"
+  ],
+  "ScalarMassPerAreaTime": [
+    "g/cm^2 s"
+  ],
+  "ScalarEnergyPerMass": [
+    "J/kg",
+    "kJ/kg",
+    "mJ/kg",
+    "kcal/kg"
+  ],
+  "ScalarVolumePerTime": [
+    "L/s",
+    "mL/s",
+    "mL/day",
+    "L/day",
+    "L/hr",
+    "L/min",
+    "m^3/s",
+    "mL/min",
+    "mL/hr"
+  ]
+}

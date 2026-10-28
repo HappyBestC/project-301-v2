@@ -1,0 +1,1 @@
+{"FAKE": true, "patient_id": "m3c1-fixed-b-offline-001-B", "time_s": 180.0, "actions": {"Hemorrhage": [{"Type": "External", "Compartment": "RightLeg", "Severity": {"Scalar0To1": {"Value": 0.4}}}]}, "airway_mode": "Free", "intubation": "Off", "diagnostics": {"diagnostic.TotalHemorrhageRate": 1.0, "diagnostic.TotalHemorrhagedVolume": 180.0, "diagnostic.BloodVolume": 5000.0}}

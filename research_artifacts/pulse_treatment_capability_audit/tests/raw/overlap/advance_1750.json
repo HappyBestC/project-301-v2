@@ -1,0 +1,57 @@
+{
+  "AirwayMode": "NasalCannula",
+  "SimulationTime": {
+    "ScalarTime": {
+      "Value": 34.99999999999987,
+      "Unit": "s"
+    }
+  },
+  "ActiveActions": {
+    "AnyAction": [
+      {
+        "PatientAction": {
+          "SupplementalOxygen": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "Device": "NasalCannula",
+            "Flow": {
+              "ScalarVolumePerTime": {
+                "Value": 3,
+                "Unit": "L/min"
+              }
+            },
+            "Volume": {
+              "ScalarVolume": {
+                "Value": 99.24999999999642,
+                "Unit": "L"
+              }
+            }
+          }
+        }
+      },
+      {
+        "PatientAction": {
+          "SubstanceCompoundInfusion": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "SubstanceCompound": "Saline",
+            "BagVolume": {
+              "ScalarVolume": {
+                "Value": 214.9999999999821,
+                "Unit": "mL"
+              }
+            },
+            "Rate": {
+              "ScalarVolumePerTime": {
+                "Value": 60,
+                "Unit": "mL/min"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

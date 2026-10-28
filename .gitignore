@@ -1,0 +1,23 @@
+# Local Python environment and generated caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Local credentials; keep the empty configuration template
+.env
+.env.*
+!.env.example
+
+# Local runs, build products and the separately installed Pulse runtime
+/runs/
+/build/
+/dist/
+/pulse
+
+# Local editor and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

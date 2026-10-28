@@ -1,0 +1,1 @@
+{"module": "/home/private/project-301-v2/pulse/bin/PyPulse.cpython-311-x86_64-linux-gnu.so", "time_s": 0.0, "requested_fields": ["vitals.heart_rate", "vitals.respiration_rate", "vitals.pulse_oximetry", "vitals.systolic_arterial_pressure", "vitals.mean_arterial_pressure"], "experiment": false}

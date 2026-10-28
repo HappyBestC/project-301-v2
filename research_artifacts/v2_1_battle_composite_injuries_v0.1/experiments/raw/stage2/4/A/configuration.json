@@ -1,0 +1,75 @@
+{
+  "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+  "name_cn": "密闭空间受困复合伤",
+  "scene_description": "受困前或期间已存在脱水，另有低氧暴露；不声称短时低氧自动造成脱水。",
+  "baseline_reference": "301.v2.restricted.engineering.baseline.1",
+  "profile_version": "301.v2_1.composite.candidate.1",
+  "component_injuries": [
+    {
+      "injury_type": "environmental_hypoxia"
+    },
+    {
+      "injury_type": "dehydration",
+      "severity": 0.4
+    }
+  ],
+  "severity_or_condition_parameters": [
+    {
+      "injury_type": "environmental_hypoxia"
+    },
+    {
+      "injury_type": "dehydration",
+      "severity": 0.4
+    }
+  ],
+  "side_or_compartment": [
+    {},
+    {}
+  ],
+  "environment_profile": {
+    "co": 0,
+    "oxygen": 0.12
+  },
+  "initialization_order": [
+    "StandardMale with Dehydration Condition if present",
+    "advance 60 s",
+    "apply dynamic injuries in component order and environment once",
+    "advance to common decision time"
+  ],
+  "treatment_bundles": {
+    "A": [
+      "remove_from_exposure"
+    ],
+    "B": [
+      "fluid_resuscitation"
+    ]
+  },
+  "treatment_dependencies": [
+    "source control precedes fluid",
+    "hemothorax control precedes tube",
+    "intubation precedes ventilation",
+    "native actions separated by one .02 s tick"
+  ],
+  "resource_requirements": "V2 COSTS plus audited hemothorax/exposure resources; explicit host grant required",
+  "observation_requirements": [
+    "13 V2 public fields",
+    "native events",
+    "Aorta sodium",
+    "component native diagnostics"
+  ],
+  "simulation_timeline": {
+    "initialization_s": 0,
+    "dynamic_onset_s": 60,
+    "decision_s": 360,
+    "end_s": 660,
+    "action_step_s": 0.02
+  },
+  "known_limitations": [
+    "受困前或期间已存在脱水，另有低氧暴露；不声称短时低氧自动造成脱水。",
+    "No V2 single-injury safety exemptions inherited",
+    "All branches independently initialize, no state restoration",
+    "Combination-level timing is new, no claim of preserving both single-injury timelines"
+  ],
+  "validation_status": "CONFIGURED",
+  "production_enabled": false
+}

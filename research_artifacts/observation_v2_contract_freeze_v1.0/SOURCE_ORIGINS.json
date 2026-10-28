@@ -1,0 +1,1484 @@
+[
+  {
+    "archive_path": "evidence/candidate/COMPOSITE_COVERAGE.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/COMPOSITE_COVERAGE.md",
+    "sha256": "c7b711e8415279b8cc3c7234e804fb28306011e4d5a2718933a9f1cd176433f7",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/EVALUATION_OBSERVATION_V2.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/EVALUATION_OBSERVATION_V2.md",
+    "sha256": "f0b21bf6b0fb4862de9f855cd117ee12bcf55e9f85a6e4ce1669fdae775a95f7",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/METRIC_SOURCE_AUDIT.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/METRIC_SOURCE_AUDIT.md",
+    "sha256": "b0900ecdc67098577392213cfa0c62bec349b19f608048042d0de2292f7fa9d5",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/PATIENT_OBSERVATION_V2.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/PATIENT_OBSERVATION_V2.md",
+    "sha256": "7c4ff94e418f4399065c31f056622acfcad82944dfa35569f26c5f88330d6fb2",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/README.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/README.md",
+    "sha256": "ca2281b694b7ee33a2e5b158813877433c6530ef1a5a0b0072b3ccb0829341cc",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/REVIEW_REQUIRED.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/REVIEW_REQUIRED.md",
+    "sha256": "13354dbd7b6743c874cbc62a3ee3b55358d2e59a88a38652dd18c6dac2f8f2fe",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/TASK_REQUEST.txt",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/TASK_REQUEST.txt",
+    "sha256": "25bb368037e3b24df11ec3c7f829c68816223b8864cad9042f98706d57edd615",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/TEN_INJURY_METRIC_MAPPING.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/TEN_INJURY_METRIC_MAPPING.md",
+    "sha256": "2440e04306a93488ab5606d2480c84a435e781b27dffbbffa152bdbedcde5f95",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/VALIDATION_REPORT.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/VALIDATION_REPORT.md",
+    "sha256": "d65fc9c991cb1eaf7e661c512bf66abaf055bc73e1ea53370586126c19de6695",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/B1_ARTIFACTS_SHA256.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/B1_ARTIFACTS_SHA256.json",
+    "sha256": "c69b7ce0f5d38bfe85b3f2c57947bdf36a4fad270588b0fcdd31b4642dabde93",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/B1_FIX_REPORT.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/B1_FIX_REPORT.md",
+    "sha256": "2a59a447f2066a950900993ffdebcdab228c0a1641b1c35f41a9b26da1fa356b",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/B1_FREEZE_READINESS.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/B1_FREEZE_READINESS.md",
+    "sha256": "adbdb7dc4b954b58db826f3a785eb16a623c595ee225100d7270bb9848a53ae9",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/B1_TEST_RESULTS.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/B1_TEST_RESULTS.md",
+    "sha256": "be16407c6c77f8760c916a42562115980d3955eb3576eaa97ba2912617f607ca",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/HISTORICAL_COMPATIBILITY_DECISION.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/HISTORICAL_COMPATIBILITY_DECISION.md",
+    "sha256": "0d4d51e9a3651da18df609e721501d33664d61d85ec93c00d288e8f07259b706",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/audit_duplicate_frames.py",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/audit_duplicate_frames.py",
+    "sha256": "45379bfbfe89b3bf4f56a1c93dfe259bb67e8d0dd45715248c3fb16d5d5f37bf",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/audit_time.py",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/audit_time.py",
+    "sha256": "7611e85945813e8307da13647cb24f6f38f91959b4d3475109f5ca50e50cc3a5",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/authorized_changes_sha256.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/authorized_changes_sha256.json",
+    "sha256": "6594caec8d144744ba1c00aec4235e085ffb738da717a4e07ada40a80e34f026",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/b1_and_original_probes.log",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/b1_and_original_probes.log",
+    "sha256": "ca81475241dc0da476d53a0355a7b5a757df5b9defa9bf3ee6aecbcfa935937f",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/b1_and_original_probes.xml",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/b1_and_original_probes.xml",
+    "sha256": "e5533e620a6a3eafc9615285325cd88ec18557ed3c47f206a831a85c41f1ad5f",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/b1_changes.diff",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/b1_changes.diff",
+    "sha256": "d6e992df8118e4cbe81c76481b646244347f48a315c8e21c0700786458f4cc30",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/b1_final.log",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/b1_final.log",
+    "sha256": "b69ba7a9c90526c160d2901b58d90267ace427c9bbdab185df66a06d9fa05f1d",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/b1_final.xml",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/b1_final.xml",
+    "sha256": "2f043a0f3f79d24111e412882af70d442c3baa0fecb8618301ce8befc2c04afe",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/baseline_integrity.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/baseline_integrity.json",
+    "sha256": "c22d671b6fe54b11533d1d5d6a17da2ecc2f2336ede912de420636e1583e7b98",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/baseline_integrity_final.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/baseline_integrity_final.json",
+    "sha256": "c22d671b6fe54b11533d1d5d6a17da2ecc2f2336ede912de420636e1583e7b98",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/before/research_artifacts/patient_observation_v2_candidate_v0.1/EVALUATION_OBSERVATION_V2.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/before/research_artifacts/patient_observation_v2_candidate_v0.1/EVALUATION_OBSERVATION_V2.md",
+    "sha256": "10e7d4d30928423ea526ffd259f8976121d624e432805d52bd2752d81e85cff3",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/before/src/core301/observation_candidate_v2/models.py",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/before/src/core301/observation_candidate_v2/models.py",
+    "sha256": "b4051b8ed1f6ff2ad54d2241dd256b5e415898e71e4d82c69be01c03c1d6523a",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/before/src/core301/observation_candidate_v2/replay.py",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/before/src/core301/observation_candidate_v2/replay.py",
+    "sha256": "846ef3b0cdff220658a7a4d469f5228203a131a0f39ecf997c88580d140b67a8",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/before_sha256.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/before_sha256.json",
+    "sha256": "2cf8fd87454dbcb6ec45345fedb4927b67acde779b7cc89877f8e11fd156fe73",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/candidate_before.log",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/candidate_before.log",
+    "sha256": "b8226a7bd6648b51eca6507e483f6730e30a93247d449bc37fde71230fd49724",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/candidate_overlay_integrity.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/candidate_overlay_integrity.json",
+    "sha256": "2ac687882f85fea99eaa36c01a475cdc421e5ce956e7707b713544b504a4a893",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/duplicate_frames.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/duplicate_frames.json",
+    "sha256": "01033b0b93cb510f02ae3213a8a99e3ca94d07df352a3638fc4da9b8987ae202",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/final_summary.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/final_summary.json",
+    "sha256": "7fb23f775407cf613f52b1c255098844197ee8c46feeae1d86b2314e3cd6ff93",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/historical_time_audit.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/historical_time_audit.json",
+    "sha256": "674c71e0acca3d359a7c160515dbb23332e9b84e25915d90651fc09fcf6a5048",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/historical_time_audit.log",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/historical_time_audit.log",
+    "sha256": "9de6f9a02874657910d659afc888713e9a5fae1310814d7c4c2cf30650d4227b",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/normalization_audit.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/normalization_audit.json",
+    "sha256": "dae7621627e3c7dab657b5cd41014aafd400dee68de8358182b3c7299b8b7b6b",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/pre_adapter_reports/B1_FIX_REPORT.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/pre_adapter_reports/B1_FIX_REPORT.md",
+    "sha256": "7a709d252cff0bbff7daf74697a265c70c87571d59f03ffaa903657921f4c0b8",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/pre_adapter_reports/B1_FREEZE_READINESS.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/pre_adapter_reports/B1_FREEZE_READINESS.md",
+    "sha256": "854a8460f348a88980e620fc6a11e2e83670f4b661989f4c6ef731447de9775d",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/pre_adapter_reports/B1_TEST_RESULTS.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/pre_adapter_reports/B1_TEST_RESULTS.md",
+    "sha256": "dc98617ba912c588816d4a18d579d943023b6f6529b7eeaca878681ddef75145",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/raw_event_order.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/raw_event_order.json",
+    "sha256": "fb00fc695e28ce83401c862658edf2d2dbfdf1a07481b96000fd7bcb6d7fc5a7",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/recheck_history.py",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/recheck_history.py",
+    "sha256": "a43df6b4185b05aa0bd3489c3fd0699ef4d407ac972bd20281f9efad7f931a67",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/regression_before_adapter.log",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/regression_before_adapter.log",
+    "sha256": "a85a4e9082113b7216547ca0421d51028d09fa9a4a4cab82d598f0d82ed6992f",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/regression_before_adapter.xml",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/regression_before_adapter.xml",
+    "sha256": "ce0610a7ba0610bea17463c56ca5ae5882a01640a95d5348bb121ddde567fafc",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/regression_final.log",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/regression_final.log",
+    "sha256": "369e08f4229bd036bfaa69b2f10e27bb79b67678540a940bcd4d589733f14edc",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/regression_final.xml",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/regression_final.xml",
+    "sha256": "8d75a352a57e1c6d7f50ae2245d61c1f0aeb440c4c52c3c1a17567e54ea2027d",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/replay_before_adapter.log",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/replay_before_adapter.log",
+    "sha256": "d06c5ee112d559a68db8dc738f595f5bd5b2773a6cacce3205b8ba544129d5cc",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/replay_final.log",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/replay_final.log",
+    "sha256": "0254ce4af6fba38962335c91be53992db5c0528252026d47b477e104f676cec1",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/validation/evaluation_excerpt_0.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/validation/evaluation_excerpt_0.json",
+    "sha256": "e87e4175a75c8bb6d5284293b7059a50d479223740067521a686f72c1d9e61c6",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/validation/evaluation_excerpt_1.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/validation/evaluation_excerpt_1.json",
+    "sha256": "105fbc41a58b59feb5b2d4db34c7df263155ea734da4304c61466b20dce7960c",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/validation/evaluation_excerpt_2.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/validation/evaluation_excerpt_2.json",
+    "sha256": "5c509ca2bc5c876ed8aad7876b6b56bee0bf7b118f320bb4915afe480e8d4cb4",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/validation/evaluation_excerpt_3.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/validation/evaluation_excerpt_3.json",
+    "sha256": "9ba0870074d8d0d2e222b76ea5181078dcf3fe52b4820b7d9f78f3d08c7b25d9",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/validation/evaluation_excerpt_4.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/validation/evaluation_excerpt_4.json",
+    "sha256": "71f9de5ce2b62bd5e32afe6cf863777a119edafcae1f3e02c70e640e612255dc",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/validation/patient_example_0.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/validation/patient_example_0.json",
+    "sha256": "40fd516af4b06b9844cca8fc406079f723ddb5a042ef1e6969d9034f6e888bc6",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/validation/patient_example_1.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/validation/patient_example_1.json",
+    "sha256": "1a71e04b3510d78f7cc7d041073dcaaccf9f761c0a4904f3985278f5c9ff9228",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/validation/patient_example_2.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/validation/patient_example_2.json",
+    "sha256": "4f7e5120220ab648abf9581a4eb0b0475877d4570700601413a01164ea1cd339",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/validation/patient_example_3.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/validation/patient_example_3.json",
+    "sha256": "18da2b2d7c76cdc5c4503cd0cc61220eaa5a5b1eb725c2c5f8fd680c8790e84d",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/validation/patient_example_4.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/validation/patient_example_4.json",
+    "sha256": "1e4977e872fd014c72f4c010812c70ae4bc731e73947e7fd8965dc36f3c996d4",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/validation/replay_audit.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/validation/replay_audit.json",
+    "sha256": "9380810c2caa051172b515a5c1c70d674ee8fe7285068dd19f16a1731306519c",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/validation/used_evidence_sha256.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/validation/used_evidence_sha256.json",
+    "sha256": "00d3a1c944950ddee3bb2584e9939fed97f31346b20958eeae45c5d375ce2eaa",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/validation_before_adapter/replay_audit.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/validation_before_adapter/replay_audit.json",
+    "sha256": "c759983545db00e56e74af2c39e098eaf58cfbbb8a7ce6aac0e05e9043995a11",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/validation_before_adapter/used_evidence_sha256.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/validation_before_adapter/used_evidence_sha256.json",
+    "sha256": "00d3a1c944950ddee3bb2584e9939fed97f31346b20958eeae45c5d375ce2eaa",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/b1_fix_review/verify_b1.py",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/b1_fix_review/verify_b1.py",
+    "sha256": "c0ab508ea46dd62aff07a810a796de03080cc90f1ce888dea45f60ce77450de4",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/build_docs.py",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/build_docs.py",
+    "sha256": "6d610c3644c19fd45d89b8aab1f04f74817b1d83d034118972105b208691f3ef",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/evaluation_schema.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/evaluation_schema.json",
+    "sha256": "bb92831ce9421a449ba9777e28caebed3506d9d670d9c6a212612914030667ab",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/FINAL_REVIEW_REPORT.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/FINAL_REVIEW_REPORT.md",
+    "sha256": "6be63dca43bd79dcc7d31a2dcaf59109725a99cb0a98eadced59f14ce379b98b",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/FREEZE_READINESS.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/FREEZE_READINESS.md",
+    "sha256": "9dceedf200215521230c341ee877389acf3a3c52627b6ea474b142911db27b05",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/OPEN_ISSUES.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/OPEN_ISSUES.md",
+    "sha256": "a26cf9f3fa8ca96f0275b685ce2b1ba2c06ae1735b7de7c444e9de62bbef4d35",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/RUN_COMMANDS.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/RUN_COMMANDS.md",
+    "sha256": "b17bb11f8e04e677c17ca620f4d2c5204880528c959ef669dc902ebb0834d7e1",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/baseline_integrity.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/baseline_integrity.json",
+    "sha256": "c22d671b6fe54b11533d1d5d6a17da2ecc2f2336ede912de420636e1583e7b98",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/candidate_integrity.log",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/candidate_integrity.log",
+    "sha256": "b8226a7bd6648b51eca6507e483f6730e30a93247d449bc37fde71230fd49724",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/candidate_integrity_after.log",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/candidate_integrity_after.log",
+    "sha256": "b8226a7bd6648b51eca6507e483f6730e30a93247d449bc37fde71230fd49724",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/existing_tests.log",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/existing_tests.log",
+    "sha256": "97432c80447538ddff4f2017d80d4e49334c0a3e3c3902d9e9c71777e0bce7e7",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/existing_tests.xml",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/existing_tests.xml",
+    "sha256": "bca0fb8d7761227ed077160adde531150672a873916d234ba938c8ec406b1653",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/recheck_history.py",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/recheck_history.py",
+    "sha256": "6fc8de37976fe00e452baf30fd9a338a3dbbdd4600f36f67370f8e34d3d05554",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/replay.log",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/replay.log",
+    "sha256": "06d98b5eb997c721069e26a80e6581bbd0f26169fef2f92da6ab0bb9d5fdc209",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/replay_retry.log",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/replay_retry.log",
+    "sha256": "f3280b1eb038e39f8c8dc950e5df8dd2cab107ab8f1a479193b5a19179a8cf38",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/review_artifacts_sha256.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/review_artifacts_sha256.json",
+    "sha256": "98a35eea23a785c275c3384f064645818b58f0c297bb4e8039b277484ea88f06",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/review_probes.log",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/review_probes.log",
+    "sha256": "e4e7f6748dcdce9a8136629f1a3dd26b1665121f9c3fb8bb0985c4579ae68aff",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/review_probes.xml",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/review_probes.xml",
+    "sha256": "421e723edae7fb378a408f96de8810d6e324702a99aaec6c065346f5ef9c77ce",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/review_summary.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/review_summary.json",
+    "sha256": "22602f4fcebeac125649e243ada9aca08ccba520fe89ad16a717759cb0101e01",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/reviewed_documents_sha256.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/reviewed_documents_sha256.json",
+    "sha256": "997a43c57811580d6bdda005c3544f4612967bbb86c08c2cc4ce8f7cec3bd746",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/test_review_probes.py",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/test_review_probes.py",
+    "sha256": "dbfea9b30258ba8b065090d99eb87ac9e0f4dccd68e13842c82a6c36ebd1fe9b",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/validation/evaluation_excerpt_0.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/validation/evaluation_excerpt_0.json",
+    "sha256": "b54bcf613a75cab0e99839ef2f19b3d9d928bb3fb522162d66758415ae46767c",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/validation/evaluation_excerpt_1.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/validation/evaluation_excerpt_1.json",
+    "sha256": "7bc668756a10c05d51a9054454a18b1e397978c4a97b360c0c4c10bfd388f980",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/validation/evaluation_excerpt_2.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/validation/evaluation_excerpt_2.json",
+    "sha256": "1e654631f24347396a081cef7c24eb79bb8cba51db27f4007eee3d60cbfcced1",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/validation/evaluation_excerpt_3.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/validation/evaluation_excerpt_3.json",
+    "sha256": "98e432beb8cb6139c011fbfbc4e8c21cce549404afeea07bee9fb7e93647f3f6",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/validation/evaluation_excerpt_4.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/validation/evaluation_excerpt_4.json",
+    "sha256": "af49670a416f5d99598d3421f9d20b4ad942f08a7d58a5dc734ec0899b2dff33",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/validation/patient_example_0.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/validation/patient_example_0.json",
+    "sha256": "40fd516af4b06b9844cca8fc406079f723ddb5a042ef1e6969d9034f6e888bc6",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/validation/patient_example_1.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/validation/patient_example_1.json",
+    "sha256": "1a71e04b3510d78f7cc7d041073dcaaccf9f761c0a4904f3985278f5c9ff9228",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/validation/patient_example_2.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/validation/patient_example_2.json",
+    "sha256": "4f7e5120220ab648abf9581a4eb0b0475877d4570700601413a01164ea1cd339",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/validation/patient_example_3.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/validation/patient_example_3.json",
+    "sha256": "18da2b2d7c76cdc5c4503cd0cc61220eaa5a5b1eb725c2c5f8fd680c8790e84d",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/validation/patient_example_4.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/validation/patient_example_4.json",
+    "sha256": "1e4977e872fd014c72f4c010812c70ae4bc731e73947e7fd8965dc36f3c996d4",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/validation/replay_audit.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/validation/replay_audit.json",
+    "sha256": "a53851f58836c8e188f49220ed3d059dc466fb862e0ab1e253198855f83006c5",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/validation/used_evidence_sha256.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/validation/used_evidence_sha256.json",
+    "sha256": "00d3a1c944950ddee3bb2584e9939fed97f31346b20958eeae45c5d375ce2eaa",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/final_review/write_review.py",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/final_review/write_review.py",
+    "sha256": "a051db1e2a5ec6c9e5b6d3b11bf1dea27c538f57aa1c014526aa851ff0d90342",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/metric_catalog.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/metric_catalog.json",
+    "sha256": "e92e8fd0c7878877e69ae994675b9fcfdeada02f2818640a269830994bffc552",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/patient_schema.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/patient_schema.json",
+    "sha256": "d7c4b79b381b5b79745055c43b5960b4132dbf912b1e26b5a2c210162f308f3f",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/replay_audit.py",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/replay_audit.py",
+    "sha256": "a019d75f988eadb847ccd1c8d79bbfd2bb389a7f285b19a2e8d839e71557b6d8",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/artifact_sha256.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/artifact_sha256.json",
+    "sha256": "4ec6cec1038d44434cdcc13dbbe0fba795b417dbbfe298480857130df5c05a61",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/audited_source_sha256.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/audited_source_sha256.json",
+    "sha256": "266714c168a48096a4419a99949ce999bbb3f2c78d5de865a400c58e88324832",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/baseline_after.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/baseline_after.json",
+    "sha256": "c22d671b6fe54b11533d1d5d6a17da2ecc2f2336ede912de420636e1583e7b98",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/baseline_before.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/baseline_before.json",
+    "sha256": "c22d671b6fe54b11533d1d5d6a17da2ecc2f2336ede912de420636e1583e7b98",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/evaluation_excerpt_0.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/evaluation_excerpt_0.json",
+    "sha256": "b54bcf613a75cab0e99839ef2f19b3d9d928bb3fb522162d66758415ae46767c",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/evaluation_excerpt_1.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/evaluation_excerpt_1.json",
+    "sha256": "7bc668756a10c05d51a9054454a18b1e397978c4a97b360c0c4c10bfd388f980",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/evaluation_excerpt_2.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/evaluation_excerpt_2.json",
+    "sha256": "1e654631f24347396a081cef7c24eb79bb8cba51db27f4007eee3d60cbfcced1",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/evaluation_excerpt_3.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/evaluation_excerpt_3.json",
+    "sha256": "98e432beb8cb6139c011fbfbc4e8c21cce549404afeea07bee9fb7e93647f3f6",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/evaluation_excerpt_4.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/evaluation_excerpt_4.json",
+    "sha256": "af49670a416f5d99598d3421f9d20b4ad942f08a7d58a5dc734ec0899b2dff33",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/final_summary.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/final_summary.json",
+    "sha256": "58f2d3d4f48532b0a78366c2c0f7f4a98211da3e619d7c736095a16efd22b915",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/new_scope.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/new_scope.json",
+    "sha256": "f29af37064e4ab04adaf2f300ba4d43b662342668ff4f33a3fec6c90ec04643b",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/patient_example_0.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/patient_example_0.json",
+    "sha256": "40fd516af4b06b9844cca8fc406079f723ddb5a042ef1e6969d9034f6e888bc6",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/patient_example_1.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/patient_example_1.json",
+    "sha256": "1a71e04b3510d78f7cc7d041073dcaaccf9f761c0a4904f3985278f5c9ff9228",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/patient_example_2.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/patient_example_2.json",
+    "sha256": "4f7e5120220ab648abf9581a4eb0b0475877d4570700601413a01164ea1cd339",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/patient_example_3.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/patient_example_3.json",
+    "sha256": "18da2b2d7c76cdc5c4503cd0cc61220eaa5a5b1eb725c2c5f8fd680c8790e84d",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/patient_example_4.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/patient_example_4.json",
+    "sha256": "1e4977e872fd014c72f4c010812c70ae4bc731e73947e7fd8965dc36f3c996d4",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/replay.log",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/replay.log",
+    "sha256": "7127b324cbad1761460b1eae0ad0619e2d26b15664eb1d122bea35abfcda3848",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/replay_audit.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/replay_audit.json",
+    "sha256": "a53851f58836c8e188f49220ed3d059dc466fb862e0ab1e253198855f83006c5",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/replay_fixed.log",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/replay_fixed.log",
+    "sha256": "a8eaa7ec1b9231477c924eb2843d5e45c7509b011a8cf22ce15b777475432d5e",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/source_sha256.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/source_sha256.json",
+    "sha256": "c14de47500dbebd24a02c82a62a69426db5702942bb9ea9c2f8c8e352b529a80",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/tests.xml",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/tests.xml",
+    "sha256": "927d71970b7d0a4c5119bc28ad33f69c8532af0b5641b7b29200953d982c8190",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/tests_final.log",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/tests_final.log",
+    "sha256": "d0d553bba14b22fd0dc48c6362258dd4a457a0486dd3279c62dad43333b918e6",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/tests_final.xml",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/tests_final.xml",
+    "sha256": "32264a99232fc419a3340f93349459453d944ca74fa75b727b129ed4701a3d48",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/tests_fixed.xml",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/tests_fixed.xml",
+    "sha256": "8efed22f9485193061ae9f54032cf250d36e2644d392679599f15baf2f0c0718",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/validation/used_evidence_sha256.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/validation/used_evidence_sha256.json",
+    "sha256": "00d3a1c944950ddee3bb2584e9939fed97f31346b20958eeae45c5d375ce2eaa",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "evidence/candidate/verify_candidate.py",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/verify_candidate.py",
+    "sha256": "6eae9acf035ff0d0f425aeac69d787523723d1d3759b0c8b215ac7e72a710b59",
+    "role": "candidate_provenance"
+  },
+  {
+    "archive_path": "schemas/patient_schema.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/patient_schema.json",
+    "sha256": "d7c4b79b381b5b79745055c43b5960b4132dbf912b1e26b5a2c210162f308f3f",
+    "role": "unchanged_candidate_machine_contract"
+  },
+  {
+    "archive_path": "schemas/evaluation_schema.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/evaluation_schema.json",
+    "sha256": "bb92831ce9421a449ba9777e28caebed3506d9d670d9c6a212612914030667ab",
+    "role": "unchanged_candidate_machine_contract"
+  },
+  {
+    "archive_path": "schemas/metric_catalog.json",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/metric_catalog.json",
+    "sha256": "e92e8fd0c7878877e69ae994675b9fcfdeada02f2818640a269830994bffc552",
+    "role": "unchanged_candidate_machine_contract"
+  },
+  {
+    "archive_path": "TEN_INJURY_METRIC_MAPPING.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/TEN_INJURY_METRIC_MAPPING.md",
+    "sha256": "2440e04306a93488ab5606d2480c84a435e781b27dffbbffa152bdbedcde5f95",
+    "role": "contract_reference"
+  },
+  {
+    "archive_path": "COMPOSITE_COVERAGE.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/COMPOSITE_COVERAGE.md",
+    "sha256": "c7b711e8415279b8cc3c7234e804fb28306011e4d5a2718933a9f1cd176433f7",
+    "role": "contract_reference"
+  },
+  {
+    "archive_path": "METRIC_SOURCE_AUDIT.md",
+    "project_path": "research_artifacts/patient_observation_v2_candidate_v0.1/METRIC_SOURCE_AUDIT.md",
+    "sha256": "b0900ecdc67098577392213cfa0c62bec349b19f608048042d0de2292f7fa9d5",
+    "role": "contract_reference"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/_distutils_hack/__init__.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/_distutils_hack/__init__.py",
+    "sha256": "df81e6bcba34ee3e3952f776551fb669143b9490fdd6c4caeb32609f97e985b4",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/annotated_types/__init__.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/annotated_types/__init__.py",
+    "sha256": "a7104a4d439b27a9f74fc0be236b9ba1b7831e6044026802a205abc1298a9bc8",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/__init__.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/__init__.py",
+    "sha256": "e62127278c07bf5384cdd2903f368a69929f3b8a524000bae4e0eb608ebf4bc6",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/__init__.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_config.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_config.py",
+    "sha256": "4d66708377346d91e24f76e8479f9862a928b877308d175e9e6c861e87d5ec4d",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_core_metadata.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_core_metadata.py",
+    "sha256": "63f836b778bbba5b8afb05c266fcc97d114c3d4336dda0582df69ee05cc13f2d",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_core_utils.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_core_utils.py",
+    "sha256": "d63aeee156c9d31eb747a76d55cb8e23e74a4130bf77f9529c9584050cc63444",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_decorators.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_decorators.py",
+    "sha256": "3e7c80a0a4a0dc135b0954999f0ab0f67684835503b58bc34fd2e5ba280f88ef",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_discriminated_union.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_discriminated_union.py",
+    "sha256": "68c9744914b24321df5b8fa49673131cdbf0491a2a1371f73d157fd39bd1b138",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_docs_extraction.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_docs_extraction.py",
+    "sha256": "7f2ce74801e1e40ce88675d94ad5741ef1fe9d16dabcd1cfca0fa49f1f92fc41",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_fields.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_fields.py",
+    "sha256": "6127c42aadb51608cb27a62a6172a1d1e104b399f130fbd0ea1a7da40f0dcdfc",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_forward_ref.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_forward_ref.py",
+    "sha256": "e67dd8efedc028b9fcfc54b761cecabad2e23d48725e602d90464e6859e89f03",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py",
+    "sha256": "4d3e3dbf3633a87f74ad6aefe69b4da19823cceb11d0a3e54a4a8f545ae7ac1c",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_generics.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_generics.py",
+    "sha256": "10baa34fa2cccd0cd600ad04079ffdaa47bf8806b3cf4390e20ba7a7fb8ab986",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_import_utils.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_import_utils.py",
+    "sha256": "4d18710f93ae63a094a2c8a805d05c254b34a26ec820e36265d60057bcd0f233",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_internal_dataclass.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_internal_dataclass.py",
+    "sha256": "fdb79d7355dbbaeca044688b66a914930c05a506a847584a2e5479d359f2c926",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_known_annotated_metadata.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_known_annotated_metadata.py",
+    "sha256": "25ceca4cd159a01ddffb489b3ff36024834e795bd8137ab73930500e354c9375",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_mock_val_ser.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_mock_val_ser.py",
+    "sha256": "c2645115206fa9f70b6c8e353ec165881e2ed80677989a597a21116c3df1293a",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_model_construction.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_model_construction.py",
+    "sha256": "c24f9b3460c026f76e686be7d14d3ff33125d06111bb4b2126f37cfd97e461ac",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_namespace_utils.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_namespace_utils.py",
+    "sha256": "865dfe4d102bf365368d3c8f3f7b7e42ab2f28b8abc6d90b7cd7eb37e7e9d31f",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_repr.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_repr.py",
+    "sha256": "8d07e726ec83c50a5244d846dbd208f4f5fc7b836fdaa599ac4c3696a8a1dd41",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_schema_gather.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_schema_gather.py",
+    "sha256": "54b12fe754d811e78d0f6733b32ae626ad4c56726a4ce9a72da9fb546e3873c0",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_schema_generation_shared.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_schema_generation_shared.py",
+    "sha256": "17fadb41bae4a289a0c6cb24747a4fd23509ed309f7b40400c0124aba089e273",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_signature.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_signature.py",
+    "sha256": "f049633c97b8a529daa6e8ab1b90e4040803d618201f1100cb314f1fef47d331",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_typing_extra.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_typing_extra.py",
+    "sha256": "755c481a1b0be37cda79b3423108752b94235fa2386bd3959cd01c2f6a486bfc",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_utils.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_utils.py",
+    "sha256": "0878c7fb4ce75235fd479b144a33d3f23f3efbb3f37bcca36a27ac7130152e24",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_validators.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_internal/_validators.py",
+    "sha256": "76fd1ad8d91ce33718aafdf51a1fd021dda571ff96d24429574a1237380475f8",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/_migration.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/_migration.py",
+    "sha256": "545ef72d1094cf722b6f9c55b75de36f7340717567105e93d7e27438b7de6790",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/aliases.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/aliases.py",
+    "sha256": "be1087ca84969d7f8427ec166f9aa3e31c91b2c8065a74d07f3429e06499f6e8",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/annotated_handlers.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/annotated_handlers.py",
+    "sha256": "59fc854aac28108157061ed3ef73f270a9682350e25f8e465a2d3e24eb024786",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/config.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/config.py",
+    "sha256": "b83676c4df89ec255035e9c269529c62c244cc83a92aa9607d0bc3774d35c229",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/errors.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/errors.py",
+    "sha256": "edcb41342b6de7b919171ef52ecd87f3a22e7d0011bf8c0f29ff0385db159f9c",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/fields.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/fields.py",
+    "sha256": "5ae0c63af076d8a5aeb96ddf5e74b85af838a97fed769f17ec1ac09736b8b30f",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/functional_validators.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/functional_validators.py",
+    "sha256": "73ffbbc1e5a918d70e61f45f55416ed758ebc4c54c75f63f73ee22b2dc24f796",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/json_schema.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/json_schema.py",
+    "sha256": "677786d509be226f8c417ebac28c963fd5b2c055272d116d68e0cbced559f937",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/main.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/main.py",
+    "sha256": "efb414c13b5041d51a7e8af78abe70d820b5b34be2805b460747d2953bc5dbb2",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/plugin/__init__.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/plugin/__init__.py",
+    "sha256": "6bb4f0dfae94e8ade496d08235963bea773db2cfbbb86190e344d769df4eca94",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/plugin/_loader.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/plugin/_loader.py",
+    "sha256": "f502d79de2c49afca15e46bff63e0bae46e67b8a8fbfaa98a6196c8c5d8c1ac0",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/plugin/_schema_validator.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/plugin/_schema_validator.py",
+    "sha256": "41b9aab06df730199fb4d4369cd8ae376d8b85badec5403b8a90d5bf7274d815",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/type_adapter.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/type_adapter.py",
+    "sha256": "553fbeca0e1adbbb21481cd61c13cacf8f777f7890f686dd9049218d92a513b4",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/types.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/types.py",
+    "sha256": "9ea752f89d995ea4e1daa7b224ecc14c1b475b267961115ef2068c579f5df471",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/version.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/version.py",
+    "sha256": "4e6124eaa03e540d4f56c737f5b66584f010032bda71de812b3c57007c96d395",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic/warnings.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic/warnings.py",
+    "sha256": "5aed551b3aef159c384fac8220a1e31fb2d263ae878dbb720856e7e6e5a8309e",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic_core/__init__.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic_core/__init__.py",
+    "sha256": "9cad6292b75254af606a970aae9bff6e5ae9f0b08089cd63acafa391b60794d2",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/pydantic_core/core_schema.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/pydantic_core/core_schema.py",
+    "sha256": "bbdc850b72d685133a0e250fed263b33691dcdf3813492f3c0e31001e3d46005",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/__init__.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/__init__.py",
+    "sha256": "43aba634d5da461169bb47f7180306323d0bb64f2d9c4e53e67d0b482dbc97d5",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/anchor.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/anchor.py",
+    "sha256": "bbaa5622e0df29f199523520c3a6997b11e27ec1fd9eb8048d84b3247dda1728",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/comments.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/comments.py",
+    "sha256": "fccdf4d964c7cac3bb236be9cdd098452df8c43f3e499c31713ae0c52fdee101",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/compat.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/compat.py",
+    "sha256": "ca05082fbfde00843a12bf4d815b4c08198d0418ae9b9033985dd03cbb2f9f47",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/composer.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/composer.py",
+    "sha256": "981b0fd0db996cc109ac8639e66129a0e0a2b0b1ea615bc30ece99f4b9569778",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/constructor.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/constructor.py",
+    "sha256": "bdaace288852001493bff213299314bb5ff1d9d6aeca217c0c4f91fa61145298",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/docinfo.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/docinfo.py",
+    "sha256": "e0d3ef3bffa6e9ce1f4219be67ddfc9d42a4564a0bd8e050127ffa7e367e265f",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/dumper.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/dumper.py",
+    "sha256": "65d9d9c305b44bdc061e741ebac97940106a0fe23220801802a74cd1030e9dc5",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/emitter.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/emitter.py",
+    "sha256": "9a5bd5e7281cf80d897780208c62452eb6601f641d0c6edc442e51ec2a5013d7",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/error.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/error.py",
+    "sha256": "b26755eaa80dd18bea58997eec1b567269a544df5402ac7398f8e08620708703",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/events.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/events.py",
+    "sha256": "cf0de91a87e7b498f354119c508c4a943c02b35df23d5d9433a212bf1f11d691",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/loader.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/loader.py",
+    "sha256": "d5d59b07c79be84549344b625f1fe4dfd3806122f0369704f8c940fa10bc3604",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/main.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/main.py",
+    "sha256": "fa7fbcadac0b9f979fb14a653109bb831f95b94a4450caa896c14d2a10b571d6",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/nodes.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/nodes.py",
+    "sha256": "107801e641e2554ca8a0d23bd231d65c56f4c79022dc42567caf16df4621ed64",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/parser.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/parser.py",
+    "sha256": "44b2d0b372807d08fa2175841ed3d1c974320a5858d238a1b8ba50cd77d78f9a",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/reader.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/reader.py",
+    "sha256": "5daf425f708a3a69f6877cd388a41b7d560670a7010f127c3dc7a055ebcf0b6c",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/representer.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/representer.py",
+    "sha256": "088b992f351b85902fbc405815b31284661c37d1e3b433c21c814db63f62023f",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/resolver.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/resolver.py",
+    "sha256": "aad8c7f2a4ffbff69a9aac646bc87440e7f6227f2cc6b2a914eeaa3b10d50171",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/scalarbool.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/scalarbool.py",
+    "sha256": "9af7b7435b033b5c586acb42e7f6c9d59477b0bef20c704824f44363e51b3767",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/scalarfloat.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/scalarfloat.py",
+    "sha256": "4a36b81924af3b799c3f877da85b12d540d08364a0d6fe6e405f2cf2be4b02cd",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/scalarint.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/scalarint.py",
+    "sha256": "ab400bdb6b1762ee9d274a350b778426f3d1c1faf0b9d7e77ac98e8c0c8a6c6e",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/scalarstring.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/scalarstring.py",
+    "sha256": "2ac30fbc108b5f5286a471e440aacd234c4a21dc88776e55abf22a2c57125ef4",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/scanner.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/scanner.py",
+    "sha256": "b716df08841b725be09153e1a093a1359a16044a395bc892a975f9b1509cc8ce",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/serializer.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/serializer.py",
+    "sha256": "96cfd7ccd8241e850a608a7054d99e921f84c9c5490eeae3b1523048d3d3f626",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/tag.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/tag.py",
+    "sha256": "31452644fc34c569b596bfda0e0645a49ba468f9fa573651b2699289f1cddf2d",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/timestamp.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/timestamp.py",
+    "sha256": "980e052c95c85172a4a66a2e0193b46ed1bb4fee7349c04b898563360594d15d",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/tokens.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/tokens.py",
+    "sha256": "241b3a8a46a3677b7089cce31c8dcbf7e260d39e90bb10101457ac7af4bee7bf",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/ruamel/yaml/util.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/ruamel/yaml/util.py",
+    "sha256": "a5b49c11e319149d919e9767d63a60d63a26fbe51e83bf4149d8e05fd777f308",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/typing_extensions.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/typing_extensions.py",
+    "sha256": "4040ca1a1ecbee00d1385c12a93084d1c5bd46f0b774f07e5ae7e91c4f55e696",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/typing_inspection/__init__.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/typing_inspection/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/typing_inspection/introspection.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/typing_inspection/introspection.py",
+    "sha256": "5888c45bd627da692d9527699e3f549adf35651596b1656772310e12181b4396",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/.venv-pulse/lib/python3.11/site-packages/typing_inspection/typing_objects.py",
+    "project_path": ".venv-pulse/lib/python3.11/site-packages/typing_inspection/typing_objects.py",
+    "sha256": "a778d6290d51581c9c9a23e0263af2a4604c76def5c4d40a7cd1a375b0046ff6",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/pyproject.toml",
+    "project_path": "pyproject.toml",
+    "sha256": "30f2ab2aaad33f1667fd51eb3949e2193997770df88424d3b9e8331dc535215d",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/research_artifacts/observation_v2_contract_freeze_v1.0/build_archive.py",
+    "project_path": "research_artifacts/observation_v2_contract_freeze_v1.0/build_archive.py",
+    "sha256": "14e82528f5944cbf1e566c259b6e9ac672e0bba02d7c0707b884edd2d1497f18",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/__init__.py",
+    "project_path": "src/core301/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/contracts/__init__.py",
+    "project_path": "src/core301/contracts/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/contracts/base.py",
+    "project_path": "src/core301/contracts/base.py",
+    "sha256": "8bfcb0af441bac9dcf2f6edea02728c2382da0d25d138b656020cca2b5c868ab",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/contracts/casualty.py",
+    "project_path": "src/core301/contracts/casualty.py",
+    "sha256": "cc41e26ccc63b658a4b4dcc5db1d5296364d77eb9268a86491b90870a1bdb723",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/contracts/context.py",
+    "project_path": "src/core301/contracts/context.py",
+    "sha256": "6750da940fd8c02783ed6a21686ce2067537cbd9abb6ebb3bbbe66a9d260eb49",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/contracts/observation.py",
+    "project_path": "src/core301/contracts/observation.py",
+    "sha256": "0dec31e8449d15541865cc761d3f22160f9e16dfbd042d68558dfa7a3c164c48",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/contracts/v2/__init__.py",
+    "project_path": "src/core301/contracts/v2/__init__.py",
+    "sha256": "41b41ac1856fdea91f19b76c5d66a938f92f451a93f06f4efaa791484688bb78",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/contracts/v2/context.py",
+    "project_path": "src/core301/contracts/v2/context.py",
+    "sha256": "d223b91031a184bd2810e2f796adf730bb9178be7e83db9ed85d184d24f1033c",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/contracts/v2/exposure_validation.py",
+    "project_path": "src/core301/contracts/v2/exposure_validation.py",
+    "sha256": "ba6e81c51dfa21785f33597f8f06de42e796965e34b9a646850b6b3d2ec527a6",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/contracts/v2/hemothorax_observation.py",
+    "project_path": "src/core301/contracts/v2/hemothorax_observation.py",
+    "sha256": "02ae4b9190dd7de21d085da503e28a5a3658c1a6d516a511afe866bb02c130e1",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/contracts/v2/injury.py",
+    "project_path": "src/core301/contracts/v2/injury.py",
+    "sha256": "feb270ea8337d8ec32882a604a0df6836f42f0f6fe9fade8911823c33b14116d",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/observation_candidate_v2/__init__.py",
+    "project_path": "src/core301/observation_candidate_v2/__init__.py",
+    "sha256": "8b1a53715d98523cbda50edf692fef05eab6df60d90c4cee1ef183398e34c872",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/observation_candidate_v2/catalog.py",
+    "project_path": "src/core301/observation_candidate_v2/catalog.py",
+    "sha256": "032876c8a532cf10426f841fe34ce094136a7b9a2eef65fe17a1e5fa038091e9",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/observation_candidate_v2/models.py",
+    "project_path": "src/core301/observation_candidate_v2/models.py",
+    "sha256": "66dab77b8f4d6b18e5d7f9a958b78beac634c5070f4fa3da47c5272a12b17358",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/observation_candidate_v2/projector.py",
+    "project_path": "src/core301/observation_candidate_v2/projector.py",
+    "sha256": "c6b70be92eeaee92f846f872c381ffcc078b3954151f65c37d380b4772a9ce51",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/observation_candidate_v2/replay.py",
+    "project_path": "src/core301/observation_candidate_v2/replay.py",
+    "sha256": "d040b8ebcc447b5add4be479134e525c99e75b571f21e93bad9f4062ae91213d",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/paths.py",
+    "project_path": "src/core301/paths.py",
+    "sha256": "64c373677c580e8fe409a57188c053a898719bbb2db536f97a47f01543d5c9bf",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/pulse/__init__.py",
+    "project_path": "src/core301/pulse/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/pulse/injury_adapter.py",
+    "project_path": "src/core301/pulse/injury_adapter.py",
+    "sha256": "ac9a2b734f8aa8a7435c9a6ffe3836b0578b48bbc9d9bc7f5b6649e8c19ecfac",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/pulse/observation_projector.py",
+    "project_path": "src/core301/pulse/observation_projector.py",
+    "sha256": "5acfa53474c97aa078e3a214355d5d5e2af6dd7b7eb01341c99882682c6a83ab",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/pulse/session.py",
+    "project_path": "src/core301/pulse/session.py",
+    "sha256": "b957aa40345dc5a0225c6890ef6fe15526f3c3115453ddfa6fa2cb579e6ca067",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/pulse/v2/__init__.py",
+    "project_path": "src/core301/pulse/v2/__init__.py",
+    "sha256": "55525beb93f99be4245abea7950c8ba25dbaeedb38144a208617388b2fd41e13",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/pulse/v2/exposure_session.py",
+    "project_path": "src/core301/pulse/v2/exposure_session.py",
+    "sha256": "682bd17159a4121a627956124ee88f2ea7ec979bf2cf063292222513f6e8f33c",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/pulse/v2/hemothorax_session.py",
+    "project_path": "src/core301/pulse/v2/hemothorax_session.py",
+    "sha256": "2a0a8aebae0f346ddfb26cb36a80640af1edbaf98af2eda04c452b442b7f5a0e",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/pulse/v2/injury_adapter.py",
+    "project_path": "src/core301/pulse/v2/injury_adapter.py",
+    "sha256": "7865d50d354fc361e32fc3cdc5d73b433977670695f668c7ef6673aa7cf5cf5d",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/pulse/v2/protocol_book.py",
+    "project_path": "src/core301/pulse/v2/protocol_book.py",
+    "sha256": "a1b8dd9c254496f83e2b3b176ee4b579563993f4b2e28eda223020a966ac4b38",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/pulse/v2/session.py",
+    "project_path": "src/core301/pulse/v2/session.py",
+    "sha256": "c77923a605e898a959506f993529653370cf97fe8fc794a1ebfd0c63a57475f4",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/runtime/__init__.py",
+    "project_path": "src/core301/runtime/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/runtime/v2/__init__.py",
+    "project_path": "src/core301/runtime/v2/__init__.py",
+    "sha256": "dd8e5a8011b7f8a0352321e6509c349f8ed99fc88c5652b6b2271e81f29025cb",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/runtime/v2/errors.py",
+    "project_path": "src/core301/runtime/v2/errors.py",
+    "sha256": "395281c3d20db0acd3577feed79500a320a0d0ce08a044aeaa2d7f767881a56d",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/runtime/v2/execution_journal.py",
+    "project_path": "src/core301/runtime/v2/execution_journal.py",
+    "sha256": "ee1bd37e0574bdd7ac27aabed570fb0a114339375a2dda4c383402d0afadf195",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/runtime/v2/exposure_validation.py",
+    "project_path": "src/core301/runtime/v2/exposure_validation.py",
+    "sha256": "492ebdf32d96c14f0fcf9fbd5f72cbb950efffbcc262d2b9390aeabf8a13f709",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/runtime/v2_1/__init__.py",
+    "project_path": "src/core301/runtime/v2_1/__init__.py",
+    "sha256": "d7d662df13de76f7a29930e05c64cbc407e169ea5870a97e33ac50552a47950e",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/runtime/v2_1/native_backend.py",
+    "project_path": "src/core301/runtime/v2_1/native_backend.py",
+    "sha256": "9903bfb0d97839931b17c2a7b4744665932f1dde1fc1757a5c6680925f774b7b",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/src/core301/runtime/v2_1/registry.py",
+    "project_path": "src/core301/runtime/v2_1/registry.py",
+    "sha256": "bcedf38938b976122fcfa209d3a7749530ea83e3cc20a5b1457c0735a48da57a",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/tests/observation_candidate_v2/test_candidate.py",
+    "project_path": "tests/observation_candidate_v2/test_candidate.py",
+    "sha256": "84970dae9f9cd845b1c7a6c50b09c7996ed9e6ff46c4e0c7af28a7693706b4bb",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/tests/observation_candidate_v2/test_time_contract.py",
+    "project_path": "tests/observation_candidate_v2/test_time_contract.py",
+    "sha256": "1a08a5ad67cc0bd6593af47d3b563e60bbb95bed42dd725a387f946951bd6c4c",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/tests/test_contracts.py",
+    "project_path": "tests/test_contracts.py",
+    "sha256": "d88eede8094894b3d12049954003a1b2e9ffd7a1c41127f983f8f0e1eb5b3489",
+    "role": "B1_latest_source_or_project_dependency"
+  },
+  {
+    "archive_path": "snapshot/tests/test_projection_adapters.py",
+    "project_path": "tests/test_projection_adapters.py",
+    "sha256": "e60e54a9708e636537bb9ecdd7253cae513a88438cab91ce4a013d3609c868c2",
+    "role": "B1_latest_source_or_project_dependency"
+  }
+]

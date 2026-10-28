@@ -1,0 +1,1429 @@
+{
+  "agent": {
+    "vitals.heart_rate": {
+      "unit": "1/min",
+      "request": {
+        "Category": "Physiology",
+        "PropertyName": "HeartRate",
+        "Unit": "1/min",
+        "CompartmentName": null,
+        "SubstanceName": null
+      },
+      "raw_group": "values",
+      "raw_key": "vitals.heart_rate"
+    },
+    "vitals.respiration_rate": {
+      "unit": "1/min",
+      "request": {
+        "Category": "Physiology",
+        "PropertyName": "RespirationRate",
+        "Unit": "1/min",
+        "CompartmentName": null,
+        "SubstanceName": null
+      },
+      "raw_group": "values",
+      "raw_key": "vitals.respiration_rate"
+    },
+    "vitals.pulse_oximetry": {
+      "unit": "1",
+      "request": {
+        "Category": "Physiology",
+        "PropertyName": "PulseOximetry",
+        "Unit": null,
+        "CompartmentName": null,
+        "SubstanceName": null
+      },
+      "raw_group": "values",
+      "raw_key": "vitals.pulse_oximetry"
+    },
+    "vitals.systolic_arterial_pressure": {
+      "unit": "mmHg",
+      "request": {
+        "Category": "Physiology",
+        "PropertyName": "SystolicArterialPressure",
+        "Unit": "mmHg",
+        "CompartmentName": null,
+        "SubstanceName": null
+      },
+      "raw_group": "values",
+      "raw_key": "vitals.systolic_arterial_pressure"
+    },
+    "vitals.mean_arterial_pressure": {
+      "unit": "mmHg",
+      "request": {
+        "Category": "Physiology",
+        "PropertyName": "MeanArterialPressure",
+        "Unit": "mmHg",
+        "CompartmentName": null,
+        "SubstanceName": null
+      },
+      "raw_group": "values",
+      "raw_key": "vitals.mean_arterial_pressure"
+    },
+    "circulation.cardiac_output": {
+      "unit": "L/min",
+      "request": {
+        "Category": "Physiology",
+        "PropertyName": "CardiacOutput",
+        "Unit": "L/min",
+        "CompartmentName": null,
+        "SubstanceName": null
+      },
+      "raw_group": "values",
+      "raw_key": "circulation.cardiac_output"
+    },
+    "respiratory.tidal_volume": {
+      "unit": "mL",
+      "request": {
+        "Category": "Physiology",
+        "PropertyName": "TidalVolume",
+        "Unit": "mL",
+        "CompartmentName": null,
+        "SubstanceName": null
+      },
+      "raw_group": "values",
+      "raw_key": "respiratory.tidal_volume"
+    },
+    "respiratory.inspired_oxygen_fraction": {
+      "unit": "1",
+      "request": {
+        "Category": "Physiology",
+        "PropertyName": "FractionOfInspiredOxygen",
+        "Unit": null,
+        "CompartmentName": null,
+        "SubstanceName": null
+      },
+      "raw_group": "values",
+      "raw_key": "respiratory.inspired_oxygen_fraction"
+    },
+    "laboratory.hemoglobin_concentration": {
+      "unit": "g/dL",
+      "request": {
+        "Category": "Substance",
+        "PropertyName": "BloodConcentration",
+        "Unit": "g/dL",
+        "CompartmentName": null,
+        "SubstanceName": "Hemoglobin"
+      },
+      "raw_group": "values",
+      "raw_key": "laboratory.hemoglobin_concentration"
+    },
+    "laboratory.lactate_concentration": {
+      "unit": "mg/dL",
+      "request": {
+        "Category": "Substance",
+        "PropertyName": "BloodConcentration",
+        "Unit": "mg/dL",
+        "CompartmentName": null,
+        "SubstanceName": "Lactate"
+      },
+      "raw_group": "values",
+      "raw_key": "laboratory.lactate_concentration"
+    },
+    "laboratory.arterial_oxygen_pressure": {
+      "unit": "mmHg",
+      "request": {
+        "Category": "LiquidCompartment",
+        "PropertyName": "PartialPressure",
+        "Unit": "mmHg",
+        "CompartmentName": "Aorta",
+        "SubstanceName": "Oxygen"
+      },
+      "raw_group": "values",
+      "raw_key": "laboratory.arterial_oxygen_pressure"
+    },
+    "laboratory.arterial_carbon_dioxide_pressure": {
+      "unit": "mmHg",
+      "request": {
+        "Category": "LiquidCompartment",
+        "PropertyName": "PartialPressure",
+        "Unit": "mmHg",
+        "CompartmentName": "Aorta",
+        "SubstanceName": "CarbonDioxide"
+      },
+      "raw_group": "values",
+      "raw_key": "laboratory.arterial_carbon_dioxide_pressure"
+    },
+    "laboratory.blood_ph": {
+      "unit": "1",
+      "request": {
+        "Category": "Physiology",
+        "PropertyName": "BloodPH",
+        "Unit": null,
+        "CompartmentName": null,
+        "SubstanceName": null
+      },
+      "raw_group": "values",
+      "raw_key": "laboratory.blood_ph"
+    },
+    "laboratory.aorta_carboxyhemoglobin_concentration": {
+      "unit": "g/dL",
+      "request": {
+        "Category": "LiquidCompartment",
+        "CompartmentName": "Aorta",
+        "SubstanceName": "Carboxyhemoglobin",
+        "PropertyName": "Concentration",
+        "Unit": "g/dL"
+      },
+      "raw_group": "diagnostics",
+      "raw_key": "aorta_cohb_g_dL"
+    },
+    "laboratory.aorta_sodium_concentration": {
+      "unit": "mEq/L",
+      "request": {
+        "Category": "LiquidCompartment",
+        "CompartmentName": "Aorta",
+        "SubstanceName": "Sodium",
+        "PropertyName": "Molarity",
+        "Unit": "mEq/L"
+      },
+      "raw_group": "diagnostics",
+      "raw_key": "aorta_sodium_mEq_L"
+    }
+  },
+  "internal": {
+    "diagnostic.BloodVolume": {
+      "unit": "mL",
+      "request": {
+        "Category": "Physiology",
+        "PropertyName": "BloodVolume",
+        "Unit": "mL"
+      }
+    },
+    "diagnostic.TotalHemorrhageRate": {
+      "unit": "mL/s",
+      "request": {
+        "Category": "Physiology",
+        "PropertyName": "TotalHemorrhageRate",
+        "Unit": "mL/s"
+      }
+    },
+    "diagnostic.TotalHemorrhagedVolume": {
+      "unit": "mL",
+      "request": {
+        "Category": "Physiology",
+        "PropertyName": "TotalHemorrhagedVolume",
+        "Unit": "mL"
+      }
+    },
+    "diagnostic.AbdominalCavityVolume": {
+      "unit": "mL",
+      "request": {
+        "Category": "LiquidCompartment",
+        "CompartmentName": "AbdominalCavity",
+        "PropertyName": "Volume",
+        "Unit": "mL"
+      }
+    },
+    "aorta_co_saturation": {
+      "unit": "1",
+      "request": {
+        "Category": "LiquidCompartment",
+        "CompartmentName": "Aorta",
+        "SubstanceName": "CarbonMonoxide",
+        "PropertyName": "Saturation"
+      }
+    },
+    "aorta_cohb_g_dL": {
+      "unit": "g/dL",
+      "request": {
+        "Category": "LiquidCompartment",
+        "CompartmentName": "Aorta",
+        "SubstanceName": "Carboxyhemoglobin",
+        "PropertyName": "Concentration",
+        "Unit": "g/dL"
+      }
+    },
+    "oxygen_saturation": {
+      "unit": "1",
+      "request": {
+        "Category": "Physiology",
+        "PropertyName": "OxygenSaturation"
+      }
+    },
+    "aorta_sodium_mEq_L": {
+      "unit": "mEq/L",
+      "request": {
+        "Category": "LiquidCompartment",
+        "CompartmentName": "Aorta",
+        "SubstanceName": "Sodium",
+        "PropertyName": "Molarity",
+        "Unit": "mEq/L"
+      }
+    },
+    "ambient_co_fraction": {
+      "unit": "1",
+      "request": {
+        "Category": "GasCompartment",
+        "CompartmentName": "Ambient",
+        "SubstanceName": "CarbonMonoxide",
+        "PropertyName": "VolumeFraction"
+      }
+    },
+    "ambient_oxygen_fraction": {
+      "unit": "1",
+      "request": {
+        "Category": "GasCompartment",
+        "CompartmentName": "Ambient",
+        "SubstanceName": "Oxygen",
+        "PropertyName": "VolumeFraction"
+      }
+    },
+    "total_fluid_mL": {
+      "unit": "mL",
+      "request": {
+        "Category": "Physiology",
+        "PropertyName": "TotalFluidVolume",
+        "Unit": "mL"
+      }
+    },
+    "alveolar_ventilation_L_min": {
+      "unit": "L/min",
+      "request": {
+        "Category": "Physiology",
+        "PropertyName": "TotalAlveolarVentilation",
+        "Unit": "L/min"
+      }
+    },
+    "left_pleural_pressure_cmH2O": {
+      "unit": "cmH2O",
+      "request": {
+        "Category": "GasCompartment",
+        "CompartmentName": "LeftPleuralCavity",
+        "PropertyName": "Pressure",
+        "Unit": "cmH2O"
+      }
+    },
+    "left_pleural_volume_mL": {
+      "unit": "mL",
+      "request": {
+        "Category": "GasCompartment",
+        "CompartmentName": "LeftPleuralCavity",
+        "PropertyName": "Volume",
+        "Unit": "mL"
+      }
+    },
+    "residual_blood_volume_mL": {
+      "unit": "mL",
+      "request": {
+        "Category": "Action",
+        "ActionName": "LeftHemothorax",
+        "PropertyName": "TotalBloodVolume",
+        "Unit": "mL"
+      }
+    },
+    "tube_flow_mL_min": {
+      "unit": "mL/min",
+      "request": {
+        "Category": "Action",
+        "ActionName": "LeftTubeThoracostomy",
+        "PropertyName": "FlowRate",
+        "Unit": "mL/min"
+      }
+    },
+    "source_flow_mL_s": {
+      "unit": "mL/s",
+      "request": {
+        "Category": "Action",
+        "ActionName": "LeftHemothorax",
+        "PropertyName": "FlowRate",
+        "Unit": "mL/s"
+      }
+    }
+  },
+  "mapping": {
+    "external_hemorrhage": {
+      "primary_metrics": [
+        "vitals.heart_rate",
+        "vitals.systolic_arterial_pressure",
+        "vitals.mean_arterial_pressure",
+        "circulation.cardiac_output",
+        "laboratory.hemoglobin_concentration"
+      ],
+      "supporting_metrics": [
+        "laboratory.lactate_concentration"
+      ],
+      "safety_metrics": [
+        "vitals.heart_rate",
+        "vitals.mean_arterial_pressure",
+        "laboratory.arterial_carbon_dioxide_pressure",
+        "laboratory.blood_ph",
+        "aorta_sodium_mEq_L"
+      ],
+      "mechanism_evidence": [
+        "diagnostic.TotalHemorrhageRate",
+        "diagnostic.TotalHemorrhagedVolume",
+        "diagnostic.BloodVolume"
+      ],
+      "non_metric_evidence": [
+        "native_events",
+        "action_receipts",
+        "source_snapshots"
+      ],
+      "observation_layer": "primary/supporting Agent subject to grants; diagnostics and nonmetric evidence evaluator only",
+      "evidence_status": "historical native replay; availability is branch/time dependent",
+      "pulse_data_source": {
+        "aorta_sodium_mEq_L": {
+          "Category": "LiquidCompartment",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "Sodium",
+          "PropertyName": "Molarity",
+          "Unit": "mEq/L"
+        },
+        "circulation.cardiac_output": {
+          "Category": "Physiology",
+          "PropertyName": "CardiacOutput",
+          "Unit": "L/min",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "diagnostic.BloodVolume": {
+          "Category": "Physiology",
+          "PropertyName": "BloodVolume",
+          "Unit": "mL"
+        },
+        "diagnostic.TotalHemorrhageRate": {
+          "Category": "Physiology",
+          "PropertyName": "TotalHemorrhageRate",
+          "Unit": "mL/s"
+        },
+        "diagnostic.TotalHemorrhagedVolume": {
+          "Category": "Physiology",
+          "PropertyName": "TotalHemorrhagedVolume",
+          "Unit": "mL"
+        },
+        "laboratory.arterial_carbon_dioxide_pressure": {
+          "Category": "LiquidCompartment",
+          "PropertyName": "PartialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "CarbonDioxide"
+        },
+        "laboratory.blood_ph": {
+          "Category": "Physiology",
+          "PropertyName": "BloodPH",
+          "Unit": null,
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "laboratory.hemoglobin_concentration": {
+          "Category": "Substance",
+          "PropertyName": "BloodConcentration",
+          "Unit": "g/dL",
+          "CompartmentName": null,
+          "SubstanceName": "Hemoglobin"
+        },
+        "laboratory.lactate_concentration": {
+          "Category": "Substance",
+          "PropertyName": "BloodConcentration",
+          "Unit": "mg/dL",
+          "CompartmentName": null,
+          "SubstanceName": "Lactate"
+        },
+        "vitals.heart_rate": {
+          "Category": "Physiology",
+          "PropertyName": "HeartRate",
+          "Unit": "1/min",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.mean_arterial_pressure": {
+          "Category": "Physiology",
+          "PropertyName": "MeanArterialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.systolic_arterial_pressure": {
+          "Category": "Physiology",
+          "PropertyName": "SystolicArterialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": null,
+          "SubstanceName": null
+        }
+      }
+    },
+    "abdominal_internal_hemorrhage": {
+      "primary_metrics": [
+        "vitals.heart_rate",
+        "vitals.systolic_arterial_pressure",
+        "vitals.mean_arterial_pressure",
+        "circulation.cardiac_output",
+        "laboratory.hemoglobin_concentration"
+      ],
+      "supporting_metrics": [
+        "laboratory.lactate_concentration"
+      ],
+      "safety_metrics": [
+        "vitals.heart_rate",
+        "vitals.mean_arterial_pressure",
+        "laboratory.arterial_carbon_dioxide_pressure",
+        "laboratory.blood_ph",
+        "aorta_sodium_mEq_L"
+      ],
+      "mechanism_evidence": [
+        "diagnostic.TotalHemorrhageRate",
+        "diagnostic.AbdominalCavityVolume",
+        "diagnostic.BloodVolume"
+      ],
+      "non_metric_evidence": [
+        "native_events",
+        "action_receipts",
+        "source_snapshots"
+      ],
+      "observation_layer": "primary/supporting Agent subject to grants; diagnostics and nonmetric evidence evaluator only",
+      "evidence_status": "historical native replay; availability is branch/time dependent",
+      "pulse_data_source": {
+        "aorta_sodium_mEq_L": {
+          "Category": "LiquidCompartment",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "Sodium",
+          "PropertyName": "Molarity",
+          "Unit": "mEq/L"
+        },
+        "circulation.cardiac_output": {
+          "Category": "Physiology",
+          "PropertyName": "CardiacOutput",
+          "Unit": "L/min",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "diagnostic.AbdominalCavityVolume": {
+          "Category": "LiquidCompartment",
+          "CompartmentName": "AbdominalCavity",
+          "PropertyName": "Volume",
+          "Unit": "mL"
+        },
+        "diagnostic.BloodVolume": {
+          "Category": "Physiology",
+          "PropertyName": "BloodVolume",
+          "Unit": "mL"
+        },
+        "diagnostic.TotalHemorrhageRate": {
+          "Category": "Physiology",
+          "PropertyName": "TotalHemorrhageRate",
+          "Unit": "mL/s"
+        },
+        "laboratory.arterial_carbon_dioxide_pressure": {
+          "Category": "LiquidCompartment",
+          "PropertyName": "PartialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "CarbonDioxide"
+        },
+        "laboratory.blood_ph": {
+          "Category": "Physiology",
+          "PropertyName": "BloodPH",
+          "Unit": null,
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "laboratory.hemoglobin_concentration": {
+          "Category": "Substance",
+          "PropertyName": "BloodConcentration",
+          "Unit": "g/dL",
+          "CompartmentName": null,
+          "SubstanceName": "Hemoglobin"
+        },
+        "laboratory.lactate_concentration": {
+          "Category": "Substance",
+          "PropertyName": "BloodConcentration",
+          "Unit": "mg/dL",
+          "CompartmentName": null,
+          "SubstanceName": "Lactate"
+        },
+        "vitals.heart_rate": {
+          "Category": "Physiology",
+          "PropertyName": "HeartRate",
+          "Unit": "1/min",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.mean_arterial_pressure": {
+          "Category": "Physiology",
+          "PropertyName": "MeanArterialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.systolic_arterial_pressure": {
+          "Category": "Physiology",
+          "PropertyName": "SystolicArterialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": null,
+          "SubstanceName": null
+        }
+      }
+    },
+    "open_pneumothorax": {
+      "primary_metrics": [
+        "vitals.respiration_rate",
+        "vitals.pulse_oximetry",
+        "laboratory.arterial_oxygen_pressure",
+        "respiratory.tidal_volume"
+      ],
+      "supporting_metrics": [
+        "laboratory.lactate_concentration"
+      ],
+      "safety_metrics": [
+        "vitals.heart_rate",
+        "vitals.mean_arterial_pressure",
+        "laboratory.arterial_carbon_dioxide_pressure",
+        "laboratory.blood_ph",
+        "aorta_sodium_mEq_L"
+      ],
+      "mechanism_evidence": [
+        "left_pleural_volume_mL",
+        "left_pleural_pressure_cmH2O"
+      ],
+      "non_metric_evidence": [
+        "native_events",
+        "action_receipts",
+        "source_snapshots"
+      ],
+      "observation_layer": "primary/supporting Agent subject to grants; diagnostics and nonmetric evidence evaluator only",
+      "evidence_status": "historical native replay; availability is branch/time dependent",
+      "pulse_data_source": {
+        "aorta_sodium_mEq_L": {
+          "Category": "LiquidCompartment",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "Sodium",
+          "PropertyName": "Molarity",
+          "Unit": "mEq/L"
+        },
+        "laboratory.arterial_carbon_dioxide_pressure": {
+          "Category": "LiquidCompartment",
+          "PropertyName": "PartialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "CarbonDioxide"
+        },
+        "laboratory.arterial_oxygen_pressure": {
+          "Category": "LiquidCompartment",
+          "PropertyName": "PartialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "Oxygen"
+        },
+        "laboratory.blood_ph": {
+          "Category": "Physiology",
+          "PropertyName": "BloodPH",
+          "Unit": null,
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "laboratory.lactate_concentration": {
+          "Category": "Substance",
+          "PropertyName": "BloodConcentration",
+          "Unit": "mg/dL",
+          "CompartmentName": null,
+          "SubstanceName": "Lactate"
+        },
+        "left_pleural_pressure_cmH2O": {
+          "Category": "GasCompartment",
+          "CompartmentName": "LeftPleuralCavity",
+          "PropertyName": "Pressure",
+          "Unit": "cmH2O"
+        },
+        "left_pleural_volume_mL": {
+          "Category": "GasCompartment",
+          "CompartmentName": "LeftPleuralCavity",
+          "PropertyName": "Volume",
+          "Unit": "mL"
+        },
+        "respiratory.tidal_volume": {
+          "Category": "Physiology",
+          "PropertyName": "TidalVolume",
+          "Unit": "mL",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.heart_rate": {
+          "Category": "Physiology",
+          "PropertyName": "HeartRate",
+          "Unit": "1/min",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.mean_arterial_pressure": {
+          "Category": "Physiology",
+          "PropertyName": "MeanArterialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.pulse_oximetry": {
+          "Category": "Physiology",
+          "PropertyName": "PulseOximetry",
+          "Unit": null,
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.respiration_rate": {
+          "Category": "Physiology",
+          "PropertyName": "RespirationRate",
+          "Unit": "1/min",
+          "CompartmentName": null,
+          "SubstanceName": null
+        }
+      }
+    },
+    "closed_tension_pneumothorax": {
+      "primary_metrics": [
+        "vitals.respiration_rate",
+        "vitals.pulse_oximetry",
+        "laboratory.arterial_oxygen_pressure",
+        "respiratory.tidal_volume"
+      ],
+      "supporting_metrics": [
+        "laboratory.lactate_concentration"
+      ],
+      "safety_metrics": [
+        "vitals.heart_rate",
+        "vitals.mean_arterial_pressure",
+        "laboratory.arterial_carbon_dioxide_pressure",
+        "laboratory.blood_ph",
+        "aorta_sodium_mEq_L"
+      ],
+      "mechanism_evidence": [
+        "left_pleural_volume_mL",
+        "left_pleural_pressure_cmH2O"
+      ],
+      "non_metric_evidence": [
+        "native_events",
+        "action_receipts",
+        "source_snapshots"
+      ],
+      "observation_layer": "primary/supporting Agent subject to grants; diagnostics and nonmetric evidence evaluator only",
+      "evidence_status": "historical native replay; availability is branch/time dependent",
+      "pulse_data_source": {
+        "aorta_sodium_mEq_L": {
+          "Category": "LiquidCompartment",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "Sodium",
+          "PropertyName": "Molarity",
+          "Unit": "mEq/L"
+        },
+        "laboratory.arterial_carbon_dioxide_pressure": {
+          "Category": "LiquidCompartment",
+          "PropertyName": "PartialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "CarbonDioxide"
+        },
+        "laboratory.arterial_oxygen_pressure": {
+          "Category": "LiquidCompartment",
+          "PropertyName": "PartialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "Oxygen"
+        },
+        "laboratory.blood_ph": {
+          "Category": "Physiology",
+          "PropertyName": "BloodPH",
+          "Unit": null,
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "laboratory.lactate_concentration": {
+          "Category": "Substance",
+          "PropertyName": "BloodConcentration",
+          "Unit": "mg/dL",
+          "CompartmentName": null,
+          "SubstanceName": "Lactate"
+        },
+        "left_pleural_pressure_cmH2O": {
+          "Category": "GasCompartment",
+          "CompartmentName": "LeftPleuralCavity",
+          "PropertyName": "Pressure",
+          "Unit": "cmH2O"
+        },
+        "left_pleural_volume_mL": {
+          "Category": "GasCompartment",
+          "CompartmentName": "LeftPleuralCavity",
+          "PropertyName": "Volume",
+          "Unit": "mL"
+        },
+        "respiratory.tidal_volume": {
+          "Category": "Physiology",
+          "PropertyName": "TidalVolume",
+          "Unit": "mL",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.heart_rate": {
+          "Category": "Physiology",
+          "PropertyName": "HeartRate",
+          "Unit": "1/min",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.mean_arterial_pressure": {
+          "Category": "Physiology",
+          "PropertyName": "MeanArterialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.pulse_oximetry": {
+          "Category": "Physiology",
+          "PropertyName": "PulseOximetry",
+          "Unit": null,
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.respiration_rate": {
+          "Category": "Physiology",
+          "PropertyName": "RespirationRate",
+          "Unit": "1/min",
+          "CompartmentName": null,
+          "SubstanceName": null
+        }
+      }
+    },
+    "hemothorax": {
+      "primary_metrics": [
+        "vitals.pulse_oximetry",
+        "laboratory.arterial_oxygen_pressure",
+        "respiratory.tidal_volume",
+        "vitals.mean_arterial_pressure",
+        "laboratory.hemoglobin_concentration"
+      ],
+      "supporting_metrics": [
+        "laboratory.lactate_concentration"
+      ],
+      "safety_metrics": [
+        "vitals.heart_rate",
+        "vitals.mean_arterial_pressure",
+        "laboratory.arterial_carbon_dioxide_pressure",
+        "laboratory.blood_ph",
+        "aorta_sodium_mEq_L"
+      ],
+      "mechanism_evidence": [
+        "residual_blood_volume_mL",
+        "source_flow_mL_s",
+        "tube_flow_mL_min"
+      ],
+      "non_metric_evidence": [
+        "native_events",
+        "action_receipts",
+        "source_snapshots"
+      ],
+      "observation_layer": "primary/supporting Agent subject to grants; diagnostics and nonmetric evidence evaluator only",
+      "evidence_status": "historical native replay; availability is branch/time dependent",
+      "pulse_data_source": {
+        "aorta_sodium_mEq_L": {
+          "Category": "LiquidCompartment",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "Sodium",
+          "PropertyName": "Molarity",
+          "Unit": "mEq/L"
+        },
+        "laboratory.arterial_carbon_dioxide_pressure": {
+          "Category": "LiquidCompartment",
+          "PropertyName": "PartialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "CarbonDioxide"
+        },
+        "laboratory.arterial_oxygen_pressure": {
+          "Category": "LiquidCompartment",
+          "PropertyName": "PartialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "Oxygen"
+        },
+        "laboratory.blood_ph": {
+          "Category": "Physiology",
+          "PropertyName": "BloodPH",
+          "Unit": null,
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "laboratory.hemoglobin_concentration": {
+          "Category": "Substance",
+          "PropertyName": "BloodConcentration",
+          "Unit": "g/dL",
+          "CompartmentName": null,
+          "SubstanceName": "Hemoglobin"
+        },
+        "laboratory.lactate_concentration": {
+          "Category": "Substance",
+          "PropertyName": "BloodConcentration",
+          "Unit": "mg/dL",
+          "CompartmentName": null,
+          "SubstanceName": "Lactate"
+        },
+        "residual_blood_volume_mL": {
+          "Category": "Action",
+          "ActionName": "LeftHemothorax",
+          "PropertyName": "TotalBloodVolume",
+          "Unit": "mL"
+        },
+        "respiratory.tidal_volume": {
+          "Category": "Physiology",
+          "PropertyName": "TidalVolume",
+          "Unit": "mL",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "source_flow_mL_s": {
+          "Category": "Action",
+          "ActionName": "LeftHemothorax",
+          "PropertyName": "FlowRate",
+          "Unit": "mL/s"
+        },
+        "tube_flow_mL_min": {
+          "Category": "Action",
+          "ActionName": "LeftTubeThoracostomy",
+          "PropertyName": "FlowRate",
+          "Unit": "mL/min"
+        },
+        "vitals.heart_rate": {
+          "Category": "Physiology",
+          "PropertyName": "HeartRate",
+          "Unit": "1/min",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.mean_arterial_pressure": {
+          "Category": "Physiology",
+          "PropertyName": "MeanArterialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.pulse_oximetry": {
+          "Category": "Physiology",
+          "PropertyName": "PulseOximetry",
+          "Unit": null,
+          "CompartmentName": null,
+          "SubstanceName": null
+        }
+      }
+    },
+    "respiratory_muscle_impairment": {
+      "primary_metrics": [
+        "vitals.respiration_rate",
+        "respiratory.tidal_volume",
+        "laboratory.arterial_carbon_dioxide_pressure",
+        "laboratory.blood_ph",
+        "vitals.pulse_oximetry"
+      ],
+      "supporting_metrics": [
+        "laboratory.lactate_concentration"
+      ],
+      "safety_metrics": [
+        "vitals.heart_rate",
+        "vitals.mean_arterial_pressure",
+        "laboratory.arterial_carbon_dioxide_pressure",
+        "laboratory.blood_ph",
+        "aorta_sodium_mEq_L"
+      ],
+      "mechanism_evidence": [
+        "alveolar_ventilation_L_min"
+      ],
+      "non_metric_evidence": [
+        "native_events",
+        "action_receipts",
+        "source_snapshots"
+      ],
+      "observation_layer": "primary/supporting Agent subject to grants; diagnostics and nonmetric evidence evaluator only",
+      "evidence_status": "historical native replay; availability is branch/time dependent",
+      "pulse_data_source": {
+        "alveolar_ventilation_L_min": {
+          "Category": "Physiology",
+          "PropertyName": "TotalAlveolarVentilation",
+          "Unit": "L/min"
+        },
+        "aorta_sodium_mEq_L": {
+          "Category": "LiquidCompartment",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "Sodium",
+          "PropertyName": "Molarity",
+          "Unit": "mEq/L"
+        },
+        "laboratory.arterial_carbon_dioxide_pressure": {
+          "Category": "LiquidCompartment",
+          "PropertyName": "PartialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "CarbonDioxide"
+        },
+        "laboratory.blood_ph": {
+          "Category": "Physiology",
+          "PropertyName": "BloodPH",
+          "Unit": null,
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "laboratory.lactate_concentration": {
+          "Category": "Substance",
+          "PropertyName": "BloodConcentration",
+          "Unit": "mg/dL",
+          "CompartmentName": null,
+          "SubstanceName": "Lactate"
+        },
+        "respiratory.tidal_volume": {
+          "Category": "Physiology",
+          "PropertyName": "TidalVolume",
+          "Unit": "mL",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.heart_rate": {
+          "Category": "Physiology",
+          "PropertyName": "HeartRate",
+          "Unit": "1/min",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.mean_arterial_pressure": {
+          "Category": "Physiology",
+          "PropertyName": "MeanArterialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.pulse_oximetry": {
+          "Category": "Physiology",
+          "PropertyName": "PulseOximetry",
+          "Unit": null,
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.respiration_rate": {
+          "Category": "Physiology",
+          "PropertyName": "RespirationRate",
+          "Unit": "1/min",
+          "CompartmentName": null,
+          "SubstanceName": null
+        }
+      }
+    },
+    "impaired_alveolar_exchange": {
+      "primary_metrics": [
+        "vitals.pulse_oximetry",
+        "laboratory.arterial_oxygen_pressure",
+        "respiratory.inspired_oxygen_fraction",
+        "laboratory.arterial_carbon_dioxide_pressure",
+        "laboratory.blood_ph"
+      ],
+      "supporting_metrics": [
+        "laboratory.lactate_concentration"
+      ],
+      "safety_metrics": [
+        "vitals.heart_rate",
+        "vitals.mean_arterial_pressure",
+        "laboratory.arterial_carbon_dioxide_pressure",
+        "laboratory.blood_ph",
+        "aorta_sodium_mEq_L"
+      ],
+      "mechanism_evidence": [
+        "oxygen_saturation",
+        "alveolar_ventilation_L_min"
+      ],
+      "non_metric_evidence": [
+        "native_events",
+        "action_receipts",
+        "source_snapshots"
+      ],
+      "observation_layer": "primary/supporting Agent subject to grants; diagnostics and nonmetric evidence evaluator only",
+      "evidence_status": "historical native replay; availability is branch/time dependent",
+      "pulse_data_source": {
+        "alveolar_ventilation_L_min": {
+          "Category": "Physiology",
+          "PropertyName": "TotalAlveolarVentilation",
+          "Unit": "L/min"
+        },
+        "aorta_sodium_mEq_L": {
+          "Category": "LiquidCompartment",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "Sodium",
+          "PropertyName": "Molarity",
+          "Unit": "mEq/L"
+        },
+        "laboratory.arterial_carbon_dioxide_pressure": {
+          "Category": "LiquidCompartment",
+          "PropertyName": "PartialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "CarbonDioxide"
+        },
+        "laboratory.arterial_oxygen_pressure": {
+          "Category": "LiquidCompartment",
+          "PropertyName": "PartialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "Oxygen"
+        },
+        "laboratory.blood_ph": {
+          "Category": "Physiology",
+          "PropertyName": "BloodPH",
+          "Unit": null,
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "laboratory.lactate_concentration": {
+          "Category": "Substance",
+          "PropertyName": "BloodConcentration",
+          "Unit": "mg/dL",
+          "CompartmentName": null,
+          "SubstanceName": "Lactate"
+        },
+        "oxygen_saturation": {
+          "Category": "Physiology",
+          "PropertyName": "OxygenSaturation"
+        },
+        "respiratory.inspired_oxygen_fraction": {
+          "Category": "Physiology",
+          "PropertyName": "FractionOfInspiredOxygen",
+          "Unit": null,
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.heart_rate": {
+          "Category": "Physiology",
+          "PropertyName": "HeartRate",
+          "Unit": "1/min",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.mean_arterial_pressure": {
+          "Category": "Physiology",
+          "PropertyName": "MeanArterialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.pulse_oximetry": {
+          "Category": "Physiology",
+          "PropertyName": "PulseOximetry",
+          "Unit": null,
+          "CompartmentName": null,
+          "SubstanceName": null
+        }
+      }
+    },
+    "dehydration": {
+      "primary_metrics": [
+        "vitals.heart_rate",
+        "vitals.mean_arterial_pressure",
+        "circulation.cardiac_output",
+        "laboratory.hemoglobin_concentration",
+        "laboratory.aorta_sodium_concentration"
+      ],
+      "supporting_metrics": [
+        "laboratory.lactate_concentration"
+      ],
+      "safety_metrics": [
+        "vitals.heart_rate",
+        "vitals.mean_arterial_pressure",
+        "laboratory.arterial_carbon_dioxide_pressure",
+        "laboratory.blood_ph",
+        "aorta_sodium_mEq_L"
+      ],
+      "mechanism_evidence": [
+        "total_fluid_mL",
+        "diagnostic.BloodVolume",
+        "aorta_sodium_mEq_L"
+      ],
+      "non_metric_evidence": [
+        "native_events",
+        "action_receipts",
+        "source_snapshots"
+      ],
+      "observation_layer": "primary/supporting Agent subject to grants; diagnostics and nonmetric evidence evaluator only",
+      "evidence_status": "historical native replay; availability is branch/time dependent",
+      "pulse_data_source": {
+        "aorta_sodium_mEq_L": {
+          "Category": "LiquidCompartment",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "Sodium",
+          "PropertyName": "Molarity",
+          "Unit": "mEq/L"
+        },
+        "circulation.cardiac_output": {
+          "Category": "Physiology",
+          "PropertyName": "CardiacOutput",
+          "Unit": "L/min",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "diagnostic.BloodVolume": {
+          "Category": "Physiology",
+          "PropertyName": "BloodVolume",
+          "Unit": "mL"
+        },
+        "laboratory.aorta_sodium_concentration": {
+          "Category": "LiquidCompartment",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "Sodium",
+          "PropertyName": "Molarity",
+          "Unit": "mEq/L"
+        },
+        "laboratory.arterial_carbon_dioxide_pressure": {
+          "Category": "LiquidCompartment",
+          "PropertyName": "PartialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "CarbonDioxide"
+        },
+        "laboratory.blood_ph": {
+          "Category": "Physiology",
+          "PropertyName": "BloodPH",
+          "Unit": null,
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "laboratory.hemoglobin_concentration": {
+          "Category": "Substance",
+          "PropertyName": "BloodConcentration",
+          "Unit": "g/dL",
+          "CompartmentName": null,
+          "SubstanceName": "Hemoglobin"
+        },
+        "laboratory.lactate_concentration": {
+          "Category": "Substance",
+          "PropertyName": "BloodConcentration",
+          "Unit": "mg/dL",
+          "CompartmentName": null,
+          "SubstanceName": "Lactate"
+        },
+        "total_fluid_mL": {
+          "Category": "Physiology",
+          "PropertyName": "TotalFluidVolume",
+          "Unit": "mL"
+        },
+        "vitals.heart_rate": {
+          "Category": "Physiology",
+          "PropertyName": "HeartRate",
+          "Unit": "1/min",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.mean_arterial_pressure": {
+          "Category": "Physiology",
+          "PropertyName": "MeanArterialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": null,
+          "SubstanceName": null
+        }
+      }
+    },
+    "carbon_monoxide_exposure": {
+      "primary_metrics": [
+        "laboratory.aorta_carboxyhemoglobin_concentration",
+        "laboratory.arterial_oxygen_pressure"
+      ],
+      "supporting_metrics": [
+        "laboratory.lactate_concentration"
+      ],
+      "safety_metrics": [
+        "vitals.heart_rate",
+        "vitals.mean_arterial_pressure",
+        "laboratory.arterial_carbon_dioxide_pressure",
+        "laboratory.blood_ph",
+        "aorta_sodium_mEq_L"
+      ],
+      "mechanism_evidence": [
+        "aorta_co_saturation",
+        "aorta_cohb_g_dL",
+        "oxygen_saturation",
+        "ambient_co_fraction"
+      ],
+      "non_metric_evidence": [
+        "native_events",
+        "action_receipts",
+        "source_snapshots"
+      ],
+      "observation_layer": "primary/supporting Agent subject to grants; diagnostics and nonmetric evidence evaluator only",
+      "evidence_status": "historical native replay; availability is branch/time dependent",
+      "pulse_data_source": {
+        "ambient_co_fraction": {
+          "Category": "GasCompartment",
+          "CompartmentName": "Ambient",
+          "SubstanceName": "CarbonMonoxide",
+          "PropertyName": "VolumeFraction"
+        },
+        "aorta_co_saturation": {
+          "Category": "LiquidCompartment",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "CarbonMonoxide",
+          "PropertyName": "Saturation"
+        },
+        "aorta_cohb_g_dL": {
+          "Category": "LiquidCompartment",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "Carboxyhemoglobin",
+          "PropertyName": "Concentration",
+          "Unit": "g/dL"
+        },
+        "aorta_sodium_mEq_L": {
+          "Category": "LiquidCompartment",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "Sodium",
+          "PropertyName": "Molarity",
+          "Unit": "mEq/L"
+        },
+        "laboratory.aorta_carboxyhemoglobin_concentration": {
+          "Category": "LiquidCompartment",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "Carboxyhemoglobin",
+          "PropertyName": "Concentration",
+          "Unit": "g/dL"
+        },
+        "laboratory.arterial_carbon_dioxide_pressure": {
+          "Category": "LiquidCompartment",
+          "PropertyName": "PartialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "CarbonDioxide"
+        },
+        "laboratory.arterial_oxygen_pressure": {
+          "Category": "LiquidCompartment",
+          "PropertyName": "PartialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "Oxygen"
+        },
+        "laboratory.blood_ph": {
+          "Category": "Physiology",
+          "PropertyName": "BloodPH",
+          "Unit": null,
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "laboratory.lactate_concentration": {
+          "Category": "Substance",
+          "PropertyName": "BloodConcentration",
+          "Unit": "mg/dL",
+          "CompartmentName": null,
+          "SubstanceName": "Lactate"
+        },
+        "oxygen_saturation": {
+          "Category": "Physiology",
+          "PropertyName": "OxygenSaturation"
+        },
+        "vitals.heart_rate": {
+          "Category": "Physiology",
+          "PropertyName": "HeartRate",
+          "Unit": "1/min",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.mean_arterial_pressure": {
+          "Category": "Physiology",
+          "PropertyName": "MeanArterialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": null,
+          "SubstanceName": null
+        }
+      }
+    },
+    "environmental_hypoxia": {
+      "primary_metrics": [
+        "vitals.pulse_oximetry",
+        "laboratory.arterial_oxygen_pressure",
+        "respiratory.inspired_oxygen_fraction",
+        "vitals.heart_rate"
+      ],
+      "supporting_metrics": [
+        "laboratory.lactate_concentration"
+      ],
+      "safety_metrics": [
+        "vitals.heart_rate",
+        "vitals.mean_arterial_pressure",
+        "laboratory.arterial_carbon_dioxide_pressure",
+        "laboratory.blood_ph",
+        "aorta_sodium_mEq_L"
+      ],
+      "mechanism_evidence": [
+        "ambient_oxygen_fraction",
+        "oxygen_saturation"
+      ],
+      "non_metric_evidence": [
+        "native_events",
+        "action_receipts",
+        "source_snapshots"
+      ],
+      "observation_layer": "primary/supporting Agent subject to grants; diagnostics and nonmetric evidence evaluator only",
+      "evidence_status": "historical native replay; availability is branch/time dependent",
+      "pulse_data_source": {
+        "ambient_oxygen_fraction": {
+          "Category": "GasCompartment",
+          "CompartmentName": "Ambient",
+          "SubstanceName": "Oxygen",
+          "PropertyName": "VolumeFraction"
+        },
+        "aorta_sodium_mEq_L": {
+          "Category": "LiquidCompartment",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "Sodium",
+          "PropertyName": "Molarity",
+          "Unit": "mEq/L"
+        },
+        "laboratory.arterial_carbon_dioxide_pressure": {
+          "Category": "LiquidCompartment",
+          "PropertyName": "PartialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "CarbonDioxide"
+        },
+        "laboratory.arterial_oxygen_pressure": {
+          "Category": "LiquidCompartment",
+          "PropertyName": "PartialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": "Aorta",
+          "SubstanceName": "Oxygen"
+        },
+        "laboratory.blood_ph": {
+          "Category": "Physiology",
+          "PropertyName": "BloodPH",
+          "Unit": null,
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "laboratory.lactate_concentration": {
+          "Category": "Substance",
+          "PropertyName": "BloodConcentration",
+          "Unit": "mg/dL",
+          "CompartmentName": null,
+          "SubstanceName": "Lactate"
+        },
+        "oxygen_saturation": {
+          "Category": "Physiology",
+          "PropertyName": "OxygenSaturation"
+        },
+        "respiratory.inspired_oxygen_fraction": {
+          "Category": "Physiology",
+          "PropertyName": "FractionOfInspiredOxygen",
+          "Unit": null,
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.heart_rate": {
+          "Category": "Physiology",
+          "PropertyName": "HeartRate",
+          "Unit": "1/min",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.mean_arterial_pressure": {
+          "Category": "Physiology",
+          "PropertyName": "MeanArterialPressure",
+          "Unit": "mmHg",
+          "CompartmentName": null,
+          "SubstanceName": null
+        },
+        "vitals.pulse_oximetry": {
+          "Category": "Physiology",
+          "PropertyName": "PulseOximetry",
+          "Unit": null,
+          "CompartmentName": null,
+          "SubstanceName": null
+        }
+      }
+    }
+  }
+}

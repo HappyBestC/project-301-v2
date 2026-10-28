@@ -1,0 +1,7 @@
+{
+  "script_sha256": "2391d4bf57f0c397340924175034a07000e95d6379a44d2f42b4c07fb1c8dc4c",
+  "pulse_binary_sha256": "f7eeb22ccef5392b2c0e2698037bc0aa47b0bf595f959c4c8dbc94f5d48023cf",
+  "production_enabled": false,
+  "branch": "A",
+  "continuous_native_session": true
+}

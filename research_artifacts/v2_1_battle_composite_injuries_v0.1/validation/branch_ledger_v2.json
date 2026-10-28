@@ -1,0 +1,1520 @@
+{
+  "attempts": 47,
+  "complete_response_windows": 45,
+  "partial_windows": 2,
+  "budget_basis": "User-approved cap: 45 complete V2.1 composite response branches (2026-10-14). All partial attempts disclosed separately. Legacy regression not a new composite experiment.",
+  "branches": [
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/dehydration_pair_retry/A",
+      "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 659.9999999996897,
+      "configured_end_s": 660,
+      "complete_response_window": true,
+      "observation_sha256": "d22ca24c1c5307efb74620b8f5fb3905bea3a228d850d417eb6fc507878a2ffc",
+      "event_names": [
+        "Antidiuresis",
+        "Hypernatremia",
+        "Hypoxia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "Antidiuresis": 0.02,
+        "Hypernatremia": 0.18,
+        "StartOfCardiacCycle": 0.18,
+        "StartOfInhale": 1.8800000000000012,
+        "StartOfExhale": 3.3800000000000026,
+        "Hypoxia": 98.03999999999763,
+        "Tachycardia": 116.17999999999402
+      },
+      "final_events": {
+        "Antidiuresis": 1493.4799999989318,
+        "Hypernatremia": 659.8399999996899
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/dehydration_pair_retry/B",
+      "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 659.9999999996897,
+      "configured_end_s": 660,
+      "complete_response_window": true,
+      "observation_sha256": "ed554918c2e463ea42c60814733859f98f6e3069ed859326e77e48bc27a139f0",
+      "event_names": [
+        "Antidiuresis",
+        "Hypernatremia",
+        "Hypoxia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "Antidiuresis": 0.02,
+        "Hypernatremia": 0.18,
+        "StartOfCardiacCycle": 0.18,
+        "StartOfInhale": 1.8800000000000012,
+        "StartOfExhale": 3.3800000000000026,
+        "Hypoxia": 98.03999999999763,
+        "Tachycardia": 116.17999999999402
+      },
+      "final_events": {
+        "Antidiuresis": 1493.4799999989318,
+        "Hypernatremia": 659.8399999996899,
+        "Hypoxia": 561.9799999997789,
+        "Tachycardia": 543.8399999997954
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_final/0",
+      "pattern_id": "penetrating_thoracic_composite_v2",
+      "profile_version": "301.v2_1.thoracic.aligned_onsets.2",
+      "status": "PASS",
+      "error": null,
+      "observed_end_s": 959.9999999994169,
+      "configured_end_s": 960,
+      "complete_response_window": true,
+      "observation_sha256": "4ff7b256fb7eaeff28c408ed605f47bd575dda7422ca1be64bb61a0a1013ad56",
+      "event_names": [
+        "Hypernatremia",
+        "Hypoxia",
+        "MinimalHemothorax",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "MinimalHemothorax": 81.6400000000009,
+        "Tachycardia": 625.8799999997208,
+        "Hypoxia": 654.0999999996951,
+        "Hypernatremia": 844.6399999995218
+      },
+      "final_events": {
+        "Hypernatremia": 115.37999999999418,
+        "Hypoxia": 305.9200000000117,
+        "Tachycardia": 334.13999999998606
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_final/1",
+      "pattern_id": "blunt_thoracoabdominal_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "PASS",
+      "error": null,
+      "observed_end_s": 479.9999999998534,
+      "configured_end_s": 480,
+      "complete_response_window": true,
+      "observation_sha256": "e9b06bc3c237d0f5f2bb7393b897b29923d3e2ecb01a69da9c49eace275ccf35",
+      "event_names": [
+        "Hypoxia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Tachycardia": 146.52000000000115,
+        "Hypoxia": 170.34000000001333
+      },
+      "final_events": {},
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_final/2",
+      "pattern_id": "blast_hemorrhage_respiratory_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "PASS",
+      "error": null,
+      "observed_end_s": 479.9999999998534,
+      "configured_end_s": 480,
+      "complete_response_window": true,
+      "observation_sha256": "e787110a5622966767df1a899b1db39e6084fe1fb4998d7e2e09a59967fd324c",
+      "event_names": [
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachypnea"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Tachypnea": 184.44000000002055
+      },
+      "final_events": {},
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_final/3",
+      "pattern_id": "fire_co_alveolar_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "PASS",
+      "error": null,
+      "observed_end_s": 1859.9999999985985,
+      "configured_end_s": 1860,
+      "complete_response_window": true,
+      "observation_sha256": "05e282fd6305ad3f3cf6bda2a7e8a6b2a53c2414308a333783232e9ecf87bcfd",
+      "event_names": [
+        "Hypernatremia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Hypernatremia": 866.439999999502
+      },
+      "final_events": {
+        "Hypernatremia": 993.5799999993864
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_final/4",
+      "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "PASS",
+      "error": null,
+      "observed_end_s": 659.9999999996897,
+      "configured_end_s": 660,
+      "complete_response_window": true,
+      "observation_sha256": "d5ca83be3d8147f2ff3523293f57fe85e9f37fbf6be9067b61209a375c69b832",
+      "event_names": [
+        "Antidiuresis",
+        "Hypernatremia",
+        "Hypoxia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "Antidiuresis": 0.02,
+        "Hypernatremia": 0.18,
+        "StartOfCardiacCycle": 0.18,
+        "StartOfInhale": 1.8800000000000012,
+        "StartOfExhale": 3.3800000000000026,
+        "Hypoxia": 98.03999999999763,
+        "Tachycardia": 116.17999999999402
+      },
+      "final_events": {
+        "Antidiuresis": 1493.4799999989318,
+        "Hypernatremia": 659.8399999996899
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_repeat/0",
+      "pattern_id": "penetrating_thoracic_composite_v2",
+      "profile_version": "301.v2_1.thoracic.aligned_onsets.2",
+      "status": "FAIL",
+      "error": "",
+      "observed_end_s": 959.9999999994169,
+      "configured_end_s": 960,
+      "complete_response_window": true,
+      "observation_sha256": "4ff7b256fb7eaeff28c408ed605f47bd575dda7422ca1be64bb61a0a1013ad56",
+      "event_names": [
+        "Hypernatremia",
+        "Hypoxia",
+        "MinimalHemothorax",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "MinimalHemothorax": 81.6400000000009,
+        "Tachycardia": 625.8799999997208,
+        "Hypoxia": 654.0999999996951,
+        "Hypernatremia": 844.6399999995218
+      },
+      "final_events": {
+        "Hypernatremia": 115.37999999999418,
+        "Hypoxia": 305.9200000000117,
+        "Tachycardia": 334.13999999998606
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_repeat/1",
+      "pattern_id": "blunt_thoracoabdominal_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "FAIL",
+      "error": "",
+      "observed_end_s": 479.9999999998534,
+      "configured_end_s": 480,
+      "complete_response_window": true,
+      "observation_sha256": "e9b06bc3c237d0f5f2bb7393b897b29923d3e2ecb01a69da9c49eace275ccf35",
+      "event_names": [
+        "Hypoxia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Tachycardia": 146.52000000000115,
+        "Hypoxia": 170.34000000001333
+      },
+      "final_events": {},
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_repeat/2",
+      "pattern_id": "blast_hemorrhage_respiratory_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "FAIL",
+      "error": "",
+      "observed_end_s": 479.9999999998534,
+      "configured_end_s": 480,
+      "complete_response_window": true,
+      "observation_sha256": "e787110a5622966767df1a899b1db39e6084fe1fb4998d7e2e09a59967fd324c",
+      "event_names": [
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachypnea"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Tachypnea": 184.44000000002055
+      },
+      "final_events": {},
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_repeat/3",
+      "pattern_id": "fire_co_alveolar_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "FAIL",
+      "error": "",
+      "observed_end_s": 1859.9999999985985,
+      "configured_end_s": 1860,
+      "complete_response_window": true,
+      "observation_sha256": "05e282fd6305ad3f3cf6bda2a7e8a6b2a53c2414308a333783232e9ecf87bcfd",
+      "event_names": [
+        "Hypernatremia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Hypernatremia": 866.439999999502
+      },
+      "final_events": {
+        "Hypernatremia": 993.5799999993864
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_repeat/4",
+      "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "FAIL",
+      "error": "",
+      "observed_end_s": 659.9999999996897,
+      "configured_end_s": 660,
+      "complete_response_window": true,
+      "observation_sha256": "d5ca83be3d8147f2ff3523293f57fe85e9f37fbf6be9067b61209a375c69b832",
+      "event_names": [
+        "Antidiuresis",
+        "Hypernatremia",
+        "Hypoxia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "Antidiuresis": 0.02,
+        "Hypernatremia": 0.18,
+        "StartOfCardiacCycle": 0.18,
+        "StartOfInhale": 1.8800000000000012,
+        "StartOfExhale": 3.3800000000000026,
+        "Hypoxia": 98.03999999999763,
+        "Tachycardia": 116.17999999999402
+      },
+      "final_events": {
+        "Antidiuresis": 1493.4799999989318,
+        "Hypernatremia": 659.8399999996899
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_risk_v2/0",
+      "pattern_id": "penetrating_thoracic_composite_v2",
+      "profile_version": "301.v2_1.thoracic.aligned_onsets.2",
+      "status": "PASS",
+      "error": null,
+      "observed_end_s": 959.9999999994169,
+      "configured_end_s": 960,
+      "complete_response_window": true,
+      "observation_sha256": "4ff7b256fb7eaeff28c408ed605f47bd575dda7422ca1be64bb61a0a1013ad56",
+      "event_names": [
+        "Hypernatremia",
+        "Hypoxia",
+        "MinimalHemothorax",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "MinimalHemothorax": 81.6400000000009,
+        "Tachycardia": 625.8799999997208,
+        "Hypoxia": 654.0999999996951,
+        "Hypernatremia": 844.6399999995218
+      },
+      "final_events": {
+        "Hypernatremia": 115.37999999999418,
+        "Hypoxia": 305.9200000000117,
+        "Tachycardia": 334.13999999998606
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_risk_v2/1",
+      "pattern_id": "blunt_thoracoabdominal_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "PASS",
+      "error": null,
+      "observed_end_s": 479.9999999998534,
+      "configured_end_s": 480,
+      "complete_response_window": true,
+      "observation_sha256": "e9b06bc3c237d0f5f2bb7393b897b29923d3e2ecb01a69da9c49eace275ccf35",
+      "event_names": [
+        "Hypoxia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Tachycardia": 146.52000000000115,
+        "Hypoxia": 170.34000000001333
+      },
+      "final_events": {},
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_risk_v2/2",
+      "pattern_id": "blast_hemorrhage_respiratory_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "PASS",
+      "error": null,
+      "observed_end_s": 479.9999999998534,
+      "configured_end_s": 480,
+      "complete_response_window": true,
+      "observation_sha256": "e787110a5622966767df1a899b1db39e6084fe1fb4998d7e2e09a59967fd324c",
+      "event_names": [
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachypnea"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Tachypnea": 184.44000000002055
+      },
+      "final_events": {},
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_risk_v2/3",
+      "pattern_id": "fire_co_alveolar_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "PASS",
+      "error": null,
+      "observed_end_s": 1859.9999999985985,
+      "configured_end_s": 1860,
+      "complete_response_window": true,
+      "observation_sha256": "05e282fd6305ad3f3cf6bda2a7e8a6b2a53c2414308a333783232e9ecf87bcfd",
+      "event_names": [
+        "Hypernatremia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Hypernatremia": 866.439999999502
+      },
+      "final_events": {
+        "Hypernatremia": 993.5799999993864
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_risk_v2/4",
+      "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "PASS",
+      "error": null,
+      "observed_end_s": 659.9999999996897,
+      "configured_end_s": 660,
+      "complete_response_window": true,
+      "observation_sha256": "d5ca83be3d8147f2ff3523293f57fe85e9f37fbf6be9067b61209a375c69b832",
+      "event_names": [
+        "Antidiuresis",
+        "Hypernatremia",
+        "Hypoxia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "Antidiuresis": 0.02,
+        "Hypernatremia": 0.18,
+        "StartOfCardiacCycle": 0.18,
+        "StartOfInhale": 1.8800000000000012,
+        "StartOfExhale": 3.3800000000000026,
+        "Hypoxia": 98.03999999999763,
+        "Tachycardia": 116.17999999999402
+      },
+      "final_events": {
+        "Antidiuresis": 1493.4799999989318,
+        "Hypernatremia": 659.8399999996899
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage1/0/control",
+      "pattern_id": "penetrating_thoracic_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 959.9999999994169,
+      "configured_end_s": 960,
+      "complete_response_window": true,
+      "observation_sha256": "2e4b501c61b5530de2da830f93f79478201c1404a62cfc0ecaab90caf2720c6a",
+      "event_names": [
+        "Antidiuresis",
+        "BrainOxygenDeficit",
+        "Hypernatremia",
+        "Hypoxia",
+        "MinimalHemothorax",
+        "ModerateHypocapnia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia",
+        "Tachypnea"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "MinimalHemothorax": 81.6400000000009,
+        "Tachycardia": 146.78000000000128,
+        "Hypoxia": 172.74000000001456,
+        "Antidiuresis": 320.51999999999845,
+        "Tachypnea": 493.0999999998415,
+        "ModerateHypocapnia": 712.1999999996423,
+        "Hypernatremia": 798.5999999995637,
+        "BrainOxygenDeficit": 882.5599999994873
+      },
+      "final_events": {
+        "Antidiuresis": 1.2200000000000006,
+        "BrainOxygenDeficit": 77.46000000000173,
+        "Hypernatremia": 161.42000000000877,
+        "Hypoxia": 787.279999999574,
+        "MinimalHemothorax": 878.3799999994911,
+        "ModerateHypocapnia": 247.82000000005297,
+        "Tachycardia": 813.2399999995504,
+        "Tachypnea": 466.9199999998653
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage1/1/control",
+      "pattern_id": "blunt_thoracoabdominal_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 479.9999999998534,
+      "configured_end_s": 480,
+      "complete_response_window": true,
+      "observation_sha256": "7e37d7eabb274812a45f0484ced9f0975821b9077cd6db707b58a727baa1ddd7",
+      "event_names": [
+        "Antidiuresis",
+        "BrainOxygenDeficit",
+        "Hypoxia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia",
+        "Tachypnea"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Tachycardia": 146.52000000000115,
+        "Hypoxia": 170.34000000001333,
+        "Antidiuresis": 256.4800000000567,
+        "BrainOxygenDeficit": 445.9199999998844,
+        "Tachypnea": 458.459999999873
+      },
+      "final_events": {
+        "Antidiuresis": 223.54000000004055,
+        "BrainOxygenDeficit": 34.09999999999973,
+        "Hypoxia": 309.6800000000083,
+        "Tachycardia": 333.49999999998664,
+        "Tachypnea": 21.55999999999963
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage1/2/control",
+      "pattern_id": "blast_hemorrhage_respiratory_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 479.9999999998534,
+      "configured_end_s": 480,
+      "complete_response_window": true,
+      "observation_sha256": "b1b97c68f5ac7809e33ec0097d27130bb3f0242cdb451a257777197586d631e4",
+      "event_names": [
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989
+      },
+      "final_events": {},
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage1/3/control",
+      "pattern_id": "fire_co_alveolar_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 1859.9999999985985,
+      "configured_end_s": 1860,
+      "complete_response_window": true,
+      "observation_sha256": "9e6183713839d7e049a6ae377799c4f9eb2058181b5fbde32bc2231c07958ce9",
+      "event_names": [
+        "Hypernatremia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Hypernatremia": 866.439999999502
+      },
+      "final_events": {
+        "Hypernatremia": 993.5799999993864
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage1/4/control",
+      "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 659.9999999996897,
+      "configured_end_s": 660,
+      "complete_response_window": true,
+      "observation_sha256": "76a347784c6faa199bede80d056161c40707d2c8d014bd02f3fd6384936a633c",
+      "event_names": [
+        "Antidiuresis",
+        "Hypernatremia",
+        "Hypoxia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "Antidiuresis": 0.02,
+        "Hypernatremia": 0.18,
+        "StartOfCardiacCycle": 0.18,
+        "StartOfInhale": 1.8800000000000012,
+        "StartOfExhale": 3.3800000000000026,
+        "Hypoxia": 98.03999999999763,
+        "Tachycardia": 116.17999999999402
+      },
+      "final_events": {
+        "Antidiuresis": 1493.4799999989318,
+        "Hypernatremia": 659.8399999996899,
+        "Hypoxia": 561.9799999997789,
+        "Tachycardia": 543.8399999997954
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/0/A",
+      "pattern_id": "penetrating_thoracic_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 959.9999999994169,
+      "configured_end_s": 960,
+      "complete_response_window": true,
+      "observation_sha256": "d9469da84b93fe8d3e5549e1fb34fc35b98ee877caacd6597fca0aaff93d0df8",
+      "event_names": [
+        "Antidiuresis",
+        "BrainOxygenDeficit",
+        "Hypernatremia",
+        "Hypoxia",
+        "MinimalHemothorax",
+        "ModerateHypocapnia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia",
+        "Tachypnea"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "MinimalHemothorax": 81.6400000000009,
+        "Tachycardia": 146.78000000000128,
+        "Hypoxia": 172.74000000001456,
+        "Antidiuresis": 320.51999999999845,
+        "Tachypnea": 493.0999999998415,
+        "ModerateHypocapnia": 709.6799999996446,
+        "Hypernatremia": 798.5999999995637,
+        "BrainOxygenDeficit": 880.3599999994893
+      },
+      "final_events": {
+        "Antidiuresis": 1.2200000000000006,
+        "BrainOxygenDeficit": 79.66000000000129,
+        "Hypernatremia": 161.42000000000877,
+        "Hypoxia": 787.279999999574,
+        "MinimalHemothorax": 878.3799999994911,
+        "ModerateHypocapnia": 250.34000000005426,
+        "Tachycardia": 813.2399999995504,
+        "Tachypnea": 466.9199999998653
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/0/AB",
+      "pattern_id": "penetrating_thoracic_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 959.9999999994169,
+      "configured_end_s": 960,
+      "complete_response_window": true,
+      "observation_sha256": "a096b0d33fc588e3732777addfb51204753112f51a3f45a57149791ea0ca38a8",
+      "event_names": [
+        "Antidiuresis",
+        "BrainOxygenDeficit",
+        "Hypernatremia",
+        "Hypoxia",
+        "MinimalHemothorax",
+        "ModerateHypocapnia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia",
+        "Tachypnea"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "MinimalHemothorax": 81.6400000000009,
+        "Tachycardia": 146.78000000000128,
+        "Hypoxia": 172.74000000001456,
+        "Antidiuresis": 320.51999999999845,
+        "Tachypnea": 493.0999999998415,
+        "ModerateHypocapnia": 742.0799999996151,
+        "Hypernatremia": 798.5999999995637,
+        "BrainOxygenDeficit": 957.4399999994192
+      },
+      "final_events": {
+        "BrainOxygenDeficit": 2.580000000000002,
+        "Hypernatremia": 161.42000000000877,
+        "Hypoxia": 787.279999999574,
+        "ModerateHypocapnia": 217.94000000003768,
+        "Tachycardia": 813.2399999995504,
+        "Tachypnea": 466.9199999998653
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/0/B",
+      "pattern_id": "penetrating_thoracic_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 959.9999999994169,
+      "configured_end_s": 960,
+      "complete_response_window": true,
+      "observation_sha256": "3fbde63062a3b9ed578f488e656485eceffd07f173929d2144546386601d127b",
+      "event_names": [
+        "Antidiuresis",
+        "Hypernatremia",
+        "Hypoxia",
+        "MinimalHemothorax",
+        "ModerateHypocapnia",
+        "RespiratoryAlkalosis",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia",
+        "Tachypnea"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "MinimalHemothorax": 81.6400000000009,
+        "Tachycardia": 146.78000000000128,
+        "Hypoxia": 172.74000000001456,
+        "Antidiuresis": 320.51999999999845,
+        "Tachypnea": 493.0999999998415,
+        "RespiratoryAlkalosis": 687.3599999996649,
+        "ModerateHypocapnia": 739.9199999996171,
+        "Hypernatremia": 798.5999999995637
+      },
+      "final_events": {
+        "Hypernatremia": 161.42000000000877,
+        "Hypoxia": 787.279999999574,
+        "ModerateHypocapnia": 220.1000000000388,
+        "Tachycardia": 813.2399999995504,
+        "Tachypnea": 466.9199999998653
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/0/BA",
+      "pattern_id": "penetrating_thoracic_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 959.9999999994169,
+      "configured_end_s": 960,
+      "complete_response_window": true,
+      "observation_sha256": "427b723aeb69b0630bacdbbe8b813327172ba35e2278f007bc7f3137ea155927",
+      "event_names": [
+        "Antidiuresis",
+        "BrainOxygenDeficit",
+        "Hypernatremia",
+        "Hypoxia",
+        "MinimalHemothorax",
+        "ModerateHypocapnia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia",
+        "Tachypnea"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "MinimalHemothorax": 81.6400000000009,
+        "Tachycardia": 146.78000000000128,
+        "Hypoxia": 172.74000000001456,
+        "Antidiuresis": 320.51999999999845,
+        "Tachypnea": 493.0999999998415,
+        "ModerateHypocapnia": 736.3199999996203,
+        "Hypernatremia": 798.5999999995637,
+        "BrainOxygenDeficit": 957.4399999994192
+      },
+      "final_events": {
+        "BrainOxygenDeficit": 2.580000000000002,
+        "Hypernatremia": 161.42000000000877,
+        "Hypoxia": 787.279999999574,
+        "ModerateHypocapnia": 223.70000000004063,
+        "Tachycardia": 813.2399999995504,
+        "Tachypnea": 466.9199999998653
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/1/A",
+      "pattern_id": "blunt_thoracoabdominal_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 479.9999999998534,
+      "configured_end_s": 480,
+      "complete_response_window": true,
+      "observation_sha256": "5bab87fa4f5e1e5e440f4291fc2f3d07371513f9c18a8d7665b181ce8d7b3ec6",
+      "event_names": [
+        "Hypoxia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Tachycardia": 146.52000000000115,
+        "Hypoxia": 170.34000000001333
+      },
+      "final_events": {
+        "Hypoxia": 309.6800000000083,
+        "Tachycardia": 333.49999999998664
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/1/AB",
+      "pattern_id": "blunt_thoracoabdominal_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 479.9999999998534,
+      "configured_end_s": 480,
+      "complete_response_window": true,
+      "observation_sha256": "243c4b11b9ac9461658af224c3e1a730cc41226f550567951c059e843bd2a9ba",
+      "event_names": [
+        "Hypoxia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Tachycardia": 146.52000000000115,
+        "Hypoxia": 170.34000000001333
+      },
+      "final_events": {},
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/1/B",
+      "pattern_id": "blunt_thoracoabdominal_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 479.9999999998534,
+      "configured_end_s": 480,
+      "complete_response_window": true,
+      "observation_sha256": "dbc05b8f33c76ec5186435c3d17521e49ed1d5f49b8fd8fa00b1e117ee129144",
+      "event_names": [
+        "Hypoxia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Tachycardia": 146.52000000000115,
+        "Hypoxia": 170.34000000001333
+      },
+      "final_events": {},
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/1/BA",
+      "pattern_id": "blunt_thoracoabdominal_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 479.9999999998534,
+      "configured_end_s": 480,
+      "complete_response_window": true,
+      "observation_sha256": "ecc6e583f2be1601eb1a954b11ea541abdde5b40e00a0377e35267ecd7f1d8d5",
+      "event_names": [
+        "Hypoxia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Tachycardia": 146.52000000000115,
+        "Hypoxia": 170.34000000001333
+      },
+      "final_events": {},
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/2/A",
+      "pattern_id": "blast_hemorrhage_respiratory_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 479.9999999998534,
+      "configured_end_s": 480,
+      "complete_response_window": true,
+      "observation_sha256": "27aebf7b5bd8c3ea9c6509821ff38f970eca2c25db8d5a394e992894d2626ae7",
+      "event_names": [
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989
+      },
+      "final_events": {},
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/2/AB",
+      "pattern_id": "blast_hemorrhage_respiratory_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 479.9999999998534,
+      "configured_end_s": 480,
+      "complete_response_window": true,
+      "observation_sha256": "6fd50e602df043e6138266aa612a14fd598f1739a15b53c4290a45fcd85713b6",
+      "event_names": [
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachypnea"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Tachypnea": 184.44000000002055
+      },
+      "final_events": {},
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/2/B",
+      "pattern_id": "blast_hemorrhage_respiratory_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 479.9999999998534,
+      "configured_end_s": 480,
+      "complete_response_window": true,
+      "observation_sha256": "3f86850dae1deb7794be3abb78933f0a03bb598b9f5babdc416ec8a0dfb05154",
+      "event_names": [
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachypnea"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Tachypnea": 184.44000000002055
+      },
+      "final_events": {},
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/2/BA",
+      "pattern_id": "blast_hemorrhage_respiratory_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 479.9999999998534,
+      "configured_end_s": 480,
+      "complete_response_window": true,
+      "observation_sha256": "0a77b82b092969f49af64696cc43b3d4276c963f71597b51788797c4d1eea923",
+      "event_names": [
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachypnea"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Tachypnea": 184.44000000002055
+      },
+      "final_events": {},
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/3/A",
+      "pattern_id": "fire_co_alveolar_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 1859.9999999985985,
+      "configured_end_s": 1860,
+      "complete_response_window": true,
+      "observation_sha256": "f0b13452b2ae0c1ca061caeb71067ddad7f62b3ff4cf84375ce24fda36146be3",
+      "event_names": [
+        "Hypernatremia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Hypernatremia": 866.439999999502
+      },
+      "final_events": {
+        "Hypernatremia": 993.5799999993864
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/3/AB",
+      "pattern_id": "fire_co_alveolar_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 1859.9999999985985,
+      "configured_end_s": 1860,
+      "complete_response_window": true,
+      "observation_sha256": "fe6c383294d4ce26a6258a377f052bc87dbb7d92c979b1daf393422eb465c99d",
+      "event_names": [
+        "Hypernatremia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Hypernatremia": 866.439999999502
+      },
+      "final_events": {
+        "Hypernatremia": 993.5799999993864
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/3/B",
+      "pattern_id": "fire_co_alveolar_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 1859.9999999985985,
+      "configured_end_s": 1860,
+      "complete_response_window": true,
+      "observation_sha256": "94b070d9f9be91273970d79d90fcb79140f82e67897cce0f171f5edd15f711a3",
+      "event_names": [
+        "Hypernatremia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Hypernatremia": 866.439999999502
+      },
+      "final_events": {
+        "Hypernatremia": 993.5799999993864
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/3/BA",
+      "pattern_id": "fire_co_alveolar_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 1859.9999999985985,
+      "configured_end_s": 1860,
+      "complete_response_window": true,
+      "observation_sha256": "31a4086174e3d023c2adef6b258e2792832bd8fae07c6c0ef98d9e5692b1eaa1",
+      "event_names": [
+        "Hypernatremia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "Hypernatremia": 866.439999999502
+      },
+      "final_events": {
+        "Hypernatremia": 993.5799999993864
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/4/A",
+      "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "FAILED",
+      "error": "PRETREATMENT_PAIR_MISMATCH",
+      "observed_end_s": 359.99999999996254,
+      "configured_end_s": 660,
+      "complete_response_window": false,
+      "observation_sha256": "bc2121e23be16833e0e132fda76068bdfc89954ed5cfb79571ae7ba3bc49ff7c",
+      "event_names": [
+        "Antidiuresis",
+        "Hypernatremia",
+        "Hypoxia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "Antidiuresis": 0.02,
+        "Hypernatremia": 0.18,
+        "StartOfCardiacCycle": 0.18,
+        "StartOfInhale": 1.8800000000000012,
+        "StartOfExhale": 3.3800000000000026,
+        "Hypoxia": 98.03999999999763,
+        "Tachycardia": 116.17999999999402
+      },
+      "final_events": {
+        "Antidiuresis": 1193.4799999992047,
+        "Hypernatremia": 359.8399999999627,
+        "Hypoxia": 261.9800000000517,
+        "Tachycardia": 243.84000000005094
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/4/AB",
+      "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 659.9999999996897,
+      "configured_end_s": 660,
+      "complete_response_window": true,
+      "observation_sha256": "4959aa177682080532a0fc1a3b7edbb313b1bf17d9c65af4082afdfaf37f21af",
+      "event_names": [
+        "Antidiuresis",
+        "Hypernatremia",
+        "Hypoxia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "Antidiuresis": 0.02,
+        "Hypernatremia": 0.18,
+        "StartOfCardiacCycle": 0.18,
+        "StartOfInhale": 1.8800000000000012,
+        "StartOfExhale": 3.3800000000000026,
+        "Hypoxia": 98.03999999999763,
+        "Tachycardia": 116.17999999999402
+      },
+      "final_events": {
+        "Antidiuresis": 1493.4799999989318,
+        "Hypernatremia": 659.8399999996899
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/4/B",
+      "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "FAILED",
+      "error": "PRETREATMENT_PAIR_MISMATCH",
+      "observed_end_s": 359.99999999996254,
+      "configured_end_s": 660,
+      "complete_response_window": false,
+      "observation_sha256": "eb7540ac52e602d206dc24656510b1739e4628e17d826d304b5e6aa1f484b23d",
+      "event_names": [
+        "Antidiuresis",
+        "Hypernatremia",
+        "Hypoxia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "Antidiuresis": 0.02,
+        "Hypernatremia": 0.18,
+        "StartOfCardiacCycle": 0.18,
+        "StartOfInhale": 1.8800000000000012,
+        "StartOfExhale": 3.3800000000000026,
+        "Hypoxia": 98.03999999999763,
+        "Tachycardia": 116.17999999999402
+      },
+      "final_events": {
+        "Antidiuresis": 1193.4799999992047,
+        "Hypernatremia": 359.8399999999627,
+        "Hypoxia": 261.9800000000517,
+        "Tachycardia": 243.84000000005094
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/stage2/4/BA",
+      "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 659.9999999996897,
+      "configured_end_s": 660,
+      "complete_response_window": true,
+      "observation_sha256": "b11eaff6d24b800999c795b3ad28324caa328a71586e9caab3929588a7bb7a9d",
+      "event_names": [
+        "Antidiuresis",
+        "Hypernatremia",
+        "Hypoxia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "Antidiuresis": 0.02,
+        "Hypernatremia": 0.18,
+        "StartOfCardiacCycle": 0.18,
+        "StartOfInhale": 1.8800000000000012,
+        "StartOfExhale": 3.3800000000000026,
+        "Hypoxia": 98.03999999999763,
+        "Tachycardia": 116.17999999999402
+      },
+      "final_events": {
+        "Antidiuresis": 1493.4799999989318,
+        "Hypernatremia": 659.8399999996899
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/thoracic_timing_v2/A",
+      "pattern_id": "penetrating_thoracic_composite_v2",
+      "profile_version": "301.v2_1.thoracic.aligned_onsets.2",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 959.9999999994169,
+      "configured_end_s": 960,
+      "complete_response_window": true,
+      "observation_sha256": "024d2041c54ef6e096950c22f6f2bf9c892d39005b067df3c66efab2e81c4dc6",
+      "event_names": [
+        "Hypernatremia",
+        "Hypoxia",
+        "MinimalHemothorax",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "MinimalHemothorax": 81.6400000000009,
+        "Tachycardia": 625.8799999997208,
+        "Hypoxia": 654.0999999996951,
+        "Hypernatremia": 843.9199999995225
+      },
+      "final_events": {
+        "Hypernatremia": 116.09999999999404,
+        "Hypoxia": 305.9200000000117,
+        "MinimalHemothorax": 878.3799999994911,
+        "Tachycardia": 334.13999999998606
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/thoracic_timing_v2/AB",
+      "pattern_id": "penetrating_thoracic_composite_v2",
+      "profile_version": "301.v2_1.thoracic.aligned_onsets.2",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 959.9999999994169,
+      "configured_end_s": 960,
+      "complete_response_window": true,
+      "observation_sha256": "2c35cfbeb6c23ba0239bc9c89b4f805d35c86e7e4088fcba71a755dfdfa740cd",
+      "event_names": [
+        "Hypernatremia",
+        "Hypoxia",
+        "MinimalHemothorax",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "MinimalHemothorax": 81.6400000000009,
+        "Tachycardia": 625.8799999997208,
+        "Hypoxia": 654.0999999996951,
+        "Hypernatremia": 844.6399999995218
+      },
+      "final_events": {
+        "Hypernatremia": 115.37999999999418,
+        "Hypoxia": 305.9200000000117,
+        "Tachycardia": 334.13999999998606
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/thoracic_timing_v2/B",
+      "pattern_id": "penetrating_thoracic_composite_v2",
+      "profile_version": "301.v2_1.thoracic.aligned_onsets.2",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 959.9999999994169,
+      "configured_end_s": 960,
+      "complete_response_window": true,
+      "observation_sha256": "72c3ea29cd9d6c16ed875105d8617dcdebcf129a9a6251b6bbbe842989f5b38d",
+      "event_names": [
+        "Hypernatremia",
+        "Hypoxia",
+        "MinimalHemothorax",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "MinimalHemothorax": 81.6400000000009,
+        "Tachycardia": 625.8799999997208,
+        "Hypoxia": 654.0999999996951,
+        "Hypernatremia": 850.8199999995162
+      },
+      "final_events": {
+        "Hypernatremia": 109.19999999999541,
+        "Hypoxia": 305.9200000000117,
+        "Tachycardia": 334.13999999998606
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/thoracic_timing_v2/BA",
+      "pattern_id": "penetrating_thoracic_composite_v2",
+      "profile_version": "301.v2_1.thoracic.aligned_onsets.2",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 959.9999999994169,
+      "configured_end_s": 960,
+      "complete_response_window": true,
+      "observation_sha256": "4bb1267c51d783dcd960eba7414fa5c4de62fde0ce98f87ee04b097d137f778d",
+      "event_names": [
+        "Hypernatremia",
+        "Hypoxia",
+        "MinimalHemothorax",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "MinimalHemothorax": 81.6400000000009,
+        "Tachycardia": 625.8799999997208,
+        "Hypoxia": 654.0999999996951,
+        "Hypernatremia": 844.6399999995218
+      },
+      "final_events": {
+        "Hypernatremia": 115.37999999999418,
+        "Hypoxia": 305.9200000000117,
+        "Tachycardia": 334.13999999998606
+      },
+      "warnings": []
+    },
+    {
+      "path": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/thoracic_timing_v2/control",
+      "pattern_id": "penetrating_thoracic_composite_v2",
+      "profile_version": "301.v2_1.thoracic.aligned_onsets.2",
+      "status": "COMPLETED",
+      "error": null,
+      "observed_end_s": 959.9999999994169,
+      "configured_end_s": 960,
+      "complete_response_window": true,
+      "observation_sha256": "18952095110e63b5204a1cb2cc89e854c0ecec806229b965c4ffa3bb2ef7d84a",
+      "event_names": [
+        "Antidiuresis",
+        "Hypernatremia",
+        "Hypoxia",
+        "MinimalHemothorax",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia",
+        "Tachypnea"
+      ],
+      "first_events": {
+        "StartOfCardiacCycle": 0.4000000000000001,
+        "StartOfExhale": 1.2000000000000006,
+        "StartOfInhale": 4.659999999999989,
+        "MinimalHemothorax": 81.6400000000009,
+        "Tachycardia": 625.8799999997208,
+        "Hypoxia": 654.0999999996951,
+        "Antidiuresis": 762.9999999995961,
+        "Hypernatremia": 851.5599999995155,
+        "Tachypnea": 931.9599999994424
+      },
+      "final_events": {
+        "Antidiuresis": 197.02000000002698,
+        "Hypernatremia": 108.45999999999556,
+        "Hypoxia": 305.9200000000117,
+        "MinimalHemothorax": 878.3799999994911,
+        "Tachycardia": 334.13999999998606,
+        "Tachypnea": 28.05999999999949
+      },
+      "warnings": []
+    }
+  ]
+}

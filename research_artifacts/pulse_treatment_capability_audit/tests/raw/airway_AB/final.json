@@ -1,0 +1,55 @@
+{
+  "AirwayMode": "MechanicalVentilation",
+  "SimulationTime": {
+    "ScalarTime": {
+      "Unit": "s"
+    }
+  },
+  "ActiveActions": {
+    "AnyAction": [
+      {
+        "PatientAction": {
+          "MechanicalVentilation": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "State": "On",
+            "Flow": {
+              "ScalarVolumePerTime": {
+                "Unit": "L/min"
+              }
+            },
+            "Pressure": {
+              "ScalarPressure": {
+                "Value": 5,
+                "Unit": "cmH2O"
+              }
+            }
+          }
+        }
+      },
+      {
+        "PatientAction": {
+          "SupplementalOxygen": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "Device": "NasalCannula",
+            "Flow": {
+              "ScalarVolumePerTime": {
+                "Value": 3,
+                "Unit": "L/min"
+              }
+            },
+            "Volume": {
+              "ScalarVolume": {
+                "Value": 100,
+                "Unit": "L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

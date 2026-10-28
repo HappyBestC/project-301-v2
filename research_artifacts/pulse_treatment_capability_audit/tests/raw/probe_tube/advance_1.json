@@ -1,0 +1,9 @@
+{
+  "SimulationTime": {
+    "ScalarTime": {
+      "Value": 0.02,
+      "Unit": "s"
+    }
+  },
+  "ActiveActions": {}
+}

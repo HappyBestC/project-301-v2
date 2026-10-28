@@ -1,0 +1,22 @@
+{
+  "run_id": "external-source-control-native-002",
+  "patient_id": "external-source-control-native-002-patient",
+  "plan_id": "external-source-control-native-002-plan",
+  "scenario_id": "external_rightleg04_source_control_v1",
+  "overall_status": "RESEARCH_CLOSED_LOOP_V1_PASS",
+  "real_pulse": true,
+  "native_execution_requested": true,
+  "execution_pass": true,
+  "evaluator_called": true,
+  "stage": "completed",
+  "failure": null,
+  "initialization_pass": true,
+  "pretreatment_observation_pass": true,
+  "resource_reservation_pass": true,
+  "execution_accepted": true,
+  "resource_accounting_pass": true,
+  "posttreatment_observation_pass": true,
+  "evaluation_state": "NOT_EVALUABLE",
+  "physiological_grade": null,
+  "simulation_time_s": 479.9999999998534
+}

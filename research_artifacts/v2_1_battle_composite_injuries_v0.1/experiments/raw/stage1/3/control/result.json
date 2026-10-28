@@ -1,0 +1,128 @@
+{
+  "pattern_id": "fire_co_alveolar_composite_v2",
+  "branch": "control",
+  "status": "COMPLETED",
+  "wall_seconds": 156.83852100372314,
+  "samples": 1861,
+  "events": [
+    "Hypernatremia",
+    "StartOfCardiacCycle",
+    "StartOfExhale",
+    "StartOfInhale"
+  ],
+  "last": {
+    "time_s": 1859.9999999985985,
+    "patient_id": "composite-patient",
+    "values": {
+      "vitals.heart_rate": 69.64309811798469,
+      "vitals.respiration_rate": 12.244897959183639,
+      "vitals.pulse_oximetry": 0.9235833934345534,
+      "vitals.systolic_arterial_pressure": 114.9969665391385,
+      "vitals.mean_arterial_pressure": 95.47297566496435,
+      "circulation.cardiac_output": 5.775396801161408,
+      "respiratory.tidal_volume": 546.4207698513973,
+      "respiratory.inspired_oxygen_fraction": 0.2099980176307931,
+      "laboratory.hemoglobin_concentration": 14.743575917602817,
+      "laboratory.lactate_concentration": 14.335900335510306,
+      "laboratory.arterial_oxygen_pressure": 85.2118772075215,
+      "laboratory.arterial_carbon_dioxide_pressure": 39.315595358466716,
+      "laboratory.blood_ph": 7.420500621179553
+    },
+    "diagnostics": {
+      "diagnostic.BloodVolume": 5565.916740283726,
+      "diagnostic.TotalHemorrhageRate": 0.0,
+      "diagnostic.TotalHemorrhagedVolume": 0.0,
+      "diagnostic.AbdominalCavityVolume": 10.0,
+      "aorta_co_saturation": 0.4823004808652288,
+      "aorta_cohb_g_dL": 7.127951614662107,
+      "oxygen_saturation": 0.43945622226846287,
+      "aorta_sodium_mEq_L": 145.0321341840116,
+      "ambient_co_fraction": 0.005,
+      "ambient_oxygen_fraction": 0.21,
+      "total_fluid_mL": 39668.78038367299,
+      "alveolar_ventilation_L_min": 6.690866569608927,
+      "left_pleural_pressure_cmH2O": 1025.6623224796233,
+      "left_pleural_volume_mL": 1336.1736039730142
+    },
+    "events": {
+      "Hypernatremia": 993.5799999993864
+    },
+    "observation": {
+      "patient_id": "composite-patient",
+      "simulation_time_s": 1859.9999999985985,
+      "vitals": {
+        "heart_rate": {
+          "value": 69.64309811798469,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "respiration_rate": {
+          "value": 12.244897959183639,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "pulse_oximetry": {
+          "value": 0.9235833934345534,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "systolic_arterial_pressure": {
+          "value": 114.9969665391385,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "mean_arterial_pressure": {
+          "value": 95.47297566496435,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        }
+      },
+      "circulation": {
+        "cardiac_output": {
+          "value": 5.775396801161408,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        }
+      },
+      "respiratory": {
+        "tidal_volume": {
+          "value": 546.4207698513973,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "inspired_oxygen_fraction": {
+          "value": 0.2099980176307931,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        }
+      },
+      "laboratory": {
+        "hemoglobin_concentration": {
+          "value": 14.743575917602817,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "lactate_concentration": {
+          "value": 14.335900335510306,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "arterial_oxygen_pressure": {
+          "value": 85.2118772075215,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "arterial_carbon_dioxide_pressure": {
+          "value": 39.315595358466716,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        },
+        "blood_ph": {
+          "value": 7.420500621179553,
+          "status": "available",
+          "observed_at_s": 1859.9999999985985
+        }
+      }
+    }
+  }
+}

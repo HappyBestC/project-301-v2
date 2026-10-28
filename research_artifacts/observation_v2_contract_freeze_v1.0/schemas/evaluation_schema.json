@@ -1,0 +1,467 @@
+{
+  "$defs": {
+    "ActionReceipt": {
+      "additionalProperties": false,
+      "properties": {
+        "observed_at_s": {
+          "minimum": 0,
+          "title": "Observed At S",
+          "type": "number"
+        },
+        "phase": {
+          "title": "Phase",
+          "type": "string"
+        },
+        "state": {
+          "title": "State",
+          "type": "string"
+        }
+      },
+      "required": [
+        "observed_at_s",
+        "phase",
+        "state"
+      ],
+      "title": "ActionReceipt",
+      "type": "object"
+    },
+    "Circulation": {
+      "additionalProperties": false,
+      "properties": {
+        "cardiac_output": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "title": "Circulation",
+      "type": "object"
+    },
+    "EvaluationFrame": {
+      "additionalProperties": false,
+      "properties": {
+        "patient": {
+          "$ref": "#/$defs/PatientObservationV2"
+        },
+        "diagnostics": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Measurement"
+          },
+          "title": "Diagnostics",
+          "type": "object"
+        }
+      },
+      "required": [
+        "patient",
+        "diagnostics"
+      ],
+      "title": "EvaluationFrame",
+      "type": "object"
+    },
+    "EventTransition": {
+      "additionalProperties": false,
+      "properties": {
+        "observed_at_s": {
+          "minimum": 0,
+          "title": "Observed At S",
+          "type": "number"
+        },
+        "event": {
+          "title": "Event",
+          "type": "string"
+        },
+        "active": {
+          "title": "Active",
+          "type": "boolean"
+        },
+        "native_active_duration_s": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Native Active Duration S"
+        }
+      },
+      "required": [
+        "observed_at_s",
+        "event",
+        "active",
+        "native_active_duration_s"
+      ],
+      "title": "EventTransition",
+      "type": "object"
+    },
+    "LaboratoryV2": {
+      "additionalProperties": false,
+      "properties": {
+        "hemoglobin_concentration": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "lactate_concentration": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "arterial_oxygen_pressure": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "arterial_carbon_dioxide_pressure": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "blood_ph": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "aorta_carboxyhemoglobin_concentration": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "aorta_sodium_concentration": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "title": "LaboratoryV2",
+      "type": "object"
+    },
+    "Measurement": {
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        },
+        "status": {
+          "enum": [
+            "available",
+            "unavailable"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "observed_at_s": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Observed At S"
+        }
+      },
+      "required": [
+        "value",
+        "status",
+        "observed_at_s"
+      ],
+      "title": "Measurement",
+      "type": "object"
+    },
+    "PatientObservationV2": {
+      "additionalProperties": false,
+      "properties": {
+        "patient_id": {
+          "title": "Patient Id",
+          "type": "string"
+        },
+        "simulation_time_s": {
+          "minimum": 0,
+          "title": "Simulation Time S",
+          "type": "number"
+        },
+        "vitals": {
+          "$ref": "#/$defs/Vitals"
+        },
+        "circulation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Circulation"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "respiratory": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Respiratory"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "laboratory": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/LaboratoryV2"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "patient_id",
+        "simulation_time_s",
+        "vitals"
+      ],
+      "title": "PatientObservationV2",
+      "type": "object"
+    },
+    "Respiratory": {
+      "additionalProperties": false,
+      "properties": {
+        "tidal_volume": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "inspired_oxygen_fraction": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "title": "Respiratory",
+      "type": "object"
+    },
+    "SourceSnapshot": {
+      "additionalProperties": false,
+      "properties": {
+        "observed_at_s": {
+          "minimum": 0,
+          "title": "Observed At S",
+          "type": "number"
+        },
+        "active_native_sources": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Active Native Sources",
+          "type": "array"
+        },
+        "interpretation": {
+          "const": "PRESENCE_ONLY_NOT_CONTROL_SUCCESS",
+          "default": "PRESENCE_ONLY_NOT_CONTROL_SUCCESS",
+          "title": "Interpretation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "observed_at_s",
+        "active_native_sources"
+      ],
+      "title": "SourceSnapshot",
+      "type": "object"
+    },
+    "Vitals": {
+      "additionalProperties": false,
+      "properties": {
+        "heart_rate": {
+          "$ref": "#/$defs/Measurement"
+        },
+        "respiration_rate": {
+          "$ref": "#/$defs/Measurement"
+        },
+        "pulse_oximetry": {
+          "$ref": "#/$defs/Measurement"
+        },
+        "systolic_arterial_pressure": {
+          "$ref": "#/$defs/Measurement"
+        },
+        "mean_arterial_pressure": {
+          "$ref": "#/$defs/Measurement"
+        }
+      },
+      "required": [
+        "heart_rate",
+        "respiration_rate",
+        "pulse_oximetry",
+        "systolic_arterial_pressure",
+        "mean_arterial_pressure"
+      ],
+      "title": "Vitals",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": "301.evaluation_observation.candidate.v2.1",
+      "default": "301.evaluation_observation.candidate.v2.1",
+      "title": "Version",
+      "type": "string"
+    },
+    "patient_id": {
+      "title": "Patient Id",
+      "type": "string"
+    },
+    "evidence_path": {
+      "title": "Evidence Path",
+      "type": "string"
+    },
+    "frames": {
+      "items": {
+        "$ref": "#/$defs/EvaluationFrame"
+      },
+      "title": "Frames",
+      "type": "array"
+    },
+    "events": {
+      "items": {
+        "$ref": "#/$defs/EventTransition"
+      },
+      "title": "Events",
+      "type": "array"
+    },
+    "actions": {
+      "items": {
+        "$ref": "#/$defs/ActionReceipt"
+      },
+      "title": "Actions",
+      "type": "array"
+    },
+    "source_snapshots": {
+      "items": {
+        "$ref": "#/$defs/SourceSnapshot"
+      },
+      "title": "Source Snapshots",
+      "type": "array"
+    },
+    "gaps": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Gaps",
+      "type": "array"
+    },
+    "production_enabled": {
+      "const": false,
+      "default": false,
+      "title": "Production Enabled",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "patient_id",
+    "evidence_path",
+    "frames",
+    "events",
+    "actions",
+    "source_snapshots",
+    "gaps"
+  ],
+  "title": "EvaluationObservationV2",
+  "type": "object",
+  "x-version": "301.evaluation_observation.candidate.v2.1",
+  "x-lifecycle": "CANDIDATE / REVIEW_REQUIRED / NOT_ACTIVATED",
+  "x-metric-units": {
+    "diagnostic.BloodVolume": "mL",
+    "diagnostic.TotalHemorrhageRate": "mL/s",
+    "diagnostic.TotalHemorrhagedVolume": "mL",
+    "diagnostic.AbdominalCavityVolume": "mL",
+    "aorta_co_saturation": "1",
+    "aorta_cohb_g_dL": "g/dL",
+    "oxygen_saturation": "1",
+    "aorta_sodium_mEq_L": "mEq/L",
+    "ambient_co_fraction": "1",
+    "ambient_oxygen_fraction": "1",
+    "total_fluid_mL": "mL",
+    "alveolar_ventilation_L_min": "L/min",
+    "left_pleural_pressure_cmH2O": "cmH2O",
+    "left_pleural_volume_mL": "mL",
+    "residual_blood_volume_mL": "mL",
+    "tube_flow_mL_min": "mL/min",
+    "source_flow_mL_s": "mL/s"
+  }
+}

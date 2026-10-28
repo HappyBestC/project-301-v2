@@ -1,0 +1,188 @@
+{
+  "version": "301.v2_1.composite.runtime.1",
+  "patient_id": "composite-patient",
+  "run_id": "v21-runtime_risk_v2-1",
+  "pattern_id": "blunt_thoracoabdominal_composite_v2",
+  "epoch": "ae0be241be584c26b25dbf2084ee2b7a",
+  "validation_only": true,
+  "production_enabled": false,
+  "requests": {
+    "noresource": {
+      "digest": "85298ebaa6861ded89ccbf1eb8c06b683c7469acf873de29e9c663976c425b4b",
+      "plan": {
+        "patient_id": "composite-patient",
+        "pattern_id": "blunt_thoracoabdominal_composite_v2",
+        "bundle": "AB"
+      },
+      "state": "REJECTED",
+      "actions": [],
+      "error": "Insufficient stock/equipment/team"
+    },
+    "joint": {
+      "digest": "85298ebaa6861ded89ccbf1eb8c06b683c7469acf873de29e9c663976c425b4b",
+      "plan": {
+        "patient_id": "composite-patient",
+        "pattern_id": "blunt_thoracoabdominal_composite_v2",
+        "bundle": "AB"
+      },
+      "state": "COMPLETED",
+      "actions": [
+        {
+          "kind": "control_internal_bleeding",
+          "state": "NATIVE_ACCEPTED",
+          "time_s": 180.00000000001828,
+          "payload": {
+            "PatientAction": {
+              "Hemorrhage": {
+                "Type": "Internal",
+                "Compartment": "Spleen",
+                "Severity": {
+                  "Scalar0To1": {
+                    "Value": 0
+                  }
+                }
+              }
+            }
+          },
+          "allocation": {
+            "kind": "control_internal_bleeding",
+            "units": {},
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          "confirmed_time_s": 180.02000000001829
+        },
+        {
+          "kind": "fluid_resuscitation",
+          "state": "NATIVE_ACCEPTED",
+          "time_s": 180.02000000001829,
+          "payload": {
+            "PatientAction": {
+              "SubstanceCompoundInfusion": {
+                "SubstanceCompound": "Saline",
+                "BagVolume": {
+                  "ScalarVolume": {
+                    "Value": 500,
+                    "Unit": "mL"
+                  }
+                },
+                "Rate": {
+                  "ScalarVolumePerTime": {
+                    "Value": 100,
+                    "Unit": "mL/min"
+                  }
+                }
+              }
+            }
+          },
+          "allocation": {
+            "kind": "fluid_resuscitation",
+            "units": {
+              "saline_500ml_bag": 1
+            },
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          "confirmed_time_s": 180.0400000000183
+        },
+        {
+          "kind": "needle_decompression",
+          "state": "NATIVE_ACCEPTED",
+          "time_s": 180.0400000000183,
+          "payload": {
+            "PatientAction": {
+              "NeedleDecompression": {
+                "Side": "Left",
+                "State": "On"
+              }
+            }
+          },
+          "allocation": {
+            "kind": "needle_decompression",
+            "units": {
+              "needle_kit": 1
+            },
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          "confirmed_time_s": 180.0600000000183
+        }
+      ],
+      "resources": {
+        "reserved": {
+          "saline_500ml_bag": 1,
+          "needle_kit": 1
+        },
+        "held": {
+          "medic": 1
+        },
+        "allocated": [
+          {
+            "kind": "control_internal_bleeding",
+            "units": {},
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          {
+            "kind": "fluid_resuscitation",
+            "units": {
+              "saline_500ml_bag": 1
+            },
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          {
+            "kind": "needle_decompression",
+            "units": {
+              "needle_kit": 1
+            },
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          }
+        ],
+        "production_inventory": false
+      }
+    }
+  },
+  "events": [
+    {
+      "state": "PREPARED",
+      "time_s": 180.00000000001828
+    },
+    {
+      "state": "REJECTED",
+      "code": "INITIALIZATION_FORBIDDEN",
+      "message": "No repeated initialization or restoration"
+    },
+    {
+      "state": "REJECTED",
+      "code": "UNSUPPORTED_RECOVERY",
+      "message": "No composite state restoration"
+    },
+    {
+      "state": "REJECTED",
+      "code": "PATIENT_OR_PATTERN_MISMATCH",
+      "message": "Wrong target"
+    },
+    {
+      "state": "REJECTED",
+      "code": "STALE_CONTEXT",
+      "message": "Context is foreign or stale"
+    },
+    {
+      "state": "REJECTED",
+      "code": "IDEMPOTENCY_CONFLICT",
+      "message": "Request ID reused with different payload"
+    },
+    {
+      "state": "REJECTED",
+      "code": "OUTSIDE_WINDOW",
+      "message": "Fixed decision tick required"
+    },
+    {
+      "state": "REJECTED",
+      "code": "UNREGISTERED_NATIVE_SOURCE",
+      "message": "Native injury identities/parameters differ from composite registry"
+    },
+    {
+      "state": "REJECTED",
+      "code": "INITIALIZATION_FORBIDDEN",
+      "message": "No repeated initialization or restoration"
+    }
+  ],
+  "case_closed": true
+}

@@ -1,0 +1,459 @@
+{
+  "status": "PASS",
+  "refusals": [
+    "INCOMPLETE_FIXED_WINDOW",
+    "PATIENT_MISMATCH",
+    "CONTEXT_NOT_FOUND",
+    "UNSUPPORTED_RECOVERY",
+    "RESOURCE_UNAVAILABLE",
+    "IDEMPOTENCY_CONFLICT",
+    "UNVALIDATED_WINDOW",
+    "ACTION_REPLAY_BLOCKED",
+    "UNREGISTERED_NATIVE_SOURCE",
+    "RESTART_REQUIRES_RECOVERY"
+  ],
+  "kind": "environmental_hypoxia",
+  "initial": {
+    "version": "301.v2.restricted.observation.1",
+    "injury_type": "environmental_hypoxia",
+    "patient_id": "P",
+    "session_epoch": "19cbb47e39664f83ad47cb1b3e0e32c9",
+    "patient_observation": {
+      "patient_id": "P",
+      "simulation_time_s": 359.99999999996254,
+      "vitals": {
+        "heart_rate": {
+          "value": 144.93123339097127,
+          "status": "available",
+          "observed_at_s": 359.99999999996254
+        },
+        "respiration_rate": {
+          "value": 12.244897959183639,
+          "status": "available",
+          "observed_at_s": 359.99999999996254
+        },
+        "pulse_oximetry": {
+          "value": 0.8504885433771411,
+          "status": "available",
+          "observed_at_s": 359.99999999996254
+        },
+        "systolic_arterial_pressure": {
+          "value": 108.19804244261915,
+          "status": "available",
+          "observed_at_s": 359.99999999996254
+        },
+        "mean_arterial_pressure": {
+          "value": 96.07971499788952,
+          "status": "available",
+          "observed_at_s": 359.99999999996254
+        }
+      },
+      "circulation": {
+        "cardiac_output": {
+          "value": 6.56300744880611,
+          "status": "available",
+          "observed_at_s": 359.99999999996254
+        }
+      },
+      "respiratory": {
+        "tidal_volume": {
+          "value": 546.7563489210999,
+          "status": "available",
+          "observed_at_s": 359.99999999996254
+        },
+        "inspired_oxygen_fraction": {
+          "value": 0.11999811828190135,
+          "status": "available",
+          "observed_at_s": 359.99999999996254
+        }
+      },
+      "laboratory": {
+        "hemoglobin_concentration": {
+          "value": 14.926939724264276,
+          "status": "available",
+          "observed_at_s": 359.99999999996254
+        },
+        "lactate_concentration": {
+          "value": 14.637570046540825,
+          "status": "available",
+          "observed_at_s": 359.99999999996254
+        },
+        "arterial_oxygen_pressure": {
+          "value": 41.14684397870089,
+          "status": "available",
+          "observed_at_s": 359.99999999996254
+        },
+        "arterial_carbon_dioxide_pressure": {
+          "value": 36.79883572933497,
+          "status": "available",
+          "observed_at_s": 359.99999999996254
+        },
+        "blood_ph": {
+          "value": 7.446639410747141,
+          "status": "available",
+          "observed_at_s": 359.99999999996254
+        }
+      }
+    },
+    "specialty": {
+      "version": "301.v2.environment.observation.1",
+      "patient_id": "P",
+      "exposure_id": "E",
+      "session_epoch": "19cbb47e39664f83ad47cb1b3e0e32c9",
+      "simulation_time_s": 359.99999999996254,
+      "aorta_co_saturation": {
+        "value": 0.0,
+        "status": "available",
+        "observed_at_s": 359.99999999996254
+      },
+      "aorta_cohb_g_dL": {
+        "value": 0.0,
+        "status": "available",
+        "observed_at_s": 359.99999999996254
+      },
+      "oxygen_saturation": {
+        "value": 0.8329871654760181,
+        "status": "available",
+        "observed_at_s": 359.99999999996254
+      },
+      "aorta_sodium_mEq_L": {
+        "value": 143.92348037549934,
+        "status": "available",
+        "observed_at_s": 359.99999999996254
+      },
+      "ambient_co_fraction": {
+        "value": 0.0,
+        "status": "available",
+        "observed_at_s": 359.99999999996254
+      },
+      "ambient_oxygen_fraction": {
+        "value": 0.12,
+        "status": "available",
+        "observed_at_s": 359.99999999996254
+      },
+      "native_events": {
+        "Hypoxia": 263.46000000005034,
+        "Tachycardia": 239.0800000000485
+      },
+      "provenance": "Pulse4.3.2.DataRequest+ActiveEvents",
+      "admission": "PENDING_RESEARCH_RULE_APPROVAL",
+      "clinical_efficacy": "NOT_EVALUATED"
+    },
+    "aorta_sodium_mEq_L": {
+      "value": 143.92348037549934,
+      "status": "available",
+      "observed_at_s": 359.99999999996254
+    },
+    "native_events": {
+      "Hypoxia": 263.46000000005034,
+      "Tachycardia": 239.0800000000485
+    },
+    "production_enabled": false,
+    "clinical_efficacy": "NOT_EVALUATED"
+  },
+  "control": {
+    "version": "301.v2.restricted.observation.1",
+    "injury_type": "environmental_hypoxia",
+    "patient_id": "P",
+    "session_epoch": "d7152b329a714ab1bee21a13abfe896b",
+    "patient_observation": {
+      "patient_id": "P",
+      "simulation_time_s": 659.9999999996897,
+      "vitals": {
+        "heart_rate": {
+          "value": 145.63909003090538,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "respiration_rate": {
+          "value": 11.999999999999963,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "pulse_oximetry": {
+          "value": 0.8017983361376285,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "systolic_arterial_pressure": {
+          "value": 108.26856720420204,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "mean_arterial_pressure": {
+          "value": 96.12708565489554,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        }
+      },
+      "circulation": {
+        "cardiac_output": {
+          "value": 6.60949775203036,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        }
+      },
+      "respiratory": {
+        "tidal_volume": {
+          "value": 532.8607406379887,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "inspired_oxygen_fraction": {
+          "value": 0.11999741298857651,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        }
+      },
+      "laboratory": {
+        "hemoglobin_concentration": {
+          "value": 14.894976246547659,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "lactate_concentration": {
+          "value": 14.653634552688809,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "arterial_oxygen_pressure": {
+          "value": 37.52522181703364,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "arterial_carbon_dioxide_pressure": {
+          "value": 36.78511447221054,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "blood_ph": {
+          "value": 7.446786730113351,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        }
+      }
+    },
+    "specialty": {
+      "version": "301.v2.environment.observation.1",
+      "patient_id": "P",
+      "exposure_id": "E",
+      "session_epoch": "d7152b329a714ab1bee21a13abfe896b",
+      "simulation_time_s": 659.9999999996897,
+      "aorta_co_saturation": {
+        "value": 0.0,
+        "status": "available",
+        "observed_at_s": 659.9999999996897
+      },
+      "aorta_cohb_g_dL": {
+        "value": 0.0,
+        "status": "available",
+        "observed_at_s": 659.9999999996897
+      },
+      "oxygen_saturation": {
+        "value": 0.794585796863491,
+        "status": "available",
+        "observed_at_s": 659.9999999996897
+      },
+      "aorta_sodium_mEq_L": {
+        "value": 144.55789875525744,
+        "status": "available",
+        "observed_at_s": 659.9999999996897
+      },
+      "ambient_co_fraction": {
+        "value": 0.0,
+        "status": "available",
+        "observed_at_s": 659.9999999996897
+      },
+      "ambient_oxygen_fraction": {
+        "value": 0.12,
+        "status": "available",
+        "observed_at_s": 659.9999999996897
+      },
+      "native_events": {
+        "Hypoxia": 563.4599999997776,
+        "Tachycardia": 539.0799999997997
+      },
+      "provenance": "Pulse4.3.2.DataRequest+ActiveEvents",
+      "admission": "PENDING_RESEARCH_RULE_APPROVAL",
+      "clinical_efficacy": "NOT_EVALUATED"
+    },
+    "aorta_sodium_mEq_L": {
+      "value": 144.55789875525744,
+      "status": "available",
+      "observed_at_s": 659.9999999996897
+    },
+    "native_events": {
+      "Hypoxia": 563.4599999997776,
+      "Tachycardia": 539.0799999997997
+    },
+    "production_enabled": false,
+    "clinical_efficacy": "NOT_EVALUATED"
+  },
+  "treated": {
+    "version": "301.v2.restricted.observation.1",
+    "injury_type": "environmental_hypoxia",
+    "patient_id": "P",
+    "session_epoch": "19cbb47e39664f83ad47cb1b3e0e32c9",
+    "patient_observation": {
+      "patient_id": "P",
+      "simulation_time_s": 659.9999999996897,
+      "vitals": {
+        "heart_rate": {
+          "value": 71.16556969932091,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "respiration_rate": {
+          "value": 11.952191235059724,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "pulse_oximetry": {
+          "value": 0.9647529202926601,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "systolic_arterial_pressure": {
+          "value": 114.4069953701004,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "mean_arterial_pressure": {
+          "value": 95.38732356722755,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        }
+      },
+      "circulation": {
+        "cardiac_output": {
+          "value": 5.749405476079435,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        }
+      },
+      "respiratory": {
+        "tidal_volume": {
+          "value": 531.7990579846988,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "inspired_oxygen_fraction": {
+          "value": 0.209996911555063,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        }
+      },
+      "laboratory": {
+        "hemoglobin_concentration": {
+          "value": 14.894868246424625,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "lactate_concentration": {
+          "value": 14.596301066989577,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "arterial_oxygen_pressure": {
+          "value": 86.998980298603,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "arterial_carbon_dioxide_pressure": {
+          "value": 40.78607194211397,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "blood_ph": {
+          "value": 7.405984878893508,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        }
+      }
+    },
+    "specialty": {
+      "version": "301.v2.environment.observation.1",
+      "patient_id": "P",
+      "exposure_id": "E",
+      "session_epoch": "19cbb47e39664f83ad47cb1b3e0e32c9",
+      "simulation_time_s": 659.9999999996897,
+      "aorta_co_saturation": {
+        "value": 0.0,
+        "status": "available",
+        "observed_at_s": 659.9999999996897
+      },
+      "aorta_cohb_g_dL": {
+        "value": 0.0,
+        "status": "available",
+        "observed_at_s": 659.9999999996897
+      },
+      "oxygen_saturation": {
+        "value": 0.9711733514751295,
+        "status": "available",
+        "observed_at_s": 659.9999999996897
+      },
+      "aorta_sodium_mEq_L": {
+        "value": 144.580903057367,
+        "status": "available",
+        "observed_at_s": 659.9999999996897
+      },
+      "ambient_co_fraction": {
+        "value": 0.0,
+        "status": "available",
+        "observed_at_s": 659.9999999996897
+      },
+      "ambient_oxygen_fraction": {
+        "value": 0.21,
+        "status": "available",
+        "observed_at_s": 659.9999999996897
+      },
+      "native_events": {},
+      "provenance": "Pulse4.3.2.DataRequest+ActiveEvents",
+      "admission": "PENDING_RESEARCH_RULE_APPROVAL",
+      "clinical_efficacy": "NOT_EVALUATED"
+    },
+    "aorta_sodium_mEq_L": {
+      "value": 144.580903057367,
+      "status": "available",
+      "observed_at_s": 659.9999999996897
+    },
+    "native_events": {},
+    "production_enabled": false,
+    "clinical_efficacy": "NOT_EVALUATED"
+  },
+  "acceptance": {
+    "version": "301.v2.restricted.acceptance.1",
+    "injury_type": "environmental_hypoxia",
+    "profile": "301.v2.hypoxia.removal.restricted.1",
+    "route_admission": "ADMITTED_RESTRICTED",
+    "mechanism": {
+      "passed": true,
+      "version": "301.v2.restricted.acceptance.1",
+      "clinical_cure": false
+    },
+    "safety": {
+      "passed": true,
+      "reasons": [],
+      "all_event_names": [
+        "Hypoxia",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale",
+        "Tachycardia"
+      ],
+      "final_events": [],
+      "accepted_risk_events": [],
+      "risk_conformance": null,
+      "scope": "fixed engineering window only; no clinical certification"
+    },
+    "execution_confirmed": true,
+    "engineering_case_passed": true,
+    "restricted_case_passed": true,
+    "validation_only": false,
+    "production_enabled": false,
+    "clinical_efficacy": "NOT_EVALUATED",
+    "user_final_acceptance": "NOT_RECORDED",
+    "control_run": "control"
+  },
+  "post_endpoint_source_fault_refused": true
+}

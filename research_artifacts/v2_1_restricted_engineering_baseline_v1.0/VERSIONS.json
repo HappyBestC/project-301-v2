@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-14",
+  "pulse": "4.3.2",
+  "v2_baseline": "301.v2.restricted.engineering.baseline.1",
+  "composite_fixed_config": "301.v2_1.composite.runtime.1",
+  "acceptance": "301.v2_1.acceptance.2",
+  "risk_gate": "301.v2_1.risk_gate.2",
+  "admission": "301.v2_1.admission.2",
+  "thoracic_profile": "301.v2_1.thoracic.aligned_onsets.2",
+  "other_fixed_profiles": "301.v2_1.composite.candidate.1",
+  "thoracic_numeric_review": "301.v2_1.thoracic.numeric.2",
+  "production_enabled": false,
+  "baseline_id": "301.v2_1.restricted.engineering.baseline.1",
+  "public_entry": "core301.runtime.v2_1.open_research_composite_case",
+  "version_identity": "源码快照与 SHA-256，非 Git 提交标识",
+  "native_dt_s": 0.02,
+  "native_and_initialization_sha256": {
+    "pulse/bin/PyPulse.cpython-311-x86_64-linux-gnu.so": "f7eeb22ccef5392b2c0e2698037bc0aa47b0bf595f959c4c8dbc94f5d48023cf",
+    "pulse/bin/states/StandardMale@0s.json": "0867d7ed38a62fa8f77e16c85b8f0849401868846b276bdee0041ac58393ca7d",
+    "pulse/bin/patients/StandardMale.json": "df99d070d06ae3b7f81e863e991499eabbe092f7c72c884146f293bf4c87eaa2"
+  }
+}

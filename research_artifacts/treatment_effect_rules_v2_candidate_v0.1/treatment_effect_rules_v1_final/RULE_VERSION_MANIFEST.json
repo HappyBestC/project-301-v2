@@ -1,0 +1,86 @@
+{
+  "title": "Treatment Effect Rules V1.0 — Research Ruleset",
+  "release_version": "1.0",
+  "status": "RESEARCH_RULESET_V1_LOCKED",
+  "independent_validation_status": "INDEPENDENT_NATIVE_VALIDATION_PENDING",
+  "locked_at_utc": "2026-10-16T09:58:57.595377+00:00",
+  "authorization": "User explicitly directed locking the existing 14 rules as a Pulse4.3.2 Research Ruleset in this conversation; not a medical signature or native execution permission.",
+  "source": {
+    "path": "research_artifacts/treatment_effect_rules_v2_candidate_v0.1/final_rule_calibration_v1/FINAL_RULE_TABLE.json",
+    "sha256": "6a0fd1080f952deea6199dfdbe4772790a59507964a0d186334a86f0c63fb52f",
+    "payload_version_preserved": "301.final.rule.calibration.v1.pending"
+  },
+  "rule_count": 14,
+  "binary_rules": [
+    "V2E-01",
+    "V2E-04"
+  ],
+  "ternary_rules": [
+    "V2E-02",
+    "V2E-03",
+    "V2E-05",
+    "V2E-06",
+    "V2E-07",
+    "V2E-08",
+    "V2E-09",
+    "V2E-10",
+    "V2E-11",
+    "V2E-12",
+    "V2E-13",
+    "V2E-14"
+  ],
+  "rules_sha256": "6a0fd1080f952deea6199dfdbe4772790a59507964a0d186334a86f0c63fb52f",
+  "parameter_registry_canonical_sha256": "ed3ed8ae24f4da9f887202318c372f60a39ff95d3b9ffecf91b7870819c090f7",
+  "definitions_canonical_sha256": "634a7a9abd54dac6643a9dd61303b80160fbc1bd7236fb691d802ef1f1aa3de2",
+  "scope": "Pulse 4.3.2 fixed research profiles only",
+  "formal_scoring_enabled": false,
+  "production_enabled": false,
+  "medical_approval": "NOT_ASSERTED",
+  "native_execution_authorized": false,
+  "native_plan": {
+    "patient": "Soldier",
+    "healthy": 1,
+    "response": 32,
+    "comparisons": 18,
+    "completed": 0,
+    "matrix": "research_artifacts/treatment_effect_rules_v2_candidate_v0.1/male_independent_validation_final_preparation_v1/EXPERIMENT_MATRIX.json",
+    "matrix_sha256": "587551e9b427a7371b84708d53e20473e71c87fcc0c102e594c2b00cdc972fc7"
+  },
+  "test_counts": {
+    "run": 382,
+    "passed": 382,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "files": {
+    "FINAL_RULE_TABLE_V1.0.json": "6a0fd1080f952deea6199dfdbe4772790a59507964a0d186334a86f0c63fb52f",
+    "FINAL_RULE_TABLE_V1.0.md": "eb15cefe328b571ba242c0ce6d2fafb00f18cd61251a3737f03a34400a596c60",
+    "FINAL_RULE_TEST_REPORT.md": "6a1b689d73d289b1c4e727288610f63a98dfdda68ff00b77fd405ec8478c991d",
+    "FINAL_CONCLUSION.md": "5e7dcffaa4c754bed8241eedb1ecfeef557060db9515260d42364f22b2748108",
+    "SOURCE_DEPENDENCY_SHA256.json": "48b8f64f656dfe9e30e31a6d59000d3fd964f2781ab4474db9ad56300a3bb94a",
+    "RELEASE_CHECKS.json": "af14c5a4e581fd46525cca99ed6d6bb9bcc7a3a4cd6cc439a4fbc86a09abc895"
+  },
+  "source_snapshot": {
+    "source_snapshot/research_artifacts/treatment_effect_rules_v2_candidate_v0.1/male_independent_validation_final_preparation_v1/common.py": "6ab60afe954ecbcec0297df5095359e7837c841d341fcccea4e7ebc7a8938379",
+    "source_snapshot/research_artifacts/treatment_effect_rules_v2_candidate_v0.1/male_independent_validation_final_preparation_v1/reference.py": "655e18c644084357935b92ed17923eb85fc05ba894fbacc642ce6ee54e612e81",
+    "source_snapshot/research_artifacts/treatment_effect_rules_v2_candidate_v0.1/male_independent_validation_final_preparation_v1/adapter.py": "46a8fe0fba36fad21d344eba564c9d2bbfd933b7bbf261128fe2a02383c773f6",
+    "source_snapshot/research_artifacts/treatment_effect_rules_v2_candidate_v0.1/male_independent_validation_final_preparation_v1/capture.py": "2e708f81faea6777292c610e559ac1135193a6fa73ff57530c059c376e7e3f38",
+    "source_snapshot/research_artifacts/treatment_effect_rules_v2_candidate_v0.1/male_independent_validation_final_preparation_v1/healthy_driver.py": "4c93048a7366062625ffa0ad1026e947345a6234d0ec566dead77e6c0dfd6d93",
+    "source_snapshot/src/core301/pulse/session.py": "b957aa40345dc5a0225c6890ef6fe15526f3c3115453ddfa6fa2cb579e6ca067",
+    "source_snapshot/research_artifacts/treatment_effect_rules_v2_candidate_v0.1/final_lock_and_validation_v0.1/healthy_analysis.py": "87bfbbe7492c18049f3d23bdc6ecd958dc23a081df7107fc47f5d3960404264e",
+    "source_snapshot/research_artifacts/treatment_effect_rules_v2_candidate_v0.1/final_rule_calibration_v1/calibrate.py": "f9f49e43b2985bfb79fefd8dd27f03135b52edac7c76aaa9203567fb6d2d0b44",
+    "source_snapshot/research_artifacts/treatment_effect_rules_v2_candidate_v0.1/research_candidate_v2_2_prelock/offline.py": "79bf1c8ae129e734302eaa08d1204b26759b0c93af9a0f14193bbeb4101996cc",
+    "source_snapshot/research_artifacts/treatment_effect_rules_v2_candidate_v0.1/independent_native_execution_driver_v1/native.py": "d9364b4e095da883f53013c92f7e101b1a6ec2453a34a4c93d2c7b4b0270b654",
+    "source_snapshot/research_artifacts/treatment_effect_rules_v2_candidate_v0.1/independent_native_execution_driver_v1/bootstrap.py": "bb382aa9d6ce9fbb973a90b382645d1a840912c74a9ad5699a6c42229947a42f",
+    "source_snapshot/research_artifacts/treatment_effect_rules_v2_candidate_v0.1/independent_native_execution_driver_v1/driver.py": "cbebcd438d7a1f3e6ee85bf8197c590a0c56dab29961cd5699c6f8a222f84a69",
+    "source_snapshot/research_artifacts/treatment_effect_rules_v2_candidate_v0.1/independent_native_execution_driver_v1/seal_reference.py": "b0678b65a2e0da3c1115f02ecc33fd1f053bb61606b7e75ecdc74f57ba527abd",
+    "source_snapshot/research_artifacts/treatment_effect_rules_v2_candidate_v0.1/independent_native_execution_driver_v1/contracts.py": "add7d42cab1af831d9ebd222d42d4cea2b6d6324c13a346b158e05b0220495c0",
+    "source_snapshot/src/core301/pulse/v2/hemothorax_session.py": "2a0a8aebae0f346ddfb26cb36a80640af1edbaf98af2eda04c452b442b7f5a0e",
+    "source_snapshot/src/core301/pulse/v2/hemothorax_endpoint_review.py": "36d9090f2a02a82342b1abbdbc43cbc4ea371d991dab5ca8eea15af1e984107a",
+    "source_snapshot/src/core301/contracts/v2/hemothorax_observation.py": "02ae4b9190dd7de21d085da503e28a5a3658c1a6d516a511afe866bb02c130e1",
+    "source_snapshot/src/core301/pulse/v2/session.py": "c77923a605e898a959506f993529653370cf97fe8fc794a1ebfd0c63a57475f4",
+    "source_snapshot/research_artifacts/treatment_effect_rules_v2_candidate_v0.1/independent_native_execution_driver_v1/verify_integrity.py": "bae818903308832bdc4b14095b68b97b230272b86e98fed4fb6aa8a22b312a6c"
+  },
+  "immutability": "Append-only release: never overwrite; verify SHA256SUMS.json. Read-only file modes are an accident-prevention measure, not WORM storage."
+}

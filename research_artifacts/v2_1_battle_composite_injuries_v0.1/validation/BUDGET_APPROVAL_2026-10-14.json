@@ -1,0 +1,9 @@
+{
+  "authority": "User explicit approval in conversation 2026-10-14",
+  "additional_complete_branches": 5,
+  "complete_branch_cap": 45,
+  "fixed_AB_each_profile": true,
+  "validation_only": true,
+  "retries_authorized": false,
+  "production_enabled": false
+}

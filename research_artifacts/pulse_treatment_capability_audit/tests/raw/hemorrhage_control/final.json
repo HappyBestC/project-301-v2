@@ -1,0 +1,39 @@
+{
+  "SimulationTime": {
+    "ScalarTime": {
+      "Value": 60.00000000000378,
+      "Unit": "s"
+    }
+  },
+  "ActiveActions": {
+    "AnyAction": [
+      {
+        "PatientAction": {
+          "Hemorrhage": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "Compartment": "LeftLeg",
+            "FlowRate": {
+              "ScalarVolumePerTime": {
+                "Value": 0.6903571279575392,
+                "Unit": "mL/s"
+              }
+            },
+            "Severity": {
+              "Scalar0To1": {
+                "Value": 0.2
+              }
+            },
+            "TotalBloodLost": {
+              "ScalarVolume": {
+                "Value": 42.52749202265209,
+                "Unit": "mL"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

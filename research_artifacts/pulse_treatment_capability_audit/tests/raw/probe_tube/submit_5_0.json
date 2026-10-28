@@ -1,0 +1,28 @@
+{
+  "SimulationTime": {
+    "ScalarTime": {
+      "Value": 0.1,
+      "Unit": "s"
+    }
+  },
+  "ActiveActions": {
+    "AnyAction": [
+      {
+        "PatientAction": {
+          "TubeThoracostomy": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "Side": "Left",
+            "FlowRate": {
+              "ScalarVolumePerTime": {
+                "Value": 0.1,
+                "Unit": "mL/s"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

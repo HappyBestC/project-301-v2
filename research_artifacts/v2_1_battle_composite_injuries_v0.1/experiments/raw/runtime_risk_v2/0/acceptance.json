@@ -1,0 +1,57 @@
+{
+  "pattern_id": "penetrating_thoracic_composite_v2",
+  "version": "301.v2_1.acceptance.2",
+  "mechanisms": {
+    "A": true,
+    "B": true
+  },
+  "safety": {
+    "passed": true,
+    "version": "301.v2_1.risk_gate.2",
+    "risk_acceptance_id": "301.v2_1.composite.limited_research_risk_acceptance.2026-10-13.1",
+    "accepted_risk_exemptions": [
+      "Hypernatremia",
+      "Hypoxia",
+      "Tachycardia"
+    ],
+    "unreviewed_events": [],
+    "final_events": [
+      "Hypernatremia",
+      "Hypoxia",
+      "Tachycardia"
+    ],
+    "critical_veto": false,
+    "full_transition_match": true,
+    "approved_trajectory_match": {
+      "passed": true,
+      "precision": 1e-07,
+      "max_absolute_difference": 0,
+      "missing_seconds": [],
+      "problems": []
+    },
+    "numeric_review": {
+      "applicable": true,
+      "passed": true,
+      "version": "301.v2_1.thoracic.numeric.2",
+      "raw_min_mL": -0.0022222222254934835,
+      "normalized_value": null,
+      "inherited_v2_approval": false
+    },
+    "clinical_safety": "NOT_CERTIFIED",
+    "production_enabled": false,
+    "automatic_admission": false
+  },
+  "repeat": {
+    "passed": true,
+    "precision": 1e-07,
+    "max_absolute_difference": 0,
+    "missing_seconds": [],
+    "problems": []
+  },
+  "execution_confirmed": true,
+  "engineering_case_passed": true,
+  "formal_admission": "NOT_GRANTED_BY_CASE_RESULT",
+  "validation_only": true,
+  "production_enabled": false,
+  "clinical_safety": "NOT_EVALUATED"
+}

@@ -1,0 +1,116 @@
+[
+  {
+    "path": "README.md",
+    "before_sha256": "99be47c975cffe519cab981de5ef4f124b0ed9e97ad445e58a4d2cbd59c9689f",
+    "after_sha256": "dc378d56188f3ffeebc9936533f60bb145a3453fbc97b1a169abe4d5bceec26a",
+    "reason": "Research documentation or validation authority/entrypoint update"
+  },
+  {
+    "path": "docs/MODULE_STATUS.md",
+    "before_sha256": "26e4d86acb9169d906f59d55bc4b4e32c87782a5c5168f7bf6e53743b8576fe2",
+    "after_sha256": "14af229dfb6bbfee5517853226c9635e7d5f18d94ec0053b75620e47b3e447ed",
+    "reason": "Research documentation or validation authority/entrypoint update"
+  },
+  {
+    "path": "docs/DEVELOPMENT_ROADMAP.md",
+    "before_sha256": "4911b5a81d4f57e71c55256f99bfd95d6ccb7b4a8df4136008d67489d07242ac",
+    "after_sha256": "54ddd447985e4687b5f392e3a80f8931471555b86f6fe41f0e6bfec933bd6050",
+    "reason": "Research documentation or validation authority/entrypoint update"
+  },
+  {
+    "path": "docs/V2_ENGINEERING_BASELINE.md",
+    "before_sha256": "5529f6f8751a1033d9d2b22fb12049a60cdebe67c26b13eb4641fb57162f20dc",
+    "after_sha256": "52253c21b4d5790ca26b82e8603514c5fe664d37aa90b13e8e499863972b572b",
+    "reason": "Research documentation or validation authority/entrypoint update"
+  },
+  {
+    "path": "docs/MIGRATION_MANIFEST.md",
+    "before_sha256": "7645c7aaa67c7f7656f52a104f6380d97f1bd989c3658f0661bc1a3015fe4f68",
+    "after_sha256": "939f979b91725d667a9f053318cf5fd13229cac51321bb533e3474156b10e64c",
+    "reason": "Research documentation or validation authority/entrypoint update"
+  },
+  {
+    "path": "docs/MIGRATION_VALIDATION.md",
+    "before_sha256": "0b2943bc3d50feb773e5ba27f0ffc6fe1c5a7e017d6663348ebbd77fe9b101c0",
+    "after_sha256": "b9a14f85f7a2487fac633347d133b92b3cf12a66eb725e6b740d9d395bd3467b",
+    "reason": "Research documentation or validation authority/entrypoint update"
+  },
+  {
+    "path": "docs/SYSTEM_ARCHITECTURE.md",
+    "before_sha256": "5a178d5d12cff09a54da1fe7679c1e575a3cdea027fc6c6b03b1f4fc7079da52",
+    "after_sha256": "03dec8db794e2dd76fc0d5403314904f01885e0327d26af6430fbabd93da085d",
+    "reason": "Research documentation or validation authority/entrypoint update"
+  },
+  {
+    "path": "validation/all_unit.log",
+    "before_sha256": "9d4969835ea3868a118e3aea278f7da2b61ce77a564708b231ccc27f30026d07",
+    "after_sha256": "881c579231a03157a728cb66c272570095ceabbb5f8f652f410422285572bb48",
+    "reason": "Refreshed current validation output"
+  },
+  {
+    "path": "validation/complete_demo.jsonl",
+    "before_sha256": "d8f211735a0ca3ea652fd46f375bcdf66334852b09cbfc5964af3d0595b4b4a9",
+    "after_sha256": "fe430dfd0c099dec9e75c64991c0b55bde29ca25744c7162a7afa64dd34bf93d",
+    "reason": "Refreshed current validation output"
+  },
+  {
+    "path": "validation/m2_baseline.xml",
+    "before_sha256": "7828d6c7b8b265ac7c4899b937c4c3a3ceea31adac81f39bd3574f085d51d920",
+    "after_sha256": "de36bb3bc45b8702c6f3bd2488a3cbf630d0ecb2d2bb379face0e8bcf5e68c6f",
+    "reason": "Refreshed current validation output"
+  },
+  {
+    "path": "validation/shared_resources.demo.jsonl",
+    "before_sha256": "4a8e744bd46c1ef1e73e71e485ce818deec53a56b63241251e9880d7edda7b3c",
+    "after_sha256": "05c8202f630608e0ffd07365958473315fbf3ac7249b0ed4440d1c63c588e5ec",
+    "reason": "Refreshed current validation output"
+  },
+  {
+    "path": "validation/pulse_smoke.log",
+    "before_sha256": "de3fe7a9c66133de1c3102feed3d36dd216631d95a9513901633f8e1f7fa3a09",
+    "after_sha256": "b3d38eb874d218e2b2cbc2bad6a061df1d47fe2a0c9364528d0e1857a573ead3",
+    "reason": "Refreshed current validation output"
+  },
+  {
+    "path": "validation/m2_baseline.log",
+    "before_sha256": "6d7afee52d34394412d6a871ca9a4f7463900f0b155263b2e0761c510197b85a",
+    "after_sha256": "0055464cc0a14c08ddb911eda6f1df345d780f5065a704c0ed1cc5a2a7783e1a",
+    "reason": "Refreshed current validation output"
+  },
+  {
+    "path": "validation/shared_demo.jsonl",
+    "before_sha256": "e9e6eca157b0b8ed797a4c51d05d1353bf62c2d5f7279eccb930153a0701ac0c",
+    "after_sha256": "f3f62a9e8956d8504a26a3168a5858cd6e3c920ad4c9fd2e0a68e75330777a06",
+    "reason": "Refreshed current validation output"
+  },
+  {
+    "path": "validation/baseline_integrity.json",
+    "before_sha256": "2f923f4156055faca3a33d902ac8f1a323fd249064aef6ed64964a53d4beed06",
+    "after_sha256": "4f263e860e721ef0788cdb6d2e923a7f61e09af8c26d16734214645968462399",
+    "reason": "Refreshed current validation output"
+  },
+  {
+    "path": "validation/all_unit.xml",
+    "before_sha256": "f6159fe891cc04671d3e194f30a4bf9562cca3cd4f55563aef42acc675e340d6",
+    "after_sha256": "263660588006346ae97c1a97d740fee2e10dd67503530cfa3e92c311021e712e",
+    "reason": "Refreshed current validation output"
+  },
+  {
+    "path": "scripts/validate.sh",
+    "before_sha256": "5082d4f787975dd28ae80ebc8418503310ac43034194c4e88f091762569d59bd",
+    "after_sha256": "aa59ebabd02e7da08600845258aabc797e59aa2155d21a19f296ce5a6c39e94c",
+    "reason": "Research documentation or validation authority/entrypoint update"
+  },
+  {
+    "path": "scripts/verify_baseline.py",
+    "before_sha256": "5159ec1f3a29923f0479c9affd6313467ce310004069fb880ac449feed7de731",
+    "after_sha256": "0ddce252cd2fee65367db9c8d2688297f283d551e83055711ae808558095635d",
+    "reason": "Research documentation or validation authority/entrypoint update"
+  },
+  {
+    "path": "src/core301/paths.py",
+    "before_sha256": "64c373677c580e8fe409a57188c053a898719bbb2db536f97a47f01543d5c9bf",
+    "after_sha256": "da47d93259905c3c067844b511a8e51e9e1aadf45e731e6f14d1cd4769799b6e",
+    "reason": "Compatibility configuration path only"
+  }
+]

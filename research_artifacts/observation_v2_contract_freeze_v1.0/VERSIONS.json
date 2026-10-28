@@ -1,0 +1,15 @@
+{
+  "baseline_id": "301.observation.v2.engineering.baseline.1",
+  "patient_contract": "301.patient_observation.frozen.v2",
+  "evaluation_contract": "301.evaluation_observation.frozen.v2",
+  "source_patient_version": "301.patient_observation.candidate.v2.1",
+  "source_evaluation_version": "301.evaluation_observation.candidate.v2.1",
+  "B1_patch": "2026-10-14 strict-time + audited exact historical duplicate normalization",
+  "archive_date": "2026-10-14",
+  "timezone": "Asia/Shanghai",
+  "engineering_archive": "VERIFIED",
+  "user_acceptance": "PENDING",
+  "runtime_activated": false,
+  "production_enabled": false,
+  "identifier_scope": "Frozen identifiers name the archived engineering contract; unchanged source/catalog/schema x-version and Evaluation payload version retain candidate literals. No runtime version migration was performed."
+}

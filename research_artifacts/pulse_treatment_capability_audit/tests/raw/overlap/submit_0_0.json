@@ -1,0 +1,33 @@
+{
+  "SimulationTime": {
+    "ScalarTime": {
+      "Unit": "s"
+    }
+  },
+  "ActiveActions": {
+    "AnyAction": [
+      {
+        "PatientAction": {
+          "SubstanceCompoundInfusion": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "SubstanceCompound": "Saline",
+            "BagVolume": {
+              "ScalarVolume": {
+                "Value": 250,
+                "Unit": "mL"
+              }
+            },
+            "Rate": {
+              "ScalarVolumePerTime": {
+                "Value": 60,
+                "Unit": "mL/min"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

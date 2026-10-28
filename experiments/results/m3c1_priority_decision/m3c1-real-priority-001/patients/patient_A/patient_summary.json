@@ -1,0 +1,12 @@
+{
+  "patient_id": "m3c1-real-priority-001-A",
+  "plan_id": "m3c1-real-priority-001-A-plan",
+  "state": "TREATMENT_COMPLETED",
+  "worker_pid": 596571,
+  "last_acknowledged_time_s": 479.9999999998534,
+  "observations": 301,
+  "treatment_count": 1,
+  "wait_start_s": null,
+  "wait_end_s": null,
+  "mode": "dual_native"
+}

@@ -1,0 +1,23 @@
+{
+  "authority": "explicit_study_host",
+  "reserved": {
+    "needle_kit": 1
+  },
+  "held": {
+    "medic": 1
+  },
+  "permissions": [],
+  "allocation": [
+    {
+      "action": "needle_decompression",
+      "allocated_units": {
+        "needle_kit": 1
+      },
+      "at_s": 180.00000000001828,
+      "delivery": "not_assumed"
+    }
+  ],
+  "production_inventory": false,
+  "protected_route_available": true,
+  "receiving_environment_verified": true
+}

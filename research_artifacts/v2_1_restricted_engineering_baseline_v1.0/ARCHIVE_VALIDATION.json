@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "date": "2026-10-14",
+  "baseline_id": "301.v2_1.restricted.engineering.baseline.1",
+  "preexisting_files_verified_unchanged": 69011,
+  "snapshot_files_verified": 177,
+  "prior_v2_project_files_verified": 66580,
+  "prior_v2_archive_files_verified": 147,
+  "prior_v21_artifacts_verified": 2264,
+  "test_report_total_verified": 944,
+  "complete_response_branches_verified": 45,
+  "partial_attempts_verified": 2,
+  "registry_profiles_verified": 5,
+  "production_enabled": false,
+  "native_tests_rerun_for_archive": false,
+  "tests_rerun_for_archive": false,
+  "source_or_protocol_modifications": 0,
+  "manifest_policy": "Covers every archive file except ARCHIVE_SHA256.json itself; no external digital signature claimed."
+}

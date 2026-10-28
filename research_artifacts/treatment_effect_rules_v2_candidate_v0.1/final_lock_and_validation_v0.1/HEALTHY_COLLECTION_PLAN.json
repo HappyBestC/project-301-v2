@@ -1,0 +1,81 @@
+{
+  "id": "301.healthy.pleural.reference.preflight.1",
+  "approval_status": "PENDING",
+  "native_run_authorized": false,
+  "pulse_version": "4.3.2",
+  "state_file": "pulse/bin/states/StandardMale@0s.json",
+  "state_sha256": "0867d7ed38a62fa8f77e16c85b8f0849401868846b276bdee0041ac58393ca7d",
+  "patient_comparability": [
+    {
+      "case": "open_left",
+      "path": "research_artifacts/v2_engineering_phase1/validation/native_cases_final/open_left/pretreatment_state.json",
+      "sha256": "4ea8253c3d611dd4a3419e5cb23b33b28359099cada45faa5d94edee4673e54a",
+      "InitialPatient_exact_equal": true,
+      "version_equal": true
+    },
+    {
+      "case": "closed_left",
+      "path": "research_artifacts/v2_engineering_phase1/validation/native_cases_final/closed_left/pretreatment_state.json",
+      "sha256": "41e412307e30e42c616bc0a19b56bdda690fdec80922593d64d830d6b1ad1e1d",
+      "InitialPatient_exact_equal": true,
+      "version_equal": true
+    }
+  ],
+  "actions": [],
+  "conditions": [],
+  "environment": "preserve complete canonical state; compare all prescribed environmental fields to frozen07/08, exclude derived AirDensity",
+  "dt_s": 0.02,
+  "healthy_warmup_s": 180,
+  "record_s": 120,
+  "step_budget": 15000,
+  "branch_budget": 1,
+  "minimum_complete_cycles": 10,
+  "cycle_selection": "StartOfInhale rising edge; last10 complete cycles; no phase substitution if markers absent; report first/last and full raw series",
+  "stability_candidate": {
+    "period_cv_max": 0.05,
+    "cycle_mean_pressure_span_cmH2O_max": 0.1,
+    "cycle_mean_volume_span_over_mean_max": 0.01,
+    "no_Stabilizing_or_pathological_events": true,
+    "status": "ENGINEERING_HYPOTHESIS_PENDING_OWNER_APPROVAL; failed check stops reference adoption, no retry"
+  },
+  "reference_method": {
+    "pressure": "min/max across selected full-cycle raw0.02s samples, pad1cmH2O each side",
+    "volume": "min/max across same cycles, pad0.1*pooled healthy mean mL each side",
+    "phase": "preserve inhale/exhale boundaries; report per-cycle extrema, means, periods; do not tune to injured result",
+    "comparability": "same patient/engine/boundary conditions; age and version alone insufficient",
+    "approval": "reference acceptance separately PENDING"
+  },
+  "data_requests": [
+    {
+      "Category": "GasCompartment",
+      "CompartmentName": "LeftPleuralCavity",
+      "PropertyName": "Pressure",
+      "Unit": "cmH2O"
+    },
+    {
+      "Category": "GasCompartment",
+      "CompartmentName": "LeftPleuralCavity",
+      "PropertyName": "Volume",
+      "Unit": "mL"
+    },
+    {
+      "Category": "Physiology",
+      "PropertyName": "RespirationRate",
+      "Unit": "1/min"
+    }
+  ],
+  "events": "every step complete active set and duration; initialset+transitions; phase markers preserved",
+  "output_files": [
+    "observations.jsonl",
+    "event_transitions.jsonl",
+    "config.json",
+    "requests.json",
+    "pulse.log",
+    "initial_state.json",
+    "final_or_failed_state.json",
+    "result.json",
+    "SHA256.json"
+  ],
+  "failure_policy": "stop; keep raw failure; no automatic retry/extension",
+  "formal_scoring_enabled": false
+}

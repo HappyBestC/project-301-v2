@@ -1,0 +1,249 @@
+{
+  "version": "301.v2_1.composite.runtime.1",
+  "patient_id": "composite-patient",
+  "run_id": "v21-runtime_risk_v2-2",
+  "pattern_id": "blast_hemorrhage_respiratory_composite_v2",
+  "epoch": "dc92a83cc94248c4b824a8d4bd4fcbab",
+  "validation_only": true,
+  "production_enabled": false,
+  "requests": {
+    "noresource": {
+      "digest": "1b4ff6129079e3fb1fccf896185e0f7496b3c7c3d512f69b1d9aca009ebaa9a3",
+      "plan": {
+        "patient_id": "composite-patient",
+        "pattern_id": "blast_hemorrhage_respiratory_composite_v2",
+        "bundle": "AB"
+      },
+      "state": "REJECTED",
+      "actions": [],
+      "error": "Insufficient stock/equipment/team"
+    },
+    "joint": {
+      "digest": "1b4ff6129079e3fb1fccf896185e0f7496b3c7c3d512f69b1d9aca009ebaa9a3",
+      "plan": {
+        "patient_id": "composite-patient",
+        "pattern_id": "blast_hemorrhage_respiratory_composite_v2",
+        "bundle": "AB"
+      },
+      "state": "COMPLETED",
+      "actions": [
+        {
+          "kind": "control_external_bleeding",
+          "state": "NATIVE_ACCEPTED",
+          "time_s": 180.00000000001828,
+          "payload": {
+            "PatientAction": {
+              "Hemorrhage": {
+                "Type": "External",
+                "Compartment": "RightLeg",
+                "Severity": {
+                  "Scalar0To1": {
+                    "Value": 0
+                  }
+                }
+              }
+            }
+          },
+          "allocation": {
+            "kind": "control_external_bleeding",
+            "units": {},
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          "confirmed_time_s": 180.02000000001829
+        },
+        {
+          "kind": "fluid_resuscitation",
+          "state": "NATIVE_ACCEPTED",
+          "time_s": 180.02000000001829,
+          "payload": {
+            "PatientAction": {
+              "SubstanceCompoundInfusion": {
+                "SubstanceCompound": "Saline",
+                "BagVolume": {
+                  "ScalarVolume": {
+                    "Value": 500,
+                    "Unit": "mL"
+                  }
+                },
+                "Rate": {
+                  "ScalarVolumePerTime": {
+                    "Value": 100,
+                    "Unit": "mL/min"
+                  }
+                }
+              }
+            }
+          },
+          "allocation": {
+            "kind": "fluid_resuscitation",
+            "units": {
+              "saline_500ml_bag": 1
+            },
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          "confirmed_time_s": 180.0400000000183
+        },
+        {
+          "kind": "intubation",
+          "state": "NATIVE_ACCEPTED",
+          "time_s": 180.0400000000183,
+          "payload": {
+            "PatientAction": {
+              "Intubation": {
+                "Type": "Tracheal"
+              }
+            }
+          },
+          "allocation": {
+            "kind": "intubation",
+            "units": {
+              "airway_kit": 1
+            },
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          "confirmed_time_s": 180.0600000000183
+        },
+        {
+          "kind": "mechanical_ventilation",
+          "state": "NATIVE_ACCEPTED",
+          "time_s": 180.0600000000183,
+          "payload": {
+            "EquipmentAction": {
+              "MechanicalVentilatorPressureControl": {
+                "MechanicalVentilatorMode": {
+                  "Connection": "On"
+                },
+                "Mode": "AssistedControl",
+                "FractionInspiredOxygen": {
+                  "Scalar0To1": {
+                    "Value": 0.21
+                  }
+                },
+                "InspiratoryPressure": {
+                  "ScalarPressure": {
+                    "Value": 13,
+                    "Unit": "cmH2O"
+                  }
+                },
+                "PositiveEndExpiratoryPressure": {
+                  "ScalarPressure": {
+                    "Value": 5,
+                    "Unit": "cmH2O"
+                  }
+                },
+                "RespirationRate": {
+                  "ScalarFrequency": {
+                    "Value": 12,
+                    "Unit": "1/min"
+                  }
+                },
+                "InspiratoryPeriod": {
+                  "ScalarTime": {
+                    "Value": 1,
+                    "Unit": "s"
+                  }
+                },
+                "Slope": {
+                  "ScalarTime": {
+                    "Value": 0.1,
+                    "Unit": "s"
+                  }
+                }
+              }
+            }
+          },
+          "allocation": {
+            "kind": "mechanical_ventilation",
+            "units": {},
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          "confirmed_time_s": 180.08000000001832
+        }
+      ],
+      "resources": {
+        "reserved": {
+          "saline_500ml_bag": 1,
+          "airway_kit": 1
+        },
+        "held": {
+          "medic": 1,
+          "ventilator": 1
+        },
+        "allocated": [
+          {
+            "kind": "control_external_bleeding",
+            "units": {},
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          {
+            "kind": "fluid_resuscitation",
+            "units": {
+              "saline_500ml_bag": 1
+            },
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          {
+            "kind": "intubation",
+            "units": {
+              "airway_kit": 1
+            },
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          {
+            "kind": "mechanical_ventilation",
+            "units": {},
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          }
+        ],
+        "production_inventory": false
+      }
+    }
+  },
+  "events": [
+    {
+      "state": "PREPARED",
+      "time_s": 180.00000000001828
+    },
+    {
+      "state": "REJECTED",
+      "code": "INITIALIZATION_FORBIDDEN",
+      "message": "No repeated initialization or restoration"
+    },
+    {
+      "state": "REJECTED",
+      "code": "UNSUPPORTED_RECOVERY",
+      "message": "No composite state restoration"
+    },
+    {
+      "state": "REJECTED",
+      "code": "PATIENT_OR_PATTERN_MISMATCH",
+      "message": "Wrong target"
+    },
+    {
+      "state": "REJECTED",
+      "code": "STALE_CONTEXT",
+      "message": "Context is foreign or stale"
+    },
+    {
+      "state": "REJECTED",
+      "code": "IDEMPOTENCY_CONFLICT",
+      "message": "Request ID reused with different payload"
+    },
+    {
+      "state": "REJECTED",
+      "code": "OUTSIDE_WINDOW",
+      "message": "Fixed decision tick required"
+    },
+    {
+      "state": "REJECTED",
+      "code": "UNREGISTERED_NATIVE_SOURCE",
+      "message": "Native injury identities/parameters differ from composite registry"
+    },
+    {
+      "state": "REJECTED",
+      "code": "INITIALIZATION_FORBIDDEN",
+      "message": "No repeated initialization or restoration"
+    }
+  ],
+  "case_closed": true
+}

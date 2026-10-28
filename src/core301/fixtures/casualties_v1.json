@@ -1,0 +1,5 @@
+[
+  {"patient_id":"patient_001","injuries":[{"injury_type":"external_hemorrhage","severity":0.4,"compartment":"RightLeg"}]},
+  {"patient_id":"patient_002","injuries":[{"injury_type":"external_hemorrhage","severity":0.4,"compartment":"RightLeg"},{"injury_type":"traumatic_brain_injury","severity":0.4}]},
+  {"patient_id":"patient_003","injuries":[{"injury_type":"open_pneumothorax","severity":0.6,"side":"Left"},{"injury_type":"hemothorax","severity":0.8,"side":"Left"}]}
+]

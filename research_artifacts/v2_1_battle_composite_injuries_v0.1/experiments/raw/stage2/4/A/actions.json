@@ -1,0 +1,55 @@
+[
+  {
+    "time_s": 60.00000000000378,
+    "phase": "environment",
+    "payload": {
+      "EnvironmentAction": {
+        "ChangeEnvironmentalConditions": {
+          "EnvironmentalConditions": {
+            "AmbientGas": [
+              {
+                "Name": "Nitrogen",
+                "Amount": {
+                  "Scalar0To1": {
+                    "Value": 0.8796
+                  }
+                }
+              },
+              {
+                "Name": "Oxygen",
+                "Amount": {
+                  "Scalar0To1": {
+                    "Value": 0.12
+                  }
+                }
+              },
+              {
+                "Name": "CarbonDioxide",
+                "Amount": {
+                  "Scalar0To1": {
+                    "Value": 0.0004
+                  }
+                }
+              },
+              {
+                "Name": "CarbonMonoxide",
+                "Amount": {
+                  "Scalar0To1": {
+                    "Value": 0
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "environment",
+      "index": 0,
+      "simulation_time_s": 60.00000000000378,
+      "accepted": true
+    }
+  }
+]

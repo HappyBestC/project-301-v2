@@ -1,0 +1,8 @@
+{
+  "files_before": 114127,
+  "sha256_checked": 835,
+  "other_files_check": "size + mtime_ns; symlink targets checked; no claim of full-tree SHA coverage",
+  "changed": [],
+  "missing": [],
+  "added": []
+}

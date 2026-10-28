@@ -1,0 +1,438 @@
+{
+  "status": "PASS",
+  "refusals": [
+    "INCOMPLETE_FIXED_WINDOW",
+    "PATIENT_MISMATCH",
+    "CONTEXT_NOT_FOUND",
+    "UNSUPPORTED_RECOVERY",
+    "RESOURCE_UNAVAILABLE",
+    "IDEMPOTENCY_CONFLICT",
+    "UNVALIDATED_WINDOW",
+    "UNVALIDATED_TIMING"
+  ],
+  "kind": "hemothorax",
+  "initial": {
+    "version": "301.v2.restricted.observation.1",
+    "injury_type": "hemothorax",
+    "patient_id": "P",
+    "session_epoch": "021400a882c1480db992dd222401cc3b",
+    "patient_observation": {
+      "patient_id": "P",
+      "simulation_time_s": 659.9999999996897,
+      "vitals": {
+        "heart_rate": {
+          "value": 72.53895298710755,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "respiration_rate": {
+          "value": 12.29508196721308,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "pulse_oximetry": {
+          "value": 0.9741793502405262,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "systolic_arterial_pressure": {
+          "value": 113.76972416109354,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "mean_arterial_pressure": {
+          "value": 95.29764493499788,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        }
+      },
+      "circulation": {
+        "cardiac_output": {
+          "value": 5.643218646885231,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        }
+      },
+      "respiratory": {
+        "tidal_volume": {
+          "value": 542.525299673482,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "inspired_oxygen_fraction": {
+          "value": 0.20999761999243116,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        }
+      },
+      "laboratory": {
+        "hemoglobin_concentration": {
+          "value": 14.893657877140315,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "lactate_concentration": {
+          "value": 14.542749567971846,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "arterial_oxygen_pressure": {
+          "value": 90.18807315147325,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "arterial_carbon_dioxide_pressure": {
+          "value": 40.02434461135605,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        },
+        "blood_ph": {
+          "value": 7.413437760099001,
+          "status": "available",
+          "observed_at_s": 659.9999999996897
+        }
+      }
+    },
+    "specialty": {
+      "version": "301.v2.hemothorax.observation.1",
+      "patient_id": "P",
+      "side": "Left",
+      "simulation_time_s": 659.9999999996897,
+      "session_epoch": "021400a882c1480db992dd222401cc3b",
+      "residual_blood_volume_mL": {
+        "value": 27.77685185184762,
+        "status": "available",
+        "observed_at_s": 659.9999999996897
+      },
+      "source_flow_mL_s": {
+        "value": 0.0462962962962963,
+        "status": "available",
+        "observed_at_s": 659.9999999996897
+      },
+      "source_action_active": true,
+      "tube_action_active": false,
+      "tube_flow_mL_min": null,
+      "events": [],
+      "provenance": "Pulse4.3.2.ActionDataRequest+ActiveActions+native_log",
+      "numeric_interpretation": "native_raw",
+      "clinical_efficacy": "NOT_EVALUATED",
+      "admission": "PENDING_RESEARCH_RULE_APPROVAL"
+    },
+    "aorta_sodium_mEq_L": {
+      "value": 144.58924013542375,
+      "status": "available",
+      "observed_at_s": 659.9999999996897
+    },
+    "native_events": {
+      "MinimalHemothorax": 578.379999999764
+    },
+    "production_enabled": false,
+    "clinical_efficacy": "NOT_EVALUATED"
+  },
+  "control": {
+    "version": "301.v2.restricted.observation.1",
+    "injury_type": "hemothorax",
+    "patient_id": "P",
+    "session_epoch": "d0e8d877e8ef469f9eac2c369a96074b",
+    "patient_observation": {
+      "patient_id": "P",
+      "simulation_time_s": 959.9999999994169,
+      "vitals": {
+        "heart_rate": {
+          "value": 73.03369670307957,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "respiration_rate": {
+          "value": 12.29508196721308,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "pulse_oximetry": {
+          "value": 0.9739539386839801,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "systolic_arterial_pressure": {
+          "value": 113.62339575289668,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "mean_arterial_pressure": {
+          "value": 95.26332731398469,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        }
+      },
+      "circulation": {
+        "cardiac_output": {
+          "value": 5.640675412169018,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        }
+      },
+      "respiratory": {
+        "tidal_volume": {
+          "value": 541.3155259116378,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "inspired_oxygen_fraction": {
+          "value": 0.20999756186501675,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        }
+      },
+      "laboratory": {
+        "hemoglobin_concentration": {
+          "value": 14.860255327831007,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "lactate_concentration": {
+          "value": 14.489519509876775,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "arterial_oxygen_pressure": {
+          "value": 89.93368223200824,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "arterial_carbon_dioxide_pressure": {
+          "value": 40.11375479981963,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "blood_ph": {
+          "value": 7.4125556998232796,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        }
+      }
+    },
+    "specialty": {
+      "version": "301.v2.hemothorax.observation.1",
+      "patient_id": "P",
+      "side": "Left",
+      "simulation_time_s": 959.9999999994169,
+      "session_epoch": "d0e8d877e8ef469f9eac2c369a96074b",
+      "residual_blood_volume_mL": {
+        "value": 41.665740740723415,
+        "status": "available",
+        "observed_at_s": 959.9999999994169
+      },
+      "source_flow_mL_s": {
+        "value": 0.0462962962962963,
+        "status": "available",
+        "observed_at_s": 959.9999999994169
+      },
+      "source_action_active": true,
+      "tube_action_active": false,
+      "tube_flow_mL_min": null,
+      "events": [],
+      "provenance": "Pulse4.3.2.ActionDataRequest+ActiveActions+native_log",
+      "numeric_interpretation": "native_raw",
+      "clinical_efficacy": "NOT_EVALUATED",
+      "admission": "PENDING_RESEARCH_RULE_APPROVAL"
+    },
+    "aorta_sodium_mEq_L": {
+      "value": 145.194066636429,
+      "status": "available",
+      "observed_at_s": 959.9999999994169
+    },
+    "native_events": {
+      "Hypernatremia": 96.41999999999796,
+      "MinimalHemothorax": 878.3799999994911
+    },
+    "production_enabled": false,
+    "clinical_efficacy": "NOT_EVALUATED"
+  },
+  "treated": {
+    "version": "301.v2.restricted.observation.1",
+    "injury_type": "hemothorax",
+    "patient_id": "P",
+    "session_epoch": "021400a882c1480db992dd222401cc3b",
+    "patient_observation": {
+      "patient_id": "P",
+      "simulation_time_s": 959.9999999994169,
+      "vitals": {
+        "heart_rate": {
+          "value": 71.294349105511,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "respiration_rate": {
+          "value": 12.29508196721308,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "pulse_oximetry": {
+          "value": 0.9746296241785654,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "systolic_arterial_pressure": {
+          "value": 114.31113580904021,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "mean_arterial_pressure": {
+          "value": 95.36848817571483,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        }
+      },
+      "circulation": {
+        "cardiac_output": {
+          "value": 5.731948453716791,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        }
+      },
+      "respiratory": {
+        "tidal_volume": {
+          "value": 548.3211075950295,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "inspired_oxygen_fraction": {
+          "value": 0.20999788550317386,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        }
+      },
+      "laboratory": {
+        "hemoglobin_concentration": {
+          "value": 14.859603714185834,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "lactate_concentration": {
+          "value": 14.486558828934832,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "arterial_oxygen_pressure": {
+          "value": 90.77838167306956,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "arterial_carbon_dioxide_pressure": {
+          "value": 39.743665310144756,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        },
+        "blood_ph": {
+          "value": 7.416270686616912,
+          "status": "available",
+          "observed_at_s": 959.9999999994169
+        }
+      }
+    },
+    "specialty": {
+      "version": "301.v2.hemothorax.observation.1",
+      "patient_id": "P",
+      "side": "Left",
+      "simulation_time_s": 959.9999999994169,
+      "session_epoch": "021400a882c1480db992dd222401cc3b",
+      "residual_blood_volume_mL": {
+        "value": -0.0031481481514185365,
+        "status": "available",
+        "observed_at_s": 959.9999999994169
+      },
+      "source_flow_mL_s": {
+        "value": null,
+        "status": "unavailable",
+        "observed_at_s": 959.9999999994169
+      },
+      "source_action_active": false,
+      "tube_action_active": false,
+      "tube_flow_mL_min": null,
+      "events": [
+        {
+          "event_type": "native_tube_auto_stop",
+          "native_time_s": 715.56,
+          "raw_log_line": "[INFO] [715.56(s)] Left Tube Thoracostomy has removed all blood. Setting flow rate to 0.",
+          "source": "Pulse4.3.2.native_log"
+        }
+      ],
+      "provenance": "Pulse4.3.2.ActionDataRequest+ActiveActions+native_log",
+      "numeric_interpretation": "negative_native_raw",
+      "clinical_efficacy": "NOT_EVALUATED",
+      "admission": "PENDING_RESEARCH_RULE_APPROVAL"
+    },
+    "aorta_sodium_mEq_L": {
+      "value": 145.1923631895291,
+      "status": "available",
+      "observed_at_s": 959.9999999994169
+    },
+    "native_events": {
+      "Hypernatremia": 95.97999999999804
+    },
+    "production_enabled": false,
+    "clinical_efficacy": "NOT_EVALUATED"
+  },
+  "acceptance": {
+    "version": "301.v2.restricted.acceptance.1",
+    "injury_type": "hemothorax",
+    "profile": "301.v2.hemothorax.restricted.1",
+    "route_admission": "PENDING",
+    "mechanism": {
+      "n1_version": "301.v2.hemothorax.N1.1",
+      "e1_version": "301.v2.hemothorax.E1.1",
+      "n1_consistent": true,
+      "local_control_supported": true,
+      "admission": "PENDING_RESEARCH_RULE_APPROVAL",
+      "goal_passed": false,
+      "normalized_volume_mL": null,
+      "production_enabled": false,
+      "problems": [],
+      "safety_events": {
+        "Hypernatremia": 95.97999999999804
+      },
+      "safety_disposition": "UNRESOLVED_EVENTS",
+      "raw_final_volume_mL": -0.0031481481514185365,
+      "numeric_interpretation_only": true,
+      "passed": true
+    },
+    "safety": {
+      "passed": true,
+      "reasons": [],
+      "all_event_names": [
+        "Hypernatremia",
+        "MinimalHemothorax",
+        "StartOfCardiacCycle",
+        "StartOfExhale",
+        "StartOfInhale"
+      ],
+      "final_events": [
+        "Hypernatremia"
+      ],
+      "accepted_risk_events": [
+        "Hypernatremia"
+      ],
+      "risk_conformance": {
+        "passed": true,
+        "risk_acceptance_id": "301.v2.limited_research_risk_acceptance.2026-10-13.1",
+        "precision": 1e-07,
+        "meaning": "deterministic evidence conformance, not clinical threshold",
+        "max_absolute_difference": 6.341451808111742e-10,
+        "missing_seconds": [],
+        "failures": [],
+        "samples": 961,
+        "accepted_event": "Hypernatremia",
+        "clinical_safety_certification": false
+      },
+      "scope": "fixed engineering window only; no clinical certification"
+    },
+    "execution_confirmed": true,
+    "engineering_case_passed": true,
+    "restricted_case_passed": false,
+    "validation_only": true,
+    "production_enabled": false,
+    "clinical_efficacy": "NOT_EVALUATED",
+    "user_final_acceptance": "NOT_RECORDED",
+    "control_run": "control"
+  }
+}

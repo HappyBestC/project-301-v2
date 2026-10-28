@@ -1,0 +1,28 @@
+{
+  "SimulationTime": {
+    "ScalarTime": {
+      "Value": 34.99999999999987,
+      "Unit": "s"
+    }
+  },
+  "ActiveActions": {
+    "AnyAction": [
+      {
+        "PatientAction": {
+          "TensionPneumothorax": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "Type": "Open",
+            "Side": "Left",
+            "Severity": {
+              "Scalar0To1": {
+                "Value": 0.3
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

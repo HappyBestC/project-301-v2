@@ -1,0 +1,198 @@
+[
+  {
+    "time_s": 60.00000000000378,
+    "phase": "injury",
+    "payload": {
+      "PatientAction": {
+        "Hemorrhage": {
+          "Type": "External",
+          "Compartment": "RightLeg",
+          "Severity": {
+            "Scalar0To1": {
+              "Value": 0.4
+            }
+          }
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "injury",
+      "index": 0,
+      "simulation_time_s": 60.00000000000378,
+      "accepted": true
+    }
+  },
+  {
+    "time_s": 60.00000000000378,
+    "phase": "injury",
+    "payload": {
+      "PatientAction": {
+        "RespiratoryFatigue": {
+          "Severity": {
+            "Scalar0To1": {
+              "Value": 0.4
+            }
+          }
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "injury",
+      "index": 0,
+      "simulation_time_s": 60.00000000000378,
+      "accepted": true
+    }
+  },
+  {
+    "time_s": 180.00000000001828,
+    "phase": "treatment:control_external_bleeding",
+    "payload": {
+      "PatientAction": {
+        "Hemorrhage": {
+          "Type": "External",
+          "Compartment": "RightLeg",
+          "Severity": {
+            "Scalar0To1": {
+              "Value": 0
+            }
+          }
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "treatment:control_external_bleeding",
+      "index": 0,
+      "simulation_time_s": 180.00000000001828,
+      "accepted": true
+    }
+  },
+  {
+    "time_s": 180.02000000001829,
+    "phase": "treatment:fluid_resuscitation",
+    "payload": {
+      "PatientAction": {
+        "SubstanceCompoundInfusion": {
+          "SubstanceCompound": "Saline",
+          "BagVolume": {
+            "ScalarVolume": {
+              "Value": 500,
+              "Unit": "mL"
+            }
+          },
+          "Rate": {
+            "ScalarVolumePerTime": {
+              "Value": 100,
+              "Unit": "mL/min"
+            }
+          }
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "treatment:fluid_resuscitation",
+      "index": 0,
+      "simulation_time_s": 180.02000000001829,
+      "accepted": true
+    }
+  },
+  {
+    "time_s": 180.0400000000183,
+    "phase": "treatment:intubation",
+    "payload": {
+      "PatientAction": {
+        "Intubation": {
+          "Type": "Tracheal"
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "treatment:intubation",
+      "index": 0,
+      "simulation_time_s": 180.0400000000183,
+      "accepted": true
+    }
+  },
+  {
+    "time_s": 180.0600000000183,
+    "phase": "treatment:mechanical_ventilation",
+    "payload": {
+      "EquipmentAction": {
+        "MechanicalVentilatorPressureControl": {
+          "MechanicalVentilatorMode": {
+            "Connection": "On"
+          },
+          "Mode": "AssistedControl",
+          "FractionInspiredOxygen": {
+            "Scalar0To1": {
+              "Value": 0.21
+            }
+          },
+          "InspiratoryPressure": {
+            "ScalarPressure": {
+              "Value": 13,
+              "Unit": "cmH2O"
+            }
+          },
+          "PositiveEndExpiratoryPressure": {
+            "ScalarPressure": {
+              "Value": 5,
+              "Unit": "cmH2O"
+            }
+          },
+          "RespirationRate": {
+            "ScalarFrequency": {
+              "Value": 12,
+              "Unit": "1/min"
+            }
+          },
+          "InspiratoryPeriod": {
+            "ScalarTime": {
+              "Value": 1,
+              "Unit": "s"
+            }
+          },
+          "Slope": {
+            "ScalarTime": {
+              "Value": 0.1,
+              "Unit": "s"
+            }
+          }
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "treatment:mechanical_ventilation",
+      "index": 0,
+      "simulation_time_s": 180.0600000000183,
+      "accepted": true
+    }
+  },
+  {
+    "time_s": 479.9999999998534,
+    "phase": "negative_test",
+    "payload": {
+      "PatientAction": {
+        "Bronchoconstriction": {
+          "Severity": {
+            "Scalar0To1": {
+              "Value": 0.4
+            }
+          }
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "negative_test",
+      "index": 0,
+      "simulation_time_s": 479.9999999998534,
+      "accepted": true
+    }
+  }
+]

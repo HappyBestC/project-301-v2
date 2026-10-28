@@ -1,0 +1,27 @@
+# Synthetic algorithm-test ranges ONLY. These are not approved clinical thresholds.
+calibration_status: test-only
+evaluation_horizons_s: [60, 120, 300]
+stable_window_s: 300
+max_episode_time_s: 3600
+max_stability_gap_s: 100
+neutral_tolerance: 0.01
+terminal_time_tolerance_s: 0
+minimum_scored_metrics: 1
+metrics:
+  vitals.heart_rate: {acceptable_range: [60, 100], weight: 1, distance_tolerance: 0.1}
+  vitals.respiration_rate: {acceptable_range: [12, 20], weight: 1, distance_tolerance: 0.1}
+  vitals.pulse_oximetry: {acceptable_range: [0.95, 1], weight: 1, distance_tolerance: 0.001}
+  vitals.systolic_arterial_pressure: {acceptable_range: [90, 140], weight: 1, distance_tolerance: 0.1}
+  vitals.mean_arterial_pressure: {acceptable_range: [65, 105], weight: 1, distance_tolerance: 0.1}
+stable_ranges:
+  vitals.heart_rate: [60, 100]
+  vitals.respiration_rate: [12, 20]
+  vitals.pulse_oximetry: [0.95, 1]
+  vitals.systolic_arterial_pressure: [90, 140]
+  vitals.mean_arterial_pressure: [65, 105]
+terminal_event_policy:
+  IrreversibleState: terminal
+  CardiacArrest: critical
+  CardiovascularCollapse: critical
+  CriticalBrainOxygenDeficit: critical
+  HypovolemicShock: critical

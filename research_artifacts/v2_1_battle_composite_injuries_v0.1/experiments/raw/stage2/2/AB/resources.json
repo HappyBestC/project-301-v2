@@ -1,0 +1,48 @@
+{
+  "authority": "explicit_study_host",
+  "reserved": {
+    "saline_500ml_bag": 1,
+    "airway_kit": 1
+  },
+  "held": {
+    "medic": 1,
+    "ventilator": 1
+  },
+  "permissions": [
+    "simulated_external_source_control",
+    "iv_access"
+  ],
+  "allocation": [
+    {
+      "action": "control_external_bleeding",
+      "allocated_units": {},
+      "at_s": 180.00000000001828,
+      "delivery": "not_assumed"
+    },
+    {
+      "action": "fluid_resuscitation",
+      "allocated_units": {
+        "saline_500ml_bag": 1
+      },
+      "at_s": 180.02000000001829,
+      "delivery": "not_assumed"
+    },
+    {
+      "action": "intubation",
+      "allocated_units": {
+        "airway_kit": 1
+      },
+      "at_s": 180.0400000000183,
+      "delivery": "not_assumed"
+    },
+    {
+      "action": "mechanical_ventilation",
+      "allocated_units": {},
+      "at_s": 180.0600000000183,
+      "delivery": "not_assumed"
+    }
+  ],
+  "production_inventory": false,
+  "protected_route_available": true,
+  "receiving_environment_verified": true
+}

@@ -1,0 +1,71 @@
+{
+  "version": "301.v2.restricted.admission.1",
+  "production_enabled": false,
+  "final_user_acceptance": "NOT_RECORDED",
+  "engineering_rule_authority": "current user task C3/C4/stage4; explicit limited-risk decision for hemothorax/CO",
+  "profiles": {
+    "hemothorax": "301.v2.hemothorax.restricted.1",
+    "carbon_monoxide_exposure": "301.v2.co.removal.restricted.1",
+    "environmental_hypoxia": "301.v2.hypoxia.removal.restricted.1"
+  },
+  "validation": {
+    "validation/regression/native.xml": {
+      "tests": 43,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "validation/regression/unit_pre_activation2.xml": {
+      "tests": 801,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "validation/e2e/verify_hemo2.xml": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "validation/e2e/verify_exposure3.xml": {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "evidence": [
+    {
+      "path": "research_artifacts/v2_final_ten_injury_restricted_acceptance_v0.1/validation/regression/native.xml",
+      "sha256": "cabc2a8802b925c6361534010bcdd2917949754295ef4e9e90ea921bc0c0e95d"
+    },
+    {
+      "path": "research_artifacts/v2_final_ten_injury_restricted_acceptance_v0.1/validation/regression/unit_pre_activation2.xml",
+      "sha256": "4192ec224570874fb7d12cb1bf291c725dc4ae857b04602559de262bcd48ee5f"
+    },
+    {
+      "path": "research_artifacts/v2_final_ten_injury_restricted_acceptance_v0.1/validation/e2e/verify_hemo2.xml",
+      "sha256": "43e979de5496ea16ea0ceb89d28ce869131ed605571f19b9db921c31afd23a46"
+    },
+    {
+      "path": "research_artifacts/v2_final_ten_injury_restricted_acceptance_v0.1/validation/e2e/verify_exposure3.xml",
+      "sha256": "55a8ff5fc68bb806a4ce0f577c5069c3442e1161c59012adcd7ef1c857988901"
+    },
+    {
+      "path": "research_artifacts/v2_final_ten_injury_restricted_acceptance_v0.1/validation/e2e/verify_hemo2/hemothorax/result.json",
+      "sha256": "d56d74294f9f42b361eb3045c5c0d1f3ab71f9e74dd9eec4bd98aa5477d8b6fc"
+    },
+    {
+      "path": "research_artifacts/v2_final_ten_injury_restricted_acceptance_v0.1/validation/e2e/verify_exposure3/carbon_monoxide_exposure/result.json",
+      "sha256": "a5447701aae2b543d219422e842a94242299383f9910467348e734f73a9635ec"
+    },
+    {
+      "path": "research_artifacts/v2_final_ten_injury_restricted_acceptance_v0.1/validation/e2e/verify_exposure3/environmental_hypoxia/result.json",
+      "sha256": "11d2dd2aeb704410ea65048df92a2de3b5ef3af4966c2d04af91ac0803d371e2"
+    },
+    {
+      "path": "research_artifacts/v2_final_ten_injury_restricted_acceptance_v0.1/USER_RISK_ACCEPTANCE.json",
+      "sha256": "651ccba0cb3baa8974fffa91ef5b7f5e70f88629578265d8a1819160249f9b09"
+    }
+  ]
+}

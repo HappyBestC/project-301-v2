@@ -1,0 +1,614 @@
+[
+  {
+    "id": "valid_control_external_bleeding",
+    "expected_schema_valid": true,
+    "note": "仅结构合法，需目标、协议、资源与正式放行校验；本轮production禁用",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "control_external_bleeding",
+          "compartment": "RightLeg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_control_external_bleeding_hidden_severity",
+    "expected_schema_valid": false,
+    "note": "禁止Agent输入隐藏Severity；INT/MV还需配对",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "control_external_bleeding",
+          "compartment": "RightLeg",
+          "severity": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "valid_control_internal_bleeding",
+    "expected_schema_valid": true,
+    "note": "仅结构合法，需目标、协议、资源与正式放行校验；本轮production禁用",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "control_internal_bleeding",
+          "compartment": "Spleen"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_control_internal_bleeding_hidden_severity",
+    "expected_schema_valid": false,
+    "note": "禁止Agent输入隐藏Severity；INT/MV还需配对",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "control_internal_bleeding",
+          "compartment": "Spleen",
+          "severity": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "valid_control_hemothorax_bleeding",
+    "expected_schema_valid": true,
+    "note": "仅结构合法，需目标、协议、资源与正式放行校验；本轮production禁用",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "control_hemothorax_bleeding",
+          "side": "Left"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_control_hemothorax_bleeding_hidden_severity",
+    "expected_schema_valid": false,
+    "note": "禁止Agent输入隐藏Severity；INT/MV还需配对",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "control_hemothorax_bleeding",
+          "side": "Left",
+          "severity": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "valid_fluid_resuscitation",
+    "expected_schema_valid": true,
+    "note": "仅结构合法，需目标、协议、资源与正式放行校验；本轮production禁用",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "fluid_resuscitation"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_fluid_resuscitation_hidden_severity",
+    "expected_schema_valid": false,
+    "note": "禁止Agent输入隐藏Severity；INT/MV还需配对",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "fluid_resuscitation",
+          "severity": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "valid_transfusion",
+    "expected_schema_valid": true,
+    "note": "仅结构合法，需目标、协议、资源与正式放行校验；本轮production禁用",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "transfusion"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_transfusion_hidden_severity",
+    "expected_schema_valid": false,
+    "note": "禁止Agent输入隐藏Severity；INT/MV还需配对",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "transfusion",
+          "severity": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "valid_occlusive_dressing",
+    "expected_schema_valid": true,
+    "note": "仅结构合法，需目标、协议、资源与正式放行校验；本轮production禁用",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "occlusive_dressing",
+          "side": "Left"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_occlusive_dressing_hidden_severity",
+    "expected_schema_valid": false,
+    "note": "禁止Agent输入隐藏Severity；INT/MV还需配对",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "occlusive_dressing",
+          "side": "Left",
+          "severity": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "valid_needle_decompression",
+    "expected_schema_valid": true,
+    "note": "仅结构合法，需目标、协议、资源与正式放行校验；本轮production禁用",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "needle_decompression",
+          "side": "Left"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_needle_decompression_hidden_severity",
+    "expected_schema_valid": false,
+    "note": "禁止Agent输入隐藏Severity；INT/MV还需配对",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "needle_decompression",
+          "side": "Left",
+          "severity": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "valid_chest_tube",
+    "expected_schema_valid": true,
+    "note": "仅结构合法，需目标、协议、资源与正式放行校验；本轮production禁用",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "chest_tube",
+          "side": "Left"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_chest_tube_hidden_severity",
+    "expected_schema_valid": false,
+    "note": "禁止Agent输入隐藏Severity；INT/MV还需配对",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "chest_tube",
+          "side": "Left",
+          "severity": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "valid_inhaled_albuterol",
+    "expected_schema_valid": true,
+    "note": "仅结构合法，需目标、协议、资源与正式放行校验；本轮production禁用",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "inhaled_albuterol"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_inhaled_albuterol_hidden_severity",
+    "expected_schema_valid": false,
+    "note": "禁止Agent输入隐藏Severity；INT/MV还需配对",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "inhaled_albuterol",
+          "severity": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "valid_supplemental_oxygen",
+    "expected_schema_valid": true,
+    "note": "仅结构合法，需目标、协议、资源与正式放行校验；本轮production禁用",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "supplemental_oxygen"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_supplemental_oxygen_hidden_severity",
+    "expected_schema_valid": false,
+    "note": "禁止Agent输入隐藏Severity；INT/MV还需配对",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "supplemental_oxygen",
+          "severity": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "valid_intubation",
+    "expected_schema_valid": true,
+    "note": "仅结构合法，需目标、协议、资源与正式放行校验；本轮production禁用",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "intubation"
+        },
+        {
+          "action_type": "mechanical_ventilation"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_intubation_hidden_severity",
+    "expected_schema_valid": false,
+    "note": "禁止Agent输入隐藏Severity；INT/MV还需配对",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "intubation",
+          "severity": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "valid_mechanical_ventilation",
+    "expected_schema_valid": true,
+    "note": "仅结构合法，需目标、协议、资源与正式放行校验；本轮production禁用",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "intubation"
+        },
+        {
+          "action_type": "mechanical_ventilation"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_mechanical_ventilation_hidden_severity",
+    "expected_schema_valid": false,
+    "note": "禁止Agent输入隐藏Severity；INT/MV还需配对",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "mechanical_ventilation",
+          "severity": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "valid_empty_plan",
+    "expected_schema_valid": true,
+    "note": "不提出新动作，不自动终止已有持续治疗",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": []
+    }
+  },
+  {
+    "id": "valid_two_external_sources",
+    "expected_schema_valid": true,
+    "note": "结构支持显式多来源；当前多源执行REQUIRES_VALIDATION，不放行",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "control_external_bleeding",
+          "compartment": "RightLeg"
+        },
+        {
+          "action_type": "control_external_bleeding",
+          "compartment": "LeftArm"
+        }
+      ]
+    }
+  },
+  {
+    "id": "valid_internal_support",
+    "expected_schema_valid": true,
+    "note": "需对应来源/研究能力票据，作用和资源分别记录",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "control_internal_bleeding",
+          "compartment": "Spleen"
+        },
+        {
+          "action_type": "transfusion"
+        }
+      ]
+    }
+  },
+  {
+    "id": "valid_hemo_chain",
+    "expected_schema_valid": true,
+    "note": "结构合法，但完整引流终点BLOCKED",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "control_hemothorax_bleeding",
+          "side": "Left"
+        },
+        {
+          "action_type": "chest_tube",
+          "side": "Left"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_extra_top_field",
+    "expected_schema_valid": false,
+    "note": "协议版本只在可信执行封装",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [],
+      "protocol_id": "nrb15"
+    }
+  },
+  {
+    "id": "invalid_unrecognized_action",
+    "expected_schema_valid": false,
+    "note": "无该业务动作",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "tourniquet"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_wrong_side_case",
+    "expected_schema_valid": false,
+    "note": "枚举精确Left/Right",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "chest_tube",
+          "side": "left"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_internal_nonabdominal",
+    "expected_schema_valid": false,
+    "note": "不属于腹腔输入域",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "control_internal_bleeding",
+          "compartment": "RightLeg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_missing_location",
+    "expected_schema_valid": false,
+    "note": "必需compartment",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "control_external_bleeding"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_extra_injury_id",
+    "expected_schema_valid": false,
+    "note": "injury_id仅后端注册表/日志",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "control_external_bleeding",
+          "compartment": "RightLeg",
+          "injury_id": "trusted-01"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_duplicate",
+    "expected_schema_valid": false,
+    "note": "同目标同动作重复",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "occlusive_dressing",
+          "side": "Left"
+        },
+        {
+          "action_type": "occlusive_dressing",
+          "side": "Left"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_fluid_blood",
+    "expected_schema_valid": false,
+    "note": "保留V1互斥",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "fluid_resuscitation"
+        },
+        {
+          "action_type": "transfusion"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_oxygen_ventilator",
+    "expected_schema_valid": false,
+    "note": "设备互斥",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "intubation"
+        },
+        {
+          "action_type": "mechanical_ventilation"
+        },
+        {
+          "action_type": "supplemental_oxygen"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_mv_without_intubation",
+    "expected_schema_valid": false,
+    "note": "本计划缺插管",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "mechanical_ventilation"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_intubation_alone_v2",
+    "expected_schema_valid": false,
+    "note": "V2首批收窄为已测配对",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "intubation"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_albuterol_oxygen",
+    "expected_schema_valid": false,
+    "note": "未验设备切换",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "inhaled_albuterol"
+        },
+        {
+          "action_type": "supplemental_oxygen"
+        }
+      ]
+    }
+  },
+  {
+    "id": "valid_shape_bad_order",
+    "expected_schema_valid": true,
+    "note": "Schema无法表达所有数组前置顺序；语义必须拒绝",
+    "plan": {
+      "patient_id": "p-001",
+      "actions": [
+        {
+          "action_type": "mechanical_ventilation"
+        },
+        {
+          "action_type": "intubation"
+        }
+      ]
+    }
+  },
+  {
+    "id": "invalid_blank_patient",
+    "expected_schema_valid": false,
+    "note": "跨患者绑定必需且不得空白",
+    "plan": {
+      "patient_id": "  ",
+      "actions": []
+    }
+  },
+  {
+    "id": "invalid_patient_type",
+    "expected_schema_valid": false,
+    "note": "严格字符串",
+    "plan": {
+      "patient_id": 123,
+      "actions": []
+    }
+  }
+]

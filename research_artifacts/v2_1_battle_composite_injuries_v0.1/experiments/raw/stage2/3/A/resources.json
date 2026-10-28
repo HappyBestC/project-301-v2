@@ -1,0 +1,21 @@
+{
+  "authority": "explicit_study_host",
+  "reserved": {},
+  "held": {
+    "evacuation_team": 1
+  },
+  "permissions": [
+    "research_environment_removal"
+  ],
+  "allocation": [
+    {
+      "action": "remove_from_exposure",
+      "allocated_units": {},
+      "at_s": 959.9999999994169,
+      "delivery": "not_assumed"
+    }
+  ],
+  "production_inventory": false,
+  "protected_route_available": true,
+  "receiving_environment_verified": true
+}

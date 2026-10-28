@@ -1,0 +1,123 @@
+{
+  "schema_version": "301.resource.m2a.1",
+  "run_id": "m3c2-timing-exploratory-001",
+  "state_version": 10,
+  "at_s": 182.0000000000193,
+  "resources": {
+    "medic": {
+      "resource_id": "medic",
+      "resource_type_id": "medic",
+      "unit": "person",
+      "use_mode": "reusable",
+      "location_id": "scene",
+      "state_version": 10,
+      "updated_at_s": 182.0000000000193,
+      "initial_total": 1,
+      "received_qty": 0,
+      "consumed_qty": 0,
+      "lost_qty": 0,
+      "total_qty": 1,
+      "available_qty": 1,
+      "reserved_qty": 0,
+      "in_use_qty": 0,
+      "unavailable_qty": 0,
+      "operational_state": "AVAILABLE"
+    }
+  },
+  "views": {},
+  "allocations": {
+    "a1f3d3e203754a40b30788226bf7c643": {
+      "allocation_id": "a1f3d3e203754a40b30788226bf7c643",
+      "patient_id": "m3c2-timing-exploratory-001-A",
+      "plan_id": "m3c2-timing-exploratory-001-A-plan",
+      "resource_id": "medic",
+      "quantity": 1,
+      "unit": "person",
+      "use_mode": "reusable",
+      "action_instance_ids": [
+        "m3c2-timing-exploratory-001-A-control"
+      ],
+      "requirement_ids": [
+        "301.resource.m2a.1:control_external_bleeding"
+      ],
+      "status": "RELEASED",
+      "consumed_qty": 0,
+      "active_action_id": null,
+      "start_at_s": 180.00000000001828,
+      "actual_end_at_s": 181.0000000000188
+    },
+    "3aa54980ae344b2782f1e21d2ef74dea": {
+      "allocation_id": "3aa54980ae344b2782f1e21d2ef74dea",
+      "patient_id": "m3c2-timing-exploratory-001-B",
+      "plan_id": "m3c2-timing-exploratory-001-B-plan",
+      "resource_id": "medic",
+      "quantity": 1,
+      "unit": "person",
+      "use_mode": "reusable",
+      "action_instance_ids": [
+        "m3c2-timing-exploratory-001-B-control"
+      ],
+      "requirement_ids": [
+        "301.resource.m2a.1:control_external_bleeding"
+      ],
+      "status": "RELEASED",
+      "consumed_qty": 0,
+      "active_action_id": null,
+      "start_at_s": 181.0000000000188,
+      "actual_end_at_s": 182.0000000000193
+    }
+  },
+  "locations": {
+    "scene": {
+      "location_id": "scene",
+      "capabilities": [
+        "needle_decompression",
+        "mechanical_ventilation",
+        "remove_from_exposure",
+        "intubation",
+        "control_internal_bleeding",
+        "occlusive_dressing",
+        "fluid_resuscitation",
+        "supplemental_oxygen",
+        "transfusion",
+        "control_external_bleeding",
+        "control_hemothorax_bleeding",
+        "chest_tube"
+      ],
+      "permissions": [
+        "simulated_hemothorax_source_control",
+        "simulated_external_source_control",
+        "research_chest_tube",
+        "iv_access",
+        "research_environment_removal",
+        "simulated_internal_source_control"
+      ],
+      "protected_route_available": true,
+      "receiving_environment_verified": true
+    }
+  },
+  "plans": {
+    "m3c2-timing-exploratory-001-A-plan": {
+      "patient_id": "m3c2-timing-exploratory-001-A",
+      "actions": {
+        "m3c2-timing-exploratory-001-A-control": {
+          "status": "FINISHED",
+          "execution": "accepted",
+          "receipt_ref": "/home/private/project-301-v2/experiments/results/m3c2_feedback_decision/m3c2-timing-exploratory-001/patients/patient_A/execution_events.jsonl#event=3"
+        }
+      },
+      "cancelled": true
+    },
+    "m3c2-timing-exploratory-001-B-plan": {
+      "patient_id": "m3c2-timing-exploratory-001-B",
+      "actions": {
+        "m3c2-timing-exploratory-001-B-control": {
+          "status": "FINISHED",
+          "execution": "accepted",
+          "receipt_ref": "/home/private/project-301-v2/experiments/results/m3c2_feedback_decision/m3c2-timing-exploratory-001/patients/patient_B/execution_events.jsonl#event=3"
+        }
+      },
+      "cancelled": true
+    }
+  }
+}

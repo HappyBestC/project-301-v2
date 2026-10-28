@@ -1,0 +1,228 @@
+{
+  "0": {
+    "pattern_id": "penetrating_thoracic_composite_v2",
+    "native_intervals": [
+      {
+        "event": "Hypernatremia",
+        "start_s": 844.6399999995218,
+        "end_s": null
+      },
+      {
+        "event": "Hypoxia",
+        "start_s": 654.0999999996951,
+        "end_s": null
+      },
+      {
+        "event": "MinimalHemothorax",
+        "start_s": 81.6400000000009,
+        "end_s": 713.599999999641
+      },
+      {
+        "event": "Tachycardia",
+        "start_s": 625.8799999997208,
+        "end_s": null
+      }
+    ],
+    "runtime_intervals": [
+      {
+        "event": "Hypernatremia",
+        "start_s": 844.6399999995218,
+        "end_s": null
+      },
+      {
+        "event": "Hypoxia",
+        "start_s": 654.0999999996951,
+        "end_s": null
+      },
+      {
+        "event": "MinimalHemothorax",
+        "start_s": 81.6400000000009,
+        "end_s": 713.599999999641
+      },
+      {
+        "event": "Tachycardia",
+        "start_s": 625.8799999997208,
+        "end_s": null
+      }
+    ],
+    "native_runtime_event_bytes_identical": true,
+    "sodium": {
+      "0": 142.78073729962955,
+      "660": 144.56056594718962,
+      "960": 145.24773999146575
+    },
+    "numeric_review": {
+      "version": "301.v2_1.thoracic.numeric.2",
+      "inherited_v2_approval": false,
+      "step_volume_mL": 0.01,
+      "native_auto_stop_s": 715.58,
+      "first_negative_sample_s": 715.9999999996388,
+      "raw_min_mL": -0.0022222222254934835,
+      "negative_span_mL": 0.0,
+      "source_and_tube_absent_at_endpoint": true,
+      "interpretation": "Consistent with one fixed-step overshoot; bounded constant raw residual after logged native auto-stop. No normalization; no clinical efficacy inference."
+    }
+  },
+  "1": {
+    "pattern_id": "blunt_thoracoabdominal_composite_v2",
+    "native_intervals": [
+      {
+        "event": "Hypoxia",
+        "start_s": 170.34000000001333,
+        "end_s": 202.44000000002976
+      },
+      {
+        "event": "Tachycardia",
+        "start_s": 146.52000000000115,
+        "end_s": 232.60000000004518
+      }
+    ],
+    "runtime_intervals": [
+      {
+        "event": "Hypoxia",
+        "start_s": 170.34000000001333,
+        "end_s": 202.44000000002976
+      },
+      {
+        "event": "Tachycardia",
+        "start_s": 146.52000000000115,
+        "end_s": 232.60000000004518
+      }
+    ],
+    "native_runtime_event_bytes_identical": true,
+    "sodium": {
+      "0": 142.78073729962955,
+      "180": 143.37021828641207,
+      "480": 144.03348307010748
+    }
+  },
+  "2": {
+    "pattern_id": "blast_hemorrhage_respiratory_composite_v2",
+    "native_intervals": [
+      {
+        "event": "Tachypnea",
+        "start_s": 184.44000000002055,
+        "end_s": 309.0000000000089
+      }
+    ],
+    "runtime_intervals": [
+      {
+        "event": "Tachypnea",
+        "start_s": 184.44000000002055,
+        "end_s": 309.0000000000089
+      }
+    ],
+    "native_runtime_event_bytes_identical": true,
+    "sodium": {
+      "0": 142.78073729962955,
+      "180": 143.42755939003106,
+      "480": 144.02530065847517
+    },
+    "peak_recorded_RR_per_min": 20.54794520547948,
+    "native_log_tachypnea": [
+      "[INFO] [184.42(s)] [Event Tachypnea 1]  Patient has Tachypnea",
+      "[INFO] [308.98(s)] [Event Tachypnea 0]  Patient no longer has Tachypnea"
+    ]
+  },
+  "3": {
+    "pattern_id": "fire_co_alveolar_composite_v2",
+    "native_intervals": [
+      {
+        "event": "Hypernatremia",
+        "start_s": 866.439999999502,
+        "end_s": null
+      }
+    ],
+    "runtime_intervals": [
+      {
+        "event": "Hypernatremia",
+        "start_s": 866.439999999502,
+        "end_s": null
+      }
+    ],
+    "native_runtime_event_bytes_identical": true,
+    "sodium": {
+      "0": 142.78073729962955,
+      "960": 145.18827362165908,
+      "1860": 145.02831109752685
+    },
+    "adverse_comparison_to_A": {
+      "laboratory.arterial_carbon_dioxide_pressure": {
+        "A": 39.244940421905135,
+        "AB": 42.62701519743041
+      },
+      "laboratory.blood_ph": {
+        "A": 7.421233607569232,
+        "AB": 7.388528033286768
+      }
+    }
+  },
+  "4": {
+    "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+    "native_intervals": [
+      {
+        "event": "Antidiuresis",
+        "start_s": 0.02,
+        "end_s": null
+      },
+      {
+        "event": "Hypernatremia",
+        "start_s": 0.18,
+        "end_s": null
+      },
+      {
+        "event": "Hypoxia",
+        "start_s": 98.03999999999763,
+        "end_s": 419.91999999990804
+      },
+      {
+        "event": "Tachycardia",
+        "start_s": 116.17999999999402,
+        "end_s": 412.4799999999148
+      }
+    ],
+    "runtime_intervals": [
+      {
+        "event": "Antidiuresis",
+        "start_s": 0.02,
+        "end_s": null
+      },
+      {
+        "event": "Hypernatremia",
+        "start_s": 0.18,
+        "end_s": null
+      },
+      {
+        "event": "Hypoxia",
+        "start_s": 98.03999999999763,
+        "end_s": 419.91999999990804
+      },
+      {
+        "event": "Tachycardia",
+        "start_s": 116.17999999999402,
+        "end_s": 412.4799999999148
+      }
+    ],
+    "native_runtime_event_bytes_identical": true,
+    "sodium": {
+      "0": 148.29741233881947,
+      "360": 149.46796035795555,
+      "660": 149.78789417617892
+    },
+    "trend": {
+      "sodium_pre_delta": 1.1705480191360778,
+      "sodium_post_delta": 0.31993381822337597,
+      "antidiuresis_initial_duration_s": 833.479999999532,
+      "antidiuresis_final_duration_s": 1493.4799999989318,
+      "note": "Antidiuresis predates time zero. Hypernatremia begins before treatment and persists. Sodium still rises after treatment; lower AB endpoint than Control does not establish correction or absence of worsening."
+    },
+    "sodium_post_samples": {
+      "360": 149.46796035795555,
+      "420": 149.42913181289762,
+      "480": 149.49140870718517,
+      "540": 149.58717516353954,
+      "600": 149.68883094191816,
+      "660": 149.78789417617892
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": "301.resource.m2a.1",
+  "run_id": "m3a-real-agent-001",
+  "state_version": 5,
+  "at_s": 479.9999999998534,
+  "resources": {
+    "medic": {
+      "resource_id": "medic",
+      "resource_type_id": "medic",
+      "unit": "person",
+      "use_mode": "reusable",
+      "location_id": "scene",
+      "state_version": 5,
+      "updated_at_s": 479.9999999998534,
+      "initial_total": 1,
+      "received_qty": 0,
+      "consumed_qty": 0,
+      "lost_qty": 0,
+      "total_qty": 1,
+      "available_qty": 1,
+      "reserved_qty": 0,
+      "in_use_qty": 0,
+      "unavailable_qty": 0,
+      "operational_state": "AVAILABLE"
+    }
+  },
+  "views": {},
+  "allocations": {
+    "caf90e8249ea4412b3a4e51c632c7d9e": {
+      "allocation_id": "caf90e8249ea4412b3a4e51c632c7d9e",
+      "patient_id": "m3a-real-agent-001-patient",
+      "plan_id": "m3a-real-agent-001-plan",
+      "resource_id": "medic",
+      "quantity": 1,
+      "unit": "person",
+      "use_mode": "reusable",
+      "action_instance_ids": [
+        "m3a-real-agent-001-action-1"
+      ],
+      "requirement_ids": [
+        "301.resource.m2a.1:control_external_bleeding"
+      ],
+      "status": "RELEASED",
+      "consumed_qty": 0,
+      "active_action_id": null,
+      "start_at_s": 180.00000000001828,
+      "actual_end_at_s": 479.9999999998534
+    }
+  },
+  "locations": {
+    "scene": {
+      "location_id": "scene",
+      "capabilities": [
+        "control_external_bleeding",
+        "transfusion",
+        "occlusive_dressing",
+        "control_hemothorax_bleeding",
+        "needle_decompression",
+        "mechanical_ventilation",
+        "chest_tube",
+        "supplemental_oxygen",
+        "fluid_resuscitation",
+        "remove_from_exposure",
+        "control_internal_bleeding",
+        "intubation"
+      ],
+      "permissions": [
+        "research_chest_tube",
+        "simulated_hemothorax_source_control",
+        "simulated_external_source_control",
+        "simulated_internal_source_control",
+        "iv_access",
+        "research_environment_removal"
+      ],
+      "protected_route_available": true,
+      "receiving_environment_verified": true
+    }
+  },
+  "plans": {
+    "m3a-real-agent-001-plan": {
+      "patient_id": "m3a-real-agent-001-patient",
+      "actions": {
+        "m3a-real-agent-001-action-1": {
+          "status": "FINISHED",
+          "execution": "accepted",
+          "receipt_ref": "/home/private/project-301-v2/experiments/results/m3a_real_treatment_agent/m3a-real-agent-001/execution_events.jsonl#event=3"
+        }
+      },
+      "cancelled": true
+    }
+  }
+}

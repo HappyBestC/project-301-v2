@@ -1,0 +1,17 @@
+{
+  "combo_AB vs combo_BA": {
+    "max_abs_difference_all_recorded_finite_columns": 0.0
+  },
+  "combo_high_AB vs combo_high_BA": {
+    "max_abs_difference_all_recorded_finite_columns": 0.0
+  },
+  "epi_high vs bolus_overwrite": {
+    "max_abs_difference_all_recorded_finite_columns": 0.0
+  },
+  "baseline vs unsupported_route": {
+    "max_abs_difference_all_recorded_finite_columns": 0.0
+  },
+  "baseline vs dressing_without_injury": {
+    "max_abs_difference_all_recorded_finite_columns": 0.0
+  }
+}

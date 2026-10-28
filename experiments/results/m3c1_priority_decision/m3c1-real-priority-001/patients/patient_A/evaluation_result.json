@@ -1,0 +1,1268 @@
+{
+  "run_id": "m3c1-real-priority-001",
+  "patient_id": "m3c1-real-priority-001-A",
+  "plan_id": "m3c1-real-priority-001-A-plan",
+  "action_instance_ids": [
+    "m3c1-real-priority-001-A-control"
+  ],
+  "rule_version": "RESEARCH_RULESET_V1_LOCKED",
+  "rule_id": "V2E-01",
+  "rule_sha256": "6a0fd1080f952deea6199dfdbe4772790a59507964a0d186334a86f0c63fb52f",
+  "scope": "external_hemorrhage RightLeg .4 / StandardMale / 180-480s",
+  "evaluator_called": true,
+  "evaluator_entry": "research_artifacts/treatment_effect_rules_v2_candidate_v0.1/male_independent_validation_final_preparation_v1/adapter.py:evaluate",
+  "computation_state": "NOT_EVALUABLE",
+  "grade": null,
+  "minimum": null,
+  "complete": null,
+  "evidence_gaps": [
+    "NO_MATCHED_CONTROL_BRANCH",
+    "STANDARDMALE_NOT_INDEPENDENT_SOLDIER_INPUT",
+    "NO_INDEPENDENT_EXECUTION_EVIDENCE_CONTRACT",
+    "HOST_OBSERVATION_EXPORT_NOT_INDEPENDENT_ADAPTER_BRANCH_SCHEMA"
+  ],
+  "raw_evaluator_result": {
+    "rule_id": "V2E-01",
+    "formal_grade": null,
+    "formal_scoring_enabled": false,
+    "computation_state": "NOT_EVALUABLE",
+    "subconditions": {},
+    "errors": [
+      "MANIFEST_PATIENT_INPUT"
+    ],
+    "safety": {
+      "state": "UNRESOLVED",
+      "native_events": {
+        "complete": false,
+        "sampling_s": 1,
+        "records": [
+          {
+            "time_s": 180.00000000001828,
+            "active_events": {}
+          },
+          {
+            "time_s": 181.0000000000188,
+            "active_events": {}
+          },
+          {
+            "time_s": 182.0000000000193,
+            "active_events": {}
+          },
+          {
+            "time_s": 183.0000000000198,
+            "active_events": {}
+          },
+          {
+            "time_s": 184.00000000002032,
+            "active_events": {}
+          },
+          {
+            "time_s": 185.00000000002083,
+            "active_events": {}
+          },
+          {
+            "time_s": 186.00000000002134,
+            "active_events": {}
+          },
+          {
+            "time_s": 187.00000000002186,
+            "active_events": {}
+          },
+          {
+            "time_s": 188.00000000002237,
+            "active_events": {}
+          },
+          {
+            "time_s": 189.00000000002288,
+            "active_events": {}
+          },
+          {
+            "time_s": 190.0000000000234,
+            "active_events": {}
+          },
+          {
+            "time_s": 191.0000000000239,
+            "active_events": {}
+          },
+          {
+            "time_s": 192.00000000002441,
+            "active_events": {}
+          },
+          {
+            "time_s": 193.00000000002493,
+            "active_events": {}
+          },
+          {
+            "time_s": 194.00000000002544,
+            "active_events": {
+              "StartOfInhale": 0.02
+            }
+          },
+          {
+            "time_s": 195.00000000002595,
+            "active_events": {}
+          },
+          {
+            "time_s": 196.00000000002646,
+            "active_events": {}
+          },
+          {
+            "time_s": 197.00000000002697,
+            "active_events": {}
+          },
+          {
+            "time_s": 198.00000000002748,
+            "active_events": {}
+          },
+          {
+            "time_s": 199.000000000028,
+            "active_events": {}
+          },
+          {
+            "time_s": 200.0000000000285,
+            "active_events": {}
+          },
+          {
+            "time_s": 201.00000000002902,
+            "active_events": {}
+          },
+          {
+            "time_s": 202.00000000002953,
+            "active_events": {}
+          },
+          {
+            "time_s": 203.00000000003004,
+            "active_events": {}
+          },
+          {
+            "time_s": 204.00000000003055,
+            "active_events": {}
+          },
+          {
+            "time_s": 205.00000000003106,
+            "active_events": {}
+          },
+          {
+            "time_s": 206.00000000003158,
+            "active_events": {}
+          },
+          {
+            "time_s": 207.0000000000321,
+            "active_events": {}
+          },
+          {
+            "time_s": 208.0000000000326,
+            "active_events": {}
+          },
+          {
+            "time_s": 209.0000000000331,
+            "active_events": {}
+          },
+          {
+            "time_s": 210.00000000003362,
+            "active_events": {}
+          },
+          {
+            "time_s": 211.00000000003413,
+            "active_events": {}
+          },
+          {
+            "time_s": 212.00000000003465,
+            "active_events": {}
+          },
+          {
+            "time_s": 213.00000000003516,
+            "active_events": {}
+          },
+          {
+            "time_s": 214.00000000003567,
+            "active_events": {}
+          },
+          {
+            "time_s": 215.00000000003618,
+            "active_events": {}
+          },
+          {
+            "time_s": 216.0000000000367,
+            "active_events": {}
+          },
+          {
+            "time_s": 217.0000000000372,
+            "active_events": {}
+          },
+          {
+            "time_s": 218.00000000003772,
+            "active_events": {}
+          },
+          {
+            "time_s": 219.00000000003823,
+            "active_events": {}
+          },
+          {
+            "time_s": 220.00000000003874,
+            "active_events": {}
+          },
+          {
+            "time_s": 221.00000000003925,
+            "active_events": {}
+          },
+          {
+            "time_s": 222.00000000003976,
+            "active_events": {}
+          },
+          {
+            "time_s": 223.00000000004027,
+            "active_events": {}
+          },
+          {
+            "time_s": 224.00000000004079,
+            "active_events": {}
+          },
+          {
+            "time_s": 225.0000000000413,
+            "active_events": {}
+          },
+          {
+            "time_s": 226.0000000000418,
+            "active_events": {}
+          },
+          {
+            "time_s": 227.00000000004232,
+            "active_events": {}
+          },
+          {
+            "time_s": 228.00000000004283,
+            "active_events": {}
+          },
+          {
+            "time_s": 229.00000000004334,
+            "active_events": {}
+          },
+          {
+            "time_s": 230.00000000004385,
+            "active_events": {}
+          },
+          {
+            "time_s": 231.00000000004437,
+            "active_events": {}
+          },
+          {
+            "time_s": 232.00000000004488,
+            "active_events": {}
+          },
+          {
+            "time_s": 233.0000000000454,
+            "active_events": {}
+          },
+          {
+            "time_s": 234.0000000000459,
+            "active_events": {}
+          },
+          {
+            "time_s": 235.0000000000464,
+            "active_events": {}
+          },
+          {
+            "time_s": 236.00000000004692,
+            "active_events": {}
+          },
+          {
+            "time_s": 237.00000000004744,
+            "active_events": {}
+          },
+          {
+            "time_s": 238.00000000004795,
+            "active_events": {}
+          },
+          {
+            "time_s": 239.00000000004846,
+            "active_events": {}
+          },
+          {
+            "time_s": 240.00000000004897,
+            "active_events": {}
+          },
+          {
+            "time_s": 241.00000000004948,
+            "active_events": {}
+          },
+          {
+            "time_s": 242.00000000005,
+            "active_events": {
+              "StartOfCardiacCycle": 0.02
+            }
+          },
+          {
+            "time_s": 243.0000000000505,
+            "active_events": {}
+          },
+          {
+            "time_s": 244.00000000005102,
+            "active_events": {}
+          },
+          {
+            "time_s": 245.00000000005153,
+            "active_events": {}
+          },
+          {
+            "time_s": 246.00000000005204,
+            "active_events": {}
+          },
+          {
+            "time_s": 247.00000000005255,
+            "active_events": {}
+          },
+          {
+            "time_s": 248.00000000005306,
+            "active_events": {}
+          },
+          {
+            "time_s": 249.00000000005357,
+            "active_events": {}
+          },
+          {
+            "time_s": 250.0000000000541,
+            "active_events": {}
+          },
+          {
+            "time_s": 251.0000000000546,
+            "active_events": {}
+          },
+          {
+            "time_s": 252.0000000000551,
+            "active_events": {}
+          },
+          {
+            "time_s": 253.00000000005562,
+            "active_events": {}
+          },
+          {
+            "time_s": 254.00000000005613,
+            "active_events": {}
+          },
+          {
+            "time_s": 255.00000000005664,
+            "active_events": {}
+          },
+          {
+            "time_s": 256.0000000000571,
+            "active_events": {}
+          },
+          {
+            "time_s": 257.0000000000562,
+            "active_events": {
+              "StartOfCardiacCycle": 0.02
+            }
+          },
+          {
+            "time_s": 258.0000000000553,
+            "active_events": {}
+          },
+          {
+            "time_s": 259.0000000000544,
+            "active_events": {}
+          },
+          {
+            "time_s": 260.0000000000535,
+            "active_events": {}
+          },
+          {
+            "time_s": 261.0000000000526,
+            "active_events": {
+              "StartOfCardiacCycle": 0.02
+            }
+          },
+          {
+            "time_s": 262.00000000005167,
+            "active_events": {}
+          },
+          {
+            "time_s": 263.00000000005076,
+            "active_events": {}
+          },
+          {
+            "time_s": 264.00000000004985,
+            "active_events": {}
+          },
+          {
+            "time_s": 265.00000000004894,
+            "active_events": {}
+          },
+          {
+            "time_s": 266.00000000004803,
+            "active_events": {}
+          },
+          {
+            "time_s": 267.0000000000471,
+            "active_events": {}
+          },
+          {
+            "time_s": 268.0000000000462,
+            "active_events": {}
+          },
+          {
+            "time_s": 269.0000000000453,
+            "active_events": {}
+          },
+          {
+            "time_s": 270.0000000000444,
+            "active_events": {}
+          },
+          {
+            "time_s": 271.0000000000435,
+            "active_events": {}
+          },
+          {
+            "time_s": 272.0000000000426,
+            "active_events": {}
+          },
+          {
+            "time_s": 273.00000000004167,
+            "active_events": {}
+          },
+          {
+            "time_s": 274.00000000004076,
+            "active_events": {}
+          },
+          {
+            "time_s": 275.00000000003985,
+            "active_events": {}
+          },
+          {
+            "time_s": 276.00000000003894,
+            "active_events": {}
+          },
+          {
+            "time_s": 277.000000000038,
+            "active_events": {}
+          },
+          {
+            "time_s": 278.0000000000371,
+            "active_events": {}
+          },
+          {
+            "time_s": 279.0000000000362,
+            "active_events": {}
+          },
+          {
+            "time_s": 280.0000000000353,
+            "active_events": {}
+          },
+          {
+            "time_s": 281.0000000000344,
+            "active_events": {}
+          },
+          {
+            "time_s": 282.0000000000335,
+            "active_events": {}
+          },
+          {
+            "time_s": 283.00000000003257,
+            "active_events": {}
+          },
+          {
+            "time_s": 284.00000000003166,
+            "active_events": {}
+          },
+          {
+            "time_s": 285.00000000003075,
+            "active_events": {
+              "StartOfExhale": 0.02
+            }
+          },
+          {
+            "time_s": 286.00000000002984,
+            "active_events": {}
+          },
+          {
+            "time_s": 287.00000000002893,
+            "active_events": {}
+          },
+          {
+            "time_s": 288.000000000028,
+            "active_events": {}
+          },
+          {
+            "time_s": 289.0000000000271,
+            "active_events": {}
+          },
+          {
+            "time_s": 290.0000000000262,
+            "active_events": {}
+          },
+          {
+            "time_s": 291.0000000000253,
+            "active_events": {}
+          },
+          {
+            "time_s": 292.0000000000244,
+            "active_events": {}
+          },
+          {
+            "time_s": 293.0000000000235,
+            "active_events": {}
+          },
+          {
+            "time_s": 294.00000000002257,
+            "active_events": {}
+          },
+          {
+            "time_s": 295.00000000002166,
+            "active_events": {}
+          },
+          {
+            "time_s": 296.00000000002075,
+            "active_events": {}
+          },
+          {
+            "time_s": 297.00000000001984,
+            "active_events": {}
+          },
+          {
+            "time_s": 298.00000000001893,
+            "active_events": {}
+          },
+          {
+            "time_s": 299.000000000018,
+            "active_events": {}
+          },
+          {
+            "time_s": 300.0000000000171,
+            "active_events": {}
+          },
+          {
+            "time_s": 301.0000000000162,
+            "active_events": {}
+          },
+          {
+            "time_s": 302.0000000000153,
+            "active_events": {}
+          },
+          {
+            "time_s": 303.0000000000144,
+            "active_events": {}
+          },
+          {
+            "time_s": 304.0000000000135,
+            "active_events": {}
+          },
+          {
+            "time_s": 305.00000000001256,
+            "active_events": {}
+          },
+          {
+            "time_s": 306.00000000001165,
+            "active_events": {}
+          },
+          {
+            "time_s": 307.00000000001074,
+            "active_events": {}
+          },
+          {
+            "time_s": 308.00000000000983,
+            "active_events": {}
+          },
+          {
+            "time_s": 309.0000000000089,
+            "active_events": {}
+          },
+          {
+            "time_s": 310.000000000008,
+            "active_events": {}
+          },
+          {
+            "time_s": 311.0000000000071,
+            "active_events": {}
+          },
+          {
+            "time_s": 312.0000000000062,
+            "active_events": {}
+          },
+          {
+            "time_s": 313.0000000000053,
+            "active_events": {}
+          },
+          {
+            "time_s": 314.0000000000044,
+            "active_events": {}
+          },
+          {
+            "time_s": 315.00000000000347,
+            "active_events": {}
+          },
+          {
+            "time_s": 316.00000000000256,
+            "active_events": {}
+          },
+          {
+            "time_s": 317.00000000000165,
+            "active_events": {}
+          },
+          {
+            "time_s": 318.00000000000074,
+            "active_events": {}
+          },
+          {
+            "time_s": 318.99999999999983,
+            "active_events": {}
+          },
+          {
+            "time_s": 319.9999999999989,
+            "active_events": {}
+          },
+          {
+            "time_s": 320.999999999998,
+            "active_events": {}
+          },
+          {
+            "time_s": 321.9999999999971,
+            "active_events": {}
+          },
+          {
+            "time_s": 322.9999999999962,
+            "active_events": {}
+          },
+          {
+            "time_s": 323.9999999999953,
+            "active_events": {}
+          },
+          {
+            "time_s": 324.9999999999944,
+            "active_events": {}
+          },
+          {
+            "time_s": 325.99999999999346,
+            "active_events": {}
+          },
+          {
+            "time_s": 326.99999999999255,
+            "active_events": {}
+          },
+          {
+            "time_s": 327.99999999999164,
+            "active_events": {}
+          },
+          {
+            "time_s": 328.99999999999073,
+            "active_events": {}
+          },
+          {
+            "time_s": 329.9999999999898,
+            "active_events": {
+              "StartOfCardiacCycle": 0.02
+            }
+          },
+          {
+            "time_s": 330.9999999999889,
+            "active_events": {}
+          },
+          {
+            "time_s": 331.999999999988,
+            "active_events": {}
+          },
+          {
+            "time_s": 332.9999999999871,
+            "active_events": {}
+          },
+          {
+            "time_s": 333.9999999999862,
+            "active_events": {
+              "StartOfCardiacCycle": 0.02
+            }
+          },
+          {
+            "time_s": 334.9999999999853,
+            "active_events": {}
+          },
+          {
+            "time_s": 335.99999999998437,
+            "active_events": {}
+          },
+          {
+            "time_s": 336.99999999998346,
+            "active_events": {}
+          },
+          {
+            "time_s": 337.99999999998255,
+            "active_events": {
+              "StartOfCardiacCycle": 0.02
+            }
+          },
+          {
+            "time_s": 338.99999999998164,
+            "active_events": {}
+          },
+          {
+            "time_s": 339.99999999998073,
+            "active_events": {}
+          },
+          {
+            "time_s": 340.9999999999798,
+            "active_events": {}
+          },
+          {
+            "time_s": 341.9999999999789,
+            "active_events": {}
+          },
+          {
+            "time_s": 342.999999999978,
+            "active_events": {}
+          },
+          {
+            "time_s": 343.9999999999771,
+            "active_events": {}
+          },
+          {
+            "time_s": 344.9999999999762,
+            "active_events": {}
+          },
+          {
+            "time_s": 345.9999999999753,
+            "active_events": {}
+          },
+          {
+            "time_s": 346.99999999997436,
+            "active_events": {}
+          },
+          {
+            "time_s": 347.99999999997345,
+            "active_events": {}
+          },
+          {
+            "time_s": 348.99999999997254,
+            "active_events": {}
+          },
+          {
+            "time_s": 349.99999999997164,
+            "active_events": {}
+          },
+          {
+            "time_s": 350.9999999999707,
+            "active_events": {}
+          },
+          {
+            "time_s": 351.9999999999698,
+            "active_events": {}
+          },
+          {
+            "time_s": 352.9999999999689,
+            "active_events": {}
+          },
+          {
+            "time_s": 353.999999999968,
+            "active_events": {}
+          },
+          {
+            "time_s": 354.9999999999671,
+            "active_events": {}
+          },
+          {
+            "time_s": 355.9999999999662,
+            "active_events": {}
+          },
+          {
+            "time_s": 356.99999999996527,
+            "active_events": {}
+          },
+          {
+            "time_s": 357.99999999996436,
+            "active_events": {}
+          },
+          {
+            "time_s": 358.99999999996345,
+            "active_events": {}
+          },
+          {
+            "time_s": 359.99999999996254,
+            "active_events": {}
+          },
+          {
+            "time_s": 360.99999999996163,
+            "active_events": {}
+          },
+          {
+            "time_s": 361.9999999999607,
+            "active_events": {}
+          },
+          {
+            "time_s": 362.9999999999598,
+            "active_events": {}
+          },
+          {
+            "time_s": 363.9999999999589,
+            "active_events": {}
+          },
+          {
+            "time_s": 364.999999999958,
+            "active_events": {}
+          },
+          {
+            "time_s": 365.9999999999571,
+            "active_events": {}
+          },
+          {
+            "time_s": 366.9999999999562,
+            "active_events": {}
+          },
+          {
+            "time_s": 367.99999999995526,
+            "active_events": {}
+          },
+          {
+            "time_s": 368.99999999995435,
+            "active_events": {}
+          },
+          {
+            "time_s": 369.99999999995345,
+            "active_events": {}
+          },
+          {
+            "time_s": 370.99999999995254,
+            "active_events": {}
+          },
+          {
+            "time_s": 371.9999999999516,
+            "active_events": {}
+          },
+          {
+            "time_s": 372.9999999999507,
+            "active_events": {}
+          },
+          {
+            "time_s": 373.9999999999498,
+            "active_events": {}
+          },
+          {
+            "time_s": 374.9999999999489,
+            "active_events": {}
+          },
+          {
+            "time_s": 375.999999999948,
+            "active_events": {}
+          },
+          {
+            "time_s": 376.9999999999471,
+            "active_events": {}
+          },
+          {
+            "time_s": 377.99999999994617,
+            "active_events": {}
+          },
+          {
+            "time_s": 378.99999999994526,
+            "active_events": {}
+          },
+          {
+            "time_s": 379.99999999994435,
+            "active_events": {}
+          },
+          {
+            "time_s": 380.99999999994344,
+            "active_events": {}
+          },
+          {
+            "time_s": 381.99999999994253,
+            "active_events": {}
+          },
+          {
+            "time_s": 382.9999999999416,
+            "active_events": {}
+          },
+          {
+            "time_s": 383.9999999999407,
+            "active_events": {}
+          },
+          {
+            "time_s": 384.9999999999398,
+            "active_events": {}
+          },
+          {
+            "time_s": 385.9999999999389,
+            "active_events": {}
+          },
+          {
+            "time_s": 386.999999999938,
+            "active_events": {}
+          },
+          {
+            "time_s": 387.9999999999371,
+            "active_events": {}
+          },
+          {
+            "time_s": 388.99999999993616,
+            "active_events": {}
+          },
+          {
+            "time_s": 389.99999999993526,
+            "active_events": {}
+          },
+          {
+            "time_s": 390.99999999993435,
+            "active_events": {}
+          },
+          {
+            "time_s": 391.99999999993344,
+            "active_events": {}
+          },
+          {
+            "time_s": 392.9999999999325,
+            "active_events": {}
+          },
+          {
+            "time_s": 393.9999999999316,
+            "active_events": {}
+          },
+          {
+            "time_s": 394.9999999999307,
+            "active_events": {}
+          },
+          {
+            "time_s": 395.9999999999298,
+            "active_events": {}
+          },
+          {
+            "time_s": 396.9999999999289,
+            "active_events": {}
+          },
+          {
+            "time_s": 397.999999999928,
+            "active_events": {}
+          },
+          {
+            "time_s": 398.99999999992707,
+            "active_events": {}
+          },
+          {
+            "time_s": 399.99999999992616,
+            "active_events": {}
+          },
+          {
+            "time_s": 400.99999999992525,
+            "active_events": {}
+          },
+          {
+            "time_s": 401.99999999992434,
+            "active_events": {}
+          },
+          {
+            "time_s": 402.99999999992343,
+            "active_events": {}
+          },
+          {
+            "time_s": 403.9999999999225,
+            "active_events": {}
+          },
+          {
+            "time_s": 404.9999999999216,
+            "active_events": {}
+          },
+          {
+            "time_s": 405.9999999999207,
+            "active_events": {}
+          },
+          {
+            "time_s": 406.9999999999198,
+            "active_events": {}
+          },
+          {
+            "time_s": 407.9999999999189,
+            "active_events": {}
+          },
+          {
+            "time_s": 408.999999999918,
+            "active_events": {}
+          },
+          {
+            "time_s": 409.99999999991707,
+            "active_events": {}
+          },
+          {
+            "time_s": 410.99999999991616,
+            "active_events": {}
+          },
+          {
+            "time_s": 411.99999999991525,
+            "active_events": {}
+          },
+          {
+            "time_s": 412.99999999991434,
+            "active_events": {}
+          },
+          {
+            "time_s": 413.9999999999134,
+            "active_events": {}
+          },
+          {
+            "time_s": 414.9999999999125,
+            "active_events": {}
+          },
+          {
+            "time_s": 415.9999999999116,
+            "active_events": {}
+          },
+          {
+            "time_s": 416.9999999999107,
+            "active_events": {}
+          },
+          {
+            "time_s": 417.9999999999098,
+            "active_events": {}
+          },
+          {
+            "time_s": 418.9999999999089,
+            "active_events": {}
+          },
+          {
+            "time_s": 419.99999999990797,
+            "active_events": {}
+          },
+          {
+            "time_s": 420.99999999990706,
+            "active_events": {}
+          },
+          {
+            "time_s": 421.99999999990615,
+            "active_events": {}
+          },
+          {
+            "time_s": 422.99999999990524,
+            "active_events": {}
+          },
+          {
+            "time_s": 423.99999999990433,
+            "active_events": {}
+          },
+          {
+            "time_s": 424.9999999999034,
+            "active_events": {}
+          },
+          {
+            "time_s": 425.9999999999025,
+            "active_events": {}
+          },
+          {
+            "time_s": 426.9999999999016,
+            "active_events": {}
+          },
+          {
+            "time_s": 427.9999999999007,
+            "active_events": {}
+          },
+          {
+            "time_s": 428.9999999998998,
+            "active_events": {}
+          },
+          {
+            "time_s": 429.9999999998989,
+            "active_events": {}
+          },
+          {
+            "time_s": 430.99999999989797,
+            "active_events": {}
+          },
+          {
+            "time_s": 431.99999999989706,
+            "active_events": {}
+          },
+          {
+            "time_s": 432.99999999989615,
+            "active_events": {}
+          },
+          {
+            "time_s": 433.99999999989524,
+            "active_events": {}
+          },
+          {
+            "time_s": 434.9999999998943,
+            "active_events": {}
+          },
+          {
+            "time_s": 435.9999999998934,
+            "active_events": {}
+          },
+          {
+            "time_s": 436.9999999998925,
+            "active_events": {}
+          },
+          {
+            "time_s": 437.9999999998916,
+            "active_events": {}
+          },
+          {
+            "time_s": 438.9999999998907,
+            "active_events": {}
+          },
+          {
+            "time_s": 439.9999999998898,
+            "active_events": {}
+          },
+          {
+            "time_s": 440.99999999988887,
+            "active_events": {}
+          },
+          {
+            "time_s": 441.99999999988796,
+            "active_events": {}
+          },
+          {
+            "time_s": 442.99999999988705,
+            "active_events": {}
+          },
+          {
+            "time_s": 443.99999999988614,
+            "active_events": {}
+          },
+          {
+            "time_s": 444.99999999988523,
+            "active_events": {}
+          },
+          {
+            "time_s": 445.9999999998843,
+            "active_events": {}
+          },
+          {
+            "time_s": 446.9999999998834,
+            "active_events": {}
+          },
+          {
+            "time_s": 447.9999999998825,
+            "active_events": {}
+          },
+          {
+            "time_s": 448.9999999998816,
+            "active_events": {}
+          },
+          {
+            "time_s": 449.9999999998807,
+            "active_events": {}
+          },
+          {
+            "time_s": 450.9999999998798,
+            "active_events": {}
+          },
+          {
+            "time_s": 451.99999999987887,
+            "active_events": {}
+          },
+          {
+            "time_s": 452.99999999987796,
+            "active_events": {}
+          },
+          {
+            "time_s": 453.99999999987705,
+            "active_events": {}
+          },
+          {
+            "time_s": 454.99999999987614,
+            "active_events": {}
+          },
+          {
+            "time_s": 455.99999999987523,
+            "active_events": {}
+          },
+          {
+            "time_s": 456.9999999998743,
+            "active_events": {}
+          },
+          {
+            "time_s": 457.9999999998734,
+            "active_events": {}
+          },
+          {
+            "time_s": 458.9999999998725,
+            "active_events": {}
+          },
+          {
+            "time_s": 459.9999999998716,
+            "active_events": {}
+          },
+          {
+            "time_s": 460.9999999998707,
+            "active_events": {}
+          },
+          {
+            "time_s": 461.9999999998698,
+            "active_events": {}
+          },
+          {
+            "time_s": 462.99999999986886,
+            "active_events": {}
+          },
+          {
+            "time_s": 463.99999999986795,
+            "active_events": {}
+          },
+          {
+            "time_s": 464.99999999986704,
+            "active_events": {}
+          },
+          {
+            "time_s": 465.99999999986613,
+            "active_events": {}
+          },
+          {
+            "time_s": 466.9999999998652,
+            "active_events": {}
+          },
+          {
+            "time_s": 467.9999999998643,
+            "active_events": {}
+          },
+          {
+            "time_s": 468.9999999998634,
+            "active_events": {}
+          },
+          {
+            "time_s": 469.9999999998625,
+            "active_events": {}
+          },
+          {
+            "time_s": 470.9999999998616,
+            "active_events": {}
+          },
+          {
+            "time_s": 471.9999999998607,
+            "active_events": {}
+          },
+          {
+            "time_s": 472.99999999985977,
+            "active_events": {}
+          },
+          {
+            "time_s": 473.99999999985886,
+            "active_events": {}
+          },
+          {
+            "time_s": 474.99999999985795,
+            "active_events": {}
+          },
+          {
+            "time_s": 475.99999999985704,
+            "active_events": {}
+          },
+          {
+            "time_s": 476.99999999985613,
+            "active_events": {}
+          },
+          {
+            "time_s": 477.9999999998552,
+            "active_events": {}
+          },
+          {
+            "time_s": 478.9999999998543,
+            "active_events": {}
+          },
+          {
+            "time_s": 479.9999999998534,
+            "active_events": {}
+          }
+        ]
+      }
+    }
+  },
+  "evidence_manifest": {
+    "path": "experiments/results/m3c1_priority_decision/m3c1-real-priority-001/patients/patient_A/evaluation_manifest.json",
+    "sha256": "bd0ab65dd9005a132347c2a9ec6476f05027b01efd73c7b915cc88845a9908c1"
+  },
+  "formal_scoring_enabled": false
+}

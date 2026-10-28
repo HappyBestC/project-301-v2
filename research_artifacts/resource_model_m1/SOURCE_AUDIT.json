@@ -1,0 +1,397 @@
+{
+  "date": "2026-10-19",
+  "formal_action_count": 12,
+  "inventory_actions": [
+    "chest_tube",
+    "control_external_bleeding",
+    "control_hemothorax_bleeding",
+    "control_internal_bleeding",
+    "fluid_resuscitation",
+    "intubation",
+    "mechanical_ventilation",
+    "needle_decompression",
+    "occlusive_dressing",
+    "remove_from_exposure",
+    "supplemental_oxygen",
+    "transfusion"
+  ],
+  "mapping_actions": [
+    "chest_tube",
+    "control_external_bleeding",
+    "control_hemothorax_bleeding",
+    "control_internal_bleeding",
+    "fluid_resuscitation",
+    "intubation",
+    "mechanical_ventilation",
+    "needle_decompression",
+    "occlusive_dressing",
+    "remove_from_exposure",
+    "supplemental_oxygen",
+    "transfusion"
+  ],
+  "composite_actions_covered": [
+    "chest_tube",
+    "control_external_bleeding",
+    "control_hemothorax_bleeding",
+    "control_internal_bleeding",
+    "fluid_resuscitation",
+    "intubation",
+    "mechanical_ventilation",
+    "needle_decompression",
+    "occlusive_dressing",
+    "remove_from_exposure",
+    "supplemental_oxygen"
+  ],
+  "relative_links_checked": 39,
+  "invalid_links": [],
+  "composite_frozen_config_equal": true,
+  "source_hashes": {
+    "S01": {
+      "path": "research_artifacts/v2_restricted_engineering_baseline_v1.0/TEN_INJURY_CONFIGURATIONS.json",
+      "symbol": "profiles[].injury_type / actions / severity_levels / location / decision_s / end_s",
+      "sha256": "a8bc0a321a2c3ca0122896c472ac3c8b376a38017ea5ccc752cdb8b7836c652e"
+    },
+    "S02": {
+      "path": "src/core301/contracts/v2/treatment.py",
+      "symbol": "ACTION_TYPES / CONFLICTS / TreatmentPlan.constraints",
+      "sha256": "c26375f572f37e60a5c16dd4e36f7ed9882ebb39aebdcc1708e6765f6c51a32e"
+    },
+    "S03": {
+      "path": "src/core301/pulse/treatment_adapter.py",
+      "symbol": "TreatmentAdapter.convert；V1载荷需结合V2覆盖",
+      "sha256": "0446ae504306a3e0a56e26f9ebe8582034c70fbb93fc74f5671d711430a8914c"
+    },
+    "S04": {
+      "path": "src/core301/pulse/v2/protocol_book.py",
+      "symbol": "OPEN_INJURIES / ALLOWED_ACTIONS / RESERVED_ACTIONS",
+      "sha256": "a1b8dd9c254496f83e2b3b176ee4b579563993f4b2e28eda223020a966ac4b38"
+    },
+    "S05": {
+      "path": "src/core301/pulse/v2/proxy_adapter.py",
+      "symbol": "ProxyAdapter.convert",
+      "sha256": "cb0917f91c68b1009905ff457d982d352f194c490381ab8647c2dcafa9223686"
+    },
+    "S06": {
+      "path": "src/core301/runtime/v2/restricted_registry.py",
+      "symbol": "REGISTRY；血胸/暴露独立受限准入",
+      "sha256": "9b0e2e70786180108dafdafb54a19c23c53a34d099e2931eb43dd85ed075bbba"
+    },
+    "S07": {
+      "path": "src/core301/runtime/v2_1/adapters.py",
+      "symbol": "action_payload / kinds_for",
+      "sha256": "dd7faf33d852ce17e81d813a2462385a3d2abe1450e91a489d35250896f11d4e"
+    },
+    "S08": {
+      "path": "src/core301/runtime/v2/resources.py",
+      "symbol": "COSTS / ResearchResourceFixture / ResourceAuthority",
+      "sha256": "de22b265c2e99991c8ff043741e0cef458b2e76accbaa9c26925f7e920b41f59"
+    },
+    "S09": {
+      "path": "src/core301/runtime/v2/hemothorax_resources.py",
+      "symbol": "COSTS / HemothoraxResources",
+      "sha256": "2d6dc48417f596f6d34b809dbf0748ef58c09f92f98ad1e2aeeb7eba83c52077"
+    },
+    "S10": {
+      "path": "src/core301/contracts/v2/exposure_validation.py",
+      "symbol": "EvacuationPlan / EvacuationResources",
+      "sha256": "ba6e81c51dfa21785f33597f8f06de42e796965e34b9a646850b6b3d2ec527a6"
+    },
+    "S11": {
+      "path": "src/core301/runtime/v2_1/resources.py",
+      "symbol": "COSTS / Resources.reserve / begin / study_resources",
+      "sha256": "e25c2937ecb06575d7c7f290234e7d0dd6e8590f23c16dc5279872d7da6825fb"
+    },
+    "S12": {
+      "path": "src/core301/dispatch/models.py",
+      "symbol": "Facility / MedicalTeam / Ambulance / DispatchInput / DispatchProposal",
+      "sha256": "964872a8009ef02e4653f8b718aed6c1c3886e02f848b59b7d01faf48e3242e7"
+    },
+    "S13": {
+      "path": "src/core301/contracts/context.py",
+      "symbol": "ResourceState / AgentCaseContext",
+      "sha256": "6750da940fd8c02783ed6a21686ce2067537cbd9abb6ebb3bbbe66a9d260eb49"
+    },
+    "S14": {
+      "path": "config/v2_1_battle_composite_patterns.yaml",
+      "symbol": "patterns[].component_injuries / treatment_bundles / simulation_timeline",
+      "sha256": "cd339d0748b8016d7aad52580562d462807ea56504dd85c1f0ce4703b1d34bf1"
+    },
+    "S15": {
+      "path": "research_artifacts/v2_restricted_engineering_baseline_v1.0/FIXED_PROTOCOLS.md",
+      "symbol": "固定范围、参数、时刻与初始化",
+      "sha256": "528d0aa4c221142cabb6a9a011ee309357a998d9166bb54e2d2155aeca5eef5a"
+    },
+    "S16": {
+      "path": "research_artifacts/v2_1_restricted_engineering_baseline_v1.0/FIXED_PROTOCOLS.json",
+      "symbol": "实际原生动作、完成回执及资源记录",
+      "sha256": "5a2f956938fa0fd7361fbabfd9d7d5634ac9a17f8ab2aadb04d47c0342b0e8b8"
+    },
+    "S17": {
+      "path": "research_artifacts/treatment_effect_rules_v2_candidate_v0.1/treatment_effect_rules_v1_final/RULE_VERSION_MANIFEST.json",
+      "symbol": "锁定研究规则版本",
+      "sha256": "72fd0708e5731ee1ff9aef63f55afbd25f3d71050e8d22845a26a9ef2cc06cbd"
+    },
+    "S18": {
+      "path": "research_artifacts/treatment_effect_rules_v2_candidate_v0.1/treatment_effect_rules_v1_summary_v1/Treatment_Effect_Rules_V1.0_最终规则汇总表.md",
+      "symbol": "V2E-01—14总表，非旧R01—R14",
+      "sha256": "fcb6f4766d2501db58220b562ef0bd97139cd4af0eed446df60065b7d6724d90"
+    },
+    "S19": {
+      "path": "research_artifacts/observation_v2_contract_freeze_v1.0/README.md",
+      "symbol": "15指标工程冻结、尚未激活",
+      "sha256": "c8fe117baa1aad769acdea82c093488885ce4994bcb2ece8ddeb6e9d78483371"
+    },
+    "S20": {
+      "path": "MR5-资源字段与调度Agent输入输出.md",
+      "symbol": "历史设计稿，不等于当前完整实现",
+      "sha256": "fa8cdaf4129593e1a6c0ae5dc23984ad0aa60b7dc7a66e6c2ed9a5d8637580be"
+    },
+    "S21": {
+      "path": "src/core301/agent/interface.py",
+      "symbol": "TreatmentProvider.create_plan",
+      "sha256": "64123710b88a3ac1c2fd5314b474459834163f4d2b87e48205e083dc4c794cb3"
+    },
+    "S22": {
+      "path": "src/core301/agent/v2/manual_provider.py",
+      "symbol": "ManualTreatmentProvider.create_plan",
+      "sha256": "45d02d1063245a659c979698bdb715566bb21084af839cc288a9bc29d2dd9598"
+    },
+    "S23": {
+      "path": "src/core301/dispatch/providers.py",
+      "symbol": "DispatchProvider.decide_dispatch",
+      "sha256": "03aeaeb7cb8d2876ca5a8de372246523a7e746bf1a8d9bd7816b249a6d9588f1"
+    },
+    "S24": {
+      "path": "src/core301/pulse/v2/exposure_session.py",
+      "symbol": "environment_action",
+      "sha256": "682bd17159a4121a627956124ee88f2ea7ec979bf2cf063292222513f6e8f33c"
+    },
+    "S25": {
+      "path": "src/core301/contracts/v2/context.py",
+      "symbol": "AgentCaseContext",
+      "sha256": "d223b91031a184bd2810e2f796adf730bb9178be7e83db9ed85d184d24f1033c"
+    },
+    "S26": {
+      "path": "src/core301/runtime/v2_1/contracts.py",
+      "symbol": "CompositePlan / HostResources",
+      "sha256": "cdbc673b0f0de8d9afc9d1cf40dbfd7dfbb01bdda42e064b77a6e24f4e48c46e"
+    },
+    "S27": {
+      "path": "research_artifacts/v2_restricted_engineering_baseline_v1.0/EVIDENCE_GUIDE.md",
+      "symbol": "历史原生配对、formal E2E与原始轨迹路径",
+      "sha256": "a393162ff6c50b37b193f214fe0be4b8c9b51ee16d2146e5b21bd89bcbfd6cd8"
+    },
+    "S28": {
+      "path": "research_artifacts/v2_1_restricted_engineering_baseline_v1.0/EVIDENCE_GUIDE.md",
+      "symbol": "复合伤历史比较及最终E2E证据",
+      "sha256": "08aeb2a5766f68c9c595f8a6c1bb95892cc7975d5c8497f780e66efc17aaa1a5"
+    },
+    "S29": {
+      "path": "src/core301/pulse/v2/treatment_adapter.py",
+      "symbol": "TreatmentAdapter.convert",
+      "sha256": "2b97c419bc88c7e9e74042a63e43df1c01caeba7e4dbf866b981190476d58843"
+    },
+    "research_artifacts/treatment_effect_rules_v2_candidate_v0.1/treatment_effect_rules_v1_final/FINAL_RULE_TABLE_V1.0.json": {
+      "path": "research_artifacts/treatment_effect_rules_v2_candidate_v0.1/treatment_effect_rules_v1_final/FINAL_RULE_TABLE_V1.0.json",
+      "sha256": "6a0fd1080f952deea6199dfdbe4772790a59507964a0d186334a86f0c63fb52f"
+    },
+    "research_artifacts/treatment_effect_rules_v1.0_research_freeze/rules/treatment_effect_rules_v1.0.json": {
+      "path": "research_artifacts/treatment_effect_rules_v1.0_research_freeze/rules/treatment_effect_rules_v1.0.json",
+      "sha256": "1caa8ea12cb015317134826a031e85b3ae8cb5ff67f86b9d833b290dc0c69068"
+    }
+  },
+  "snapshot_comparisons": [
+    {
+      "path": "src/core301/contracts/v2/treatment.py",
+      "baseline": "v2_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/contracts/v2/treatment.py",
+      "baseline": "v2_1_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/pulse/treatment_adapter.py",
+      "baseline": "v2_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/pulse/treatment_adapter.py",
+      "baseline": "v2_1_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/pulse/v2/protocol_book.py",
+      "baseline": "v2_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/pulse/v2/protocol_book.py",
+      "baseline": "v2_1_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/pulse/v2/proxy_adapter.py",
+      "baseline": "v2_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/pulse/v2/proxy_adapter.py",
+      "baseline": "v2_1_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/runtime/v2/restricted_registry.py",
+      "baseline": "v2_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/runtime/v2/restricted_registry.py",
+      "baseline": "v2_1_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/runtime/v2_1/adapters.py",
+      "baseline": "v2_1_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/runtime/v2/resources.py",
+      "baseline": "v2_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/runtime/v2/resources.py",
+      "baseline": "v2_1_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/runtime/v2/hemothorax_resources.py",
+      "baseline": "v2_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/runtime/v2/hemothorax_resources.py",
+      "baseline": "v2_1_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/contracts/v2/exposure_validation.py",
+      "baseline": "v2_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/contracts/v2/exposure_validation.py",
+      "baseline": "v2_1_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/runtime/v2_1/resources.py",
+      "baseline": "v2_1_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/dispatch/models.py",
+      "baseline": "v2_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/dispatch/models.py",
+      "baseline": "v2_1_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/contracts/context.py",
+      "baseline": "v2_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/contracts/context.py",
+      "baseline": "v2_1_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/agent/interface.py",
+      "baseline": "v2_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/agent/interface.py",
+      "baseline": "v2_1_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/agent/v2/manual_provider.py",
+      "baseline": "v2_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/agent/v2/manual_provider.py",
+      "baseline": "v2_1_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/dispatch/providers.py",
+      "baseline": "v2_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/dispatch/providers.py",
+      "baseline": "v2_1_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/pulse/v2/exposure_session.py",
+      "baseline": "v2_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/pulse/v2/exposure_session.py",
+      "baseline": "v2_1_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/contracts/v2/context.py",
+      "baseline": "v2_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/contracts/v2/context.py",
+      "baseline": "v2_1_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/runtime/v2_1/contracts.py",
+      "baseline": "v2_1_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/pulse/v2/treatment_adapter.py",
+      "baseline": "v2_restricted_engineering_baseline_v1.0",
+      "equal": true
+    },
+    {
+      "path": "src/core301/pulse/v2/treatment_adapter.py",
+      "baseline": "v2_1_restricted_engineering_baseline_v1.0",
+      "equal": true
+    }
+  ],
+  "external_source": {
+    "url": "https://assets.publishing.service.gov.uk/media/6a5e04dba3c718d2556d08b3/AJP_4_2_EdA_V1_NATO.pdf",
+    "pages": 96,
+    "sha256": "140989dcff6fb4b00471ead02da248000f078596c9d9c3e7cfaee1118b272192",
+    "checked_sections": [
+      "6.2",
+      "6.14-6.15",
+      "6.20-6.22",
+      "7.1-7.2",
+      "7.7",
+      "7.12-7.13",
+      "8.3-8.6",
+      "8.11-8.12"
+    ]
+  },
+  "pulse_executed": false,
+  "new_runtime_implementation": false
+}

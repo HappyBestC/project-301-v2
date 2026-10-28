@@ -1,0 +1,21 @@
+{
+  "patient_id": "m3c2-real-feedback-001-A",
+  "plan_id": "m3c2-real-feedback-001-A-plan",
+  "scope_kind": "research_fixture",
+  "scope_id": "external_hemorrhage",
+  "severity": 0.4,
+  "location_id": "scene",
+  "actions": [
+    {
+      "action_instance_id": "m3c2-real-feedback-001-A-control",
+      "action_type": "control_external_bleeding",
+      "side": null,
+      "compartment": "RightLeg",
+      "depends_on": []
+    }
+  ],
+  "schema_version": "301.treatment.complete.1",
+  "run_id": "m3c2-real-feedback-001",
+  "execution_policy": "m2a_serial_execution",
+  "parameter_policy": "fixed_profile_no_overrides"
+}

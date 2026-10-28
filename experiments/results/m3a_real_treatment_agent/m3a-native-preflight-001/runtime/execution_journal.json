@@ -1,0 +1,9 @@
+{
+  "version": "301.v2.execution.phase1.1",
+  "run_id": "m3a-native-preflight-001",
+  "patient_id": "m3a-native-preflight-001-patient",
+  "session_epoch": "5b100c90a86e4c6b85afec87518b9fbb",
+  "production_enabled": false,
+  "plans": {},
+  "events": []
+}

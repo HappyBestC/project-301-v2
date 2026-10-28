@@ -1,0 +1,1 @@
+{"FAKE": true, "patient_id": "m3b-offline-001-B", "time_s": 0.0, "actions": {}, "airway_mode": "Free", "intubation": "Off", "diagnostics": {"diagnostic.TotalHemorrhageRate": 1.0, "diagnostic.TotalHemorrhagedVolume": 0.0, "diagnostic.BloodVolume": 5000.0}}

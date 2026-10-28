@@ -1,0 +1,32 @@
+[
+  {
+    "case": "raw_decision",
+    "sha_recomputed": true,
+    "rejected": true,
+    "reason": "Raw decision replaced"
+  },
+  {
+    "case": "control_event",
+    "sha_recomputed": true,
+    "rejected": true,
+    "reason": "Control differs from decision"
+  },
+  {
+    "case": "wake_event",
+    "sha_recomputed": true,
+    "rejected": true,
+    "reason": "Unproven wakeup"
+  },
+  {
+    "case": "observation",
+    "sha_recomputed": true,
+    "rejected": true,
+    "reason": "LLM observation differs from native frame"
+  },
+  {
+    "case": "repeated_treatment",
+    "sha_recomputed": true,
+    "rejected": true,
+    "reason": "Unexpected/repeated treatment"
+  }
+]

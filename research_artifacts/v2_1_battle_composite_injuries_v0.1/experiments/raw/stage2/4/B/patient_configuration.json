@@ -1,0 +1,19 @@
+{
+  "DataRoot": "/home/private/project-301/pulse/bin",
+  "PatientFile": "/home/private/project-301/pulse/bin/patients/StandardMale.json",
+  "Conditions": {
+    "AnyCondition": [
+      {
+        "PatientCondition": {
+          "Dehydration": {
+            "Severity": {
+              "Scalar0To1": {
+                "Value": 0.4
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

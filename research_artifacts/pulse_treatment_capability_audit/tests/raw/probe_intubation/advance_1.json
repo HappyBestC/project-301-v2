@@ -1,0 +1,22 @@
+{
+  "SimulationTime": {
+    "ScalarTime": {
+      "Value": 0.02,
+      "Unit": "s"
+    }
+  },
+  "ActiveActions": {
+    "AnyAction": [
+      {
+        "PatientAction": {
+          "Intubation": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "Type": "Tracheal"
+          }
+        }
+      }
+    ]
+  }
+}

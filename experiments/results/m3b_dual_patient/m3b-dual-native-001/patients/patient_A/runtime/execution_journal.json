@@ -1,0 +1,166 @@
+{
+  "version": "301.v2.execution.phase1.1",
+  "run_id": "m3b-dual-native-001",
+  "patient_id": "m3b-dual-native-001-A",
+  "session_epoch": "7aabfa294b954011bb9f7eabe6446c4f",
+  "production_enabled": false,
+  "plans": {
+    "m3b-dual-native-001-A-execute": {
+      "plan_id": "972f63806e5045d995cc4b3e2590e996",
+      "request_id": "m3b-dual-native-001-A-execute",
+      "patient_id": "m3b-dual-native-001-A",
+      "run_id": "m3b-dual-native-001",
+      "session_epoch": "7aabfa294b954011bb9f7eabe6446c4f",
+      "context_ref": "74570c701250463aaa37c44a0715e6dc",
+      "plan_sha256": "06d162f8b8157968939bf17a1d7d5839d137a1c8d91cf339cd626a08e2ed6acb",
+      "plan": {
+        "patient_id": "m3b-dual-native-001-A",
+        "actions": [
+          {
+            "action_type": "control_external_bleeding",
+            "compartment": "RightLeg"
+          }
+        ]
+      },
+      "protocol_version": "301.v2.phase1.research.1",
+      "production_enabled": false,
+      "status": "COMPLETED",
+      "actions": [
+        {
+          "action_id": "8871485095b5478589e82d5f23cab7d1",
+          "action_index": 0,
+          "action_type": "control_external_bleeding",
+          "business_action": {
+            "action_type": "control_external_bleeding",
+            "compartment": "RightLeg"
+          },
+          "target": {
+            "patient_id": "m3b-dual-native-001-A",
+            "injury_id": "67a4d4d525eb48db85122236f8044b9a",
+            "injury_type": "external_hemorrhage",
+            "native_identity": [
+              "Hemorrhage",
+              "RightLeg"
+            ],
+            "source_version": 1,
+            "compartment": "RightLeg"
+          },
+          "protocol_id": "control_external_bleeding.phase1.1",
+          "native_payload": {
+            "PatientAction": {
+              "Hemorrhage": {
+                "Type": "External",
+                "Compartment": "RightLeg",
+                "Severity": {
+                  "Scalar0To1": {
+                    "Value": 0
+                  }
+                }
+              }
+            }
+          },
+          "proposed_time_s": 180.00000000001828,
+          "submitted_time_s": 180.00000000001828,
+          "accepted": true,
+          "state": "COMPLETED",
+          "lifecycle": "COMPLETED",
+          "native_result": {
+            "phase": "treatment",
+            "index": 0,
+            "simulation_time_s": 180.00000000001828,
+            "accepted": true
+          },
+          "error": null,
+          "validation": {
+            "schema": "passed",
+            "source": "passed",
+            "scope": "passed",
+            "resource": "passed"
+          },
+          "resource": {
+            "allocated_units": {},
+            "allocation_ids": [
+              "208cd098134b47a986920484ff81f42c"
+            ],
+            "action_instance_id": "m3b-dual-native-001-A-control",
+            "consumption": "no stock requirement for this research proxy",
+            "submission_status": "accepted",
+            "delivery_status": "completed",
+            "native_delivery_evidence": {
+              "source_control_confirmed": true,
+              "cumulative_loss_mL": 173.0659699721137,
+              "capacity_restoration_claimed": false
+            }
+          },
+          "device_state": {
+            "observed_at_s": 181.0000000000188,
+            "airway_mode": "Free",
+            "intubation": "Off"
+          },
+          "physiological_response": "NOT_EVALUATED",
+          "evaluation": "NOT_RUN",
+          "already_applied_noop": false,
+          "delivery": {
+            "source_control_confirmed": true,
+            "cumulative_loss_mL": 173.0659699721137,
+            "capacity_restoration_claimed": false
+          },
+          "last_verified_time_s": 181.0000000000188
+        }
+      ],
+      "error": null,
+      "resource_reservation": {
+        "authority_kind": "explicit_research_fixture",
+        "shared_plan_id": "m3b-dual-native-001-A-plan",
+        "allocation_ids": [
+          "208cd098134b47a986920484ff81f42c"
+        ],
+        "production_inventory": false
+      }
+    }
+  },
+  "events": [
+    {
+      "event_id": "e5bfff6ffb87475d9b008fc2128d5ffb",
+      "request_id": "m3b-dual-native-001-A-execute",
+      "action_id": null,
+      "state": "PROPOSED",
+      "simulation_time_s": 180.00000000001828
+    },
+    {
+      "event_id": "4c9d3e541b0145b69de396666ad293b8",
+      "request_id": "m3b-dual-native-001-A-execute",
+      "action_id": "8871485095b5478589e82d5f23cab7d1",
+      "state": "PROPOSED",
+      "simulation_time_s": 180.00000000001828
+    },
+    {
+      "event_id": "15f3f54792cc4200813bcc4b6186eef0",
+      "request_id": "m3b-dual-native-001-A-execute",
+      "action_id": "8871485095b5478589e82d5f23cab7d1",
+      "state": "VALIDATED",
+      "simulation_time_s": 180.00000000001828
+    },
+    {
+      "event_id": "c676449c435d445abe8c13ea2afd5661",
+      "request_id": "m3b-dual-native-001-A-execute",
+      "action_id": "8871485095b5478589e82d5f23cab7d1",
+      "state": "SUBMITTED",
+      "simulation_time_s": 180.00000000001828
+    },
+    {
+      "event_id": "41446dff28c5478d96d7510bc432356e",
+      "request_id": "m3b-dual-native-001-A-execute",
+      "action_id": "8871485095b5478589e82d5f23cab7d1",
+      "state": "ACCEPTED",
+      "simulation_time_s": 180.00000000001828
+    },
+    {
+      "event_id": "f9cf800c480c473f9fe3d04ab680e471",
+      "request_id": "m3b-dual-native-001-A-execute",
+      "action_id": "8871485095b5478589e82d5f23cab7d1",
+      "state": "COMPLETED",
+      "simulation_time_s": 181.0000000000188
+    }
+  ]
+}

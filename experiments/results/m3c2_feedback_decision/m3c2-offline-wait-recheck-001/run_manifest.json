@@ -1,0 +1,20 @@
+{
+  "run_id": "m3c2-offline-wait-recheck-001",
+  "mode": "offline_test",
+  "real_pulse": false,
+  "real_llm": false,
+  "priority_mode": "fixed_A_first",
+  "feedback_provider": "FixedFeedbackProvider",
+  "max_llm_calls": 0,
+  "prompt_sha256": "ed809f8d3affe89b1feaa0bea5ed7e67eb25d5994fabdd556a86cc3330c3eb40",
+  "source_sha256": {
+    "src/core301/research_runtime/m3c2_runner.py": "d77a0dd86e45ffd8f479f78dd81b16fdd307b86ff468bb87f3be7f2a1a65c547",
+    "src/core301/research_runtime/m3c2_timing.py": "87503047903efc25799962c669f9e628a56ce949080b5c849ece79e670ce6e86",
+    "src/core301/research_runtime/m3c2_verify.py": "32db37eb4f6d4791a5811c59a25977c08bde96d19ea84f698311d605bf6ef165",
+    "src/core301/research_runtime/m3b_runner.py": "956c7100c36e2bcb66ae08d3e01dc6bad636c60851dc73144bb3c523940badd0",
+    "src/core301/runtime/v2/case_runtime.py": "ee08773176dfc3472996abcd262820b6a5e460bdca8b451a152b400f35cd0b00",
+    "src/core301/agent/resource_feedback.py": "deaf7c34e7c460cc818ad4032349f12461309dd4ab34d8987ee96585d21886b3",
+    "src/core301/agent/feedback_provider.py": "451f99ff80cf14be1b6af2ecb6a5322ea97fdccbe9c8b706e1a2529eb9269482",
+    "src/core301/agent/prompts/resource_feedback_decision_m3c2.md": "ed809f8d3affe89b1feaa0bea5ed7e67eb25d5994fabdd556a86cc3330c3eb40"
+  }
+}

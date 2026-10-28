@@ -1,0 +1,189 @@
+{
+  "version": "301.v2_1.composite.runtime.1",
+  "patient_id": "composite-patient",
+  "run_id": "v21-runtime_risk_v2-4",
+  "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+  "epoch": "4137131824c44173b4717f29ee572d45",
+  "validation_only": true,
+  "production_enabled": false,
+  "requests": {
+    "noresource": {
+      "digest": "44ea3e376945bb45183718480e8a8e5519e0f7dc8dbb966637afa5c272ab6697",
+      "plan": {
+        "patient_id": "composite-patient",
+        "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+        "bundle": "AB"
+      },
+      "state": "REJECTED",
+      "actions": [],
+      "error": "Insufficient stock/equipment/team"
+    },
+    "joint": {
+      "digest": "44ea3e376945bb45183718480e8a8e5519e0f7dc8dbb966637afa5c272ab6697",
+      "plan": {
+        "patient_id": "composite-patient",
+        "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+        "bundle": "AB"
+      },
+      "state": "COMPLETED",
+      "actions": [
+        {
+          "kind": "remove_from_exposure",
+          "state": "NATIVE_ACCEPTED",
+          "time_s": 359.99999999996254,
+          "payload": {
+            "EnvironmentAction": {
+              "ChangeEnvironmentalConditions": {
+                "EnvironmentalConditions": {
+                  "AmbientGas": [
+                    {
+                      "Name": "Nitrogen",
+                      "Amount": {
+                        "Scalar0To1": {
+                          "Value": 0.7896000000000001
+                        }
+                      }
+                    },
+                    {
+                      "Name": "Oxygen",
+                      "Amount": {
+                        "Scalar0To1": {
+                          "Value": 0.21
+                        }
+                      }
+                    },
+                    {
+                      "Name": "CarbonDioxide",
+                      "Amount": {
+                        "Scalar0To1": {
+                          "Value": 0.0004
+                        }
+                      }
+                    },
+                    {
+                      "Name": "CarbonMonoxide",
+                      "Amount": {
+                        "Scalar0To1": {
+                          "Value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "allocation": {
+            "kind": "remove_from_exposure",
+            "units": {},
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          "confirmed_time_s": 360.0199999999625
+        },
+        {
+          "kind": "fluid_resuscitation",
+          "state": "NATIVE_ACCEPTED",
+          "time_s": 360.0199999999625,
+          "payload": {
+            "PatientAction": {
+              "SubstanceCompoundInfusion": {
+                "SubstanceCompound": "Saline",
+                "BagVolume": {
+                  "ScalarVolume": {
+                    "Value": 500,
+                    "Unit": "mL"
+                  }
+                },
+                "Rate": {
+                  "ScalarVolumePerTime": {
+                    "Value": 100,
+                    "Unit": "mL/min"
+                  }
+                }
+              }
+            }
+          },
+          "allocation": {
+            "kind": "fluid_resuscitation",
+            "units": {
+              "saline_500ml_bag": 1
+            },
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          "confirmed_time_s": 360.0399999999625
+        }
+      ],
+      "resources": {
+        "reserved": {
+          "saline_500ml_bag": 1
+        },
+        "held": {
+          "evacuation_team": 1,
+          "medic": 1
+        },
+        "allocated": [
+          {
+            "kind": "remove_from_exposure",
+            "units": {},
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          },
+          {
+            "kind": "fluid_resuscitation",
+            "units": {
+              "saline_500ml_bag": 1
+            },
+            "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+          }
+        ],
+        "production_inventory": false
+      }
+    }
+  },
+  "events": [
+    {
+      "state": "PREPARED",
+      "time_s": 359.99999999996254
+    },
+    {
+      "state": "REJECTED",
+      "code": "INITIALIZATION_FORBIDDEN",
+      "message": "No repeated initialization or restoration"
+    },
+    {
+      "state": "REJECTED",
+      "code": "UNSUPPORTED_RECOVERY",
+      "message": "No composite state restoration"
+    },
+    {
+      "state": "REJECTED",
+      "code": "PATIENT_OR_PATTERN_MISMATCH",
+      "message": "Wrong target"
+    },
+    {
+      "state": "REJECTED",
+      "code": "STALE_CONTEXT",
+      "message": "Context is foreign or stale"
+    },
+    {
+      "state": "REJECTED",
+      "code": "IDEMPOTENCY_CONFLICT",
+      "message": "Request ID reused with different payload"
+    },
+    {
+      "state": "REJECTED",
+      "code": "OUTSIDE_WINDOW",
+      "message": "Fixed decision tick required"
+    },
+    {
+      "state": "REJECTED",
+      "code": "UNREGISTERED_NATIVE_SOURCE",
+      "message": "Native injury identities/parameters differ from composite registry"
+    },
+    {
+      "state": "REJECTED",
+      "code": "INITIALIZATION_FORBIDDEN",
+      "message": "No repeated initialization or restoration"
+    }
+  ],
+  "case_closed": true
+}

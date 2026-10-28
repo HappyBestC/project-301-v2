@@ -1,0 +1,104 @@
+[
+  {
+    "time_s": 60.00000000000378,
+    "phase": "injury",
+    "payload": {
+      "PatientAction": {
+        "Hemorrhage": {
+          "Type": "Internal",
+          "Compartment": "Spleen",
+          "Severity": {
+            "Scalar0To1": {
+              "Value": 0.4
+            }
+          }
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "injury",
+      "index": 0,
+      "simulation_time_s": 60.00000000000378,
+      "accepted": true
+    }
+  },
+  {
+    "time_s": 60.00000000000378,
+    "phase": "injury",
+    "payload": {
+      "PatientAction": {
+        "TensionPneumothorax": {
+          "Type": "Closed",
+          "Side": "Left",
+          "Severity": {
+            "Scalar0To1": {
+              "Value": 0.6
+            }
+          }
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "injury",
+      "index": 0,
+      "simulation_time_s": 60.00000000000378,
+      "accepted": true
+    }
+  },
+  {
+    "time_s": 180.00000000001828,
+    "phase": "treatment:control_internal_bleeding",
+    "payload": {
+      "PatientAction": {
+        "Hemorrhage": {
+          "Type": "Internal",
+          "Compartment": "Spleen",
+          "Severity": {
+            "Scalar0To1": {
+              "Value": 0
+            }
+          }
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "treatment:control_internal_bleeding",
+      "index": 0,
+      "simulation_time_s": 180.00000000001828,
+      "accepted": true
+    }
+  },
+  {
+    "time_s": 180.02000000001829,
+    "phase": "treatment:fluid_resuscitation",
+    "payload": {
+      "PatientAction": {
+        "SubstanceCompoundInfusion": {
+          "SubstanceCompound": "Saline",
+          "BagVolume": {
+            "ScalarVolume": {
+              "Value": 500,
+              "Unit": "mL"
+            }
+          },
+          "Rate": {
+            "ScalarVolumePerTime": {
+              "Value": 100,
+              "Unit": "mL/min"
+            }
+          }
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "treatment:fluid_resuscitation",
+      "index": 0,
+      "simulation_time_s": 180.02000000001829,
+      "accepted": true
+    }
+  }
+]

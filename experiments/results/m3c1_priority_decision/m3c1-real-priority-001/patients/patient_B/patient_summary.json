@@ -1,0 +1,12 @@
+{
+  "patient_id": "m3c1-real-priority-001-B",
+  "plan_id": "m3c1-real-priority-001-B-plan",
+  "state": "TIME_PROTOCOL_BLOCKED",
+  "worker_pid": 596636,
+  "last_acknowledged_time_s": 479.9999999998534,
+  "observations": 301,
+  "treatment_count": 0,
+  "wait_start_s": 180.0,
+  "wait_end_s": 181.0,
+  "mode": "dual_native"
+}

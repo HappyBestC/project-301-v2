@@ -1,0 +1,6 @@
+{
+  "evaluator_called": false,
+  "computation_state": "NOT_EVALUABLE",
+  "grade": null,
+  "reason": "Exploratory timing lacks matched formal evaluation evidence"
+}

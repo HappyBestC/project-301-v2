@@ -1,0 +1,41 @@
+{
+  "authority": "explicit_study_host",
+  "reserved": {
+    "chest_tube_kit": 1,
+    "occlusive_dressing_kit": 1
+  },
+  "held": {
+    "medic": 1
+  },
+  "permissions": [
+    "simulated_hemothorax_source_control",
+    "research_chest_tube"
+  ],
+  "allocation": [
+    {
+      "action": "control_hemothorax_bleeding",
+      "allocated_units": {},
+      "at_s": 659.9999999996897,
+      "delivery": "not_assumed"
+    },
+    {
+      "action": "chest_tube",
+      "allocated_units": {
+        "chest_tube_kit": 1
+      },
+      "at_s": 660.0199999996897,
+      "delivery": "not_assumed"
+    },
+    {
+      "action": "occlusive_dressing",
+      "allocated_units": {
+        "occlusive_dressing_kit": 1
+      },
+      "at_s": 660.0399999996897,
+      "delivery": "not_assumed"
+    }
+  ],
+  "production_inventory": false,
+  "protected_route_available": true,
+  "receiving_environment_verified": true
+}

@@ -1,0 +1,174 @@
+action_A,action_B,status,rule,evidence,responsibility
+SubstanceBolus,SubstanceBolus,同键覆盖（配置类另有Merge/Append语义）,单例按类型；侧别按侧；物质/复合物按名称；Hemorrhage按Compartment,S1 SEPatientActionCollection.cpp:193 / SEEquipmentActionCollection.cpp:121; S2/S3 bolus_overwrite,Agent临床/资源/组合校验
+SubstanceBolus,SubstanceInfusion,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceBolus,SubstanceCompoundInfusion,共存并共同影响,同刻提交，零时间推进；本组合交换次序数值一致,S1 DrugModel.cpp:145; S2/S3/S4 combo_high_AB/BA,Agent临床/资源/组合校验
+SubstanceBolus,SupplementalOxygen,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceBolus,MechanicalVentilation,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceBolus,Intubation,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceBolus,ChestOcclusiveDressing,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceBolus,NeedleDecompression,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceBolus,TubeThoracostomy,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceBolus,Hemorrhage,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceBolus,BagValveMaskAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceBolus,MechanicalVentilatorPressureControl,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceBolus,MechanicalVentilatorVolumeControl,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceBolus,ChestCompression,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceBolus,ChestCompressionAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceBolus,ThermalApplication,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceBolus,ECMOConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceBolus,InhalerConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceInfusion,SubstanceInfusion,同键覆盖（配置类另有Merge/Append语义）,单例按类型；侧别按侧；物质/复合物按名称；Hemorrhage按Compartment,S1 SEPatientActionCollection.cpp:193 / SEEquipmentActionCollection.cpp:121; S2/S3 infusion_update_stop,Agent临床/资源/组合校验
+SubstanceInfusion,SubstanceCompoundInfusion,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceInfusion,SupplementalOxygen,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceInfusion,MechanicalVentilation,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceInfusion,Intubation,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceInfusion,ChestOcclusiveDressing,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceInfusion,NeedleDecompression,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceInfusion,TubeThoracostomy,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceInfusion,Hemorrhage,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceInfusion,BagValveMaskAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceInfusion,MechanicalVentilatorPressureControl,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceInfusion,MechanicalVentilatorVolumeControl,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceInfusion,ChestCompression,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceInfusion,ChestCompressionAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceInfusion,ThermalApplication,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceInfusion,ECMOConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceInfusion,InhalerConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceCompoundInfusion,SubstanceCompoundInfusion,同键覆盖（配置类另有Merge/Append语义）,单例按类型；侧别按侧；物质/复合物按名称；Hemorrhage按Compartment,S1 SEPatientActionCollection.cpp:193 / SEEquipmentActionCollection.cpp:121,Agent临床/资源/组合校验
+SubstanceCompoundInfusion,SupplementalOxygen,持续重叠共存/独立停止,0s盐水，20s氧疗，40s停氧后盐水继续,S2/S3 overlap,Agent临床/资源/组合校验
+SubstanceCompoundInfusion,MechanicalVentilation,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceCompoundInfusion,Intubation,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceCompoundInfusion,ChestOcclusiveDressing,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceCompoundInfusion,NeedleDecompression,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceCompoundInfusion,TubeThoracostomy,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceCompoundInfusion,Hemorrhage,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceCompoundInfusion,BagValveMaskAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceCompoundInfusion,MechanicalVentilatorPressureControl,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceCompoundInfusion,MechanicalVentilatorVolumeControl,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceCompoundInfusion,ChestCompression,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceCompoundInfusion,ChestCompressionAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceCompoundInfusion,ThermalApplication,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceCompoundInfusion,ECMOConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SubstanceCompoundInfusion,InhalerConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SupplementalOxygen,SupplementalOxygen,同键覆盖（配置类另有Merge/Append语义）,单例按类型；侧别按侧；物质/复合物按名称；Hemorrhage按Compartment,S1 SEPatientActionCollection.cpp:193 / SEEquipmentActionCollection.cpp:121,Agent临床/资源/组合校验
+SupplementalOxygen,MechanicalVentilation,互斥：提交接受，推进失败,必须关闭旧设备并推进确认Free后启用新设备,S1 Controller.cpp:88; S2/S3 airway_AB/BA,Agent临床/资源/组合校验
+SupplementalOxygen,Intubation,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SupplementalOxygen,ChestOcclusiveDressing,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SupplementalOxygen,NeedleDecompression,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SupplementalOxygen,TubeThoracostomy,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SupplementalOxygen,Hemorrhage,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SupplementalOxygen,BagValveMaskAutomated,气道模式互斥（源码推断）,设备连接状态决定；不能只凭动作类判断,S1 Controller.cpp:88及设备SetAirwayMode；未原生验证该配对,Agent临床/资源/组合校验
+SupplementalOxygen,MechanicalVentilatorPressureControl,气道模式互斥（源码推断）,设备连接状态决定；不能只凭动作类判断,S1 Controller.cpp:88及设备SetAirwayMode；未原生验证该配对,Agent临床/资源/组合校验
+SupplementalOxygen,MechanicalVentilatorVolumeControl,气道模式互斥（源码推断）,设备连接状态决定；不能只凭动作类判断,S1 Controller.cpp:88及设备SetAirwayMode；未原生验证该配对,Agent临床/资源/组合校验
+SupplementalOxygen,ChestCompression,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SupplementalOxygen,ChestCompressionAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SupplementalOxygen,ThermalApplication,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SupplementalOxygen,ECMOConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+SupplementalOxygen,InhalerConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilation,MechanicalVentilation,同键覆盖（配置类另有Merge/Append语义）,单例按类型；侧别按侧；物质/复合物按名称；Hemorrhage按Compartment,S1 SEPatientActionCollection.cpp:193 / SEEquipmentActionCollection.cpp:121,Agent临床/资源/组合校验
+MechanicalVentilation,Intubation,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilation,ChestOcclusiveDressing,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilation,NeedleDecompression,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilation,TubeThoracostomy,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilation,Hemorrhage,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilation,BagValveMaskAutomated,气道模式互斥（源码推断）,设备连接状态决定；不能只凭动作类判断,S1 Controller.cpp:88及设备SetAirwayMode；未原生验证该配对,Agent临床/资源/组合校验
+MechanicalVentilation,MechanicalVentilatorPressureControl,气道模式互斥（源码推断）,设备连接状态决定；不能只凭动作类判断,S1 Controller.cpp:88及设备SetAirwayMode；未原生验证该配对,Agent临床/资源/组合校验
+MechanicalVentilation,MechanicalVentilatorVolumeControl,气道模式互斥（源码推断）,设备连接状态决定；不能只凭动作类判断,S1 Controller.cpp:88及设备SetAirwayMode；未原生验证该配对,Agent临床/资源/组合校验
+MechanicalVentilation,ChestCompression,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilation,ChestCompressionAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilation,ThermalApplication,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilation,ECMOConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilation,InhalerConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Intubation,Intubation,同键覆盖（配置类另有Merge/Append语义）,单例按类型；侧别按侧；物质/复合物按名称；Hemorrhage按Compartment,S1 SEPatientActionCollection.cpp:193 / SEEquipmentActionCollection.cpp:121; S2/S3 probe_intubation,Agent临床/资源/组合校验
+Intubation,ChestOcclusiveDressing,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Intubation,NeedleDecompression,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Intubation,TubeThoracostomy,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Intubation,Hemorrhage,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Intubation,BagValveMaskAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Intubation,MechanicalVentilatorPressureControl,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Intubation,MechanicalVentilatorVolumeControl,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Intubation,ChestCompression,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Intubation,ChestCompressionAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Intubation,ThermalApplication,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Intubation,ECMOConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Intubation,InhalerConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+ChestOcclusiveDressing,ChestOcclusiveDressing,同键覆盖（配置类另有Merge/Append语义）,单例按类型；侧别按侧；物质/复合物按名称；Hemorrhage按Compartment,S1 SEPatientActionCollection.cpp:193 / SEEquipmentActionCollection.cpp:121,Agent临床/资源/组合校验
+ChestOcclusiveDressing,NeedleDecompression,同侧可并存（源码）,作用不同阻力路径；需同侧气胸，不能推定所有伤情适用,S1 RespiratoryModel.cpp:1730；组合尚未原生验证,Agent临床/资源/组合校验
+ChestOcclusiveDressing,TubeThoracostomy,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+ChestOcclusiveDressing,Hemorrhage,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+ChestOcclusiveDressing,BagValveMaskAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+ChestOcclusiveDressing,MechanicalVentilatorPressureControl,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+ChestOcclusiveDressing,MechanicalVentilatorVolumeControl,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+ChestOcclusiveDressing,ChestCompression,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+ChestOcclusiveDressing,ChestCompressionAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+ChestOcclusiveDressing,ThermalApplication,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+ChestOcclusiveDressing,ECMOConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+ChestOcclusiveDressing,InhalerConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+NeedleDecompression,NeedleDecompression,同键覆盖（配置类另有Merge/Append语义）,单例按类型；侧别按侧；物质/复合物按名称；Hemorrhage按Compartment,S1 SEPatientActionCollection.cpp:193 / SEEquipmentActionCollection.cpp:121,Agent临床/资源/组合校验
+NeedleDecompression,TubeThoracostomy,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+NeedleDecompression,Hemorrhage,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+NeedleDecompression,BagValveMaskAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+NeedleDecompression,MechanicalVentilatorPressureControl,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+NeedleDecompression,MechanicalVentilatorVolumeControl,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+NeedleDecompression,ChestCompression,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+NeedleDecompression,ChestCompressionAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+NeedleDecompression,ThermalApplication,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+NeedleDecompression,ECMOConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+NeedleDecompression,InhalerConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+TubeThoracostomy,TubeThoracostomy,同键覆盖（配置类另有Merge/Append语义）,单例按类型；侧别按侧；物质/复合物按名称；Hemorrhage按Compartment,S1 SEPatientActionCollection.cpp:193 / SEEquipmentActionCollection.cpp:121,Agent临床/资源/组合校验
+TubeThoracostomy,Hemorrhage,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+TubeThoracostomy,BagValveMaskAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+TubeThoracostomy,MechanicalVentilatorPressureControl,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+TubeThoracostomy,MechanicalVentilatorVolumeControl,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+TubeThoracostomy,ChestCompression,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+TubeThoracostomy,ChestCompressionAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+TubeThoracostomy,ThermalApplication,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+TubeThoracostomy,ECMOConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+TubeThoracostomy,InhalerConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Hemorrhage,Hemorrhage,同键覆盖（配置类另有Merge/Append语义）,单例按类型；侧别按侧；物质/复合物按名称；Hemorrhage按Compartment,S1 SEPatientActionCollection.cpp:193 / SEEquipmentActionCollection.cpp:121,Agent临床/资源/组合校验
+Hemorrhage,BagValveMaskAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Hemorrhage,MechanicalVentilatorPressureControl,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Hemorrhage,MechanicalVentilatorVolumeControl,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Hemorrhage,ChestCompression,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Hemorrhage,ChestCompressionAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Hemorrhage,ThermalApplication,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Hemorrhage,ECMOConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+Hemorrhage,InhalerConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+BagValveMaskAutomated,BagValveMaskAutomated,同键覆盖（配置类另有Merge/Append语义）,单例按类型；侧别按侧；物质/复合物按名称；Hemorrhage按Compartment,S1 SEPatientActionCollection.cpp:193 / SEEquipmentActionCollection.cpp:121,Agent临床/资源/组合校验
+BagValveMaskAutomated,MechanicalVentilatorPressureControl,气道模式互斥（源码推断）,设备连接状态决定；不能只凭动作类判断,S1 Controller.cpp:88及设备SetAirwayMode；未原生验证该配对,Agent临床/资源/组合校验
+BagValveMaskAutomated,MechanicalVentilatorVolumeControl,气道模式互斥（源码推断）,设备连接状态决定；不能只凭动作类判断,S1 Controller.cpp:88及设备SetAirwayMode；未原生验证该配对,Agent临床/资源/组合校验
+BagValveMaskAutomated,ChestCompression,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+BagValveMaskAutomated,ChestCompressionAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+BagValveMaskAutomated,ThermalApplication,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+BagValveMaskAutomated,ECMOConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+BagValveMaskAutomated,InhalerConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilatorPressureControl,MechanicalVentilatorPressureControl,同键覆盖（配置类另有Merge/Append语义）,单例按类型；侧别按侧；物质/复合物按名称；Hemorrhage按Compartment,S1 SEPatientActionCollection.cpp:193 / SEEquipmentActionCollection.cpp:121,Agent临床/资源/组合校验
+MechanicalVentilatorPressureControl,MechanicalVentilatorVolumeControl,模式替换,新模式移除旧模式；ToSettings还可能失败,S1 SEEquipmentActionCollection.cpp:160-230；尚未原生验证,Agent临床/资源/组合校验
+MechanicalVentilatorPressureControl,ChestCompression,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilatorPressureControl,ChestCompressionAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilatorPressureControl,ThermalApplication,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilatorPressureControl,ECMOConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilatorPressureControl,InhalerConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilatorVolumeControl,MechanicalVentilatorVolumeControl,同键覆盖（配置类另有Merge/Append语义）,单例按类型；侧别按侧；物质/复合物按名称；Hemorrhage按Compartment,S1 SEPatientActionCollection.cpp:193 / SEEquipmentActionCollection.cpp:121,Agent临床/资源/组合校验
+MechanicalVentilatorVolumeControl,ChestCompression,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilatorVolumeControl,ChestCompressionAutomated,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilatorVolumeControl,ThermalApplication,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilatorVolumeControl,ECMOConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+MechanicalVentilatorVolumeControl,InhalerConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+ChestCompression,ChestCompression,同键覆盖（配置类另有Merge/Append语义）,单例按类型；侧别按侧；物质/复合物按名称；Hemorrhage按Compartment,S1 SEPatientActionCollection.cpp:193 / SEEquipmentActionCollection.cpp:121,Agent临床/资源/组合校验
+ChestCompression,ChestCompressionAutomated,自动移除其他按压模式,新动作替换旧按压模式,S1 SEPatientActionCollection.cpp:298；尚未原生验证,Agent临床/资源/组合校验
+ChestCompression,ThermalApplication,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+ChestCompression,ECMOConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+ChestCompression,InhalerConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+ChestCompressionAutomated,ChestCompressionAutomated,同键覆盖（配置类另有Merge/Append语义）,单例按类型；侧别按侧；物质/复合物按名称；Hemorrhage按Compartment,S1 SEPatientActionCollection.cpp:193 / SEEquipmentActionCollection.cpp:121,Agent临床/资源/组合校验
+ChestCompressionAutomated,ThermalApplication,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+ChestCompressionAutomated,ECMOConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+ChestCompressionAutomated,InhalerConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+ThermalApplication,ThermalApplication,同键覆盖（配置类另有Merge/Append语义）,单例按类型；侧别按侧；物质/复合物按名称；Hemorrhage按Compartment,S1 SEPatientActionCollection.cpp:193 / SEEquipmentActionCollection.cpp:121,Agent临床/资源/组合校验
+ThermalApplication,ECMOConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+ThermalApplication,InhalerConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+ECMOConfiguration,ECMOConfiguration,同键覆盖（配置类另有Merge/Append语义）,单例按类型；侧别按侧；物质/复合物按名称；Hemorrhage按Compartment,S1 SEPatientActionCollection.cpp:193 / SEEquipmentActionCollection.cpp:121,Agent临床/资源/组合校验
+ECMOConfiguration,InhalerConfiguration,未知,需按具体参数、伤情和设备状态验证,尚未验证；无通用兼容性保证,Agent临床/资源/组合校验
+InhalerConfiguration,InhalerConfiguration,同键覆盖（配置类另有Merge/Append语义）,单例按类型；侧别按侧；物质/复合物按名称；Hemorrhage按Compartment,S1 SEPatientActionCollection.cpp:193 / SEEquipmentActionCollection.cpp:121,Agent临床/资源/组合校验
+SubstanceBolus(Epinephrine),SubstanceBolus(Morphine),异物质共存,独立注入与通用PD叠加；不代表药物特异相互作用,S2/S3/S4 multidrug_high,Agent药物交互风险审查
+Saline+invalidBolus+Oxygen,单批次process_actions,部分执行，无原子回滚,整体false但Saline和Oxygen保留且下一步成功,S1 PhysiologyEngineThunk.cpp:268; S2/S3 batch_partial,Agent逐项回执与失败后状态核对

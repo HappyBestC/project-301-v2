@@ -1,0 +1,11 @@
+{
+  "files": 910,
+  "bytes": 652750974,
+  "python_modules": 112,
+  "v1_documents": 8,
+  "original": {
+    "files": 114127,
+    "metadata_sha256": "44bdfc1999d1762126aec02554c19b772324d369fa3eee91325ef25a87092317",
+    "method": "sorted relative path + size + mtime_ns + symlink target; not a full-content hash"
+  }
+}

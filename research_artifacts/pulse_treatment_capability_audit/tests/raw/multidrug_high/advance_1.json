@@ -1,0 +1,80 @@
+{
+  "SimulationTime": {
+    "ScalarTime": {
+      "Value": 0.02,
+      "Unit": "s"
+    }
+  },
+  "ActiveActions": {
+    "AnyAction": [
+      {
+        "PatientAction": {
+          "SubstanceBolus": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "Substance": "Epinephrine",
+            "AdministrationDuration": {
+              "ScalarTime": {
+                "Value": 2,
+                "Unit": "s"
+              }
+            },
+            "Concentration": {
+              "ScalarMassPerVolume": {
+                "Value": 5,
+                "Unit": "ug/mL"
+              }
+            },
+            "Dose": {
+              "ScalarVolume": {
+                "Value": 1,
+                "Unit": "mL"
+              }
+            },
+            "TotalInfusedDose": {
+              "ScalarVolume": {
+                "Value": 0.01,
+                "Unit": "mL"
+              }
+            }
+          }
+        }
+      },
+      {
+        "PatientAction": {
+          "SubstanceBolus": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "Substance": "Morphine",
+            "AdministrationDuration": {
+              "ScalarTime": {
+                "Value": 2,
+                "Unit": "s"
+              }
+            },
+            "Concentration": {
+              "ScalarMassPerVolume": {
+                "Value": 1000,
+                "Unit": "ug/mL"
+              }
+            },
+            "Dose": {
+              "ScalarVolume": {
+                "Value": 1,
+                "Unit": "mL"
+              }
+            },
+            "TotalInfusedDose": {
+              "ScalarVolume": {
+                "Value": 0.01,
+                "Unit": "mL"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

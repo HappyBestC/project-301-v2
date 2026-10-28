@@ -1,0 +1,13 @@
+{
+  "accepted": true,
+  "simulation_time_s": 180.0,
+  "injury_records": [
+    {
+      "phase": "injury",
+      "simulation_time_s": 60.0,
+      "accepted": true,
+      "FAKE": true
+    }
+  ],
+  "phased_by_global_clock": true
+}

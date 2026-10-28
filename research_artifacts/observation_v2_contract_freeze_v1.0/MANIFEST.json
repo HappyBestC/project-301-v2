@@ -1,0 +1,19 @@
+{
+  "status": "ARCHIVE_VERIFIED / USER_ACCEPTANCE_PENDING / NOT_ACTIVATED",
+  "baseline_id": "301.observation.v2.engineering.baseline.1",
+  "project_root_at_archive": "/home/private/project-301",
+  "archive_version": "1.0",
+  "candidate_origin": "research_artifacts/patient_observation_v2_candidate_v0.1",
+  "authoritative_source": "snapshot/src/core301/observation_candidate_v2/",
+  "historical_provenance": "evidence/candidate/ (contains pre-B1 reports and before snapshots; not the active implementation)",
+  "N1": "NON_BLOCKER; Python semantic validation and trusted projection mandatory",
+  "engineering_archive": "VERIFIED",
+  "user_acceptance": "PENDING",
+  "runtime_activated": false,
+  "production_enabled": false,
+  "hash_manifest_exclusions": {
+    "ARCHIVE_SHA256.json": "Cannot hash itself; SHA is emitted by verify.py and should be kept with verification receipt.",
+    "validation/VERIFY_RESULT.json": "Detached output of verification; excluded to avoid self-referential checksum. Not an input or authority for verifier."
+  },
+  "portability": "Read-only verifier uses standard library; full verification requires project evidence/source paths plus the recorded Python dependency environment. Not a standalone runnable release."
+}

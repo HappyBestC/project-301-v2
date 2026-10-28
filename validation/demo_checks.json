@@ -1,0 +1,20 @@
+{
+  "demo_records": [
+    14,
+    14,
+    2
+  ],
+  "resource_conservation_checks": 128,
+  "complete_plan_lossless": true,
+  "competition_and_release_retry": true,
+  "complete_versions": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ]
+}

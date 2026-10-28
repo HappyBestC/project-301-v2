@@ -1,0 +1,22 @@
+{
+  "SimulationTime": {
+    "ScalarTime": {
+      "Unit": "s"
+    }
+  },
+  "ActiveActions": {
+    "AnyAction": [
+      {
+        "PatientAction": {
+          "ChestOcclusiveDressing": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "State": "On",
+            "Side": "Left"
+          }
+        }
+      }
+    ]
+  }
+}

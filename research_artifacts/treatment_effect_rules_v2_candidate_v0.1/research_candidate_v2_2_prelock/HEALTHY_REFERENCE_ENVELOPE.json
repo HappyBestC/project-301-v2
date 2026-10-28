@@ -1,0 +1,28 @@
+{
+  "id": "301.healthy.pleural.reference.envelope.2.2",
+  "role": "RETROSPECTIVE_CALIBRATION_REFERENCE_NOT_PATIENT_EVENT",
+  "source": "research_artifacts/treatment_effect_rules_v2_candidate_v0.1/final_lock_and_validation_v0.1/healthy_reference_run_v0.1/PLEURAL_REFERENCE.json",
+  "source_sha256": "400d2da5c6ee4e0d2abeaa2b1faf42c9d48fc739e669f9f14847364878260ed6",
+  "raw": "research_artifacts/treatment_effect_rules_v2_candidate_v0.1/final_lock_and_validation_v0.1/healthy_reference_run_v0.1/native/observations.jsonl",
+  "raw_sha256": "b8572e3a65458bb56ef0aed08b78a48082353f85f89a1f292e42dae090ffff51",
+  "patient_state": "pulse/bin/states/StandardMale@0s.json",
+  "patient_state_sha256": "0867d7ed38a62fa8f77e16c85b8f0849401868846b276bdee0041ac58393ca7d",
+  "engine": "4.3.2",
+  "plan": "research_artifacts/treatment_effect_rules_v2_candidate_v0.1/final_lock_and_validation_v0.1/HEALTHY_COLLECTION_PLAN.json",
+  "plan_sha256": "56f6f19a7e207a5c23505a4f0c7e288ccbfe0840fea2fd59d35fe85bd1d154c6",
+  "initial_state": "research_artifacts/treatment_effect_rules_v2_candidate_v0.1/final_lock_and_validation_v0.1/healthy_reference_run_v0.1/native/initial_state.json",
+  "initial_state_sha256": "e58ff4cfcc27bcffa77b710395545f06aef93b1abcc9a61e3e9c3d18448ddb46",
+  "preflight": "research_artifacts/treatment_effect_rules_v2_candidate_v0.1/final_lock_and_validation_v0.1/healthy_reference_run_v0.1/PREFLIGHT.json",
+  "preflight_sha256": "639ee95ac1983d7487f6b8b605c2063c2f8cdffb3bb07380ee5786d62b5a163f",
+  "observed_simulation_window_s": [
+    248.6800000000534,
+    298.2400000000187
+  ],
+  "available_by_review_utc": "2026-10-16T02:27:42.231850+00:00",
+  "availability_basis": "conservative current packaging time; not projected onto historical patient clock",
+  "padding_applications": 1,
+  "research_read_authorized": true,
+  "applicability_approval": "PENDING",
+  "medical_approval": "PENDING",
+  "provenance_status": "AI_ADVISORY_PENDING_OWNER_MEDICAL_REVIEW"
+}

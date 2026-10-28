@@ -1,0 +1,19 @@
+{
+  "run_id": "m3c1-fixed-b-native-001",
+  "mode": "dual_native",
+  "priority_mode": "fixed_B_first",
+  "real_llm": false,
+  "llm_call_limit": 0,
+  "prompt_sha256": "5b754283c3398561b89fc4576c662f90f46e1eb70e077b0b175b3b0c5e3e785b",
+  "treatment_provider": "fixed host CompletePlan",
+  "dispatch_provider": "FixedDispatchProvider onsite",
+  "source_sha256": {
+    "src/core301/agent/priority_decision.py": "79a90a492a7ae5697c45da2cd9793f5f2665ec40e6f7811c0f82b9094c491687",
+    "src/core301/agent/priority_provider.py": "a4fb5cc216b695cf0fbcfec5447a5b9d507de03e223be92935c9427f26eb0e2d",
+    "src/core301/agent/prompts/priority_decision_m3c1.md": "5b754283c3398561b89fc4576c662f90f46e1eb70e077b0b175b3b0c5e3e785b",
+    "src/core301/research_runtime/m3c1_verify.py": "6e55b5342d3474682d6efb0fc6b9231e62a99a07839ac138479f4b52e48415ff",
+    "src/core301/research_runtime/m3c1_accept.py": "121491f4dbb9b78fe94c13c5ebcf5dd12f0357e7b17a28cd1dc05252aa5cb179",
+    "src/core301/research_runtime/m3c1_runner.py": "0849d8aadff3888e9c5d762046e5e415f088ac943077f893e3913ec73703c3a3",
+    "src/core301/research_runtime/m3b_runner.py": "6c8b0fc92fc73420a0043442b39e1e7092d2d78d0870f778a07a7aac39ad989b"
+  }
+}

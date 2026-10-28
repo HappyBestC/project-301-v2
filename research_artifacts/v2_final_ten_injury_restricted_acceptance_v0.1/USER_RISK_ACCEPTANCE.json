@@ -1,0 +1,19 @@
+{
+  "id": "301.v2.limited_research_risk_acceptance.2026-10-13.1",
+  "authority": "user: V2 项目受限仿真工程验收负责人",
+  "source": "本会话用户对风险问题的明确答复",
+  "kind": "限定研究工程风险接受",
+  "clinical_safety_certification": false,
+  "profiles": ["301.v2.hemothorax.restricted.1", "301.v2.co.removal.restricted.1"],
+  "accepted_event": "Hypernatremia",
+  "constraints": [
+    "仅已经真实验证的 Pulse 4.3.2 固定研究 Profile，不扩大参数或场景",
+    "完整保留原生事件、Na轨迹及所有异常，原因未完全确认，不能认为临床无害或已解决",
+    "血胸仅局部停源/胸管机制；CO仅停止暴露及负荷下降；不宣称整体安全或治愈",
+    "原严重安全否决、异常检查、缺测拒绝、资源和执行约束保留",
+    "超出既有证据范围的异常、持续恶化或新严重事件继续阻断，不自动豁免",
+    "生产始终关闭",
+    "完成真实E2E与回归后才能更新准入，环境低氧独立验收"
+  ],
+  "final_engineering_acceptance": "NOT_YET_RECORDED"
+}

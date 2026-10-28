@@ -1,0 +1,175 @@
+{
+  "status": "PASS",
+  "includes_native_initialization_stabilization": true,
+  "cases": [
+    {
+      "pattern_id": "penetrating_thoracic_composite_v2",
+      "checks": {
+        "e2e": true,
+        "case_accepted": true,
+        "safety": true,
+        "exact_event_transitions": true,
+        "no_critical_events": true,
+        "no_native_warnings": true,
+        "source_unchanged_since_start": true,
+        "ten_refusals": true,
+        "validation_only": true,
+        "production_closed": true
+      },
+      "critical_events": [],
+      "native_warning_lines": [],
+      "source_changes": [],
+      "refusals": [
+        "INITIALIZATION_FORBIDDEN",
+        "UNSUPPORTED_RECOVERY",
+        "INCOMPLETE_WINDOW",
+        "PATIENT_OR_PATTERN_MISMATCH",
+        "STALE_CONTEXT",
+        "RESOURCE_UNAVAILABLE",
+        "IDEMPOTENCY_CONFLICT",
+        "OUTSIDE_WINDOW",
+        "UNREGISTERED_NATIVE_SOURCE",
+        "INITIALIZATION_FORBIDDEN"
+      ],
+      "repeat_max_absolute_difference": 0,
+      "final_events": [
+        "Hypernatremia",
+        "Hypoxia",
+        "Tachycardia"
+      ]
+    },
+    {
+      "pattern_id": "blunt_thoracoabdominal_composite_v2",
+      "checks": {
+        "e2e": true,
+        "case_accepted": true,
+        "safety": true,
+        "exact_event_transitions": true,
+        "no_critical_events": true,
+        "no_native_warnings": true,
+        "source_unchanged_since_start": true,
+        "ten_refusals": true,
+        "validation_only": true,
+        "production_closed": true
+      },
+      "critical_events": [],
+      "native_warning_lines": [],
+      "source_changes": [],
+      "refusals": [
+        "INITIALIZATION_FORBIDDEN",
+        "UNSUPPORTED_RECOVERY",
+        "INCOMPLETE_WINDOW",
+        "PATIENT_OR_PATTERN_MISMATCH",
+        "STALE_CONTEXT",
+        "RESOURCE_UNAVAILABLE",
+        "IDEMPOTENCY_CONFLICT",
+        "OUTSIDE_WINDOW",
+        "UNREGISTERED_NATIVE_SOURCE",
+        "INITIALIZATION_FORBIDDEN"
+      ],
+      "repeat_max_absolute_difference": 0,
+      "final_events": []
+    },
+    {
+      "pattern_id": "blast_hemorrhage_respiratory_composite_v2",
+      "checks": {
+        "e2e": true,
+        "case_accepted": true,
+        "safety": true,
+        "exact_event_transitions": true,
+        "no_critical_events": true,
+        "no_native_warnings": true,
+        "source_unchanged_since_start": true,
+        "ten_refusals": true,
+        "validation_only": true,
+        "production_closed": true
+      },
+      "critical_events": [],
+      "native_warning_lines": [],
+      "source_changes": [],
+      "refusals": [
+        "INITIALIZATION_FORBIDDEN",
+        "UNSUPPORTED_RECOVERY",
+        "INCOMPLETE_WINDOW",
+        "PATIENT_OR_PATTERN_MISMATCH",
+        "STALE_CONTEXT",
+        "RESOURCE_UNAVAILABLE",
+        "IDEMPOTENCY_CONFLICT",
+        "OUTSIDE_WINDOW",
+        "UNREGISTERED_NATIVE_SOURCE",
+        "INITIALIZATION_FORBIDDEN"
+      ],
+      "repeat_max_absolute_difference": 0,
+      "final_events": []
+    },
+    {
+      "pattern_id": "fire_co_alveolar_composite_v2",
+      "checks": {
+        "e2e": true,
+        "case_accepted": true,
+        "safety": true,
+        "exact_event_transitions": true,
+        "no_critical_events": true,
+        "no_native_warnings": true,
+        "source_unchanged_since_start": true,
+        "ten_refusals": true,
+        "validation_only": true,
+        "production_closed": true
+      },
+      "critical_events": [],
+      "native_warning_lines": [],
+      "source_changes": [],
+      "refusals": [
+        "INITIALIZATION_FORBIDDEN",
+        "UNSUPPORTED_RECOVERY",
+        "INCOMPLETE_WINDOW",
+        "PATIENT_OR_PATTERN_MISMATCH",
+        "STALE_CONTEXT",
+        "RESOURCE_UNAVAILABLE",
+        "IDEMPOTENCY_CONFLICT",
+        "OUTSIDE_WINDOW",
+        "UNREGISTERED_NATIVE_SOURCE",
+        "INITIALIZATION_FORBIDDEN"
+      ],
+      "repeat_max_absolute_difference": 0,
+      "final_events": [
+        "Hypernatremia"
+      ]
+    },
+    {
+      "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+      "checks": {
+        "e2e": true,
+        "case_accepted": true,
+        "safety": true,
+        "exact_event_transitions": true,
+        "no_critical_events": true,
+        "no_native_warnings": true,
+        "source_unchanged_since_start": true,
+        "ten_refusals": true,
+        "validation_only": true,
+        "production_closed": true
+      },
+      "critical_events": [],
+      "native_warning_lines": [],
+      "source_changes": [],
+      "refusals": [
+        "INITIALIZATION_FORBIDDEN",
+        "UNSUPPORTED_RECOVERY",
+        "INCOMPLETE_WINDOW",
+        "PATIENT_OR_PATTERN_MISMATCH",
+        "STALE_CONTEXT",
+        "RESOURCE_UNAVAILABLE",
+        "IDEMPOTENCY_CONFLICT",
+        "OUTSIDE_WINDOW",
+        "UNREGISTERED_NATIVE_SOURCE",
+        "INITIALIZATION_FORBIDDEN"
+      ],
+      "repeat_max_absolute_difference": 1.4551915228366852e-11,
+      "final_events": [
+        "Antidiuresis",
+        "Hypernatremia"
+      ]
+    }
+  ]
+}

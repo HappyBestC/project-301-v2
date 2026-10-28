@@ -1,0 +1,6 @@
+{
+  "evaluator_called": false,
+  "computation_state": "NOT_EVALUABLE",
+  "grade": null,
+  "reason": "No treatment: fixed 180s timing blocked; dynamic untreated branch is outside locked treatment scoring"
+}

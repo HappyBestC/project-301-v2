@@ -1,0 +1,85 @@
+[
+  {
+    "time_s": 60.00000000000378,
+    "phase": "environment",
+    "payload": {
+      "EnvironmentAction": {
+        "ChangeEnvironmentalConditions": {
+          "EnvironmentalConditions": {
+            "AmbientGas": [
+              {
+                "Name": "Nitrogen",
+                "Amount": {
+                  "Scalar0To1": {
+                    "Value": 0.8796
+                  }
+                }
+              },
+              {
+                "Name": "Oxygen",
+                "Amount": {
+                  "Scalar0To1": {
+                    "Value": 0.12
+                  }
+                }
+              },
+              {
+                "Name": "CarbonDioxide",
+                "Amount": {
+                  "Scalar0To1": {
+                    "Value": 0.0004
+                  }
+                }
+              },
+              {
+                "Name": "CarbonMonoxide",
+                "Amount": {
+                  "Scalar0To1": {
+                    "Value": 0
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "environment",
+      "index": 0,
+      "simulation_time_s": 60.00000000000378,
+      "accepted": true
+    }
+  },
+  {
+    "time_s": 359.99999999996254,
+    "phase": "treatment:fluid_resuscitation",
+    "payload": {
+      "PatientAction": {
+        "SubstanceCompoundInfusion": {
+          "SubstanceCompound": "Saline",
+          "BagVolume": {
+            "ScalarVolume": {
+              "Value": 500,
+              "Unit": "mL"
+            }
+          },
+          "Rate": {
+            "ScalarVolumePerTime": {
+              "Value": 100,
+              "Unit": "mL/min"
+            }
+          }
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "treatment:fluid_resuscitation",
+      "index": 0,
+      "simulation_time_s": 359.99999999996254,
+      "accepted": true
+    }
+  }
+]

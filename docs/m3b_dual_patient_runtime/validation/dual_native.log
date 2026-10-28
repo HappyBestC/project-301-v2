@@ -1,0 +1,15 @@
+{
+  "directory": "/home/private/project-301-v2/experiments/results/m3b_dual_patient/m3b-dual-native-001",
+  "run_id": "m3b-dual-native-001",
+  "mode": "dual_native",
+  "real_llm": false,
+  "real_pulse": true,
+  "overall_status": "M3B_DUAL_PATIENT_PARTIAL",
+  "waiting_status": "WAITING_TIME_ADVANCEMENT_VERIFIED",
+  "failure": null,
+  "waiting_duration_s": 1.0,
+  "endpoint_reached": true,
+  "time_protocol_blocked_patient": "B",
+  "global_simulation_time_s": 480.0,
+  "unresolved_allocations": []
+}

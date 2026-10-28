@@ -1,0 +1,9 @@
+{
+  "version": "301.v2.execution.phase1.1",
+  "run_id": "m3c2-real-feedback-001",
+  "patient_id": "m3c2-real-feedback-001-B",
+  "session_epoch": "424957b3c7bf4238a1003ebf120a3cb6",
+  "production_enabled": false,
+  "plans": {},
+  "events": []
+}

@@ -1,0 +1,33 @@
+{
+  "authority": "explicit_study_host",
+  "reserved": {
+    "saline_500ml_bag": 1
+  },
+  "held": {
+    "medic": 1,
+    "evacuation_team": 1
+  },
+  "permissions": [
+    "iv_access",
+    "research_environment_removal"
+  ],
+  "allocation": [
+    {
+      "action": "fluid_resuscitation",
+      "allocated_units": {
+        "saline_500ml_bag": 1
+      },
+      "at_s": 359.99999999996254,
+      "delivery": "not_assumed"
+    },
+    {
+      "action": "remove_from_exposure",
+      "allocated_units": {},
+      "at_s": 360.0199999999625,
+      "delivery": "not_assumed"
+    }
+  ],
+  "production_inventory": false,
+  "protected_route_available": true,
+  "receiving_environment_verified": true
+}

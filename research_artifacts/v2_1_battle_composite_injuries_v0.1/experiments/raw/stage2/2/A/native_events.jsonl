@@ -1,0 +1,1582 @@
+{"time_s": 0.02, "events": {}}
+{"time_s": 0.4000000000000001, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 0.4200000000000001, "events": {}}
+{"time_s": 1.2000000000000006, "events": {"StartOfExhale": 0.02}}
+{"time_s": 1.2200000000000006, "events": {}}
+{"time_s": 1.2400000000000007, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 1.2600000000000007, "events": {}}
+{"time_s": 2.0800000000000014, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 2.1000000000000014, "events": {}}
+{"time_s": 2.920000000000002, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 2.940000000000002, "events": {}}
+{"time_s": 3.760000000000003, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 3.780000000000003, "events": {}}
+{"time_s": 4.59999999999999, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 4.6199999999999894, "events": {}}
+{"time_s": 4.659999999999989, "events": {"StartOfInhale": 0.02}}
+{"time_s": 4.679999999999988, "events": {}}
+{"time_s": 5.439999999999972, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 5.4599999999999715, "events": {}}
+{"time_s": 6.199999999999956, "events": {"StartOfExhale": 0.02}}
+{"time_s": 6.219999999999955, "events": {}}
+{"time_s": 6.279999999999954, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 6.299999999999954, "events": {}}
+{"time_s": 7.119999999999936, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 7.139999999999936, "events": {}}
+{"time_s": 7.959999999999918, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 7.979999999999918, "events": {}}
+{"time_s": 8.799999999999901, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 8.8199999999999, "events": {}}
+{"time_s": 9.639999999999883, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 9.659999999999883, "events": {"StartOfInhale": 0.02}}
+{"time_s": 9.679999999999882, "events": {}}
+{"time_s": 10.479999999999865, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 10.499999999999865, "events": {}}
+{"time_s": 11.19999999999985, "events": {"StartOfExhale": 0.02}}
+{"time_s": 11.21999999999985, "events": {}}
+{"time_s": 11.319999999999848, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 11.339999999999847, "events": {}}
+{"time_s": 12.15999999999983, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 12.17999999999983, "events": {}}
+{"time_s": 12.999999999999812, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 13.019999999999811, "events": {}}
+{"time_s": 13.839999999999794, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 13.859999999999793, "events": {}}
+{"time_s": 14.659999999999776, "events": {"StartOfInhale": 0.02}}
+{"time_s": 14.679999999999776, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 14.699999999999775, "events": {}}
+{"time_s": 15.519999999999758, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 15.539999999999758, "events": {}}
+{"time_s": 16.199999999999743, "events": {"StartOfExhale": 0.02}}
+{"time_s": 16.219999999999743, "events": {}}
+{"time_s": 16.35999999999974, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 16.37999999999974, "events": {}}
+{"time_s": 17.199999999999722, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 17.21999999999972, "events": {}}
+{"time_s": 18.039999999999704, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 18.059999999999704, "events": {}}
+{"time_s": 18.879999999999686, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 18.899999999999686, "events": {}}
+{"time_s": 19.65999999999967, "events": {"StartOfInhale": 0.02}}
+{"time_s": 19.67999999999967, "events": {}}
+{"time_s": 19.71999999999967, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 19.739999999999668, "events": {}}
+{"time_s": 20.55999999999965, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 20.57999999999965, "events": {}}
+{"time_s": 21.199999999999637, "events": {"StartOfExhale": 0.02}}
+{"time_s": 21.219999999999636, "events": {}}
+{"time_s": 21.399999999999633, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 21.419999999999632, "events": {}}
+{"time_s": 22.239999999999615, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 22.259999999999614, "events": {}}
+{"time_s": 23.079999999999597, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 23.099999999999596, "events": {}}
+{"time_s": 23.91999999999958, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 23.93999999999958, "events": {}}
+{"time_s": 24.659999999999563, "events": {"StartOfInhale": 0.02}}
+{"time_s": 24.679999999999563, "events": {}}
+{"time_s": 24.75999999999956, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 24.77999999999956, "events": {}}
+{"time_s": 25.599999999999543, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 25.619999999999543, "events": {}}
+{"time_s": 26.19999999999953, "events": {"StartOfExhale": 0.02}}
+{"time_s": 26.21999999999953, "events": {}}
+{"time_s": 26.439999999999525, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 26.459999999999525, "events": {}}
+{"time_s": 27.279999999999507, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 27.299999999999507, "events": {}}
+{"time_s": 28.11999999999949, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 28.13999999999949, "events": {}}
+{"time_s": 28.95999999999947, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 28.97999999999947, "events": {}}
+{"time_s": 29.659999999999457, "events": {"StartOfInhale": 0.02}}
+{"time_s": 29.679999999999456, "events": {}}
+{"time_s": 29.799999999999454, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 29.819999999999453, "events": {}}
+{"time_s": 30.639999999999436, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 30.659999999999435, "events": {}}
+{"time_s": 31.199999999999424, "events": {"StartOfExhale": 0.02}}
+{"time_s": 31.219999999999423, "events": {}}
+{"time_s": 31.479999999999418, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 31.499999999999417, "events": {}}
+{"time_s": 32.31999999999945, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 32.339999999999456, "events": {}}
+{"time_s": 33.159999999999584, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 33.17999999999959, "events": {}}
+{"time_s": 33.999999999999716, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 34.01999999999972, "events": {}}
+{"time_s": 34.639999999999816, "events": {"StartOfInhale": 0.02}}
+{"time_s": 34.65999999999982, "events": {}}
+{"time_s": 34.83999999999985, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 34.85999999999985, "events": {}}
+{"time_s": 35.67999999999998, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 35.69999999999998, "events": {}}
+{"time_s": 36.18000000000006, "events": {"StartOfExhale": 0.02}}
+{"time_s": 36.20000000000006, "events": {}}
+{"time_s": 36.52000000000011, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 36.54000000000011, "events": {}}
+{"time_s": 37.36000000000024, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 37.380000000000244, "events": {}}
+{"time_s": 38.20000000000037, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 38.220000000000375, "events": {}}
+{"time_s": 39.040000000000504, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 39.06000000000051, "events": {}}
+{"time_s": 39.620000000000594, "events": {"StartOfInhale": 0.02}}
+{"time_s": 39.6400000000006, "events": {}}
+{"time_s": 39.880000000000635, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 39.90000000000064, "events": {}}
+{"time_s": 40.720000000000766, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 40.74000000000077, "events": {}}
+{"time_s": 41.160000000000835, "events": {"StartOfExhale": 0.02}}
+{"time_s": 41.18000000000084, "events": {}}
+{"time_s": 41.5600000000009, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 41.5800000000009, "events": {}}
+{"time_s": 42.40000000000103, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 42.42000000000103, "events": {}}
+{"time_s": 43.24000000000116, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 43.26000000000116, "events": {}}
+{"time_s": 44.08000000000129, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 44.100000000001295, "events": {}}
+{"time_s": 44.60000000000137, "events": {"StartOfInhale": 0.02}}
+{"time_s": 44.620000000001376, "events": {}}
+{"time_s": 44.92000000000142, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 44.940000000001426, "events": {}}
+{"time_s": 45.760000000001554, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 45.78000000000156, "events": {}}
+{"time_s": 46.14000000000161, "events": {"StartOfExhale": 0.02}}
+{"time_s": 46.16000000000162, "events": {}}
+{"time_s": 46.600000000001685, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 46.62000000000169, "events": {}}
+{"time_s": 47.44000000000182, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 47.46000000000182, "events": {}}
+{"time_s": 48.28000000000195, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 48.30000000000195, "events": {}}
+{"time_s": 49.12000000000208, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 49.14000000000208, "events": {}}
+{"time_s": 49.58000000000215, "events": {"StartOfInhale": 0.02}}
+{"time_s": 49.600000000002154, "events": {}}
+{"time_s": 49.96000000000221, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 49.980000000002214, "events": {}}
+{"time_s": 50.80000000000234, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 50.820000000002345, "events": {}}
+{"time_s": 51.12000000000239, "events": {"StartOfExhale": 0.02}}
+{"time_s": 51.140000000002395, "events": {}}
+{"time_s": 51.64000000000247, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 51.660000000002476, "events": {}}
+{"time_s": 52.480000000002605, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 52.50000000000261, "events": {}}
+{"time_s": 53.320000000002736, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 53.34000000000274, "events": {}}
+{"time_s": 54.16000000000287, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 54.18000000000287, "events": {}}
+{"time_s": 54.56000000000293, "events": {"StartOfInhale": 0.02}}
+{"time_s": 54.58000000000293, "events": {}}
+{"time_s": 55.000000000003, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 55.020000000003, "events": {}}
+{"time_s": 55.84000000000313, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 55.86000000000313, "events": {}}
+{"time_s": 56.10000000000317, "events": {"StartOfExhale": 0.02}}
+{"time_s": 56.120000000003174, "events": {}}
+{"time_s": 56.68000000000326, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 56.700000000003264, "events": {}}
+{"time_s": 57.52000000000339, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 57.540000000003396, "events": {}}
+{"time_s": 58.360000000003524, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 58.38000000000353, "events": {}}
+{"time_s": 59.200000000003655, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 59.22000000000366, "events": {}}
+{"time_s": 59.54000000000371, "events": {"StartOfInhale": 0.02}}
+{"time_s": 59.56000000000371, "events": {}}
+{"time_s": 60.040000000003786, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 60.06000000000379, "events": {}}
+{"time_s": 60.88000000000392, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 60.90000000000392, "events": {}}
+{"time_s": 61.08000000000395, "events": {"StartOfExhale": 0.02}}
+{"time_s": 61.10000000000395, "events": {}}
+{"time_s": 61.72000000000405, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 61.74000000000405, "events": {}}
+{"time_s": 62.56000000000418, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 62.58000000000418, "events": {}}
+{"time_s": 63.40000000000431, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 63.420000000004315, "events": {}}
+{"time_s": 64.24000000000436, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 64.26000000000435, "events": {}}
+{"time_s": 64.5200000000043, "events": {"StartOfInhale": 0.02}}
+{"time_s": 64.5400000000043, "events": {}}
+{"time_s": 65.08000000000419, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 65.10000000000419, "events": {}}
+{"time_s": 65.92000000000402, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 65.94000000000402, "events": {}}
+{"time_s": 66.060000000004, "events": {"StartOfExhale": 0.02}}
+{"time_s": 66.08000000000399, "events": {}}
+{"time_s": 66.76000000000386, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 66.78000000000385, "events": {}}
+{"time_s": 67.60000000000369, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 67.62000000000369, "events": {}}
+{"time_s": 68.44000000000352, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 68.46000000000352, "events": {}}
+{"time_s": 69.28000000000335, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 69.30000000000335, "events": {}}
+{"time_s": 69.50000000000331, "events": {"StartOfInhale": 0.02}}
+{"time_s": 69.52000000000331, "events": {}}
+{"time_s": 70.12000000000319, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 70.14000000000318, "events": {}}
+{"time_s": 70.96000000000302, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 70.98000000000302, "events": {}}
+{"time_s": 71.040000000003, "events": {"StartOfExhale": 0.02}}
+{"time_s": 71.060000000003, "events": {}}
+{"time_s": 71.80000000000285, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 71.82000000000285, "events": {}}
+{"time_s": 72.64000000000269, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 72.66000000000268, "events": {}}
+{"time_s": 73.48000000000252, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 73.50000000000252, "events": {}}
+{"time_s": 74.32000000000235, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 74.34000000000235, "events": {}}
+{"time_s": 74.48000000000232, "events": {"StartOfInhale": 0.02}}
+{"time_s": 74.50000000000232, "events": {}}
+{"time_s": 75.16000000000219, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 75.18000000000218, "events": {}}
+{"time_s": 76.00000000000202, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 76.02000000000201, "events": {"StartOfExhale": 0.02}}
+{"time_s": 76.04000000000201, "events": {}}
+{"time_s": 76.84000000000185, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 76.86000000000185, "events": {}}
+{"time_s": 77.68000000000168, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 77.70000000000168, "events": {}}
+{"time_s": 78.52000000000152, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 78.54000000000151, "events": {}}
+{"time_s": 79.36000000000135, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 79.38000000000135, "events": {}}
+{"time_s": 79.46000000000133, "events": {"StartOfInhale": 0.02}}
+{"time_s": 79.48000000000133, "events": {}}
+{"time_s": 80.20000000000118, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 80.22000000000118, "events": {}}
+{"time_s": 81.00000000000102, "events": {"StartOfExhale": 0.02}}
+{"time_s": 81.02000000000102, "events": {}}
+{"time_s": 81.04000000000102, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 81.06000000000101, "events": {}}
+{"time_s": 81.88000000000085, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 81.90000000000084, "events": {}}
+{"time_s": 82.72000000000068, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 82.74000000000068, "events": {}}
+{"time_s": 83.56000000000051, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 83.58000000000051, "events": {}}
+{"time_s": 84.40000000000035, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 84.42000000000034, "events": {}}
+{"time_s": 84.44000000000034, "events": {"StartOfInhale": 0.02}}
+{"time_s": 84.46000000000033, "events": {}}
+{"time_s": 85.22000000000018, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 85.24000000000018, "events": {}}
+{"time_s": 85.98000000000003, "events": {"StartOfExhale": 0.02}}
+{"time_s": 86.00000000000003, "events": {}}
+{"time_s": 86.04000000000002, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 86.06000000000002, "events": {}}
+{"time_s": 86.85999999999986, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 86.87999999999985, "events": {}}
+{"time_s": 87.6799999999997, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 87.69999999999969, "events": {}}
+{"time_s": 88.49999999999953, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 88.51999999999953, "events": {}}
+{"time_s": 89.33999999999936, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 89.35999999999936, "events": {}}
+{"time_s": 89.39999999999935, "events": {"StartOfInhale": 0.02}}
+{"time_s": 89.41999999999935, "events": {}}
+{"time_s": 90.1799999999992, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 90.19999999999919, "events": {}}
+{"time_s": 90.91999999999905, "events": {"StartOfExhale": 0.02}}
+{"time_s": 90.93999999999905, "events": {}}
+{"time_s": 91.01999999999903, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 91.03999999999903, "events": {}}
+{"time_s": 91.85999999999886, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 91.87999999999886, "events": {}}
+{"time_s": 92.6999999999987, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 92.71999999999869, "events": {}}
+{"time_s": 93.53999999999853, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 93.55999999999852, "events": {}}
+{"time_s": 94.29999999999838, "events": {"StartOfInhale": 0.02}}
+{"time_s": 94.31999999999837, "events": {}}
+{"time_s": 94.35999999999837, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 94.37999999999836, "events": {}}
+{"time_s": 95.1799999999982, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 95.1999999999982, "events": {}}
+{"time_s": 95.81999999999807, "events": {"StartOfExhale": 0.02}}
+{"time_s": 95.83999999999807, "events": {}}
+{"time_s": 95.99999999999804, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 96.01999999999803, "events": {}}
+{"time_s": 96.81999999999788, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 96.83999999999787, "events": {}}
+{"time_s": 97.63999999999771, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 97.65999999999771, "events": {}}
+{"time_s": 98.45999999999755, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 98.47999999999755, "events": {}}
+{"time_s": 99.13999999999741, "events": {"StartOfInhale": 0.02}}
+{"time_s": 99.15999999999741, "events": {}}
+{"time_s": 99.27999999999739, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 99.29999999999738, "events": {}}
+{"time_s": 100.09999999999722, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 100.11999999999722, "events": {}}
+{"time_s": 100.63999999999712, "events": {"StartOfExhale": 0.02}}
+{"time_s": 100.65999999999711, "events": {}}
+{"time_s": 100.91999999999706, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 100.93999999999706, "events": {}}
+{"time_s": 101.7399999999969, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 101.7599999999969, "events": {}}
+{"time_s": 102.55999999999673, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 102.57999999999673, "events": {}}
+{"time_s": 103.37999999999657, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 103.39999999999657, "events": {}}
+{"time_s": 103.91999999999646, "events": {"StartOfInhale": 0.02}}
+{"time_s": 103.93999999999646, "events": {}}
+{"time_s": 104.19999999999641, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 104.2199999999964, "events": {}}
+{"time_s": 105.01999999999624, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 105.03999999999624, "events": {}}
+{"time_s": 105.41999999999616, "events": {"StartOfExhale": 0.02}}
+{"time_s": 105.43999999999616, "events": {}}
+{"time_s": 105.83999999999608, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 105.85999999999608, "events": {}}
+{"time_s": 106.65999999999592, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 106.67999999999591, "events": {}}
+{"time_s": 107.47999999999575, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 107.49999999999575, "events": {}}
+{"time_s": 108.29999999999559, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 108.31999999999559, "events": {}}
+{"time_s": 108.63999999999552, "events": {"StartOfInhale": 0.02}}
+{"time_s": 108.65999999999552, "events": {}}
+{"time_s": 109.11999999999543, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 109.13999999999542, "events": {}}
+{"time_s": 109.93999999999527, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 109.95999999999526, "events": {}}
+{"time_s": 110.11999999999523, "events": {"StartOfExhale": 0.02}}
+{"time_s": 110.13999999999523, "events": {}}
+{"time_s": 110.7599999999951, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 110.7799999999951, "events": {}}
+{"time_s": 111.57999999999494, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 111.59999999999494, "events": {}}
+{"time_s": 112.39999999999478, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 112.41999999999477, "events": {}}
+{"time_s": 113.21999999999461, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 113.23999999999461, "events": {}}
+{"time_s": 113.2799999999946, "events": {"StartOfInhale": 0.02}}
+{"time_s": 113.2999999999946, "events": {}}
+{"time_s": 114.03999999999445, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 114.05999999999445, "events": {}}
+{"time_s": 114.7599999999943, "events": {"StartOfExhale": 0.02}}
+{"time_s": 114.7799999999943, "events": {}}
+{"time_s": 114.85999999999429, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 114.87999999999428, "events": {}}
+{"time_s": 115.67999999999412, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 115.69999999999412, "events": {}}
+{"time_s": 116.49999999999396, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 116.51999999999396, "events": {}}
+{"time_s": 117.3199999999938, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 117.3399999999938, "events": {}}
+{"time_s": 117.85999999999369, "events": {"StartOfInhale": 0.02}}
+{"time_s": 117.87999999999369, "events": {}}
+{"time_s": 118.13999999999363, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 118.15999999999363, "events": {}}
+{"time_s": 118.95999999999347, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 118.97999999999347, "events": {}}
+{"time_s": 119.3199999999934, "events": {"StartOfExhale": 0.02}}
+{"time_s": 119.3399999999934, "events": {}}
+{"time_s": 119.77999999999331, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 119.7999999999933, "events": {}}
+{"time_s": 120.59999999999314, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 120.61999999999314, "events": {}}
+{"time_s": 121.41999999999298, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 121.43999999999298, "events": {}}
+{"time_s": 122.23999999999282, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 122.25999999999281, "events": {}}
+{"time_s": 122.37999999999279, "events": {"StartOfInhale": 0.02}}
+{"time_s": 122.39999999999279, "events": {}}
+{"time_s": 123.05999999999266, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 123.07999999999265, "events": {}}
+{"time_s": 123.8399999999925, "events": {"StartOfExhale": 0.02}}
+{"time_s": 123.8599999999925, "events": {}}
+{"time_s": 123.87999999999249, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 123.89999999999249, "events": {}}
+{"time_s": 124.69999999999233, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 124.71999999999233, "events": {}}
+{"time_s": 125.51999999999217, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 125.53999999999216, "events": {}}
+{"time_s": 126.339999999992, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 126.359999999992, "events": {}}
+{"time_s": 126.8599999999919, "events": {"StartOfInhale": 0.02}}
+{"time_s": 126.8799999999919, "events": {}}
+{"time_s": 127.15999999999184, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 127.17999999999184, "events": {}}
+{"time_s": 127.97999999999168, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 127.99999999999167, "events": {}}
+{"time_s": 128.29999999999183, "events": {"StartOfExhale": 0.02}}
+{"time_s": 128.31999999999184, "events": {}}
+{"time_s": 128.79999999999208, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 128.8199999999921, "events": {}}
+{"time_s": 129.6199999999925, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 129.6399999999925, "events": {}}
+{"time_s": 130.43999999999292, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 130.45999999999293, "events": {}}
+{"time_s": 131.25999999999334, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 131.27999999999335, "events": {"StartOfInhale": 0.02}}
+{"time_s": 131.29999999999336, "events": {}}
+{"time_s": 132.07999999999376, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 132.09999999999377, "events": {}}
+{"time_s": 132.7199999999941, "events": {"StartOfExhale": 0.02}}
+{"time_s": 132.7399999999941, "events": {}}
+{"time_s": 132.89999999999418, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 132.9199999999942, "events": {}}
+{"time_s": 133.6999999999946, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 133.7199999999946, "events": {}}
+{"time_s": 134.499999999995, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 134.519999999995, "events": {}}
+{"time_s": 135.2999999999954, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 135.31999999999542, "events": {}}
+{"time_s": 135.6599999999956, "events": {"StartOfInhale": 0.02}}
+{"time_s": 135.6799999999956, "events": {}}
+{"time_s": 136.09999999999582, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 136.11999999999583, "events": {}}
+{"time_s": 136.89999999999623, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 136.91999999999624, "events": {}}
+{"time_s": 137.07999999999632, "events": {"StartOfExhale": 0.02}}
+{"time_s": 137.09999999999633, "events": {}}
+{"time_s": 137.69999999999663, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 137.71999999999665, "events": {}}
+{"time_s": 138.49999999999704, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 138.51999999999705, "events": {}}
+{"time_s": 139.29999999999745, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 139.31999999999746, "events": {}}
+{"time_s": 139.9799999999978, "events": {"StartOfInhale": 0.02}}
+{"time_s": 139.9999999999978, "events": {}}
+{"time_s": 140.09999999999786, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 140.11999999999787, "events": {}}
+{"time_s": 140.91999999999828, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 140.9399999999983, "events": {}}
+{"time_s": 141.39999999999853, "events": {"StartOfExhale": 0.02}}
+{"time_s": 141.41999999999854, "events": {}}
+{"time_s": 141.7399999999987, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 141.7599999999987, "events": {}}
+{"time_s": 142.55999999999912, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 142.57999999999913, "events": {}}
+{"time_s": 143.35999999999953, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 143.37999999999954, "events": {}}
+{"time_s": 144.15999999999994, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 144.17999999999995, "events": {}}
+{"time_s": 144.26, "events": {"StartOfInhale": 0.02}}
+{"time_s": 144.28, "events": {}}
+{"time_s": 144.96000000000035, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 144.98000000000036, "events": {}}
+{"time_s": 145.68000000000072, "events": {"StartOfExhale": 0.02}}
+{"time_s": 145.70000000000073, "events": {}}
+{"time_s": 145.76000000000076, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 145.78000000000077, "events": {}}
+{"time_s": 146.56000000000117, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 146.58000000000118, "events": {}}
+{"time_s": 147.36000000000158, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 147.3800000000016, "events": {}}
+{"time_s": 148.160000000002, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 148.180000000002, "events": {}}
+{"time_s": 148.50000000000216, "events": {"StartOfInhale": 0.02}}
+{"time_s": 148.52000000000217, "events": {}}
+{"time_s": 148.9600000000024, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 148.9800000000024, "events": {}}
+{"time_s": 149.7600000000028, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 149.78000000000281, "events": {}}
+{"time_s": 149.90000000000288, "events": {"StartOfExhale": 0.02}}
+{"time_s": 149.9200000000029, "events": {}}
+{"time_s": 150.5600000000032, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 150.58000000000322, "events": {}}
+{"time_s": 151.36000000000362, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 151.38000000000363, "events": {}}
+{"time_s": 152.16000000000403, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 152.18000000000404, "events": {}}
+{"time_s": 152.7000000000043, "events": {"StartOfInhale": 0.02}}
+{"time_s": 152.72000000000432, "events": {}}
+{"time_s": 152.96000000000444, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 152.98000000000445, "events": {}}
+{"time_s": 153.76000000000485, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 153.78000000000486, "events": {}}
+{"time_s": 154.10000000000502, "events": {"StartOfExhale": 0.02}}
+{"time_s": 154.12000000000504, "events": {}}
+{"time_s": 154.56000000000526, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 154.58000000000527, "events": {}}
+{"time_s": 155.36000000000567, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 155.38000000000568, "events": {}}
+{"time_s": 156.16000000000608, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 156.1800000000061, "events": {}}
+{"time_s": 156.86000000000644, "events": {"StartOfInhale": 0.02}}
+{"time_s": 156.88000000000645, "events": {}}
+{"time_s": 156.9600000000065, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 156.9800000000065, "events": {}}
+{"time_s": 157.7600000000069, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 157.7800000000069, "events": {}}
+{"time_s": 158.26000000000715, "events": {"StartOfExhale": 0.02}}
+{"time_s": 158.28000000000716, "events": {}}
+{"time_s": 158.5600000000073, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 158.58000000000732, "events": {}}
+{"time_s": 159.36000000000772, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 159.38000000000773, "events": {}}
+{"time_s": 160.16000000000813, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 160.18000000000814, "events": {}}
+{"time_s": 160.96000000000853, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 160.98000000000854, "events": {}}
+{"time_s": 161.00000000000855, "events": {"StartOfInhale": 0.02}}
+{"time_s": 161.02000000000857, "events": {}}
+{"time_s": 161.76000000000894, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 161.78000000000895, "events": {}}
+{"time_s": 162.40000000000927, "events": {"StartOfExhale": 0.02}}
+{"time_s": 162.42000000000928, "events": {}}
+{"time_s": 162.56000000000935, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 162.58000000000936, "events": {}}
+{"time_s": 163.36000000000976, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 163.38000000000977, "events": {}}
+{"time_s": 164.16000000001017, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 164.18000000001018, "events": {}}
+{"time_s": 164.96000000001058, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 164.9800000000106, "events": {}}
+{"time_s": 165.10000000001065, "events": {"StartOfInhale": 0.02}}
+{"time_s": 165.12000000001066, "events": {}}
+{"time_s": 165.760000000011, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 165.780000000011, "events": {}}
+{"time_s": 166.48000000001136, "events": {"StartOfExhale": 0.02}}
+{"time_s": 166.50000000001137, "events": {}}
+{"time_s": 166.5600000000114, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 166.5800000000114, "events": {}}
+{"time_s": 167.3600000000118, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 167.38000000001182, "events": {}}
+{"time_s": 168.16000000001222, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 168.18000000001223, "events": {}}
+{"time_s": 168.96000000001263, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 168.98000000001264, "events": {}}
+{"time_s": 169.18000000001274, "events": {"StartOfInhale": 0.02}}
+{"time_s": 169.20000000001275, "events": {}}
+{"time_s": 169.76000000001304, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 169.78000000001305, "events": {}}
+{"time_s": 170.56000000001345, "events": {"StartOfCardiacCycle": 0.02, "StartOfExhale": 0.02}}
+{"time_s": 170.58000000001346, "events": {}}
+{"time_s": 171.36000000001386, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 171.38000000001387, "events": {}}
+{"time_s": 172.16000000001426, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 172.18000000001427, "events": {}}
+{"time_s": 172.96000000001467, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 172.98000000001468, "events": {}}
+{"time_s": 173.24000000001482, "events": {"StartOfInhale": 0.02}}
+{"time_s": 173.26000000001483, "events": {}}
+{"time_s": 173.76000000001508, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 173.7800000000151, "events": {}}
+{"time_s": 174.5600000000155, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 174.5800000000155, "events": {}}
+{"time_s": 174.62000000001552, "events": {"StartOfExhale": 0.02}}
+{"time_s": 174.64000000001553, "events": {}}
+{"time_s": 175.3600000000159, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 175.3800000000159, "events": {}}
+{"time_s": 176.1600000000163, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 176.18000000001632, "events": {}}
+{"time_s": 176.96000000001672, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 176.98000000001673, "events": {}}
+{"time_s": 177.28000000001688, "events": {"StartOfInhale": 0.02}}
+{"time_s": 177.3000000000169, "events": {}}
+{"time_s": 177.76000000001713, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 177.78000000001714, "events": {}}
+{"time_s": 178.56000000001754, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 178.58000000001755, "events": {}}
+{"time_s": 178.6600000000176, "events": {"StartOfExhale": 0.02}}
+{"time_s": 178.6800000000176, "events": {}}
+{"time_s": 179.36000000001795, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 179.38000000001796, "events": {}}
+{"time_s": 180.16000000001836, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 180.18000000001837, "events": {}}
+{"time_s": 180.96000000001877, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 180.98000000001878, "events": {}}
+{"time_s": 181.30000000001894, "events": {"StartOfInhale": 0.02}}
+{"time_s": 181.32000000001895, "events": {}}
+{"time_s": 181.74000000001917, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 181.76000000001918, "events": {}}
+{"time_s": 182.52000000001956, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 182.54000000001957, "events": {}}
+{"time_s": 182.68000000001965, "events": {"StartOfExhale": 0.02}}
+{"time_s": 182.70000000001966, "events": {}}
+{"time_s": 183.30000000001996, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 183.32000000001997, "events": {}}
+{"time_s": 184.08000000002036, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 184.10000000002037, "events": {}}
+{"time_s": 184.86000000002076, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 184.88000000002077, "events": {}}
+{"time_s": 185.300000000021, "events": {"StartOfInhale": 0.02}}
+{"time_s": 185.320000000021, "events": {}}
+{"time_s": 185.64000000002116, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 185.66000000002117, "events": {}}
+{"time_s": 186.44000000002157, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 186.46000000002158, "events": {}}
+{"time_s": 186.6800000000217, "events": {"StartOfExhale": 0.02}}
+{"time_s": 186.7000000000217, "events": {}}
+{"time_s": 187.24000000002198, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 187.260000000022, "events": {}}
+{"time_s": 188.0400000000224, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 188.0600000000224, "events": {}}
+{"time_s": 188.8400000000228, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 188.8600000000228, "events": {}}
+{"time_s": 189.28000000002302, "events": {"StartOfInhale": 0.02}}
+{"time_s": 189.30000000002303, "events": {}}
+{"time_s": 189.6400000000232, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 189.66000000002322, "events": {}}
+{"time_s": 190.44000000002362, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 190.46000000002363, "events": {}}
+{"time_s": 190.64000000002372, "events": {"StartOfExhale": 0.02}}
+{"time_s": 190.66000000002373, "events": {}}
+{"time_s": 191.22000000002402, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 191.24000000002403, "events": {}}
+{"time_s": 192.00000000002441, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 192.02000000002442, "events": {}}
+{"time_s": 192.7800000000248, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 192.80000000002482, "events": {}}
+{"time_s": 193.24000000002505, "events": {"StartOfInhale": 0.02}}
+{"time_s": 193.26000000002506, "events": {}}
+{"time_s": 193.5600000000252, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 193.58000000002522, "events": {}}
+{"time_s": 194.3400000000256, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 194.36000000002562, "events": {}}
+{"time_s": 194.60000000002574, "events": {"StartOfExhale": 0.02}}
+{"time_s": 194.62000000002575, "events": {}}
+{"time_s": 195.120000000026, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 195.14000000002602, "events": {}}
+{"time_s": 195.92000000002642, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 195.94000000002643, "events": {}}
+{"time_s": 196.72000000002683, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 196.74000000002684, "events": {}}
+{"time_s": 197.18000000002706, "events": {"StartOfInhale": 0.02}}
+{"time_s": 197.20000000002707, "events": {}}
+{"time_s": 197.52000000002724, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 197.54000000002725, "events": {}}
+{"time_s": 198.32000000002765, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 198.34000000002766, "events": {}}
+{"time_s": 198.54000000002776, "events": {"StartOfExhale": 0.02}}
+{"time_s": 198.56000000002777, "events": {}}
+{"time_s": 199.12000000002806, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 199.14000000002807, "events": {}}
+{"time_s": 199.92000000002847, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 199.94000000002848, "events": {}}
+{"time_s": 200.72000000002888, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 200.74000000002889, "events": {}}
+{"time_s": 201.12000000002908, "events": {"StartOfInhale": 0.02}}
+{"time_s": 201.1400000000291, "events": {}}
+{"time_s": 201.52000000002928, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 201.5400000000293, "events": {}}
+{"time_s": 202.3200000000297, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 202.3400000000297, "events": {}}
+{"time_s": 202.48000000002978, "events": {"StartOfExhale": 0.02}}
+{"time_s": 202.5000000000298, "events": {}}
+{"time_s": 203.1200000000301, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 203.1400000000301, "events": {}}
+{"time_s": 203.9200000000305, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 203.94000000003052, "events": {}}
+{"time_s": 204.72000000003092, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 204.74000000003093, "events": {}}
+{"time_s": 205.04000000003109, "events": {"StartOfInhale": 0.02}}
+{"time_s": 205.0600000000311, "events": {}}
+{"time_s": 205.52000000003133, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 205.54000000003134, "events": {}}
+{"time_s": 206.32000000003174, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 206.34000000003175, "events": {}}
+{"time_s": 206.40000000003178, "events": {"StartOfExhale": 0.02}}
+{"time_s": 206.4200000000318, "events": {}}
+{"time_s": 207.12000000003215, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 207.14000000003216, "events": {}}
+{"time_s": 207.92000000003256, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 207.94000000003257, "events": {}}
+{"time_s": 208.72000000003297, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 208.74000000003298, "events": {}}
+{"time_s": 208.9600000000331, "events": {"StartOfInhale": 0.02}}
+{"time_s": 208.9800000000331, "events": {}}
+{"time_s": 209.52000000003338, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 209.5400000000334, "events": {}}
+{"time_s": 210.3200000000338, "events": {"StartOfCardiacCycle": 0.02, "StartOfExhale": 0.02}}
+{"time_s": 210.3400000000338, "events": {}}
+{"time_s": 211.1200000000342, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 211.1400000000342, "events": {}}
+{"time_s": 211.9200000000346, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 211.94000000003462, "events": {}}
+{"time_s": 212.72000000003501, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 212.74000000003502, "events": {}}
+{"time_s": 212.8600000000351, "events": {"StartOfInhale": 0.02}}
+{"time_s": 212.8800000000351, "events": {}}
+{"time_s": 213.52000000003542, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 213.54000000003543, "events": {}}
+{"time_s": 214.22000000003578, "events": {"StartOfExhale": 0.02}}
+{"time_s": 214.2400000000358, "events": {}}
+{"time_s": 214.32000000003583, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 214.34000000003584, "events": {}}
+{"time_s": 215.12000000003624, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 215.14000000003625, "events": {}}
+{"time_s": 215.92000000003665, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 215.94000000003666, "events": {}}
+{"time_s": 216.72000000003706, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 216.74000000003707, "events": {}}
+{"time_s": 216.76000000003708, "events": {"StartOfInhale": 0.02}}
+{"time_s": 216.7800000000371, "events": {}}
+{"time_s": 217.52000000003747, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 217.54000000003748, "events": {}}
+{"time_s": 218.12000000003778, "events": {"StartOfExhale": 0.02}}
+{"time_s": 218.1400000000378, "events": {}}
+{"time_s": 218.32000000003788, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 218.3400000000379, "events": {}}
+{"time_s": 219.1200000000383, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 219.1400000000383, "events": {}}
+{"time_s": 219.9200000000387, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 219.9400000000387, "events": {}}
+{"time_s": 220.64000000003907, "events": {"StartOfInhale": 0.02}}
+{"time_s": 220.66000000003908, "events": {}}
+{"time_s": 220.7200000000391, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 220.74000000003912, "events": {}}
+{"time_s": 221.52000000003952, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 221.54000000003953, "events": {}}
+{"time_s": 222.00000000003976, "events": {"StartOfExhale": 0.02}}
+{"time_s": 222.02000000003977, "events": {}}
+{"time_s": 222.32000000003993, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 222.34000000003994, "events": {}}
+{"time_s": 223.12000000004033, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 223.14000000004035, "events": {}}
+{"time_s": 223.92000000004074, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 223.94000000004075, "events": {}}
+{"time_s": 224.52000000004105, "events": {"StartOfInhale": 0.02}}
+{"time_s": 224.54000000004106, "events": {}}
+{"time_s": 224.72000000004115, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 224.74000000004116, "events": {}}
+{"time_s": 225.52000000004156, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 225.54000000004157, "events": {}}
+{"time_s": 225.88000000004175, "events": {"StartOfExhale": 0.02}}
+{"time_s": 225.90000000004176, "events": {}}
+{"time_s": 226.32000000004197, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 226.34000000004198, "events": {}}
+{"time_s": 227.12000000004238, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 227.1400000000424, "events": {}}
+{"time_s": 227.9200000000428, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 227.9400000000428, "events": {}}
+{"time_s": 228.40000000004304, "events": {"StartOfInhale": 0.02}}
+{"time_s": 228.42000000004305, "events": {}}
+{"time_s": 228.7200000000432, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 228.7400000000432, "events": {}}
+{"time_s": 229.5200000000436, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 229.54000000004362, "events": {}}
+{"time_s": 229.76000000004373, "events": {"StartOfExhale": 0.02}}
+{"time_s": 229.78000000004374, "events": {}}
+{"time_s": 230.32000000004402, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 230.34000000004403, "events": {}}
+{"time_s": 231.12000000004443, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 231.14000000004444, "events": {}}
+{"time_s": 231.92000000004484, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 231.94000000004485, "events": {}}
+{"time_s": 232.28000000004502, "events": {"StartOfInhale": 0.02}}
+{"time_s": 232.30000000004503, "events": {}}
+{"time_s": 232.74000000004526, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 232.76000000004527, "events": {}}
+{"time_s": 233.56000000004568, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 233.5800000000457, "events": {}}
+{"time_s": 233.64000000004572, "events": {"StartOfExhale": 0.02}}
+{"time_s": 233.66000000004573, "events": {}}
+{"time_s": 234.3800000000461, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 234.4000000000461, "events": {}}
+{"time_s": 235.20000000004651, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 235.22000000004653, "events": {}}
+{"time_s": 236.02000000004693, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 236.04000000004694, "events": {}}
+{"time_s": 236.140000000047, "events": {"StartOfInhale": 0.02}}
+{"time_s": 236.160000000047, "events": {}}
+{"time_s": 236.84000000004735, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 236.86000000004736, "events": {}}
+{"time_s": 237.5000000000477, "events": {"StartOfExhale": 0.02}}
+{"time_s": 237.5200000000477, "events": {}}
+{"time_s": 237.66000000004777, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 237.68000000004778, "events": {}}
+{"time_s": 238.4800000000482, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 238.5000000000482, "events": {}}
+{"time_s": 239.3000000000486, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 239.32000000004862, "events": {}}
+{"time_s": 240.00000000004897, "events": {"StartOfInhale": 0.02}}
+{"time_s": 240.02000000004898, "events": {}}
+{"time_s": 240.12000000004903, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 240.14000000004904, "events": {}}
+{"time_s": 240.94000000004945, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 240.96000000004946, "events": {}}
+{"time_s": 241.36000000004967, "events": {"StartOfExhale": 0.02}}
+{"time_s": 241.38000000004968, "events": {}}
+{"time_s": 241.76000000004987, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 241.78000000004988, "events": {}}
+{"time_s": 242.5800000000503, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 242.6000000000503, "events": {}}
+{"time_s": 243.4000000000507, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 243.42000000005072, "events": {}}
+{"time_s": 243.86000000005095, "events": {"StartOfInhale": 0.02}}
+{"time_s": 243.88000000005096, "events": {}}
+{"time_s": 244.22000000005113, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 244.24000000005114, "events": {}}
+{"time_s": 245.04000000005155, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 245.06000000005156, "events": {}}
+{"time_s": 245.22000000005164, "events": {"StartOfExhale": 0.02}}
+{"time_s": 245.24000000005165, "events": {}}
+{"time_s": 245.86000000005197, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 245.88000000005198, "events": {}}
+{"time_s": 246.6800000000524, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 246.7000000000524, "events": {}}
+{"time_s": 247.5000000000528, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 247.52000000005282, "events": {}}
+{"time_s": 247.72000000005292, "events": {"StartOfInhale": 0.02}}
+{"time_s": 247.74000000005293, "events": {}}
+{"time_s": 248.32000000005323, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 248.34000000005324, "events": {}}
+{"time_s": 249.08000000005362, "events": {"StartOfExhale": 0.02}}
+{"time_s": 249.10000000005363, "events": {}}
+{"time_s": 249.14000000005365, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 249.16000000005366, "events": {}}
+{"time_s": 249.96000000005407, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 249.98000000005408, "events": {}}
+{"time_s": 250.78000000005449, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 250.8000000000545, "events": {}}
+{"time_s": 251.5800000000549, "events": {"StartOfInhale": 0.02}}
+{"time_s": 251.6000000000549, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 251.62000000005492, "events": {}}
+{"time_s": 252.42000000005532, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 252.44000000005533, "events": {}}
+{"time_s": 252.9400000000556, "events": {"StartOfExhale": 0.02}}
+{"time_s": 252.9600000000556, "events": {}}
+{"time_s": 253.24000000005574, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 253.26000000005575, "events": {}}
+{"time_s": 254.06000000005616, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 254.08000000005617, "events": {}}
+{"time_s": 254.88000000005658, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 254.9000000000566, "events": {}}
+{"time_s": 255.44000000005687, "events": {"StartOfInhale": 0.02}}
+{"time_s": 255.46000000005688, "events": {}}
+{"time_s": 255.700000000057, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 255.720000000057, "events": {}}
+{"time_s": 256.52000000005665, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 256.54000000005664, "events": {}}
+{"time_s": 256.7800000000564, "events": {"StartOfExhale": 0.02}}
+{"time_s": 256.8000000000564, "events": {}}
+{"time_s": 257.3400000000559, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 257.3600000000559, "events": {}}
+{"time_s": 258.16000000005516, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 258.18000000005514, "events": {}}
+{"time_s": 258.9800000000544, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 259.0000000000544, "events": {}}
+{"time_s": 259.28000000005414, "events": {"StartOfInhale": 0.02}}
+{"time_s": 259.3000000000541, "events": {}}
+{"time_s": 259.80000000005367, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 259.82000000005365, "events": {}}
+{"time_s": 260.6200000000529, "events": {"StartOfCardiacCycle": 0.02, "StartOfExhale": 0.02}}
+{"time_s": 260.6400000000529, "events": {}}
+{"time_s": 261.4400000000522, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 261.46000000005216, "events": {}}
+{"time_s": 262.26000000005143, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 262.2800000000514, "events": {}}
+{"time_s": 263.0800000000507, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 263.10000000005067, "events": {}}
+{"time_s": 263.12000000005065, "events": {"StartOfInhale": 0.02}}
+{"time_s": 263.14000000005063, "events": {}}
+{"time_s": 263.90000000004994, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 263.9200000000499, "events": {}}
+{"time_s": 264.46000000004943, "events": {"StartOfExhale": 0.02}}
+{"time_s": 264.4800000000494, "events": {}}
+{"time_s": 264.7200000000492, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 264.7400000000492, "events": {}}
+{"time_s": 265.54000000004845, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 265.56000000004843, "events": {}}
+{"time_s": 266.3600000000477, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 266.3800000000477, "events": {}}
+{"time_s": 266.96000000004716, "events": {"StartOfInhale": 0.02}}
+{"time_s": 266.98000000004714, "events": {}}
+{"time_s": 267.18000000004696, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 267.20000000004694, "events": {}}
+{"time_s": 268.0000000000462, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 268.0200000000462, "events": {}}
+{"time_s": 268.30000000004594, "events": {"StartOfExhale": 0.02}}
+{"time_s": 268.3200000000459, "events": {}}
+{"time_s": 268.82000000004547, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 268.84000000004545, "events": {}}
+{"time_s": 269.6600000000447, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 269.6800000000447, "events": {}}
+{"time_s": 270.50000000004394, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 270.5200000000439, "events": {}}
+{"time_s": 270.80000000004367, "events": {"StartOfInhale": 0.02}}
+{"time_s": 270.82000000004365, "events": {}}
+{"time_s": 271.3400000000432, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 271.36000000004316, "events": {}}
+{"time_s": 272.14000000004245, "events": {"StartOfExhale": 0.02}}
+{"time_s": 272.16000000004243, "events": {}}
+{"time_s": 272.1800000000424, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 272.2000000000424, "events": {}}
+{"time_s": 273.02000000004165, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 273.04000000004163, "events": {}}
+{"time_s": 273.8600000000409, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 273.88000000004087, "events": {}}
+{"time_s": 274.6400000000402, "events": {"StartOfInhale": 0.02}}
+{"time_s": 274.66000000004016, "events": {}}
+{"time_s": 274.7000000000401, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 274.7200000000401, "events": {}}
+{"time_s": 275.54000000003936, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 275.56000000003934, "events": {}}
+{"time_s": 275.98000000003896, "events": {"StartOfExhale": 0.02}}
+{"time_s": 276.00000000003894, "events": {}}
+{"time_s": 276.3800000000386, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 276.4000000000386, "events": {}}
+{"time_s": 277.2200000000378, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 277.2400000000378, "events": {}}
+{"time_s": 278.06000000003706, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 278.08000000003705, "events": {}}
+{"time_s": 278.4800000000367, "events": {"StartOfInhale": 0.02}}
+{"time_s": 278.50000000003666, "events": {}}
+{"time_s": 278.9000000000363, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 278.9200000000363, "events": {}}
+{"time_s": 279.74000000003554, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 279.7600000000355, "events": {}}
+{"time_s": 279.82000000003546, "events": {"StartOfExhale": 0.02}}
+{"time_s": 279.84000000003545, "events": {}}
+{"time_s": 280.5800000000348, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 280.60000000003475, "events": {}}
+{"time_s": 281.420000000034, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 281.440000000034, "events": {}}
+{"time_s": 282.26000000003324, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 282.2800000000332, "events": {}}
+{"time_s": 282.3200000000332, "events": {"StartOfInhale": 0.02}}
+{"time_s": 282.34000000003317, "events": {}}
+{"time_s": 283.1000000000325, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 283.12000000003246, "events": {}}
+{"time_s": 283.66000000003197, "events": {"StartOfExhale": 0.02}}
+{"time_s": 283.68000000003195, "events": {}}
+{"time_s": 283.9400000000317, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 283.9600000000317, "events": {}}
+{"time_s": 284.78000000003095, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 284.80000000003093, "events": {}}
+{"time_s": 285.6200000000302, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 285.64000000003017, "events": {}}
+{"time_s": 286.1600000000297, "events": {"StartOfInhale": 0.02}}
+{"time_s": 286.1800000000297, "events": {}}
+{"time_s": 286.4600000000294, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 286.4800000000294, "events": {}}
+{"time_s": 287.30000000002866, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 287.32000000002864, "events": {}}
+{"time_s": 287.5000000000285, "events": {"StartOfExhale": 0.02}}
+{"time_s": 287.52000000002846, "events": {}}
+{"time_s": 288.1400000000279, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 288.1600000000279, "events": {}}
+{"time_s": 288.98000000002713, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 289.0000000000271, "events": {}}
+{"time_s": 289.82000000002637, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 289.84000000002635, "events": {}}
+{"time_s": 290.0000000000262, "events": {"StartOfInhale": 0.02}}
+{"time_s": 290.0200000000262, "events": {}}
+{"time_s": 290.6600000000256, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 290.6800000000256, "events": {}}
+{"time_s": 291.340000000025, "events": {"StartOfExhale": 0.02}}
+{"time_s": 291.36000000002497, "events": {}}
+{"time_s": 291.50000000002484, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 291.5200000000248, "events": {}}
+{"time_s": 292.3400000000241, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 292.36000000002406, "events": {}}
+{"time_s": 293.1800000000233, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 293.2000000000233, "events": {}}
+{"time_s": 293.8400000000227, "events": {"StartOfInhale": 0.02}}
+{"time_s": 293.8600000000227, "events": {}}
+{"time_s": 294.02000000002255, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 294.04000000002253, "events": {}}
+{"time_s": 294.8600000000218, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 294.88000000002177, "events": {}}
+{"time_s": 295.1800000000215, "events": {"StartOfExhale": 0.02}}
+{"time_s": 295.2000000000215, "events": {}}
+{"time_s": 295.700000000021, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 295.720000000021, "events": {}}
+{"time_s": 296.54000000002026, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 296.56000000002024, "events": {}}
+{"time_s": 297.3800000000195, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 297.4000000000195, "events": {}}
+{"time_s": 297.6800000000192, "events": {"StartOfInhale": 0.02}}
+{"time_s": 297.7000000000192, "events": {}}
+{"time_s": 298.22000000001873, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 298.2400000000187, "events": {}}
+{"time_s": 299.020000000018, "events": {"StartOfExhale": 0.02}}
+{"time_s": 299.040000000018, "events": {}}
+{"time_s": 299.06000000001796, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 299.08000000001795, "events": {}}
+{"time_s": 299.9000000000172, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 299.9200000000172, "events": {}}
+{"time_s": 300.74000000001644, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 300.7600000000164, "events": {}}
+{"time_s": 301.5200000000157, "events": {"StartOfInhale": 0.02}}
+{"time_s": 301.5400000000157, "events": {}}
+{"time_s": 301.5800000000157, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 301.60000000001565, "events": {}}
+{"time_s": 302.4200000000149, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 302.4400000000149, "events": {}}
+{"time_s": 302.8600000000145, "events": {"StartOfExhale": 0.02}}
+{"time_s": 302.8800000000145, "events": {}}
+{"time_s": 303.26000000001414, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 303.2800000000141, "events": {}}
+{"time_s": 304.1000000000134, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 304.12000000001336, "events": {}}
+{"time_s": 304.9400000000126, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 304.9600000000126, "events": {}}
+{"time_s": 305.36000000001223, "events": {"StartOfInhale": 0.02}}
+{"time_s": 305.3800000000122, "events": {}}
+{"time_s": 305.78000000001185, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 305.80000000001183, "events": {}}
+{"time_s": 306.6200000000111, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 306.64000000001107, "events": {}}
+{"time_s": 306.700000000011, "events": {"StartOfExhale": 0.02}}
+{"time_s": 306.720000000011, "events": {}}
+{"time_s": 307.4800000000103, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 307.5000000000103, "events": {}}
+{"time_s": 308.3400000000095, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 308.3600000000095, "events": {}}
+{"time_s": 309.20000000000874, "events": {"StartOfCardiacCycle": 0.02, "StartOfInhale": 0.02}}
+{"time_s": 309.2200000000087, "events": {}}
+{"time_s": 310.06000000000796, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 310.08000000000794, "events": {}}
+{"time_s": 310.5400000000075, "events": {"StartOfExhale": 0.02}}
+{"time_s": 310.5600000000075, "events": {}}
+{"time_s": 310.9200000000072, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 310.94000000000716, "events": {}}
+{"time_s": 311.7800000000064, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 311.8000000000064, "events": {}}
+{"time_s": 312.6400000000056, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 312.6600000000056, "events": {}}
+{"time_s": 313.04000000000525, "events": {"StartOfInhale": 0.02}}
+{"time_s": 313.06000000000523, "events": {}}
+{"time_s": 313.50000000000483, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 313.5200000000048, "events": {}}
+{"time_s": 314.34000000000407, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 314.36000000000405, "events": {}}
+{"time_s": 314.38000000000403, "events": {"StartOfExhale": 0.02}}
+{"time_s": 314.400000000004, "events": {}}
+{"time_s": 315.1800000000033, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 315.2000000000033, "events": {}}
+{"time_s": 316.02000000000254, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 316.0400000000025, "events": {}}
+{"time_s": 316.88000000000176, "events": {"StartOfCardiacCycle": 0.02, "StartOfInhale": 0.02}}
+{"time_s": 316.90000000000174, "events": {}}
+{"time_s": 317.740000000001, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 317.76000000000096, "events": {}}
+{"time_s": 318.22000000000054, "events": {"StartOfExhale": 0.02}}
+{"time_s": 318.2400000000005, "events": {}}
+{"time_s": 318.6000000000002, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 318.6200000000002, "events": {}}
+{"time_s": 319.4599999999994, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 319.4799999999994, "events": {}}
+{"time_s": 320.31999999999863, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 320.3399999999986, "events": {}}
+{"time_s": 320.71999999999827, "events": {"StartOfInhale": 0.02}}
+{"time_s": 320.73999999999825, "events": {}}
+{"time_s": 321.17999999999785, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 321.19999999999783, "events": {}}
+{"time_s": 322.03999999999706, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 322.05999999999705, "events": {"StartOfExhale": 0.02}}
+{"time_s": 322.079999999997, "events": {}}
+{"time_s": 322.8999999999963, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 322.91999999999626, "events": {}}
+{"time_s": 323.7599999999955, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 323.7799999999955, "events": {}}
+{"time_s": 324.5599999999948, "events": {"StartOfInhale": 0.02}}
+{"time_s": 324.57999999999475, "events": {}}
+{"time_s": 324.6199999999947, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 324.6399999999947, "events": {}}
+{"time_s": 325.47999999999394, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 325.4999999999939, "events": {}}
+{"time_s": 325.89999999999355, "events": {"StartOfExhale": 0.02}}
+{"time_s": 325.91999999999354, "events": {}}
+{"time_s": 326.33999999999315, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 326.35999999999314, "events": {}}
+{"time_s": 327.1999999999924, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 327.21999999999235, "events": {}}
+{"time_s": 328.0599999999916, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 328.07999999999157, "events": {}}
+{"time_s": 328.3999999999913, "events": {"StartOfInhale": 0.02}}
+{"time_s": 328.41999999999126, "events": {}}
+{"time_s": 328.9199999999908, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 328.9399999999908, "events": {}}
+{"time_s": 329.73999999999006, "events": {"StartOfExhale": 0.02}}
+{"time_s": 329.75999999999004, "events": {}}
+{"time_s": 329.77999999999, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 329.79999999999, "events": {}}
+{"time_s": 330.63999999998924, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 330.6599999999892, "events": {}}
+{"time_s": 331.49999999998846, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 331.51999999998844, "events": {}}
+{"time_s": 332.2399999999878, "events": {"StartOfInhale": 0.02}}
+{"time_s": 332.25999999998777, "events": {}}
+{"time_s": 332.3599999999877, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 332.37999999998766, "events": {}}
+{"time_s": 333.2199999999869, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 333.2399999999869, "events": {}}
+{"time_s": 333.57999999998657, "events": {"StartOfExhale": 0.02}}
+{"time_s": 333.59999999998655, "events": {}}
+{"time_s": 334.0799999999861, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 334.0999999999861, "events": {}}
+{"time_s": 334.93999999998533, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 334.9599999999853, "events": {}}
+{"time_s": 335.79999999998455, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 335.81999999998453, "events": {}}
+{"time_s": 336.0799999999843, "events": {"StartOfInhale": 0.02}}
+{"time_s": 336.0999999999843, "events": {}}
+{"time_s": 336.65999999998377, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 336.67999999998375, "events": {}}
+{"time_s": 337.4199999999831, "events": {"StartOfExhale": 0.02}}
+{"time_s": 337.43999999998306, "events": {}}
+{"time_s": 337.519999999983, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 337.53999999998297, "events": {}}
+{"time_s": 338.3799999999822, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 338.3999999999822, "events": {}}
+{"time_s": 339.2399999999814, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 339.2599999999814, "events": {}}
+{"time_s": 339.9199999999808, "events": {"StartOfInhale": 0.02}}
+{"time_s": 339.9399999999808, "events": {}}
+{"time_s": 340.09999999998064, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 340.1199999999806, "events": {}}
+{"time_s": 340.95999999997986, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 340.97999999997984, "events": {}}
+{"time_s": 341.2599999999796, "events": {"StartOfExhale": 0.02}}
+{"time_s": 341.27999999997957, "events": {}}
+{"time_s": 341.8199999999791, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 341.83999999997906, "events": {}}
+{"time_s": 342.6799999999783, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 342.6999999999783, "events": {}}
+{"time_s": 343.5399999999775, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 343.5599999999775, "events": {}}
+{"time_s": 343.7599999999773, "events": {"StartOfInhale": 0.02}}
+{"time_s": 343.7799999999773, "events": {}}
+{"time_s": 344.3999999999767, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 344.4199999999767, "events": {}}
+{"time_s": 345.0999999999761, "events": {"StartOfExhale": 0.02}}
+{"time_s": 345.1199999999761, "events": {}}
+{"time_s": 345.25999999997595, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 345.2799999999759, "events": {}}
+{"time_s": 346.11999999997516, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 346.13999999997515, "events": {}}
+{"time_s": 346.9799999999744, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 346.99999999997436, "events": {}}
+{"time_s": 347.5999999999738, "events": {"StartOfInhale": 0.02}}
+{"time_s": 347.6199999999738, "events": {}}
+{"time_s": 347.8399999999736, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 347.8599999999736, "events": {}}
+{"time_s": 348.6999999999728, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 348.7199999999728, "events": {}}
+{"time_s": 348.9399999999726, "events": {"StartOfExhale": 0.02}}
+{"time_s": 348.9599999999726, "events": {}}
+{"time_s": 349.55999999997204, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 349.579999999972, "events": {}}
+{"time_s": 350.43999999997123, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 350.4599999999712, "events": {}}
+{"time_s": 351.31999999997043, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 351.3399999999704, "events": {}}
+{"time_s": 351.4399999999703, "events": {"StartOfInhale": 0.02}}
+{"time_s": 351.4599999999703, "events": {}}
+{"time_s": 352.19999999996963, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 352.2199999999696, "events": {}}
+{"time_s": 352.7799999999691, "events": {"StartOfExhale": 0.02}}
+{"time_s": 352.7999999999691, "events": {}}
+{"time_s": 353.07999999996883, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 353.0999999999688, "events": {}}
+{"time_s": 353.95999999996803, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 353.979999999968, "events": {}}
+{"time_s": 354.83999999996723, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 354.8599999999672, "events": {}}
+{"time_s": 355.27999999996683, "events": {"StartOfInhale": 0.02}}
+{"time_s": 355.2999999999668, "events": {}}
+{"time_s": 355.71999999996643, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 355.7399999999664, "events": {}}
+{"time_s": 356.59999999996563, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 356.6199999999656, "events": {"StartOfExhale": 0.02}}
+{"time_s": 356.6399999999656, "events": {}}
+{"time_s": 357.47999999996483, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 357.4999999999648, "events": {}}
+{"time_s": 358.35999999996403, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 358.379999999964, "events": {}}
+{"time_s": 359.11999999996334, "events": {"StartOfInhale": 0.02}}
+{"time_s": 359.1399999999633, "events": {}}
+{"time_s": 359.23999999996323, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 359.2599999999632, "events": {}}
+{"time_s": 360.11999999996243, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 360.1399999999624, "events": {}}
+{"time_s": 360.4599999999621, "events": {"StartOfExhale": 0.02}}
+{"time_s": 360.4799999999621, "events": {}}
+{"time_s": 360.99999999996163, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 361.0199999999616, "events": {}}
+{"time_s": 361.87999999996083, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 361.8999999999608, "events": {}}
+{"time_s": 362.75999999996003, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 362.77999999996, "events": {}}
+{"time_s": 362.95999999995985, "events": {"StartOfInhale": 0.02}}
+{"time_s": 362.97999999995983, "events": {}}
+{"time_s": 363.63999999995923, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 363.6599999999592, "events": {}}
+{"time_s": 364.29999999995863, "events": {"StartOfExhale": 0.02}}
+{"time_s": 364.3199999999586, "events": {}}
+{"time_s": 364.51999999995843, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 364.5399999999584, "events": {}}
+{"time_s": 365.39999999995763, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 365.4199999999576, "events": {}}
+{"time_s": 366.27999999995683, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 366.2999999999568, "events": {}}
+{"time_s": 366.79999999995636, "events": {"StartOfInhale": 0.02}}
+{"time_s": 366.81999999995634, "events": {}}
+{"time_s": 367.159999999956, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 367.179999999956, "events": {}}
+{"time_s": 368.0399999999552, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 368.0599999999552, "events": {}}
+{"time_s": 368.13999999995514, "events": {"StartOfExhale": 0.02}}
+{"time_s": 368.1599999999551, "events": {}}
+{"time_s": 368.9199999999544, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 368.9399999999544, "events": {}}
+{"time_s": 369.7999999999536, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 369.8199999999536, "events": {}}
+{"time_s": 370.63999999995286, "events": {"StartOfInhale": 0.02}}
+{"time_s": 370.65999999995284, "events": {}}
+{"time_s": 370.6799999999528, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 370.6999999999528, "events": {}}
+{"time_s": 371.559999999952, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 371.579999999952, "events": {}}
+{"time_s": 371.97999999995164, "events": {"StartOfExhale": 0.02}}
+{"time_s": 371.9999999999516, "events": {}}
+{"time_s": 372.4399999999512, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 372.4599999999512, "events": {}}
+{"time_s": 373.3199999999504, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 373.3399999999504, "events": {}}
+{"time_s": 374.1999999999496, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 374.2199999999496, "events": {}}
+{"time_s": 374.47999999994937, "events": {"StartOfInhale": 0.02}}
+{"time_s": 374.49999999994935, "events": {}}
+{"time_s": 375.0799999999488, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 375.0999999999488, "events": {}}
+{"time_s": 375.81999999994815, "events": {"StartOfExhale": 0.02}}
+{"time_s": 375.83999999994813, "events": {}}
+{"time_s": 375.959999999948, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 375.979999999948, "events": {}}
+{"time_s": 376.8399999999472, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 376.8599999999472, "events": {}}
+{"time_s": 377.7199999999464, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 377.7399999999464, "events": {}}
+{"time_s": 378.3199999999459, "events": {"StartOfInhale": 0.02}}
+{"time_s": 378.33999999994586, "events": {}}
+{"time_s": 378.5999999999456, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 378.6199999999456, "events": {}}
+{"time_s": 379.4799999999448, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 379.4999999999448, "events": {}}
+{"time_s": 379.65999999994466, "events": {"StartOfExhale": 0.02}}
+{"time_s": 379.67999999994464, "events": {}}
+{"time_s": 380.359999999944, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 380.379999999944, "events": {}}
+{"time_s": 381.2399999999432, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 381.2599999999432, "events": {}}
+{"time_s": 382.1199999999424, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 382.1399999999424, "events": {}}
+{"time_s": 382.1599999999424, "events": {"StartOfInhale": 0.02}}
+{"time_s": 382.17999999994237, "events": {}}
+{"time_s": 382.9999999999416, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 383.0199999999416, "events": {}}
+{"time_s": 383.49999999994117, "events": {"StartOfExhale": 0.02}}
+{"time_s": 383.51999999994115, "events": {}}
+{"time_s": 383.8799999999408, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 383.8999999999408, "events": {}}
+{"time_s": 384.75999999994, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 384.77999999994, "events": {}}
+{"time_s": 385.6399999999392, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 385.6599999999392, "events": {}}
+{"time_s": 385.9999999999389, "events": {"StartOfInhale": 0.02}}
+{"time_s": 386.0199999999389, "events": {}}
+{"time_s": 386.5199999999384, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 386.5399999999384, "events": {}}
+{"time_s": 387.3399999999377, "events": {"StartOfExhale": 0.02}}
+{"time_s": 387.35999999993766, "events": {}}
+{"time_s": 387.3999999999376, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 387.4199999999376, "events": {}}
+{"time_s": 388.2799999999368, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 388.2999999999368, "events": {}}
+{"time_s": 389.159999999936, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 389.179999999936, "events": {}}
+{"time_s": 389.8399999999354, "events": {"StartOfInhale": 0.02}}
+{"time_s": 389.8599999999354, "events": {}}
+{"time_s": 390.0399999999352, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 390.0599999999352, "events": {}}
+{"time_s": 390.9399999999344, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 390.9599999999344, "events": {}}
+{"time_s": 391.19999999993416, "events": {"StartOfExhale": 0.02}}
+{"time_s": 391.21999999993415, "events": {}}
+{"time_s": 391.8399999999336, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 391.85999999993356, "events": {}}
+{"time_s": 392.73999999993276, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 392.75999999993275, "events": {}}
+{"time_s": 393.63999999993194, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 393.6599999999319, "events": {}}
+{"time_s": 393.6999999999319, "events": {"StartOfInhale": 0.02}}
+{"time_s": 393.7199999999319, "events": {}}
+{"time_s": 394.5399999999311, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 394.5599999999311, "events": {}}
+{"time_s": 395.05999999993065, "events": {"StartOfExhale": 0.02}}
+{"time_s": 395.07999999993064, "events": {}}
+{"time_s": 395.4399999999303, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 395.4599999999303, "events": {}}
+{"time_s": 396.3399999999295, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 396.35999999992947, "events": {}}
+{"time_s": 397.2199999999287, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 397.23999999992867, "events": {}}
+{"time_s": 397.5599999999284, "events": {"StartOfInhale": 0.02}}
+{"time_s": 397.57999999992836, "events": {}}
+{"time_s": 398.0999999999279, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 398.11999999992787, "events": {}}
+{"time_s": 398.91999999992714, "events": {"StartOfExhale": 0.02}}
+{"time_s": 398.9399999999271, "events": {}}
+{"time_s": 398.9799999999271, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 398.99999999992707, "events": {}}
+{"time_s": 399.8599999999263, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 399.87999999992627, "events": {}}
+{"time_s": 400.75999999992547, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 400.77999999992545, "events": {}}
+{"time_s": 401.41999999992487, "events": {"StartOfInhale": 0.02}}
+{"time_s": 401.43999999992485, "events": {}}
+{"time_s": 401.65999999992465, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 401.67999999992463, "events": {}}
+{"time_s": 402.55999999992383, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 402.5799999999238, "events": {}}
+{"time_s": 402.77999999992363, "events": {"StartOfExhale": 0.02}}
+{"time_s": 402.7999999999236, "events": {}}
+{"time_s": 403.459999999923, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 403.479999999923, "events": {}}
+{"time_s": 404.3599999999222, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 404.3799999999222, "events": {}}
+{"time_s": 405.2599999999214, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 405.27999999992136, "events": {"StartOfInhale": 0.02}}
+{"time_s": 405.29999999992134, "events": {}}
+{"time_s": 406.15999999992056, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 406.17999999992054, "events": {}}
+{"time_s": 406.6399999999201, "events": {"StartOfExhale": 0.02}}
+{"time_s": 406.6599999999201, "events": {}}
+{"time_s": 407.05999999991974, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 407.0799999999197, "events": {}}
+{"time_s": 407.9599999999189, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 407.9799999999189, "events": {}}
+{"time_s": 408.8599999999181, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 408.8799999999181, "events": {}}
+{"time_s": 409.13999999991785, "events": {"StartOfInhale": 0.02}}
+{"time_s": 409.15999999991783, "events": {}}
+{"time_s": 409.7599999999173, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 409.77999999991727, "events": {}}
+{"time_s": 410.4999999999166, "events": {"StartOfExhale": 0.02}}
+{"time_s": 410.5199999999166, "events": {}}
+{"time_s": 410.65999999991647, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 410.67999999991645, "events": {}}
+{"time_s": 411.55999999991565, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 411.57999999991563, "events": {}}
+{"time_s": 412.4599999999148, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 412.4799999999148, "events": {}}
+{"time_s": 412.99999999991434, "events": {"StartOfInhale": 0.02}}
+{"time_s": 413.0199999999143, "events": {}}
+{"time_s": 413.359999999914, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 413.379999999914, "events": {}}
+{"time_s": 414.2599999999132, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 414.2799999999132, "events": {}}
+{"time_s": 414.3599999999131, "events": {"StartOfExhale": 0.02}}
+{"time_s": 414.3799999999131, "events": {}}
+{"time_s": 415.1599999999124, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 415.17999999991235, "events": {}}
+{"time_s": 416.05999999991155, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 416.07999999991154, "events": {}}
+{"time_s": 416.8599999999108, "events": {"StartOfInhale": 0.02}}
+{"time_s": 416.8799999999108, "events": {}}
+{"time_s": 416.95999999991074, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 416.9799999999107, "events": {}}
+{"time_s": 417.8599999999099, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 417.8799999999099, "events": {}}
+{"time_s": 418.2199999999096, "events": {"StartOfExhale": 0.02}}
+{"time_s": 418.23999999990957, "events": {}}
+{"time_s": 418.7599999999091, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 418.7799999999091, "events": {}}
+{"time_s": 419.6599999999083, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 419.67999999990826, "events": {}}
+{"time_s": 420.55999999990746, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 420.57999999990744, "events": {}}
+{"time_s": 420.7199999999073, "events": {"StartOfInhale": 0.02}}
+{"time_s": 420.7399999999073, "events": {}}
+{"time_s": 421.45999999990664, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 421.4799999999066, "events": {}}
+{"time_s": 422.0799999999061, "events": {"StartOfExhale": 0.02}}
+{"time_s": 422.09999999990606, "events": {}}
+{"time_s": 422.3599999999058, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 422.3799999999058, "events": {}}
+{"time_s": 423.259999999905, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 423.279999999905, "events": {}}
+{"time_s": 424.1599999999042, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 424.17999999990417, "events": {}}
+{"time_s": 424.5799999999038, "events": {"StartOfInhale": 0.02}}
+{"time_s": 424.5999999999038, "events": {}}
+{"time_s": 425.05999999990337, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 425.07999999990335, "events": {}}
+{"time_s": 425.93999999990257, "events": {"StartOfExhale": 0.02}}
+{"time_s": 425.95999999990255, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 425.97999999990253, "events": {}}
+{"time_s": 426.85999999990173, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 426.8799999999017, "events": {}}
+{"time_s": 427.7599999999009, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 427.7799999999009, "events": {}}
+{"time_s": 428.4399999999003, "events": {"StartOfInhale": 0.02}}
+{"time_s": 428.4599999999003, "events": {}}
+{"time_s": 428.6599999999001, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 428.6799999999001, "events": {}}
+{"time_s": 429.5599999998993, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 429.57999999989926, "events": {}}
+{"time_s": 429.79999999989906, "events": {"StartOfExhale": 0.02}}
+{"time_s": 429.81999999989904, "events": {}}
+{"time_s": 430.45999999989846, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 430.47999999989844, "events": {}}
+{"time_s": 431.35999999989764, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 431.3799999998976, "events": {}}
+{"time_s": 432.2599999998968, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 432.2799999998968, "events": {}}
+{"time_s": 432.2999999998968, "events": {"StartOfInhale": 0.02}}
+{"time_s": 432.31999999989677, "events": {}}
+{"time_s": 433.159999999896, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 433.179999999896, "events": {}}
+{"time_s": 433.65999999989555, "events": {"StartOfExhale": 0.02}}
+{"time_s": 433.67999999989553, "events": {}}
+{"time_s": 434.0599999998952, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 434.07999999989516, "events": {}}
+{"time_s": 434.97999999989435, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 434.9999999998943, "events": {}}
+{"time_s": 435.8999999998935, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 435.9199999998935, "events": {}}
+{"time_s": 436.1599999998933, "events": {"StartOfInhale": 0.02}}
+{"time_s": 436.17999999989325, "events": {}}
+{"time_s": 436.8199999998927, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 436.83999999989265, "events": {}}
+{"time_s": 437.51999999989204, "events": {"StartOfExhale": 0.02}}
+{"time_s": 437.539999999892, "events": {}}
+{"time_s": 437.73999999989184, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 437.7599999998918, "events": {}}
+{"time_s": 438.659999999891, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 438.679999999891, "events": {}}
+{"time_s": 439.57999999989016, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 439.59999999989014, "events": {}}
+{"time_s": 440.01999999988976, "events": {"StartOfInhale": 0.02}}
+{"time_s": 440.03999999988974, "events": {}}
+{"time_s": 440.4999999998893, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 440.5199999998893, "events": {}}
+{"time_s": 441.3799999998885, "events": {"StartOfExhale": 0.02}}
+{"time_s": 441.3999999998885, "events": {}}
+{"time_s": 441.4199999998885, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 441.43999999988847, "events": {}}
+{"time_s": 442.33999999988765, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 442.35999999988763, "events": {}}
+{"time_s": 443.2599999998868, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 443.2799999998868, "events": {}}
+{"time_s": 443.87999999988625, "events": {"StartOfInhale": 0.02}}
+{"time_s": 443.89999999988623, "events": {}}
+{"time_s": 444.179999999886, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 444.19999999988596, "events": {}}
+{"time_s": 445.09999999988514, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 445.1199999998851, "events": {}}
+{"time_s": 445.239999999885, "events": {"StartOfExhale": 0.02}}
+{"time_s": 445.259999999885, "events": {}}
+{"time_s": 446.0199999998843, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 446.0399999998843, "events": {}}
+{"time_s": 446.93999999988347, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 446.95999999988345, "events": {}}
+{"time_s": 447.73999999988274, "events": {"StartOfInhale": 0.02}}
+{"time_s": 447.7599999998827, "events": {}}
+{"time_s": 447.85999999988263, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 447.8799999998826, "events": {}}
+{"time_s": 448.7799999998818, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 448.7999999998818, "events": {}}
+{"time_s": 449.0999999998815, "events": {"StartOfExhale": 0.02}}
+{"time_s": 449.1199999998815, "events": {}}
+{"time_s": 449.69999999988096, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 449.71999999988094, "events": {}}
+{"time_s": 450.6199999998801, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 450.6399999998801, "events": {}}
+{"time_s": 451.5399999998793, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 451.55999999987927, "events": {}}
+{"time_s": 451.59999999987923, "events": {"StartOfInhale": 0.02}}
+{"time_s": 451.6199999998792, "events": {}}
+{"time_s": 452.45999999987845, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 452.47999999987843, "events": {}}
+{"time_s": 452.959999999878, "events": {"StartOfExhale": 0.02}}
+{"time_s": 452.979999999878, "events": {}}
+{"time_s": 453.3799999998776, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 453.3999999998776, "events": {}}
+{"time_s": 454.2999999998768, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 454.31999999987676, "events": {}}
+{"time_s": 455.21999999987594, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 455.2399999998759, "events": {}}
+{"time_s": 455.4599999998757, "events": {"StartOfInhale": 0.02}}
+{"time_s": 455.4799999998757, "events": {}}
+{"time_s": 456.1399999998751, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 456.1599999998751, "events": {}}
+{"time_s": 456.8199999998745, "events": {"StartOfExhale": 0.02}}
+{"time_s": 456.83999999987446, "events": {}}
+{"time_s": 457.05999999987426, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 457.07999999987425, "events": {}}
+{"time_s": 457.9799999998734, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 457.9999999998734, "events": {}}
+{"time_s": 458.8999999998726, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 458.9199999998726, "events": {}}
+{"time_s": 459.3399999998722, "events": {"StartOfInhale": 0.02}}
+{"time_s": 459.3599999998722, "events": {}}
+{"time_s": 459.81999999987175, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 459.83999999987174, "events": {}}
+{"time_s": 460.69999999987095, "events": {"StartOfExhale": 0.02}}
+{"time_s": 460.71999999987094, "events": {}}
+{"time_s": 460.7399999998709, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 460.7599999998709, "events": {}}
+{"time_s": 461.6599999998701, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 461.67999999987006, "events": {}}
+{"time_s": 462.57999999986924, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 462.5999999998692, "events": {}}
+{"time_s": 463.21999999986866, "events": {"StartOfInhale": 0.02}}
+{"time_s": 463.23999999986864, "events": {}}
+{"time_s": 463.4999999998684, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 463.5199999998684, "events": {}}
+{"time_s": 464.41999999986757, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 464.43999999986755, "events": {}}
+{"time_s": 464.5799999998674, "events": {"StartOfExhale": 0.02}}
+{"time_s": 464.5999999998674, "events": {}}
+{"time_s": 465.33999999986673, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 465.3599999998667, "events": {}}
+{"time_s": 466.2599999998659, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 466.2799999998659, "events": {}}
+{"time_s": 467.09999999986513, "events": {"StartOfInhale": 0.02}}
+{"time_s": 467.1199999998651, "events": {}}
+{"time_s": 467.17999999986506, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 467.19999999986504, "events": {}}
+{"time_s": 468.0999999998642, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 468.1199999998642, "events": {}}
+{"time_s": 468.4599999998639, "events": {"StartOfExhale": 0.02}}
+{"time_s": 468.4799999998639, "events": {}}
+{"time_s": 469.0199999998634, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 469.03999999986337, "events": {}}
+{"time_s": 469.93999999986255, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 469.95999999986253, "events": {}}
+{"time_s": 470.8599999998617, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 470.8799999998617, "events": {}}
+{"time_s": 470.9799999998616, "events": {"StartOfInhale": 0.02}}
+{"time_s": 470.9999999998616, "events": {}}
+{"time_s": 471.7799999998609, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 471.79999999986086, "events": {}}
+{"time_s": 472.33999999986037, "events": {"StartOfExhale": 0.02}}
+{"time_s": 472.35999999986035, "events": {}}
+{"time_s": 472.69999999986004, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 472.71999999986, "events": {}}
+{"time_s": 473.6199999998592, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 473.6399999998592, "events": {}}
+{"time_s": 474.53999999985837, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 474.55999999985835, "events": {}}
+{"time_s": 474.8599999998581, "events": {"StartOfInhale": 0.02}}
+{"time_s": 474.87999999985806, "events": {}}
+{"time_s": 475.4799999998575, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 475.4999999998575, "events": {}}
+{"time_s": 476.21999999985684, "events": {"StartOfExhale": 0.02}}
+{"time_s": 476.2399999998568, "events": {}}
+{"time_s": 476.41999999985666, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 476.43999999985664, "events": {}}
+{"time_s": 477.3599999998558, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 477.3799999998558, "events": {}}
+{"time_s": 478.29999999985495, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 478.31999999985493, "events": {}}
+{"time_s": 478.73999999985455, "events": {"StartOfInhale": 0.02}}
+{"time_s": 478.75999999985453, "events": {}}
+{"time_s": 479.2399999998541, "events": {"StartOfCardiacCycle": 0.02}}
+{"time_s": 479.2599999998541, "events": {}}

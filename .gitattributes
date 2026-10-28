@@ -1,0 +1,3 @@
+# Frozen research evidence is checked using byte-level SHA-256 hashes.
+# Preserve original bytes on add/checkout, including on Windows.
+* -text

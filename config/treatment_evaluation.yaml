@@ -1,0 +1,28 @@
+# Project evaluation policy, NOT a Frozen contract or a clinical standard.
+# No approved physiological ranges were found. null disables that metric/stability.
+calibration_status: project-configurable
+evaluation_horizons_s: [60, 120, 300]
+stable_window_s: 300
+max_episode_time_s: 3600
+max_stability_gap_s: 1
+neutral_tolerance: 0.01
+terminal_time_tolerance_s: 0
+minimum_scored_metrics: 1
+metrics:
+  vitals.heart_rate: {acceptable_range: null, weight: 1, distance_tolerance: 0}
+  vitals.respiration_rate: {acceptable_range: null, weight: 1, distance_tolerance: 0}
+  vitals.pulse_oximetry: {acceptable_range: null, weight: 1, distance_tolerance: 0}
+  vitals.systolic_arterial_pressure: {acceptable_range: null, weight: 1, distance_tolerance: 0}
+  vitals.mean_arterial_pressure: {acceptable_range: null, weight: 1, distance_tolerance: 0}
+stable_ranges:
+  vitals.heart_rate: null
+  vitals.respiration_rate: null
+  vitals.pulse_oximetry: null
+  vitals.systolic_arterial_pressure: null
+  vitals.mean_arterial_pressure: null
+terminal_event_policy:
+  IrreversibleState: terminal
+  CardiacArrest: critical
+  CardiovascularCollapse: critical
+  CriticalBrainOxygenDeficit: critical
+  HypovolemicShock: critical

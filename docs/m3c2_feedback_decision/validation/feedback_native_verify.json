@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "run_id": "m3c2-real-feedback-001",
+  "sha_files_checked": 66,
+  "verifier_sha256": "f96faee0a4b6370e0eddaa4260cc5f71f428b6a41070f029476494e5be42a326",
+  "worker_pids": [
+    597203,
+    597269
+  ],
+  "treatment_counts": {
+    "A": 1,
+    "B": 0
+  },
+  "frames_per_patient": 301,
+  "actual_feedback_decisions": [
+    "KEEP_PLAN_AND_WAIT",
+    "DEFER_INSUFFICIENT_EVIDENCE"
+  ],
+  "real_llm_calls": 2,
+  "feedback_status": "M3C2_REAL_AGENT_FEEDBACK_PASS",
+  "timing_status": "FROZEN_TIMING_PRESERVED",
+  "dual_dynamic_status": "NOT_DEMONSTRATED",
+  "formal_dynamic_efficacy": "M3C2_TIMING_NOT_VALIDATED"
+}

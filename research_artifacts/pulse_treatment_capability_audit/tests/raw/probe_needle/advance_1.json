@@ -1,0 +1,39 @@
+{
+  "SimulationTime": {
+    "ScalarTime": {
+      "Value": 0.02,
+      "Unit": "s"
+    }
+  },
+  "ActiveActions": {
+    "AnyAction": [
+      {
+        "PatientAction": {
+          "NeedleDecompression": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "State": "On",
+            "Side": "Left"
+          }
+        }
+      },
+      {
+        "PatientAction": {
+          "TensionPneumothorax": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "Type": "Closed",
+            "Side": "Left",
+            "Severity": {
+              "Scalar0To1": {
+                "Value": 0.3
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

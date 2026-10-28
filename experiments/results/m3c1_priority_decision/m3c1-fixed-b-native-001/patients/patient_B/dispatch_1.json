@@ -1,0 +1,34 @@
+{
+  "schema_version": "301.dispatch.shared.1",
+  "allocated": true,
+  "resource_result": {
+    "schema_version": "301.resource.m2a.1",
+    "run_id": "m3c1-fixed-b-native-001",
+    "patient_id": "m3c1-fixed-b-native-001-B",
+    "plan_id": "m3c1-fixed-b-native-001-B-plan",
+    "request_id": "m3c1-fixed-b-native-001-B-plan:schedule:1",
+    "state_version": 1,
+    "outcome": "SATISFIED",
+    "conflicts": [],
+    "allocation_ids": [
+      "1aee8dc0c4ef48d0bffe9aa2977b0a85"
+    ],
+    "affected_allocation_ids": []
+  },
+  "legacy_state_version": 1,
+  "task": {
+    "patient_id": "m3c1-fixed-b-native-001-B",
+    "mode": "onsite",
+    "team_id": null,
+    "ambulance_id": null,
+    "target_facility_id": null,
+    "task_id": "9b6b573ab1ee4ee6927aca82f03392f4",
+    "run_id": "m3c1-fixed-b-native-001",
+    "state": "assigned",
+    "accepted_at_s": 180.00000000001828,
+    "treatment_ready_at_s": 180.00000000001828,
+    "ended_at_s": null,
+    "detail": null
+  },
+  "needs_replanning": false
+}

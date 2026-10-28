@@ -1,0 +1,32 @@
+{
+  "distinct_total": 853,
+  "reports": {
+    "unit": {
+      "path": "research_artifacts/v2_final_ten_injury_restricted_acceptance_v0.1/validation/regression/unit_final.xml",
+      "sha256": "c5b3e199848c7da9a3bd2f6498501490d82ede21f3fedc7566aa965c430a44e0",
+      "tests": 807,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "legacy_native": {
+      "path": "research_artifacts/v2_final_ten_injury_restricted_acceptance_v0.1/validation/regression/native.xml",
+      "sha256": "cabc2a8802b925c6361534010bcdd2917949754295ef4e9e90ea921bc0c0e95d",
+      "tests": 43,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "new_formal_native": {
+      "path": "research_artifacts/v2_final_ten_injury_restricted_acceptance_v0.1/validation/e2e/formal.xml",
+      "sha256": "a55fd447681a9987894492dbb4578fb44ae92f2e127719c4226165eb4c1b0130",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "archive_only_no_native_rerun": true,
+  "final_audit_sha256": "bce76267c343a042fd0ea167d7101f7590980ebfeedb4ddc16f54d3af25dda99",
+  "interpretation": "历史实际运行的最终三份互斥测试集；重复验证及失败/中断尝试不计入853，原始记录全部保留。"
+}

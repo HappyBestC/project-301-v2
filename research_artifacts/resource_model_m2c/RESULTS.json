@@ -1,0 +1,49 @@
+{
+  "new_tests": {
+    "tests": 45,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "time": 2.306
+  },
+  "regression": {
+    "tests": 633,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "time": 19.519
+  },
+  "total_passed": 678,
+  "coverage": {
+    "independent_fixture_runs": 17,
+    "all_allocated": true,
+    "action_types": [
+      "chest_tube",
+      "control_external_bleeding",
+      "control_hemothorax_bleeding",
+      "control_internal_bleeding",
+      "fluid_resuscitation",
+      "intubation",
+      "mechanical_ventilation",
+      "needle_decompression",
+      "occlusive_dressing",
+      "remove_from_exposure",
+      "supplemental_oxygen",
+      "transfusion"
+    ],
+    "composites": [
+      "penetrating_thoracic_composite_v2",
+      "blunt_thoracoabdominal_composite_v2",
+      "blast_hemorrhage_respiratory_composite_v2",
+      "fire_co_alveolar_composite_v2",
+      "trapped_hypoxia_dehydration_composite_v2"
+    ]
+  },
+  "demo": {
+    "records": 2,
+    "first_allocated": true,
+    "second_allocated": false,
+    "complete_plan_preserved": true,
+    "conservation_verified": true
+  }
+}

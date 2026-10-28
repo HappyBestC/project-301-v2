@@ -1,0 +1,26 @@
+{
+  "SimulationTime": {
+    "ScalarTime": {
+      "Unit": "s"
+    }
+  },
+  "ActiveActions": {
+    "AnyAction": [
+      {
+        "PatientAction": {
+          "Hemorrhage": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "Compartment": "LeftLeg",
+            "Severity": {
+              "Scalar0To1": {
+                "Value": 0.2
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

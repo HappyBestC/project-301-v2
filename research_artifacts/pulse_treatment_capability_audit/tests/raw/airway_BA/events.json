@@ -1,0 +1,66 @@
+[
+  {
+    "initialize": true,
+    "module": "/home/private/project-301/pulse/bin/PyPulse.cpython-311-x86_64-linux-gnu.so",
+    "version": "4.3.2"
+  },
+  {
+    "dt_s": 0.02,
+    "initial_patient": "{\n \"Name\": \"Soldier\",\n \"Age\": {\n  \"ScalarTime\": {\n   \"Value\": 22,\n   \"Unit\": \"yr\"\n  }\n },\n \"Weight\": {\n  \"ScalarMass\": {\n   \"Value\": 170.11603287481134,\n   \"Unit\": \"lb\"\n  }\n },\n \"Height\": {\n  \"ScalarLength\": {\n   \"Value\": 71,\n   \"Unit\": \"in\"\n  }\n },\n \"BodyDensity\": {\n  \"ScalarMassPerVolume\": {\n   \"Value\": 1.0575365749474959,\n   \"Unit\": \"g/cm^3\"\n  }\n },\n \"BodyFatFraction\": {\n  \"Scalar0To1\": {\n   \"Value\": 0.18\n  }\n },\n \"BodyMassIndex\": {\n  \"Value\": 23.70994416557371\n },\n \"LeanBodyMass\": {\n  \"ScalarMass\": {\n   \"Value\": 63.230776378000009,\n   \"Unit\": \"kg\"\n  }\n },\n \"IdealBodyWeight\": {\n  \"ScalarMass\": {\n   \"Value\": 75.3,\n   \"Unit\": \"kg\"\n  }\n },\n \"AlveoliSurfaceArea\": {\n  \"ScalarArea\": {\n   \"Value\": 683435.9805510533,\n   \"Unit\": \"cm^2\"\n  }\n },\n \"RightLungRatio\": {\n  \"Scalar0To1\": {\n   \"Value\": 0.525\n  }\n },\n \"SkinSurfaceArea\": {\n  \"ScalarArea\": {\n   \"Value\": 1.968118127917069,\n   \"Unit\": \"m^2\"\n  }\n },\n \"BasalMetabolicRate\": {\n  \"ScalarPower\": {\n   \"Value\": 1862.2417467513003,\n   \"Unit\": \"kcal/day\"\n  }\n },\n \"BloodVolumeBaseline\": {\n  \"ScalarVolume\": {\n   \"Value\": 5517.734437810328,\n   \"Unit\": \"mL\"\n  }\n },\n \"DiastolicArterialPressureBaseline\": {\n  \"ScalarPressure\": {\n   \"Value\": 73.535940056042975,\n   \"Unit\": \"mmHg\"\n  }\n },\n \"HeartRateBaseline\": {\n  \"ScalarFrequency\": {\n   \"Value\": 84,\n   \"Unit\": \"1/min\"\n  }\n },\n \"MeanArterialPressureBaseline\": {\n  \"ScalarPressure\": {\n   \"Value\": 94.843860960182965,\n   \"Unit\": \"mmHg\"\n  }\n },\n \"PulsePressureBaseline\": {\n  \"ScalarPressure\": {\n   \"Value\": 40.5,\n   \"Unit\": \"mmHg\"\n  }\n },\n \"RespirationRateBaseline\": {\n  \"ScalarFrequency\": {\n   \"Value\": 16,\n   \"Unit\": \"1/min\"\n  }\n },\n \"SystolicArterialPressureBaseline\": {\n  \"ScalarPressure\": {\n   \"Value\": 114.53330890269672,\n   \"Unit\": \"mmHg\"\n  }\n },\n \"TidalVolumeBaseline\": {\n  \"ScalarVolume\": {\n   \"Value\": 0.5270999999999999,\n   \"Unit\": \"L\"\n  }\n },\n \"HeartRateMaximum\": {\n  \"ScalarFrequency\": {\n   \"Value\": 192.6,\n   \"Unit\": \"1/min\"\n  }\n },\n \"HeartRateMinimum\": {\n  \"ScalarFrequency\": {\n   \"Value\": 0.001,\n   \"Unit\": \"1/min\"\n  }\n },\n \"ExpiratoryReserveVolume\": {\n  \"ScalarVolume\": {\n   \"Value\": 1.0542,\n   \"Unit\": \"L\"\n  }\n },\n \"FunctionalResidualCapacity\": {\n  \"ScalarVolume\": {\n   \"Value\": 2.259,\n   \"Unit\": \"L\"\n  }\n },\n \"InspiratoryCapacity\": {\n  \"ScalarVolume\": {\n   \"Value\": 3.765,\n   \"Unit\": \"L\"\n  }\n },\n \"InspiratoryReserveVolume\": {\n  \"ScalarVolume\": {\n   \"Value\": 3.2379000000000002,\n   \"Unit\": \"L\"\n  }\n },\n \"ResidualVolume\": {\n  \"ScalarVolume\": {\n   \"Value\": 1.2047999999999999,\n   \"Unit\": \"L\"\n  }\n },\n \"TotalLungCapacity\": {\n  \"ScalarVolume\": {\n   \"Value\": 6.024,\n   \"Unit\": \"L\"\n  }\n },\n \"VitalCapacity\": {\n  \"ScalarVolume\": {\n   \"Value\": 4.8192,\n   \"Unit\": \"L\"\n  }\n }\n}\n"
+  },
+  {
+    "submit_time_s": 0.0,
+    "action": {
+      "PatientAction": {
+        "MechanicalVentilation": {
+          "State": "On",
+          "Pressure": {
+            "ScalarPressure": {
+              "Value": 5,
+              "Unit": "cmH2O"
+            }
+          },
+          "Flow": {
+            "ScalarVolumePerTime": {
+              "Value": 0,
+              "Unit": "L/min"
+            }
+          }
+        }
+      }
+    },
+    "accepted": true,
+    "after_time_s": 0.0
+  },
+  {
+    "submit_time_s": 0.0,
+    "action": {
+      "PatientAction": {
+        "SupplementalOxygen": {
+          "Device": "NasalCannula",
+          "Flow": {
+            "ScalarVolumePerTime": {
+              "Value": 3,
+              "Unit": "L/min"
+            }
+          },
+          "Volume": {
+            "ScalarVolume": {
+              "Value": 100,
+              "Unit": "L"
+            }
+          }
+        }
+      }
+    },
+    "accepted": true,
+    "after_time_s": 0.0
+  },
+  {
+    "advance_failed_at_step": 0
+  },
+  {
+    "completed": true,
+    "final_time_s": 0.0
+  }
+]

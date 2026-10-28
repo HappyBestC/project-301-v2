@@ -1,0 +1,14 @@
+{
+  "run_id": "m3b-offline-001",
+  "mode": "offline_test",
+  "real_llm": false,
+  "real_pulse": false,
+  "overall_status": "M3B_IMPLEMENTED_NATIVE_UNVERIFIED",
+  "waiting_status": "WAITING_NOT_VERIFIED",
+  "failure": null,
+  "waiting_duration_s": 1.0,
+  "endpoint_reached": true,
+  "time_protocol_blocked_patient": "B",
+  "global_simulation_time_s": 480.0,
+  "unresolved_allocations": []
+}

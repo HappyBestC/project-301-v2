@@ -1,0 +1,22 @@
+{
+  "SimulationTime": {
+    "ScalarTime": {
+      "Value": 0.12000000000000001,
+      "Unit": "s"
+    }
+  },
+  "ActiveActions": {
+    "AnyAction": [
+      {
+        "PatientAction": {
+          "Intubation": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "Type": "Oropharyngeal"
+          }
+        }
+      }
+    ]
+  }
+}

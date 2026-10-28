@@ -1,0 +1,120 @@
+{
+  "plan_id": "151fa1bc4a374532a043e77516379f9c",
+  "request_id": "m3c2-timing-exploratory-001-A-execute",
+  "patient_id": "m3c2-timing-exploratory-001-A",
+  "run_id": "m3c2-timing-exploratory-001",
+  "session_epoch": "bd61f5b3eca24c5282d0435f99f2e724",
+  "context_ref": "162c6c3d83b1446aac2d8e2a76505309",
+  "plan_sha256": "9232877477b755eb13c660fc65fb3646e15d1433cd8622d594a67792d6b5dce6",
+  "plan": {
+    "patient_id": "m3c2-timing-exploratory-001-A",
+    "actions": [
+      {
+        "action_type": "control_external_bleeding",
+        "compartment": "RightLeg"
+      }
+    ]
+  },
+  "protocol_version": "301.research.dynamic_timing.m3c2.1",
+  "production_enabled": false,
+  "status": "COMPLETED",
+  "actions": [
+    {
+      "action_id": "1648af6f4c5749b49b16f1f28fc532db",
+      "action_index": 0,
+      "action_type": "control_external_bleeding",
+      "business_action": {
+        "action_type": "control_external_bleeding",
+        "compartment": "RightLeg"
+      },
+      "target": {
+        "patient_id": "m3c2-timing-exploratory-001-A",
+        "injury_id": "6b3c7b3902664e198c7275912807abf3",
+        "injury_type": "external_hemorrhage",
+        "native_identity": [
+          "Hemorrhage",
+          "RightLeg"
+        ],
+        "source_version": 1,
+        "compartment": "RightLeg"
+      },
+      "protocol_id": "control_external_bleeding.phase1.1",
+      "native_payload": {
+        "PatientAction": {
+          "Hemorrhage": {
+            "Type": "External",
+            "Compartment": "RightLeg",
+            "Severity": {
+              "Scalar0To1": {
+                "Value": 0
+              }
+            }
+          }
+        }
+      },
+      "proposed_time_s": 180.00000000001828,
+      "submitted_time_s": 180.00000000001828,
+      "accepted": true,
+      "state": "COMPLETED",
+      "lifecycle": "COMPLETED",
+      "native_result": {
+        "phase": "treatment",
+        "index": 0,
+        "simulation_time_s": 180.00000000001828,
+        "accepted": true
+      },
+      "error": null,
+      "validation": {
+        "schema": "passed",
+        "source": "passed",
+        "scope": "passed",
+        "resource": "passed"
+      },
+      "resource": {
+        "allocated_units": {},
+        "allocation_ids": [
+          "a1f3d3e203754a40b30788226bf7c643"
+        ],
+        "action_instance_id": "m3c2-timing-exploratory-001-A-control",
+        "consumption": "no stock requirement for this research proxy",
+        "submission_status": "accepted",
+        "delivery_status": "completed",
+        "native_delivery_evidence": {
+          "source_control_confirmed": true,
+          "cumulative_loss_mL": 173.0659699721137,
+          "capacity_restoration_claimed": false
+        }
+      },
+      "device_state": {
+        "observed_at_s": 181.0000000000188,
+        "airway_mode": "Free",
+        "intubation": "Off"
+      },
+      "physiological_response": "NOT_EVALUATED",
+      "evaluation": "NOT_RUN",
+      "already_applied_noop": false,
+      "delivery": {
+        "source_control_confirmed": true,
+        "cumulative_loss_mL": 173.0659699721137,
+        "capacity_restoration_claimed": false
+      },
+      "last_verified_time_s": 181.0000000000188
+    }
+  ],
+  "error": null,
+  "timing_protocol": {
+    "protocol_version": "301.research.dynamic_timing.m3c2.1",
+    "reference_protocol": "301.v2.phase1.research.1",
+    "exploratory": true,
+    "submitted_candidate_s": 180,
+    "formal_grade": null
+  },
+  "resource_reservation": {
+    "authority_kind": "explicit_research_fixture",
+    "shared_plan_id": "m3c2-timing-exploratory-001-A-plan",
+    "allocation_ids": [
+      "a1f3d3e203754a40b30788226bf7c643"
+    ],
+    "production_inventory": false
+  }
+}

@@ -1,0 +1,1200 @@
+{
+  "scope": "仅固定 AB；数据提取自实际最终 E2E，不产生或修改动作",
+  "protocols": [
+    {
+      "pattern_id": "penetrating_thoracic_composite_v2",
+      "profile_version": "301.v2_1.thoracic.aligned_onsets.2",
+      "bundle": "AB",
+      "simulation_timeline": {
+        "initialization_s": 0,
+        "dynamic_onset_s": 60,
+        "decision_s": 660,
+        "end_s": 960,
+        "action_step_s": 0.02,
+        "component_onsets_s": {
+          "hemothorax": 60,
+          "open_pneumothorax": 540
+        }
+      },
+      "treatment_dependencies": [
+        "source control precedes fluid",
+        "hemothorax control precedes tube",
+        "intubation precedes ventilation",
+        "native actions separated by one .02 s tick"
+      ],
+      "resource_requirements": "V2 COSTS plus audited hemothorax/exposure resources; explicit host grant required",
+      "actual_treatment_actions": [
+        {
+          "time_s": 659.9999999996897,
+          "phase": "treatment:occlusive_dressing",
+          "payload": {
+            "PatientAction": {
+              "ChestOcclusiveDressing": {
+                "Side": "Left",
+                "State": "On"
+              }
+            }
+          },
+          "state": "ACCEPTED",
+          "native_result": {
+            "phase": "treatment:occlusive_dressing",
+            "index": 0,
+            "simulation_time_s": 659.9999999996897,
+            "accepted": true
+          }
+        },
+        {
+          "time_s": 660.0199999996897,
+          "phase": "treatment:control_hemothorax_bleeding",
+          "payload": {
+            "PatientAction": {
+              "Hemothorax": {
+                "Side": "Left",
+                "Severity": {
+                  "Scalar0To1": {
+                    "Value": 0
+                  }
+                }
+              }
+            }
+          },
+          "state": "ACCEPTED",
+          "native_result": {
+            "phase": "treatment:control_hemothorax_bleeding",
+            "index": 0,
+            "simulation_time_s": 660.0199999996897,
+            "accepted": true
+          }
+        },
+        {
+          "time_s": 660.0399999996897,
+          "phase": "treatment:chest_tube",
+          "payload": {
+            "PatientAction": {
+              "TubeThoracostomy": {
+                "Side": "Left",
+                "FlowRate": {
+                  "ScalarVolumePerTime": {
+                    "Value": 30,
+                    "Unit": "mL/min"
+                  }
+                }
+              }
+            }
+          },
+          "state": "ACCEPTED",
+          "native_result": {
+            "phase": "treatment:chest_tube",
+            "index": 0,
+            "simulation_time_s": 660.0399999996897,
+            "accepted": true
+          }
+        }
+      ],
+      "completed_joint_receipt": {
+        "digest": "b19bf8870c01724adbf2f8542dbb265db7f5f922a06f9fdf7f8145545ba65e13",
+        "plan": {
+          "patient_id": "composite-patient",
+          "pattern_id": "penetrating_thoracic_composite_v2",
+          "bundle": "AB"
+        },
+        "state": "COMPLETED",
+        "actions": [
+          {
+            "kind": "occlusive_dressing",
+            "state": "NATIVE_ACCEPTED",
+            "time_s": 659.9999999996897,
+            "payload": {
+              "PatientAction": {
+                "ChestOcclusiveDressing": {
+                  "Side": "Left",
+                  "State": "On"
+                }
+              }
+            },
+            "allocation": {
+              "kind": "occlusive_dressing",
+              "units": {
+                "occlusive_dressing_kit": 1
+              },
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            "confirmed_time_s": 660.0199999996897
+          },
+          {
+            "kind": "control_hemothorax_bleeding",
+            "state": "NATIVE_ACCEPTED",
+            "time_s": 660.0199999996897,
+            "payload": {
+              "PatientAction": {
+                "Hemothorax": {
+                  "Side": "Left",
+                  "Severity": {
+                    "Scalar0To1": {
+                      "Value": 0
+                    }
+                  }
+                }
+              }
+            },
+            "allocation": {
+              "kind": "control_hemothorax_bleeding",
+              "units": {},
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            "confirmed_time_s": 660.0399999996897
+          },
+          {
+            "kind": "chest_tube",
+            "state": "NATIVE_ACCEPTED",
+            "time_s": 660.0399999996897,
+            "payload": {
+              "PatientAction": {
+                "TubeThoracostomy": {
+                  "Side": "Left",
+                  "FlowRate": {
+                    "ScalarVolumePerTime": {
+                      "Value": 30,
+                      "Unit": "mL/min"
+                    }
+                  }
+                }
+              }
+            },
+            "allocation": {
+              "kind": "chest_tube",
+              "units": {
+                "chest_tube_kit": 1
+              },
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            "confirmed_time_s": 660.0599999996897
+          }
+        ],
+        "resources": {
+          "reserved": {
+            "occlusive_dressing_kit": 1,
+            "chest_tube_kit": 1
+          },
+          "held": {
+            "medic": 1
+          },
+          "allocated": [
+            {
+              "kind": "occlusive_dressing",
+              "units": {
+                "occlusive_dressing_kit": 1
+              },
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            {
+              "kind": "control_hemothorax_bleeding",
+              "units": {},
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            {
+              "kind": "chest_tube",
+              "units": {
+                "chest_tube_kit": 1
+              },
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            }
+          ],
+          "production_inventory": false
+        }
+      },
+      "evidence_directory": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_risk_v2/0"
+    },
+    {
+      "pattern_id": "blunt_thoracoabdominal_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "bundle": "AB",
+      "simulation_timeline": {
+        "initialization_s": 0,
+        "dynamic_onset_s": 60,
+        "decision_s": 180,
+        "end_s": 480,
+        "action_step_s": 0.02
+      },
+      "treatment_dependencies": [
+        "source control precedes fluid",
+        "hemothorax control precedes tube",
+        "intubation precedes ventilation",
+        "native actions separated by one .02 s tick"
+      ],
+      "resource_requirements": "V2 COSTS plus audited hemothorax/exposure resources; explicit host grant required",
+      "actual_treatment_actions": [
+        {
+          "time_s": 180.00000000001828,
+          "phase": "treatment:control_internal_bleeding",
+          "payload": {
+            "PatientAction": {
+              "Hemorrhage": {
+                "Type": "Internal",
+                "Compartment": "Spleen",
+                "Severity": {
+                  "Scalar0To1": {
+                    "Value": 0
+                  }
+                }
+              }
+            }
+          },
+          "state": "ACCEPTED",
+          "native_result": {
+            "phase": "treatment:control_internal_bleeding",
+            "index": 0,
+            "simulation_time_s": 180.00000000001828,
+            "accepted": true
+          }
+        },
+        {
+          "time_s": 180.02000000001829,
+          "phase": "treatment:fluid_resuscitation",
+          "payload": {
+            "PatientAction": {
+              "SubstanceCompoundInfusion": {
+                "SubstanceCompound": "Saline",
+                "BagVolume": {
+                  "ScalarVolume": {
+                    "Value": 500,
+                    "Unit": "mL"
+                  }
+                },
+                "Rate": {
+                  "ScalarVolumePerTime": {
+                    "Value": 100,
+                    "Unit": "mL/min"
+                  }
+                }
+              }
+            }
+          },
+          "state": "ACCEPTED",
+          "native_result": {
+            "phase": "treatment:fluid_resuscitation",
+            "index": 0,
+            "simulation_time_s": 180.02000000001829,
+            "accepted": true
+          }
+        },
+        {
+          "time_s": 180.0400000000183,
+          "phase": "treatment:needle_decompression",
+          "payload": {
+            "PatientAction": {
+              "NeedleDecompression": {
+                "Side": "Left",
+                "State": "On"
+              }
+            }
+          },
+          "state": "ACCEPTED",
+          "native_result": {
+            "phase": "treatment:needle_decompression",
+            "index": 0,
+            "simulation_time_s": 180.0400000000183,
+            "accepted": true
+          }
+        }
+      ],
+      "completed_joint_receipt": {
+        "digest": "85298ebaa6861ded89ccbf1eb8c06b683c7469acf873de29e9c663976c425b4b",
+        "plan": {
+          "patient_id": "composite-patient",
+          "pattern_id": "blunt_thoracoabdominal_composite_v2",
+          "bundle": "AB"
+        },
+        "state": "COMPLETED",
+        "actions": [
+          {
+            "kind": "control_internal_bleeding",
+            "state": "NATIVE_ACCEPTED",
+            "time_s": 180.00000000001828,
+            "payload": {
+              "PatientAction": {
+                "Hemorrhage": {
+                  "Type": "Internal",
+                  "Compartment": "Spleen",
+                  "Severity": {
+                    "Scalar0To1": {
+                      "Value": 0
+                    }
+                  }
+                }
+              }
+            },
+            "allocation": {
+              "kind": "control_internal_bleeding",
+              "units": {},
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            "confirmed_time_s": 180.02000000001829
+          },
+          {
+            "kind": "fluid_resuscitation",
+            "state": "NATIVE_ACCEPTED",
+            "time_s": 180.02000000001829,
+            "payload": {
+              "PatientAction": {
+                "SubstanceCompoundInfusion": {
+                  "SubstanceCompound": "Saline",
+                  "BagVolume": {
+                    "ScalarVolume": {
+                      "Value": 500,
+                      "Unit": "mL"
+                    }
+                  },
+                  "Rate": {
+                    "ScalarVolumePerTime": {
+                      "Value": 100,
+                      "Unit": "mL/min"
+                    }
+                  }
+                }
+              }
+            },
+            "allocation": {
+              "kind": "fluid_resuscitation",
+              "units": {
+                "saline_500ml_bag": 1
+              },
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            "confirmed_time_s": 180.0400000000183
+          },
+          {
+            "kind": "needle_decompression",
+            "state": "NATIVE_ACCEPTED",
+            "time_s": 180.0400000000183,
+            "payload": {
+              "PatientAction": {
+                "NeedleDecompression": {
+                  "Side": "Left",
+                  "State": "On"
+                }
+              }
+            },
+            "allocation": {
+              "kind": "needle_decompression",
+              "units": {
+                "needle_kit": 1
+              },
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            "confirmed_time_s": 180.0600000000183
+          }
+        ],
+        "resources": {
+          "reserved": {
+            "saline_500ml_bag": 1,
+            "needle_kit": 1
+          },
+          "held": {
+            "medic": 1
+          },
+          "allocated": [
+            {
+              "kind": "control_internal_bleeding",
+              "units": {},
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            {
+              "kind": "fluid_resuscitation",
+              "units": {
+                "saline_500ml_bag": 1
+              },
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            {
+              "kind": "needle_decompression",
+              "units": {
+                "needle_kit": 1
+              },
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            }
+          ],
+          "production_inventory": false
+        }
+      },
+      "evidence_directory": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_risk_v2/1"
+    },
+    {
+      "pattern_id": "blast_hemorrhage_respiratory_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "bundle": "AB",
+      "simulation_timeline": {
+        "initialization_s": 0,
+        "dynamic_onset_s": 60,
+        "decision_s": 180,
+        "end_s": 480,
+        "action_step_s": 0.02
+      },
+      "treatment_dependencies": [
+        "source control precedes fluid",
+        "hemothorax control precedes tube",
+        "intubation precedes ventilation",
+        "native actions separated by one .02 s tick"
+      ],
+      "resource_requirements": "V2 COSTS plus audited hemothorax/exposure resources; explicit host grant required",
+      "actual_treatment_actions": [
+        {
+          "time_s": 180.00000000001828,
+          "phase": "treatment:control_external_bleeding",
+          "payload": {
+            "PatientAction": {
+              "Hemorrhage": {
+                "Type": "External",
+                "Compartment": "RightLeg",
+                "Severity": {
+                  "Scalar0To1": {
+                    "Value": 0
+                  }
+                }
+              }
+            }
+          },
+          "state": "ACCEPTED",
+          "native_result": {
+            "phase": "treatment:control_external_bleeding",
+            "index": 0,
+            "simulation_time_s": 180.00000000001828,
+            "accepted": true
+          }
+        },
+        {
+          "time_s": 180.02000000001829,
+          "phase": "treatment:fluid_resuscitation",
+          "payload": {
+            "PatientAction": {
+              "SubstanceCompoundInfusion": {
+                "SubstanceCompound": "Saline",
+                "BagVolume": {
+                  "ScalarVolume": {
+                    "Value": 500,
+                    "Unit": "mL"
+                  }
+                },
+                "Rate": {
+                  "ScalarVolumePerTime": {
+                    "Value": 100,
+                    "Unit": "mL/min"
+                  }
+                }
+              }
+            }
+          },
+          "state": "ACCEPTED",
+          "native_result": {
+            "phase": "treatment:fluid_resuscitation",
+            "index": 0,
+            "simulation_time_s": 180.02000000001829,
+            "accepted": true
+          }
+        },
+        {
+          "time_s": 180.0400000000183,
+          "phase": "treatment:intubation",
+          "payload": {
+            "PatientAction": {
+              "Intubation": {
+                "Type": "Tracheal"
+              }
+            }
+          },
+          "state": "ACCEPTED",
+          "native_result": {
+            "phase": "treatment:intubation",
+            "index": 0,
+            "simulation_time_s": 180.0400000000183,
+            "accepted": true
+          }
+        },
+        {
+          "time_s": 180.0600000000183,
+          "phase": "treatment:mechanical_ventilation",
+          "payload": {
+            "EquipmentAction": {
+              "MechanicalVentilatorPressureControl": {
+                "MechanicalVentilatorMode": {
+                  "Connection": "On"
+                },
+                "Mode": "AssistedControl",
+                "FractionInspiredOxygen": {
+                  "Scalar0To1": {
+                    "Value": 0.21
+                  }
+                },
+                "InspiratoryPressure": {
+                  "ScalarPressure": {
+                    "Value": 13,
+                    "Unit": "cmH2O"
+                  }
+                },
+                "PositiveEndExpiratoryPressure": {
+                  "ScalarPressure": {
+                    "Value": 5,
+                    "Unit": "cmH2O"
+                  }
+                },
+                "RespirationRate": {
+                  "ScalarFrequency": {
+                    "Value": 12,
+                    "Unit": "1/min"
+                  }
+                },
+                "InspiratoryPeriod": {
+                  "ScalarTime": {
+                    "Value": 1,
+                    "Unit": "s"
+                  }
+                },
+                "Slope": {
+                  "ScalarTime": {
+                    "Value": 0.1,
+                    "Unit": "s"
+                  }
+                }
+              }
+            }
+          },
+          "state": "ACCEPTED",
+          "native_result": {
+            "phase": "treatment:mechanical_ventilation",
+            "index": 0,
+            "simulation_time_s": 180.0600000000183,
+            "accepted": true
+          }
+        }
+      ],
+      "completed_joint_receipt": {
+        "digest": "1b4ff6129079e3fb1fccf896185e0f7496b3c7c3d512f69b1d9aca009ebaa9a3",
+        "plan": {
+          "patient_id": "composite-patient",
+          "pattern_id": "blast_hemorrhage_respiratory_composite_v2",
+          "bundle": "AB"
+        },
+        "state": "COMPLETED",
+        "actions": [
+          {
+            "kind": "control_external_bleeding",
+            "state": "NATIVE_ACCEPTED",
+            "time_s": 180.00000000001828,
+            "payload": {
+              "PatientAction": {
+                "Hemorrhage": {
+                  "Type": "External",
+                  "Compartment": "RightLeg",
+                  "Severity": {
+                    "Scalar0To1": {
+                      "Value": 0
+                    }
+                  }
+                }
+              }
+            },
+            "allocation": {
+              "kind": "control_external_bleeding",
+              "units": {},
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            "confirmed_time_s": 180.02000000001829
+          },
+          {
+            "kind": "fluid_resuscitation",
+            "state": "NATIVE_ACCEPTED",
+            "time_s": 180.02000000001829,
+            "payload": {
+              "PatientAction": {
+                "SubstanceCompoundInfusion": {
+                  "SubstanceCompound": "Saline",
+                  "BagVolume": {
+                    "ScalarVolume": {
+                      "Value": 500,
+                      "Unit": "mL"
+                    }
+                  },
+                  "Rate": {
+                    "ScalarVolumePerTime": {
+                      "Value": 100,
+                      "Unit": "mL/min"
+                    }
+                  }
+                }
+              }
+            },
+            "allocation": {
+              "kind": "fluid_resuscitation",
+              "units": {
+                "saline_500ml_bag": 1
+              },
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            "confirmed_time_s": 180.0400000000183
+          },
+          {
+            "kind": "intubation",
+            "state": "NATIVE_ACCEPTED",
+            "time_s": 180.0400000000183,
+            "payload": {
+              "PatientAction": {
+                "Intubation": {
+                  "Type": "Tracheal"
+                }
+              }
+            },
+            "allocation": {
+              "kind": "intubation",
+              "units": {
+                "airway_kit": 1
+              },
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            "confirmed_time_s": 180.0600000000183
+          },
+          {
+            "kind": "mechanical_ventilation",
+            "state": "NATIVE_ACCEPTED",
+            "time_s": 180.0600000000183,
+            "payload": {
+              "EquipmentAction": {
+                "MechanicalVentilatorPressureControl": {
+                  "MechanicalVentilatorMode": {
+                    "Connection": "On"
+                  },
+                  "Mode": "AssistedControl",
+                  "FractionInspiredOxygen": {
+                    "Scalar0To1": {
+                      "Value": 0.21
+                    }
+                  },
+                  "InspiratoryPressure": {
+                    "ScalarPressure": {
+                      "Value": 13,
+                      "Unit": "cmH2O"
+                    }
+                  },
+                  "PositiveEndExpiratoryPressure": {
+                    "ScalarPressure": {
+                      "Value": 5,
+                      "Unit": "cmH2O"
+                    }
+                  },
+                  "RespirationRate": {
+                    "ScalarFrequency": {
+                      "Value": 12,
+                      "Unit": "1/min"
+                    }
+                  },
+                  "InspiratoryPeriod": {
+                    "ScalarTime": {
+                      "Value": 1,
+                      "Unit": "s"
+                    }
+                  },
+                  "Slope": {
+                    "ScalarTime": {
+                      "Value": 0.1,
+                      "Unit": "s"
+                    }
+                  }
+                }
+              }
+            },
+            "allocation": {
+              "kind": "mechanical_ventilation",
+              "units": {},
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            "confirmed_time_s": 180.08000000001832
+          }
+        ],
+        "resources": {
+          "reserved": {
+            "saline_500ml_bag": 1,
+            "airway_kit": 1
+          },
+          "held": {
+            "medic": 1,
+            "ventilator": 1
+          },
+          "allocated": [
+            {
+              "kind": "control_external_bleeding",
+              "units": {},
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            {
+              "kind": "fluid_resuscitation",
+              "units": {
+                "saline_500ml_bag": 1
+              },
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            {
+              "kind": "intubation",
+              "units": {
+                "airway_kit": 1
+              },
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            {
+              "kind": "mechanical_ventilation",
+              "units": {},
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            }
+          ],
+          "production_inventory": false
+        }
+      },
+      "evidence_directory": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_risk_v2/2"
+    },
+    {
+      "pattern_id": "fire_co_alveolar_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "bundle": "AB",
+      "simulation_timeline": {
+        "initialization_s": 0,
+        "dynamic_onset_s": 60,
+        "decision_s": 960,
+        "end_s": 1860,
+        "action_step_s": 0.02
+      },
+      "treatment_dependencies": [
+        "source control precedes fluid",
+        "hemothorax control precedes tube",
+        "intubation precedes ventilation",
+        "native actions separated by one .02 s tick"
+      ],
+      "resource_requirements": "V2 COSTS plus audited hemothorax/exposure resources; explicit host grant required",
+      "actual_treatment_actions": [
+        {
+          "time_s": 959.9999999994169,
+          "phase": "treatment:remove_from_exposure",
+          "payload": {
+            "EnvironmentAction": {
+              "ChangeEnvironmentalConditions": {
+                "EnvironmentalConditions": {
+                  "AmbientGas": [
+                    {
+                      "Name": "Nitrogen",
+                      "Amount": {
+                        "Scalar0To1": {
+                          "Value": 0.7896000000000001
+                        }
+                      }
+                    },
+                    {
+                      "Name": "Oxygen",
+                      "Amount": {
+                        "Scalar0To1": {
+                          "Value": 0.21
+                        }
+                      }
+                    },
+                    {
+                      "Name": "CarbonDioxide",
+                      "Amount": {
+                        "Scalar0To1": {
+                          "Value": 0.0004
+                        }
+                      }
+                    },
+                    {
+                      "Name": "CarbonMonoxide",
+                      "Amount": {
+                        "Scalar0To1": {
+                          "Value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "state": "ACCEPTED",
+          "native_result": {
+            "phase": "treatment:remove_from_exposure",
+            "index": 0,
+            "simulation_time_s": 959.9999999994169,
+            "accepted": true
+          }
+        },
+        {
+          "time_s": 960.0199999994169,
+          "phase": "treatment:supplemental_oxygen",
+          "payload": {
+            "PatientAction": {
+              "SupplementalOxygen": {
+                "Device": "NasalCannula",
+                "Flow": {
+                  "ScalarVolumePerTime": {
+                    "Value": 0.5,
+                    "Unit": "L/min"
+                  }
+                },
+                "Volume": {
+                  "ScalarVolume": {
+                    "Value": 425,
+                    "Unit": "L"
+                  }
+                }
+              }
+            }
+          },
+          "state": "ACCEPTED",
+          "native_result": {
+            "phase": "treatment:supplemental_oxygen",
+            "index": 0,
+            "simulation_time_s": 960.0199999994169,
+            "accepted": true
+          }
+        }
+      ],
+      "completed_joint_receipt": {
+        "digest": "552973632e524fc905b3794eefc40240f6f19c72ba790698aad959eeedb8d2e9",
+        "plan": {
+          "patient_id": "composite-patient",
+          "pattern_id": "fire_co_alveolar_composite_v2",
+          "bundle": "AB"
+        },
+        "state": "COMPLETED",
+        "actions": [
+          {
+            "kind": "remove_from_exposure",
+            "state": "NATIVE_ACCEPTED",
+            "time_s": 959.9999999994169,
+            "payload": {
+              "EnvironmentAction": {
+                "ChangeEnvironmentalConditions": {
+                  "EnvironmentalConditions": {
+                    "AmbientGas": [
+                      {
+                        "Name": "Nitrogen",
+                        "Amount": {
+                          "Scalar0To1": {
+                            "Value": 0.7896000000000001
+                          }
+                        }
+                      },
+                      {
+                        "Name": "Oxygen",
+                        "Amount": {
+                          "Scalar0To1": {
+                            "Value": 0.21
+                          }
+                        }
+                      },
+                      {
+                        "Name": "CarbonDioxide",
+                        "Amount": {
+                          "Scalar0To1": {
+                            "Value": 0.0004
+                          }
+                        }
+                      },
+                      {
+                        "Name": "CarbonMonoxide",
+                        "Amount": {
+                          "Scalar0To1": {
+                            "Value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "allocation": {
+              "kind": "remove_from_exposure",
+              "units": {},
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            "confirmed_time_s": 960.0199999994169
+          },
+          {
+            "kind": "supplemental_oxygen",
+            "state": "NATIVE_ACCEPTED",
+            "time_s": 960.0199999994169,
+            "payload": {
+              "PatientAction": {
+                "SupplementalOxygen": {
+                  "Device": "NasalCannula",
+                  "Flow": {
+                    "ScalarVolumePerTime": {
+                      "Value": 0.5,
+                      "Unit": "L/min"
+                    }
+                  },
+                  "Volume": {
+                    "ScalarVolume": {
+                      "Value": 425,
+                      "Unit": "L"
+                    }
+                  }
+                }
+              }
+            },
+            "allocation": {
+              "kind": "supplemental_oxygen",
+              "units": {},
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            "confirmed_time_s": 960.0399999994169
+          }
+        ],
+        "resources": {
+          "reserved": {},
+          "held": {
+            "evacuation_team": 1,
+            "medic": 1,
+            "nasal_cannula": 1,
+            "oxygen_425l_source": 1
+          },
+          "allocated": [
+            {
+              "kind": "remove_from_exposure",
+              "units": {},
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            {
+              "kind": "supplemental_oxygen",
+              "units": {},
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            }
+          ],
+          "production_inventory": false
+        }
+      },
+      "evidence_directory": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_risk_v2/3"
+    },
+    {
+      "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+      "profile_version": "301.v2_1.composite.candidate.1",
+      "bundle": "AB",
+      "simulation_timeline": {
+        "initialization_s": 0,
+        "dynamic_onset_s": 60,
+        "decision_s": 360,
+        "end_s": 660,
+        "action_step_s": 0.02
+      },
+      "treatment_dependencies": [
+        "source control precedes fluid",
+        "hemothorax control precedes tube",
+        "intubation precedes ventilation",
+        "native actions separated by one .02 s tick"
+      ],
+      "resource_requirements": "V2 COSTS plus audited hemothorax/exposure resources; explicit host grant required",
+      "actual_treatment_actions": [
+        {
+          "time_s": 359.99999999996254,
+          "phase": "treatment:remove_from_exposure",
+          "payload": {
+            "EnvironmentAction": {
+              "ChangeEnvironmentalConditions": {
+                "EnvironmentalConditions": {
+                  "AmbientGas": [
+                    {
+                      "Name": "Nitrogen",
+                      "Amount": {
+                        "Scalar0To1": {
+                          "Value": 0.7896000000000001
+                        }
+                      }
+                    },
+                    {
+                      "Name": "Oxygen",
+                      "Amount": {
+                        "Scalar0To1": {
+                          "Value": 0.21
+                        }
+                      }
+                    },
+                    {
+                      "Name": "CarbonDioxide",
+                      "Amount": {
+                        "Scalar0To1": {
+                          "Value": 0.0004
+                        }
+                      }
+                    },
+                    {
+                      "Name": "CarbonMonoxide",
+                      "Amount": {
+                        "Scalar0To1": {
+                          "Value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "state": "ACCEPTED",
+          "native_result": {
+            "phase": "treatment:remove_from_exposure",
+            "index": 0,
+            "simulation_time_s": 359.99999999996254,
+            "accepted": true
+          }
+        },
+        {
+          "time_s": 360.0199999999625,
+          "phase": "treatment:fluid_resuscitation",
+          "payload": {
+            "PatientAction": {
+              "SubstanceCompoundInfusion": {
+                "SubstanceCompound": "Saline",
+                "BagVolume": {
+                  "ScalarVolume": {
+                    "Value": 500,
+                    "Unit": "mL"
+                  }
+                },
+                "Rate": {
+                  "ScalarVolumePerTime": {
+                    "Value": 100,
+                    "Unit": "mL/min"
+                  }
+                }
+              }
+            }
+          },
+          "state": "ACCEPTED",
+          "native_result": {
+            "phase": "treatment:fluid_resuscitation",
+            "index": 0,
+            "simulation_time_s": 360.0199999999625,
+            "accepted": true
+          }
+        }
+      ],
+      "completed_joint_receipt": {
+        "digest": "44ea3e376945bb45183718480e8a8e5519e0f7dc8dbb966637afa5c272ab6697",
+        "plan": {
+          "patient_id": "composite-patient",
+          "pattern_id": "trapped_hypoxia_dehydration_composite_v2",
+          "bundle": "AB"
+        },
+        "state": "COMPLETED",
+        "actions": [
+          {
+            "kind": "remove_from_exposure",
+            "state": "NATIVE_ACCEPTED",
+            "time_s": 359.99999999996254,
+            "payload": {
+              "EnvironmentAction": {
+                "ChangeEnvironmentalConditions": {
+                  "EnvironmentalConditions": {
+                    "AmbientGas": [
+                      {
+                        "Name": "Nitrogen",
+                        "Amount": {
+                          "Scalar0To1": {
+                            "Value": 0.7896000000000001
+                          }
+                        }
+                      },
+                      {
+                        "Name": "Oxygen",
+                        "Amount": {
+                          "Scalar0To1": {
+                            "Value": 0.21
+                          }
+                        }
+                      },
+                      {
+                        "Name": "CarbonDioxide",
+                        "Amount": {
+                          "Scalar0To1": {
+                            "Value": 0.0004
+                          }
+                        }
+                      },
+                      {
+                        "Name": "CarbonMonoxide",
+                        "Amount": {
+                          "Scalar0To1": {
+                            "Value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "allocation": {
+              "kind": "remove_from_exposure",
+              "units": {},
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            "confirmed_time_s": 360.0199999999625
+          },
+          {
+            "kind": "fluid_resuscitation",
+            "state": "NATIVE_ACCEPTED",
+            "time_s": 360.0199999999625,
+            "payload": {
+              "PatientAction": {
+                "SubstanceCompoundInfusion": {
+                  "SubstanceCompound": "Saline",
+                  "BagVolume": {
+                    "ScalarVolume": {
+                      "Value": 500,
+                      "Unit": "mL"
+                    }
+                  },
+                  "Rate": {
+                    "ScalarVolumePerTime": {
+                      "Value": 100,
+                      "Unit": "mL/min"
+                    }
+                  }
+                }
+              }
+            },
+            "allocation": {
+              "kind": "fluid_resuscitation",
+              "units": {
+                "saline_500ml_bag": 1
+              },
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            "confirmed_time_s": 360.0399999999625
+          }
+        ],
+        "resources": {
+          "reserved": {
+            "saline_500ml_bag": 1
+          },
+          "held": {
+            "evacuation_team": 1,
+            "medic": 1
+          },
+          "allocated": [
+            {
+              "kind": "remove_from_exposure",
+              "units": {},
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            },
+            {
+              "kind": "fluid_resuscitation",
+              "units": {
+                "saline_500ml_bag": 1
+              },
+              "delivery": "NATIVE_ACCEPTED_NOT_FULL_DOSE"
+            }
+          ],
+          "production_inventory": false
+        }
+      },
+      "evidence_directory": "research_artifacts/v2_1_battle_composite_injuries_v0.1/experiments/raw/runtime_risk_v2/4"
+    }
+  ],
+  "production_enabled": false
+}

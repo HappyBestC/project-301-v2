@@ -1,0 +1,12 @@
+{
+  "patient_id": "m3c2-offline-wait-recheck-001-B",
+  "plan_id": "m3c2-offline-wait-recheck-001-B-plan",
+  "state": "TIME_PROTOCOL_BLOCKED",
+  "worker_pid": null,
+  "last_acknowledged_time_s": 480.0,
+  "observations": 301,
+  "treatment_count": 0,
+  "wait_start_s": 180.0,
+  "wait_end_s": 181.0,
+  "mode": "offline_test"
+}

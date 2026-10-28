@@ -1,0 +1,59 @@
+{
+  "risk_acceptance_id": "301.v2_1.composite.limited_research_risk_acceptance.2026-10-13.1",
+  "authority": "用户在当前会话中明确接受四项固定复合 Profile 限定研究风险",
+  "record_date": "2026-10-13",
+  "clinical_safety_certification": false,
+  "automatic_admission": false,
+  "production_enabled": false,
+  "inherited_from_v2": false,
+  "profiles": {
+    "penetrating_thoracic_composite_v2": {
+      "profile": "301.v2_1.thoracic.aligned_onsets.2",
+      "fixed_timeline": {
+        "hemothorax_onset_s": 60,
+        "pneumothorax_onset_s": 540,
+        "treatment_s": 660,
+        "end_s": 960
+      },
+      "accepted_scope": [
+        "局部救助机制改善，不能宣称缺氧完全解除、患者整体安全或治愈",
+        "保留 Hypoxia、Tachycardia、Hypernatremia 及全部原始负残余；须核验组合级数值解释",
+        "原同时起病且残留 BrainOxygenDeficit 的旧方案继续 BLOCKED；新方案不得豁免未处理严重/危重事件"
+      ]
+    },
+    "fire_co_alveolar_composite_v2": {
+      "profile": "301.v2_1.composite.candidate.1",
+      "accepted_scope": [
+        "固定 Severity、氧疗参数、窗口及组合，不扩展",
+        "CO负荷和氧合改善分别评价；PaCO₂39.24→42.63、pH7.4212→7.3885的不利变化完整记录",
+        "Hypernatremia保留，独立于V2.0和其他复合风险批准",
+        "新危重事件、超范围恶化或异常执行继续 BLOCKED"
+      ]
+    },
+    "trapped_hypoxia_dehydration_composite_v2": {
+      "profile": "301.v2_1.composite.candidate.1",
+      "accepted_scope": [
+        "固定初始化、救助协议及观察窗",
+        "解除Hypoxia、改善体液/血量不等于脱水纠正或整体健康",
+        "Antidiuresis和Hypernatremia持续；Na149.79 vs150.27原始轨迹完整保留",
+        "检查治疗前后趋势，区分原有异常持续与治疗新恶化，不因为对照也异常就自动豁免"
+      ]
+    },
+    "blast_hemorrhage_respiratory_composite_v2": {
+      "profile": "301.v2_1.composite.candidate.1",
+      "accepted_scope": [
+        "固定配置、动作、时序、观察窗",
+        "出血/通气局部改善不等于完全恢复",
+        "完整保留 Tachypnea 约184.44–309.00秒并核对原生和Runtime记录一致",
+        "只接受已验证暂态范围；延长、终点持续、明显加重或新增严重异常继续阻断"
+      ]
+    }
+  },
+  "shared_requirements": [
+    "不自动ADMITTED；仍需完成联合救助、合法Observation、安全检查、真实Runtime E2E、回归及组合级工程验收",
+    "原有终末及危重否决、关键缺测拒绝、资源和时序约束保持",
+    "不删事件、不改原始数值、不静默放宽安全规则、不调参数制造成功",
+    "新风险或超范围变化单独确认；不得重复询问已明确接受的同一固定Profile风险",
+    "V2.0稳定基线及历史实验保持完整，生产关闭"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "SimulationTime": {
+    "ScalarTime": {
+      "Unit": "s"
+    }
+  },
+  "ActiveActions": {
+    "AnyAction": [
+      {
+        "EquipmentAction": {
+          "BagValveMaskConfiguration": {
+            "BagValveMaskAction": {
+              "EquipmentAction": {
+                "Action": {}
+              }
+            },
+            "Configuration": {
+              "Connection": "On"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

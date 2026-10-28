@@ -1,0 +1,10 @@
+{
+  "AirwayMode": "MechanicalVentilation",
+  "SimulationTime": {
+    "ScalarTime": {
+      "Value": 0.1,
+      "Unit": "s"
+    }
+  },
+  "ActiveActions": {}
+}

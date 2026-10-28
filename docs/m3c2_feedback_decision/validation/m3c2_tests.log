@@ -1,0 +1,117 @@
+...................................F.FF.........                         [100%]
+=================================== FAILURES ===================================
+______________ test_dynamic_preserves_scope_and_identity[action] _______________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-95/test_dynamic_preserves_scope_a0')
+change = 'action'
+
+    
+    @pytest.mark.parametrize('change',['action','target','severity','injury','patient','source'])
+    def test_dynamic_preserves_scope_and_identity(tmp_path,change):
+        h=FeedbackResearchRun(tmp_path,'r','offline_test',exploratory=True)
+        try:
+            h.initialize();p=h.patients['B'];source,=p.runtime.registry.sources();plan=executor_plan(p.plan)
+            if change=='patient':
+                wrong=plan.model_copy(update={'patient_id':'other'})
+                with pytest.raises(V2Error):p.runtime.execute_plan(wrong,request_id='bad',context_ref=p.runtime.build_context().context_ref)
+            elif change=='source':
+                p.runtime.session.actions['Hemorrhage'][0]['Compartment']='Spleen'
+                asyncio.run(h.schedule('B'))
+                with pytest.raises(Exception):h.execute('B')
+>           else:
+                  
+
+tests/m3c2/test_feedback.py:128: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.11/site-packages/pydantic/main.py:1033: in __setattr__
+    setattr_handler(self, name, value)  # call here to not memo on possibly unknown fields
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+model = V2Treatment_control_external_bleeding(action_type='control_external_bleeding', compartment='RightLeg')
+name = 'action_type', val = 'fluid_resuscitation'
+
+>       'validate_assignment': lambda model, name, val: model.__pydantic_validator__.validate_assignment(model, name, val),  # pyright: ignore[reportAssignmentType]
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        'private': _private_setattr_handler,
+        'cached_property': lambda model, name, val: model.__dict__.__setitem__(name, val),
+        'extra_known': lambda model, name, val: _object_setattr(model, name, val),
+    }
+E   pydantic_core._pydantic_core.ValidationError: 1 validation error for V2Treatment_control_external_bleeding
+E   action_type
+E     Input should be 'control_external_bleeding' [type=literal_error, input_value='fluid_resuscitation', input_type=str]
+E       For further information visit https://errors.pydantic.dev/2.12/v/literal_error
+
+.venv/lib/python3.11/site-packages/pydantic/main.py:111: ValidationError
+_____________ test_dynamic_preserves_scope_and_identity[severity] ______________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-95/test_dynamic_preserves_scope_a2')
+change = 'severity'
+
+    
+    @pytest.mark.parametrize('change',['action','target','severity','injury','patient','source'])
+    def test_dynamic_preserves_scope_and_identity(tmp_path,change):
+        h=FeedbackResearchRun(tmp_path,'r','offline_test',exploratory=True)
+        try:
+            h.initialize();p=h.patients['B'];source,=p.runtime.registry.sources();plan=executor_plan(p.plan)
+            if change=='patient':
+                wrong=plan.model_copy(update={'patient_id':'other'})
+                with pytest.raises(V2Error):p.runtime.execute_plan(wrong,request_id='bad',context_ref=p.runtime.build_context().context_ref)
+            elif change=='source':
+                p.runtime.session.actions['Hemorrhage'][0]['Compartment']='Spleen'
+                asyncio.run(h.schedule('B'))
+                with pytest.raises(Exception):h.execute('B')
+            else:
+                if change=='action':plan=type(plan)(patient_id=plan.patient_id,actions=[{'action_type':'fluid_resuscitation'}])
+>               if change=='target':plan.actions[0].compartment='LeftLeg'
+                                      ^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/m3c2/test_feedback.py:130: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = InjurySource(patient_id='r-B', injury_id='e2304f45ac954d51adfa3662028d1ce4', injury_type='external_hemorrhage', native...rent_severity=0.4, source_version=1, compartment='RightLeg', side=None, authorized=True, active=True, controlled=False)
+name = 'initial_severity', value = 0.6
+
+>   ???
+E   dataclasses.FrozenInstanceError: cannot assign to field 'initial_severity'
+
+<string>:4: FrozenInstanceError
+______________ test_dynamic_preserves_scope_and_identity[injury] _______________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-95/test_dynamic_preserves_scope_a3')
+change = 'injury'
+
+    
+    @pytest.mark.parametrize('change',['action','target','severity','injury','patient','source'])
+    def test_dynamic_preserves_scope_and_identity(tmp_path,change):
+        h=FeedbackResearchRun(tmp_path,'r','offline_test',exploratory=True)
+        try:
+            h.initialize();p=h.patients['B'];source,=p.runtime.registry.sources();plan=executor_plan(p.plan)
+            if change=='patient':
+                wrong=plan.model_copy(update={'patient_id':'other'})
+                with pytest.raises(V2Error):p.runtime.execute_plan(wrong,request_id='bad',context_ref=p.runtime.build_context().context_ref)
+            elif change=='source':
+                p.runtime.session.actions['Hemorrhage'][0]['Compartment']='Spleen'
+                asyncio.run(h.schedule('B'))
+                with pytest.raises(Exception):h.execute('B')
+            else:
+                if change=='action':plan=type(plan)(patient_id=plan.patient_id,actions=[{'action_type':'fluid_resuscitation'}])
+                if change=='target':plan.actions[0].compartment='LeftLeg'
+>               if change=='severity':source=replace(source,initial_severity=.6)
+                                    ^^^^^^^^^^^^^^^^^^
+
+tests/m3c2/test_feedback.py:131: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = InjurySource(patient_id='r-B', injury_id='1df0349092204346b6082560630083f9', injury_type='external_hemorrhage', native...rent_severity=0.4, source_version=1, compartment='RightLeg', side=None, authorized=True, active=True, controlled=False)
+name = 'injury_type', value = 'abdominal_internal_hemorrhage'
+
+>   ???
+E   dataclasses.FrozenInstanceError: cannot assign to field 'injury_type'
+
+<string>:4: FrozenInstanceError
+=========================== short test summary info ============================
+FAILED tests/m3c2/test_feedback.py::test_dynamic_preserves_scope_and_identity[action]
+FAILED tests/m3c2/test_feedback.py::test_dynamic_preserves_scope_and_identity[severity]
+FAILED tests/m3c2/test_feedback.py::test_dynamic_preserves_scope_and_identity[injury]
+3 failed, 45 passed in 36.27s

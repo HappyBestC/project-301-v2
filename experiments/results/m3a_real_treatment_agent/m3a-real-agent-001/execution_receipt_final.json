@@ -1,0 +1,113 @@
+{
+  "plan_id": "02dbb087800b414ba65355c45d68d9ee",
+  "request_id": "m3a-real-agent-001-execute",
+  "patient_id": "m3a-real-agent-001-patient",
+  "run_id": "m3a-real-agent-001",
+  "session_epoch": "719a1234a2444d4aa1d72f61da13bb19",
+  "context_ref": "dfbfb332df084f76b520a2bb471e7007",
+  "plan_sha256": "25c6d2194676b583fab589d8c8f20f05e04c246d5e475cd841d28a575a46f982",
+  "plan": {
+    "patient_id": "m3a-real-agent-001-patient",
+    "actions": [
+      {
+        "action_type": "control_external_bleeding",
+        "compartment": "RightLeg"
+      }
+    ]
+  },
+  "protocol_version": "301.v2.phase1.research.1",
+  "production_enabled": false,
+  "status": "COMPLETED",
+  "actions": [
+    {
+      "action_id": "04432a56aefc4775865bb594a98b8793",
+      "action_index": 0,
+      "action_type": "control_external_bleeding",
+      "business_action": {
+        "action_type": "control_external_bleeding",
+        "compartment": "RightLeg"
+      },
+      "target": {
+        "patient_id": "m3a-real-agent-001-patient",
+        "injury_id": "b854127c777f4e2c9bd7831a4ce1f636",
+        "injury_type": "external_hemorrhage",
+        "native_identity": [
+          "Hemorrhage",
+          "RightLeg"
+        ],
+        "source_version": 1,
+        "compartment": "RightLeg"
+      },
+      "protocol_id": "control_external_bleeding.phase1.1",
+      "native_payload": {
+        "PatientAction": {
+          "Hemorrhage": {
+            "Type": "External",
+            "Compartment": "RightLeg",
+            "Severity": {
+              "Scalar0To1": {
+                "Value": 0
+              }
+            }
+          }
+        }
+      },
+      "proposed_time_s": 180.00000000001828,
+      "submitted_time_s": 180.00000000001828,
+      "accepted": true,
+      "state": "COMPLETED",
+      "lifecycle": "COMPLETED",
+      "native_result": {
+        "phase": "treatment",
+        "index": 0,
+        "simulation_time_s": 180.00000000001828,
+        "accepted": true
+      },
+      "error": null,
+      "validation": {
+        "schema": "passed",
+        "source": "passed",
+        "scope": "passed",
+        "resource": "passed"
+      },
+      "resource": {
+        "allocated_units": {},
+        "allocation_ids": [
+          "caf90e8249ea4412b3a4e51c632c7d9e"
+        ],
+        "action_instance_id": "m3a-real-agent-001-action-1",
+        "consumption": "no stock requirement for this research proxy",
+        "submission_status": "accepted",
+        "delivery_status": "completed",
+        "native_delivery_evidence": {
+          "source_control_confirmed": true,
+          "cumulative_loss_mL": 173.0659699721137,
+          "capacity_restoration_claimed": false
+        }
+      },
+      "device_state": {
+        "observed_at_s": 181.0000000000188,
+        "airway_mode": "Free",
+        "intubation": "Off"
+      },
+      "physiological_response": "NOT_EVALUATED",
+      "evaluation": "NOT_RUN",
+      "already_applied_noop": false,
+      "delivery": {
+        "source_control_confirmed": true,
+        "cumulative_loss_mL": 173.0659699721137,
+        "capacity_restoration_claimed": false
+      },
+      "last_verified_time_s": 181.0000000000188
+    }
+  ],
+  "error": null,
+  "resource_reservation": {
+    "authority_kind": "explicit_research_fixture",
+    "shared_plan_id": "m3a-real-agent-001-plan",
+    "allocation_ids": [
+      "caf90e8249ea4412b3a4e51c632c7d9e"
+    ],
+    "production_inventory": false
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "shared": {
+    "tests": 90,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "time": 2.54
+  },
+  "regression": {
+    "tests": 543,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "time": 18.798
+  },
+  "new_m2b_count": 44,
+  "m2a_regression_count": 46,
+  "total_passed": 633,
+  "demo": {
+    "records": 14,
+    "a_allocated": true,
+    "b_initial_allocated": false,
+    "b_after_release_allocated": true,
+    "final_ventilator_available": 1,
+    "final_airway_kit_consumed": 1,
+    "conservation_verified": true
+  }
+}

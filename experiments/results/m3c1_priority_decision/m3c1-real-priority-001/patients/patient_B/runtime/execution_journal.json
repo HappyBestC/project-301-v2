@@ -1,0 +1,9 @@
+{
+  "version": "301.v2.execution.phase1.1",
+  "run_id": "m3c1-real-priority-001",
+  "patient_id": "m3c1-real-priority-001-B",
+  "session_epoch": "46f286f98c7b49a68805b0b29233e097",
+  "production_enabled": false,
+  "plans": {},
+  "events": []
+}

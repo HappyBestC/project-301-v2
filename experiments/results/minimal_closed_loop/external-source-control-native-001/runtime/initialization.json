@@ -1,0 +1,9 @@
+{
+  "mode": "verified_healthy_state",
+  "configuration": null,
+  "patient": "StandardMale",
+  "pulse_version": "4.3.2",
+  "healthy_or_condition_elapsed_s": 60,
+  "injury_elapsed_s": 120,
+  "condition_exists_since_initialization": false
+}

@@ -1,0 +1,44 @@
+{
+  "SimulationTime": {
+    "ScalarTime": {
+      "Unit": "s"
+    }
+  },
+  "ActiveActions": {
+    "AnyAction": [
+      {
+        "PatientAction": {
+          "SubstanceBolus": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "Substance": "Morphine",
+            "AdministrationDuration": {
+              "ScalarTime": {
+                "Value": 2,
+                "Unit": "s"
+              }
+            },
+            "Concentration": {
+              "ScalarMassPerVolume": {
+                "Value": 1000,
+                "Unit": "ug/mL"
+              }
+            },
+            "Dose": {
+              "ScalarVolume": {
+                "Value": 1,
+                "Unit": "mL"
+              }
+            },
+            "TotalInfusedDose": {
+              "ScalarVolume": {
+                "Unit": "mL"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

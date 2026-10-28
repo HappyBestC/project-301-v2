@@ -1,0 +1,13 @@
+{
+  "schema_version": "301.resource.priority.m3c1.1",
+  "run_id": "m3c1-fixed-a-native-001",
+  "simulation_time_s": 180.0,
+  "resource_state_version": 0,
+  "decision_type": "prioritize",
+  "ordered_patient_ids": [
+    "m3c1-fixed-a-native-001-A",
+    "m3c1-fixed-a-native-001-B"
+  ],
+  "reasoning_summary": "Engineering baseline: fixed_A_first",
+  "refusal_reason": null
+}

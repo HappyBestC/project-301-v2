@@ -1,0 +1,23 @@
+{
+  "authority": "explicit_study_host",
+  "reserved": {
+    "occlusive_dressing_kit": 1
+  },
+  "held": {
+    "medic": 1
+  },
+  "permissions": [],
+  "allocation": [
+    {
+      "action": "occlusive_dressing",
+      "allocated_units": {
+        "occlusive_dressing_kit": 1
+      },
+      "at_s": 659.9999999996897,
+      "delivery": "not_assumed"
+    }
+  ],
+  "production_inventory": false,
+  "protected_route_available": true,
+  "receiving_environment_verified": true
+}

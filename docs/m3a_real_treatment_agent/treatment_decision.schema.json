@@ -1,0 +1,75 @@
+{
+  "$defs": {
+    "DraftAction": {
+      "additionalProperties": false,
+      "properties": {
+        "action_type": {
+          "const": "control_external_bleeding",
+          "title": "Action Type",
+          "type": "string"
+        },
+        "compartment": {
+          "const": "RightLeg",
+          "title": "Compartment",
+          "type": "string"
+        }
+      },
+      "required": [
+        "action_type",
+        "compartment"
+      ],
+      "title": "DraftAction",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "301.treatment.decision.m3a.1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "decision_type": {
+      "enum": [
+        "propose_plan",
+        "defer",
+        "insufficient_evidence"
+      ],
+      "title": "Decision Type",
+      "type": "string"
+    },
+    "actions": {
+      "items": {
+        "$ref": "#/$defs/DraftAction"
+      },
+      "title": "Actions",
+      "type": "array"
+    },
+    "reasoning_summary": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "title": "Reasoning Summary",
+      "type": "string"
+    },
+    "refusal_reason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Refusal Reason"
+    }
+  },
+  "required": [
+    "schema_version",
+    "decision_type",
+    "actions",
+    "reasoning_summary",
+    "refusal_reason"
+  ],
+  "title": "TreatmentDecisionDraft",
+  "type": "object"
+}

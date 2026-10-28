@@ -1,0 +1,6 @@
+{
+  "status": "PASS_OFFLINE_ONLY",
+  "preflight_failure_blocks_native_initialization": true,
+  "real_llm_calls": 0,
+  "native_treatments": 0
+}

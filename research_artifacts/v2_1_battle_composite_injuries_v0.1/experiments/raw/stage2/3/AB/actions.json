@@ -1,0 +1,160 @@
+[
+  {
+    "time_s": 60.00000000000378,
+    "phase": "injury",
+    "payload": {
+      "PatientAction": {
+        "ImpairedAlveolarExchangeExacerbation": {
+          "Severity": {
+            "Scalar0To1": {
+              "Value": 0.4
+            }
+          }
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "injury",
+      "index": 0,
+      "simulation_time_s": 60.00000000000378,
+      "accepted": true
+    }
+  },
+  {
+    "time_s": 60.00000000000378,
+    "phase": "environment",
+    "payload": {
+      "EnvironmentAction": {
+        "ChangeEnvironmentalConditions": {
+          "EnvironmentalConditions": {
+            "AmbientGas": [
+              {
+                "Name": "Nitrogen",
+                "Amount": {
+                  "Scalar0To1": {
+                    "Value": 0.7846000000000001
+                  }
+                }
+              },
+              {
+                "Name": "Oxygen",
+                "Amount": {
+                  "Scalar0To1": {
+                    "Value": 0.21
+                  }
+                }
+              },
+              {
+                "Name": "CarbonDioxide",
+                "Amount": {
+                  "Scalar0To1": {
+                    "Value": 0.0004
+                  }
+                }
+              },
+              {
+                "Name": "CarbonMonoxide",
+                "Amount": {
+                  "Scalar0To1": {
+                    "Value": 0.005
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "environment",
+      "index": 0,
+      "simulation_time_s": 60.00000000000378,
+      "accepted": true
+    }
+  },
+  {
+    "time_s": 959.9999999994169,
+    "phase": "treatment:remove_from_exposure",
+    "payload": {
+      "EnvironmentAction": {
+        "ChangeEnvironmentalConditions": {
+          "EnvironmentalConditions": {
+            "AmbientGas": [
+              {
+                "Name": "Nitrogen",
+                "Amount": {
+                  "Scalar0To1": {
+                    "Value": 0.7896000000000001
+                  }
+                }
+              },
+              {
+                "Name": "Oxygen",
+                "Amount": {
+                  "Scalar0To1": {
+                    "Value": 0.21
+                  }
+                }
+              },
+              {
+                "Name": "CarbonDioxide",
+                "Amount": {
+                  "Scalar0To1": {
+                    "Value": 0.0004
+                  }
+                }
+              },
+              {
+                "Name": "CarbonMonoxide",
+                "Amount": {
+                  "Scalar0To1": {
+                    "Value": 0
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "treatment:remove_from_exposure",
+      "index": 0,
+      "simulation_time_s": 959.9999999994169,
+      "accepted": true
+    }
+  },
+  {
+    "time_s": 960.0199999994169,
+    "phase": "treatment:supplemental_oxygen",
+    "payload": {
+      "PatientAction": {
+        "SupplementalOxygen": {
+          "Device": "NasalCannula",
+          "Flow": {
+            "ScalarVolumePerTime": {
+              "Value": 0.5,
+              "Unit": "L/min"
+            }
+          },
+          "Volume": {
+            "ScalarVolume": {
+              "Value": 425,
+              "Unit": "L"
+            }
+          }
+        }
+      }
+    },
+    "state": "ACCEPTED",
+    "native_result": {
+      "phase": "treatment:supplemental_oxygen",
+      "index": 0,
+      "simulation_time_s": 960.0199999994169,
+      "accepted": true
+    }
+  }
+]

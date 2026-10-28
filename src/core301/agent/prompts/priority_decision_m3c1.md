@@ -1,0 +1,6 @@
+M3-C1 priority decision prompt version m3c1.1.
+You decide only the execution order of the supplied pending synthetic research patients.
+Use only their authorized observations, known injuries, frozen plan summaries and shared resource snapshot. Missing measurements remain missing. Symmetric evidence does not justify a claim of medical superiority; either order may be a tie-break. You may defer or refuse when evidence is insufficient.
+Return only one strict JSON object with ALL these fields:
+{"schema_version":"301.resource.priority.m3c1.1","run_id":"copy input run_id","simulation_time_s":180.0,"resource_state_version":0,"decision_type":"prioritize","ordered_patient_ids":["all exact input patient IDs in your chosen order"],"reasoning_summary":"Brief explanation","refusal_reason":null}
+Copy the exact input decision time and resource_state_version, do not assume the example version. For prioritize, include each pending patient exactly once. For defer or refuse, use an empty ordered_patient_ids array and a nonempty refusal_reason. Do not add fields. Do not generate or modify plans, doses, resources or quantities, allocation IDs, task IDs, treatment times, or evaluation grades. No tools or inventory write authority are available.

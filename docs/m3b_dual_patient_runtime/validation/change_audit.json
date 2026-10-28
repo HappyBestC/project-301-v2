@@ -1,0 +1,29 @@
+{
+  "existing_files_checked": 838,
+  "changed_existing_files": [],
+  "missing_existing_files": [],
+  "locked_rules_verified": 14,
+  "run_integrity": {
+    "m3b-isolation-002": {
+      "files": 11,
+      "all_sha_match": true
+    },
+    "m3b-offline-001": {
+      "files": 44,
+      "all_sha_match": true
+    },
+    "m3b-dual-native-001": {
+      "files": 57,
+      "all_sha_match": true
+    },
+    "m3b-isolation-001": {
+      "files": 5,
+      "all_sha_match": true
+    }
+  },
+  "native_library_sha256": "f7eeb22ccef5392b2c0e2698037bc0aa47b0bf595f959c4c8dbc94f5d48023cf",
+  "isolation_state_comparison": {
+    "text_equal": false,
+    "complete_parsed_state_equal": true
+  }
+}

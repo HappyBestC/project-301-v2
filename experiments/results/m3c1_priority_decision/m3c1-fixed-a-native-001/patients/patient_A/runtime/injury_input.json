@@ -1,0 +1,10 @@
+{
+  "patient_id": "m3c1-fixed-a-native-001-A",
+  "injuries": [
+    {
+      "injury_type": "external_hemorrhage",
+      "severity": 0.4,
+      "compartment": "RightLeg"
+    }
+  ]
+}

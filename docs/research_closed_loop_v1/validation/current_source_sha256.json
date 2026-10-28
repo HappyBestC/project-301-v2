@@ -1,0 +1,7 @@
+{
+  "src/core301/research_runtime/verify.py": "24a5895fc1a347f88796959c7d54dc8c1009eeaf903c5d923bef8df167d0a5a8",
+  "src/core301/research_runtime/runner.py": "f191ddc6a2c463ab72132e63c65ff41379ea6ba53803d374430da86c08bbdb04",
+  "src/core301/research_runtime/evaluation.py": "c3ba9d723b0df5f46c7867891722dee8ff86c38df28824799fc0ad44dd975fc3",
+  "src/core301/research_runtime/bridge.py": "2c8f2314f84e0aa226265540456ee446fb80eea762efd167c84111733dc970f3",
+  "src/core301/research_runtime/__init__.py": "a62bd72ed9037df2d375c2c15131602a7c37c89097d77f4bc8a25e71a1a2e3d2"
+}
