@@ -7,8 +7,9 @@ from typing import Protocol
 from core301.dispatch.minimal import api
 from core301.paths import PROJECT_ROOT
 from .audit import safe_error, sha256, write_json
+from .scenarios import scenario_paths
 
-REPLAY_PATH = PROJECT_ROOT / 'runs/medical_resources_deepseek_001/schedule.json'
+REPLAY_PATH = scenario_paths('run_001')['replay_schedule']
 
 
 class SchedulingProvider(Protocol):
@@ -18,6 +19,8 @@ class SchedulingProvider(Protocol):
 
 class ReplaySchedulingProvider:
     def __init__(self, path: Path = REPLAY_PATH):
+        if path is None:
+            raise ValueError('Scenario has no replay schedule')
         self.path = Path(path)
 
     async def propose(self, dispatch_input, *, feedback, previous_response, audit_dir):

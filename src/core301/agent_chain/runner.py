@@ -9,33 +9,47 @@ from core301.dispatch.minimal import api
 from .audit import RESULTS_ROOT, create_run, finish_run, safe_error, write_json
 from .graph import build_graph
 from .nodes import Providers
-from .scheduling import FakeSchedulingProvider, LLMSchedulingProvider, REPLAY_PATH, ReplaySchedulingProvider
+from .scheduling import FakeSchedulingProvider, LLMSchedulingProvider, ReplaySchedulingProvider
+from .scenarios import SCENARIOS, scenario_paths
 from .treatment import FakeTreatmentProvider, LLMTreatmentProvider, TemplateTreatmentProvider, template_decisions
 
 
-def mode_providers(mode: str) -> Providers:
+def _mode_paths(mode: str, scenario: str) -> dict:
+    if mode not in ('offline', 'native_replay', 'live'):
+        raise ValueError('Unknown mode')
+    paths = scenario_paths(scenario)
+    if mode in ('offline', 'native_replay') and paths['replay_schedule'] is None:
+        raise ValueError(f'{scenario} has no replay schedule; {mode} mode is unavailable')
+    return paths
+
+
+def mode_providers(mode: str, scenario: str = 'run_001') -> Providers:
+    paths = _mode_paths(mode, scenario)
     if mode == 'offline':
-        return Providers(FakeTreatmentProvider(template_decisions()), FakeSchedulingProvider([api.read(REPLAY_PATH)]))
+        return Providers(FakeTreatmentProvider(template_decisions(paths['dataset_dir'])),
+                         FakeSchedulingProvider([api.read(paths['replay_schedule'])]))
     if mode == 'native_replay':
-        return Providers(TemplateTreatmentProvider(), ReplaySchedulingProvider())
+        return Providers(TemplateTreatmentProvider(paths['dataset_dir']),
+                         ReplaySchedulingProvider(paths['replay_schedule']))
     if mode == 'live':
         return Providers(LLMTreatmentProvider(), LLMSchedulingProvider())
     raise ValueError('Unknown mode')
 
 
 async def run_chain(mode: str, run_id: str, *, max_schedule_attempts: int = 3,
-                    root: Path = RESULTS_ROOT, providers: Providers | None = None) -> dict:
+                    root: Path = RESULTS_ROOT, providers: Providers | None = None,
+                    scenario: str = 'run_001') -> dict:
     if type(max_schedule_attempts) is not int or not 1 <= max_schedule_attempts <= 5:
         raise ValueError('max_schedule_attempts must be between 1 and 5')
-    if mode not in ('offline', 'native_replay', 'live'):
-        raise ValueError('Unknown mode')
-    providers = providers or mode_providers(mode)
+    _mode_paths(mode, scenario)  # Reject unavailable replay before providers or any run files.
+    providers = providers or mode_providers(mode, scenario)
     config = {'horizon_min': 120.0, 'observation_time_min': 60.0, 'max_schedule_attempts': max_schedule_attempts}
     directory = create_run(run_id, mode, {'treatment': type(providers.treatment).__name__,
                            'scheduling': type(providers.scheduling).__name__,
-                           'pulse': 'FakePulse' if mode == 'offline' else 'NativePulse'}, config, root)
+                           'pulse': 'FakePulse' if mode == 'offline' else 'NativePulse'}, config, root,
+                           scenario=scenario)
     initial = {'run_id': run_id, 'run_dir': str(directory), 'mode': mode, 'horizon_min': 120.0,
-               'status': 'running', 'schedule_attempts': [], 'feedback': None,
+               'scenario': scenario, 'status': 'running', 'schedule_attempts': [], 'feedback': None,
                'previous_response': None, 'accepted_schedule': None}
     started = perf_counter()
     try:
@@ -64,9 +78,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--mode', choices=('offline', 'native_replay', 'live'), required=True)
     parser.add_argument('--run-id', required=True)
+    parser.add_argument('--scenario', choices=tuple(SCENARIOS), default='run_001')
     parser.add_argument('--max-schedule-attempts', type=int, default=3)
     args = parser.parse_args()
-    summary = asyncio.run(run_chain(args.mode, args.run_id, max_schedule_attempts=args.max_schedule_attempts))
+    summary = asyncio.run(run_chain(args.mode, args.run_id, max_schedule_attempts=args.max_schedule_attempts,
+                                    scenario=args.scenario))
     print(json.dumps(summary, ensure_ascii=False, indent=2, allow_nan=False))
     return 0 if summary['status'] in ('completed', 'execution_partial') else 1
 

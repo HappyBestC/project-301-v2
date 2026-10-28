@@ -6,6 +6,7 @@ class ChainState(TypedDict, total=False):
     run_id: str
     run_dir: str
     mode: str
+    scenario: str
     horizon_min: float
     cases: list
     resources: dict

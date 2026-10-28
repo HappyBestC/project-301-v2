@@ -7,6 +7,7 @@ import re
 import subprocess
 
 from core301.paths import PROJECT_ROOT
+from .scenarios import SCENARIOS, scenario_paths
 
 RESULTS_ROOT = PROJECT_ROOT / 'experiments/results/agent_chain'
 KNOWN_SIMPLIFICATIONS = [
@@ -35,7 +36,8 @@ def safe_error(exc: Exception) -> dict:
 
 
 def create_run(run_id: str, mode: str, providers: dict, config: dict,
-               root: Path = RESULTS_ROOT) -> Path:
+               root: Path = RESULTS_ROOT, *, scenario: str = 'run_001') -> Path:
+    paths = scenario_paths(scenario)
     if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.-]{0,127}', run_id):
         raise ValueError('run_id must be a single safe directory name')
     directory = Path(root) / run_id
@@ -44,6 +46,13 @@ def create_run(run_id: str, mode: str, providers: dict, config: dict,
     dirty = bool(subprocess.check_output(['git', 'status', '--porcelain'], cwd=PROJECT_ROOT, text=True))
     write_json(directory / 'manifest.json', {
         'run_id': run_id, 'mode': mode, 'commit': commit, 'working_tree_dirty': dirty,
+        'scenario': scenario, 'config_dir': SCENARIOS[scenario]['config_dir'],
+        'dataset_dir': SCENARIOS[scenario]['dataset_dir'],
+        'scenario_files_sha256': {
+            str(path.relative_to(PROJECT_ROOT)): sha256(path.read_bytes())
+            for key in ('config_dir', 'dataset_dir')
+            for path in sorted(paths[key].rglob('*')) if path.is_file()
+        },
         'parameters': config, 'providers': providers,
         'dependencies': dict(sorted((d.metadata['Name'], d.version) for d in distributions()
                                     if d.metadata.get('Name'))),

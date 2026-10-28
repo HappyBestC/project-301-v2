@@ -10,6 +10,7 @@ from . import outcomes, timeline
 from .audit import safe_error, snapshot, write_json
 from .bridge import execute_all
 from .scheduling import SchedulingProvider
+from .scenarios import scenario_paths
 from .treatment import TreatmentProvider, admit, build_treatment_input
 
 
@@ -40,8 +41,9 @@ class Nodes:
         self.providers, self.config = providers, config
 
     def load_scenario(self, state):
-        resources, mapping = api.load_config()
-        cases = api.load_cases()
+        paths = scenario_paths(state['scenario'])
+        resources, mapping = api.load_config(paths['config_dir'])
+        cases = api.load_cases(paths['dataset_dir'])
         if len(cases) != 16 or {c['patient_id'] for c in cases} != {f'P{i:02}' for i in range(1, 17)}:
             raise ValueError('Expected P01–P16 exactly once')
         for case in cases:
@@ -67,7 +69,8 @@ class Nodes:
             else:
                 try:
                     decision, plans = admit(raw, payload, state['mapping'],
-                                            plan_status=self.providers.treatment.plan_status)
+                                            plan_status=self.providers.treatment.plan_status,
+                                            dataset_dir=scenario_paths(state['scenario'])['dataset_dir'])
                     result = {'admitted': True, 'decision': decision, 'candidate_plans': plans}
                 except (ValueError, KeyError, TypeError) as exc:
                     # Admission errors describe JSON/contract issues, never SDK headers.
@@ -167,7 +170,8 @@ class Nodes:
 
     def execute(self, state):
         execution = self.providers.execute(state['cases'], state['timeline'], Path(state['run_dir']),
-                                           native=state['mode'] != 'offline', horizon_min=state['horizon_min'])
+                                           native=state['mode'] != 'offline', horizon_min=state['horizon_min'],
+                                           dataset_dir=scenario_paths(state['scenario'])['dataset_dir'])
         return snapshot(state, 'execute', {'execution': execution})
 
     def evaluate(self, state):

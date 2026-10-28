@@ -14,9 +14,9 @@ from core301.agent_chain.treatment import FakeTreatmentProvider, template_decisi
 from core301.dispatch.minimal import api
 
 
-def fast_execute(cases, timeline, run_dir, *, native, horizon_min):
+def fast_execute(cases, timeline, run_dir, *, native, horizon_min, dataset_dir=api.DATASET):
     assert not native
-    specs = {s['patient_id']: s for s in api.read(api.DATASET / 'patient_specs.json')}
+    specs = {s['patient_id']: s for s in api.read(dataset_dir / 'patient_specs.json')}
     return {c['patient_id']: execute_patient(specs[c['patient_id']], timeline,
             run_dir / 'execution' / c['patient_id'], horizon_min=horizon_min, native=False) for c in cases}
 

@@ -98,7 +98,8 @@ def build_treatment_input(case: dict, mapping: dict) -> dict:
     }
 
 
-def admit(raw: str, payload: dict, mapping: dict, *, plan_status: str) -> tuple[dict, list]:
+def admit(raw: str, payload: dict, mapping: dict, *, plan_status: str,
+          dataset_dir: Path = api.DATASET) -> tuple[dict, list]:
     decision = decode(raw)
     if decision.patient_id != payload['patient_id']:
         raise ValueError('Patient identity mismatch')
@@ -117,7 +118,7 @@ def admit(raw: str, payload: dict, mapping: dict, *, plan_status: str) -> tuple[
                 raise ValueError('Predecessor missing or out of order: ' + kind)
             previous.add(kind)
     references, protocols = {}, {}
-    for plan in api.read(api.DATASET / 'action_plan_templates.json'):
+    for plan in api.read(Path(dataset_dir) / 'action_plan_templates.json'):
         for action in plan['actions']:
             kind, ref = action['action_type'], action['resource_mapping_ref']
             if kind in references and references[kind] != ref:
@@ -153,10 +154,11 @@ def admit(raw: str, payload: dict, mapping: dict, *, plan_status: str) -> tuple[
     return decision.model_dump(), plans
 
 
-def template_decisions() -> dict[str, str]:
-    templates = {p['plan_id']: p for p in api.read(api.DATASET / 'action_plan_templates.json')}
+def template_decisions(dataset_dir: Path = api.DATASET) -> dict[str, str]:
+    dataset_dir = Path(dataset_dir)
+    templates = {p['plan_id']: p for p in api.read(dataset_dir / 'action_plan_templates.json')}
     result = {}
-    for patient in api.read(api.DATASET / 'patients_initial.json'):
+    for patient in api.read(dataset_dir / 'patients_initial.json'):
         plans = [templates[p] for p in patient['plan_ids']]
         sequences = [[a['action_type'] for a in p['actions']] for p in plans]
         empty = sequences == [[]]
@@ -190,8 +192,8 @@ class FakeTreatmentProvider:
 
 
 class TemplateTreatmentProvider(FakeTreatmentProvider):
-    def __init__(self):
-        super().__init__(template_decisions())
+    def __init__(self, dataset_dir: Path = api.DATASET):
+        super().__init__(template_decisions(dataset_dir))
 
 
 class LLMTreatmentProvider:

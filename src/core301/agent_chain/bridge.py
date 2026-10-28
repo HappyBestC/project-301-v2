@@ -291,8 +291,8 @@ def _worker(spec, timeline, directory, horizon_min, native):
 
 
 def execute_all(cases: list, timeline: list, run_dir: Path, *, native: bool,
-                horizon_min: float = 120.0) -> dict:
-    specs = {s['patient_id']: s for s in api.read(api.DATASET / 'patient_specs.json')}
+                horizon_min: float = 120.0, dataset_dir: Path = api.DATASET) -> dict:
+    specs = {s['patient_id']: s for s in api.read(Path(dataset_dir) / 'patient_specs.json')}
     workers = min(len(cases), os.cpu_count() or 1)
     # One task per process, including machines with fewer CPUs than patients.
     # No parent/native state is inherited and no engine is shared or reused.
