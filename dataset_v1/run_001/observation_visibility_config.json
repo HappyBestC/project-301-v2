@@ -1,0 +1,61 @@
+{
+  "mode": "research_candidate_pending_host_authorization",
+  "clinical_authorization_integrated": false,
+  "base_fields": [
+    "vitals.heart_rate",
+    "vitals.respiration_rate",
+    "vitals.pulse_oximetry",
+    "vitals.systolic_arterial_pressure",
+    "vitals.mean_arterial_pressure"
+  ],
+  "candidate_conditional_whitelist": {
+    "external_hemorrhage": [
+      "circulation.cardiac_output",
+      "laboratory.hemoglobin_concentration"
+    ],
+    "abdominal_internal_hemorrhage": [
+      "circulation.cardiac_output",
+      "laboratory.hemoglobin_concentration"
+    ],
+    "open_pneumothorax": [
+      "laboratory.arterial_oxygen_pressure",
+      "respiratory.tidal_volume"
+    ],
+    "closed_tension_pneumothorax": [
+      "laboratory.arterial_oxygen_pressure",
+      "respiratory.tidal_volume"
+    ],
+    "hemothorax": [
+      "laboratory.arterial_oxygen_pressure",
+      "respiratory.tidal_volume",
+      "laboratory.hemoglobin_concentration"
+    ],
+    "respiratory_muscle_impairment": [
+      "respiratory.tidal_volume",
+      "laboratory.arterial_carbon_dioxide_pressure",
+      "laboratory.blood_ph"
+    ],
+    "impaired_alveolar_exchange": [
+      "laboratory.arterial_oxygen_pressure",
+      "respiratory.inspired_oxygen_fraction",
+      "laboratory.arterial_carbon_dioxide_pressure",
+      "laboratory.blood_ph"
+    ],
+    "dehydration": [
+      "circulation.cardiac_output",
+      "laboratory.hemoglobin_concentration",
+      "laboratory.aorta_sodium_concentration"
+    ],
+    "carbon_monoxide_exposure": [
+      "laboratory.aorta_carboxyhemoglobin_concentration",
+      "laboratory.arterial_oxygen_pressure"
+    ],
+    "environmental_hypoxia": [
+      "laboratory.arterial_oxygen_pressure",
+      "respiratory.inspired_oxygen_fraction"
+    ]
+  },
+  "active_conditional_grants": [],
+  "production_enabled": false,
+  "disclose_unavailable_conditional": false
+}

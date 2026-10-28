@@ -11,7 +11,11 @@ __pycache__/
 !.env.example
 
 # Local runs, build products and the separately installed Pulse runtime
-/runs/
+/runs/*
+# Scheduling-module baseline evidence and fixtures read by tests/scripts
+!/runs/medical_resources_deepseek_001/
+!/runs/medical_resources_horizon120_001/
+!/runs/resource_parameter_audit_001/
 /build/
 /dist/
 /pulse

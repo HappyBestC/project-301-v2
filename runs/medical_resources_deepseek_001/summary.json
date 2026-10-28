@@ -1,0 +1,59 @@
+{
+  "loaded_patients": 16,
+  "accounted_patients": 16,
+  "scheduled_patients": 16,
+  "unscheduled_patients": 0,
+  "all_patients_accounted_for": true,
+  "all_patients_scheduled": true,
+  "scheduled_patient_ids": [
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09",
+    "P10",
+    "P11",
+    "P12",
+    "P13",
+    "P14",
+    "P15",
+    "P16"
+  ],
+  "unscheduled_patient_ids": [],
+  "unscheduled_reasons": [],
+  "outcome_status": "全员排程通过已知约束",
+  "known_constraints_passed": true,
+  "fully_verified": false,
+  "status": "all_scheduled",
+  "model": "deepseek-flash",
+  "horizon_min": 120.0,
+  "observation_time_min": 60.0,
+  "attempts": [
+    {
+      "attempt": 1,
+      "conflicts": 0,
+      "unchecked": 54,
+      "selected_patients": 16
+    }
+  ],
+  "treatment_executed": false,
+  "resources_committed": false,
+  "accepted_patients": 16,
+  "source": "live_agent_not_fixed_example",
+  "accepted_attempt": 1,
+  "unchecked_codes": [
+    "ELIGIBILITY_PENDING",
+    "HANDOFF_REQUIREMENTS_UNCHECKED",
+    "MV_OXYGEN_OUT_OF_SCOPE",
+    "STOP_CONDITION_UNCHECKED",
+    "TRANSFER_ELIGIBILITY_UNCHECKED"
+  ],
+  "not_selected_patient_ids": [],
+  "explanation_assessment": "model_explanation_not_infeasibility_proof",
+  "last_attempt_conflicts": 0,
+  "initial_state_mutated": false
+}

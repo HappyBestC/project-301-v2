@@ -1,0 +1,49 @@
+{
+  "source": "User-approved first experiment inventory and scope, current task",
+  "supersedes": "Only previously unresolved 80%/120% inventory generation rules; original resource/action documents remain unchanged",
+  "inventory": {
+    "A": {
+      "saline_mL": 1000,
+      "blood_mL": 0,
+      "oxygen_L": 60
+    },
+    "B": {
+      "saline_mL": 500,
+      "blood_mL": 0,
+      "oxygen_L": 60
+    },
+    "H1": {
+      "saline_mL": 1500,
+      "blood_mL": 1000,
+      "oxygen_L": 120
+    },
+    "H2": {
+      "saline_mL": 500,
+      "blood_mL": 500,
+      "oxygen_L": 60
+    },
+    "V1": {
+      "saline_mL": 500,
+      "blood_mL": 0,
+      "oxygen_L": 30
+    },
+    "V2": {
+      "saline_mL": 500,
+      "blood_mL": 0,
+      "oxygen_L": 30
+    },
+    "V3": {
+      "saline_mL": 500,
+      "blood_mL": 0,
+      "oxygen_L": 30
+    }
+  },
+  "rules": [
+    "Fixed per-node inventory, no replenishment or implicit cross-node sharing",
+    "New saline/blood course commits 500 mL; consumption is separate from patient-bound remainder; cancellation before connection releases only the unstarted reservation",
+    "Same-course continuation reuses original supply; no second full-course allocation",
+    "NasalCannula oxygen uses 0.5 L/min from setup completion to demo horizon; 425 L action source is not shared inventory",
+    "Mechanical ventilation external oxygen consumption is out of scope, not a verified zero; all other constraints unchanged"
+  ],
+  "oxygen_evidence": "runs/resource_parameter_audit_001/findings.json"
+}

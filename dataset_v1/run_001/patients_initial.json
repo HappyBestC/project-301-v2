@@ -1,0 +1,448 @@
+[
+  {
+    "patient_id": "P01",
+    "status": "generated_basic_projection_conditional_pending",
+    "raw_ref": "raw/P01",
+    "observation_ref": "patient_observations/P01.json",
+    "evidence_ref": "evaluation_evidence/P01.json",
+    "state_ref": "raw/P01/state_at_arrival.json",
+    "timing_ref": "raw/P01/timing.json",
+    "restore_ref": "raw/P01/restore_check.json",
+    "sample_time_s": 180.00000000001828,
+    "collected_metrics": 15,
+    "published_metrics": 5,
+    "events_seen": [
+      "StartOfCardiacCycle",
+      "StartOfExhale",
+      "StartOfInhale"
+    ],
+    "independent_simulation": true,
+    "spec_ref": "patient_specs.json#/0",
+    "arrival_time_min": 0,
+    "location_id": "A",
+    "injury_type": "external_hemorrhage",
+    "plan_ids": [
+      "P01-plan-1",
+      "P01-plan-2"
+    ]
+  },
+  {
+    "patient_id": "P02",
+    "status": "generated_basic_projection_conditional_pending",
+    "raw_ref": "raw/P02",
+    "observation_ref": "patient_observations/P02.json",
+    "evidence_ref": "evaluation_evidence/P02.json",
+    "state_ref": "raw/P02/state_at_arrival.json",
+    "timing_ref": "raw/P02/timing.json",
+    "restore_ref": "raw/P02/restore_check.json",
+    "sample_time_s": 180.00000000001828,
+    "collected_metrics": 15,
+    "published_metrics": 5,
+    "events_seen": [
+      "StartOfCardiacCycle",
+      "StartOfExhale",
+      "StartOfInhale"
+    ],
+    "independent_simulation": true,
+    "spec_ref": "patient_specs.json#/1",
+    "arrival_time_min": 0,
+    "location_id": "A",
+    "injury_type": "abdominal_internal_hemorrhage",
+    "plan_ids": [
+      "P02-plan-1",
+      "P02-plan-2"
+    ]
+  },
+  {
+    "patient_id": "P03",
+    "status": "generated_basic_projection_conditional_pending",
+    "raw_ref": "raw/P03",
+    "observation_ref": "patient_observations/P03.json",
+    "evidence_ref": "evaluation_evidence/P03.json",
+    "state_ref": "raw/P03/state_at_arrival.json",
+    "timing_ref": "raw/P03/timing.json",
+    "restore_ref": "raw/P03/restore_check.json",
+    "sample_time_s": 180.00000000001828,
+    "collected_metrics": 15,
+    "published_metrics": 5,
+    "events_seen": [
+      "StartOfCardiacCycle",
+      "StartOfExhale",
+      "StartOfInhale"
+    ],
+    "independent_simulation": true,
+    "spec_ref": "patient_specs.json#/2",
+    "arrival_time_min": 0,
+    "location_id": "A",
+    "injury_type": "respiratory_muscle_impairment",
+    "plan_ids": [
+      "P03-plan-1"
+    ]
+  },
+  {
+    "patient_id": "P04",
+    "status": "generated_basic_projection_conditional_pending",
+    "raw_ref": "raw/P04",
+    "observation_ref": "patient_observations/P04.json",
+    "evidence_ref": "evaluation_evidence/P04.json",
+    "state_ref": "raw/P04/state_at_arrival.json",
+    "timing_ref": "raw/P04/timing.json",
+    "restore_ref": "raw/P04/restore_check.json",
+    "sample_time_s": 959.9999999994169,
+    "collected_metrics": 15,
+    "published_metrics": 5,
+    "events_seen": [
+      "Hypernatremia",
+      "StartOfCardiacCycle",
+      "StartOfExhale",
+      "StartOfInhale"
+    ],
+    "independent_simulation": true,
+    "spec_ref": "patient_specs.json#/3",
+    "arrival_time_min": 0,
+    "location_id": "A",
+    "injury_type": "carbon_monoxide_exposure",
+    "plan_ids": [
+      "P04-plan-1"
+    ]
+  },
+  {
+    "patient_id": "P05",
+    "status": "generated_basic_projection_conditional_pending",
+    "raw_ref": "raw/P05",
+    "observation_ref": "patient_observations/P05.json",
+    "evidence_ref": "evaluation_evidence/P05.json",
+    "state_ref": "raw/P05/state_at_arrival.json",
+    "timing_ref": "raw/P05/timing.json",
+    "restore_ref": "raw/P05/restore_check.json",
+    "sample_time_s": 180.00000000001828,
+    "collected_metrics": 15,
+    "published_metrics": 5,
+    "events_seen": [
+      "Hypoxia",
+      "StartOfCardiacCycle",
+      "StartOfExhale",
+      "StartOfInhale",
+      "Tachycardia"
+    ],
+    "independent_simulation": true,
+    "spec_ref": "patient_specs.json#/4",
+    "arrival_time_min": 0,
+    "location_id": "B",
+    "injury_type": "closed_tension_pneumothorax",
+    "plan_ids": [
+      "P05-plan-1"
+    ]
+  },
+  {
+    "patient_id": "P06",
+    "status": "generated_basic_projection_conditional_pending",
+    "raw_ref": "raw/P02",
+    "observation_ref": "patient_observations/P06.json",
+    "evidence_ref": "evaluation_evidence/P06.json",
+    "state_ref": "raw/P02/state_at_arrival.json",
+    "timing_ref": "evaluation_evidence/P06.json#/timing",
+    "restore_ref": "raw/P02/restore_check.json",
+    "sample_time_s": 180.00000000001828,
+    "collected_metrics": 15,
+    "published_metrics": 5,
+    "events_seen": [
+      "StartOfCardiacCycle",
+      "StartOfExhale",
+      "StartOfInhale"
+    ],
+    "independent_simulation": false,
+    "spec_ref": "patient_specs.json#/5",
+    "arrival_time_min": 0,
+    "location_id": "B",
+    "injury_type": "abdominal_internal_hemorrhage",
+    "plan_ids": [
+      "P06-plan-1",
+      "P06-plan-2"
+    ],
+    "source_patient_id": "P02",
+    "reuse_reason": "identical injury, parameter, base template and sampling protocol"
+  },
+  {
+    "patient_id": "P07",
+    "status": "generated_basic_projection_conditional_pending",
+    "raw_ref": "raw/P07",
+    "observation_ref": "patient_observations/P07.json",
+    "evidence_ref": "evaluation_evidence/P07.json",
+    "state_ref": "raw/P07/state_at_arrival.json",
+    "timing_ref": "raw/P07/timing.json",
+    "restore_ref": "raw/P07/restore_check.json",
+    "sample_time_s": 659.9999999996897,
+    "collected_metrics": 15,
+    "published_metrics": 5,
+    "events_seen": [
+      "MinimalHemothorax",
+      "StartOfCardiacCycle",
+      "StartOfExhale",
+      "StartOfInhale"
+    ],
+    "independent_simulation": true,
+    "spec_ref": "patient_specs.json#/6",
+    "arrival_time_min": 0,
+    "location_id": "B",
+    "injury_type": "hemothorax",
+    "plan_ids": [
+      "P07-plan-1"
+    ]
+  },
+  {
+    "patient_id": "P08",
+    "status": "generated_basic_projection_conditional_pending",
+    "raw_ref": "raw/P08",
+    "observation_ref": "patient_observations/P08.json",
+    "evidence_ref": "evaluation_evidence/P08.json",
+    "state_ref": "raw/P08/state_at_arrival.json",
+    "timing_ref": "raw/P08/timing.json",
+    "restore_ref": "raw/P08/restore_check.json",
+    "sample_time_s": 180.00000000001828,
+    "collected_metrics": 15,
+    "published_metrics": 5,
+    "events_seen": [
+      "Antidiuresis",
+      "Hypernatremia",
+      "StartOfCardiacCycle",
+      "StartOfExhale",
+      "StartOfInhale"
+    ],
+    "independent_simulation": true,
+    "spec_ref": "patient_specs.json#/7",
+    "arrival_time_min": 0,
+    "location_id": "B",
+    "injury_type": "dehydration",
+    "plan_ids": [
+      "P08-plan-1"
+    ]
+  },
+  {
+    "patient_id": "P09",
+    "status": "generated_basic_projection_conditional_pending",
+    "raw_ref": "raw/P01",
+    "observation_ref": "patient_observations/P09.json",
+    "evidence_ref": "evaluation_evidence/P09.json",
+    "state_ref": "raw/P01/state_at_arrival.json",
+    "timing_ref": "evaluation_evidence/P09.json#/timing",
+    "restore_ref": "raw/P01/restore_check.json",
+    "sample_time_s": 180.00000000001828,
+    "collected_metrics": 15,
+    "published_metrics": 5,
+    "events_seen": [
+      "StartOfCardiacCycle",
+      "StartOfExhale",
+      "StartOfInhale"
+    ],
+    "independent_simulation": false,
+    "spec_ref": "patient_specs.json#/8",
+    "arrival_time_min": 10,
+    "location_id": "A",
+    "injury_type": "external_hemorrhage",
+    "plan_ids": [
+      "P09-plan-1",
+      "P09-plan-2"
+    ],
+    "source_patient_id": "P01",
+    "reuse_reason": "identical injury, parameter, base template and sampling protocol"
+  },
+  {
+    "patient_id": "P10",
+    "status": "generated_basic_projection_conditional_pending",
+    "raw_ref": "raw/P10",
+    "observation_ref": "patient_observations/P10.json",
+    "evidence_ref": "evaluation_evidence/P10.json",
+    "state_ref": "raw/P10/state_at_arrival.json",
+    "timing_ref": "raw/P10/timing.json",
+    "restore_ref": "raw/P10/restore_check.json",
+    "sample_time_s": 180.00000000001828,
+    "collected_metrics": 15,
+    "published_metrics": 5,
+    "events_seen": [
+      "Hypoxia",
+      "StartOfCardiacCycle",
+      "StartOfExhale",
+      "StartOfInhale",
+      "Tachycardia"
+    ],
+    "independent_simulation": true,
+    "spec_ref": "patient_specs.json#/9",
+    "arrival_time_min": 10,
+    "location_id": "A",
+    "injury_type": "open_pneumothorax",
+    "plan_ids": [
+      "P10-plan-1"
+    ]
+  },
+  {
+    "patient_id": "P11",
+    "status": "generated_basic_projection_conditional_pending",
+    "raw_ref": "raw/P05",
+    "observation_ref": "patient_observations/P11.json",
+    "evidence_ref": "evaluation_evidence/P11.json",
+    "state_ref": "raw/P05/state_at_arrival.json",
+    "timing_ref": "evaluation_evidence/P11.json#/timing",
+    "restore_ref": "raw/P05/restore_check.json",
+    "sample_time_s": 180.00000000001828,
+    "collected_metrics": 15,
+    "published_metrics": 5,
+    "events_seen": [
+      "Hypoxia",
+      "StartOfCardiacCycle",
+      "StartOfExhale",
+      "StartOfInhale",
+      "Tachycardia"
+    ],
+    "independent_simulation": false,
+    "spec_ref": "patient_specs.json#/10",
+    "arrival_time_min": 10,
+    "location_id": "B",
+    "injury_type": "closed_tension_pneumothorax",
+    "plan_ids": [
+      "P11-plan-1"
+    ],
+    "source_patient_id": "P05",
+    "reuse_reason": "identical injury, parameter, base template and sampling protocol"
+  },
+  {
+    "patient_id": "P12",
+    "status": "generated_basic_projection_conditional_pending",
+    "raw_ref": "raw/P12",
+    "observation_ref": "patient_observations/P12.json",
+    "evidence_ref": "evaluation_evidence/P12.json",
+    "state_ref": "raw/P12/state_at_arrival.json",
+    "timing_ref": "raw/P12/timing.json",
+    "restore_ref": "raw/P12/restore_check.json",
+    "sample_time_s": 180.00000000001828,
+    "collected_metrics": 15,
+    "published_metrics": 5,
+    "events_seen": [
+      "StartOfCardiacCycle",
+      "StartOfExhale",
+      "StartOfInhale"
+    ],
+    "independent_simulation": true,
+    "spec_ref": "patient_specs.json#/11",
+    "arrival_time_min": 10,
+    "location_id": "B",
+    "injury_type": "impaired_alveolar_exchange",
+    "plan_ids": [
+      "P12-plan-1"
+    ]
+  },
+  {
+    "patient_id": "P13",
+    "status": "generated_basic_projection_conditional_pending",
+    "raw_ref": "raw/P03",
+    "observation_ref": "patient_observations/P13.json",
+    "evidence_ref": "evaluation_evidence/P13.json",
+    "state_ref": "raw/P03/state_at_arrival.json",
+    "timing_ref": "evaluation_evidence/P13.json#/timing",
+    "restore_ref": "raw/P03/restore_check.json",
+    "sample_time_s": 180.00000000001828,
+    "collected_metrics": 15,
+    "published_metrics": 5,
+    "events_seen": [
+      "StartOfCardiacCycle",
+      "StartOfExhale",
+      "StartOfInhale"
+    ],
+    "independent_simulation": false,
+    "spec_ref": "patient_specs.json#/12",
+    "arrival_time_min": 20,
+    "location_id": "A",
+    "injury_type": "respiratory_muscle_impairment",
+    "plan_ids": [
+      "P13-plan-1"
+    ],
+    "source_patient_id": "P03",
+    "reuse_reason": "identical injury, parameter, base template and sampling protocol"
+  },
+  {
+    "patient_id": "P14",
+    "status": "generated_basic_projection_conditional_pending",
+    "raw_ref": "raw/P14",
+    "observation_ref": "patient_observations/P14.json",
+    "evidence_ref": "evaluation_evidence/P14.json",
+    "state_ref": "raw/P14/state_at_arrival.json",
+    "timing_ref": "raw/P14/timing.json",
+    "restore_ref": "raw/P14/restore_check.json",
+    "sample_time_s": 359.99999999996254,
+    "collected_metrics": 15,
+    "published_metrics": 5,
+    "events_seen": [
+      "Hypoxia",
+      "StartOfCardiacCycle",
+      "StartOfExhale",
+      "StartOfInhale",
+      "Tachycardia"
+    ],
+    "independent_simulation": true,
+    "spec_ref": "patient_specs.json#/13",
+    "arrival_time_min": 20,
+    "location_id": "A",
+    "injury_type": "environmental_hypoxia",
+    "plan_ids": [
+      "P14-plan-1"
+    ]
+  },
+  {
+    "patient_id": "P15",
+    "status": "generated_basic_projection_conditional_pending",
+    "raw_ref": "raw/P01",
+    "observation_ref": "patient_observations/P15.json",
+    "evidence_ref": "evaluation_evidence/P15.json",
+    "state_ref": "raw/P01/state_at_arrival.json",
+    "timing_ref": "evaluation_evidence/P15.json#/timing",
+    "restore_ref": "raw/P01/restore_check.json",
+    "sample_time_s": 180.00000000001828,
+    "collected_metrics": 15,
+    "published_metrics": 5,
+    "events_seen": [
+      "StartOfCardiacCycle",
+      "StartOfExhale",
+      "StartOfInhale"
+    ],
+    "independent_simulation": false,
+    "spec_ref": "patient_specs.json#/14",
+    "arrival_time_min": 20,
+    "location_id": "B",
+    "injury_type": "external_hemorrhage",
+    "plan_ids": [
+      "P15-plan-1",
+      "P15-plan-2"
+    ],
+    "source_patient_id": "P01",
+    "reuse_reason": "identical injury, parameter, base template and sampling protocol"
+  },
+  {
+    "patient_id": "P16",
+    "status": "generated_basic_projection_conditional_pending",
+    "raw_ref": "raw/P07",
+    "observation_ref": "patient_observations/P16.json",
+    "evidence_ref": "evaluation_evidence/P16.json",
+    "state_ref": "raw/P07/state_at_arrival.json",
+    "timing_ref": "evaluation_evidence/P16.json#/timing",
+    "restore_ref": "raw/P07/restore_check.json",
+    "sample_time_s": 659.9999999996897,
+    "collected_metrics": 15,
+    "published_metrics": 5,
+    "events_seen": [
+      "MinimalHemothorax",
+      "StartOfCardiacCycle",
+      "StartOfExhale",
+      "StartOfInhale"
+    ],
+    "independent_simulation": false,
+    "spec_ref": "patient_specs.json#/15",
+    "arrival_time_min": 20,
+    "location_id": "B",
+    "injury_type": "hemothorax",
+    "plan_ids": [
+      "P16-plan-1"
+    ],
+    "source_patient_id": "P07",
+    "reuse_reason": "identical injury, parameter, base template and sampling protocol"
+  }
+]

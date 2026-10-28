@@ -1,0 +1,555 @@
+{
+  "version": "301.resource_schedule.v1",
+  "demonstration_only": true,
+  "selections": {
+    "P01": "P01-plan-1",
+    "P02": "P02-plan-1",
+    "P04": "P04-plan-1",
+    "P05": "P05-plan-1",
+    "P12": "P12-plan-1"
+  },
+  "operations": [
+    {
+      "task_id": "op-P01-1",
+      "patient_id": "P01",
+      "plan_id": "P01-plan-1",
+      "action_id": "P01-plan-1-a1",
+      "location": "A",
+      "start_min": 0,
+      "end_min": 3,
+      "staff_ids": [
+        "A-basic-1"
+      ],
+      "equipment_ids": [],
+      "space_id": "A-treatment-1",
+      "consumables": {
+        "external_bleeding_kit": 1
+      }
+    },
+    {
+      "task_id": "op-P01-2",
+      "patient_id": "P01",
+      "plan_id": "P01-plan-1",
+      "action_id": "P01-plan-1-a2",
+      "location": "A",
+      "start_min": 3,
+      "end_min": 8,
+      "staff_ids": [
+        "A-basic-1"
+      ],
+      "equipment_ids": [],
+      "space_id": "A-observation-1",
+      "consumables": {
+        "infusion_set": 1,
+        "iv_access_kit": 1
+      }
+    },
+    {
+      "task_id": "op-P02-1",
+      "patient_id": "P02",
+      "plan_id": "P02-plan-1",
+      "action_id": "P02-plan-1-a1",
+      "location": "H1",
+      "start_min": 20,
+      "end_min": 35,
+      "staff_ids": [
+        "H1-advanced-1",
+        "H1-basic-1"
+      ],
+      "equipment_ids": [],
+      "space_id": "H1-treatment-1",
+      "consumables": {}
+    },
+    {
+      "task_id": "op-P02-2",
+      "patient_id": "P02",
+      "plan_id": "P02-plan-1",
+      "action_id": "P02-plan-1-a2",
+      "location": "H1",
+      "start_min": 35,
+      "end_min": 40,
+      "staff_ids": [
+        "H1-basic-1"
+      ],
+      "equipment_ids": [],
+      "space_id": "H1-bed-1",
+      "consumables": {
+        "infusion_set": 1,
+        "iv_access_kit": 1
+      }
+    },
+    {
+      "task_id": "op-P04-1",
+      "patient_id": "P04",
+      "plan_id": "P04-plan-1",
+      "action_id": "P04-plan-1-a1",
+      "location": "A",
+      "start_min": 0,
+      "end_min": 1,
+      "staff_ids": [
+        "A-basic-2"
+      ],
+      "equipment_ids": [],
+      "space_id": null,
+      "consumables": {}
+    },
+    {
+      "task_id": "op-P05-1",
+      "patient_id": "P05",
+      "plan_id": "P05-plan-1",
+      "action_id": "P05-plan-1-a1",
+      "location": "B",
+      "start_min": 0,
+      "end_min": 3,
+      "staff_ids": [
+        "B-basic-1"
+      ],
+      "equipment_ids": [],
+      "space_id": "B-treatment-1",
+      "consumables": {
+        "decompression_kit": 1
+      }
+    },
+    {
+      "task_id": "op-P12-1",
+      "patient_id": "P12",
+      "plan_id": "P12-plan-1",
+      "action_id": "P12-plan-1-a1",
+      "location": "B",
+      "start_min": 10,
+      "end_min": 12,
+      "staff_ids": [
+        "B-basic-2"
+      ],
+      "equipment_ids": [
+        "B-oxygen_device-1"
+      ],
+      "space_id": "B-observation-1",
+      "consumables": {
+        "oxygen_interface": 1
+      }
+    }
+  ],
+  "transports": [
+    {
+      "task_id": "transport-P02",
+      "patient_id": "P02",
+      "vehicle_id": "V1",
+      "departure_location": "A",
+      "pickup": "A",
+      "destination": "H1",
+      "start_min": 0,
+      "load_start_min": 0,
+      "depart_min": 3,
+      "arrive_min": 15,
+      "handoff_end_min": 20,
+      "end_min": 25
+    }
+  ],
+  "care": [
+    {
+      "task_id": "care-op-P01-2-18",
+      "operation_id": "op-P01-2",
+      "patient_id": "P01",
+      "location": "A",
+      "start_min": 18,
+      "end_min": 19,
+      "staff_id": "A-care-1"
+    },
+    {
+      "task_id": "care-op-P01-2-28",
+      "operation_id": "op-P01-2",
+      "patient_id": "P01",
+      "location": "A",
+      "start_min": 28,
+      "end_min": 29,
+      "staff_id": "A-care-1"
+    },
+    {
+      "task_id": "care-op-P01-2-38",
+      "operation_id": "op-P01-2",
+      "patient_id": "P01",
+      "location": "A",
+      "start_min": 38,
+      "end_min": 39,
+      "staff_id": "A-care-1"
+    },
+    {
+      "task_id": "care-op-P01-2-48",
+      "operation_id": "op-P01-2",
+      "patient_id": "P01",
+      "location": "A",
+      "start_min": 48,
+      "end_min": 49,
+      "staff_id": "A-care-1"
+    },
+    {
+      "task_id": "care-op-P01-2-58",
+      "operation_id": "op-P01-2",
+      "patient_id": "P01",
+      "location": "A",
+      "start_min": 58,
+      "end_min": 59,
+      "staff_id": "A-care-1"
+    },
+    {
+      "task_id": "care-op-P01-2-68",
+      "operation_id": "op-P01-2",
+      "patient_id": "P01",
+      "location": "A",
+      "start_min": 68,
+      "end_min": 69,
+      "staff_id": "A-care-1"
+    },
+    {
+      "task_id": "care-op-P01-2-78",
+      "operation_id": "op-P01-2",
+      "patient_id": "P01",
+      "location": "A",
+      "start_min": 78,
+      "end_min": 79,
+      "staff_id": "A-care-1"
+    },
+    {
+      "task_id": "care-op-P01-2-88",
+      "operation_id": "op-P01-2",
+      "patient_id": "P01",
+      "location": "A",
+      "start_min": 88,
+      "end_min": 89,
+      "staff_id": "A-care-1"
+    },
+    {
+      "task_id": "care-op-P01-2-98",
+      "operation_id": "op-P01-2",
+      "patient_id": "P01",
+      "location": "A",
+      "start_min": 98,
+      "end_min": 99,
+      "staff_id": "A-care-1"
+    },
+    {
+      "task_id": "care-op-P01-2-108",
+      "operation_id": "op-P01-2",
+      "patient_id": "P01",
+      "location": "A",
+      "start_min": 108,
+      "end_min": 109,
+      "staff_id": "A-care-1"
+    },
+    {
+      "task_id": "care-op-P01-2-118",
+      "operation_id": "op-P01-2",
+      "patient_id": "P01",
+      "location": "A",
+      "start_min": 118,
+      "end_min": 119,
+      "staff_id": "A-care-1"
+    },
+    {
+      "task_id": "care-op-P02-2-50",
+      "operation_id": "op-P02-2",
+      "patient_id": "P02",
+      "location": "H1",
+      "start_min": 50,
+      "end_min": 51,
+      "staff_id": "H1-care-1"
+    },
+    {
+      "task_id": "care-op-P02-2-60",
+      "operation_id": "op-P02-2",
+      "patient_id": "P02",
+      "location": "H1",
+      "start_min": 60,
+      "end_min": 61,
+      "staff_id": "H1-care-1"
+    },
+    {
+      "task_id": "care-op-P02-2-70",
+      "operation_id": "op-P02-2",
+      "patient_id": "P02",
+      "location": "H1",
+      "start_min": 70,
+      "end_min": 71,
+      "staff_id": "H1-care-1"
+    },
+    {
+      "task_id": "care-op-P02-2-80",
+      "operation_id": "op-P02-2",
+      "patient_id": "P02",
+      "location": "H1",
+      "start_min": 80,
+      "end_min": 81,
+      "staff_id": "H1-care-1"
+    },
+    {
+      "task_id": "care-op-P02-2-90",
+      "operation_id": "op-P02-2",
+      "patient_id": "P02",
+      "location": "H1",
+      "start_min": 90,
+      "end_min": 91,
+      "staff_id": "H1-care-1"
+    },
+    {
+      "task_id": "care-op-P02-2-100",
+      "operation_id": "op-P02-2",
+      "patient_id": "P02",
+      "location": "H1",
+      "start_min": 100,
+      "end_min": 101,
+      "staff_id": "H1-care-1"
+    },
+    {
+      "task_id": "care-op-P02-2-110",
+      "operation_id": "op-P02-2",
+      "patient_id": "P02",
+      "location": "H1",
+      "start_min": 110,
+      "end_min": 111,
+      "staff_id": "H1-care-1"
+    },
+    {
+      "task_id": "care-op-P12-1-22",
+      "operation_id": "op-P12-1",
+      "patient_id": "P12",
+      "location": "B",
+      "start_min": 22,
+      "end_min": 23,
+      "staff_id": "B-care-1"
+    },
+    {
+      "task_id": "care-op-P12-1-32",
+      "operation_id": "op-P12-1",
+      "patient_id": "P12",
+      "location": "B",
+      "start_min": 32,
+      "end_min": 33,
+      "staff_id": "B-care-1"
+    },
+    {
+      "task_id": "care-op-P12-1-42",
+      "operation_id": "op-P12-1",
+      "patient_id": "P12",
+      "location": "B",
+      "start_min": 42,
+      "end_min": 43,
+      "staff_id": "B-care-1"
+    },
+    {
+      "task_id": "care-op-P12-1-52",
+      "operation_id": "op-P12-1",
+      "patient_id": "P12",
+      "location": "B",
+      "start_min": 52,
+      "end_min": 53,
+      "staff_id": "B-care-1"
+    },
+    {
+      "task_id": "care-op-P12-1-62",
+      "operation_id": "op-P12-1",
+      "patient_id": "P12",
+      "location": "B",
+      "start_min": 62,
+      "end_min": 63,
+      "staff_id": "B-care-1"
+    },
+    {
+      "task_id": "care-op-P12-1-72",
+      "operation_id": "op-P12-1",
+      "patient_id": "P12",
+      "location": "B",
+      "start_min": 72,
+      "end_min": 73,
+      "staff_id": "B-care-1"
+    },
+    {
+      "task_id": "care-op-P12-1-82",
+      "operation_id": "op-P12-1",
+      "patient_id": "P12",
+      "location": "B",
+      "start_min": 82,
+      "end_min": 83,
+      "staff_id": "B-care-1"
+    },
+    {
+      "task_id": "care-op-P12-1-92",
+      "operation_id": "op-P12-1",
+      "patient_id": "P12",
+      "location": "B",
+      "start_min": 92,
+      "end_min": 93,
+      "staff_id": "B-care-1"
+    },
+    {
+      "task_id": "care-op-P12-1-102",
+      "operation_id": "op-P12-1",
+      "patient_id": "P12",
+      "location": "B",
+      "start_min": 102,
+      "end_min": 103,
+      "staff_id": "B-care-1"
+    },
+    {
+      "task_id": "care-op-P12-1-112",
+      "operation_id": "op-P12-1",
+      "patient_id": "P12",
+      "location": "B",
+      "start_min": 112,
+      "end_min": 113,
+      "staff_id": "B-care-1"
+    }
+  ],
+  "patient_results": [
+    {
+      "patient_id": "P01",
+      "status": "scheduled",
+      "reason_code": null,
+      "reason": "",
+      "blocking_resources": [],
+      "considered_alternatives": []
+    },
+    {
+      "patient_id": "P02",
+      "status": "scheduled",
+      "reason_code": null,
+      "reason": "",
+      "blocking_resources": [],
+      "considered_alternatives": []
+    },
+    {
+      "patient_id": "P03",
+      "status": "unscheduled",
+      "reason_code": "no_feasible_schedule_found",
+      "reason": "本固定示例仅演示五名患者的资源接口，尚未为该患者搜索完整安排，不代表资源不可行。",
+      "blocking_resources": [],
+      "considered_alternatives": [
+        "增加本地安排或转运至医院均需进一步排程；本固定示例未进行这些搜索。"
+      ]
+    },
+    {
+      "patient_id": "P04",
+      "status": "scheduled",
+      "reason_code": null,
+      "reason": "",
+      "blocking_resources": [],
+      "considered_alternatives": []
+    },
+    {
+      "patient_id": "P05",
+      "status": "scheduled",
+      "reason_code": null,
+      "reason": "",
+      "blocking_resources": [],
+      "considered_alternatives": []
+    },
+    {
+      "patient_id": "P06",
+      "status": "unscheduled",
+      "reason_code": "no_feasible_schedule_found",
+      "reason": "本固定示例仅演示五名患者的资源接口，尚未为该患者搜索完整安排，不代表资源不可行。",
+      "blocking_resources": [],
+      "considered_alternatives": [
+        "增加本地安排或转运至医院均需进一步排程；本固定示例未进行这些搜索。"
+      ]
+    },
+    {
+      "patient_id": "P07",
+      "status": "unscheduled",
+      "reason_code": "no_feasible_schedule_found",
+      "reason": "本固定示例仅演示五名患者的资源接口，尚未为该患者搜索完整安排，不代表资源不可行。",
+      "blocking_resources": [],
+      "considered_alternatives": [
+        "增加本地安排或转运至医院均需进一步排程；本固定示例未进行这些搜索。"
+      ]
+    },
+    {
+      "patient_id": "P08",
+      "status": "unscheduled",
+      "reason_code": "no_feasible_schedule_found",
+      "reason": "本固定示例仅演示五名患者的资源接口，尚未为该患者搜索完整安排，不代表资源不可行。",
+      "blocking_resources": [],
+      "considered_alternatives": [
+        "增加本地安排或转运至医院均需进一步排程；本固定示例未进行这些搜索。"
+      ]
+    },
+    {
+      "patient_id": "P09",
+      "status": "unscheduled",
+      "reason_code": "no_feasible_schedule_found",
+      "reason": "本固定示例仅演示五名患者的资源接口，尚未为该患者搜索完整安排，不代表资源不可行。",
+      "blocking_resources": [],
+      "considered_alternatives": [
+        "增加本地安排或转运至医院均需进一步排程；本固定示例未进行这些搜索。"
+      ]
+    },
+    {
+      "patient_id": "P10",
+      "status": "unscheduled",
+      "reason_code": "no_feasible_schedule_found",
+      "reason": "本固定示例仅演示五名患者的资源接口，尚未为该患者搜索完整安排，不代表资源不可行。",
+      "blocking_resources": [],
+      "considered_alternatives": [
+        "增加本地安排或转运至医院均需进一步排程；本固定示例未进行这些搜索。"
+      ]
+    },
+    {
+      "patient_id": "P11",
+      "status": "unscheduled",
+      "reason_code": "no_feasible_schedule_found",
+      "reason": "本固定示例仅演示五名患者的资源接口，尚未为该患者搜索完整安排，不代表资源不可行。",
+      "blocking_resources": [],
+      "considered_alternatives": [
+        "增加本地安排或转运至医院均需进一步排程；本固定示例未进行这些搜索。"
+      ]
+    },
+    {
+      "patient_id": "P12",
+      "status": "scheduled",
+      "reason_code": null,
+      "reason": "",
+      "blocking_resources": [],
+      "considered_alternatives": []
+    },
+    {
+      "patient_id": "P13",
+      "status": "unscheduled",
+      "reason_code": "no_feasible_schedule_found",
+      "reason": "本固定示例仅演示五名患者的资源接口，尚未为该患者搜索完整安排，不代表资源不可行。",
+      "blocking_resources": [],
+      "considered_alternatives": [
+        "增加本地安排或转运至医院均需进一步排程；本固定示例未进行这些搜索。"
+      ]
+    },
+    {
+      "patient_id": "P14",
+      "status": "unscheduled",
+      "reason_code": "no_feasible_schedule_found",
+      "reason": "本固定示例仅演示五名患者的资源接口，尚未为该患者搜索完整安排，不代表资源不可行。",
+      "blocking_resources": [],
+      "considered_alternatives": [
+        "增加本地安排或转运至医院均需进一步排程；本固定示例未进行这些搜索。"
+      ]
+    },
+    {
+      "patient_id": "P15",
+      "status": "unscheduled",
+      "reason_code": "no_feasible_schedule_found",
+      "reason": "本固定示例仅演示五名患者的资源接口，尚未为该患者搜索完整安排，不代表资源不可行。",
+      "blocking_resources": [],
+      "considered_alternatives": [
+        "增加本地安排或转运至医院均需进一步排程；本固定示例未进行这些搜索。"
+      ]
+    },
+    {
+      "patient_id": "P16",
+      "status": "unscheduled",
+      "reason_code": "no_feasible_schedule_found",
+      "reason": "本固定示例仅演示五名患者的资源接口，尚未为该患者搜索完整安排，不代表资源不可行。",
+      "blocking_resources": [],
+      "considered_alternatives": [
+        "增加本地安排或转运至医院均需进一步排程；本固定示例未进行这些搜索。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "data_checks_passed": true,
+  "patient_count": 16,
+  "failures": [],
+  "metric_counts": {
+    "vitals.heart_rate": {
+      "available": 16,
+      "unavailable": 0,
+      "published": 16,
+      "pending_authorization": 0
+    },
+    "vitals.respiration_rate": {
+      "available": 16,
+      "unavailable": 0,
+      "published": 16,
+      "pending_authorization": 0
+    },
+    "vitals.pulse_oximetry": {
+      "available": 16,
+      "unavailable": 0,
+      "published": 16,
+      "pending_authorization": 0
+    },
+    "vitals.systolic_arterial_pressure": {
+      "available": 16,
+      "unavailable": 0,
+      "published": 16,
+      "pending_authorization": 0
+    },
+    "vitals.mean_arterial_pressure": {
+      "available": 16,
+      "unavailable": 0,
+      "published": 16,
+      "pending_authorization": 0
+    },
+    "circulation.cardiac_output": {
+      "available": 16,
+      "unavailable": 0,
+      "published": 0,
+      "pending_authorization": 6
+    },
+    "respiratory.tidal_volume": {
+      "available": 16,
+      "unavailable": 0,
+      "published": 0,
+      "pending_authorization": 7
+    },
+    "respiratory.inspired_oxygen_fraction": {
+      "available": 16,
+      "unavailable": 0,
+      "published": 0,
+      "pending_authorization": 2
+    },
+    "laboratory.hemoglobin_concentration": {
+      "available": 16,
+      "unavailable": 0,
+      "published": 0,
+      "pending_authorization": 8
+    },
+    "laboratory.lactate_concentration": {
+      "available": 16,
+      "unavailable": 0,
+      "published": 0,
+      "pending_authorization": 0
+    },
+    "laboratory.arterial_oxygen_pressure": {
+      "available": 16,
+      "unavailable": 0,
+      "published": 0,
+      "pending_authorization": 8
+    },
+    "laboratory.arterial_carbon_dioxide_pressure": {
+      "available": 16,
+      "unavailable": 0,
+      "published": 0,
+      "pending_authorization": 3
+    },
+    "laboratory.blood_ph": {
+      "available": 16,
+      "unavailable": 0,
+      "published": 0,
+      "pending_authorization": 3
+    },
+    "laboratory.aorta_carboxyhemoglobin_concentration": {
+      "available": 16,
+      "unavailable": 0,
+      "published": 0,
+      "pending_authorization": 1
+    },
+    "laboratory.aorta_sodium_concentration": {
+      "available": 16,
+      "unavailable": 0,
+      "published": 0,
+      "pending_authorization": 1
+    }
+  },
+  "restore_results": {
+    "P01": {
+      "loaded": true,
+      "read_15_metrics": true,
+      "original_time_s": 180.00000000001828,
+      "restored_time_s": 180.00000000001828,
+      "differences": {},
+      "continuation_equivalence_tested": false
+    },
+    "P02": {
+      "loaded": true,
+      "read_15_metrics": true,
+      "original_time_s": 180.00000000001828,
+      "restored_time_s": 180.00000000001828,
+      "differences": {},
+      "continuation_equivalence_tested": false
+    },
+    "P03": {
+      "loaded": true,
+      "read_15_metrics": true,
+      "original_time_s": 180.00000000001828,
+      "restored_time_s": 180.00000000001828,
+      "differences": {},
+      "continuation_equivalence_tested": false
+    },
+    "P04": {
+      "loaded": true,
+      "read_15_metrics": true,
+      "original_time_s": 959.9999999994169,
+      "restored_time_s": 959.9999999994169,
+      "differences": {},
+      "continuation_equivalence_tested": false
+    },
+    "P05": {
+      "loaded": true,
+      "read_15_metrics": true,
+      "original_time_s": 180.00000000001828,
+      "restored_time_s": 180.00000000001828,
+      "differences": {},
+      "continuation_equivalence_tested": false
+    },
+    "P07": {
+      "loaded": true,
+      "read_15_metrics": true,
+      "original_time_s": 659.9999999996897,
+      "restored_time_s": 659.9999999996897,
+      "differences": {},
+      "continuation_equivalence_tested": false
+    },
+    "P08": {
+      "loaded": true,
+      "read_15_metrics": true,
+      "original_time_s": 180.00000000001828,
+      "restored_time_s": 180.00000000001828,
+      "differences": {},
+      "continuation_equivalence_tested": false
+    },
+    "P10": {
+      "loaded": true,
+      "read_15_metrics": true,
+      "original_time_s": 180.00000000001828,
+      "restored_time_s": 180.00000000001828,
+      "differences": {},
+      "continuation_equivalence_tested": false
+    },
+    "P12": {
+      "loaded": true,
+      "read_15_metrics": true,
+      "original_time_s": 180.00000000001828,
+      "restored_time_s": 180.00000000001828,
+      "differences": {},
+      "continuation_equivalence_tested": false
+    },
+    "P14": {
+      "loaded": true,
+      "read_15_metrics": true,
+      "original_time_s": 359.99999999996254,
+      "restored_time_s": 359.99999999996254,
+      "differences": {},
+      "continuation_equivalence_tested": false
+    }
+  },
+  "native_warning_error_lines": [],
+  "production_and_baselines_unchanged": true,
+  "existing_observation_tests": "70 passed (2026-10-22); command: PYTHONPATH=\"$PWD/src:$PYTHONPATH\" python -m pytest tests/observation_candidate_v2 -q",
+  "dehydration_stabilization_log_evidence": [
+    "[INFO] [270.54(s)] Convergence took 20.7s to simulate 271s to get engine to a steady state",
+    "[INFO] [1209.2(s)] Convergence took 73.2s to simulate 939s to get engine to a steady state",
+    "[INFO] [1209.2(s)] [Event Stabilizing 0]  Engine completed stabilizing"
+  ]
+}

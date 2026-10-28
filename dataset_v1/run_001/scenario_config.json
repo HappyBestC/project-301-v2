@@ -1,0 +1,44 @@
+{
+  "config_id": "301.initial_dataset.v1.fixed.1",
+  "base_patient": "StandardMale",
+  "warmup_or_post_condition_s": 60,
+  "decision_times_s": {
+    "dehydration": 180,
+    "impaired_alveolar_exchange": 180,
+    "closed_tension_pneumothorax": 180,
+    "respiratory_muscle_impairment": 180,
+    "external_hemorrhage": 180,
+    "carbon_monoxide_exposure": 960,
+    "abdominal_internal_hemorrhage": 180,
+    "hemothorax": 660,
+    "environmental_hypoxia": 360,
+    "open_pneumothorax": 180
+  },
+  "exposure_profiles": {
+    "carbon_monoxide_exposure": [
+      0.005,
+      0.21,
+      60,
+      900
+    ],
+    "environmental_hypoxia": [
+      0,
+      0.12,
+      60,
+      300
+    ]
+  },
+  "condition_post_initialization_s": 180,
+  "sampling_rate_hz": 1,
+  "event_check_timestep_s": 0.02,
+  "production_enabled": false,
+  "treatments_executed": false,
+  "agent_executed": false,
+  "deterministic_reuse": true,
+  "sampling_protocol_status": "existing research preparation only",
+  "source_refs": [
+    "src/core301/runtime/v2/case_runtime.py",
+    "src/core301/runtime/v2/hemothorax_validation.py",
+    "src/core301/pulse/v2/exposure_session.py"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "patient_id": "P12",
+  "simulation_time_s": 180.00000000001828,
+  "vitals": {
+    "heart_rate": {
+      "value": 72.41262269236756,
+      "status": "available",
+      "observed_at_s": 180.00000000001828
+    },
+    "respiration_rate": {
+      "value": 12.145748987854216,
+      "status": "available",
+      "observed_at_s": 180.00000000001828
+    },
+    "pulse_oximetry": {
+      "value": 0.9663782013039499,
+      "status": "available",
+      "observed_at_s": 180.00000000001828
+    },
+    "systolic_arterial_pressure": {
+      "value": 114.32457014238304,
+      "status": "available",
+      "observed_at_s": 180.00000000001828
+    },
+    "mean_arterial_pressure": {
+      "value": 95.56006988774526,
+      "status": "available",
+      "observed_at_s": 180.00000000001828
+    }
+  }
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "patient_id": "P01",
+    "injury": {
+      "injury_type": "external_hemorrhage",
+      "severity": 0.4,
+      "compartment": "RightLeg"
+    },
+    "location_id": "A",
+    "arrival_time_min": 0,
+    "base_patient": "StandardMale"
+  },
+  {
+    "patient_id": "P02",
+    "injury": {
+      "injury_type": "abdominal_internal_hemorrhage",
+      "severity": 0.4,
+      "compartment": "Spleen"
+    },
+    "location_id": "A",
+    "arrival_time_min": 0,
+    "base_patient": "StandardMale"
+  },
+  {
+    "patient_id": "P03",
+    "injury": {
+      "injury_type": "respiratory_muscle_impairment",
+      "severity": 0.4
+    },
+    "location_id": "A",
+    "arrival_time_min": 0,
+    "base_patient": "StandardMale"
+  },
+  {
+    "patient_id": "P04",
+    "injury": {
+      "injury_type": "carbon_monoxide_exposure",
+      "environment_gases": {
+        "Nitrogen": 0.7846000000000001,
+        "Oxygen": 0.21,
+        "CarbonDioxide": 0.0004,
+        "CarbonMonoxide": 0.005
+      }
+    },
+    "location_id": "A",
+    "arrival_time_min": 0,
+    "base_patient": "StandardMale"
+  },
+  {
+    "patient_id": "P05",
+    "injury": {
+      "injury_type": "closed_tension_pneumothorax",
+      "severity": 0.6,
+      "side": "Left"
+    },
+    "location_id": "B",
+    "arrival_time_min": 0,
+    "base_patient": "StandardMale"
+  },
+  {
+    "patient_id": "P06",
+    "injury": {
+      "injury_type": "abdominal_internal_hemorrhage",
+      "severity": 0.4,
+      "compartment": "Spleen"
+    },
+    "location_id": "B",
+    "arrival_time_min": 0,
+    "base_patient": "StandardMale"
+  },
+  {
+    "patient_id": "P07",
+    "injury": {
+      "injury_type": "hemothorax",
+      "severity": 0.8,
+      "side": "Left"
+    },
+    "location_id": "B",
+    "arrival_time_min": 0,
+    "base_patient": "StandardMale"
+  },
+  {
+    "patient_id": "P08",
+    "injury": {
+      "injury_type": "dehydration",
+      "severity": 0.4
+    },
+    "location_id": "B",
+    "arrival_time_min": 0,
+    "base_patient": "StandardMale"
+  },
+  {
+    "patient_id": "P09",
+    "injury": {
+      "injury_type": "external_hemorrhage",
+      "severity": 0.4,
+      "compartment": "RightLeg"
+    },
+    "location_id": "A",
+    "arrival_time_min": 10,
+    "base_patient": "StandardMale"
+  },
+  {
+    "patient_id": "P10",
+    "injury": {
+      "injury_type": "open_pneumothorax",
+      "severity": 0.6,
+      "side": "Left"
+    },
+    "location_id": "A",
+    "arrival_time_min": 10,
+    "base_patient": "StandardMale"
+  },
+  {
+    "patient_id": "P11",
+    "injury": {
+      "injury_type": "closed_tension_pneumothorax",
+      "severity": 0.6,
+      "side": "Left"
+    },
+    "location_id": "B",
+    "arrival_time_min": 10,
+    "base_patient": "StandardMale"
+  },
+  {
+    "patient_id": "P12",
+    "injury": {
+      "injury_type": "impaired_alveolar_exchange",
+      "severity": 0.4
+    },
+    "location_id": "B",
+    "arrival_time_min": 10,
+    "base_patient": "StandardMale"
+  },
+  {
+    "patient_id": "P13",
+    "injury": {
+      "injury_type": "respiratory_muscle_impairment",
+      "severity": 0.4
+    },
+    "location_id": "A",
+    "arrival_time_min": 20,
+    "base_patient": "StandardMale"
+  },
+  {
+    "patient_id": "P14",
+    "injury": {
+      "injury_type": "environmental_hypoxia",
+      "environment_gases": {
+        "Nitrogen": 0.8796,
+        "Oxygen": 0.12,
+        "CarbonDioxide": 0.0004,
+        "CarbonMonoxide": 0
+      }
+    },
+    "location_id": "A",
+    "arrival_time_min": 20,
+    "base_patient": "StandardMale"
+  },
+  {
+    "patient_id": "P15",
+    "injury": {
+      "injury_type": "external_hemorrhage",
+      "severity": 0.4,
+      "compartment": "RightLeg"
+    },
+    "location_id": "B",
+    "arrival_time_min": 20,
+    "base_patient": "StandardMale"
+  },
+  {
+    "patient_id": "P16",
+    "injury": {
+      "injury_type": "hemothorax",
+      "severity": 0.8,
+      "side": "Left"
+    },
+    "location_id": "B",
+    "arrival_time_min": 20,
+    "base_patient": "StandardMale"
+  }
+]

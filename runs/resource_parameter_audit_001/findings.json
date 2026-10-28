@@ -1,0 +1,288 @@
+{
+  "inventory": [
+    {
+      "location": "A",
+      "resource": "saline",
+      "quantity": null,
+      "reserved": 0,
+      "unit": "mL",
+      "status": "pending_reference_demand"
+    },
+    {
+      "location": "A",
+      "resource": "blood",
+      "quantity": 0,
+      "reserved": 0,
+      "unit": "mL",
+      "status": "not_configured"
+    },
+    {
+      "location": "A",
+      "resource": "oxygen",
+      "quantity": null,
+      "reserved": 0,
+      "unit": "L",
+      "status": "pending_reference_demand"
+    },
+    {
+      "location": "B",
+      "resource": "saline",
+      "quantity": null,
+      "reserved": 0,
+      "unit": "mL",
+      "status": "pending_reference_demand"
+    },
+    {
+      "location": "B",
+      "resource": "blood",
+      "quantity": 0,
+      "reserved": 0,
+      "unit": "mL",
+      "status": "not_configured"
+    },
+    {
+      "location": "B",
+      "resource": "oxygen",
+      "quantity": null,
+      "reserved": 0,
+      "unit": "L",
+      "status": "pending_reference_demand"
+    },
+    {
+      "location": "H1",
+      "resource": "saline",
+      "quantity": null,
+      "reserved": 0,
+      "unit": "mL",
+      "status": "pending_reference_demand"
+    },
+    {
+      "location": "H1",
+      "resource": "blood",
+      "quantity": null,
+      "reserved": 0,
+      "unit": "mL",
+      "status": "pending_reference_demand"
+    },
+    {
+      "location": "H1",
+      "resource": "oxygen",
+      "quantity": null,
+      "reserved": 0,
+      "unit": "L",
+      "status": "pending_reference_demand"
+    },
+    {
+      "location": "H2",
+      "resource": "saline",
+      "quantity": null,
+      "reserved": 0,
+      "unit": "mL",
+      "status": "pending_reference_demand"
+    },
+    {
+      "location": "H2",
+      "resource": "blood",
+      "quantity": null,
+      "reserved": 0,
+      "unit": "mL",
+      "status": "pending_reference_demand"
+    },
+    {
+      "location": "H2",
+      "resource": "oxygen",
+      "quantity": null,
+      "reserved": 0,
+      "unit": "L",
+      "status": "pending_reference_demand"
+    },
+    {
+      "location": "V1",
+      "resource": "saline",
+      "quantity": null,
+      "reserved": 0,
+      "unit": "mL",
+      "status": "pending_reference_demand"
+    },
+    {
+      "location": "V1",
+      "resource": "blood",
+      "quantity": 0,
+      "reserved": 0,
+      "unit": "mL",
+      "status": "not_configured"
+    },
+    {
+      "location": "V1",
+      "resource": "oxygen",
+      "quantity": null,
+      "reserved": 0,
+      "unit": "L",
+      "status": "pending_reference_demand"
+    },
+    {
+      "location": "V2",
+      "resource": "saline",
+      "quantity": null,
+      "reserved": 0,
+      "unit": "mL",
+      "status": "pending_reference_demand"
+    },
+    {
+      "location": "V2",
+      "resource": "blood",
+      "quantity": 0,
+      "reserved": 0,
+      "unit": "mL",
+      "status": "not_configured"
+    },
+    {
+      "location": "V2",
+      "resource": "oxygen",
+      "quantity": null,
+      "reserved": 0,
+      "unit": "L",
+      "status": "pending_reference_demand"
+    },
+    {
+      "location": "V3",
+      "resource": "saline",
+      "quantity": null,
+      "reserved": 0,
+      "unit": "mL",
+      "status": "pending_reference_demand"
+    },
+    {
+      "location": "V3",
+      "resource": "blood",
+      "quantity": 0,
+      "reserved": 0,
+      "unit": "mL",
+      "status": "not_configured"
+    },
+    {
+      "location": "V3",
+      "resource": "oxygen",
+      "quantity": null,
+      "reserved": 0,
+      "unit": "L",
+      "status": "pending_reference_demand"
+    }
+  ],
+  "resolved_fixed_payloads": {
+    "fluid_resuscitation": {
+      "PatientAction": {
+        "SubstanceCompoundInfusion": {
+          "SubstanceCompound": "Saline",
+          "BagVolume": {
+            "ScalarVolume": {
+              "Value": 500,
+              "Unit": "mL"
+            }
+          },
+          "Rate": {
+            "ScalarVolumePerTime": {
+              "Value": 100,
+              "Unit": "mL/min"
+            }
+          }
+        }
+      }
+    },
+    "transfusion": {
+      "PatientAction": {
+        "SubstanceCompoundInfusion": {
+          "SubstanceCompound": "Blood",
+          "BagVolume": {
+            "ScalarVolume": {
+              "Value": 500,
+              "Unit": "mL"
+            }
+          },
+          "Rate": {
+            "ScalarVolumePerTime": {
+              "Value": 100,
+              "Unit": "mL/min"
+            }
+          }
+        }
+      }
+    },
+    "supplemental_oxygen": {
+      "PatientAction": {
+        "SupplementalOxygen": {
+          "Device": "NasalCannula",
+          "Flow": {
+            "ScalarVolumePerTime": {
+              "Value": 0.5,
+              "Unit": "L/min"
+            }
+          },
+          "Volume": {
+            "ScalarVolume": {
+              "Value": 425,
+              "Unit": "L"
+            }
+          }
+        }
+      }
+    },
+    "mechanical_ventilation": {
+      "EquipmentAction": {
+        "MechanicalVentilatorPressureControl": {
+          "MechanicalVentilatorMode": {
+            "Connection": "On"
+          },
+          "Mode": "AssistedControl",
+          "FractionInspiredOxygen": {
+            "Scalar0To1": {
+              "Value": 0.21
+            }
+          },
+          "InspiratoryPressure": {
+            "ScalarPressure": {
+              "Value": 13,
+              "Unit": "cmH2O"
+            }
+          },
+          "PositiveEndExpiratoryPressure": {
+            "ScalarPressure": {
+              "Value": 5,
+              "Unit": "cmH2O"
+            }
+          },
+          "RespirationRate": {
+            "ScalarFrequency": {
+              "Value": 12,
+              "Unit": "1/min"
+            }
+          },
+          "InspiratoryPeriod": {
+            "ScalarTime": {
+              "Value": 1,
+              "Unit": "s"
+            }
+          },
+          "Slope": {
+            "ScalarTime": {
+              "Value": 0.1,
+              "Unit": "s"
+            }
+          }
+        }
+      }
+    }
+  },
+  "infusion_mapping_matches": true,
+  "oxygen_measured_depletion_L": 0.49999999993133315,
+  "oxygen_expected_60s_depletion_L": 0.5,
+  "checks_passed": true,
+  "source_sha256": {
+    "src/core301/pulse/treatment_adapter.py": "0446ae504306a3e0a56e26f9ebe8582034c70fbb93fc74f5671d711430a8914c",
+    "src/core301/pulse/v2/treatment_adapter.py": "2b97c419bc88c7e9e74042a63e43df1c01caeba7e4dbf866b981190476d58843",
+    "src/core301/runtime/v2_1/adapters.py": "dd7faf33d852ce17e81d813a2462385a3d2abe1450e91a489d35250896f11d4e",
+    "engine-stable/src/cpp/engine/common/system/physiology/RespiratoryModel.cpp": "3a0c595abefd85202c3358abe46755911114f8020e2b55c3e4241da0db99fe08",
+    "engine-stable/src/cpp/engine/common/system/equipment/MechanicalVentilatorModel.cpp": "915532e7615f6e113c1a58eb21062841433f6cdb524aafc648dfaa257e56b413",
+    "engine-stable/src/cpp/engine/common/controller/SetupCircuitsAndCompartments.cpp": "1f42eda637d4d787c900a14395dd5886bd335e9f1a43d939e501b02b5d1151ac"
+  }
+}

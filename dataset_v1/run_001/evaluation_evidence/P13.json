@@ -1,0 +1,218 @@
+{
+  "format": "independent_raw_evidence_not_EvaluationObservation",
+  "source_patient_id": "P03",
+  "metrics": {
+    "vitals.heart_rate": {
+      "unit": "1/min",
+      "value": 72.1637345691154,
+      "observed_at_s": 180.00000000001828,
+      "collection_status": "available",
+      "projection_status": "published_basic"
+    },
+    "vitals.respiration_rate": {
+      "unit": "1/min",
+      "value": 14.851485148514843,
+      "observed_at_s": 180.00000000001828,
+      "collection_status": "available",
+      "projection_status": "published_basic"
+    },
+    "vitals.pulse_oximetry": {
+      "unit": "1",
+      "value": 0.9668933476091308,
+      "observed_at_s": 180.00000000001828,
+      "collection_status": "available",
+      "projection_status": "published_basic"
+    },
+    "vitals.systolic_arterial_pressure": {
+      "unit": "mmHg",
+      "value": 114.08611431035969,
+      "observed_at_s": 180.00000000001828,
+      "collection_status": "available",
+      "projection_status": "published_basic"
+    },
+    "vitals.mean_arterial_pressure": {
+      "unit": "mmHg",
+      "value": 95.16864502410321,
+      "observed_at_s": 180.00000000001828,
+      "collection_status": "available",
+      "projection_status": "published_basic"
+    },
+    "circulation.cardiac_output": {
+      "unit": "L/min",
+      "value": 5.799645810426952,
+      "observed_at_s": 180.00000000001828,
+      "collection_status": "available",
+      "projection_status": "not_requested_for_disclosure"
+    },
+    "respiratory.tidal_volume": {
+      "unit": "mL",
+      "value": 409.9815177875588,
+      "observed_at_s": 180.00000000001828,
+      "collection_status": "available",
+      "projection_status": "pending_host_authorization"
+    },
+    "respiratory.inspired_oxygen_fraction": {
+      "unit": "1",
+      "value": 0.20996545065971775,
+      "observed_at_s": 180.00000000001828,
+      "collection_status": "available",
+      "projection_status": "not_requested_for_disclosure"
+    },
+    "laboratory.hemoglobin_concentration": {
+      "unit": "g/dL",
+      "value": 14.946283781024219,
+      "observed_at_s": 180.00000000001828,
+      "collection_status": "available",
+      "projection_status": "not_requested_for_disclosure"
+    },
+    "laboratory.lactate_concentration": {
+      "unit": "mg/dL",
+      "value": 14.634678566232973,
+      "observed_at_s": 180.00000000001828,
+      "collection_status": "available",
+      "projection_status": "not_requested_for_disclosure"
+    },
+    "laboratory.arterial_oxygen_pressure": {
+      "unit": "mmHg",
+      "value": 80.42008982506248,
+      "observed_at_s": 180.00000000001828,
+      "collection_status": "available",
+      "projection_status": "not_requested_for_disclosure"
+    },
+    "laboratory.arterial_carbon_dioxide_pressure": {
+      "unit": "mmHg",
+      "value": 43.12285810154694,
+      "observed_at_s": 180.00000000001828,
+      "collection_status": "available",
+      "projection_status": "pending_host_authorization"
+    },
+    "laboratory.blood_ph": {
+      "unit": "1",
+      "value": 7.383953980489017,
+      "observed_at_s": 180.00000000001828,
+      "collection_status": "available",
+      "projection_status": "pending_host_authorization"
+    },
+    "laboratory.aorta_carboxyhemoglobin_concentration": {
+      "unit": "g/dL",
+      "value": 0.0,
+      "observed_at_s": 180.00000000001828,
+      "collection_status": "available",
+      "projection_status": "not_requested_for_disclosure"
+    },
+    "laboratory.aorta_sodium_concentration": {
+      "unit": "mEq/L",
+      "value": 143.42345142805124,
+      "observed_at_s": 180.00000000001828,
+      "collection_status": "available",
+      "projection_status": "not_requested_for_disclosure"
+    }
+  },
+  "events_seen": [
+    "StartOfCardiacCycle",
+    "StartOfExhale",
+    "StartOfInhale"
+  ],
+  "final_events": {},
+  "timing": {
+    "arrival_time_min": 20,
+    "engine_initial_time_s": 0.0,
+    "injury_applied_time_s": 60.00000000000378,
+    "exposure_started_time_s": null,
+    "sample_time_s": 180.00000000001828,
+    "time_since_injury_min": 2.0000000000002416,
+    "exposure_duration_min": null,
+    "condition_initialization": null,
+    "scheduler_time_mapping": {
+      "formula": "scheduler_time_s = pulse_time_s + offset_s",
+      "offset_s": 1019.9999999999817
+    }
+  },
+  "environment": {
+    "SurroundingType": "Air",
+    "AirVelocity": {
+      "ScalarLengthPerTime": {
+        "Value": 0.1,
+        "Unit": "m/s"
+      }
+    },
+    "AmbientTemperature": {
+      "ScalarTemperature": {
+        "Value": 22,
+        "Unit": "degC"
+      }
+    },
+    "AtmosphericPressure": {
+      "ScalarPressure": {
+        "Value": 760,
+        "Unit": "mmHg"
+      }
+    },
+    "ClothingResistance": {
+      "ScalarHeatResistanceArea": {
+        "Value": 0.5,
+        "Unit": "clo"
+      }
+    },
+    "Emissivity": {
+      "Scalar0To1": {
+        "Value": 0.95
+      }
+    },
+    "MeanRadiantTemperature": {
+      "ScalarTemperature": {
+        "Value": 22,
+        "Unit": "degC"
+      }
+    },
+    "RelativeHumidity": {
+      "Scalar0To1": {
+        "Value": 0.6
+      }
+    },
+    "RespirationAmbientTemperature": {
+      "ScalarTemperature": {
+        "Value": 22,
+        "Unit": "degC"
+      }
+    },
+    "AmbientGas": {
+      "Nitrogen": 0.7896,
+      "Oxygen": 0.21,
+      "CarbonDioxide": 0.0004
+    }
+  },
+  "exposure_continues": false,
+  "device_oxygen_setting": null,
+  "device_oxygen_setting_status": "no_oxygen_treatment_applied",
+  "execution_receipts": [
+    {
+      "phase": "injury",
+      "index": 0,
+      "simulation_time_s": 60.00000000000378,
+      "accepted": true
+    }
+  ],
+  "active_actions": {
+    "AnyAction": [
+      {
+        "PatientAction": {
+          "RespiratoryFatigue": {
+            "PatientAction": {
+              "Action": {}
+            },
+            "Severity": {
+              "Scalar0To1": {
+                "Value": 0.4
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "conditions": {},
+  "raw_ref": "raw/P03",
+  "visibility_config_ref": "observation_visibility_config.json",
+  "patient_id": "P13"
+}

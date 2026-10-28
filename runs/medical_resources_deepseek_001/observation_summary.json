@@ -1,0 +1,1963 @@
+{
+  "time_min": 60.0,
+  "horizon_min": 120.0,
+  "prediction_only": true,
+  "treatment_executed": false,
+  "resources_committed": false,
+  "accounting": "Two views of the same candidate, never additive. Future candidate commitments remain unavailable.",
+  "patients": [
+    {
+      "patient_id": "P01",
+      "plan_status": "scheduled",
+      "progress": "ongoing_support_stop_unknown",
+      "location": "A",
+      "completed_action_ids": [
+        "P01-plan-1-a1",
+        "P01-plan-1-a2"
+      ],
+      "active_task_ids": [],
+      "ongoing_support_operation_ids": [
+        "T-OP-P01-a2"
+      ],
+      "future_tasks": [
+        {
+          "task_id": "T-CARE-P01-a2-6",
+          "start_min": 68.0,
+          "end_min": 69.0
+        },
+        {
+          "task_id": "T-CARE-P01-a2-7",
+          "start_min": 78.0,
+          "end_min": 79.0
+        },
+        {
+          "task_id": "T-CARE-P01-a2-8",
+          "start_min": 88.0,
+          "end_min": 89.0
+        },
+        {
+          "task_id": "T-CARE-P01-a2-9",
+          "start_min": 98.0,
+          "end_min": 99.0
+        },
+        {
+          "task_id": "T-CARE-P01-a2-10",
+          "start_min": 108.0,
+          "end_min": 109.0
+        },
+        {
+          "task_id": "T-CARE-P01-a2-11",
+          "start_min": 118.0,
+          "end_min": 119.0
+        }
+      ],
+      "required_operations_completed": true,
+      "treatment_end_confirmed": false
+    },
+    {
+      "patient_id": "P02",
+      "plan_status": "scheduled",
+      "progress": "task_in_progress",
+      "location": "H1",
+      "completed_action_ids": [
+        "P02-plan-1-a1"
+      ],
+      "active_task_ids": [
+        "T-OP-P02-a2"
+      ],
+      "ongoing_support_operation_ids": [],
+      "future_tasks": [
+        {
+          "task_id": "T-CARE-P02-a2-1",
+          "start_min": 73.0,
+          "end_min": 74.0
+        },
+        {
+          "task_id": "T-CARE-P02-a2-2",
+          "start_min": 83.0,
+          "end_min": 84.0
+        },
+        {
+          "task_id": "T-CARE-P02-a2-3",
+          "start_min": 93.0,
+          "end_min": 94.0
+        },
+        {
+          "task_id": "T-CARE-P02-a2-4",
+          "start_min": 103.0,
+          "end_min": 104.0
+        },
+        {
+          "task_id": "T-CARE-P02-a2-5",
+          "start_min": 113.0,
+          "end_min": 114.0
+        }
+      ],
+      "required_operations_completed": false,
+      "treatment_end_confirmed": false
+    },
+    {
+      "patient_id": "P03",
+      "plan_status": "scheduled",
+      "progress": "ongoing_support_stop_unknown",
+      "location": "H1",
+      "completed_action_ids": [
+        "P03-plan-1-a1",
+        "P03-plan-1-a2"
+      ],
+      "active_task_ids": [],
+      "ongoing_support_operation_ids": [
+        "T-OP-P03-a2"
+      ],
+      "future_tasks": [
+        {
+          "task_id": "T-CARE-P03-a2-6",
+          "start_min": 63.0,
+          "end_min": 65.0
+        },
+        {
+          "task_id": "T-CARE-P03-a2-7",
+          "start_min": 68.0,
+          "end_min": 70.0
+        },
+        {
+          "task_id": "T-CARE-P03-a2-8",
+          "start_min": 73.0,
+          "end_min": 75.0
+        },
+        {
+          "task_id": "T-CARE-P03-a2-9",
+          "start_min": 78.0,
+          "end_min": 80.0
+        },
+        {
+          "task_id": "T-CARE-P03-a2-10",
+          "start_min": 83.0,
+          "end_min": 85.0
+        },
+        {
+          "task_id": "T-CARE-P03-a2-11",
+          "start_min": 88.0,
+          "end_min": 90.0
+        },
+        {
+          "task_id": "T-CARE-P03-a2-12",
+          "start_min": 93.0,
+          "end_min": 95.0
+        },
+        {
+          "task_id": "T-CARE-P03-a2-13",
+          "start_min": 98.0,
+          "end_min": 100.0
+        },
+        {
+          "task_id": "T-CARE-P03-a2-14",
+          "start_min": 103.0,
+          "end_min": 105.0
+        },
+        {
+          "task_id": "T-CARE-P03-a2-15",
+          "start_min": 108.0,
+          "end_min": 110.0
+        },
+        {
+          "task_id": "T-CARE-P03-a2-16",
+          "start_min": 113.0,
+          "end_min": 115.0
+        },
+        {
+          "task_id": "T-CARE-P03-a2-17",
+          "start_min": 118.0,
+          "end_min": 120.0
+        }
+      ],
+      "required_operations_completed": true,
+      "treatment_end_confirmed": false
+    },
+    {
+      "patient_id": "P04",
+      "plan_status": "scheduled",
+      "progress": "required_operations_completed_not_treatment_end",
+      "location": "A",
+      "completed_action_ids": [
+        "P04-plan-1-a1"
+      ],
+      "active_task_ids": [],
+      "ongoing_support_operation_ids": [],
+      "future_tasks": [],
+      "required_operations_completed": true,
+      "treatment_end_confirmed": false
+    },
+    {
+      "patient_id": "P05",
+      "plan_status": "scheduled",
+      "progress": "required_operations_completed_not_treatment_end",
+      "location": "B",
+      "completed_action_ids": [
+        "P05-plan-1-a1"
+      ],
+      "active_task_ids": [],
+      "ongoing_support_operation_ids": [],
+      "future_tasks": [],
+      "required_operations_completed": true,
+      "treatment_end_confirmed": false
+    },
+    {
+      "patient_id": "P06",
+      "plan_status": "scheduled",
+      "progress": "in_transport_or_handoff",
+      "location": "V3",
+      "completed_action_ids": [],
+      "active_task_ids": [
+        "T-TR-P06"
+      ],
+      "ongoing_support_operation_ids": [],
+      "future_tasks": [
+        {
+          "task_id": "T-OP-P06-a1",
+          "start_min": 75.0,
+          "end_min": 90.0
+        },
+        {
+          "task_id": "T-OP-P06-a2",
+          "start_min": 90.0,
+          "end_min": 95.0
+        },
+        {
+          "task_id": "T-CARE-P06-a2-1",
+          "start_min": 105.0,
+          "end_min": 106.0
+        },
+        {
+          "task_id": "T-CARE-P06-a2-2",
+          "start_min": 115.0,
+          "end_min": 116.0
+        }
+      ],
+      "required_operations_completed": false,
+      "treatment_end_confirmed": false
+    },
+    {
+      "patient_id": "P07",
+      "plan_status": "scheduled",
+      "progress": "ongoing_support_stop_unknown",
+      "location": "H1",
+      "completed_action_ids": [
+        "P07-plan-1-a1",
+        "P07-plan-1-a2"
+      ],
+      "active_task_ids": [],
+      "ongoing_support_operation_ids": [
+        "T-OP-P07-a2"
+      ],
+      "future_tasks": [
+        {
+          "task_id": "T-CARE-P07-a2-1",
+          "start_min": 65.0,
+          "end_min": 66.0
+        },
+        {
+          "task_id": "T-CARE-P07-a2-2",
+          "start_min": 75.0,
+          "end_min": 76.0
+        },
+        {
+          "task_id": "T-CARE-P07-a2-3",
+          "start_min": 85.0,
+          "end_min": 86.0
+        },
+        {
+          "task_id": "T-CARE-P07-a2-4",
+          "start_min": 95.0,
+          "end_min": 96.0
+        },
+        {
+          "task_id": "T-CARE-P07-a2-5",
+          "start_min": 105.0,
+          "end_min": 106.0
+        },
+        {
+          "task_id": "T-CARE-P07-a2-6",
+          "start_min": 115.0,
+          "end_min": 116.0
+        }
+      ],
+      "required_operations_completed": true,
+      "treatment_end_confirmed": false
+    },
+    {
+      "patient_id": "P08",
+      "plan_status": "scheduled",
+      "progress": "ongoing_support_stop_unknown",
+      "location": "B",
+      "completed_action_ids": [
+        "P08-plan-1-a1"
+      ],
+      "active_task_ids": [],
+      "ongoing_support_operation_ids": [
+        "T-OP-P08-a1"
+      ],
+      "future_tasks": [
+        {
+          "task_id": "T-CARE-P08-a1-6",
+          "start_min": 65.0,
+          "end_min": 66.0
+        },
+        {
+          "task_id": "T-CARE-P08-a1-7",
+          "start_min": 75.0,
+          "end_min": 76.0
+        },
+        {
+          "task_id": "T-CARE-P08-a1-8",
+          "start_min": 85.0,
+          "end_min": 86.0
+        },
+        {
+          "task_id": "T-CARE-P08-a1-9",
+          "start_min": 95.0,
+          "end_min": 96.0
+        },
+        {
+          "task_id": "T-CARE-P08-a1-10",
+          "start_min": 105.0,
+          "end_min": 106.0
+        },
+        {
+          "task_id": "T-CARE-P08-a1-11",
+          "start_min": 115.0,
+          "end_min": 116.0
+        }
+      ],
+      "required_operations_completed": true,
+      "treatment_end_confirmed": false
+    },
+    {
+      "patient_id": "P09",
+      "plan_status": "scheduled",
+      "progress": "ongoing_support_stop_unknown",
+      "location": "A",
+      "completed_action_ids": [
+        "P09-plan-1-a1",
+        "P09-plan-1-a2"
+      ],
+      "active_task_ids": [],
+      "ongoing_support_operation_ids": [
+        "T-OP-P09-a2"
+      ],
+      "future_tasks": [
+        {
+          "task_id": "T-CARE-P09-a2-5",
+          "start_min": 68.0,
+          "end_min": 69.0
+        },
+        {
+          "task_id": "T-CARE-P09-a2-6",
+          "start_min": 78.0,
+          "end_min": 79.0
+        },
+        {
+          "task_id": "T-CARE-P09-a2-7",
+          "start_min": 88.0,
+          "end_min": 89.0
+        },
+        {
+          "task_id": "T-CARE-P09-a2-8",
+          "start_min": 98.0,
+          "end_min": 99.0
+        },
+        {
+          "task_id": "T-CARE-P09-a2-9",
+          "start_min": 108.0,
+          "end_min": 109.0
+        },
+        {
+          "task_id": "T-CARE-P09-a2-10",
+          "start_min": 118.0,
+          "end_min": 119.0
+        }
+      ],
+      "required_operations_completed": true,
+      "treatment_end_confirmed": false
+    },
+    {
+      "patient_id": "P10",
+      "plan_status": "scheduled",
+      "progress": "required_operations_completed_not_treatment_end",
+      "location": "A",
+      "completed_action_ids": [
+        "P10-plan-1-a1"
+      ],
+      "active_task_ids": [],
+      "ongoing_support_operation_ids": [],
+      "future_tasks": [],
+      "required_operations_completed": true,
+      "treatment_end_confirmed": false
+    },
+    {
+      "patient_id": "P11",
+      "plan_status": "scheduled",
+      "progress": "not_started_waiting",
+      "location": "B",
+      "completed_action_ids": [],
+      "active_task_ids": [],
+      "ongoing_support_operation_ids": [],
+      "future_tasks": [
+        {
+          "task_id": "T-TR-P11",
+          "start_min": 80.0,
+          "end_min": 113.0
+        },
+        {
+          "task_id": "T-OP-P11-a1",
+          "start_min": 108.0,
+          "end_min": 111.0
+        }
+      ],
+      "required_operations_completed": false,
+      "treatment_end_confirmed": false
+    },
+    {
+      "patient_id": "P12",
+      "plan_status": "scheduled",
+      "progress": "ongoing_support_stop_unknown",
+      "location": "B",
+      "completed_action_ids": [
+        "P12-plan-1-a1"
+      ],
+      "active_task_ids": [],
+      "ongoing_support_operation_ids": [
+        "T-OP-P12-a1"
+      ],
+      "future_tasks": [
+        {
+          "task_id": "T-CARE-P12-a1-5",
+          "start_min": 62.0,
+          "end_min": 63.0
+        },
+        {
+          "task_id": "T-CARE-P12-a1-6",
+          "start_min": 72.0,
+          "end_min": 73.0
+        },
+        {
+          "task_id": "T-CARE-P12-a1-7",
+          "start_min": 82.0,
+          "end_min": 83.0
+        },
+        {
+          "task_id": "T-CARE-P12-a1-8",
+          "start_min": 92.0,
+          "end_min": 93.0
+        },
+        {
+          "task_id": "T-CARE-P12-a1-9",
+          "start_min": 102.0,
+          "end_min": 103.0
+        },
+        {
+          "task_id": "T-CARE-P12-a1-10",
+          "start_min": 112.0,
+          "end_min": 113.0
+        }
+      ],
+      "required_operations_completed": true,
+      "treatment_end_confirmed": false
+    },
+    {
+      "patient_id": "P13",
+      "plan_status": "scheduled",
+      "progress": "task_in_progress",
+      "location": "H1",
+      "completed_action_ids": [],
+      "active_task_ids": [
+        "T-OP-P13-a1",
+        "T-TR-P13"
+      ],
+      "ongoing_support_operation_ids": [],
+      "future_tasks": [
+        {
+          "task_id": "T-OP-P13-a2",
+          "start_min": 65.0,
+          "end_min": 70.0
+        },
+        {
+          "task_id": "T-CARE-P13-a2-1",
+          "start_min": 75.0,
+          "end_min": 77.0
+        },
+        {
+          "task_id": "T-CARE-P13-a2-2",
+          "start_min": 80.0,
+          "end_min": 82.0
+        },
+        {
+          "task_id": "T-CARE-P13-a2-3",
+          "start_min": 85.0,
+          "end_min": 87.0
+        },
+        {
+          "task_id": "T-CARE-P13-a2-4",
+          "start_min": 90.0,
+          "end_min": 92.0
+        },
+        {
+          "task_id": "T-CARE-P13-a2-5",
+          "start_min": 95.0,
+          "end_min": 97.0
+        },
+        {
+          "task_id": "T-CARE-P13-a2-6",
+          "start_min": 100.0,
+          "end_min": 102.0
+        },
+        {
+          "task_id": "T-CARE-P13-a2-7",
+          "start_min": 105.0,
+          "end_min": 107.0
+        },
+        {
+          "task_id": "T-CARE-P13-a2-8",
+          "start_min": 110.0,
+          "end_min": 112.0
+        },
+        {
+          "task_id": "T-CARE-P13-a2-9",
+          "start_min": 115.0,
+          "end_min": 117.0
+        }
+      ],
+      "required_operations_completed": false,
+      "treatment_end_confirmed": false
+    },
+    {
+      "patient_id": "P14",
+      "plan_status": "scheduled",
+      "progress": "required_operations_completed_not_treatment_end",
+      "location": "A",
+      "completed_action_ids": [
+        "P14-plan-1-a1"
+      ],
+      "active_task_ids": [],
+      "ongoing_support_operation_ids": [],
+      "future_tasks": [],
+      "required_operations_completed": true,
+      "treatment_end_confirmed": false
+    },
+    {
+      "patient_id": "P15",
+      "plan_status": "scheduled",
+      "progress": "some_operations_completed",
+      "location": "B",
+      "completed_action_ids": [
+        "P15-plan-1-a1"
+      ],
+      "active_task_ids": [],
+      "ongoing_support_operation_ids": [],
+      "future_tasks": [
+        {
+          "task_id": "T-TR-P15",
+          "start_min": 62.0,
+          "end_min": 115.0
+        },
+        {
+          "task_id": "T-OP-P15-a2",
+          "start_min": 110.0,
+          "end_min": 115.0
+        }
+      ],
+      "required_operations_completed": false,
+      "treatment_end_confirmed": false
+    },
+    {
+      "patient_id": "P16",
+      "plan_status": "scheduled",
+      "progress": "in_transport_or_handoff",
+      "location": "V2",
+      "completed_action_ids": [],
+      "active_task_ids": [
+        "T-TR-P16"
+      ],
+      "ongoing_support_operation_ids": [],
+      "future_tasks": [
+        {
+          "task_id": "T-OP-P16-a1",
+          "start_min": 81.0,
+          "end_min": 96.0
+        },
+        {
+          "task_id": "T-OP-P16-a2",
+          "start_min": 96.0,
+          "end_min": 108.0
+        },
+        {
+          "task_id": "T-CARE-P16-a2-1",
+          "start_min": 118.0,
+          "end_min": 119.0
+        }
+      ],
+      "required_operations_completed": false,
+      "treatment_end_confirmed": false
+    }
+  ],
+  "vehicles": {
+    "V1": {
+      "task_id": "T-TR-P13",
+      "available_from_min": 62.0,
+      "phase": "turnaround",
+      "location": "H1"
+    },
+    "V2": {
+      "task_id": "T-TR-P16",
+      "available_from_min": 86.0,
+      "phase": "loaded_travel",
+      "location": null,
+      "origin": "B",
+      "destination": "H1"
+    },
+    "V3": {
+      "task_id": "T-TR-P06",
+      "available_from_min": 80.0,
+      "phase": "loaded_travel",
+      "location": null,
+      "origin": "B",
+      "destination": "H2"
+    }
+  },
+  "resource_occupancy": [
+    {
+      "resource_id": "V1",
+      "start_min": 25.0,
+      "end_min": 62.0,
+      "patient_id": "P13",
+      "task_id": "T-TR-P13",
+      "kind": "vehicle"
+    },
+    {
+      "resource_id": "V1-driver-1",
+      "start_min": 25.0,
+      "end_min": 62.0,
+      "patient_id": "P13",
+      "task_id": "T-TR-P13",
+      "kind": "crew"
+    },
+    {
+      "resource_id": "V1-medic-1",
+      "start_min": 25.0,
+      "end_min": 62.0,
+      "patient_id": "P13",
+      "task_id": "T-TR-P13",
+      "kind": "crew"
+    },
+    {
+      "resource_id": "V2",
+      "start_min": 33.0,
+      "end_min": 86.0,
+      "patient_id": "P16",
+      "task_id": "T-TR-P16",
+      "kind": "vehicle"
+    },
+    {
+      "resource_id": "V2-stretcher-1",
+      "start_min": 53.0,
+      "end_min": 81.0,
+      "patient_id": "P16",
+      "task_id": "T-TR-P16",
+      "kind": "transport_space"
+    },
+    {
+      "resource_id": "V2-driver-1",
+      "start_min": 33.0,
+      "end_min": 86.0,
+      "patient_id": "P16",
+      "task_id": "T-TR-P16",
+      "kind": "crew"
+    },
+    {
+      "resource_id": "V2-medic-1",
+      "start_min": 33.0,
+      "end_min": 86.0,
+      "patient_id": "P16",
+      "task_id": "T-TR-P16",
+      "kind": "crew"
+    },
+    {
+      "resource_id": "V3",
+      "start_min": 37.0,
+      "end_min": 80.0,
+      "patient_id": "P06",
+      "task_id": "T-TR-P06",
+      "kind": "vehicle"
+    },
+    {
+      "resource_id": "V3-stretcher-1",
+      "start_min": 57.0,
+      "end_min": 75.0,
+      "patient_id": "P06",
+      "task_id": "T-TR-P06",
+      "kind": "transport_space"
+    },
+    {
+      "resource_id": "V3-driver-1",
+      "start_min": 37.0,
+      "end_min": 80.0,
+      "patient_id": "P06",
+      "task_id": "T-TR-P06",
+      "kind": "crew"
+    },
+    {
+      "resource_id": "V3-medic-1",
+      "start_min": 37.0,
+      "end_min": 80.0,
+      "patient_id": "P06",
+      "task_id": "T-TR-P06",
+      "kind": "crew"
+    },
+    {
+      "resource_id": "B-observation-1",
+      "start_min": 5.0,
+      "end_min": 120.0,
+      "patient_id": "P08",
+      "task_id": "T-OP-P08-a1",
+      "kind": "space",
+      "release_status": "unknown",
+      "end_is_accounting_cutoff": true,
+      "may_continue_beyond_horizon": true
+    },
+    {
+      "resource_id": "A-observation-1",
+      "start_min": 8.0,
+      "end_min": 120.0,
+      "patient_id": "P01",
+      "task_id": "T-OP-P01-a2",
+      "kind": "space",
+      "release_status": "unknown",
+      "end_is_accounting_cutoff": true,
+      "may_continue_beyond_horizon": true
+    },
+    {
+      "resource_id": "B-oxygen_device-1",
+      "start_min": 10.0,
+      "end_min": 120.0,
+      "patient_id": "P12",
+      "task_id": "T-OP-P12-a1",
+      "kind": "support",
+      "release_status": "unknown",
+      "end_is_accounting_cutoff": true,
+      "may_continue_beyond_horizon": true
+    },
+    {
+      "resource_id": "B-observation-2",
+      "start_min": 12.0,
+      "end_min": 120.0,
+      "patient_id": "P12",
+      "task_id": "T-OP-P12-a1",
+      "kind": "space",
+      "release_status": "unknown",
+      "end_is_accounting_cutoff": true,
+      "may_continue_beyond_horizon": true
+    },
+    {
+      "resource_id": "A-observation-2",
+      "start_min": 18.0,
+      "end_min": 120.0,
+      "patient_id": "P09",
+      "task_id": "T-OP-P09-a2",
+      "kind": "space",
+      "release_status": "unknown",
+      "end_is_accounting_cutoff": true,
+      "may_continue_beyond_horizon": true
+    },
+    {
+      "resource_id": "H1-ventilator-1",
+      "start_min": 28.0,
+      "end_min": 120.0,
+      "patient_id": "P03",
+      "task_id": "T-OP-P03-a2",
+      "kind": "support",
+      "release_status": "unknown",
+      "end_is_accounting_cutoff": true,
+      "may_continue_beyond_horizon": true
+    },
+    {
+      "resource_id": "H1-ventilation_bed-1",
+      "start_min": 33.0,
+      "end_min": 120.0,
+      "patient_id": "P03",
+      "task_id": "T-OP-P03-a2",
+      "kind": "space",
+      "release_status": "unknown",
+      "end_is_accounting_cutoff": true,
+      "may_continue_beyond_horizon": true
+    },
+    {
+      "resource_id": "H1-bed-1",
+      "start_min": 55.0,
+      "end_min": 120.0,
+      "patient_id": "P07",
+      "task_id": "T-OP-P07-a2",
+      "kind": "space",
+      "release_status": "unknown",
+      "end_is_accounting_cutoff": true,
+      "may_continue_beyond_horizon": true
+    },
+    {
+      "resource_id": "H1-advanced-2",
+      "start_min": 57.0,
+      "end_min": 65.0,
+      "patient_id": "P13",
+      "task_id": "T-OP-P13-a1",
+      "kind": "operation"
+    },
+    {
+      "resource_id": "H1-care-3",
+      "start_min": 57.0,
+      "end_min": 65.0,
+      "patient_id": "P13",
+      "task_id": "T-OP-P13-a1",
+      "kind": "operation"
+    },
+    {
+      "resource_id": "H1-intubation_set-1",
+      "start_min": 57.0,
+      "end_min": 70.0,
+      "patient_id": "P13",
+      "task_id": "T-OP-P13-a1",
+      "kind": "equipment"
+    },
+    {
+      "resource_id": "H1-treatment-1",
+      "start_min": 57.0,
+      "end_min": 65.0,
+      "patient_id": "P13",
+      "task_id": "T-OP-P13-a1",
+      "kind": "space"
+    },
+    {
+      "resource_id": "H1-basic-1",
+      "start_min": 58.0,
+      "end_min": 63.0,
+      "patient_id": "P02",
+      "task_id": "T-OP-P02-a2",
+      "kind": "operation"
+    },
+    {
+      "resource_id": "H1-bed-2",
+      "start_min": 58.0,
+      "end_min": 63.0,
+      "patient_id": "P02",
+      "task_id": "T-OP-P02-a2",
+      "kind": "space"
+    }
+  ],
+  "inventory": {
+    "A": {
+      "external_bleeding_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 3,
+        "initial_reserved": 0,
+        "predicted_consumed": 2,
+        "candidate_total_commitment": 2,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "occlusive_dressing": {
+        "unit": "kit_or_item",
+        "initial_quantity": 2,
+        "initial_reserved": 0,
+        "predicted_consumed": 1,
+        "candidate_total_commitment": 1,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "decompression_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 2,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 2,
+        "available_after_all_candidate_commitments": 2
+      },
+      "iv_access_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 4,
+        "initial_reserved": 0,
+        "predicted_consumed": 2,
+        "candidate_total_commitment": 2,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 2,
+        "available_after_all_candidate_commitments": 2
+      },
+      "infusion_set": {
+        "unit": "kit_or_item",
+        "initial_quantity": 4,
+        "initial_reserved": 0,
+        "predicted_consumed": 2,
+        "candidate_total_commitment": 2,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 2,
+        "available_after_all_candidate_commitments": 2
+      },
+      "transfusion_set": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "chest_drain_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "intubation_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "breathing_circuit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "oxygen_interface": {
+        "unit": "kit_or_item",
+        "initial_quantity": 3,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 3,
+        "available_after_all_candidate_commitments": 3
+      },
+      "saline": {
+        "unit": "mL",
+        "initial_quantity": 1000,
+        "initial_reserved": 0,
+        "predicted_consumed": 1000.0,
+        "candidate_total_commitment": 1000,
+        "unconsumed_commitment": 0.0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0.0,
+        "physical_remaining": 0.0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "blood": {
+        "unit": "mL",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "oxygen": {
+        "unit": "L",
+        "initial_quantity": 60,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 60,
+        "available_after_all_candidate_commitments": 60
+      }
+    },
+    "B": {
+      "external_bleeding_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 2,
+        "initial_reserved": 0,
+        "predicted_consumed": 1,
+        "candidate_total_commitment": 1,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "occlusive_dressing": {
+        "unit": "kit_or_item",
+        "initial_quantity": 2,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 2,
+        "available_after_all_candidate_commitments": 2
+      },
+      "decompression_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 1,
+        "candidate_total_commitment": 1,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "iv_access_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 3,
+        "initial_reserved": 0,
+        "predicted_consumed": 1,
+        "candidate_total_commitment": 1,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 2,
+        "available_after_all_candidate_commitments": 2
+      },
+      "infusion_set": {
+        "unit": "kit_or_item",
+        "initial_quantity": 3,
+        "initial_reserved": 0,
+        "predicted_consumed": 1,
+        "candidate_total_commitment": 1,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 2,
+        "available_after_all_candidate_commitments": 2
+      },
+      "transfusion_set": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "chest_drain_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "intubation_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "breathing_circuit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "oxygen_interface": {
+        "unit": "kit_or_item",
+        "initial_quantity": 2,
+        "initial_reserved": 0,
+        "predicted_consumed": 1,
+        "candidate_total_commitment": 1,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "saline": {
+        "unit": "mL",
+        "initial_quantity": 500,
+        "initial_reserved": 0,
+        "predicted_consumed": 500.0,
+        "candidate_total_commitment": 500,
+        "unconsumed_commitment": 0.0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0.0,
+        "physical_remaining": 0.0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "blood": {
+        "unit": "mL",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "oxygen": {
+        "unit": "L",
+        "initial_quantity": 60,
+        "initial_reserved": 0,
+        "predicted_consumed": 24.0,
+        "candidate_total_commitment": 54.0,
+        "unconsumed_commitment": 30.0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 36.0,
+        "available_after_all_candidate_commitments": 6.0
+      }
+    },
+    "H1": {
+      "external_bleeding_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 2,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 2,
+        "available_after_all_candidate_commitments": 2
+      },
+      "occlusive_dressing": {
+        "unit": "kit_or_item",
+        "initial_quantity": 2,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 2,
+        "available_after_all_candidate_commitments": 2
+      },
+      "decompression_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 2,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 2,
+        "available_after_all_candidate_commitments": 2
+      },
+      "iv_access_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 6,
+        "initial_reserved": 0,
+        "predicted_consumed": 1,
+        "candidate_total_commitment": 2,
+        "unconsumed_commitment": 1,
+        "future_not_started_commitment": 1,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 5,
+        "available_after_all_candidate_commitments": 4
+      },
+      "infusion_set": {
+        "unit": "kit_or_item",
+        "initial_quantity": 6,
+        "initial_reserved": 0,
+        "predicted_consumed": 1,
+        "candidate_total_commitment": 2,
+        "unconsumed_commitment": 1,
+        "future_not_started_commitment": 1,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 5,
+        "available_after_all_candidate_commitments": 4
+      },
+      "transfusion_set": {
+        "unit": "kit_or_item",
+        "initial_quantity": 3,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 3,
+        "available_after_all_candidate_commitments": 3
+      },
+      "chest_drain_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 2,
+        "initial_reserved": 0,
+        "predicted_consumed": 1,
+        "candidate_total_commitment": 2,
+        "unconsumed_commitment": 1,
+        "future_not_started_commitment": 1,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 0
+      },
+      "intubation_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 3,
+        "initial_reserved": 0,
+        "predicted_consumed": 2,
+        "candidate_total_commitment": 2,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "breathing_circuit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 2,
+        "initial_reserved": 0,
+        "predicted_consumed": 1,
+        "candidate_total_commitment": 2,
+        "unconsumed_commitment": 1,
+        "future_not_started_commitment": 1,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 0
+      },
+      "oxygen_interface": {
+        "unit": "kit_or_item",
+        "initial_quantity": 4,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 4,
+        "available_after_all_candidate_commitments": 4
+      },
+      "saline": {
+        "unit": "mL",
+        "initial_quantity": 1500,
+        "initial_reserved": 0,
+        "predicted_consumed": 0.0,
+        "candidate_total_commitment": 1000,
+        "unconsumed_commitment": 1000.0,
+        "future_not_started_commitment": 500,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1500.0,
+        "available_after_all_candidate_commitments": 500
+      },
+      "blood": {
+        "unit": "mL",
+        "initial_quantity": 1000,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1000,
+        "available_after_all_candidate_commitments": 1000
+      },
+      "oxygen": {
+        "unit": "L",
+        "initial_quantity": 120,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 120,
+        "available_after_all_candidate_commitments": 120
+      }
+    },
+    "H2": {
+      "external_bleeding_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 2,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 2,
+        "available_after_all_candidate_commitments": 2
+      },
+      "occlusive_dressing": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "decompression_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 1,
+        "unconsumed_commitment": 1,
+        "future_not_started_commitment": 1,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 0
+      },
+      "iv_access_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 4,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 1,
+        "unconsumed_commitment": 1,
+        "future_not_started_commitment": 1,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 4,
+        "available_after_all_candidate_commitments": 3
+      },
+      "infusion_set": {
+        "unit": "kit_or_item",
+        "initial_quantity": 4,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 1,
+        "unconsumed_commitment": 1,
+        "future_not_started_commitment": 1,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 4,
+        "available_after_all_candidate_commitments": 3
+      },
+      "transfusion_set": {
+        "unit": "kit_or_item",
+        "initial_quantity": 2,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 2,
+        "available_after_all_candidate_commitments": 2
+      },
+      "chest_drain_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "intubation_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 2,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 2,
+        "available_after_all_candidate_commitments": 2
+      },
+      "breathing_circuit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "oxygen_interface": {
+        "unit": "kit_or_item",
+        "initial_quantity": 3,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 3,
+        "available_after_all_candidate_commitments": 3
+      },
+      "saline": {
+        "unit": "mL",
+        "initial_quantity": 500,
+        "initial_reserved": 0,
+        "predicted_consumed": 0.0,
+        "candidate_total_commitment": 500,
+        "unconsumed_commitment": 500.0,
+        "future_not_started_commitment": 500,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 500.0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "blood": {
+        "unit": "mL",
+        "initial_quantity": 500,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 500,
+        "available_after_all_candidate_commitments": 500
+      },
+      "oxygen": {
+        "unit": "L",
+        "initial_quantity": 60,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 60,
+        "available_after_all_candidate_commitments": 60
+      }
+    },
+    "V1": {
+      "external_bleeding_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "occlusive_dressing": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "decompression_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "iv_access_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "infusion_set": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "transfusion_set": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "chest_drain_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "intubation_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "breathing_circuit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "oxygen_interface": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "saline": {
+        "unit": "mL",
+        "initial_quantity": 500,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 500,
+        "available_after_all_candidate_commitments": 500
+      },
+      "blood": {
+        "unit": "mL",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "oxygen": {
+        "unit": "L",
+        "initial_quantity": 30,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 30,
+        "available_after_all_candidate_commitments": 30
+      }
+    },
+    "V2": {
+      "external_bleeding_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "occlusive_dressing": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "decompression_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "iv_access_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "infusion_set": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "transfusion_set": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "chest_drain_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "intubation_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "breathing_circuit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "oxygen_interface": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "saline": {
+        "unit": "mL",
+        "initial_quantity": 500,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 500,
+        "available_after_all_candidate_commitments": 500
+      },
+      "blood": {
+        "unit": "mL",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "oxygen": {
+        "unit": "L",
+        "initial_quantity": 30,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 30,
+        "available_after_all_candidate_commitments": 30
+      }
+    },
+    "V3": {
+      "external_bleeding_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "occlusive_dressing": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "decompression_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "iv_access_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "infusion_set": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "transfusion_set": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "chest_drain_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "intubation_kit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "breathing_circuit": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "oxygen_interface": {
+        "unit": "kit_or_item",
+        "initial_quantity": 1,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 1,
+        "available_after_all_candidate_commitments": 1
+      },
+      "saline": {
+        "unit": "mL",
+        "initial_quantity": 500,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 500,
+        "available_after_all_candidate_commitments": 500
+      },
+      "blood": {
+        "unit": "mL",
+        "initial_quantity": 0,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 0,
+        "available_after_all_candidate_commitments": 0
+      },
+      "oxygen": {
+        "unit": "L",
+        "initial_quantity": 30,
+        "initial_reserved": 0,
+        "predicted_consumed": 0,
+        "candidate_total_commitment": 0,
+        "unconsumed_commitment": 0,
+        "future_not_started_commitment": 0,
+        "patient_bound_remaining": 0,
+        "physical_remaining": 30,
+        "available_after_all_candidate_commitments": 30
+      }
+    }
+  },
+  "completed_required_operations_patients": 10,
+  "support_after_planning_horizon": "unknown_stop_not_released; future care and supply not verified"
+}

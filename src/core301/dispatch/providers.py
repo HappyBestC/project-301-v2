@@ -59,6 +59,11 @@ class FixedDispatchProvider:
 
 
 class LLMDispatchProvider:
+    async def decide_resource_schedule(self, dispatch_input, **options):
+        """Document-based batch schedule; separate from the legacy MR5 contract."""
+        from .minimal.api import request_agent_schedule
+        return await request_agent_schedule(self, dispatch_input, **options)
+
     def __init__(self, *, enable_eta_tools=False, max_tool_rounds=4):
         if type(max_tool_rounds) is not int or max_tool_rounds < 1:
             raise ValueError("max_tool_rounds must be a positive integer")

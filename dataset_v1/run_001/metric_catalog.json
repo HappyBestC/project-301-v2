@@ -1,0 +1,182 @@
+{
+  "vitals.heart_rate": {
+    "unit": "1/min",
+    "request": {
+      "Category": "Physiology",
+      "PropertyName": "HeartRate",
+      "Unit": "1/min",
+      "CompartmentName": null,
+      "SubstanceName": null
+    },
+    "raw_group": "values",
+    "raw_key": "vitals.heart_rate"
+  },
+  "vitals.respiration_rate": {
+    "unit": "1/min",
+    "request": {
+      "Category": "Physiology",
+      "PropertyName": "RespirationRate",
+      "Unit": "1/min",
+      "CompartmentName": null,
+      "SubstanceName": null
+    },
+    "raw_group": "values",
+    "raw_key": "vitals.respiration_rate"
+  },
+  "vitals.pulse_oximetry": {
+    "unit": "1",
+    "request": {
+      "Category": "Physiology",
+      "PropertyName": "PulseOximetry",
+      "Unit": null,
+      "CompartmentName": null,
+      "SubstanceName": null
+    },
+    "raw_group": "values",
+    "raw_key": "vitals.pulse_oximetry"
+  },
+  "vitals.systolic_arterial_pressure": {
+    "unit": "mmHg",
+    "request": {
+      "Category": "Physiology",
+      "PropertyName": "SystolicArterialPressure",
+      "Unit": "mmHg",
+      "CompartmentName": null,
+      "SubstanceName": null
+    },
+    "raw_group": "values",
+    "raw_key": "vitals.systolic_arterial_pressure"
+  },
+  "vitals.mean_arterial_pressure": {
+    "unit": "mmHg",
+    "request": {
+      "Category": "Physiology",
+      "PropertyName": "MeanArterialPressure",
+      "Unit": "mmHg",
+      "CompartmentName": null,
+      "SubstanceName": null
+    },
+    "raw_group": "values",
+    "raw_key": "vitals.mean_arterial_pressure"
+  },
+  "circulation.cardiac_output": {
+    "unit": "L/min",
+    "request": {
+      "Category": "Physiology",
+      "PropertyName": "CardiacOutput",
+      "Unit": "L/min",
+      "CompartmentName": null,
+      "SubstanceName": null
+    },
+    "raw_group": "values",
+    "raw_key": "circulation.cardiac_output"
+  },
+  "respiratory.tidal_volume": {
+    "unit": "mL",
+    "request": {
+      "Category": "Physiology",
+      "PropertyName": "TidalVolume",
+      "Unit": "mL",
+      "CompartmentName": null,
+      "SubstanceName": null
+    },
+    "raw_group": "values",
+    "raw_key": "respiratory.tidal_volume"
+  },
+  "respiratory.inspired_oxygen_fraction": {
+    "unit": "1",
+    "request": {
+      "Category": "Physiology",
+      "PropertyName": "FractionOfInspiredOxygen",
+      "Unit": null,
+      "CompartmentName": null,
+      "SubstanceName": null
+    },
+    "raw_group": "values",
+    "raw_key": "respiratory.inspired_oxygen_fraction"
+  },
+  "laboratory.hemoglobin_concentration": {
+    "unit": "g/dL",
+    "request": {
+      "Category": "Substance",
+      "PropertyName": "BloodConcentration",
+      "Unit": "g/dL",
+      "CompartmentName": null,
+      "SubstanceName": "Hemoglobin"
+    },
+    "raw_group": "values",
+    "raw_key": "laboratory.hemoglobin_concentration"
+  },
+  "laboratory.lactate_concentration": {
+    "unit": "mg/dL",
+    "request": {
+      "Category": "Substance",
+      "PropertyName": "BloodConcentration",
+      "Unit": "mg/dL",
+      "CompartmentName": null,
+      "SubstanceName": "Lactate"
+    },
+    "raw_group": "values",
+    "raw_key": "laboratory.lactate_concentration"
+  },
+  "laboratory.arterial_oxygen_pressure": {
+    "unit": "mmHg",
+    "request": {
+      "Category": "LiquidCompartment",
+      "PropertyName": "PartialPressure",
+      "Unit": "mmHg",
+      "CompartmentName": "Aorta",
+      "SubstanceName": "Oxygen"
+    },
+    "raw_group": "values",
+    "raw_key": "laboratory.arterial_oxygen_pressure"
+  },
+  "laboratory.arterial_carbon_dioxide_pressure": {
+    "unit": "mmHg",
+    "request": {
+      "Category": "LiquidCompartment",
+      "PropertyName": "PartialPressure",
+      "Unit": "mmHg",
+      "CompartmentName": "Aorta",
+      "SubstanceName": "CarbonDioxide"
+    },
+    "raw_group": "values",
+    "raw_key": "laboratory.arterial_carbon_dioxide_pressure"
+  },
+  "laboratory.blood_ph": {
+    "unit": "1",
+    "request": {
+      "Category": "Physiology",
+      "PropertyName": "BloodPH",
+      "Unit": null,
+      "CompartmentName": null,
+      "SubstanceName": null
+    },
+    "raw_group": "values",
+    "raw_key": "laboratory.blood_ph"
+  },
+  "laboratory.aorta_carboxyhemoglobin_concentration": {
+    "unit": "g/dL",
+    "request": {
+      "Category": "LiquidCompartment",
+      "CompartmentName": "Aorta",
+      "SubstanceName": "Carboxyhemoglobin",
+      "PropertyName": "Concentration",
+      "Unit": "g/dL"
+    },
+    "raw_group": "diagnostics",
+    "raw_key": "aorta_cohb_g_dL"
+  },
+  "laboratory.aorta_sodium_concentration": {
+    "unit": "mEq/L",
+    "request": {
+      "Category": "LiquidCompartment",
+      "CompartmentName": "Aorta",
+      "SubstanceName": "Sodium",
+      "PropertyName": "Molarity",
+      "Unit": "mEq/L"
+    },
+    "raw_group": "diagnostics",
+    "raw_key": "aorta_sodium_mEq_L"
+  }
+}

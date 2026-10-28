@@ -1,0 +1,6517 @@
+{
+  "version": "301.resource_schedule.input.v1",
+  "time_unit": "scheduler_minutes",
+  "horizon_min": 120.0,
+  "observation_time_min": 60.0,
+  "purpose": "resource scheduling demonstration; eligibility not confirmed",
+  "patients": [
+    {
+      "patient_id": "P01",
+      "location": "A",
+      "arrival_time_min": 0,
+      "pulse_sample_time_s": 180.00000000001828,
+      "observation": {
+        "patient_id": "P01",
+        "simulation_time_s": 180.00000000001828,
+        "vitals": {
+          "heart_rate": {
+            "value": 75.3228860921755,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "respiration_rate": {
+            "value": 12.0481927710843,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "pulse_oximetry": {
+            "value": 0.973863287807698,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "systolic_arterial_pressure": {
+            "value": 112.76229122897605,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "mean_arterial_pressure": {
+            "value": 95.02536329725127,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          }
+        }
+      },
+      "known_injury_context": {
+        "injury_type": "external_hemorrhage",
+        "compartment": "RightLeg"
+      },
+      "candidate_plans": [
+        {
+          "plan_id": "P01-plan-1",
+          "injury_type": "external_hemorrhage",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P01-plan-1-a1",
+              "action_type": "control_external_bleeding",
+              "target": {
+                "patient_id": "P01",
+                "compartment": "RightLeg"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "control_external_bleeding.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "control_external_bleeding"
+              },
+              "injury_association": {
+                "injury_type": "external_hemorrhage",
+                "compartment": "RightLeg"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "aid_station",
+                  "hospital",
+                  "basic_ambulance",
+                  "ventilation_ambulance"
+                ],
+                "allowed_continue": [],
+                "duration_min": 3,
+                "staff_roles": [
+                  "external_control"
+                ],
+                "consumables": {
+                  "external_bleeding_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "treatment"
+                  ],
+                  "hospital": [
+                    "treatment"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "compartment",
+                "continuous": false,
+                "support_space_types": {},
+                "care": null,
+                "predecessor_actions": [],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 0,
+                "stop_condition": "operation_complete",
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "action_type": "control_external_bleeding",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P01",
+                  "compartment": "RightLeg"
+                },
+                "access_phase_min": 0
+              }
+            },
+            {
+              "action_id": "P01-plan-1-a2",
+              "action_type": "fluid_resuscitation",
+              "target": {
+                "patient_id": "P01"
+              },
+              "depends_on": [
+                "P01-plan-1-a1"
+              ],
+              "fixed_protocol_ref": {
+                "protocol_id": "fluid_resuscitation.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "fluid_resuscitation"
+              },
+              "injury_association": {
+                "injury_type": "external_hemorrhage",
+                "compartment": "RightLeg"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "aid_station",
+                  "hospital"
+                ],
+                "allowed_continue": [
+                  "basic_ambulance",
+                  "ventilation_ambulance"
+                ],
+                "duration_min": 5,
+                "staff_roles": [
+                  "fluid"
+                ],
+                "consumables": {
+                  "infusion_set": 1,
+                  "iv_access_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "patient",
+                "continuous": true,
+                "support_space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "care": {
+                  "period_min": 10,
+                  "duration_min": 1,
+                  "role": "infusion_care"
+                },
+                "predecessor_actions": [],
+                "bulk_resources": [
+                  "saline"
+                ],
+                "equipment_turnaround_min": 0,
+                "stop_condition": null,
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "access": {
+                  "new_duration_min": 5,
+                  "existing_duration_min": 2,
+                  "new_consumables": {
+                    "iv_access_kit": 1
+                  },
+                  "separate_phase": false
+                },
+                "continuation_duration_min": null,
+                "injury_predecessors": {
+                  "external_hemorrhage": "control_external_bleeding",
+                  "abdominal_internal_hemorrhage": "control_internal_bleeding"
+                },
+                "continuation_staff_roles": [
+                  "infusion_care"
+                ],
+                "action_type": "fluid_resuscitation",
+                "depends_on": [
+                  "P01-plan-1-a1"
+                ],
+                "target": {
+                  "patient_id": "P01"
+                },
+                "access_phase_min": 0
+              }
+            }
+          ]
+        },
+        {
+          "plan_id": "P01-plan-2",
+          "injury_type": "external_hemorrhage",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P01-plan-2-a1",
+              "action_type": "control_external_bleeding",
+              "target": {
+                "patient_id": "P01",
+                "compartment": "RightLeg"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "control_external_bleeding.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "control_external_bleeding"
+              },
+              "injury_association": {
+                "injury_type": "external_hemorrhage",
+                "compartment": "RightLeg"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "aid_station",
+                  "hospital",
+                  "basic_ambulance",
+                  "ventilation_ambulance"
+                ],
+                "allowed_continue": [],
+                "duration_min": 3,
+                "staff_roles": [
+                  "external_control"
+                ],
+                "consumables": {
+                  "external_bleeding_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "treatment"
+                  ],
+                  "hospital": [
+                    "treatment"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "compartment",
+                "continuous": false,
+                "support_space_types": {},
+                "care": null,
+                "predecessor_actions": [],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 0,
+                "stop_condition": "operation_complete",
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "action_type": "control_external_bleeding",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P01",
+                  "compartment": "RightLeg"
+                },
+                "access_phase_min": 0
+              }
+            },
+            {
+              "action_id": "P01-plan-2-a2",
+              "action_type": "transfusion",
+              "target": {
+                "patient_id": "P01"
+              },
+              "depends_on": [
+                "P01-plan-2-a1"
+              ],
+              "fixed_protocol_ref": {
+                "protocol_id": "transfusion.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "transfusion"
+              },
+              "injury_association": {
+                "injury_type": "external_hemorrhage",
+                "compartment": "RightLeg"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "hospital"
+                ],
+                "allowed_continue": [],
+                "duration_min": 11,
+                "staff_roles": [
+                  "transfusion",
+                  "transfusion"
+                ],
+                "consumables": {
+                  "transfusion_set": 1,
+                  "iv_access_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "bed"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "patient",
+                "continuous": true,
+                "support_space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "care": {
+                  "period_min": 5,
+                  "duration_min": 1,
+                  "role": "transfusion_care"
+                },
+                "predecessor_actions": [],
+                "bulk_resources": [
+                  "blood"
+                ],
+                "equipment_turnaround_min": 0,
+                "stop_condition": null,
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "access": {
+                  "new_duration_min": 3,
+                  "existing_duration_min": 0,
+                  "new_consumables": {
+                    "iv_access_kit": 1
+                  },
+                  "separate_phase": true,
+                  "role": "access"
+                },
+                "injury_predecessors": {
+                  "external_hemorrhage": "control_external_bleeding",
+                  "abdominal_internal_hemorrhage": "control_internal_bleeding"
+                },
+                "action_type": "transfusion",
+                "depends_on": [
+                  "P01-plan-2-a1"
+                ],
+                "target": {
+                  "patient_id": "P01"
+                },
+                "access_phase_min": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "patient_id": "P02",
+      "location": "A",
+      "arrival_time_min": 0,
+      "pulse_sample_time_s": 180.00000000001828,
+      "observation": {
+        "patient_id": "P02",
+        "simulation_time_s": 180.00000000001828,
+        "vitals": {
+          "heart_rate": {
+            "value": 72.43963619176705,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "respiration_rate": {
+            "value": 12.0481927710843,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "pulse_oximetry": {
+            "value": 0.9739832365013341,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "systolic_arterial_pressure": {
+            "value": 113.76651564326927,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "mean_arterial_pressure": {
+            "value": 95.24453518820471,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          }
+        }
+      },
+      "known_injury_context": {
+        "injury_type": "abdominal_internal_hemorrhage",
+        "compartment": "Spleen"
+      },
+      "candidate_plans": [
+        {
+          "plan_id": "P02-plan-1",
+          "injury_type": "abdominal_internal_hemorrhage",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P02-plan-1-a1",
+              "action_type": "control_internal_bleeding",
+              "target": {
+                "patient_id": "P02",
+                "compartment": "Spleen"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "control_internal_bleeding.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "control_internal_bleeding"
+              },
+              "injury_association": {
+                "injury_type": "abdominal_internal_hemorrhage",
+                "compartment": "Spleen"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "hospital"
+                ],
+                "allowed_continue": [],
+                "duration_min": 15,
+                "staff_roles": [
+                  "advanced",
+                  "assist"
+                ],
+                "consumables": {},
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "treatment"
+                  ],
+                  "hospital": [
+                    "treatment"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "compartment",
+                "continuous": false,
+                "support_space_types": {},
+                "care": null,
+                "predecessor_actions": [],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 0,
+                "stop_condition": "operation_complete",
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "space_capability": "research_hemostasis",
+                "action_type": "control_internal_bleeding",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P02",
+                  "compartment": "Spleen"
+                },
+                "access_phase_min": 0
+              }
+            },
+            {
+              "action_id": "P02-plan-1-a2",
+              "action_type": "fluid_resuscitation",
+              "target": {
+                "patient_id": "P02"
+              },
+              "depends_on": [
+                "P02-plan-1-a1"
+              ],
+              "fixed_protocol_ref": {
+                "protocol_id": "fluid_resuscitation.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "fluid_resuscitation"
+              },
+              "injury_association": {
+                "injury_type": "abdominal_internal_hemorrhage",
+                "compartment": "Spleen"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "aid_station",
+                  "hospital"
+                ],
+                "allowed_continue": [
+                  "basic_ambulance",
+                  "ventilation_ambulance"
+                ],
+                "duration_min": 5,
+                "staff_roles": [
+                  "fluid"
+                ],
+                "consumables": {
+                  "infusion_set": 1,
+                  "iv_access_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "patient",
+                "continuous": true,
+                "support_space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "care": {
+                  "period_min": 10,
+                  "duration_min": 1,
+                  "role": "infusion_care"
+                },
+                "predecessor_actions": [],
+                "bulk_resources": [
+                  "saline"
+                ],
+                "equipment_turnaround_min": 0,
+                "stop_condition": null,
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "access": {
+                  "new_duration_min": 5,
+                  "existing_duration_min": 2,
+                  "new_consumables": {
+                    "iv_access_kit": 1
+                  },
+                  "separate_phase": false
+                },
+                "continuation_duration_min": null,
+                "injury_predecessors": {
+                  "external_hemorrhage": "control_external_bleeding",
+                  "abdominal_internal_hemorrhage": "control_internal_bleeding"
+                },
+                "continuation_staff_roles": [
+                  "infusion_care"
+                ],
+                "action_type": "fluid_resuscitation",
+                "depends_on": [
+                  "P02-plan-1-a1"
+                ],
+                "target": {
+                  "patient_id": "P02"
+                },
+                "access_phase_min": 0
+              }
+            }
+          ]
+        },
+        {
+          "plan_id": "P02-plan-2",
+          "injury_type": "abdominal_internal_hemorrhage",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P02-plan-2-a1",
+              "action_type": "control_internal_bleeding",
+              "target": {
+                "patient_id": "P02",
+                "compartment": "Spleen"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "control_internal_bleeding.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "control_internal_bleeding"
+              },
+              "injury_association": {
+                "injury_type": "abdominal_internal_hemorrhage",
+                "compartment": "Spleen"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "hospital"
+                ],
+                "allowed_continue": [],
+                "duration_min": 15,
+                "staff_roles": [
+                  "advanced",
+                  "assist"
+                ],
+                "consumables": {},
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "treatment"
+                  ],
+                  "hospital": [
+                    "treatment"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "compartment",
+                "continuous": false,
+                "support_space_types": {},
+                "care": null,
+                "predecessor_actions": [],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 0,
+                "stop_condition": "operation_complete",
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "space_capability": "research_hemostasis",
+                "action_type": "control_internal_bleeding",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P02",
+                  "compartment": "Spleen"
+                },
+                "access_phase_min": 0
+              }
+            },
+            {
+              "action_id": "P02-plan-2-a2",
+              "action_type": "transfusion",
+              "target": {
+                "patient_id": "P02"
+              },
+              "depends_on": [
+                "P02-plan-2-a1"
+              ],
+              "fixed_protocol_ref": {
+                "protocol_id": "transfusion.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "transfusion"
+              },
+              "injury_association": {
+                "injury_type": "abdominal_internal_hemorrhage",
+                "compartment": "Spleen"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "hospital"
+                ],
+                "allowed_continue": [],
+                "duration_min": 11,
+                "staff_roles": [
+                  "transfusion",
+                  "transfusion"
+                ],
+                "consumables": {
+                  "transfusion_set": 1,
+                  "iv_access_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "bed"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "patient",
+                "continuous": true,
+                "support_space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "care": {
+                  "period_min": 5,
+                  "duration_min": 1,
+                  "role": "transfusion_care"
+                },
+                "predecessor_actions": [],
+                "bulk_resources": [
+                  "blood"
+                ],
+                "equipment_turnaround_min": 0,
+                "stop_condition": null,
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "access": {
+                  "new_duration_min": 3,
+                  "existing_duration_min": 0,
+                  "new_consumables": {
+                    "iv_access_kit": 1
+                  },
+                  "separate_phase": true,
+                  "role": "access"
+                },
+                "injury_predecessors": {
+                  "external_hemorrhage": "control_external_bleeding",
+                  "abdominal_internal_hemorrhage": "control_internal_bleeding"
+                },
+                "action_type": "transfusion",
+                "depends_on": [
+                  "P02-plan-2-a1"
+                ],
+                "target": {
+                  "patient_id": "P02"
+                },
+                "access_phase_min": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "patient_id": "P03",
+      "location": "A",
+      "arrival_time_min": 0,
+      "pulse_sample_time_s": 180.00000000001828,
+      "observation": {
+        "patient_id": "P03",
+        "simulation_time_s": 180.00000000001828,
+        "vitals": {
+          "heart_rate": {
+            "value": 72.1637345691154,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "respiration_rate": {
+            "value": 14.851485148514843,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "pulse_oximetry": {
+            "value": 0.9668933476091308,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "systolic_arterial_pressure": {
+            "value": 114.08611431035969,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "mean_arterial_pressure": {
+            "value": 95.16864502410321,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          }
+        }
+      },
+      "known_injury_context": {
+        "injury_type": "respiratory_muscle_impairment"
+      },
+      "candidate_plans": [
+        {
+          "plan_id": "P03-plan-1",
+          "injury_type": "respiratory_muscle_impairment",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P03-plan-1-a1",
+              "action_type": "intubation",
+              "target": {
+                "patient_id": "P03"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "intubation.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "intubation"
+              },
+              "injury_association": {
+                "injury_type": "respiratory_muscle_impairment"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "hospital"
+                ],
+                "allowed_continue": [],
+                "duration_min": 8,
+                "staff_roles": [
+                  "advanced",
+                  "assist"
+                ],
+                "consumables": {
+                  "intubation_kit": 1
+                },
+                "equipment": [
+                  "intubation_set"
+                ],
+                "space_types": {
+                  "aid_station": [
+                    "treatment"
+                  ],
+                  "hospital": [
+                    "treatment"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "patient",
+                "continuous": false,
+                "support_space_types": {},
+                "care": null,
+                "predecessor_actions": [],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 5,
+                "stop_condition": "operation_complete",
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "action_type": "intubation",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P03"
+                },
+                "access_phase_min": 0
+              }
+            },
+            {
+              "action_id": "P03-plan-1-a2",
+              "action_type": "mechanical_ventilation",
+              "target": {
+                "patient_id": "P03"
+              },
+              "depends_on": [
+                "P03-plan-1-a1"
+              ],
+              "fixed_protocol_ref": {
+                "protocol_id": "mechanical_ventilation.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "mechanical_ventilation"
+              },
+              "injury_association": {
+                "injury_type": "respiratory_muscle_impairment"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "hospital"
+                ],
+                "allowed_continue": [
+                  "ventilation_ambulance"
+                ],
+                "duration_min": 5,
+                "staff_roles": [
+                  "ventilation_start"
+                ],
+                "consumables": {
+                  "breathing_circuit": 1
+                },
+                "equipment": [
+                  "ventilator"
+                ],
+                "space_types": {
+                  "aid_station": [
+                    "ventilation_bed"
+                  ],
+                  "hospital": [
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "patient",
+                "continuous": true,
+                "support_space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "care": {
+                  "period_min": 5,
+                  "duration_min": 2,
+                  "role": "ventilation_care"
+                },
+                "predecessor_actions": [
+                  "intubation"
+                ],
+                "bulk_resources": [
+                  "oxygen"
+                ],
+                "equipment_turnaround_min": 0,
+                "stop_condition": null,
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "continuation_duration_min": null,
+                "continuation_staff_roles": [
+                  "ventilation_care"
+                ],
+                "bulk_resource_scope": {
+                  "oxygen": "out_of_scope_not_modeled_not_zero"
+                },
+                "bulk_scope_source_ref": "config/medical_resources_v1/experiment_parameters_v1.json",
+                "action_type": "mechanical_ventilation",
+                "depends_on": [
+                  "P03-plan-1-a1"
+                ],
+                "target": {
+                  "patient_id": "P03"
+                },
+                "access_phase_min": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "patient_id": "P04",
+      "location": "A",
+      "arrival_time_min": 0,
+      "pulse_sample_time_s": 959.9999999994169,
+      "observation": {
+        "patient_id": "P04",
+        "simulation_time_s": 959.9999999994169,
+        "vitals": {
+          "heart_rate": {
+            "value": 70.58063864826099,
+            "status": "available",
+            "observed_at_s": 959.9999999994169
+          },
+          "respiration_rate": {
+            "value": 12.345679012345645,
+            "status": "available",
+            "observed_at_s": 959.9999999994169
+          },
+          "pulse_oximetry": {
+            "value": 0.9612378430064081,
+            "status": "available",
+            "observed_at_s": 959.9999999994169
+          },
+          "systolic_arterial_pressure": {
+            "value": 113.93106999514283,
+            "status": "available",
+            "observed_at_s": 959.9999999994169
+          },
+          "mean_arterial_pressure": {
+            "value": 94.67341059389014,
+            "status": "available",
+            "observed_at_s": 959.9999999994169
+          }
+        }
+      },
+      "known_injury_context": {
+        "injury_type": "carbon_monoxide_exposure"
+      },
+      "candidate_plans": [
+        {
+          "plan_id": "P04-plan-1",
+          "injury_type": "carbon_monoxide_exposure",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P04-plan-1-a1",
+              "action_type": "remove_from_exposure",
+              "target": {
+                "patient_id": "P04"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "301.v2.co.removal.restricted.1",
+                "source": "src/core301/runtime/v2/exposure_validation.py",
+                "action_selector": "remove_from_exposure"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "remove_from_exposure"
+              },
+              "injury_association": {
+                "injury_type": "carbon_monoxide_exposure"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "aid_station",
+                  "hospital"
+                ],
+                "allowed_continue": [],
+                "duration_min": 1,
+                "staff_roles": [
+                  "environment"
+                ],
+                "consumables": {},
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [],
+                  "hospital": [],
+                  "vehicle": []
+                },
+                "target_kind": "patient",
+                "continuous": false,
+                "support_space_types": {},
+                "care": null,
+                "predecessor_actions": [],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 0,
+                "stop_condition": "operation_complete",
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "action_type": "remove_from_exposure",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P04"
+                },
+                "access_phase_min": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "patient_id": "P05",
+      "location": "B",
+      "arrival_time_min": 0,
+      "pulse_sample_time_s": 180.00000000001828,
+      "observation": {
+        "patient_id": "P05",
+        "simulation_time_s": 180.00000000001828,
+        "vitals": {
+          "heart_rate": {
+            "value": 117.05831083797636,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "respiration_rate": {
+            "value": 13.888888888888868,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "pulse_oximetry": {
+            "value": 0.9632610069915392,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "systolic_arterial_pressure": {
+            "value": 103.06831314132162,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "mean_arterial_pressure": {
+            "value": 92.961374552244,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          }
+        }
+      },
+      "known_injury_context": {
+        "injury_type": "closed_tension_pneumothorax",
+        "side": "Left"
+      },
+      "candidate_plans": [
+        {
+          "plan_id": "P05-plan-1",
+          "injury_type": "closed_tension_pneumothorax",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P05-plan-1-a1",
+              "action_type": "needle_decompression",
+              "target": {
+                "patient_id": "P05",
+                "side": "Left"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "needle_decompression.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "needle_decompression"
+              },
+              "injury_association": {
+                "injury_type": "closed_tension_pneumothorax",
+                "side": "Left"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "aid_station",
+                  "hospital"
+                ],
+                "allowed_continue": [],
+                "duration_min": 3,
+                "staff_roles": [
+                  "decompression"
+                ],
+                "consumables": {
+                  "decompression_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "treatment"
+                  ],
+                  "hospital": [
+                    "treatment"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "side",
+                "continuous": false,
+                "support_space_types": {},
+                "care": null,
+                "predecessor_actions": [],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 0,
+                "stop_condition": "operation_complete",
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "action_type": "needle_decompression",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P05",
+                  "side": "Left"
+                },
+                "access_phase_min": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "patient_id": "P06",
+      "location": "B",
+      "arrival_time_min": 0,
+      "pulse_sample_time_s": 180.00000000001828,
+      "observation": {
+        "patient_id": "P06",
+        "simulation_time_s": 180.00000000001828,
+        "vitals": {
+          "heart_rate": {
+            "value": 72.43963619176705,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "respiration_rate": {
+            "value": 12.0481927710843,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "pulse_oximetry": {
+            "value": 0.9739832365013341,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "systolic_arterial_pressure": {
+            "value": 113.76651564326927,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "mean_arterial_pressure": {
+            "value": 95.24453518820471,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          }
+        }
+      },
+      "known_injury_context": {
+        "injury_type": "abdominal_internal_hemorrhage",
+        "compartment": "Spleen"
+      },
+      "candidate_plans": [
+        {
+          "plan_id": "P06-plan-1",
+          "injury_type": "abdominal_internal_hemorrhage",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P06-plan-1-a1",
+              "action_type": "control_internal_bleeding",
+              "target": {
+                "patient_id": "P06",
+                "compartment": "Spleen"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "control_internal_bleeding.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "control_internal_bleeding"
+              },
+              "injury_association": {
+                "injury_type": "abdominal_internal_hemorrhage",
+                "compartment": "Spleen"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "hospital"
+                ],
+                "allowed_continue": [],
+                "duration_min": 15,
+                "staff_roles": [
+                  "advanced",
+                  "assist"
+                ],
+                "consumables": {},
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "treatment"
+                  ],
+                  "hospital": [
+                    "treatment"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "compartment",
+                "continuous": false,
+                "support_space_types": {},
+                "care": null,
+                "predecessor_actions": [],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 0,
+                "stop_condition": "operation_complete",
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "space_capability": "research_hemostasis",
+                "action_type": "control_internal_bleeding",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P06",
+                  "compartment": "Spleen"
+                },
+                "access_phase_min": 0
+              }
+            },
+            {
+              "action_id": "P06-plan-1-a2",
+              "action_type": "fluid_resuscitation",
+              "target": {
+                "patient_id": "P06"
+              },
+              "depends_on": [
+                "P06-plan-1-a1"
+              ],
+              "fixed_protocol_ref": {
+                "protocol_id": "fluid_resuscitation.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "fluid_resuscitation"
+              },
+              "injury_association": {
+                "injury_type": "abdominal_internal_hemorrhage",
+                "compartment": "Spleen"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "aid_station",
+                  "hospital"
+                ],
+                "allowed_continue": [
+                  "basic_ambulance",
+                  "ventilation_ambulance"
+                ],
+                "duration_min": 5,
+                "staff_roles": [
+                  "fluid"
+                ],
+                "consumables": {
+                  "infusion_set": 1,
+                  "iv_access_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "patient",
+                "continuous": true,
+                "support_space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "care": {
+                  "period_min": 10,
+                  "duration_min": 1,
+                  "role": "infusion_care"
+                },
+                "predecessor_actions": [],
+                "bulk_resources": [
+                  "saline"
+                ],
+                "equipment_turnaround_min": 0,
+                "stop_condition": null,
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "access": {
+                  "new_duration_min": 5,
+                  "existing_duration_min": 2,
+                  "new_consumables": {
+                    "iv_access_kit": 1
+                  },
+                  "separate_phase": false
+                },
+                "continuation_duration_min": null,
+                "injury_predecessors": {
+                  "external_hemorrhage": "control_external_bleeding",
+                  "abdominal_internal_hemorrhage": "control_internal_bleeding"
+                },
+                "continuation_staff_roles": [
+                  "infusion_care"
+                ],
+                "action_type": "fluid_resuscitation",
+                "depends_on": [
+                  "P06-plan-1-a1"
+                ],
+                "target": {
+                  "patient_id": "P06"
+                },
+                "access_phase_min": 0
+              }
+            }
+          ]
+        },
+        {
+          "plan_id": "P06-plan-2",
+          "injury_type": "abdominal_internal_hemorrhage",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P06-plan-2-a1",
+              "action_type": "control_internal_bleeding",
+              "target": {
+                "patient_id": "P06",
+                "compartment": "Spleen"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "control_internal_bleeding.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "control_internal_bleeding"
+              },
+              "injury_association": {
+                "injury_type": "abdominal_internal_hemorrhage",
+                "compartment": "Spleen"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "hospital"
+                ],
+                "allowed_continue": [],
+                "duration_min": 15,
+                "staff_roles": [
+                  "advanced",
+                  "assist"
+                ],
+                "consumables": {},
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "treatment"
+                  ],
+                  "hospital": [
+                    "treatment"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "compartment",
+                "continuous": false,
+                "support_space_types": {},
+                "care": null,
+                "predecessor_actions": [],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 0,
+                "stop_condition": "operation_complete",
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "space_capability": "research_hemostasis",
+                "action_type": "control_internal_bleeding",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P06",
+                  "compartment": "Spleen"
+                },
+                "access_phase_min": 0
+              }
+            },
+            {
+              "action_id": "P06-plan-2-a2",
+              "action_type": "transfusion",
+              "target": {
+                "patient_id": "P06"
+              },
+              "depends_on": [
+                "P06-plan-2-a1"
+              ],
+              "fixed_protocol_ref": {
+                "protocol_id": "transfusion.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "transfusion"
+              },
+              "injury_association": {
+                "injury_type": "abdominal_internal_hemorrhage",
+                "compartment": "Spleen"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "hospital"
+                ],
+                "allowed_continue": [],
+                "duration_min": 11,
+                "staff_roles": [
+                  "transfusion",
+                  "transfusion"
+                ],
+                "consumables": {
+                  "transfusion_set": 1,
+                  "iv_access_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "bed"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "patient",
+                "continuous": true,
+                "support_space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "care": {
+                  "period_min": 5,
+                  "duration_min": 1,
+                  "role": "transfusion_care"
+                },
+                "predecessor_actions": [],
+                "bulk_resources": [
+                  "blood"
+                ],
+                "equipment_turnaround_min": 0,
+                "stop_condition": null,
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "access": {
+                  "new_duration_min": 3,
+                  "existing_duration_min": 0,
+                  "new_consumables": {
+                    "iv_access_kit": 1
+                  },
+                  "separate_phase": true,
+                  "role": "access"
+                },
+                "injury_predecessors": {
+                  "external_hemorrhage": "control_external_bleeding",
+                  "abdominal_internal_hemorrhage": "control_internal_bleeding"
+                },
+                "action_type": "transfusion",
+                "depends_on": [
+                  "P06-plan-2-a1"
+                ],
+                "target": {
+                  "patient_id": "P06"
+                },
+                "access_phase_min": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "patient_id": "P07",
+      "location": "B",
+      "arrival_time_min": 0,
+      "pulse_sample_time_s": 659.9999999996897,
+      "observation": {
+        "patient_id": "P07",
+        "simulation_time_s": 659.9999999996897,
+        "vitals": {
+          "heart_rate": {
+            "value": 72.53895298710164,
+            "status": "available",
+            "observed_at_s": 659.9999999996897
+          },
+          "respiration_rate": {
+            "value": 12.29508196721308,
+            "status": "available",
+            "observed_at_s": 659.9999999996897
+          },
+          "pulse_oximetry": {
+            "value": 0.9741793502405068,
+            "status": "available",
+            "observed_at_s": 659.9999999996897
+          },
+          "systolic_arterial_pressure": {
+            "value": 113.76972416109446,
+            "status": "available",
+            "observed_at_s": 659.9999999996897
+          },
+          "mean_arterial_pressure": {
+            "value": 95.29764493499869,
+            "status": "available",
+            "observed_at_s": 659.9999999996897
+          }
+        }
+      },
+      "known_injury_context": {
+        "injury_type": "hemothorax",
+        "side": "Left"
+      },
+      "candidate_plans": [
+        {
+          "plan_id": "P07-plan-1",
+          "injury_type": "hemothorax",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P07-plan-1-a1",
+              "action_type": "control_hemothorax_bleeding",
+              "target": {
+                "patient_id": "P07",
+                "side": "Left"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "301.v2.hemothorax.restricted.1",
+                "source": "src/core301/runtime/v2/hemothorax_validation.py",
+                "action_selector": "control_hemothorax_bleeding"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "control_hemothorax_bleeding"
+              },
+              "injury_association": {
+                "injury_type": "hemothorax",
+                "side": "Left"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "hospital"
+                ],
+                "allowed_continue": [],
+                "duration_min": 15,
+                "staff_roles": [
+                  "advanced",
+                  "assist"
+                ],
+                "consumables": {},
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "treatment"
+                  ],
+                  "hospital": [
+                    "treatment"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "side",
+                "continuous": false,
+                "support_space_types": {},
+                "care": null,
+                "predecessor_actions": [],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 0,
+                "stop_condition": "operation_complete",
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "space_capability": "research_hemostasis",
+                "action_type": "control_hemothorax_bleeding",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P07",
+                  "side": "Left"
+                },
+                "access_phase_min": 0
+              }
+            },
+            {
+              "action_id": "P07-plan-1-a2",
+              "action_type": "chest_tube",
+              "target": {
+                "patient_id": "P07",
+                "side": "Left"
+              },
+              "depends_on": [
+                "P07-plan-1-a1"
+              ],
+              "fixed_protocol_ref": {
+                "protocol_id": "301.v2.hemothorax.restricted.1",
+                "source": "src/core301/runtime/v2/hemothorax_validation.py",
+                "action_selector": "chest_tube"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "chest_tube"
+              },
+              "injury_association": {
+                "injury_type": "hemothorax",
+                "side": "Left"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "hospital"
+                ],
+                "allowed_continue": [],
+                "duration_min": 12,
+                "staff_roles": [
+                  "advanced",
+                  "assist"
+                ],
+                "consumables": {
+                  "chest_drain_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "treatment"
+                  ],
+                  "hospital": [
+                    "treatment"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "side",
+                "continuous": true,
+                "support_space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "care": {
+                  "period_min": 10,
+                  "duration_min": 1,
+                  "role": "drain_care"
+                },
+                "predecessor_actions": [
+                  "control_hemothorax_bleeding"
+                ],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 0,
+                "stop_condition": null,
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "action_type": "chest_tube",
+                "depends_on": [
+                  "P07-plan-1-a1"
+                ],
+                "target": {
+                  "patient_id": "P07",
+                  "side": "Left"
+                },
+                "access_phase_min": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "patient_id": "P08",
+      "location": "B",
+      "arrival_time_min": 0,
+      "pulse_sample_time_s": 180.00000000001828,
+      "observation": {
+        "patient_id": "P08",
+        "simulation_time_s": 180.00000000001828,
+        "vitals": {
+          "heart_rate": {
+            "value": 75.41573595883096,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "respiration_rate": {
+            "value": 12.552301255230095,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "pulse_oximetry": {
+            "value": 0.9705015757956613,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "systolic_arterial_pressure": {
+            "value": 112.25207825494736,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "mean_arterial_pressure": {
+            "value": 95.13985892835868,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          }
+        }
+      },
+      "known_injury_context": {
+        "injury_type": "dehydration"
+      },
+      "candidate_plans": [
+        {
+          "plan_id": "P08-plan-1",
+          "injury_type": "dehydration",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P08-plan-1-a1",
+              "action_type": "fluid_resuscitation",
+              "target": {
+                "patient_id": "P08"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "fluid_resuscitation.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "fluid_resuscitation"
+              },
+              "injury_association": {
+                "injury_type": "dehydration"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "aid_station",
+                  "hospital"
+                ],
+                "allowed_continue": [
+                  "basic_ambulance",
+                  "ventilation_ambulance"
+                ],
+                "duration_min": 5,
+                "staff_roles": [
+                  "fluid"
+                ],
+                "consumables": {
+                  "infusion_set": 1,
+                  "iv_access_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "patient",
+                "continuous": true,
+                "support_space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "care": {
+                  "period_min": 10,
+                  "duration_min": 1,
+                  "role": "infusion_care"
+                },
+                "predecessor_actions": [],
+                "bulk_resources": [
+                  "saline"
+                ],
+                "equipment_turnaround_min": 0,
+                "stop_condition": null,
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "access": {
+                  "new_duration_min": 5,
+                  "existing_duration_min": 2,
+                  "new_consumables": {
+                    "iv_access_kit": 1
+                  },
+                  "separate_phase": false
+                },
+                "continuation_duration_min": null,
+                "injury_predecessors": {
+                  "external_hemorrhage": "control_external_bleeding",
+                  "abdominal_internal_hemorrhage": "control_internal_bleeding"
+                },
+                "continuation_staff_roles": [
+                  "infusion_care"
+                ],
+                "action_type": "fluid_resuscitation",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P08"
+                },
+                "access_phase_min": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "patient_id": "P09",
+      "location": "A",
+      "arrival_time_min": 10,
+      "pulse_sample_time_s": 180.00000000001828,
+      "observation": {
+        "patient_id": "P09",
+        "simulation_time_s": 180.00000000001828,
+        "vitals": {
+          "heart_rate": {
+            "value": 75.3228860921755,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "respiration_rate": {
+            "value": 12.0481927710843,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "pulse_oximetry": {
+            "value": 0.973863287807698,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "systolic_arterial_pressure": {
+            "value": 112.76229122897605,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "mean_arterial_pressure": {
+            "value": 95.02536329725127,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          }
+        }
+      },
+      "known_injury_context": {
+        "injury_type": "external_hemorrhage",
+        "compartment": "RightLeg"
+      },
+      "candidate_plans": [
+        {
+          "plan_id": "P09-plan-1",
+          "injury_type": "external_hemorrhage",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P09-plan-1-a1",
+              "action_type": "control_external_bleeding",
+              "target": {
+                "patient_id": "P09",
+                "compartment": "RightLeg"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "control_external_bleeding.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "control_external_bleeding"
+              },
+              "injury_association": {
+                "injury_type": "external_hemorrhage",
+                "compartment": "RightLeg"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "aid_station",
+                  "hospital",
+                  "basic_ambulance",
+                  "ventilation_ambulance"
+                ],
+                "allowed_continue": [],
+                "duration_min": 3,
+                "staff_roles": [
+                  "external_control"
+                ],
+                "consumables": {
+                  "external_bleeding_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "treatment"
+                  ],
+                  "hospital": [
+                    "treatment"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "compartment",
+                "continuous": false,
+                "support_space_types": {},
+                "care": null,
+                "predecessor_actions": [],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 0,
+                "stop_condition": "operation_complete",
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "action_type": "control_external_bleeding",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P09",
+                  "compartment": "RightLeg"
+                },
+                "access_phase_min": 0
+              }
+            },
+            {
+              "action_id": "P09-plan-1-a2",
+              "action_type": "fluid_resuscitation",
+              "target": {
+                "patient_id": "P09"
+              },
+              "depends_on": [
+                "P09-plan-1-a1"
+              ],
+              "fixed_protocol_ref": {
+                "protocol_id": "fluid_resuscitation.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "fluid_resuscitation"
+              },
+              "injury_association": {
+                "injury_type": "external_hemorrhage",
+                "compartment": "RightLeg"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "aid_station",
+                  "hospital"
+                ],
+                "allowed_continue": [
+                  "basic_ambulance",
+                  "ventilation_ambulance"
+                ],
+                "duration_min": 5,
+                "staff_roles": [
+                  "fluid"
+                ],
+                "consumables": {
+                  "infusion_set": 1,
+                  "iv_access_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "patient",
+                "continuous": true,
+                "support_space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "care": {
+                  "period_min": 10,
+                  "duration_min": 1,
+                  "role": "infusion_care"
+                },
+                "predecessor_actions": [],
+                "bulk_resources": [
+                  "saline"
+                ],
+                "equipment_turnaround_min": 0,
+                "stop_condition": null,
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "access": {
+                  "new_duration_min": 5,
+                  "existing_duration_min": 2,
+                  "new_consumables": {
+                    "iv_access_kit": 1
+                  },
+                  "separate_phase": false
+                },
+                "continuation_duration_min": null,
+                "injury_predecessors": {
+                  "external_hemorrhage": "control_external_bleeding",
+                  "abdominal_internal_hemorrhage": "control_internal_bleeding"
+                },
+                "continuation_staff_roles": [
+                  "infusion_care"
+                ],
+                "action_type": "fluid_resuscitation",
+                "depends_on": [
+                  "P09-plan-1-a1"
+                ],
+                "target": {
+                  "patient_id": "P09"
+                },
+                "access_phase_min": 0
+              }
+            }
+          ]
+        },
+        {
+          "plan_id": "P09-plan-2",
+          "injury_type": "external_hemorrhage",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P09-plan-2-a1",
+              "action_type": "control_external_bleeding",
+              "target": {
+                "patient_id": "P09",
+                "compartment": "RightLeg"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "control_external_bleeding.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "control_external_bleeding"
+              },
+              "injury_association": {
+                "injury_type": "external_hemorrhage",
+                "compartment": "RightLeg"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "aid_station",
+                  "hospital",
+                  "basic_ambulance",
+                  "ventilation_ambulance"
+                ],
+                "allowed_continue": [],
+                "duration_min": 3,
+                "staff_roles": [
+                  "external_control"
+                ],
+                "consumables": {
+                  "external_bleeding_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "treatment"
+                  ],
+                  "hospital": [
+                    "treatment"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "compartment",
+                "continuous": false,
+                "support_space_types": {},
+                "care": null,
+                "predecessor_actions": [],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 0,
+                "stop_condition": "operation_complete",
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "action_type": "control_external_bleeding",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P09",
+                  "compartment": "RightLeg"
+                },
+                "access_phase_min": 0
+              }
+            },
+            {
+              "action_id": "P09-plan-2-a2",
+              "action_type": "transfusion",
+              "target": {
+                "patient_id": "P09"
+              },
+              "depends_on": [
+                "P09-plan-2-a1"
+              ],
+              "fixed_protocol_ref": {
+                "protocol_id": "transfusion.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "transfusion"
+              },
+              "injury_association": {
+                "injury_type": "external_hemorrhage",
+                "compartment": "RightLeg"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "hospital"
+                ],
+                "allowed_continue": [],
+                "duration_min": 11,
+                "staff_roles": [
+                  "transfusion",
+                  "transfusion"
+                ],
+                "consumables": {
+                  "transfusion_set": 1,
+                  "iv_access_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "bed"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "patient",
+                "continuous": true,
+                "support_space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "care": {
+                  "period_min": 5,
+                  "duration_min": 1,
+                  "role": "transfusion_care"
+                },
+                "predecessor_actions": [],
+                "bulk_resources": [
+                  "blood"
+                ],
+                "equipment_turnaround_min": 0,
+                "stop_condition": null,
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "access": {
+                  "new_duration_min": 3,
+                  "existing_duration_min": 0,
+                  "new_consumables": {
+                    "iv_access_kit": 1
+                  },
+                  "separate_phase": true,
+                  "role": "access"
+                },
+                "injury_predecessors": {
+                  "external_hemorrhage": "control_external_bleeding",
+                  "abdominal_internal_hemorrhage": "control_internal_bleeding"
+                },
+                "action_type": "transfusion",
+                "depends_on": [
+                  "P09-plan-2-a1"
+                ],
+                "target": {
+                  "patient_id": "P09"
+                },
+                "access_phase_min": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "patient_id": "P10",
+      "location": "A",
+      "arrival_time_min": 10,
+      "pulse_sample_time_s": 180.00000000001828,
+      "observation": {
+        "patient_id": "P10",
+        "simulation_time_s": 180.00000000001828,
+        "vitals": {
+          "heart_rate": {
+            "value": 116.77217799274908,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "respiration_rate": {
+            "value": 14.354066985645918,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "pulse_oximetry": {
+            "value": 0.9626078014752428,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "systolic_arterial_pressure": {
+            "value": 103.1001258418216,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "mean_arterial_pressure": {
+            "value": 92.96630747506262,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          }
+        }
+      },
+      "known_injury_context": {
+        "injury_type": "open_pneumothorax",
+        "side": "Left"
+      },
+      "candidate_plans": [
+        {
+          "plan_id": "P10-plan-1",
+          "injury_type": "open_pneumothorax",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P10-plan-1-a1",
+              "action_type": "occlusive_dressing",
+              "target": {
+                "patient_id": "P10",
+                "side": "Left"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "occlusive_dressing.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "occlusive_dressing"
+              },
+              "injury_association": {
+                "injury_type": "open_pneumothorax",
+                "side": "Left"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "aid_station",
+                  "hospital",
+                  "basic_ambulance",
+                  "ventilation_ambulance"
+                ],
+                "allowed_continue": [],
+                "duration_min": 2,
+                "staff_roles": [
+                  "dressing"
+                ],
+                "consumables": {
+                  "occlusive_dressing": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "treatment"
+                  ],
+                  "hospital": [
+                    "treatment"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "side",
+                "continuous": false,
+                "support_space_types": {},
+                "care": null,
+                "predecessor_actions": [],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 0,
+                "stop_condition": "operation_complete",
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "action_type": "occlusive_dressing",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P10",
+                  "side": "Left"
+                },
+                "access_phase_min": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "patient_id": "P11",
+      "location": "B",
+      "arrival_time_min": 10,
+      "pulse_sample_time_s": 180.00000000001828,
+      "observation": {
+        "patient_id": "P11",
+        "simulation_time_s": 180.00000000001828,
+        "vitals": {
+          "heart_rate": {
+            "value": 117.05831083797636,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "respiration_rate": {
+            "value": 13.888888888888868,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "pulse_oximetry": {
+            "value": 0.9632610069915392,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "systolic_arterial_pressure": {
+            "value": 103.06831314132162,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "mean_arterial_pressure": {
+            "value": 92.961374552244,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          }
+        }
+      },
+      "known_injury_context": {
+        "injury_type": "closed_tension_pneumothorax",
+        "side": "Left"
+      },
+      "candidate_plans": [
+        {
+          "plan_id": "P11-plan-1",
+          "injury_type": "closed_tension_pneumothorax",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P11-plan-1-a1",
+              "action_type": "needle_decompression",
+              "target": {
+                "patient_id": "P11",
+                "side": "Left"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "needle_decompression.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "needle_decompression"
+              },
+              "injury_association": {
+                "injury_type": "closed_tension_pneumothorax",
+                "side": "Left"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "aid_station",
+                  "hospital"
+                ],
+                "allowed_continue": [],
+                "duration_min": 3,
+                "staff_roles": [
+                  "decompression"
+                ],
+                "consumables": {
+                  "decompression_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "treatment"
+                  ],
+                  "hospital": [
+                    "treatment"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "side",
+                "continuous": false,
+                "support_space_types": {},
+                "care": null,
+                "predecessor_actions": [],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 0,
+                "stop_condition": "operation_complete",
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "action_type": "needle_decompression",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P11",
+                  "side": "Left"
+                },
+                "access_phase_min": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "patient_id": "P12",
+      "location": "B",
+      "arrival_time_min": 10,
+      "pulse_sample_time_s": 180.00000000001828,
+      "observation": {
+        "patient_id": "P12",
+        "simulation_time_s": 180.00000000001828,
+        "vitals": {
+          "heart_rate": {
+            "value": 72.41262269236756,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "respiration_rate": {
+            "value": 12.145748987854216,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "pulse_oximetry": {
+            "value": 0.9663782013039499,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "systolic_arterial_pressure": {
+            "value": 114.32457014238304,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "mean_arterial_pressure": {
+            "value": 95.56006988774526,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          }
+        }
+      },
+      "known_injury_context": {
+        "injury_type": "impaired_alveolar_exchange"
+      },
+      "candidate_plans": [
+        {
+          "plan_id": "P12-plan-1",
+          "injury_type": "impaired_alveolar_exchange",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P12-plan-1-a1",
+              "action_type": "supplemental_oxygen",
+              "target": {
+                "patient_id": "P12"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "oxygen.alveolar.nc05.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "supplemental_oxygen"
+              },
+              "injury_association": {
+                "injury_type": "impaired_alveolar_exchange"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "aid_station",
+                  "hospital",
+                  "basic_ambulance",
+                  "ventilation_ambulance"
+                ],
+                "allowed_continue": [],
+                "duration_min": 2,
+                "staff_roles": [
+                  "oxygen"
+                ],
+                "consumables": {
+                  "oxygen_interface": 1
+                },
+                "equipment": [
+                  "oxygen_device"
+                ],
+                "space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "patient",
+                "continuous": true,
+                "support_space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "care": {
+                  "period_min": 10,
+                  "duration_min": 1,
+                  "role": "oxygen_care"
+                },
+                "predecessor_actions": [],
+                "bulk_resources": [
+                  "oxygen"
+                ],
+                "equipment_turnaround_min": 0,
+                "stop_condition": null,
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "action_type": "supplemental_oxygen",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P12"
+                },
+                "access_phase_min": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "patient_id": "P13",
+      "location": "A",
+      "arrival_time_min": 20,
+      "pulse_sample_time_s": 180.00000000001828,
+      "observation": {
+        "patient_id": "P13",
+        "simulation_time_s": 180.00000000001828,
+        "vitals": {
+          "heart_rate": {
+            "value": 72.1637345691154,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "respiration_rate": {
+            "value": 14.851485148514843,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "pulse_oximetry": {
+            "value": 0.9668933476091308,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "systolic_arterial_pressure": {
+            "value": 114.08611431035969,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "mean_arterial_pressure": {
+            "value": 95.16864502410321,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          }
+        }
+      },
+      "known_injury_context": {
+        "injury_type": "respiratory_muscle_impairment"
+      },
+      "candidate_plans": [
+        {
+          "plan_id": "P13-plan-1",
+          "injury_type": "respiratory_muscle_impairment",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P13-plan-1-a1",
+              "action_type": "intubation",
+              "target": {
+                "patient_id": "P13"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "intubation.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "intubation"
+              },
+              "injury_association": {
+                "injury_type": "respiratory_muscle_impairment"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "hospital"
+                ],
+                "allowed_continue": [],
+                "duration_min": 8,
+                "staff_roles": [
+                  "advanced",
+                  "assist"
+                ],
+                "consumables": {
+                  "intubation_kit": 1
+                },
+                "equipment": [
+                  "intubation_set"
+                ],
+                "space_types": {
+                  "aid_station": [
+                    "treatment"
+                  ],
+                  "hospital": [
+                    "treatment"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "patient",
+                "continuous": false,
+                "support_space_types": {},
+                "care": null,
+                "predecessor_actions": [],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 5,
+                "stop_condition": "operation_complete",
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "action_type": "intubation",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P13"
+                },
+                "access_phase_min": 0
+              }
+            },
+            {
+              "action_id": "P13-plan-1-a2",
+              "action_type": "mechanical_ventilation",
+              "target": {
+                "patient_id": "P13"
+              },
+              "depends_on": [
+                "P13-plan-1-a1"
+              ],
+              "fixed_protocol_ref": {
+                "protocol_id": "mechanical_ventilation.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "mechanical_ventilation"
+              },
+              "injury_association": {
+                "injury_type": "respiratory_muscle_impairment"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "hospital"
+                ],
+                "allowed_continue": [
+                  "ventilation_ambulance"
+                ],
+                "duration_min": 5,
+                "staff_roles": [
+                  "ventilation_start"
+                ],
+                "consumables": {
+                  "breathing_circuit": 1
+                },
+                "equipment": [
+                  "ventilator"
+                ],
+                "space_types": {
+                  "aid_station": [
+                    "ventilation_bed"
+                  ],
+                  "hospital": [
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "patient",
+                "continuous": true,
+                "support_space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "care": {
+                  "period_min": 5,
+                  "duration_min": 2,
+                  "role": "ventilation_care"
+                },
+                "predecessor_actions": [
+                  "intubation"
+                ],
+                "bulk_resources": [
+                  "oxygen"
+                ],
+                "equipment_turnaround_min": 0,
+                "stop_condition": null,
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "continuation_duration_min": null,
+                "continuation_staff_roles": [
+                  "ventilation_care"
+                ],
+                "bulk_resource_scope": {
+                  "oxygen": "out_of_scope_not_modeled_not_zero"
+                },
+                "bulk_scope_source_ref": "config/medical_resources_v1/experiment_parameters_v1.json",
+                "action_type": "mechanical_ventilation",
+                "depends_on": [
+                  "P13-plan-1-a1"
+                ],
+                "target": {
+                  "patient_id": "P13"
+                },
+                "access_phase_min": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "patient_id": "P14",
+      "location": "A",
+      "arrival_time_min": 20,
+      "pulse_sample_time_s": 359.99999999996254,
+      "observation": {
+        "patient_id": "P14",
+        "simulation_time_s": 359.99999999996254,
+        "vitals": {
+          "heart_rate": {
+            "value": 144.93123339097127,
+            "status": "available",
+            "observed_at_s": 359.99999999996254
+          },
+          "respiration_rate": {
+            "value": 12.244897959183639,
+            "status": "available",
+            "observed_at_s": 359.99999999996254
+          },
+          "pulse_oximetry": {
+            "value": 0.8504885433771411,
+            "status": "available",
+            "observed_at_s": 359.99999999996254
+          },
+          "systolic_arterial_pressure": {
+            "value": 108.19804244261915,
+            "status": "available",
+            "observed_at_s": 359.99999999996254
+          },
+          "mean_arterial_pressure": {
+            "value": 96.07971499788952,
+            "status": "available",
+            "observed_at_s": 359.99999999996254
+          }
+        }
+      },
+      "known_injury_context": {
+        "injury_type": "environmental_hypoxia"
+      },
+      "candidate_plans": [
+        {
+          "plan_id": "P14-plan-1",
+          "injury_type": "environmental_hypoxia",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P14-plan-1-a1",
+              "action_type": "remove_from_exposure",
+              "target": {
+                "patient_id": "P14"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "301.v2.hypoxia.removal.restricted.1",
+                "source": "src/core301/runtime/v2/exposure_validation.py",
+                "action_selector": "remove_from_exposure"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "remove_from_exposure"
+              },
+              "injury_association": {
+                "injury_type": "environmental_hypoxia"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "aid_station",
+                  "hospital"
+                ],
+                "allowed_continue": [],
+                "duration_min": 1,
+                "staff_roles": [
+                  "environment"
+                ],
+                "consumables": {},
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [],
+                  "hospital": [],
+                  "vehicle": []
+                },
+                "target_kind": "patient",
+                "continuous": false,
+                "support_space_types": {},
+                "care": null,
+                "predecessor_actions": [],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 0,
+                "stop_condition": "operation_complete",
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "action_type": "remove_from_exposure",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P14"
+                },
+                "access_phase_min": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "patient_id": "P15",
+      "location": "B",
+      "arrival_time_min": 20,
+      "pulse_sample_time_s": 180.00000000001828,
+      "observation": {
+        "patient_id": "P15",
+        "simulation_time_s": 180.00000000001828,
+        "vitals": {
+          "heart_rate": {
+            "value": 75.3228860921755,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "respiration_rate": {
+            "value": 12.0481927710843,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "pulse_oximetry": {
+            "value": 0.973863287807698,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "systolic_arterial_pressure": {
+            "value": 112.76229122897605,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          },
+          "mean_arterial_pressure": {
+            "value": 95.02536329725127,
+            "status": "available",
+            "observed_at_s": 180.00000000001828
+          }
+        }
+      },
+      "known_injury_context": {
+        "injury_type": "external_hemorrhage",
+        "compartment": "RightLeg"
+      },
+      "candidate_plans": [
+        {
+          "plan_id": "P15-plan-1",
+          "injury_type": "external_hemorrhage",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P15-plan-1-a1",
+              "action_type": "control_external_bleeding",
+              "target": {
+                "patient_id": "P15",
+                "compartment": "RightLeg"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "control_external_bleeding.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "control_external_bleeding"
+              },
+              "injury_association": {
+                "injury_type": "external_hemorrhage",
+                "compartment": "RightLeg"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "aid_station",
+                  "hospital",
+                  "basic_ambulance",
+                  "ventilation_ambulance"
+                ],
+                "allowed_continue": [],
+                "duration_min": 3,
+                "staff_roles": [
+                  "external_control"
+                ],
+                "consumables": {
+                  "external_bleeding_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "treatment"
+                  ],
+                  "hospital": [
+                    "treatment"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "compartment",
+                "continuous": false,
+                "support_space_types": {},
+                "care": null,
+                "predecessor_actions": [],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 0,
+                "stop_condition": "operation_complete",
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "action_type": "control_external_bleeding",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P15",
+                  "compartment": "RightLeg"
+                },
+                "access_phase_min": 0
+              }
+            },
+            {
+              "action_id": "P15-plan-1-a2",
+              "action_type": "fluid_resuscitation",
+              "target": {
+                "patient_id": "P15"
+              },
+              "depends_on": [
+                "P15-plan-1-a1"
+              ],
+              "fixed_protocol_ref": {
+                "protocol_id": "fluid_resuscitation.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "fluid_resuscitation"
+              },
+              "injury_association": {
+                "injury_type": "external_hemorrhage",
+                "compartment": "RightLeg"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "aid_station",
+                  "hospital"
+                ],
+                "allowed_continue": [
+                  "basic_ambulance",
+                  "ventilation_ambulance"
+                ],
+                "duration_min": 5,
+                "staff_roles": [
+                  "fluid"
+                ],
+                "consumables": {
+                  "infusion_set": 1,
+                  "iv_access_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "patient",
+                "continuous": true,
+                "support_space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "care": {
+                  "period_min": 10,
+                  "duration_min": 1,
+                  "role": "infusion_care"
+                },
+                "predecessor_actions": [],
+                "bulk_resources": [
+                  "saline"
+                ],
+                "equipment_turnaround_min": 0,
+                "stop_condition": null,
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "access": {
+                  "new_duration_min": 5,
+                  "existing_duration_min": 2,
+                  "new_consumables": {
+                    "iv_access_kit": 1
+                  },
+                  "separate_phase": false
+                },
+                "continuation_duration_min": null,
+                "injury_predecessors": {
+                  "external_hemorrhage": "control_external_bleeding",
+                  "abdominal_internal_hemorrhage": "control_internal_bleeding"
+                },
+                "continuation_staff_roles": [
+                  "infusion_care"
+                ],
+                "action_type": "fluid_resuscitation",
+                "depends_on": [
+                  "P15-plan-1-a1"
+                ],
+                "target": {
+                  "patient_id": "P15"
+                },
+                "access_phase_min": 0
+              }
+            }
+          ]
+        },
+        {
+          "plan_id": "P15-plan-2",
+          "injury_type": "external_hemorrhage",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P15-plan-2-a1",
+              "action_type": "control_external_bleeding",
+              "target": {
+                "patient_id": "P15",
+                "compartment": "RightLeg"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "control_external_bleeding.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "control_external_bleeding"
+              },
+              "injury_association": {
+                "injury_type": "external_hemorrhage",
+                "compartment": "RightLeg"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "aid_station",
+                  "hospital",
+                  "basic_ambulance",
+                  "ventilation_ambulance"
+                ],
+                "allowed_continue": [],
+                "duration_min": 3,
+                "staff_roles": [
+                  "external_control"
+                ],
+                "consumables": {
+                  "external_bleeding_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "treatment"
+                  ],
+                  "hospital": [
+                    "treatment"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "compartment",
+                "continuous": false,
+                "support_space_types": {},
+                "care": null,
+                "predecessor_actions": [],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 0,
+                "stop_condition": "operation_complete",
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "action_type": "control_external_bleeding",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P15",
+                  "compartment": "RightLeg"
+                },
+                "access_phase_min": 0
+              }
+            },
+            {
+              "action_id": "P15-plan-2-a2",
+              "action_type": "transfusion",
+              "target": {
+                "patient_id": "P15"
+              },
+              "depends_on": [
+                "P15-plan-2-a1"
+              ],
+              "fixed_protocol_ref": {
+                "protocol_id": "transfusion.phase1.1",
+                "source": "src/core301/pulse/v2/protocol_book.py"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "transfusion"
+              },
+              "injury_association": {
+                "injury_type": "external_hemorrhage",
+                "compartment": "RightLeg"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "hospital"
+                ],
+                "allowed_continue": [],
+                "duration_min": 11,
+                "staff_roles": [
+                  "transfusion",
+                  "transfusion"
+                ],
+                "consumables": {
+                  "transfusion_set": 1,
+                  "iv_access_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "bed"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "patient",
+                "continuous": true,
+                "support_space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "care": {
+                  "period_min": 5,
+                  "duration_min": 1,
+                  "role": "transfusion_care"
+                },
+                "predecessor_actions": [],
+                "bulk_resources": [
+                  "blood"
+                ],
+                "equipment_turnaround_min": 0,
+                "stop_condition": null,
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "access": {
+                  "new_duration_min": 3,
+                  "existing_duration_min": 0,
+                  "new_consumables": {
+                    "iv_access_kit": 1
+                  },
+                  "separate_phase": true,
+                  "role": "access"
+                },
+                "injury_predecessors": {
+                  "external_hemorrhage": "control_external_bleeding",
+                  "abdominal_internal_hemorrhage": "control_internal_bleeding"
+                },
+                "action_type": "transfusion",
+                "depends_on": [
+                  "P15-plan-2-a1"
+                ],
+                "target": {
+                  "patient_id": "P15"
+                },
+                "access_phase_min": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "patient_id": "P16",
+      "location": "B",
+      "arrival_time_min": 20,
+      "pulse_sample_time_s": 659.9999999996897,
+      "observation": {
+        "patient_id": "P16",
+        "simulation_time_s": 659.9999999996897,
+        "vitals": {
+          "heart_rate": {
+            "value": 72.53895298710164,
+            "status": "available",
+            "observed_at_s": 659.9999999996897
+          },
+          "respiration_rate": {
+            "value": 12.29508196721308,
+            "status": "available",
+            "observed_at_s": 659.9999999996897
+          },
+          "pulse_oximetry": {
+            "value": 0.9741793502405068,
+            "status": "available",
+            "observed_at_s": 659.9999999996897
+          },
+          "systolic_arterial_pressure": {
+            "value": 113.76972416109446,
+            "status": "available",
+            "observed_at_s": 659.9999999996897
+          },
+          "mean_arterial_pressure": {
+            "value": 95.29764493499869,
+            "status": "available",
+            "observed_at_s": 659.9999999996897
+          }
+        }
+      },
+      "known_injury_context": {
+        "injury_type": "hemothorax",
+        "side": "Left"
+      },
+      "candidate_plans": [
+        {
+          "plan_id": "P16-plan-1",
+          "injury_type": "hemothorax",
+          "status": "template_only_not_executed",
+          "actions": [
+            {
+              "action_id": "P16-plan-1-a1",
+              "action_type": "control_hemothorax_bleeding",
+              "target": {
+                "patient_id": "P16",
+                "side": "Left"
+              },
+              "depends_on": [],
+              "fixed_protocol_ref": {
+                "protocol_id": "301.v2.hemothorax.restricted.1",
+                "source": "src/core301/runtime/v2/hemothorax_validation.py",
+                "action_selector": "control_hemothorax_bleeding"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "control_hemothorax_bleeding"
+              },
+              "injury_association": {
+                "injury_type": "hemothorax",
+                "side": "Left"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "hospital"
+                ],
+                "allowed_continue": [],
+                "duration_min": 15,
+                "staff_roles": [
+                  "advanced",
+                  "assist"
+                ],
+                "consumables": {},
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "treatment"
+                  ],
+                  "hospital": [
+                    "treatment"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "side",
+                "continuous": false,
+                "support_space_types": {},
+                "care": null,
+                "predecessor_actions": [],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 0,
+                "stop_condition": "operation_complete",
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "space_capability": "research_hemostasis",
+                "action_type": "control_hemothorax_bleeding",
+                "depends_on": [],
+                "target": {
+                  "patient_id": "P16",
+                  "side": "Left"
+                },
+                "access_phase_min": 0
+              }
+            },
+            {
+              "action_id": "P16-plan-1-a2",
+              "action_type": "chest_tube",
+              "target": {
+                "patient_id": "P16",
+                "side": "Left"
+              },
+              "depends_on": [
+                "P16-plan-1-a1"
+              ],
+              "fixed_protocol_ref": {
+                "protocol_id": "301.v2.hemothorax.restricted.1",
+                "source": "src/core301/runtime/v2/hemothorax_validation.py",
+                "action_selector": "chest_tube"
+              },
+              "eligibility_status": "eligibility_pending",
+              "resource_mapping_ref": {
+                "path": "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md",
+                "sections": [
+                  3,
+                  4,
+                  5,
+                  7,
+                  9
+                ],
+                "action_type": "chest_tube"
+              },
+              "injury_association": {
+                "injury_type": "hemothorax",
+                "side": "Left"
+              },
+              "resource_requirements": {
+                "allowed_start": [
+                  "hospital"
+                ],
+                "allowed_continue": [],
+                "duration_min": 12,
+                "staff_roles": [
+                  "advanced",
+                  "assist"
+                ],
+                "consumables": {
+                  "chest_drain_kit": 1
+                },
+                "equipment": [],
+                "space_types": {
+                  "aid_station": [
+                    "treatment"
+                  ],
+                  "hospital": [
+                    "treatment"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "target_kind": "side",
+                "continuous": true,
+                "support_space_types": {
+                  "aid_station": [
+                    "observation"
+                  ],
+                  "hospital": [
+                    "bed",
+                    "ventilation_bed"
+                  ],
+                  "vehicle": [
+                    "stretcher"
+                  ]
+                },
+                "care": {
+                  "period_min": 10,
+                  "duration_min": 1,
+                  "role": "drain_care"
+                },
+                "predecessor_actions": [
+                  "control_hemothorax_bleeding"
+                ],
+                "bulk_resources": [],
+                "equipment_turnaround_min": 0,
+                "stop_condition": null,
+                "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+                "action_type": "chest_tube",
+                "depends_on": [
+                  "P16-plan-1-a1"
+                ],
+                "target": {
+                  "patient_id": "P16",
+                  "side": "Left"
+                },
+                "access_phase_min": 0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "resources": {
+    "version": "301.medical_resources.v1",
+    "time_unit": "min",
+    "source_sha256": {
+      "my-docs/第一版医疗资源配置方案_V1.0.md": "c8f82d409cd996144f38f76bc9a9b1fc3447e10666332b3f348cd1a0015ab460",
+      "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md": "a46690936d3b50b84dbaa2f77ec617ec8dbd40514c4496d1e084e391e68fd6fa",
+      "config/medical_resources_v1/experiment_parameters_v1.json": "e18849649d9874695fba2430984f7292e279495077a2472b0f1c952b4447b248"
+    },
+    "rule_sources": {
+      "personnel": "资源方案 §4、§8；动作配置 §2、§9",
+      "equipment_spaces": "资源方案 §5、§8",
+      "inventory": "资源方案 §6–8",
+      "travel": "资源方案 §11"
+    },
+    "nodes": {
+      "A": {
+        "type": "aid_station"
+      },
+      "B": {
+        "type": "aid_station"
+      },
+      "H1": {
+        "type": "hospital"
+      },
+      "H2": {
+        "type": "hospital"
+      }
+    },
+    "vehicles": {
+      "V1": {
+        "type": "basic_ambulance",
+        "location": "A",
+        "home": "A",
+        "stretcher_capacity": 1,
+        "status": "available",
+        "available_from_min": 0,
+        "crew": [
+          "V1-driver-1",
+          "V1-medic-1"
+        ]
+      },
+      "V2": {
+        "type": "basic_ambulance",
+        "location": "B",
+        "home": "B",
+        "stretcher_capacity": 1,
+        "status": "available",
+        "available_from_min": 0,
+        "crew": [
+          "V2-driver-1",
+          "V2-medic-1"
+        ]
+      },
+      "V3": {
+        "type": "ventilation_ambulance",
+        "location": "H1",
+        "home": "H1",
+        "stretcher_capacity": 1,
+        "status": "available",
+        "available_from_min": 0,
+        "crew": [
+          "V3-driver-1",
+          "V3-medic-1"
+        ]
+      }
+    },
+    "personnel": [
+      {
+        "id": "A-triage-1",
+        "role": "triage",
+        "owner": "A",
+        "location": "A",
+        "capabilities": [
+          "triage"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "A-basic-1",
+        "role": "basic",
+        "owner": "A",
+        "location": "A",
+        "capabilities": [
+          "external_control",
+          "dressing",
+          "decompression",
+          "access",
+          "fluid",
+          "oxygen",
+          "environment",
+          "infusion_care",
+          "oxygen_care",
+          "assist"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "A-basic-2",
+        "role": "basic",
+        "owner": "A",
+        "location": "A",
+        "capabilities": [
+          "external_control",
+          "dressing",
+          "decompression",
+          "access",
+          "fluid",
+          "oxygen",
+          "environment",
+          "infusion_care",
+          "oxygen_care",
+          "assist"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "A-care-1",
+        "role": "care",
+        "owner": "A",
+        "location": "A",
+        "capabilities": [
+          "assist",
+          "infusion_care",
+          "oxygen_care"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "B-triage-1",
+        "role": "triage",
+        "owner": "B",
+        "location": "B",
+        "capabilities": [
+          "triage"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "B-basic-1",
+        "role": "basic",
+        "owner": "B",
+        "location": "B",
+        "capabilities": [
+          "external_control",
+          "dressing",
+          "decompression",
+          "access",
+          "fluid",
+          "oxygen",
+          "environment",
+          "infusion_care",
+          "oxygen_care",
+          "assist"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "B-basic-2",
+        "role": "basic",
+        "owner": "B",
+        "location": "B",
+        "capabilities": [
+          "external_control",
+          "dressing",
+          "decompression",
+          "access",
+          "fluid",
+          "oxygen",
+          "environment",
+          "infusion_care",
+          "oxygen_care",
+          "assist"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "B-care-1",
+        "role": "care",
+        "owner": "B",
+        "location": "B",
+        "capabilities": [
+          "assist",
+          "infusion_care",
+          "oxygen_care"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-triage-1",
+        "role": "triage",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [
+          "triage"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-basic-1",
+        "role": "basic",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [
+          "external_control",
+          "dressing",
+          "decompression",
+          "access",
+          "fluid",
+          "oxygen",
+          "environment",
+          "infusion_care",
+          "oxygen_care",
+          "assist",
+          "transfusion",
+          "transfusion_care"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-advanced-1",
+        "role": "advanced",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [
+          "external_control",
+          "dressing",
+          "decompression",
+          "access",
+          "fluid",
+          "oxygen",
+          "environment",
+          "infusion_care",
+          "oxygen_care",
+          "assist",
+          "advanced",
+          "ventilation_start",
+          "ventilation_care",
+          "drain_care"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-advanced-2",
+        "role": "advanced",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [
+          "external_control",
+          "dressing",
+          "decompression",
+          "access",
+          "fluid",
+          "oxygen",
+          "environment",
+          "infusion_care",
+          "oxygen_care",
+          "assist",
+          "advanced",
+          "ventilation_start",
+          "ventilation_care",
+          "drain_care"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-care-1",
+        "role": "care",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [
+          "assist",
+          "infusion_care",
+          "oxygen_care",
+          "transfusion",
+          "transfusion_care",
+          "ventilation_care",
+          "drain_care"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-care-2",
+        "role": "care",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [
+          "assist",
+          "infusion_care",
+          "oxygen_care",
+          "transfusion",
+          "transfusion_care",
+          "ventilation_care",
+          "drain_care"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-care-3",
+        "role": "care",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [
+          "assist",
+          "infusion_care",
+          "oxygen_care",
+          "transfusion",
+          "transfusion_care",
+          "ventilation_care",
+          "drain_care"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "H2-triage-1",
+        "role": "triage",
+        "owner": "H2",
+        "location": "H2",
+        "capabilities": [
+          "triage"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "H2-basic-1",
+        "role": "basic",
+        "owner": "H2",
+        "location": "H2",
+        "capabilities": [
+          "external_control",
+          "dressing",
+          "decompression",
+          "access",
+          "fluid",
+          "oxygen",
+          "environment",
+          "infusion_care",
+          "oxygen_care",
+          "assist",
+          "transfusion",
+          "transfusion_care"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "H2-advanced-1",
+        "role": "advanced",
+        "owner": "H2",
+        "location": "H2",
+        "capabilities": [
+          "external_control",
+          "dressing",
+          "decompression",
+          "access",
+          "fluid",
+          "oxygen",
+          "environment",
+          "infusion_care",
+          "oxygen_care",
+          "assist",
+          "advanced",
+          "ventilation_start",
+          "ventilation_care",
+          "drain_care"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "H2-care-1",
+        "role": "care",
+        "owner": "H2",
+        "location": "H2",
+        "capabilities": [
+          "assist",
+          "infusion_care",
+          "oxygen_care",
+          "transfusion",
+          "transfusion_care",
+          "ventilation_care",
+          "drain_care"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "H2-care-2",
+        "role": "care",
+        "owner": "H2",
+        "location": "H2",
+        "capabilities": [
+          "assist",
+          "infusion_care",
+          "oxygen_care",
+          "transfusion",
+          "transfusion_care",
+          "ventilation_care",
+          "drain_care"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "V1-driver-1",
+        "role": "driver",
+        "owner": "V1",
+        "location": "V1",
+        "capabilities": [
+          "drive"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "V1-medic-1",
+        "role": "medic",
+        "owner": "V1",
+        "location": "V1",
+        "capabilities": [
+          "external_control",
+          "dressing",
+          "oxygen",
+          "oxygen_care",
+          "infusion_care"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "V2-driver-1",
+        "role": "driver",
+        "owner": "V2",
+        "location": "V2",
+        "capabilities": [
+          "drive"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "V2-medic-1",
+        "role": "medic",
+        "owner": "V2",
+        "location": "V2",
+        "capabilities": [
+          "external_control",
+          "dressing",
+          "oxygen",
+          "oxygen_care",
+          "infusion_care"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "V3-driver-1",
+        "role": "driver",
+        "owner": "V3",
+        "location": "V3",
+        "capabilities": [
+          "drive"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      },
+      {
+        "id": "V3-medic-1",
+        "role": "medic",
+        "owner": "V3",
+        "location": "V3",
+        "capabilities": [
+          "external_control",
+          "dressing",
+          "oxygen",
+          "oxygen_care",
+          "infusion_care",
+          "ventilation_care"
+        ],
+        "status": "available",
+        "available_from_min": 0
+      }
+    ],
+    "equipment": [
+      {
+        "id": "H1-ventilator-1",
+        "type": "ventilator",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-ventilator-2",
+        "type": "ventilator",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H2-ventilator-1",
+        "type": "ventilator",
+        "owner": "H2",
+        "location": "H2",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "A-oxygen_device-1",
+        "type": "oxygen_device",
+        "owner": "A",
+        "location": "A",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "A-oxygen_device-2",
+        "type": "oxygen_device",
+        "owner": "A",
+        "location": "A",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "B-oxygen_device-1",
+        "type": "oxygen_device",
+        "owner": "B",
+        "location": "B",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-oxygen_device-1",
+        "type": "oxygen_device",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-oxygen_device-2",
+        "type": "oxygen_device",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-oxygen_device-3",
+        "type": "oxygen_device",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H2-oxygen_device-1",
+        "type": "oxygen_device",
+        "owner": "H2",
+        "location": "H2",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H2-oxygen_device-2",
+        "type": "oxygen_device",
+        "owner": "H2",
+        "location": "H2",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "A-monitor-1",
+        "type": "monitor",
+        "owner": "A",
+        "location": "A",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "A-monitor-2",
+        "type": "monitor",
+        "owner": "A",
+        "location": "A",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "B-monitor-1",
+        "type": "monitor",
+        "owner": "B",
+        "location": "B",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-monitor-1",
+        "type": "monitor",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-monitor-2",
+        "type": "monitor",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-monitor-3",
+        "type": "monitor",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H2-monitor-1",
+        "type": "monitor",
+        "owner": "H2",
+        "location": "H2",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H2-monitor-2",
+        "type": "monitor",
+        "owner": "H2",
+        "location": "H2",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-intubation_set-1",
+        "type": "intubation_set",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H2-intubation_set-1",
+        "type": "intubation_set",
+        "owner": "H2",
+        "location": "H2",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "V1-oxygen_device-1",
+        "type": "oxygen_device",
+        "owner": "V1",
+        "location": "V1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "V1-monitor-1",
+        "type": "monitor",
+        "owner": "V1",
+        "location": "V1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "V2-oxygen_device-1",
+        "type": "oxygen_device",
+        "owner": "V2",
+        "location": "V2",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "V2-monitor-1",
+        "type": "monitor",
+        "owner": "V2",
+        "location": "V2",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "V3-oxygen_device-1",
+        "type": "oxygen_device",
+        "owner": "V3",
+        "location": "V3",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "V3-monitor-1",
+        "type": "monitor",
+        "owner": "V3",
+        "location": "V3",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "V3-ventilator-1",
+        "type": "ventilator",
+        "owner": "V3",
+        "location": "V3",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      }
+    ],
+    "spaces": [
+      {
+        "id": "A-treatment-1",
+        "type": "treatment",
+        "owner": "A",
+        "location": "A",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "A-treatment-2",
+        "type": "treatment",
+        "owner": "A",
+        "location": "A",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "B-treatment-1",
+        "type": "treatment",
+        "owner": "B",
+        "location": "B",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "B-treatment-2",
+        "type": "treatment",
+        "owner": "B",
+        "location": "B",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-treatment-1",
+        "type": "treatment",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-treatment-2",
+        "type": "treatment",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H2-treatment-1",
+        "type": "treatment",
+        "owner": "H2",
+        "location": "H2",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "A-observation-1",
+        "type": "observation",
+        "owner": "A",
+        "location": "A",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "A-observation-2",
+        "type": "observation",
+        "owner": "A",
+        "location": "A",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "A-observation-3",
+        "type": "observation",
+        "owner": "A",
+        "location": "A",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "A-observation-4",
+        "type": "observation",
+        "owner": "A",
+        "location": "A",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "A-observation-5",
+        "type": "observation",
+        "owner": "A",
+        "location": "A",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "A-observation-6",
+        "type": "observation",
+        "owner": "A",
+        "location": "A",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "B-observation-1",
+        "type": "observation",
+        "owner": "B",
+        "location": "B",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "B-observation-2",
+        "type": "observation",
+        "owner": "B",
+        "location": "B",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "B-observation-3",
+        "type": "observation",
+        "owner": "B",
+        "location": "B",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "B-observation-4",
+        "type": "observation",
+        "owner": "B",
+        "location": "B",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "B-observation-5",
+        "type": "observation",
+        "owner": "B",
+        "location": "B",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "B-observation-6",
+        "type": "observation",
+        "owner": "B",
+        "location": "B",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-bed-1",
+        "type": "bed",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-bed-2",
+        "type": "bed",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-bed-3",
+        "type": "bed",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-bed-4",
+        "type": "bed",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H2-bed-1",
+        "type": "bed",
+        "owner": "H2",
+        "location": "H2",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H2-bed-2",
+        "type": "bed",
+        "owner": "H2",
+        "location": "H2",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H2-bed-3",
+        "type": "bed",
+        "owner": "H2",
+        "location": "H2",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-ventilation_bed-1",
+        "type": "ventilation_bed",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H1-ventilation_bed-2",
+        "type": "ventilation_bed",
+        "owner": "H1",
+        "location": "H1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "H2-ventilation_bed-1",
+        "type": "ventilation_bed",
+        "owner": "H2",
+        "location": "H2",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "V1-stretcher-1",
+        "type": "stretcher",
+        "owner": "V1",
+        "location": "V1",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "V2-stretcher-1",
+        "type": "stretcher",
+        "owner": "V2",
+        "location": "V2",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      },
+      {
+        "id": "V3-stretcher-1",
+        "type": "stretcher",
+        "owner": "V3",
+        "location": "V3",
+        "capabilities": [],
+        "status": "available",
+        "bound_patient_id": null,
+        "available_from_min": 0
+      }
+    ],
+    "inventory": {
+      "A": {
+        "external_bleeding_kit": {
+          "quantity": 3,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "occlusive_dressing": {
+          "quantity": 2,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "decompression_kit": {
+          "quantity": 2,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "iv_access_kit": {
+          "quantity": 4,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "infusion_set": {
+          "quantity": 4,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "transfusion_set": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "chest_drain_kit": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "intubation_kit": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "breathing_circuit": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "oxygen_interface": {
+          "quantity": 3,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "saline": {
+          "quantity": 1000,
+          "reserved": 0,
+          "unit": "mL",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        },
+        "blood": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "mL",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        },
+        "oxygen": {
+          "quantity": 60,
+          "reserved": 0,
+          "unit": "L",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        }
+      },
+      "B": {
+        "external_bleeding_kit": {
+          "quantity": 2,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "occlusive_dressing": {
+          "quantity": 2,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "decompression_kit": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "iv_access_kit": {
+          "quantity": 3,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "infusion_set": {
+          "quantity": 3,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "transfusion_set": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "chest_drain_kit": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "intubation_kit": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "breathing_circuit": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "oxygen_interface": {
+          "quantity": 2,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "saline": {
+          "quantity": 500,
+          "reserved": 0,
+          "unit": "mL",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        },
+        "blood": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "mL",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        },
+        "oxygen": {
+          "quantity": 60,
+          "reserved": 0,
+          "unit": "L",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        }
+      },
+      "H1": {
+        "external_bleeding_kit": {
+          "quantity": 2,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "occlusive_dressing": {
+          "quantity": 2,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "decompression_kit": {
+          "quantity": 2,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "iv_access_kit": {
+          "quantity": 6,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "infusion_set": {
+          "quantity": 6,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "transfusion_set": {
+          "quantity": 3,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "chest_drain_kit": {
+          "quantity": 2,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "intubation_kit": {
+          "quantity": 3,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "breathing_circuit": {
+          "quantity": 2,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "oxygen_interface": {
+          "quantity": 4,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "saline": {
+          "quantity": 1500,
+          "reserved": 0,
+          "unit": "mL",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        },
+        "blood": {
+          "quantity": 1000,
+          "reserved": 0,
+          "unit": "mL",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        },
+        "oxygen": {
+          "quantity": 120,
+          "reserved": 0,
+          "unit": "L",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        }
+      },
+      "H2": {
+        "external_bleeding_kit": {
+          "quantity": 2,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "occlusive_dressing": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "decompression_kit": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "iv_access_kit": {
+          "quantity": 4,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "infusion_set": {
+          "quantity": 4,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "transfusion_set": {
+          "quantity": 2,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "chest_drain_kit": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "intubation_kit": {
+          "quantity": 2,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "breathing_circuit": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "oxygen_interface": {
+          "quantity": 3,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "saline": {
+          "quantity": 500,
+          "reserved": 0,
+          "unit": "mL",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        },
+        "blood": {
+          "quantity": 500,
+          "reserved": 0,
+          "unit": "mL",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        },
+        "oxygen": {
+          "quantity": 60,
+          "reserved": 0,
+          "unit": "L",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        }
+      },
+      "V1": {
+        "external_bleeding_kit": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "occlusive_dressing": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "decompression_kit": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "iv_access_kit": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "infusion_set": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "transfusion_set": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "chest_drain_kit": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "intubation_kit": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "breathing_circuit": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "oxygen_interface": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "saline": {
+          "quantity": 500,
+          "reserved": 0,
+          "unit": "mL",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        },
+        "blood": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "mL",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        },
+        "oxygen": {
+          "quantity": 30,
+          "reserved": 0,
+          "unit": "L",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        }
+      },
+      "V2": {
+        "external_bleeding_kit": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "occlusive_dressing": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "decompression_kit": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "iv_access_kit": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "infusion_set": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "transfusion_set": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "chest_drain_kit": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "intubation_kit": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "breathing_circuit": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "oxygen_interface": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "saline": {
+          "quantity": 500,
+          "reserved": 0,
+          "unit": "mL",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        },
+        "blood": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "mL",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        },
+        "oxygen": {
+          "quantity": 30,
+          "reserved": 0,
+          "unit": "L",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        }
+      },
+      "V3": {
+        "external_bleeding_kit": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "occlusive_dressing": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "decompression_kit": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "iv_access_kit": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "infusion_set": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "transfusion_set": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "chest_drain_kit": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "intubation_kit": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "breathing_circuit": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "oxygen_interface": {
+          "quantity": 1,
+          "reserved": 0,
+          "unit": "kit_or_item"
+        },
+        "saline": {
+          "quantity": 500,
+          "reserved": 0,
+          "unit": "mL",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        },
+        "blood": {
+          "quantity": 0,
+          "reserved": 0,
+          "unit": "mL",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        },
+        "oxygen": {
+          "quantity": 30,
+          "reserved": 0,
+          "unit": "L",
+          "status": "user_fixed_experiment_inventory",
+          "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+        }
+      }
+    },
+    "travel_min": {
+      "A": {
+        "H1": 12,
+        "H2": 22,
+        "B": 15,
+        "A": 0
+      },
+      "B": {
+        "H1": 20,
+        "H2": 10,
+        "A": 15,
+        "B": 0
+      },
+      "H1": {
+        "A": 12,
+        "B": 20,
+        "H2": 15,
+        "H1": 0
+      },
+      "H2": {
+        "A": 22,
+        "B": 10,
+        "H1": 15,
+        "H2": 0
+      }
+    },
+    "transport_min": {
+      "loading": 3,
+      "handoff": 5,
+      "turnaround": 5
+    },
+    "initial_reservations": [],
+    "inventory_reference_rules": {
+      "policy": "fixed_user_approved_inventory_not_recomputed",
+      "source_ref": "config/medical_resources_v1/experiment_parameters_v1.json",
+      "automatic_replenishment": false,
+      "implicit_cross_location_sharing": false
+    },
+    "unknowns": [
+      "treatment_stop_and_release",
+      "transfer_eligibility",
+      "support_handoff_duration_and_continuity",
+      "kit_contents",
+      "monitoring_occupancy_policy"
+    ],
+    "patient_facts": {},
+    "notes": [
+      "Research hemostasis capacity is one shared service limit per hospital, used together with any treatment space; it is not an extra bed.",
+      "Hospital basic/care staff have transfusion capabilities; auxiliary capability explicitly assigned to basic/care staff and advanced staff.",
+      "Vehicle personnel/equipment location is the vehicle ID; physical vehicle position is tracked by journeys."
+    ],
+    "service_capacities": [
+      {
+        "id": "H1-research_hemostasis-1",
+        "type": "research_hemostasis",
+        "location": "H1",
+        "owner": "H1",
+        "requires_space_type": "treatment",
+        "status": "available",
+        "available_from_min": 0,
+        "bound_patient_id": null
+      },
+      {
+        "id": "H2-research_hemostasis-1",
+        "type": "research_hemostasis",
+        "location": "H2",
+        "owner": "H2",
+        "requires_space_type": "treatment",
+        "status": "available",
+        "available_from_min": 0,
+        "bound_patient_id": null
+      }
+    ]
+  },
+  "action_mapping": {
+    "version": "301.action_resources.v1",
+    "source_sha256": {
+      "my-docs/第一版医疗资源配置方案_V1.0.md": "c8f82d409cd996144f38f76bc9a9b1fc3447e10666332b3f348cd1a0015ab460",
+      "my-docs/第一版救助动作资源需求与耗时配置_V1.0.md": "a46690936d3b50b84dbaa2f77ec617ec8dbd40514c4496d1e084e391e68fd6fa",
+      "config/medical_resources_v1/experiment_parameters_v1.json": "e18849649d9874695fba2430984f7292e279495077a2472b0f1c952b4447b248"
+    },
+    "actions": {
+      "control_external_bleeding": {
+        "allowed_start": [
+          "aid_station",
+          "hospital",
+          "basic_ambulance",
+          "ventilation_ambulance"
+        ],
+        "allowed_continue": [],
+        "duration_min": 3,
+        "staff_roles": [
+          "external_control"
+        ],
+        "consumables": {
+          "external_bleeding_kit": 1
+        },
+        "equipment": [],
+        "space_types": {
+          "aid_station": [
+            "treatment"
+          ],
+          "hospital": [
+            "treatment"
+          ],
+          "vehicle": [
+            "stretcher"
+          ]
+        },
+        "target_kind": "compartment",
+        "continuous": false,
+        "support_space_types": {},
+        "care": null,
+        "predecessor_actions": [],
+        "bulk_resources": [],
+        "equipment_turnaround_min": 0,
+        "stop_condition": "operation_complete",
+        "source": "动作配置 §3–5、§7、§9；资源方案 §9"
+      },
+      "control_internal_bleeding": {
+        "allowed_start": [
+          "hospital"
+        ],
+        "allowed_continue": [],
+        "duration_min": 15,
+        "staff_roles": [
+          "advanced",
+          "assist"
+        ],
+        "consumables": {},
+        "equipment": [],
+        "space_types": {
+          "aid_station": [
+            "treatment"
+          ],
+          "hospital": [
+            "treatment"
+          ],
+          "vehicle": [
+            "stretcher"
+          ]
+        },
+        "target_kind": "compartment",
+        "continuous": false,
+        "support_space_types": {},
+        "care": null,
+        "predecessor_actions": [],
+        "bulk_resources": [],
+        "equipment_turnaround_min": 0,
+        "stop_condition": "operation_complete",
+        "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+        "space_capability": "research_hemostasis"
+      },
+      "control_hemothorax_bleeding": {
+        "allowed_start": [
+          "hospital"
+        ],
+        "allowed_continue": [],
+        "duration_min": 15,
+        "staff_roles": [
+          "advanced",
+          "assist"
+        ],
+        "consumables": {},
+        "equipment": [],
+        "space_types": {
+          "aid_station": [
+            "treatment"
+          ],
+          "hospital": [
+            "treatment"
+          ],
+          "vehicle": [
+            "stretcher"
+          ]
+        },
+        "target_kind": "side",
+        "continuous": false,
+        "support_space_types": {},
+        "care": null,
+        "predecessor_actions": [],
+        "bulk_resources": [],
+        "equipment_turnaround_min": 0,
+        "stop_condition": "operation_complete",
+        "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+        "space_capability": "research_hemostasis"
+      },
+      "fluid_resuscitation": {
+        "allowed_start": [
+          "aid_station",
+          "hospital"
+        ],
+        "allowed_continue": [
+          "basic_ambulance",
+          "ventilation_ambulance"
+        ],
+        "duration_min": 5,
+        "staff_roles": [
+          "fluid"
+        ],
+        "consumables": {
+          "infusion_set": 1
+        },
+        "equipment": [],
+        "space_types": {
+          "aid_station": [
+            "observation"
+          ],
+          "hospital": [
+            "bed",
+            "ventilation_bed"
+          ],
+          "vehicle": [
+            "stretcher"
+          ]
+        },
+        "target_kind": "patient",
+        "continuous": true,
+        "support_space_types": {
+          "aid_station": [
+            "observation"
+          ],
+          "hospital": [
+            "bed",
+            "ventilation_bed"
+          ],
+          "vehicle": [
+            "stretcher"
+          ]
+        },
+        "care": {
+          "period_min": 10,
+          "duration_min": 1,
+          "role": "infusion_care"
+        },
+        "predecessor_actions": [],
+        "bulk_resources": [
+          "saline"
+        ],
+        "equipment_turnaround_min": 0,
+        "stop_condition": null,
+        "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+        "access": {
+          "new_duration_min": 5,
+          "existing_duration_min": 2,
+          "new_consumables": {
+            "iv_access_kit": 1
+          },
+          "separate_phase": false
+        },
+        "continuation_duration_min": null,
+        "injury_predecessors": {
+          "external_hemorrhage": "control_external_bleeding",
+          "abdominal_internal_hemorrhage": "control_internal_bleeding"
+        },
+        "continuation_staff_roles": [
+          "infusion_care"
+        ]
+      },
+      "transfusion": {
+        "allowed_start": [
+          "hospital"
+        ],
+        "allowed_continue": [],
+        "duration_min": 8,
+        "staff_roles": [
+          "transfusion",
+          "transfusion"
+        ],
+        "consumables": {
+          "transfusion_set": 1
+        },
+        "equipment": [],
+        "space_types": {
+          "aid_station": [
+            "bed"
+          ],
+          "hospital": [
+            "bed",
+            "ventilation_bed"
+          ],
+          "vehicle": [
+            "stretcher"
+          ]
+        },
+        "target_kind": "patient",
+        "continuous": true,
+        "support_space_types": {
+          "aid_station": [
+            "observation"
+          ],
+          "hospital": [
+            "bed",
+            "ventilation_bed"
+          ],
+          "vehicle": [
+            "stretcher"
+          ]
+        },
+        "care": {
+          "period_min": 5,
+          "duration_min": 1,
+          "role": "transfusion_care"
+        },
+        "predecessor_actions": [],
+        "bulk_resources": [
+          "blood"
+        ],
+        "equipment_turnaround_min": 0,
+        "stop_condition": null,
+        "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+        "access": {
+          "new_duration_min": 3,
+          "existing_duration_min": 0,
+          "new_consumables": {
+            "iv_access_kit": 1
+          },
+          "separate_phase": true,
+          "role": "access"
+        },
+        "injury_predecessors": {
+          "external_hemorrhage": "control_external_bleeding",
+          "abdominal_internal_hemorrhage": "control_internal_bleeding"
+        }
+      },
+      "occlusive_dressing": {
+        "allowed_start": [
+          "aid_station",
+          "hospital",
+          "basic_ambulance",
+          "ventilation_ambulance"
+        ],
+        "allowed_continue": [],
+        "duration_min": 2,
+        "staff_roles": [
+          "dressing"
+        ],
+        "consumables": {
+          "occlusive_dressing": 1
+        },
+        "equipment": [],
+        "space_types": {
+          "aid_station": [
+            "treatment"
+          ],
+          "hospital": [
+            "treatment"
+          ],
+          "vehicle": [
+            "stretcher"
+          ]
+        },
+        "target_kind": "side",
+        "continuous": false,
+        "support_space_types": {},
+        "care": null,
+        "predecessor_actions": [],
+        "bulk_resources": [],
+        "equipment_turnaround_min": 0,
+        "stop_condition": "operation_complete",
+        "source": "动作配置 §3–5、§7、§9；资源方案 §9"
+      },
+      "needle_decompression": {
+        "allowed_start": [
+          "aid_station",
+          "hospital"
+        ],
+        "allowed_continue": [],
+        "duration_min": 3,
+        "staff_roles": [
+          "decompression"
+        ],
+        "consumables": {
+          "decompression_kit": 1
+        },
+        "equipment": [],
+        "space_types": {
+          "aid_station": [
+            "treatment"
+          ],
+          "hospital": [
+            "treatment"
+          ],
+          "vehicle": [
+            "stretcher"
+          ]
+        },
+        "target_kind": "side",
+        "continuous": false,
+        "support_space_types": {},
+        "care": null,
+        "predecessor_actions": [],
+        "bulk_resources": [],
+        "equipment_turnaround_min": 0,
+        "stop_condition": "operation_complete",
+        "source": "动作配置 §3–5、§7、§9；资源方案 §9"
+      },
+      "chest_tube": {
+        "allowed_start": [
+          "hospital"
+        ],
+        "allowed_continue": [],
+        "duration_min": 12,
+        "staff_roles": [
+          "advanced",
+          "assist"
+        ],
+        "consumables": {
+          "chest_drain_kit": 1
+        },
+        "equipment": [],
+        "space_types": {
+          "aid_station": [
+            "treatment"
+          ],
+          "hospital": [
+            "treatment"
+          ],
+          "vehicle": [
+            "stretcher"
+          ]
+        },
+        "target_kind": "side",
+        "continuous": true,
+        "support_space_types": {
+          "aid_station": [
+            "observation"
+          ],
+          "hospital": [
+            "bed",
+            "ventilation_bed"
+          ],
+          "vehicle": [
+            "stretcher"
+          ]
+        },
+        "care": {
+          "period_min": 10,
+          "duration_min": 1,
+          "role": "drain_care"
+        },
+        "predecessor_actions": [
+          "control_hemothorax_bleeding"
+        ],
+        "bulk_resources": [],
+        "equipment_turnaround_min": 0,
+        "stop_condition": null,
+        "source": "动作配置 §3–5、§7、§9；资源方案 §9"
+      },
+      "intubation": {
+        "allowed_start": [
+          "hospital"
+        ],
+        "allowed_continue": [],
+        "duration_min": 8,
+        "staff_roles": [
+          "advanced",
+          "assist"
+        ],
+        "consumables": {
+          "intubation_kit": 1
+        },
+        "equipment": [
+          "intubation_set"
+        ],
+        "space_types": {
+          "aid_station": [
+            "treatment"
+          ],
+          "hospital": [
+            "treatment"
+          ],
+          "vehicle": [
+            "stretcher"
+          ]
+        },
+        "target_kind": "patient",
+        "continuous": false,
+        "support_space_types": {},
+        "care": null,
+        "predecessor_actions": [],
+        "bulk_resources": [],
+        "equipment_turnaround_min": 5,
+        "stop_condition": "operation_complete",
+        "source": "动作配置 §3–5、§7、§9；资源方案 §9"
+      },
+      "mechanical_ventilation": {
+        "allowed_start": [
+          "hospital"
+        ],
+        "allowed_continue": [
+          "ventilation_ambulance"
+        ],
+        "duration_min": 5,
+        "staff_roles": [
+          "ventilation_start"
+        ],
+        "consumables": {
+          "breathing_circuit": 1
+        },
+        "equipment": [
+          "ventilator"
+        ],
+        "space_types": {
+          "aid_station": [
+            "ventilation_bed"
+          ],
+          "hospital": [
+            "ventilation_bed"
+          ],
+          "vehicle": [
+            "stretcher"
+          ]
+        },
+        "target_kind": "patient",
+        "continuous": true,
+        "support_space_types": {
+          "aid_station": [
+            "observation"
+          ],
+          "hospital": [
+            "ventilation_bed"
+          ],
+          "vehicle": [
+            "stretcher"
+          ]
+        },
+        "care": {
+          "period_min": 5,
+          "duration_min": 2,
+          "role": "ventilation_care"
+        },
+        "predecessor_actions": [
+          "intubation"
+        ],
+        "bulk_resources": [
+          "oxygen"
+        ],
+        "equipment_turnaround_min": 0,
+        "stop_condition": null,
+        "source": "动作配置 §3–5、§7、§9；资源方案 §9",
+        "continuation_duration_min": null,
+        "continuation_staff_roles": [
+          "ventilation_care"
+        ],
+        "bulk_resource_scope": {
+          "oxygen": "out_of_scope_not_modeled_not_zero"
+        },
+        "bulk_scope_source_ref": "config/medical_resources_v1/experiment_parameters_v1.json"
+      },
+      "supplemental_oxygen": {
+        "allowed_start": [
+          "aid_station",
+          "hospital",
+          "basic_ambulance",
+          "ventilation_ambulance"
+        ],
+        "allowed_continue": [],
+        "duration_min": 2,
+        "staff_roles": [
+          "oxygen"
+        ],
+        "consumables": {
+          "oxygen_interface": 1
+        },
+        "equipment": [
+          "oxygen_device"
+        ],
+        "space_types": {
+          "aid_station": [
+            "observation"
+          ],
+          "hospital": [
+            "bed",
+            "ventilation_bed"
+          ],
+          "vehicle": [
+            "stretcher"
+          ]
+        },
+        "target_kind": "patient",
+        "continuous": true,
+        "support_space_types": {
+          "aid_station": [
+            "observation"
+          ],
+          "hospital": [
+            "bed",
+            "ventilation_bed"
+          ],
+          "vehicle": [
+            "stretcher"
+          ]
+        },
+        "care": {
+          "period_min": 10,
+          "duration_min": 1,
+          "role": "oxygen_care"
+        },
+        "predecessor_actions": [],
+        "bulk_resources": [
+          "oxygen"
+        ],
+        "equipment_turnaround_min": 0,
+        "stop_condition": null,
+        "source": "动作配置 §3–5、§7、§9；资源方案 §9"
+      },
+      "remove_from_exposure": {
+        "allowed_start": [
+          "aid_station",
+          "hospital"
+        ],
+        "allowed_continue": [],
+        "duration_min": 1,
+        "staff_roles": [
+          "environment"
+        ],
+        "consumables": {},
+        "equipment": [],
+        "space_types": {
+          "aid_station": [],
+          "hospital": [],
+          "vehicle": []
+        },
+        "target_kind": "patient",
+        "continuous": false,
+        "support_space_types": {},
+        "care": null,
+        "predecessor_actions": [],
+        "bulk_resources": [],
+        "equipment_turnaround_min": 0,
+        "stop_condition": "operation_complete",
+        "source": "动作配置 §3–5、§7、§9；资源方案 §9"
+      }
+    },
+    "bulk_protocols": {
+      "saline": {
+        "quantity": 500,
+        "rate": 100,
+        "unit": "mL",
+        "rate_unit": "mL/min",
+        "source_ref": "src/core301/pulse/treatment_adapter.py",
+        "source_sha256": "0446ae504306a3e0a56e26f9ebe8582034c70fbb93fc74f5671d711430a8914c",
+        "inventory": null,
+        "scope": "phase1.1 fixed infusion; delivery estimated from operation end, never changes protocol",
+        "reservation_quantity": 500,
+        "infusion_duration_min": 5,
+        "accounting": "full_course_commitment_with_patient_bound_remainder"
+      },
+      "blood": {
+        "quantity": 500,
+        "rate": 100,
+        "unit": "mL",
+        "rate_unit": "mL/min",
+        "source_ref": "src/core301/pulse/treatment_adapter.py",
+        "source_sha256": "0446ae504306a3e0a56e26f9ebe8582034c70fbb93fc74f5671d711430a8914c",
+        "inventory": null,
+        "scope": "phase1.1 fixed infusion; delivery estimated from operation end, never changes protocol",
+        "reservation_quantity": 500,
+        "infusion_duration_min": 5,
+        "accounting": "full_course_commitment_with_patient_bound_remainder"
+      },
+      "oxygen": {
+        "quantity": null,
+        "rate": 0.5,
+        "source_ref": "runs/resource_parameter_audit_001/findings.json",
+        "inventory": null,
+        "verified_setting_ref": "src/core301/pulse/v2/treatment_adapter.py: NasalCannula 0.5 L/min, 425 L; device setting is not a verified total supply consumption model",
+        "unit": "L",
+        "rate_unit": "L/min",
+        "source_sha256": "cb0d66dcccaad33b2e8f52e854ec93384de43452f13ebfaa3545857937b789bc",
+        "scope": "Verified fixed NasalCannula model only; start at setup completion; single-device 425 L is not shared stock"
+      }
+    }
+  },
+  "output_json_schema": {
+    "$defs": {
+      "Care": {
+        "additionalProperties": false,
+        "properties": {
+          "task_id": {
+            "title": "Task Id",
+            "type": "string"
+          },
+          "operation_id": {
+            "title": "Operation Id",
+            "type": "string"
+          },
+          "patient_id": {
+            "title": "Patient Id",
+            "type": "string"
+          },
+          "location": {
+            "title": "Location",
+            "type": "string"
+          },
+          "start_min": {
+            "minimum": 0,
+            "title": "Start Min",
+            "type": "number"
+          },
+          "end_min": {
+            "minimum": 0,
+            "title": "End Min",
+            "type": "number"
+          },
+          "staff_id": {
+            "title": "Staff Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "task_id",
+          "operation_id",
+          "patient_id",
+          "location",
+          "start_min",
+          "end_min",
+          "staff_id"
+        ],
+        "title": "Care",
+        "type": "object"
+      },
+      "Operation": {
+        "additionalProperties": false,
+        "properties": {
+          "task_id": {
+            "title": "Task Id",
+            "type": "string"
+          },
+          "patient_id": {
+            "title": "Patient Id",
+            "type": "string"
+          },
+          "plan_id": {
+            "title": "Plan Id",
+            "type": "string"
+          },
+          "action_id": {
+            "title": "Action Id",
+            "type": "string"
+          },
+          "location": {
+            "title": "Location",
+            "type": "string"
+          },
+          "start_min": {
+            "minimum": 0,
+            "title": "Start Min",
+            "type": "number"
+          },
+          "end_min": {
+            "minimum": 0,
+            "title": "End Min",
+            "type": "number"
+          },
+          "staff_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Staff Ids",
+            "type": "array"
+          },
+          "equipment_ids": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Equipment Ids",
+            "type": "array"
+          },
+          "space_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Space Id"
+          },
+          "support_space_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Support Space Id"
+          },
+          "access_mode": {
+            "default": "new",
+            "enum": [
+              "new",
+              "existing"
+            ],
+            "title": "Access Mode",
+            "type": "string"
+          },
+          "access_staff_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Access Staff Id"
+          },
+          "mode": {
+            "default": "start",
+            "enum": [
+              "start",
+              "continue"
+            ],
+            "title": "Mode",
+            "type": "string"
+          },
+          "continuation_of": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Continuation Of"
+          },
+          "consumables": {
+            "additionalProperties": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "title": "Consumables",
+            "type": "object"
+          }
+        },
+        "required": [
+          "task_id",
+          "patient_id",
+          "plan_id",
+          "action_id",
+          "location",
+          "start_min",
+          "end_min",
+          "staff_ids",
+          "consumables"
+        ],
+        "title": "Operation",
+        "type": "object"
+      },
+      "PatientResult": {
+        "additionalProperties": false,
+        "properties": {
+          "patient_id": {
+            "title": "Patient Id",
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "scheduled",
+              "unscheduled"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "reason_code": {
+            "anyOf": [
+              {
+                "enum": [
+                  "resource_shortage",
+                  "time_window_insufficient",
+                  "missing_parameters",
+                  "no_feasible_schedule_found"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Reason Code"
+          },
+          "reason": {
+            "default": "",
+            "title": "Reason",
+            "type": "string"
+          },
+          "blocking_resources": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Blocking Resources",
+            "type": "array"
+          },
+          "considered_alternatives": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Considered Alternatives",
+            "type": "array"
+          }
+        },
+        "required": [
+          "patient_id",
+          "status"
+        ],
+        "title": "PatientResult",
+        "type": "object"
+      },
+      "Transport": {
+        "additionalProperties": false,
+        "properties": {
+          "task_id": {
+            "title": "Task Id",
+            "type": "string"
+          },
+          "patient_id": {
+            "title": "Patient Id",
+            "type": "string"
+          },
+          "vehicle_id": {
+            "title": "Vehicle Id",
+            "type": "string"
+          },
+          "departure_location": {
+            "title": "Departure Location",
+            "type": "string"
+          },
+          "pickup": {
+            "title": "Pickup",
+            "type": "string"
+          },
+          "destination": {
+            "title": "Destination",
+            "type": "string"
+          },
+          "start_min": {
+            "minimum": 0,
+            "title": "Start Min",
+            "type": "number"
+          },
+          "load_start_min": {
+            "minimum": 0,
+            "title": "Load Start Min",
+            "type": "number"
+          },
+          "depart_min": {
+            "minimum": 0,
+            "title": "Depart Min",
+            "type": "number"
+          },
+          "arrive_min": {
+            "minimum": 0,
+            "title": "Arrive Min",
+            "type": "number"
+          },
+          "handoff_end_min": {
+            "minimum": 0,
+            "title": "Handoff End Min",
+            "type": "number"
+          },
+          "end_min": {
+            "minimum": 0,
+            "title": "End Min",
+            "type": "number"
+          }
+        },
+        "required": [
+          "task_id",
+          "patient_id",
+          "vehicle_id",
+          "departure_location",
+          "pickup",
+          "destination",
+          "start_min",
+          "load_start_min",
+          "depart_min",
+          "arrive_min",
+          "handoff_end_min",
+          "end_min"
+        ],
+        "title": "Transport",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "version": {
+        "const": "301.resource_schedule.v1",
+        "default": "301.resource_schedule.v1",
+        "title": "Version",
+        "type": "string"
+      },
+      "demonstration_only": {
+        "title": "Demonstration Only",
+        "type": "boolean"
+      },
+      "patient_results": {
+        "items": {
+          "$ref": "#/$defs/PatientResult"
+        },
+        "title": "Patient Results",
+        "type": "array"
+      },
+      "selections": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "title": "Selections",
+        "type": "object"
+      },
+      "operations": {
+        "items": {
+          "$ref": "#/$defs/Operation"
+        },
+        "title": "Operations",
+        "type": "array"
+      },
+      "transports": {
+        "default": [],
+        "items": {
+          "$ref": "#/$defs/Transport"
+        },
+        "title": "Transports",
+        "type": "array"
+      },
+      "care": {
+        "default": [],
+        "items": {
+          "$ref": "#/$defs/Care"
+        },
+        "title": "Care",
+        "type": "array"
+      }
+    },
+    "required": [
+      "demonstration_only",
+      "patient_results",
+      "selections",
+      "operations"
+    ],
+    "title": "Schedule",
+    "type": "object"
+  },
+  "constraints": [
+    "Return operations/transports/care with exact IDs from this input.",
+    "Do not invent requirements, doses, grants or eligibility. All proposed plans require host validation.",
+    "Ongoing support has unknown release: reserve throughout the planning horizon; the record ends only for accounting and support may continue beyond it. Observation time is not a task deadline.",
+    "Observation clocks are Pulse time. All schedule times are scheduler minutes."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "patients": 16,
+  "independent_native_runs": 10,
+  "reused": 6,
+  "failures": [],
+  "basic_observations_validated": 16,
+  "conditional_projection": "pending_host_authorization",
+  "15_metrics_source_catalog_exact_match": true,
+  "full_16_config_validated": true,
+  "baseline_unchanged": true
+}
