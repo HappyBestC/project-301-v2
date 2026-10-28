@@ -13,6 +13,24 @@ from .audit import safe_error, sha256, write_json
 
 PROMPT_PATH = Path(__file__).with_name('prompts') / 'treatment_candidates_v1.md'
 INJURY_CONFIG = PROJECT_ROOT / 'research_artifacts/v2_restricted_engineering_baseline_v1.0/TEN_INJURY_CONFIGURATIONS.json'
+DEFAULT_MAX_TOKENS = 8192
+
+
+def validate_max_tokens(value: int) -> int:
+    if type(value) is not int or not 256 <= value <= 32768:
+        raise ValueError('treatment_max_tokens must be between 256 and 32768')
+    return value
+
+
+class TreatmentFailure(RuntimeError):
+    """A classified provider failure containing only safe audit information."""
+    def __init__(self, reason_code: str, **details):
+        self.reason = {'reason_code': reason_code, **details}
+        super().__init__(reason_code)
+
+
+class InvalidJSON(ValueError):
+    pass
 
 
 class StrictModel(BaseModel):
@@ -61,12 +79,15 @@ def _unique_object(pairs):
 
 
 def _invalid_constant(value):
-    raise ValueError('Nonfinite JSON constant: ' + value)
+    raise InvalidJSON('Nonfinite JSON constant: ' + value)
 
 
 def decode(raw: str) -> TreatmentDecision:
-    return TreatmentDecision.model_validate(json.loads(
-        raw, object_pairs_hook=_unique_object, parse_constant=_invalid_constant))
+    try:
+        value = json.loads(raw, object_pairs_hook=_unique_object, parse_constant=_invalid_constant)
+    except json.JSONDecodeError as exc:
+        raise InvalidJSON(str(exc)) from exc
+    return TreatmentDecision.model_validate(value)
 
 
 def build_treatment_input(case: dict, mapping: dict) -> dict:
@@ -181,14 +202,22 @@ class TreatmentProvider(Protocol):
 class FakeTreatmentProvider:
     plan_status = 'template_only_not_executed'
 
-    def __init__(self, responses: dict[str, str | dict | Exception]):
+    def __init__(self, responses: dict[str, str | dict | Exception], *, finish_reasons: dict | None = None):
         self.responses = copy.deepcopy(responses)
+        self.finish_reasons = dict(finish_reasons or {})
 
     async def propose(self, payload: dict, *, audit_dir: Path) -> str:
         response = self.responses[payload['patient_id']]
         if isinstance(response, Exception):
             raise response
-        return response if isinstance(response, str) else json.dumps(response, allow_nan=False)
+        raw = response if isinstance(response, str) else json.dumps(response, allow_nan=False)
+        if payload['patient_id'] in self.finish_reasons:
+            finish_reason = self.finish_reasons[payload['patient_id']]
+            write_json(audit_dir / 'response_metadata.json', {'model_called': False, 'finish_reason': finish_reason})
+            (audit_dir / 'response.txt').write_text(raw)
+            if finish_reason == 'length':
+                raise TreatmentFailure('OUTPUT_TRUNCATED', finish_reason=finish_reason)
+        return raw
 
 
 class TemplateTreatmentProvider(FakeTreatmentProvider):
@@ -199,8 +228,9 @@ class TemplateTreatmentProvider(FakeTreatmentProvider):
 class LLMTreatmentProvider:
     plan_status = 'agent_proposed_not_executed'
 
-    def __init__(self):
+    def __init__(self, max_tokens: int = DEFAULT_MAX_TOKENS):
         from core301.agent.llm_config import load_llm_config
+        self.max_tokens = validate_max_tokens(max_tokens)
         self.config = load_llm_config(PROJECT_ROOT)
         self.called: set[str] = set()
 
@@ -211,7 +241,7 @@ class LLMTreatmentProvider:
             raise RuntimeError('One request per patient; no retry or fallback')
         self.called.add(pid)
         prompt = PROMPT_PATH.read_text()
-        request = {'model': self.config.model, 'max_tokens': 1200, 'messages': [
+        request = {'model': self.config.model, 'max_tokens': self.max_tokens, 'messages': [
             {'role': 'system', 'content': prompt},
             {'role': 'user', 'content': json.dumps(payload, ensure_ascii=False, allow_nan=False)},
         ]}
@@ -229,11 +259,16 @@ class LLMTreatmentProvider:
             metadata.update(returned_model=response.model,
                             usage=response.usage.model_dump() if response.usage is not None else None,
                             finish_reason=response.choices[0].finish_reason if response.choices else None)
+            if metadata['finish_reason'] == 'length':
+                raise TreatmentFailure('OUTPUT_TRUNCATED', finish_reason='length')
             if not raw.strip():
-                raise ValueError('Empty response')
+                raise TreatmentFailure('EMPTY_RESPONSE', finish_reason=metadata['finish_reason'])
             return raw
+        except TreatmentFailure as exc:
+            write_json(audit_dir / 'llm_error.json', {**exc.reason, 'retry_attempted': False})
+            raise
         except Exception as exc:
             write_json(audit_dir / 'llm_error.json', {**safe_error(exc), 'retry_attempted': False})
-            raise RuntimeError('LLM_CALL_FAILED:' + type(exc).__name__) from None
+            raise TreatmentFailure('CALL_FAILED', **safe_error(exc)) from None
         finally:
             write_json(audit_dir / 'response_metadata.json', metadata)

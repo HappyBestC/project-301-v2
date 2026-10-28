@@ -11,7 +11,7 @@ from .audit import safe_error, snapshot, write_json
 from .bridge import execute_all
 from .scheduling import SchedulingProvider
 from .scenarios import scenario_paths
-from .treatment import TreatmentProvider, admit, build_treatment_input
+from .treatment import InvalidJSON, TreatmentFailure, TreatmentProvider, admit, build_treatment_input
 
 
 @dataclass
@@ -63,19 +63,26 @@ class Nodes:
                 raw = await self.providers.treatment.propose(copy.deepcopy(payload), audit_dir=directory)
                 (directory / 'response.txt').write_text(raw)
             except Exception as exc:
-                failure = safe_error(exc)
+                failure = exc.reason if isinstance(exc, TreatmentFailure) else {'reason_code': 'CALL_FAILED', **safe_error(exc)}
                 result = {'admitted': False, 'stage': 'provider', 'error': failure}
-                excluded[pid] = 'TREATMENT_CALL_FAILED:' + failure['error_type']
+                excluded[pid] = failure
             else:
                 try:
+                    if not raw.strip():
+                        raise TreatmentFailure('EMPTY_RESPONSE')
                     decision, plans = admit(raw, payload, state['mapping'],
                                             plan_status=self.providers.treatment.plan_status,
                                             dataset_dir=scenario_paths(state['scenario'])['dataset_dir'])
                     result = {'admitted': True, 'decision': decision, 'candidate_plans': plans}
+                except TreatmentFailure as exc:
+                    result = {'admitted': False, 'stage': 'provider', 'error': exc.reason}
+                    excluded[pid] = exc.reason
                 except (ValueError, KeyError, TypeError) as exc:
                     # Admission errors describe JSON/contract issues, never SDK headers.
-                    result = {'admitted': False, 'stage': 'admission', 'error': {'detail': str(exc)}}
-                    excluded[pid] = 'TREATMENT_ADMISSION_FAILED:' + str(exc)
+                    failure = {'reason_code': 'JSON_INVALID' if isinstance(exc, InvalidJSON) else 'ADMISSION_REJECTED',
+                               'detail': str(exc)}
+                    result = {'admitted': False, 'stage': 'admission', 'error': failure}
+                    excluded[pid] = failure
             write_json(directory / 'admission.json', result)
             decisions[pid] = {'raw_response': raw, **result}
         return snapshot(state, 'treatment', {'treatment_decisions': decisions, 'excluded_patients': excluded,

@@ -48,7 +48,8 @@ def test_cli_threads_scenario_argument(argument, expected, monkeypatch, capsys):
         argv += ['--scenario', argument]
     monkeypatch.setattr(sys, 'argv', argv)
     assert runner.main() == 0
-    assert calls == [('offline', 'cli-test', {'max_schedule_attempts': 3, 'scenario': expected})]
+    assert calls == [('offline', 'cli-test', {'max_schedule_attempts': 3, 'scenario': expected,
+                                            'treatment_max_tokens': 8192})]
     assert json.loads(capsys.readouterr().out)['status'] == 'completed'
 
 

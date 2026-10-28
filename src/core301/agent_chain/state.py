@@ -12,7 +12,7 @@ class ChainState(TypedDict, total=False):
     resources: dict
     mapping: dict
     treatment_decisions: dict[str, dict]
-    excluded_patients: dict[str, str]
+    excluded_patients: dict[str, dict]
     dispatch_input: dict
     schedule_attempts: list
     feedback: dict | None

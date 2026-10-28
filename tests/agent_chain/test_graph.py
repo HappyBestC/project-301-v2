@@ -156,7 +156,8 @@ def test_treatment_failure_excludes_patient_without_template_fallback(chain_data
     responses = template_decisions()
     responses['P01'] = RuntimeError('secret-credential')
     summary, _, directory = run(tmp_path, [schedule], treatment=FakeTreatmentProvider(responses), attempts=1)
-    assert summary['excluded_patients'] == {'P01': 'TREATMENT_CALL_FAILED:RuntimeError'}
+    assert summary['excluded_patients'] == {
+        'P01': {'reason_code': 'CALL_FAILED', 'error_type': 'RuntimeError', 'status_code': None}}
     assert len(api.read(directory / 'dispatch_input.json')['patients']) == 15
     assert 'P01' not in {p['patient_id'] for p in api.read(directory / 'dispatch_input.json')['patients']}
     assert 'secret-credential' not in (directory / 'treatment/P01/admission.json').read_text()
