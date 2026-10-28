@@ -81,7 +81,9 @@ def build_treatment_input(case: dict, mapping: dict) -> dict:
     for field, (_, _, unit, _, _) in REQUESTS.items():
         if field.startswith('vitals.'):
             name = field.split('.')[1]
-            vitals[name] = {**copy.deepcopy(obs['vitals'][name]), 'unit': unit or 'fraction'}
+            vitals[name] = {key: copy.deepcopy(obs['vitals'][name][key])
+                            for key in ('value', 'status', 'observed_at_s')}
+            vitals[name]['unit'] = unit or 'fraction'
     return {
         'patient_id': case['patient_id'], 'location': case['location'],
         'arrival_time_min': case['arrival_time_min'], 'known_injury_context': injury,
@@ -114,13 +116,18 @@ def admit(raw: str, payload: dict, mapping: dict, *, plan_status: str) -> tuple[
             if not set(required) <= previous:
                 raise ValueError('Predecessor missing or out of order: ' + kind)
             previous.add(kind)
-    references = {}
+    references, protocols = {}, {}
     for plan in api.read(api.DATASET / 'action_plan_templates.json'):
         for action in plan['actions']:
             kind, ref = action['action_type'], action['resource_mapping_ref']
             if kind in references and references[kind] != ref:
                 raise ValueError('Inconsistent template resource reference: ' + kind)
             references[kind] = ref
+            key = (plan['injury_type'], kind)
+            protocol = action['fixed_protocol_ref']
+            if key in protocols and protocols[key] != protocol:
+                raise ValueError('Inconsistent template protocol reference: ' + str(key))
+            protocols[key] = protocol
     plans = []
     sequences = [p.actions for p in decision.candidate_plans] or [[]]
     for n, sequence in enumerate(sequences, 1):
@@ -134,8 +141,9 @@ def admit(raw: str, payload: dict, mapping: dict, *, plan_status: str) -> tuple[
             actions.append({
                 'action_id': f'{plan_id}-a{i}', 'action_type': kind, 'target': target,
                 'depends_on': [f'{plan_id}-a{i-1}'] if i > 1 else [],
-                'fixed_protocol_ref': {'protocol_id': f'{kind}.phase1.1',
-                                       'source': 'src/core301/pulse/v2/protocol_book.py'},
+                # User clarification: preserve the entire injury/action-specific
+                # template reference, including restricted-profile selectors.
+                'fixed_protocol_ref': copy.deepcopy(protocols[(injury['injury_type'], kind)]),
                 'resource_mapping_ref': copy.deepcopy(references[kind]),
                 'eligibility_status': 'eligibility_pending',
                 'injury_association': copy.deepcopy(injury),
