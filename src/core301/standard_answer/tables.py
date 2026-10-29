@@ -142,5 +142,8 @@ def prepare_costs(context, specs, store):
             if pid in untreated and untreated[pid] != value:
                 raise TableUnavailable(f'{pid}: inconsistent untreated rows across plans')
             untreated[pid] = value
-            warnings.extend(table.non_monotonic(120 - int(arrival)))
+            # Report table-level recovery even when it lies beyond this late
+            # casualty's shorter observation window, as well as window changes.
+            for window in sorted({120, 120 - int(arrival)}):
+                warnings.extend(table.non_monotonic(window))
     return costs, untreated, list({str(w): w for w in warnings}.values())
