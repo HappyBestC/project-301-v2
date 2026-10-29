@@ -124,10 +124,14 @@ class Nodes:
         n = len(attempts) + 1
         directory = Path(state['run_dir']) / 'schedule' / f'attempt_{n:02}'
         directory.mkdir(parents=True, exist_ok=False)
-        write_json(directory / 'request.json', {'dispatch_input': state['dispatch_input'],
+        model_input = copy.deepcopy(state['dispatch_input'])
+        if self.config.get('schedule_variant') == 'L1':
+            from .baseline import with_urgency
+            model_input = with_urgency(model_input, self.config['tables'])
+        write_json(directory / 'request.json', {'dispatch_input': model_input,
                    'feedback': state['feedback'], 'previous_response': state['previous_response']})
         try:
-            proposal = await self.providers.scheduling.propose(copy.deepcopy(state['dispatch_input']),
+            proposal = await self.providers.scheduling.propose(model_input,
                 feedback=copy.deepcopy(state['feedback']), previous_response=state['previous_response'], audit_dir=directory)
         except Exception as exc:
             proposal = {'schedule': None, 'raw_response': None, 'metadata': {'request_error': safe_error(exc)}}
@@ -169,6 +173,9 @@ class Nodes:
             latest_feedback = feedback.build_feedback(context, candidate, attempt['validation'],
                                 attempt['attempt'], history, previous_selected)
             previous_selected = set(candidate.get('selections', {}))
+        if state['mode'] == 'live_schedule':
+            from .baseline import resource_hints
+            latest_feedback = resource_hints(context, current['candidate'], latest_feedback)
         current['feedback'] = latest_feedback
         write_json(directory / 'validation.json', result)
         write_json(directory / 'feedback.json', latest_feedback)

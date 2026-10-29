@@ -47,11 +47,15 @@ class FakeSchedulingProvider:
 
 
 class LLMSchedulingProvider:
-    def __init__(self):
+    def __init__(self, *, schedule_variant=None):
+        self.schedule_variant = schedule_variant
         from core301.dispatch.providers import LLMDispatchProvider
         self.provider = LLMDispatchProvider()
 
     async def propose(self, dispatch_input, *, feedback, previous_response, audit_dir):
+        if getattr(self, 'schedule_variant', None) is not None:
+            return await self._baseline_propose(dispatch_input, feedback=feedback,
+                previous_response=previous_response, audit_dir=audit_dir)
         prompt = (PROJECT_ROOT / 'src/core301/dispatch/prompts/resource_schedule.md').read_bytes()
         meta = {'requested_model': self.provider._config.model, 'prompt_sha256': sha256(prompt),
                 'returned_model': None, 'usage': None, 'max_retries': 0, 'timeout_s': 180}
@@ -66,3 +70,48 @@ class LLMSchedulingProvider:
         except Exception as exc:
             write_json(audit_dir / 'llm_error.json', {**safe_error(exc), 'retry_attempted': False})
             raise
+
+    async def _baseline_propose(self, dispatch_input, *, feedback, previous_response, audit_dir):
+        """Keep model-only fields out of validation; the graph validates the original context."""
+        from time import perf_counter
+        from openai import AsyncOpenAI
+        from .baseline import prompt_path
+        prompt = prompt_path(self.schedule_variant).read_bytes()
+        config = self.provider._config
+        meta = {'requested_model': config.model, 'prompt_sha256': sha256(prompt),
+                'returned_model': None, 'usage': None, 'max_retries': 0, 'timeout_s': 180}
+        messages = [{'role': 'system', 'content': prompt.decode()},
+                    {'role': 'user', 'content': json.dumps(dispatch_input, ensure_ascii=False, allow_nan=False)}]
+        if previous_response is not None:
+            messages.append({'role': 'assistant', 'content': previous_response})
+        if feedback is not None:
+            messages.append({'role': 'user', 'content': json.dumps({'validator_feedback': feedback}, ensure_ascii=False, allow_nan=False)})
+        write_json(audit_dir / 'request_messages.json', messages)
+        write_json(audit_dir / 'llm_request_metadata.json', meta)
+        started = perf_counter()
+        try:
+            async with AsyncOpenAI(base_url=config.base_url, api_key=config.api_key, max_retries=0, timeout=180) as client:
+                response = await client.chat.completions.create(model=config.model, messages=messages)
+            content = response.choices[0].message.content if response.choices else None
+            raw = content if isinstance(content, str) else ''
+            usage = getattr(response, 'usage', None)
+            meta.update(returned_model=getattr(response, 'model', None),
+                        usage=usage.model_dump() if usage is not None else None,
+                        finish_reason=getattr(response.choices[0], 'finish_reason', None) if response.choices else None)
+            try:
+                candidate = json.loads(raw, parse_constant=lambda value: (_ for _ in ()).throw(ValueError(value)))
+            except (ValueError, TypeError):
+                candidate = None
+            if candidate is not None:
+                from core301.dispatch.minimal.models import Schedule
+                try:
+                    candidate = Schedule.model_validate(candidate).model_dump()
+                except ValueError:
+                    pass  # Preserve invalid proposals for independent graph validation.
+            return {'schedule': candidate, 'raw_response': raw, 'metadata': meta}
+        except Exception as exc:
+            write_json(audit_dir / 'llm_error.json', {**safe_error(exc), 'retry_attempted': False})
+            raise
+        finally:
+            meta['model_elapsed_s'] = perf_counter() - started
+            write_json(audit_dir / 'llm_request_metadata.json', meta)
