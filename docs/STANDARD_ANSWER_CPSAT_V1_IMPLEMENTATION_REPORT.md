@@ -66,8 +66,9 @@
 
 | 检查 | 结果 |
 | --- | --- |
-| `CORE301_VALIDATION_DIR=runs/standard_answer/validation_final bash scripts/validate.sh` | 退出码 0；M2 基线 685 passed；全量非集成 1505 passed、28 deselected |
-| 上述全量检查后增加的约束边界覆盖 | `tests/standard_answer/test_constraints.py`：63 passed（含新增 12 项） |
+| 审查后复跑：`CORE301_VALIDATION_DIR=runs/standard_answer/validation_review_phase2 bash scripts/validate.sh` | 退出码 0；恢复原列表后的 M2 基线 678 passed；全量非集成 1517 passed、28 deselected |
+| 历史运行：`CORE301_VALIDATION_DIR=runs/standard_answer/validation_final bash scripts/validate.sh` | 退出码 0；误替换测试列表后的 M2 基线 685 passed；全量非集成 1505 passed、28 deselected；原列表复跑结果见下文审查更正 |
+| 初次全量检查后增加的约束边界覆盖 | `tests/standard_answer/test_constraints.py`：63 passed（含新增 12 项） |
 | 全部 native 集成测试 | 28 passed、1502 deselected，941.22 秒 |
 | 最终标准答案专项测试 | 94 passed，211.67 秒；之后全窗口非单调报告补充经表测试再次验证 |
 | 冻结研究文件核验 | 858 个文件，errors=[] |
@@ -85,9 +86,45 @@ native 集成测试只执行既有测试中的 Pulse 路径，没有发起 live 
 - `run_002` 假表端到端测试禁止调用 Pulse/模型；变体 typical 模式使用典型表优化、真实表评价；缺少真实表时退出。
 - verify 测试检查所有伤员均传给 native bridge 接口、真实严重度输入、时钟换算和插值死亡时刻例外。
 
-验收脚本原先引用不存在的 `tests/v2/test_phase2_gates.py`，已修正为现有 `test_phase2_audit.py`。
+撤回原先“`tests/v2/test_phase2_gates.py` 不存在”的判断，以及据此将它替换成 `test_phase2_audit.py` 的改动。
+该文件一直存在，测试列表已恢复原来的 `test_phase2_gates.py`；核查原因和复跑结果见下文审查更正。
 脚本支持 `CORE301_VALIDATION_DIR`；独立性检查从当前 worktree 加载模块，避免共享 `.venv` 的 editable 安装指向原目录。
 这两项仅调整验证入口，没有修改 Agent 链路的行为。
+
+### 审查更正：恢复原始 M2 测试列表
+
+审查后分别执行 `git ls-tree main tests/v2/test_phase2_gates.py`、
+`git ls-tree codex/standard-answer-v1 tests/v2/test_phase2_gates.py` 和
+`git ls-tree 9e6e191 tests/v2/test_phase2_gates.py`，三处均返回同一 blob：
+`c4d1e2eebb2793fdf535014e5b7036b8046e34b5`。工作树文件也实际存在；没有发现忽略规则将它排除。
+
+当初判断错误的原因是：我在较长、部分被截断的批量文件清单中没有注意到该路径，便将“没有看到”误当成“不存在”。
+当时没有针对该文件执行 `ls`、`test -f` 或 `git ls-tree`，也没有先运行原测试列表取得文件缺失的错误证据。
+这是我的核查疏漏，测试替换没有依据；并非仓库缺少该文件，也不是测试文件更名。
+
+本次仅将 M2 基线命令中的 `test_phase2_audit.py` 恢复为 `test_phase2_gates.py`，
+保留 `CORE301_VALIDATION_DIR`、临时目录、输出重定向和 worktree 独立性检查等其他改动。
+随后完整复跑：
+
+```bash
+cd /home/private/project-301-v2-sa
+source scripts/activate.sh
+CORE301_VALIDATION_DIR=runs/standard_answer/validation_review_phase2 bash scripts/validate.sh
+```
+
+复跑已完整结束，脚本退出码 **0**：
+
+| 检查 | 本次结果 |
+| --- | --- |
+| M2 原始测试列表 | 678 passed，16.97 秒；JUnit 确认包含 13 个 `test_phase2_gates` 用例，不包含 `test_phase2_audit` |
+| 全量非集成测试 | 1517 passed、28 deselected、6 个既有弃用警告，536.72 秒 |
+| 冻结研究文件 | 858 个文件，errors=[] |
+| demo 资源守恒 | 128 次检查通过 |
+| Pulse smoke | 通过，treatment_actions=0、advanced_steps=0 |
+| worktree 独立性 | 通过，isolated=1、old_tree_open_policy=DENIED |
+
+日志：`runs/standard_answer/validate_review_phase2.log`；JUnit XML 和后续检查结果：
+`runs/standard_answer/validation_review_phase2/`。这些运行产物不提交。
 
 ## 5. §10 验收结果
 

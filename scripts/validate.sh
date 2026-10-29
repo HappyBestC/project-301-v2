@@ -6,7 +6,7 @@ validation_dir="${CORE301_VALIDATION_DIR:-validation}"
 project301_validation_root="$PWD"
 mkdir -p "$validation_dir/tmp" "$validation_dir/isolated"
 export TMPDIR="$(cd "$validation_dir/tmp" && pwd)"
-python -m pytest -q tests/complete_dispatch tests/shared_dispatch tests/shared_resources tests/test_dispatch.py tests/test_dispatch_eta_evidence.py tests/test_dispatch_llm.py tests/test_contracts.py tests/v2/test_contracts.py tests/v2/test_runtime.py tests/v2/test_phase2_audit.py -m 'not integration' -p no:cacheprovider --junitxml="$validation_dir/m2_baseline.xml" | tee "$validation_dir/m2_baseline.log"
+python -m pytest -q tests/complete_dispatch tests/shared_dispatch tests/shared_resources tests/test_dispatch.py tests/test_dispatch_eta_evidence.py tests/test_dispatch_llm.py tests/test_contracts.py tests/v2/test_contracts.py tests/v2/test_runtime.py tests/v2/test_phase2_gates.py -m 'not integration' -p no:cacheprovider --junitxml="$validation_dir/m2_baseline.xml" | tee "$validation_dir/m2_baseline.log"
 python -m pytest -q tests -m 'not integration' -p no:cacheprovider --junitxml="$validation_dir/all_unit.xml" | tee "$validation_dir/all_unit.log"
 for module in shared_resources.demo shared_demo complete_demo; do
   python -m "core301.dispatch.$module" > "$validation_dir/$module.jsonl"
