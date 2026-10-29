@@ -7,6 +7,7 @@ from typing import Callable
 
 from core301.dispatch.minimal import api, feedback, validation
 from core301.dispatch.minimal.models import Schedule
+from core301.triage.service import triage_cases, with_triage_tags
 from . import outcomes, timeline
 from .audit import safe_error, snapshot, write_json
 from .bridge import execute_all
@@ -60,7 +61,10 @@ class Nodes:
             raise ValueError('Expected P01–P16 exactly once')
         for case in cases:
             case.pop('candidate_plans')
-        return snapshot(state, 'load_scenario', {'cases': cases, 'resources': resources, 'mapping': mapping})
+        triage = triage_cases(cases, api.read(paths['dataset_dir'] / 'patient_specs.json'))
+        write_json(Path(state['run_dir']) / 'triage.json', triage)
+        return snapshot(state, 'load_scenario', {'cases': cases, 'resources': resources,
+                                                'mapping': mapping, 'triage': triage})
 
     async def treatment(self, state):
         self.progress['active_stage'] = 'treatment'
@@ -128,6 +132,8 @@ class Nodes:
         if self.config.get('schedule_variant') == 'L1':
             from .baseline import with_urgency
             model_input = with_urgency(model_input, self.config['tables'])
+        elif self.config.get('schedule_variant') == 'L2':
+            model_input = with_triage_tags(model_input, state['triage'])
         write_json(directory / 'request.json', {'dispatch_input': model_input,
                    'feedback': state['feedback'], 'previous_response': state['previous_response']})
         try:

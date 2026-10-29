@@ -9,6 +9,7 @@ class ChainState(TypedDict, total=False):
     scenario: str
     horizon_min: float
     cases: list
+    triage: dict
     resources: dict
     mapping: dict
     treatment_decisions: dict[str, dict]
