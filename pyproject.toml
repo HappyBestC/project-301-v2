@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "core301"
 version = "0.1.0"
 requires-python = ">=3.11"
-dependencies = ["pydantic==2.12.3", "ruamel.yaml==0.19.1", "openai==2.54.0", "python-dotenv>=1.0,<2", "langgraph==1.2.18"]
+dependencies = ["pydantic==2.12.3", "ruamel.yaml==0.19.1", "openai==2.54.0", "python-dotenv>=1.0,<2", "langgraph==1.2.18", "ortools==9.10.4067"]
 
 [project.optional-dependencies]
 test = ["pytest==8.4.2"]

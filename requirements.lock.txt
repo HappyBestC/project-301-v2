@@ -48,3 +48,11 @@ uuid-utils==0.19.0
 websockets==17.3
 xxhash==4.0.2
 zstandard==0.25.0
+ortools==9.10.4067
+absl-py==2.1.0
+pandas==2.2.3
+immutabledict==4.2.0
+python-dateutil==2.9.0.post0
+pytz==2024.2
+tzdata==2024.2
+six==1.16.0
