@@ -110,7 +110,7 @@ def main():
     parser.add_argument('--scenario', choices=tuple(SCENARIOS), default='run_001')
     parser.add_argument('--max-schedule-attempts', type=int, default=3)
     parser.add_argument('--treatment-max-tokens', type=int, default=DEFAULT_MAX_TOKENS)
-    parser.add_argument('--schedule-variant', choices=('L0', 'L1'), default='L0')
+    parser.add_argument('--schedule-variant', choices=('L0', 'L1', 'L2'), default='L0')
     parser.add_argument('--tables', type=Path)
     args = parser.parse_args()
     options = ({'schedule_variant': args.schedule_variant, 'tables': args.tables}

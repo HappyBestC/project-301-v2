@@ -1,9 +1,12 @@
 import asyncio
 import copy
+import hashlib
+import json
+import sys
 
 import pytest
 
-from core301.agent_chain import nodes, runner, treatment
+from core301.agent_chain import baseline, nodes, runner, treatment
 from core301.agent_chain.nodes import Nodes, Providers
 from core301.agent_chain.scenarios import scenario_paths
 from core301.agent_chain.scheduling import FakeSchedulingProvider, REPLAY_PATH
@@ -11,6 +14,15 @@ from core301.dispatch.minimal import api
 from core301.triage.service import triage_cases, with_triage_tags
 from tests.agent_chain.test_graph import fast_execute
 from tests.agent_chain.test_llm_baseline import empty_schedule, fake_native
+from tests.agent_chain.test_provider_audit import client_mock, scheduling_provider
+
+
+OLD_URGENCY = ('每名伤员的 `urgency` 给出了 Pulse 测得的时效信息：`effective_after_injury_min` 的键是'
+               '"方案第一个动作的操作结束时刻减去受伤时刻"（分钟），值是该时刻生效时的死亡与否和 CO 缺损；'
+               '`untreated` 是不处置的结局。')
+NEW_TRIAGE = ('每名伤员的 `triage_tag` 是分诊器给出的分级：`red` 为立即处置（有生命危险，及时处置可以救活），'
+              '`yellow` 为延迟处置（需要处置，暂无生命危险），`green` 为轻伤（可以最后处置），'
+              '`black` 为已无呼吸（不分配救治资源）。资源不足时，按分级从高到低优先安排。')
 
 
 @pytest.mark.parametrize('mode,scenario', [('offline', 'run_001'), ('native_replay', 'run_001'),
@@ -118,3 +130,77 @@ def test_l2_projection_matches_patient_ids_after_exclusion():
                            dict(patient_id='excluded', tag='black')]}
     assert with_triage_tags(original, triage) == {'patients': [dict(patient_id='P02', triage_tag='green'),
                                                              dict(patient_id='P01', triage_tag='red')]}
+
+
+def test_l2_prompt_changes_only_the_user_confirmed_urgency_sentence():
+    before = baseline.prompt_path('L1').read_bytes()
+    after = baseline.prompt_path('L2').read_bytes()
+    assert before.count(OLD_URGENCY.encode()) == 1
+    assert after == before.replace(OLD_URGENCY.encode(), NEW_TRIAGE.encode(), 1)
+    assert '排入人数本身不是目标：资源不足时，优先保证会因延误而死亡的伤员。'.encode() in after
+    spec = (baseline.PROJECT_ROOT / 'docs/TRIAGE_V1_DEV_SPEC.md').read_text()
+    assert NEW_TRIAGE == next(line.strip()[2:] for line in spec.splitlines()
+                              if line.strip().startswith('> 每名伤员的 `triage_tag`'))
+
+
+def test_live_schedule_l2_end_to_end_with_mock_sdk(tmp_path, monkeypatch):
+    dataset = scenario_paths('run_002')['dataset_dir']
+    original_cases = api.load_cases(dataset)
+    resources, mapping = api.load_config(scenario_paths('run_002')['config_dir'])
+    original_context = api.build_input(resources, mapping, original_cases, horizon_min=120.0, observation_time_min=60.0)
+
+    class ForbiddenTreatment(treatment.LLMTreatmentProvider):
+        def __init__(self, *args, **kwargs):
+            pytest.fail('L2 must not construct a treatment model')
+
+    monkeypatch.setattr(runner, 'LLMTreatmentProvider', ForbiddenTreatment)
+    scheduler = scheduling_provider()
+    scheduler.schedule_variant = 'L2'
+
+    def configured_scheduler(**kwargs):
+        assert kwargs == {'schedule_variant': 'L2'}
+        return scheduler
+
+    monkeypatch.setattr(runner, 'LLMSchedulingProvider', configured_scheduler)
+    calls, settings = client_mock(monkeypatch, json.dumps(empty_schedule('no_feasible_schedule_found')))
+    providers = runner.mode_providers('live_schedule', 'run_002', schedule_variant='L2')
+    assert isinstance(providers.treatment, treatment.TemplateTreatmentProvider)
+    providers.execute = fake_native
+    result = asyncio.run(runner.run_chain('live_schedule', 'run', root=tmp_path,
+        scenario='run_002', schedule_variant='L2', providers=providers))
+    assert result['status'] == 'completed' and result['execution_patients'] == 16
+    assert result['schedule_stage'] == 'partial' and len(calls) == 3
+    assert all(s['max_retries'] == 0 for s in settings)
+    triage = api.read(tmp_path / 'run/triage.json')
+    for attempt, call in enumerate(calls, 1):
+        messages = call['messages']
+        assert messages[0]['content'].encode() == baseline.prompt_path('L2').read_bytes()
+        payload = json.loads(messages[1]['content'])
+        assert payload == with_triage_tags(original_context, triage)
+        directory = tmp_path / f'run/schedule/attempt_{attempt:02}'
+        assert api.read(directory / 'request.json')['dispatch_input'] == payload
+        assert api.read(directory / 'request_messages.json') == messages
+        assert api.read(directory / 'validation.json')['conflicts'] == []
+    assert api.read(tmp_path / 'run/dispatch_input.json') == original_context
+    parameters = api.read(tmp_path / 'run/manifest.json')['parameters']
+    assert parameters['schedule_variant'] == 'L2'
+    assert parameters['prompt_sha256'] == hashlib.sha256(baseline.prompt_path('L2').read_bytes()).hexdigest()
+    assert parameters['tables_sha256'] == {} and parameters['tables'] is None
+    for case in original_cases:
+        assert api.read(tmp_path / f"run/treatment/{case['patient_id']}/request.json") == treatment.build_treatment_input(case, mapping)
+
+
+def test_runner_cli_accepts_l2_without_tables(monkeypatch, capsys):
+    calls = []
+
+    async def fake_run(mode, run_id, **kwargs):
+        calls.append((mode, run_id, kwargs))
+        return {'status': 'completed'}
+
+    monkeypatch.setattr(runner, 'run_chain', fake_run)
+    monkeypatch.setattr(sys, 'argv', ['runner', '--mode', 'live_schedule', '--run-id', 'test-L2',
+                                    '--scenario', 'run_002', '--schedule-variant', 'L2'])
+    assert runner.main() == 0
+    assert len(calls) == 1 and calls[0][:2] == ('live_schedule', 'test-L2')
+    assert calls[0][2]['schedule_variant'] == 'L2' and calls[0][2]['tables'] is None
+    assert json.loads(capsys.readouterr().out)['status'] == 'completed'

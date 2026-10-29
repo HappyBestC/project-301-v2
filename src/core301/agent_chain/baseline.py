@@ -14,9 +14,11 @@ HINT_CODES = frozenset(('UNKNOWN_RESOURCE', 'NOT_PERSONNEL', 'RESOURCE_LOCATION'
 
 
 def prompt_path(variant):
-    if variant not in ('L0', 'L1'):
-        raise ValueError('Expected L0 or L1')
-    name = 'resource_schedule_objective.md' if variant == 'L1' else 'resource_schedule.md'
+    names = {'L0': 'resource_schedule.md', 'L1': 'resource_schedule_objective.md',
+             'L2': 'resource_schedule_triage.md'}
+    if variant not in names:
+        raise ValueError('Expected L0, L1 or L2')
+    name = names[variant]
     return PROJECT_ROOT / 'src/core301/dispatch/prompts' / name
 
 
