@@ -51,6 +51,9 @@ def test_virtual_vehicle_preserves_other_decisions_and_needs_crew():
     assert result['minimal_categories'] == ['vehicles', 'personnel']
     assert 'V1' in result['blocking_resources']
     assert 'V1-driver-1' in result['blocking_resources']
+    # The solver can choose virtual facility staff even when the originals are
+    # free; such incidental choices are not actual bottlenecks.
+    assert all(r.startswith('V1') for r in result['blocking_resources'])
 
 
 def test_all_resources_still_cannot_meet_horizon():

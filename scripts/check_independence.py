@@ -8,6 +8,11 @@ def audit(event,args):
         p=Path(os.fsdecode(args[0])).resolve()
         if p.is_relative_to(OLD):raise RuntimeError('OLD_PROJECT_ACCESS:'+str(p))
 sys.addaudithook(audit)
+# A worktree may share a read-only .venv with another checkout. Inspect this
+# checkout's modules even under -I, without changing that venv's editable install.
+sys.path[:0] = [str(ROOT / 'src'), str(ROOT / 'pulse/python'), str(ROOT / 'pulse/bin')]
+if (ROOT / 'runs/standard_answer/_deps').is_dir():
+    sys.path.append(str(ROOT / 'runs/standard_answer/_deps'))
 import core301
 mods={}
 for info in pkgutil.walk_packages(core301.__path__,core301.__name__+'.'):

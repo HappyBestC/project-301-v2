@@ -1,7 +1,8 @@
 """Check actual saved demo output, including every resource conservation equation."""
 from pathlib import Path
+import os
 import json
-R=Path(__file__).resolve().parents[1]/'validation'
+R=Path(__file__).resolve().parents[1]/os.environ.get('CORE301_VALIDATION_DIR', 'validation')
 def rows(n):return [json.loads(x) for x in (R/n).read_text().splitlines()]
 a=rows('shared_resources.demo.jsonl');b=rows('shared_demo.jsonl');c=rows('complete_demo.jsonl')
 aa={r['step']:r for r in a};bb={r['step']:r for r in b}

@@ -11,6 +11,40 @@ from .solve import new_solver, stage_record
 CATEGORIES = ('vehicles', 'personnel', 'equipment', 'space', 'inventory')
 
 
+def blocking_originals(virtual_hold, virtual_map, model, solver, trial, engine):
+    """Do not blame free original assets merely because a copy was selected."""
+    category, originals = virtual_map[virtual_hold.resource]
+    if category == 'vehicles':
+        # A vehicle can be blocked by its fixed route/position as well as time.
+        return originals
+    start, end = engine.Value(virtual_hold.start), engine.Value(virtual_hold.end)
+    blocked = []
+    for rid in originals:
+        asset = model.assets[rid]
+        unavailable = (asset.get('status') != 'available' or asset.get('available_from_min', 0) > start
+                       or asset.get('bound_patient_id') not in (None, virtual_hold.patient))
+        for hold in model.holds:
+            if hold.resource != rid or not solver.Value(hold.present):
+                continue
+            if category == 'space' and hold.patient == virtual_hold.patient:
+                continue
+            if max(start, solver.Value(hold.start)) < min(end, solver.Value(hold.end)):
+                unavailable = True
+        # Distinct staff/equipment slots cannot reuse a resource already assigned
+        # to this target's concurrent phase. Its own transport crew is exempt.
+        if category in ('personnel', 'equipment'):
+            for hold in trial.holds:
+                if hold.patient != virtual_hold.patient or hold.resource != rid or not engine.Value(hold.present):
+                    continue
+                if 'crew' in (hold.kind, virtual_hold.kind) and hold.kind != virtual_hold.kind:
+                    continue
+                if max(start, engine.Value(hold.start)) < min(end, engine.Value(hold.end)):
+                    unavailable = True
+        if unavailable:
+            blocked.append(rid)
+    return blocked
+
+
 class DiagnosisPending(RuntimeError):
     def __init__(self, message, checks):
         super().__init__(message)
@@ -116,12 +150,28 @@ def diagnose_unscheduled(model, solver, costs, untreated, parameters):
             entry['virtual_resources_used'] = []
             entry['blocking_resources'] = []
             feasible = status in (cp_model.OPTIMAL, cp_model.FEASIBLE)
+            if not key and status == cp_model.FEASIBLE and (
+                engine.Value(trial.deaths[pid]), engine.Value(trial.deficits[pid])) > (untreated[pid].death, untreated[pid].deficit10):
+                # A time-limited, worse incumbent does not prove every insertion
+                # is worse. Check the non-worsening domain before classifying it.
+                trial.cp.Add(weight * trial.deaths[pid] + trial.deficits[pid] <=
+                             weight * untreated[pid].death + untreated[pid].deficit10)
+                bounded = new_solver(parameters)
+                bounded_status = bounded.Solve(trial.cp)
+                entry['non_worsening_check'] = stage_record(bounded, bounded_status, 'non_worsening_insertion')
+                if bounded_status in (cp_model.OPTIMAL, cp_model.FEASIBLE):
+                    engine = bounded
+                elif bounded_status != cp_model.INFEASIBLE:
+                    results[pid] = dict(checks=checks + [entry], pending='Non-worsening insertion not decided within time limit')
+                    raise DiagnosisPending(f'{pid}: cannot prove all feasible insertions worsen the objectives', results)
             if feasible:
                 entry['_values'] = trial.values(engine) if not key else None
                 entry['patient_objective'] = [engine.Value(trial.deaths[pid]), engine.Value(trial.deficits[pid])]
                 used = {h.resource for h in trial.holds if h.patient == pid and h.resource in virtual_map and engine.Value(h.present)}
                 entry['virtual_resources_used'] = sorted(used)
-                blockers = {rid for resource in used for rid in virtual_map[resource][1]}
+                blockers = {rid for hold in trial.holds
+                    if hold.patient == pid and hold.resource in used and engine.Value(hold.present)
+                    for rid in blocking_originals(hold, virtual_map, model, solver, trial, engine)}
                 if 'inventory' in key:
                     for (location, item), terms in trial.spending.items():
                         if location in trial.aliases:
