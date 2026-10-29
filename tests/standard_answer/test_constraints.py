@@ -32,6 +32,11 @@ def _dependency(schedule):
     ('simple', 'VEHICLE_POSITION', lambda s: s['transports'][0].update(departure_location='B')),
     ('simple', 'TRANSPORT_TIMING', lambda s: s['transports'][0].update(arrive_min=1.0)),
     ('simple', 'OUTSIDE_HORIZON', lambda s: s['transports'][0].update(end_min=121.0)),
+    ('simple', 'OUTSIDE_HORIZON', lambda s: s['operations'][0].update(end_min=121.0)),
+    ('simple', 'VEHICLE_OVERLAP', lambda s: s['transports'].append({**s['transports'][0], 'task_id': 'overlapping-trip'})),
+    ('oxygen', 'BEFORE_ARRIVAL', lambda s: s['transports'][0].update(start_min=0.0)),
+    ('oxygen', 'BEFORE_ARRIVAL', lambda s: s['operations'][0].update(start_min=0.0, end_min=2.0)),
+    ('oxygen', 'STAFF_CAPABILITY_OR_COUNT', lambda s: s['care'][0].update(staff_id='V1-driver-1')),
     ('simple', 'PATIENT_LOCATION', lambda s: s['transports'][0].update(pickup='F1')),
     ('simple', 'PATIENT_LOCATION', lambda s: s['operations'][0].update(location='A')),
     ('simple', 'LOCATION_UNSUPPORTED', lambda s: s['operations'][0].update(location='F2')),
@@ -223,3 +228,62 @@ def test_access_phase_distinct_main_staff_and_template_gap(samples):
     assert len(set(b['staff_ids'])) == 2 and b['access_staff_id']
     assert b['access_mode'] == 'new' and b['mode'] == 'start'
     assert b['consumables'] == {'transfusion_set': 1, 'iv_access_kit': 1}
+
+
+def test_equipment_turnaround_is_reserved(samples):
+    context, _, _, schedule = samples['vent']
+    context = copy.deepcopy(context)
+    operation = schedule['operations'][0]
+    rid, end = operation['equipment_ids'][0], operation['end_min']
+    context['resources']['initial_reservations'] = [dict(resource_id=rid, patient_id='P99', task_id='turnaround-blocker',
+        kind='equipment', start_min=end, end_min=end+5)]
+    assert 'RESOURCE_OVERLAP' in {c['code'] for c in validate_schedule(context, schedule)['conflicts']}
+    model = make_model(context)
+    op = model.operations[operation['action_id']]
+    model.cp.Add(op.equipment[0][rid] == 1)
+    model.cp.Add(op.end == int(end))
+    solve_model(model, feasible=False)
+
+
+def test_blood_full_commitment_and_kit_stock(samples):
+    for sample, item in [('blood', 'blood'), ('simple', 'decompression_kit')]:
+        context, _, _, schedule = samples[sample]
+        context = copy.deepcopy(context)
+        context['resources']['inventory']['H1'][item]['quantity'] = 499 if item == 'blood' else 0
+        assert 'STOCK_SHORTAGE' in {c['code'] for c in validate_schedule(context, schedule)['conflicts']}
+        model = make_model(context)
+        op = model.operations[schedule['operations'][-1]['action_id']]
+        model.cp.Add(op.locations['H1'] == 1)
+        if item == 'blood':
+            model.cp.Add(op.end == 120)
+        solve_model(model, feasible=False)
+
+
+def test_double_position_against_initial_patient_bed(samples):
+    context, _, _, schedule = samples['vent']
+    context = copy.deepcopy(context)
+    used = schedule['operations'][-1]['space_id']
+    other = next(s['id'] for s in context['resources']['spaces'] if s['location'] == 'H1' and s['type'] == 'ventilation_bed' and s['id'] != used)
+    context['resources']['initial_reservations'] = [dict(resource_id=other, patient_id='P03', task_id='ongoing-bed',
+        kind='space', start_min=0, end_min=120)]
+    assert 'DOUBLE_POSITION' in {c['code'] for c in validate_schedule(context, schedule)['conflicts']}
+    model = make_model(context)
+    model.cp.Add(model.operations['P03-plan-1-a2'].spaces[used] == 1)
+    solve_model(model, feasible=False)
+
+
+@pytest.mark.parametrize('code,patch', [
+    ('UNSCHEDULED_REASON_REQUIRED', {'reason': '资源不足'}),
+    ('ALTERNATIVES_REQUIRED', {'considered_alternatives': []}),
+    ('BLOCKING_RESOURCE_REQUIRED', {'blocking_resources': []}),
+    ('REASON_UNKNOWN_REFERENCE', {'blocking_resources': ['V99']}),
+])
+def test_unscheduled_accounting_requirements(samples, code, patch):
+    context, _, _, _ = samples['simple']
+    result = dict(patient_id='P05', status='unscheduled', reason_code='resource_shortage',
+        reason='在最优排程中资源分配给了其他伤员，车辆资源无法满足。',
+        blocking_resources=['V1'], considered_alternatives=['P05-plan-1'])
+    schedule = dict(demonstration_only=True, selections={}, operations=[], transports=[], care=[], patient_results=[result])
+    assert not validate_schedule(context, schedule)['conflicts']
+    result.update(patch)
+    assert code in {c['code'] for c in validate_schedule(context, schedule)['conflicts']}
